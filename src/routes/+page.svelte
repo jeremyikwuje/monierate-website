@@ -104,7 +104,10 @@
             <p>There are so many different companies to consider, each with their own unique exchange rates. Our aim is to remove the difficulty in finding and using suitable currency exchange providers by guiding you through every single step to ensure you make the best decision for your specific needs.</p>
         </div>
         <div class="">
-            &copy; Monierate - { year } <a href="https://twitter.com/jeremyikwuje" class="text-black">@jeremyikwuje</a>
+            &copy; Monierate - { year }
+            <p class="mt-4 text-sm">
+                Built and maintained by <a href="https://twitter.com/jeremyikwuje" class="text-black">@jeremyikwuje</a>
+            </p>
         </div>
     </div>
 </footer>
