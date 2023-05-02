@@ -69,7 +69,7 @@ export function back()
 
 export function getEndpoint(endpoint)
 {
-    const apiUrl = "http://localhost:3000";
+    const apiUrl = "https://account-api.forward.africa";
     return `${apiUrl}${endpoint}`;
 }
 </script>
