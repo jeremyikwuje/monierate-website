@@ -65,7 +65,7 @@
     <div class="mb-8">
         <h1 class="text-3xl md:text-5xl text-center mb-4">Compare dollar rates</h1>
         <div class="text-center mb-4 px-8">
-            <p>We provide dollar rates accross 10 reputable virtual card apps in Nigeria. Get them straight to your inbox every morning.</p>
+            <p>We provide dollar rates accross reputable providers in Nigeria. Get them straight to your inbox every morning.</p>
         </div>
         <div class="flex items-center justify-center">
             <div class="w-[400px] flex items-center justify-center">
