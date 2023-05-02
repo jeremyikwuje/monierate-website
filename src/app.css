@@ -1,0 +1,80 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@400;500&family=Maitree:wght@200;300;400;500;600;700&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Bitter:wght@600;700&family=Work+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;1,400;1,500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    body, html {
+        @apply font-worksans bg-gray-100 font-normal !important;
+        padding: 0;
+        margin: 0;
+        overflow-x: hidden;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        @apply font-bitter font-semibold;
+    }
+
+    a, button, input, textbox, p, span, div {
+        @apply font-worksans
+    }
+
+    a {
+        @apply text-primary;
+    }
+}
+
+@layer components {
+    .bg-light {
+        @apply bg-gray-100
+    }
+    .input {
+        @apply block border-white text-black bg-white py-2.5 px-2.5 mb-4 w-full;
+        border: 1px solid #ddd;
+        box-shadow: none;
+    }
+    .input:focus, .input:hover {
+        @apply border-gray-900;
+        box-shadow: none;
+        outline: 0;
+    }
+
+    .select {
+        @apply block text-black bg-white p-2.5 w-full;
+        border: 1px solid #ddd;
+        box-shadow: none;
+    }
+    .select:focus, .select:hover {
+        @apply border-indigo-800;
+        box-shadow: none;
+        outline: 0;
+    }
+
+    .label {
+        @apply block mb-2 font-medium text-gray-900 dark:text-white
+    }
+
+    .btn {
+        text-transform: none;
+    }
+
+    .top-banner {
+        @apply py-8 mx-auto px-4 md:px-24 flex justify-center items-center;
+    }
+
+    .top-brand {
+        @apply w-[128px] md:w-[148px];
+    }
+
+    .logo-rounded {
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+    }
+
+    .notification {
+        @apply block bg-white shadow border border-gray-800 p-3 shadow-lg text-black;
+    }
+}
