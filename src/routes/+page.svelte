@@ -63,7 +63,7 @@
 
 <main class="w-[95%] md:w-[768px] mx-auto mb-12">
     <div class="mb-8">
-        <h1 class="text-3xl md:text-5xl text-center mb-4">Compare dollar card rates</h1>
+        <h1 class="text-3xl md:text-5xl text-center mb-4">Compare dollar rates</h1>
         <div class="text-center mb-4 px-8">
             <p>We provide dollar rates accross 10 reputable virtual card apps in Nigeria. Get them straight to your inbox every morning.</p>
         </div>
@@ -97,16 +97,16 @@
 
 <footer>
     <div class="w-[95%] md:w-[768px] mx-auto mb-12 text-center">
-        <h2 class="font-semibold text-2xl mb-4">About Monierate.com</h2>
+        <h2 class="font-semibold text-2xl mb-4">About Monierate</h2>
         <div class="mb-8">
-            <p>Founded in 2023, Monierate.com is designed to transform the way consumers discover the best deals when exchanging dollars accross Africa.</p>
-            <p>We believe exchanging currencies should be a painless experience for everyone involved. We help our users navigate their way across the sea of currency exchange providers by offering detailed insight and guidance on all things currency exchange.</p>
-            <p>There are so many different companies to consider, each with their own unique exchange rates. Our aim is to remove the difficulty in finding and using suitable currency exchange providers by guiding you through every single step to ensure you make the best decision for your specific needs.</p>
+            <p>With so many dollar app out there, each offering their own unique rates, chances are you are paying more for every dollar you buy.</p>
+            <p>But you can save thousands of naira on your next exchange when you compare several dollar rates and pick the cheapest on Monierate.</p>
+            <p>Monierate is a website to track and compare dollar exchange rates across multiple providers in Nigeria. It currently track the 24-hour price of dollar accross 10 providers including Chippercash, Paga, Payday, Wirepay, BitNob, and Bitmama.</p>
         </div>
         <div class="">
             &copy; Monierate - { year }
             <p class="mt-4 text-sm">
-                Built and maintained by <a href="https://twitter.com/jeremyikwuje" class="text-black">@jeremyikwuje</a>
+                Built and maintained by <a href="https://twitter.com/jeremyikwuje" class="text-black">@jeremyikwuje ⚡</a>
             </p>
         </div>
     </div>
@@ -115,6 +115,9 @@
 <style>
     .changer {
         @apply flex justify-between items-center py-2 border-b border-gray-200;
+    }
+    .changer:last-child {
+        @apply border-b-0
     }
     .changer-icon {
         @apply bg-transparent border border-gray-50 rounded-full w-[32px] h-[32px] mr-2;
