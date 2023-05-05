@@ -55,9 +55,10 @@
     }
 </script>
 
-<header>
-    <div id="brand" class="nav-brand flex justify-center items-center mb-8 py-8">
+<header class="w-[95%] md:w-[1121px] mx-auto mb-12">
+    <div id="brand" class="nav-brand flex justify-between items-center mb-8 py-4">
         <img src="/monierate.png" class="h-[32px]" alt="WalletRate Logo">
+        <a href="https://monierate.substack.com" class="border border-primary py-2 px-4 rounded-lg bg-primary font-semibold uppercase text-black">Subscribe</a>
     </div>
 </header>
 
@@ -65,12 +66,12 @@
     <div class="mb-8">
         <h1 class="text-3xl md:text-5xl text-center mb-4">Compare dollar rates</h1>
         <div class="text-center mb-4 px-8">
-            <p>We provide dollar rates accross reputable providers in Nigeria. Get them straight to your inbox every morning.</p>
+            <p>We provide dollar rates accross reputable providers in Nigeria. Get more dollar for naira by visiting Monierate.com.</p>
         </div>
         <div class="flex items-center justify-center">
             <div class="w-[400px] flex items-center justify-center">
-                <input placeholder="Email address" type="email" class="bg-transparent border border-gray-200 py-4 px-2 border-r-0 rounded-l-lg w-[70%]" bind:value={email}>
-                <button on:click={join} id="btn-join" class="border border-primary py-4 px-4 border-l-0 rounded-r-lg bg-primary font-semibold uppercase">Get Rate</button>
+                <!-- <input placeholder="Email address" type="email" class="bg-transparent border border-gray-200 py-4 px-2 border-r-0 rounded-l-lg w-[70%]" bind:value={email}> -->
+                
             </div>
         </div>
         <span class="block text-center pt-4 hidden" id="alert"></span>
