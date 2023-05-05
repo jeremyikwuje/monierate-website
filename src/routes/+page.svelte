@@ -57,7 +57,7 @@
 
 <header class="w-[95%] md:w-[1121px] mx-auto mb-12">
     <div id="brand" class="nav-brand flex justify-between items-center mb-8 py-4">
-        <img src="/monierate.png" class="h-[32px]" alt="WalletRate Logo">
+        <img src="/monierate.png" class="h-[24px]" alt="WalletRate Logo">
         <a href="https://monierate.substack.com" class="border border-primary py-2 px-4 rounded-lg bg-primary font-semibold uppercase text-black">Subscribe</a>
     </div>
 </header>
