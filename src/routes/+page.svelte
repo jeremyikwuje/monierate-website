@@ -5,8 +5,11 @@
 
     export let data;
     let rates = data.rates || {}
+    let first = rates[0]
+    let last = rates[rates.length - 1]
 
     console.log(rates)
+    console.log(first)
 
     let email = "";
     let year = (new Date()).getFullYear()
@@ -24,7 +27,7 @@
         <h1 class="text-2xl md:text-3xl mb-2">Today's Dollar Prices in Black Market</h1>
         <div class="mb-12 text-gray-600 font-normal">
             <p>
-                The minimum price is N748 and the maximum price is N790.
+                The price of dollar today is between ₦{Money.toDollar(first.rate_buy)} and ₦{Money.toDollar(last.rate_buy)}. Prices are displayed from lowest to highest.
             </p>
         </div>
         <!-- <div>
@@ -41,6 +44,13 @@
                 </li>
             </ul>
         </div> -->
+        <div class="flex justify-between items-center">
+            <span></span>
+            <span>
+                <span class="text-semibold">Sort by:</span>
+                <span class="font-semibold">Low to high</span>
+            </span>
+        </div>
     </div>
 </div>
 
