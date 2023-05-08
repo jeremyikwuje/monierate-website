@@ -2,9 +2,15 @@
     /** @type {import('./$types').PageData} */
     import { toggleButtonLoad, toggleMessage } from "$lib/helper.svelte";
 	import Money from "$lib/money";
+	import { onMount } from "svelte";
 
     export let data;
     let rates = data.rates || {}
+
+    onMount(async () => {
+        
+    })
+
     let first = rates[0]
     let last = rates[rates.length - 1]
 
@@ -26,9 +32,11 @@
     <div class="container">
         <h1 class="text-2xl md:text-3xl mb-2">Today's Dollar Prices in Black Market</h1>
         <div class="mb-12 text-gray-600 font-normal">
+            {#if first && last}
             <p>
                 The price of dollar today is between ₦{Money.toDollar(first.rate_buy)} and ₦{Money.toDollar(last.rate_buy)}. Prices are displayed from lowest to highest.
             </p>
+            {/if}
         </div>
         <!-- <div>
             <ul class="flex flex-wrap -mb-px text-sm font-medium text-center text-gray-500 dark:text-gray-400">
