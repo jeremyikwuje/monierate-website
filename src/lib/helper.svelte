@@ -69,7 +69,7 @@ export function back()
 
 export function getEndpoint(endpoint)
 {
-    const apiUrl = "https://monierate-api.onrender.com";
+    const apiUrl = "https://monierate-api-dev.onrender.com";
     return `${apiUrl}${endpoint}`;
 }
 </script>
