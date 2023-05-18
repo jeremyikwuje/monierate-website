@@ -145,7 +145,7 @@
         <div class="">
             &copy; Monierate - { year }
             <p class="mt-4 text-sm">
-                Built and maintained by <a href="https://twitter.com/jeremyikwuje" class="text-black">@jeremyikwuje ⚡</a>
+                Built and maintained by <a href="https://twitter.com/jeremyikwuje" class="text-black">@jeremyikwuje ⚡</a> and <a href="https://twitter.com/onionsman">@onionsman</a>
             </p>
         </div>
     </div>
