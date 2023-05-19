@@ -140,12 +140,12 @@
         <div class="mb-8">
             <p>With so many dollar app out there, each offering their own unique rates, chances are you are paying more for every dollar you buy.</p>
             <p>But you can save thousands of naira on your next exchange when you compare several dollar rates and pick the cheapest on Monierate.</p>
-            <p>Monierate is a website to track and compare dollar exchange rates across multiple providers in Nigeria. It currently track the 24-hour price of dollar accross 10 providers including Chippercash, Paga, Payday, Wirepay, BitNob, and Bitmama.</p>
+            <p>Monierate.com is a website to track and compare dollar exchange rates across multiple providers in Nigeria. It currently track the 24-hour price of dollar accross 10 providers including Binance, Remitano, Payday, Wirepay, Bitnob, and Bitmama.</p>
         </div>
         <div class="">
-            &copy; Monierate - { year }
+            &copy; Monierate.com - { year }
             <p class="mt-4 text-sm">
-                Built and maintained by <a href="https://twitter.com/jeremyikwuje" class="text-black">@jeremyikwuje ⚡</a> and <a href="https://twitter.com/onionsman">@onionsman</a>
+                Built and maintained by <a href="https://twitter.com/jeremyikwuje" class="text-black">@jeremyikwuje ⚡</a> and <a href="https://twitter.com/onionsman" class="text-black">@onionsman</a>
             </p>
         </div>
     </div>
