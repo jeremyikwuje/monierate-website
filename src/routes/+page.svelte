@@ -24,7 +24,7 @@
 <header>
     <div id="brand" class="nav-brand container flex justify-between items-center py-4">
         <img src="/monierate.png" class="h-[24px]" alt="WalletRate Logo">
-        <a href="https://monierate.substack.com" class="border border-primary py-2 px-4 rounded-lg bg-primary font-semibold uppercase text-black">Subscribe</a>
+        <a href="https://monierate.substack.com" class="border-2 border-black py-2 px-4 rounded-lg bg-primary font-semibold uppercase text-black">Subscribe</a>
     </div>
 </header>
 
@@ -103,7 +103,7 @@
                             </td>
                             <td class="text-right py-2 pr-2 md:pr-4">
                                 {#each Object.entries(rate.changer.changer_tags) as [index, tag]}
-                                <span class="inline-block p-2 bg-blue-100 text-blue-800 rounded-lg text-xs mr-2 font-semibold mb-2">
+                                <span class="inline-block p-2 border border-gray-300 text-black rounded-lg text-xs mr-2 font-semibold mb-2">
                                     {tag.tag_id}
                                 </span>
                                 {/each}
@@ -162,7 +162,7 @@
         @apply border-b-0
     }
     .changer-icon {
-        @apply bg-transparent border border-gray-50 rounded-full w-[24px] h-[24px] mr-2;
+        @apply bg-transparent border border-black rounded-full w-[24px] h-[24px] mr-2;
     }
     .changer-title {
         @apply font-semibold text-lg capitalize text-gray-800;
