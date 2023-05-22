@@ -92,7 +92,7 @@ export function back()
 
 export function getEndpoint(endpoint)
 {
-    const apiUrl = "https://monierate-api-production.up.railway.app";
+    const apiUrl = "http://localhost:3000";
     return `${apiUrl}${endpoint}`;
 }
 </script>
