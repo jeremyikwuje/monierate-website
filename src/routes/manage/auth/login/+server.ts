@@ -1,4 +1,4 @@
-import { basicHeader, getEndpoint  } from "$lib/helper.svelte";
+import { basicAuth, getEndpoint  } from "$lib/helper.svelte";
 import { json } from "@sveltejs/kit";
 
 /** @type {import('./$types').RequestHandler} */
@@ -10,7 +10,7 @@ export async function POST({ request, cookies })
         id,
     };
     const endpoint = getEndpoint("/public/auth/login");
-    const res = await fetch(endpoint, basicHeader('POST', payload));
+    const res = await fetch(endpoint, basicAuth('POST', payload));
 
     const result = await res.json();
     console.log(result);
