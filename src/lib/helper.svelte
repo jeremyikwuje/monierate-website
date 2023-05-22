@@ -1,8 +1,35 @@
 
 <script context="module">
-export function basicHeader(method, body)
+
+export async function request(method, endpoint, body = {}) {
+    let options = {
+        method: method.toUpperCase()
+    }
+
+    if (method != 'get') {
+        options = {
+            method: method.toUpperCase(),
+            body: JSON.stringify(body)
+        }
+    }
+
+    const res = await fetch(endpoint, options);
+    const json = await res.json();
+    console.log(json);
+
+    return json;
+}
+
+export function basicAuth(method, body, level = "api")
 {
-    const basicToken = btoa(`changemoney_api:N4&**S%Vl0C7MubL`)
+    const apiAuth = `changemoney_api:N4&**S%Vl0C7MubL`
+    const systemAuth = `ikwuje:xaS@Di2t#7Qry19M`
+
+    let basicToken = btoa(apiAuth)
+    if (level == 'system') {
+        basicToken = btoa(systemAuth)
+    }
+
     const request = {
         headers: {
             "Authorization": `Basic ${basicToken}`,
@@ -20,7 +47,6 @@ export function basicHeader(method, body)
 export function toggleMessage(message, type = "error")
 {
     let alert = document.querySelector("#alert");
-    //let alertMessage = document.querySelector("#alert-message");
 
     if (alert != null) {
         alert.classList.add("animate-bounce");
@@ -43,22 +69,19 @@ export function toggleMessage(message, type = "error")
     }
 }
 
-export function toggleButtonLoad(selector)
+export function toggleButtonLoad(selector, timeout = 3000)
 {
     let button = document.querySelector(selector);
 
     if (button != null)
     {
-        button.classList.toggle("loading");
+        button.classList.add("loading");
+        button.disabled = true;
 
-        if (button.disabled)
-        {
+        setTimeout(() => {
+            button.classList.remove("loading");
             button.disabled = false;
-        }
-        else
-        {
-            button.disabled = true;
-        }
+        }, timeout)
     }
 }
 
@@ -69,7 +92,7 @@ export function back()
 
 export function getEndpoint(endpoint)
 {
-    const apiUrl = "https://monierate-api-production.up.railway.app";
+    const apiUrl = "http://localhost:3000";
     return `${apiUrl}${endpoint}`;
 }
 </script>

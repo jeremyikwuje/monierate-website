@@ -14,9 +14,6 @@
     let first = rates[0]
     let last = rates[rates.length - 1]
 
-    console.log(rates)
-    console.log(first)
-
     let email = "";
     let year = (new Date()).getFullYear()
 </script>
@@ -113,23 +110,6 @@
                     </tbody>
                 </table>
             </div>
-            
-            <!-- <ul class="changers block p-0" id="changers">
-                {#each Object.entries(rates) as [index, rate]}
-                <li id="changer-1" class="changer">
-                    <span class="flex items-center">
-                        <span class="changer-icon">
-                            <img src="/icons/{rate.changer.icon}" class="rounded-full" alt="Paga Icon">
-                        </span>
-                        <span class="changer-title">{rate.changer.name}</span>
-                    </span>
-                    <span class="inline-block text-center">
-                        <span class="changer-rate">₦{Money.toDollar(rate.rate_buy)}</span>
-                        <small class="changer-rate-base">per $1</small>
-                    </span>
-                </li>
-                {/each}
-            </ul> -->
         </div>
     </div>
 </main>
