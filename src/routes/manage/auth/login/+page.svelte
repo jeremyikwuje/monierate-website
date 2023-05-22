@@ -1,5 +1,5 @@
 <script>
-    import { basicHeader, getEndpoint } from "$lib/helper.svelte";
+    import { basicAuth, getEndpoint } from "$lib/helper.svelte";
 
     let user = ""
     let password = ""
@@ -13,7 +13,7 @@
         let endpoint = getEndpoint("/manage/auth/login");
         let res = await fetch(
             endpoint,
-            basicHeader('POST', {})
+            basicAuth('POST', {})
         );
 
         const access = (await res.json()).data || {}
