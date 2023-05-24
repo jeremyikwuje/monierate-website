@@ -61,7 +61,7 @@
 
 <main class="bg-gray-50">
     <div class="container">
-        <div class="changers-box bg-white py-[10px] shadow-t-md">
+        <div class="changers-box bg-white py-[10px] shadow-t-md mb-16">
             <div class="relative overflow-x-auto">
                 <table class="w-full text-sm text-left">
                     <thead>
@@ -73,7 +73,10 @@
                                 Provider
                             </th>
                             <th scope="col" class="pl-6 py-3 text-black font-bold font-bitter text-right">
-                                Price
+                                Buy Price
+                            </th>
+                            <th scope="col" class="pl-6 py-3 text-black font-bold font-bitter text-right">
+                                Sell Price
                             </th>
                             <th scope="col" class="pl-6 py-3 text-black font-bold font-bitter text-right pr-2 md:pr-4">
                                 Services
@@ -98,6 +101,10 @@
                                 <span class="changer-rate">₦{Money.toDollar(rate.rate_buy)}</span>
                                 <small class="changer-rate-base">per $1</small>
                             </td>
+                            <td class="text-right">
+                                <span class="changer-rate">₦{Money.toDollar(rate.rate_sell)}</span>
+                                <small class="changer-rate-base">per $1</small>
+                            </td>
                             <td class="text-right py-2 pr-2 md:pr-4">
                                 {#each Object.entries(rate.changer.changer_tags) as [index, tag]}
                                 <span class="inline-block p-2 border border-gray-300 text-black rounded-lg text-xs mr-2 font-semibold mb-2">
@@ -111,17 +118,35 @@
                 </table>
             </div>
         </div>
+
+        <div class="">
+            <span class="block mb-4">
+                <h3>What is a Provider</h3>
+                <p>A provider is an entity that help you facilitate the exchange of currencies. If you have 100 USDT, and you want to exchange it for naira. You will need an exchange provider to convert your USDT to naira. A provider can be an individual or entity. On Monierate, we only list trusted entities for you to choose from not individual traders.</p>
+            </span>
+            <span class="block mb-4">
+                <h3>What is Buy Price</h3>
+                <p>Buy price is the rate at which you will pay to convert <strong>naira to dollar</strong>. It is how much naira you are paying for every dollar you get. An example is, you have naira, but you need USDT to pay for a bill, you will need to exchange your naira for USDT. The provider will credit USDT to you at a Buy Price.</p>
+            </span>
+            <span class="block mb-4">
+                <h3>What is Sell Price</h3>
+                <p>Buy price is the rate at which you will pay to convert <strong>dollar to naira</strong>. It is how much naira you are paying for every dollar you get. An example is, you have USDT, but you need naira to pay a bill, you will need to exchange your USDT for naira. The provider will credit naira to you at a Sell Price.</p>
+            </span>
+            <span class="block mb-4">
+                <h3>Why is Buy Price always higher than Sell Price</h3>
+                <p>Exchange Providers makes money from the difference between the exchange price of dollar. This is popularly known as arbitrage or trading profit, buy low and sell high. If you have USDT but need naira, they buy the USDT from you at a lower naira price and sell at a higher naira price to someone else who need USDT.</p>
+            </span>
+            <span class="block">
+                <h3>How to Monierate works</h3>
+                <p>Monierate is a website for you to compare the prices of dollar accross multiple providers in Nigeria. You can use Monierate to know the exchange rate of dollar to naira, get more dollars for naira and vice versa. By default, prices are arranged from lowest to highest. The cheapest rate is rank first and the most expensive rate is ranked last. In the future, you can change the order of the selection between *low to high* or by *Buy* or *Sell* price..</p>
+                <p>Monierate currently tracks the 24-hour price of dollar accross 10+ providers including Binance, Luno, Remitano, Yellow Card, Quidax, and Payday.</p>
+            </span>
+        </div>
     </div>
 </main>
 
-<footer class="bg-gray-50 pt-8">
+<footer class="bg-gray-50 pt-8 mt-8">
     <div class="w-[95%] md:w-[768px] mx-auto mb-12 text-center">
-        <h2 class="font-semibold text-2xl mb-4">About Monierate</h2>
-        <div class="mb-8">
-            <p>With so many dollar app out there, each offering their own unique rates, chances are you are paying more for every dollar you buy.</p>
-            <p>But you can save thousands of naira on your next exchange when you compare several dollar rates and pick the cheapest on Monierate.</p>
-            <p>Monierate.com is a website to track and compare dollar exchange rates across multiple providers in Nigeria. It currently track the 24-hour price of dollar accross 10 providers including Binance, Remitano, Payday, Wirepay, Bitnob, and Bitmama.</p>
-        </div>
         <div class="">
             &copy; Monierate.com - { year }
             <p class="mt-4 text-sm">
