@@ -121,24 +121,24 @@
 
         <div class="">
             <span class="block mb-4">
-                <h3>What is a Provider</h3>
+                <h3>What is a Provider?</h3>
                 <p>A provider is an entity that help you facilitate the exchange of currencies. If you have 100 USDT, and you want to exchange it for naira. You will need an exchange provider to convert your USDT to naira. A provider can be an individual or entity. On Monierate, we only list trusted entities for you to choose from not individual traders.</p>
             </span>
             <span class="block mb-4">
-                <h3>What is Buy Price</h3>
+                <h3>What is Buy Price?</h3>
                 <p>Buy price is the rate at which you will pay to convert <strong>naira to dollar</strong>. It is how much naira you are paying for every dollar you get. An example is, you have naira, but you need USDT to pay for a bill, you will need to exchange your naira for USDT. The provider will credit USDT to you at a Buy Price.</p>
             </span>
             <span class="block mb-4">
-                <h3>What is Sell Price</h3>
+                <h3>What is Sell Price?</h3>
                 <p>Buy price is the rate at which you will pay to convert <strong>dollar to naira</strong>. It is how much naira you are paying for every dollar you get. An example is, you have USDT, but you need naira to pay a bill, you will need to exchange your USDT for naira. The provider will credit naira to you at a Sell Price.</p>
             </span>
             <span class="block mb-4">
-                <h3>Why is Buy Price always higher than Sell Price</h3>
+                <h3>Why is Buy Price always higher than Sell Price?</h3>
                 <p>Exchange Providers makes money from the difference between the exchange price of dollar. This is popularly known as arbitrage or trading profit, buy low and sell high. If you have USDT but need naira, they buy the USDT from you at a lower naira price and sell at a higher naira price to someone else who need USDT.</p>
             </span>
             <span class="block">
                 <h3>How to Monierate works</h3>
-                <p>Monierate is a website for you to compare the prices of dollar accross multiple providers in Nigeria. You can use Monierate to know the exchange rate of dollar to naira, get more dollars for naira and vice versa. By default, prices are arranged from lowest to highest. The cheapest rate is rank first and the most expensive rate is ranked last. In the future, you can change the order of the selection between *low to high* or by *Buy* or *Sell* price..</p>
+                <p class="mb-2">Monierate is a website for you to compare the prices of dollar accross multiple providers in Nigeria. You can use Monierate to know the exchange rate of dollar to naira, get more dollars for naira and vice versa. By default, prices are arranged from lowest to highest. The cheapest rate is rank first and the most expensive rate is ranked last. In the future, you can change the order of the selection between *low to high* or by *Buy* or *Sell* price..</p>
                 <p>Monierate currently tracks the 24-hour price of dollar accross 10+ providers including Binance, Luno, Remitano, Yellow Card, Quidax, and Payday.</p>
             </span>
         </div>
