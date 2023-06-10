@@ -36,8 +36,14 @@ export default class Money {
         return total
     }
 
-    static format(amount, symbol = '$') {
+    static format(amount) {
 
-        return currency(amount, { symbol: symbol, separator: ",", decimal: "." }).format()
+        // return currency(amount, { symbol: symbol, separator: ",", decimal: ".", precision: 8, }).format()
+        const formatter = new Intl.NumberFormat('en-US', {
+            minimumFractionDigits: 0,
+            maximumFractionDigits: 8
+        })
+
+        return formatter.format(amount)
     }
 }

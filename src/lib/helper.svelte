@@ -1,5 +1,6 @@
 
 <script context="module">
+import { env } from '$env/dynamic/private';
 
 export async function request(method, endpoint, body = {}) {
     let options = {
@@ -92,7 +93,13 @@ export function back()
 
 export function getEndpoint(endpoint)
 {
-    const apiUrl = "https://monierate-api-production.up.railway.app";
+    const server = env.SERVER
+    let apiUrl = 'https://monierate-api-production.up.railway.app'
+    if (server == 'LOCAL') {
+        apiUrl = 'http://localhost:3000'
+    }
+    console.log(env.SERVER);
+
     return `${apiUrl}${endpoint}`;
 }
 </script>
