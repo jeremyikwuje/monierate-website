@@ -7,7 +7,7 @@
 
 @layer base {
     body, html {
-        @apply font-worksans bg-white font-normal;
+        @apply font-worksans bg-gray-100 font-normal;
         padding: 0;
         margin: 0;
         overflow-x: hidden;
@@ -22,15 +22,19 @@
     }
 
     a {
-        @apply text-primary;
+        @apply text-blue-800;
     }
 }
 
 @layer components {
+    .container {
+        @apply w-[95%] md:w-[1124px] mx-auto;
+    }
+    
     .bg-light {
         @apply bg-gray-100
     }
-    .input {
+    .input, .select {
         @apply block border-white text-black bg-white py-2.5 px-2.5 mb-4 w-full;
         border: 1px solid #ddd;
         box-shadow: none;

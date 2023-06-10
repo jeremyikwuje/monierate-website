@@ -37,6 +37,7 @@
 		"@multiavatar/multiavatar": "^1.0.7",
 		"currency.js": "^2.0.4",
 		"daisyui": "^2.51.0",
+		"mathjs": "^11.8.0",
 		"svelte-clipboard": "^1.0.0",
 		"svelte-gestures": "^1.4.1"
 	}

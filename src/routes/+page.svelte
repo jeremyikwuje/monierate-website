@@ -1,29 +1,13 @@
 <script>
     /** @type {import('./$types').PageData} */
-    import { toggleButtonLoad, toggleMessage } from "$lib/helper.svelte";
 	import Money from "$lib/money";
-	import { onMount } from "svelte";
 
     export let data;
     let rates = data.rates || {}
 
-    onMount(async () => {
-        
-    })
-
     let first = rates[0]
     let last = rates[rates.length - 1]
-
-    let email = "";
-    let year = (new Date()).getFullYear()
 </script>
-
-<header>
-    <div id="brand" class="nav-brand container flex justify-between items-center py-4">
-        <img src="/monierate.png" class="h-[24px]" alt="WalletRate Logo">
-        <a href="https://monierate.substack.com" class="border-2 border-black py-2 px-4 rounded-lg bg-primary font-semibold uppercase text-black">Subscribe</a>
-    </div>
-</header>
 
 <div class="bg-gray-50 pt-12 pb-4">
     <div class="container">
@@ -35,20 +19,6 @@
             </p>
             {/if}
         </div>
-        <!-- <div>
-            <ul class="flex flex-wrap -mb-px text-sm font-medium text-center text-gray-500 dark:text-gray-400">
-                <li class="mr-2">
-                    <a href="#" class="inline-flex py-2 px-4 text-gray-600 font-semibold group text-blue-600 bg-blue-100 rounded-lg" aria-current="page">
-                        Crypto
-                    </a>
-                </li>
-                <li class="mr-2">
-                    <a href="#" class="inline-flex py-2 px-4 text-gray-600 font-semibold group">
-                        Virtual Card
-                    </a>
-                </li>
-            </ul>
-        </div> -->
         <div class="flex justify-between items-center">
             <span></span>
             <span>
@@ -90,12 +60,12 @@
                                 {parseInt(index) + 1}
                             </th>
                             <td>
-                                <span class="flex items-center">
+                                <a href="/rates/{rate.changer.code}" class="flex items-center">
                                     <span class="changer-icon">
                                         <img src="/icons/{rate.changer.icon}" class="rounded-full" alt="Paga Icon">
                                     </span>
                                     <span class="changer-title">{rate.changer.name}</span>
-                                </span>
+                                </a>
                             </td>
                             <td class="text-right">
                                 <span class="changer-rate">₦{Money.toDollar(rate.rate_buy)}</span>
@@ -145,21 +115,7 @@
     </div>
 </main>
 
-<footer class="bg-gray-50 pt-8 mt-8">
-    <div class="w-[95%] md:w-[768px] mx-auto mb-12 text-center">
-        <div class="">
-            &copy; Monierate.com - { year }
-            <p class="mt-4 text-sm">
-                Built and maintained by <a href="https://twitter.com/jeremyikwuje" class="text-black">@jeremyikwuje ⚡</a> and <a href="https://twitter.com/onionsman" class="text-black">@onionsman</a>
-            </p>
-        </div>
-    </div>
-</footer>
-
 <style>
-    .container {
-        @apply w-[95%] md:w-[991px] mx-auto;
-    }
     .changer {
         @apply flex justify-between items-center py-2 border-b border-gray-200;
     }
@@ -177,9 +133,5 @@
     }
     .changer-rate {
         @apply block font-semibold text-lg text-gray-800;
-    }
-
-    footer p {
-        @apply mb-4;
     }
 </style>
