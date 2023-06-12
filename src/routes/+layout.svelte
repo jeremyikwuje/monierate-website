@@ -6,7 +6,9 @@
 
 <header>
   <div id="brand" class="nav-brand container flex justify-between items-center py-4">
-      <img src="/monierate.png" class="h-[24px]" alt="Monierate Logo">
+      <a href="/">
+        <img src="/monierate.png" class="h-[24px]" alt="Monierate Logo">
+      </a>
       <a href="https://monierate.substack.com" class="border-2 border-black py-2 px-4 rounded-lg bg-primary font-semibold uppercase text-black">Subscribe</a>
   </div>
 </header>
@@ -16,35 +18,31 @@
 <footer class="pt-16 pb-8 mt-8 bg-black text-white">
   <div class="w-[95%] md:w-[70%] mx-auto block md:flex justify-between item-center">
       <div class="w-full md:w-[30%]">
-        <!-- <h3 class="font-bold">Currency calculator</h3>
-        <ul class="py-4 calculator-list">
-          <a href="/converter/binance">Binance Calculator</a>
-          <a href="/converter/luno">Luno Calculator</a>
-          <a href="/converter/remitano">Remitano Calculator</a>
-          <a href="/converter/quidax">Quidax Calculator</a>
-          <a href="/converter/yellowcard">Yellow Card Calculator</a>
-          <a href="/converter/remitano">Coinprofile Calculator</a>
-          <a href="/converter/quidax">Payday Calculator</a>
-          <a href="/converter/yellowcard">Grey Calculator</a>
-        </ul> -->
-        <span class="block mb-8">
-            <span class="font-bold block mb-2">Contacts</span>
-            <span class="font-bold text-xl block mb-2">hello@monierate.com</span>
-        </span>
-
-        <span class="block text-sm">
-          &copy; { year }, Monierate.com. 
-        </span>
+        <h3 class="font-bold">Currency converter</h3>
+        <ul class="py-4 converter-list">
+          <a data-sveltekit-reload href="/converter/binance?Amount=1&From=USDT&To=NGN">Convert USDT on Binance</a>
+          <a data-sveltekit-reload href="/converter/remitano?Amount=1&From=USDT&To=NGN">Convert USDT on Remitano</a>
+          <a data-sveltekit-reload href="/converter/quidax?Amount=1&From=USDT&To=NGN">Convert USDT on Quidax</a>
+          <a data-sveltekit-reload href="/converter/yellowcard?Amount=1&From=USDT&To=NGN">Convert USDT on Yellow Card</a>
+          <a data-sveltekit-reload href="/converter/luno?Amount=1&From=USDC&To=NGN">Convert USDC on Luno</a>
+          <a data-sveltekit-reload href="/converter/bitmama?Amount=1&From=USDC&To=NGN">Convert USDC on Bitmama</a>
+          <a data-sveltekit-reload href="/converter/payday?Amount=1&From=USD&To=NGN">Convert USD on Payday</a>
+          <a data-sveltekit-reload href="/converter/wirepay?Amount=1&From=USD&To=NGN">Convert USD on Wirepay</a>
+          <a data-sveltekit-reload href="/converter/bitnob?Amount=1&From=USD&To=NGN">Convert USD on Bitnob</a>
+          <a data-sveltekit-reload href="/converter/eversend?Amount=1&From=USD&To=NGN">Convert USD on Eversend</a>
+          <a data-sveltekit-reload href="/converter/klasha?Amount=1&From=USD&To=NGN">Convert USD on Klasha</a>
+          <a data-sveltekit-reload href="/converter/coinprofile?Amount=1&From=USD&To=NGN">Convert USD on Coinprofile</a>
+        </ul>
       </div>
       <div class="w-full md:w-[50%]">
-          <!-- <span class="block mb-8">
+          <span class="block mb-8">
               <span class="font-bold block mb-2">Contacts</span>
               <span class="font-bold text-xl block mb-2">hello@monierate.com</span>
           </span>
 
           <span class="block text-sm">
             &copy; { year }, Monierate.com. 
-          </span> -->
+          </span>
 
           <div class="mt-4">
             <p class="text-sm mb-4">
@@ -70,10 +68,10 @@
 </div>
 
 <style>
-  footer .calculator-list {
+  footer .converter-list {
     @apply py-4;
   }
-  footer .calculator-list a {
+  footer .converter-list a {
     @apply text-white mb-2 block text-sm;
   }
 </style>

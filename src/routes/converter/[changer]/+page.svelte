@@ -20,8 +20,6 @@ let convertResult = {
     conversion: 0,
 }
 
-// extra conversions to display below converter
-
 // initialize market currencies
 var marketCurrencies: [] = []
 var currencyFrom: any = {}
@@ -35,29 +33,50 @@ function convertNow() {
     let from = convertFrom.toLowerCase()
     let to = convertTo.toLowerCase()
 
-    if (!rates.hasOwnProperty(from)) {
-        convertResult.rate = 0
-        convertResult.rateInverse = 0
-        convertResult.conversion = 0
+    console.log(from + to)
 
-        return
-    }
-
-    let pair = JSON.parse(rates[from])
-    if (!pair.hasOwnProperty(to)) {
-        convertResult.rate = 0
-        convertResult.rateInverse = 0
-        convertResult.conversion = 0
+    let rate = 1  // 1:1
+    let rateInverse = 1
+    
+    if (from != to) {
         
-        return
+        if (!rates.hasOwnProperty(from)) {
+            convertResult.rate = 0
+            convertResult.rateInverse = 0
+            convertResult.conversion = 0
+
+            return
+        }
+
+        let pair = JSON.parse(rates[from])
+        if (!pair.hasOwnProperty(to)) {
+            convertResult.rate = 0
+            convertResult.rateInverse = 0
+            convertResult.conversion = 0
+            
+            return
+        }
+
+        let pairInverse = JSON.parse(rates[to])
+        if (!pairInverse.hasOwnProperty(from)) {
+            convertResult.rate = 0
+            convertResult.rateInverse = 0
+            convertResult.conversion = 0
+            
+            return
+        }
+
+        rate = pair[to]
+        rateInverse = pairInverse[from]
     }
 
-    let rate = pair[to]
+    /** Calcuate the conversion*/
     convertResult.rate = rate
-    convertResult.rateInverse = chain(1).divide(rate).done()
+    convertResult.rateInverse = rateInverse
     convertResult.conversion = round(chain(rate).multiply(convertAmount).done(), 8)
 
-    updateCurrencies()
+    currencyFrom = marketCurrencies.find( c => c.code === from)
+    currencyTo = marketCurrencies.find( c => c.code === to)
     reloadMoreConversions()
 }
 
@@ -72,9 +91,6 @@ function updateCurrencies() {
             marketCurrencies.push(currency)
         }
     })
-
-    currencyFrom = marketCurrencies.find( c => c.code === from)
-    currencyTo = marketCurrencies.find( c => c.code === to)
 }
 
 async function getMoreConversions() {
@@ -107,6 +123,8 @@ function reloadMoreConversions() {
 }
 
 // run the conversions
+
+updateCurrencies()
 convertNow()
 
 </script>
@@ -115,6 +133,8 @@ convertNow()
 	<title>
         {Money.format(convertAmount)} {convertFrom} to {convertTo} on {changer.name} - Convert {currencyFrom.name} to {currencyTo.name} on {changer.name}
     </title>
+    <meta name="description" content="Convert {currencyFrom.name} to {currencyTo.name} on {changer.name}. {changer.name} {currencyFrom.name} rate. {changer.name} {currencyFrom.name} rate. {changer.name} {currencyTo.name} rate. {changer.name} converter">
+    <meta name="keywords" content="{changer.name} {currencyFrom.name} rate, {changer.name} {currencyTo.name} rate, {changer.name} converter">
 </svelte:head>
 
 <div class="bg-gray-100 mt-8 mb-8">
@@ -137,7 +157,7 @@ convertNow()
                     </span>
                     <span class="block md:w-[30%]">
                         <label class="label" for="field-convert-from">From</label>
-                        <select id="field-convert-from" class="select" bind:value={convertFrom} on:select={() => convertNow()}>
+                        <select id="field-convert-from" class="select" bind:value={convertFrom} on:change={convertNow}>
                             {#each Object.entries(marketCurrencies) as [index, currency]}
                                 <option value="{currency.code.toUpperCase()}">{currency.code.toUpperCase()} - {currency.name}</option>
                             {/each}
@@ -145,7 +165,7 @@ convertNow()
                     </span>
                     <span class="block md:w-[30%]">
                         <label class="label" for="field-convert-to">To</label>
-                        <select id="field-convert-to" class="select" bind:value={convertTo} on:select={() => convertNow()}>
+                        <select id="field-convert-to" class="select" bind:value={convertTo} on:change={convertNow}>
                             {#each Object.entries(marketCurrencies) as [index, currency]}
                                 <option value="{currency.code.toUpperCase()}">{currency.code.toUpperCase()} - {currency.name}</option>
                             {/each}
@@ -178,12 +198,17 @@ convertNow()
                         </span>
                     </span>
                     <span class="block text-sm md:w-[50%] p-4">
-                        {currencyFrom.name} to {currencyTo.name} conversion on {changer.name} — Last updated May 26, 2023, 03:02 UTC
+                        {currencyFrom.name} to {currencyTo.name} conversion on {changer.name} — Last updated {new Date(market.updatedAt)}
                     </span>
                 </div>
                 
                 <span class="block mt-12">
-                    <a href="" class="btn btn-primary btn-sm">Open {changer.name}</a>
+                    <a href="{changer.link}" class="btn btn-primary btn-sm">
+                        Open {changer.name}
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4 ml-2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25" />
+                        </svg>                          
+                    </a>
                  </span>
             </div>
         </div>
@@ -198,7 +223,7 @@ convertNow()
             </span>
             <div class="pb-4">
                 {#await moreConversions}
-                    <span class="text-center py-8">Loading...</span>
+                    <span class="block text-center py-8 px-4">Loading...</span>
                 {:then data}
                 <table class="w-full text-center px-8">
                     <thead class="bg-green-100">
@@ -231,7 +256,7 @@ convertNow()
             </span>
             <div class="pb-4">
                 {#await moreConversions}
-                    <span class="text-center py-8">Loading...</span>
+                    <span class="block text-center py-8 px-4">Loading...</span>
                 {:then data}
                     <table class="w-full text-center px-8">
                         <thead class="bg-green-100">
