@@ -236,7 +236,7 @@ convertNow()
                         {#each Object.entries(data.from) as [index, convert]}
                         <tr>
                             <td class="py-2.5">
-                                <a data-sveltekit-reload href="/converter/luno?Amount={convert.amount}&From={convertFrom}&To={convertTo}">
+                                <a data-sveltekit-reload href="/converter/{changer.code}?Amount={convert.amount}&From={convertFrom}&To={convertTo}">
                                     {Money.format(convert.amount)} {convertFrom}
                                 </a>
                             </td>
@@ -269,7 +269,7 @@ convertNow()
                                 {#each Object.entries(data.to) as [index, convert]}
                                 <tr>
                                     <td class="py-2.5">
-                                        <a data-sveltekit-reload href="/converter/luno?Amount={convert.amount}&From={convertTo}&To={convertFrom}">
+                                        <a data-sveltekit-reload href="/converter/{changer.code}?Amount={convert.amount}&From={convertTo}&To={convertFrom}">
                                             {Money.format(convert.amount)} {convertTo}
                                         </a>
                                     </td>
