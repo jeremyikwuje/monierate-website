@@ -7,7 +7,7 @@
 
 @layer base {
     body, html {
-        @apply font-worksans bg-gray-100 font-normal;
+        @apply font-worksans bg-gray-50 font-normal min-h-screen;
         padding: 0;
         margin: 0;
         overflow-x: hidden;
