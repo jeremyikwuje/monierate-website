@@ -20,4 +20,5 @@ collections:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Description", name: "description", widget: "string"}
       - {label: "Publish Date", name: "createdAt", widget: "datetime"}
+      - {label: "Tags", name: "tag", widget: "string"}
       - {label: "Body", name: "body", widget: "markdown"}
