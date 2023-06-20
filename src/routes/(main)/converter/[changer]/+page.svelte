@@ -137,7 +137,7 @@ convertNow()
     <meta name="keywords" content="{changer.name} {currencyFrom.name} rate, {changer.name} {currencyTo.name} rate, {changer.name} converter">
 </svelte:head>
 
-<div class="bg-gray-100 mt-8 mb-8">
+<div class="bg-gray-50 mt-8 mb-8">
     <div class="w-[95%] md:w-[70%] px-8 py-4 mx-auto mb-4 text-center">
         <h1 class="text-2xl md:text-3xl">
             {Money.format(convertAmount)} {convertFrom} to {convertTo} on {changer.name} - Convert {currencyFrom.name} to {currencyTo.name} on {changer.name}
@@ -241,7 +241,7 @@ convertNow()
                                 </a>
                             </td>
                             <td class="py-2.5">
-                                {convert.conversion} {convertTo}
+                                {Money.format(convert.conversion)} {convertTo}
                             </td>
                         </tr>
                         {/each}
@@ -274,7 +274,7 @@ convertNow()
                                         </a>
                                     </td>
                                     <td class="py-2.5">
-                                        {convert.conversion} {convertFrom}
+                                        {Money.format(convert.conversion)} {convertFrom}
                                     </td>
                                 </tr>
                                 {/each}

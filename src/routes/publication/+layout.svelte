@@ -28,7 +28,7 @@
 
 <style>
     .nav-link a {
-        @apply text-gray-600 mr-6 py-2 px-2
+        @apply text-gray-600 mr-6 py-2 px-2 hover:text-black;
     }
     .nav-link a:last-child {
         @apply mr-0
