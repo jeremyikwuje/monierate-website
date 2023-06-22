@@ -9,103 +9,118 @@
 
 <url>
   <loc>https://monierate.com/</loc>
-  <lastmod>2023-06-12T19:05:16+00:00</lastmod>
+  <lastmod>2023-06-22T15:15:46+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
-  <loc>https://monierate.com/converter/luno?Amount=1&amp;From=USD&amp;To=NGN</loc>
-  <lastmod>2023-06-12T19:05:16+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://monierate.com/converter/binance?Amount=1&amp;From=USD&amp;To=NGN</loc>
-  <lastmod>2023-06-12T19:05:16+00:00</lastmod>
+  <loc>https://monierate.com/blog</loc>
+  <lastmod>2023-06-22T15:15:46+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://monierate.com/converter/quidax?Amount=1&amp;From=USD&amp;To=NGN</loc>
-  <lastmod>2023-06-12T19:05:16+00:00</lastmod>
+  <lastmod>2023-06-22T15:15:46+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://monierate.com/converter/binance?Amount=1&amp;From=USD&amp;To=NGN</loc>
+  <lastmod>2023-06-22T15:15:46+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://monierate.com/converter/remitano?Amount=1&amp;From=USD&amp;To=NGN</loc>
-  <lastmod>2023-06-12T19:05:16+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://monierate.com/converter/bitnob?Amount=1&amp;From=USD&amp;To=NGN</loc>
-  <lastmod>2023-06-12T19:05:16+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://monierate.com/converter/coinprofile?Amount=1&amp;From=USD&amp;To=NGN</loc>
-  <lastmod>2023-06-12T19:05:16+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://monierate.com/converter/yellowcard?Amount=1&amp;From=USD&amp;To=NGN</loc>
-  <lastmod>2023-06-12T19:05:16+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://monierate.com/converter/wirepay?Amount=1&amp;From=USD&amp;To=NGN</loc>
-  <lastmod>2023-06-12T19:05:16+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://monierate.com/converter/bitmama?Amount=1&amp;From=USD&amp;To=NGN</loc>
-  <lastmod>2023-06-12T19:05:16+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://monierate.com/converter/eversend?Amount=1&amp;From=USD&amp;To=NGN</loc>
-  <lastmod>2023-06-12T19:05:16+00:00</lastmod>
+  <lastmod>2023-06-22T15:15:46+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://monierate.com/converter/accrue?Amount=1&amp;From=USD&amp;To=NGN</loc>
-  <lastmod>2023-06-12T19:05:16+00:00</lastmod>
+  <lastmod>2023-06-22T15:15:46+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://monierate.com/converter/bitmama?Amount=1&amp;From=USD&amp;To=NGN</loc>
+  <lastmod>2023-06-22T15:15:46+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://monierate.com/converter/luno?Amount=1&amp;From=USD&amp;To=NGN</loc>
+  <lastmod>2023-06-22T15:15:46+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://monierate.com/converter/klasha?Amount=1&amp;From=USD&amp;To=NGN</loc>
-  <lastmod>2023-06-12T19:05:16+00:00</lastmod>
+  <lastmod>2023-06-22T15:15:46+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://monierate.com/converter/coinprofile?Amount=1&amp;From=USD&amp;To=NGN</loc>
+  <lastmod>2023-06-22T15:15:46+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://monierate.com/converter/eversend?Amount=1&amp;From=USD&amp;To=NGN</loc>
+  <lastmod>2023-06-22T15:15:46+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://monierate.com/converter/bitnob?Amount=1&amp;From=USD&amp;To=NGN</loc>
+  <lastmod>2023-06-22T15:15:46+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://monierate.com/converter/yellowcard?Amount=1&amp;From=USD&amp;To=NGN</loc>
+  <lastmod>2023-06-22T15:15:46+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://monierate.com/converter/payday?Amount=1&amp;From=USD&amp;To=NGN</loc>
-  <lastmod>2023-06-12T19:05:16+00:00</lastmod>
+  <lastmod>2023-06-22T15:15:46+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://monierate.com/converter/wirepay?Amount=1&amp;From=USD&amp;To=NGN</loc>
+  <lastmod>2023-06-22T15:15:46+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://monierate.com/converter/binance?Amount=1&amp;From=USDT&amp;To=NGN</loc>
-  <lastmod>2023-06-12T19:05:16+00:00</lastmod>
+  <lastmod>2023-06-22T15:15:46+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://monierate.com/converter/remitano?Amount=1&amp;From=USDT&amp;To=NGN</loc>
-  <lastmod>2023-06-12T19:05:16+00:00</lastmod>
+  <lastmod>2023-06-22T15:15:46+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://monierate.com/converter/quidax?Amount=1&amp;From=USDT&amp;To=NGN</loc>
-  <lastmod>2023-06-12T19:05:16+00:00</lastmod>
+  <lastmod>2023-06-22T15:15:46+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://monierate.com/converter/yellowcard?Amount=1&amp;From=USDT&amp;To=NGN</loc>
-  <lastmod>2023-06-12T19:05:16+00:00</lastmod>
+  <lastmod>2023-06-22T15:15:46+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://monierate.com/converter/luno?Amount=1&amp;From=USDC&amp;To=NGN</loc>
-  <lastmod>2023-06-12T19:05:16+00:00</lastmod>
+  <lastmod>2023-06-22T15:15:46+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://monierate.com/converter/bitmama?Amount=1&amp;From=USDC&amp;To=NGN</loc>
-  <lastmod>2023-06-12T19:05:16+00:00</lastmod>
+  <lastmod>2023-06-22T15:15:46+00:00</lastmod>
   <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://monierate.com/blog/virtualcard</loc>
+  <lastmod>2023-06-22T15:15:46+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://monierate.com/blog/virtualcard/cashex-dollar-virtual-card</loc>
+  <lastmod>2023-06-22T15:15:46+00:00</lastmod>
+  <priority>0.64</priority>
 </url>
 
 
