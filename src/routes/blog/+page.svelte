@@ -7,6 +7,11 @@
 
 <svelte:head>
 	<title>{config.title}</title>
+	<meta name="description" content="{config.description}">
+	<meta property="og:type" content="wesbite" />
+	<meta property="og:title" content={config.title} />
+	<meta property="og:description" content={config.title} />
+	<meta property="og:url" content={config.url} />
 </svelte:head>
 
 <!-- Posts -->
