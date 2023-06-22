@@ -19,6 +19,8 @@ In this guide, you will learn about the CashEx Dollar Virtual Card.
 -   The card cost $1 to create and it works on platforms like PayPal, Amazon, AliExpress, Google Pay, and others.
 -   It is relatively expensive to maintain as the transaction fees are as high as 2.5% when transacting above $100.
 
+![CashEx Tweet on Dollar Virtual Card](https://monierate.com/uploads/tweet_1671561585309909013_20230622_125357_via_10015_io.png)
+
 ## CashEx Dollar Virtual Card
 
 The CashEx Dollar Virtual Card is a pre-funded and reloadable virtual card that can be used for international payments online. You can add funds to the card anytime directly from your CashEx Dollar Wallet. It supports Chargeback, in other words, you can request a refund when you spend on any platform.
