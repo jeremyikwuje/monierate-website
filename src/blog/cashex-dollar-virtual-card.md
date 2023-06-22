@@ -5,6 +5,7 @@ description: The CashEx Dollar Virtual Card is a pre-funded and reloadable
   virtual card that can be used for international payments online.
 createdAt: 2023-06-22T12:12:33.962Z
 tag: virtualcard
+published: true
 ---
 ![CashEx Tweet on Dollar Virtual Card](https://monierate.com/uploads/tweet_1671561585309909013_20230622_125357_via_10015_io.png)
 

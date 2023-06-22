@@ -1,10 +1,10 @@
 import { json } from '@sveltejs/kit'
-import type { Post } from '$lib/articles/types'
+import type { Post } from '$lib/blog/types'
 
 async function getPosts(tag: string = "") {
 	let posts: Post[] = []
 
-	const paths = import.meta.glob('/src/publication/*.md', { eager: true })
+	const paths = import.meta.glob('/src/blog/*.md', { eager: true })
 
 	for (const path in paths) {
 		const file = paths[path]

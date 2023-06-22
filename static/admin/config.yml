@@ -21,6 +21,8 @@ collections:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Description", name: "description", widget: "string"}
       - {label: "Publish Date", name: "createdAt", widget: "datetime"}
+      - {label: "Updated At", name: "updatedAt", widget: "datetime"}
       - {label: "Tags", name: "tag", widget: "string"}
+      - {label: "Featured Image", name: "image", widget: "image"}
       - {label: "Published", name: "published", widget: "boolean"}
       - {label: "Body", name: "body", widget: "markdown"}

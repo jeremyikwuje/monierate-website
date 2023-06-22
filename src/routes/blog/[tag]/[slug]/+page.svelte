@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { formatDate } from '$lib/publication/utils'
+	import { formatDate } from '$lib/blog/utils'
 
 	export let data
 </script>
@@ -7,8 +7,11 @@
 <!-- SEO -->
 <svelte:head>
 	<title>{data.meta.title}</title>
+	<meta name="description" content={data.meta.description} />
 	<meta property="og:type" content="article" />
 	<meta property="og:title" content={data.meta.title} />
+	<meta property="og:description" content={data.meta.description} />
+	<meta property="og:image" content={data.meta.image} />
 </svelte:head>
 
 
