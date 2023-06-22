@@ -12,6 +12,19 @@ module.exports = {
         bitter: ["Bitter", "serif"],
         worksans: ["Work Sans", "sans-serif"],
       },
+      typography: {
+        DEFAULT: {
+          css: {
+            color: '#666',
+            a: {
+              color: '#06D68A',
+              '&:hover': {
+                color: '#048354',
+              },
+            },
+          },
+        },
+      }
     },
     colors: {
       transparent: 'transparent',

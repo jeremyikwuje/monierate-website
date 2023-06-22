@@ -29,7 +29,7 @@
 			</header>
 	
 			<!-- Post -->
-			<div id="post-content">
+			<div class="post-content">
 				<svelte:component this={data.content} />
 			</div>
 		</article>
@@ -37,7 +37,7 @@
 </main>
 
 <style>
-	#post-content a {
-		@apply text-primary border-b-2 border-primary
+	.post-content a {
+		@apply text-primary border-b-4 border-primary
 	}
 </style>

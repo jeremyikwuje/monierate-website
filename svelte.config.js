@@ -7,6 +7,9 @@ import { mdsvex } from 'mdsvex'
 
 const mdsvexOptions = {
 	extensions: ['.md'],
+	layout: {
+		blog: './src/blog/mdsvex.svelte'
+	},
 }
 
 const config = {
