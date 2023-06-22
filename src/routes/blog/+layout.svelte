@@ -19,8 +19,8 @@
             
             <div class="nav-link">
                 <a href="/" class={path == '' ? 'active': ''}>$1 Today</a>
-                <a href="/converter" class={path == 'converter' ? 'active': ''}>Converter</a>
-                <a href="/publication" class={path == 'publication' ? 'active': ''}>Publication</a>
+                <!-- <a href="/converter" class={path == 'converter' ? 'active': ''}>Converter</a> -->
+                <a href="/blog" class={path == 'blog' ? 'active': ''}>Blog</a>
             </div>
         </div>
     </nav>

@@ -16,9 +16,9 @@
 			{#each data.posts as post}
 				<li class="flex justify-between items-center mb-4 py-6 border-b-2 border-dotted border-gray-300 last:border-none">
 					<span class="block">
-						<span class="inline-block text-green-500 font-semibold text-xs mb-1 leading-none">{post.tag.toUpperCase()}</span>
+						<a href="/blog/{post.tag}" class="inline-block text-green-500 font-semibold text-xs mb-1 leading-none">{post.tag.toUpperCase()}</a>
 						<p></p>
-						<a href="blog/{post.tag}/{post.slug}" class="text-2xl text-gray-900 hover:underline">{post.title}</a>
+						<a href="/blog/{post.tag}/{post.slug}" class="text-2xl text-gray-900 hover:underline">{post.title}</a>
 					</span>
 					<p class="date">{formatDate(post.createdAt)}</p>
 				</li>
