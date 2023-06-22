@@ -1,16 +1,31 @@
 <script>
   import "../../app.css";
+  import { page } from "$app/stores";
 
   let year = (new Date()).getFullYear()
+
+  let paths = $page.url.pathname.split('/')
+  let path = paths[1] ?? 'home'
+
+  console.log(path)
 </script>
 
 <header>
-  <div id="brand" class="nav-brand container flex justify-between items-center py-4">
-      <a href="/">
-        <img src="/monierate.png" class="h-[24px]" alt="Monierate Logo">
-      </a>
-      <a href="https://monierate.substack.com" class="border-2 border-black py-2 px-4 rounded-lg bg-primary font-semibold uppercase text-black">Subscribe</a>
-  </div>
+  <nav id="brand" class="border-b border-gray-100">
+      <div class="container flex justify-between items-center py-4">
+          <div class="">
+              <a href="/">
+                  <img src="/monierate.png" class="h-[24px]" alt="Monierate Logo">
+                </a>
+          </div>
+          
+          <div class="nav-link">
+              <a href="/" class={path == '' ? 'active': ''}>$1 Today</a>
+              <!-- <a href="/converter" class={path == 'converter' ? 'active': ''}>Converter</a> -->
+              <a href="/blog" class={path == 'blog' ? 'active': ''}>Blog</a>
+          </div>
+      </div>
+  </nav>
 </header>
 
 <slot />
@@ -68,6 +83,16 @@
 </div>
 
 <style>
+  .nav-link a {
+      @apply text-gray-600 mr-6 py-2 px-2 hover:text-black;
+  }
+  .nav-link a:last-child {
+      @apply mr-0
+  }
+  .nav-link a.active {
+      @apply text-black border-b-4 border-primary
+  }
+
   footer .converter-list {
     @apply py-4;
   }
