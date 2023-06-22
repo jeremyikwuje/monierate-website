@@ -135,6 +135,11 @@ convertNow()
     </title>
     <meta name="description" content="Convert {currencyFrom.name} to {currencyTo.name} on {changer.name}. {changer.name} {currencyFrom.name} rate. {changer.name} {currencyFrom.name} rate. {changer.name} {currencyTo.name} rate. {changer.name} converter">
     <meta name="keywords" content="{changer.name} {currencyFrom.name} rate, {changer.name} {currencyTo.name} rate, {changer.name} converter">
+
+    <!-- OG -->
+    <meta property="og:type" content="website" />
+	<meta property="og:title" content="{Money.format(convertAmount)} {convertFrom} to {convertTo} on {changer.name}" />
+	<meta property="og:description" content="Convert {currencyFrom.name} to {currencyTo.name} on {changer.name}. {changer.name} {currencyFrom.name} rate." />
 </svelte:head>
 
 <div class="bg-gray-50 mt-8 mb-8">

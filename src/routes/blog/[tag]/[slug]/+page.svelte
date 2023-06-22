@@ -1,4 +1,5 @@
 <script lang="ts">
+	import * as config from '$lib/blog/config'
 	import { formatDate } from '$lib/blog/utils'
 
 	export let data
@@ -6,12 +7,13 @@
 
 <!-- SEO -->
 <svelte:head>
-	<title>{data.meta.title}</title>
+	<title>{data.meta.title} &mdash; Monierate</title>
 	<meta name="description" content={data.meta.description} />
 	<meta property="og:type" content="article" />
 	<meta property="og:title" content={data.meta.title} />
 	<meta property="og:description" content={data.meta.description} />
 	<meta property="og:image" content={data.meta.image} />
+	<meta property="og:url" content={config.url}/{data.meta.tag}/{data.slug} />
 </svelte:head>
 
 

@@ -9,6 +9,15 @@
     let last = rates[rates.length - 1]
 </script>
 
+<svelte:head>
+	<title>Currency Prices & Calculator &mdash; Monierate</title>
+	<meta name="description" content="Today's dollar price in naira. Convert Nigerian Naira to US Dollar. Calculate your finance using our various financial tools.">
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="Currency Prices & Calculator &mdash; Monierate" />
+	<meta property="og:description" content="Today's dollar price in naira. Convert Nigerian Naira to US Dollar. Calculate your finance using our various financial tools." />
+	<meta property="og:url" content="monierate.com" />
+</svelte:head>
+
 <div class="bg-gray-50 pt-12 pb-4">
     <div class="container">
         <h1 class="text-2xl md:text-3xl mb-2">Today's Dollar Prices in Black Market</h1>
