@@ -77,15 +77,13 @@ The Payday Virtual Mastercard is supported on any platform US Dollar is accepted
 Getting the Payday Virtual Mastercard is simple and seamless.  
 
 1.  Download the Payday app
-2.  Create an account
+2. Create an account
 3.  Verify your account
 4.  Click on Cards (bottom of the screen)
 5.  Select Mastercard (swipe if necessary)
 6.  Click on “Create a Mastercard”
 7.  Enter an amount e.g $10 (minimum of $5 for creation fee)
 8.  Click “Create Card”
-
--
 
 ## Payday Visa card
 
@@ -132,15 +130,13 @@ The Payday Virtual Visa card is supported on any platform US Dollar is accepted.
 Getting the Payday Virtual Visa card is simple and seamless.  
 
 1.  Download the Payday app
-2.  Create an account
+2. Create an account
 3.  Verify your account
 4.  Click on Cards (bottom of the screen)
 5.  Select Payday Visa (swipe if necessary)
 6.  Click on “Create a Visa Card”
 7.  Enter an amount e.g $10 (**minimum of $5 for creation fee**)
 8.  Click “Create Card”
-
--
 
 ## Payday Verve card
 
@@ -188,9 +184,7 @@ Getting the Payday Virtual Verve card is simple and seamless.
 7.  Enter an amount e.g N5,000 (**minimum of N500**)
 8.  Click “Create Card”
 
--
-
-### What you need to know about the Payday Virtual Cards
+## What you need to know about the Payday Virtual Cards
 
 #### Internet only
 Payday Virtual Cards can only be used online. The Mastercard can only be used anywhere USD cards are accepted. The Visa card can only be used anywhere USD cards are accepted. And the Verve card can only be used anywhere naira Verve cards are accepted.
