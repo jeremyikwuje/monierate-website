@@ -29,7 +29,7 @@ Payday has three virtual cards.
 -   **Payday Visa card**
 -   **Payday Verve card**
 
-These cards can only be used to pay for things online. The Mastercard and Visa can only be used on international platforms. The Verve card can only be used on Nigerian websites.
+These cards can only be used to pay for things online. The Mastercard and Visa card can only be used on international platforms. The Verve card can only be used on Nigerian websites.
 
 Continue reading to find information about each of these cards.
 
