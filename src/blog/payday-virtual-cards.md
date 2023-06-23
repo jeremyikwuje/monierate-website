@@ -209,7 +209,7 @@ In April 2023, Payday suspended its virtual card service due to an update from i
 ### 24-hours delay
 Payday virtual cards are typically created within 24 hours.
 
-### What customers are saying recently about Payday Virtual cards
+## What customers are saying recently about Payday Virtual cards
 
 > **@awcml_withj3** _June 20_
 > Recently tried getting a virtual Dollar card. I say make I try this Payday app. I saw $5 fee, I transferred 5k last week Saturday. Omo money no reflect, I say make I wait, Monday, Tuesday nothing. ah! I had to mail before my money reflected. Omo I use the money buy light. Run!
