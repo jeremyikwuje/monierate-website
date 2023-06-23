@@ -5,7 +5,7 @@ description: In this guide, you will learn about Payday virtual cards. Payday is
   a neo-bank for Africa. Using Payday, you can send and receive money globally,
   and create virtual cards to transact online.
 createdAt: 2023-06-23T13:00:41.361Z
-updatedAt: 2023-06-23T13:00:41.464Z
+updatedAt: 2023-06-23T14:27:34.066Z
 tag: virtualcard
 image: https://monierate.com/uploads/tweet_1666135173551861770_20230623_144050_via_10015_io.png
 published: true
@@ -29,7 +29,7 @@ Payday has three virtual cards.
 -   **Payday Visa card**
 -   **Payday Verve card**
 
-These cards can only be used to pay for things online. The Mastercard and Visa can only be used on international platforms are they are USD cards. The Verve card can only be used on Nigerian websites.
+These cards can only be used to pay for things online. The Mastercard and Visa can only be used on international platforms. The Verve card can only be used on Nigerian websites.
 
 Continue reading to find information about each of these cards.
 
@@ -76,14 +76,14 @@ The Payday Virtual Mastercard is supported on any platform US Dollar is accepted
 
 Getting the Payday Virtual Mastercard is simple and seamless.  
 
-2.  Download the Payday app
-3.  Create an account
-4.  Verify your account
-5.  Click on Cards (bottom of the screen)
-6.  Select Mastercard (swipe if necessary)
-7.  Click on “Create a Mastercard”
-8.  Enter an amount e.g $10 (minimum of $5 for creation fee)
-9.  Click “Create Card”
+1.  Download the Payday app
+2.  Create an account
+3.  Verify your account
+4.  Click on Cards (bottom of the screen)
+5.  Select Mastercard (swipe if necessary)
+6.  Click on “Create a Mastercard”
+7.  Enter an amount e.g $10 (minimum of $5 for creation fee)
+8.  Click “Create Card”
 
 -
 
@@ -131,14 +131,14 @@ The Payday Virtual Visa card is supported on any platform US Dollar is accepted.
 
 Getting the Payday Virtual Visa card is simple and seamless.  
 
-3.  Download the Payday app
-4.  Create an account
-5.  Verify your account
-6.  Click on Cards (bottom of the screen)
-7.  Select Payday Visa (swipe if necessary)
-8.  Click on “Create a Visa Card”
-9.  Enter an amount e.g $10 (**minimum of $5 for creation fee**)
-10.  Click “Create Card”
+1.  Download the Payday app
+2.  Create an account
+3.  Verify your account
+4.  Click on Cards (bottom of the screen)
+5.  Select Payday Visa (swipe if necessary)
+6.  Click on “Create a Visa Card”
+7.  Enter an amount e.g $10 (**minimum of $5 for creation fee**)
+8.  Click “Create Card”
 
 -
 
