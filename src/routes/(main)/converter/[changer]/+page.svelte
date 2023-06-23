@@ -1,3 +1,16 @@
+<svelte:head>
+	<title>
+        {Money.format(convertAmount)} {convertFrom} to {convertTo} on {changer.name} - Convert {currencyFrom.name} to {currencyTo.name} on {changer.name}
+    </title>
+    <meta name="description" content="Convert {currencyFrom.name} to {currencyTo.name} on {changer.name}. {changer.name} {currencyFrom.name} rate. {changer.name} {currencyFrom.name} rate. {changer.name} {currencyTo.name} rate. {changer.name} converter">
+    <meta name="keywords" content="{changer.name} {currencyFrom.name} rate, {changer.name} {currencyTo.name} rate, {changer.name} converter, {changer.name} exchange rate.">
+
+    <!-- OG -->
+    <meta property="og:type" content="website" />
+	<meta property="og:title" content="{Money.format(convertAmount)} {convertFrom} to {convertTo} on {changer.name}" />
+	<meta property="og:description" content="Convert {currencyFrom.name} to {currencyTo.name} on {changer.name}. {changer.name} {currencyFrom.name} rate." />
+</svelte:head>
+
 <script lang="ts">
 import type { PageServerData } from "./$types"
 import Money from "$lib/money";
@@ -122,6 +135,10 @@ function reloadMoreConversions() {
     moreConversions = getMoreConversions()
 }
 
+function getCurrencyInfo() {
+
+}
+
 // run the conversions
 
 updateCurrencies()
@@ -129,20 +146,7 @@ convertNow()
 
 </script>
 
-<svelte:head>
-	<title>
-        {Money.format(convertAmount)} {convertFrom} to {convertTo} on {changer.name} - Convert {currencyFrom.name} to {currencyTo.name} on {changer.name}
-    </title>
-    <meta name="description" content="Convert {currencyFrom.name} to {currencyTo.name} on {changer.name}. {changer.name} {currencyFrom.name} rate. {changer.name} {currencyFrom.name} rate. {changer.name} {currencyTo.name} rate. {changer.name} converter">
-    <meta name="keywords" content="{changer.name} {currencyFrom.name} rate, {changer.name} {currencyTo.name} rate, {changer.name} converter, {changer.name} exchange rate.">
-
-    <!-- OG -->
-    <meta property="og:type" content="website" />
-	<meta property="og:title" content="{Money.format(convertAmount)} {convertFrom} to {convertTo} on {changer.name}" />
-	<meta property="og:description" content="Convert {currencyFrom.name} to {currencyTo.name} on {changer.name}. {changer.name} {currencyFrom.name} rate." />
-</svelte:head>
-
-<div class="bg-gray-50 mt-8 mb-8">
+<div class="bg-white pt-8 mb-24">
     <div class="w-[95%] md:w-[70%] px-8 py-4 mx-auto mb-4 text-center">
         <h1 class="text-2xl md:text-3xl">
             {Money.format(convertAmount)} {convertFrom} to {convertTo} on {changer.name} - Convert {currencyFrom.name} to {currencyTo.name} on {changer.name}
@@ -219,7 +223,7 @@ convertNow()
         </div>
     </div>
 
-    <div class="block w-[95%] mx-auto md:w-[70%] md:flex md:justify-between md:items-center mt-8">
+    <div class="block w-[95%] mx-auto md:w-[70%] md:flex md:justify-between md:items-center mt-24">
         <div class="bg-white shadow-lg rounded-lg md:w-[40%] mb-4">
             <span class="bg-green-100 block py-4 px-8">
                 <h3 class="text-center text-lg">
@@ -287,6 +291,33 @@ convertNow()
                     </table>
                 {/await}
             </div>
+        </div>
+    </div>
+
+    <div class="w-[95%] mx-auto md:w-[70%] mt-24">
+        <h3 class="text-2xl mb-6 text-center">Currency infomation</h3>
+        <hr class="mb-12">
+        <div class="block md:flex md:justify-between md:items-center">
+            <div class="shadow-lg md:w-[45%] p-8">
+                <h2 class="text-2xl">{convertFrom} - {currencyFrom.name}</h2>
+                <span class="block mt-6">
+                    {currencyFrom.bio}
+                </span>
+            </div>
+            <div class="shadow-lg md:w-[45%] p-8">
+                <h2 class="text-2xl">{convertTo} - {currencyTo.name}</h2>
+                <span class="block mt-6">
+                    {currencyTo.bio}
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <div class="w-[95%] mx-auto md:w-[70%] mt-24 pb-8">
+        <h3 class="text-2xl mb-6 text-center">About {changer.name}</h3>
+        <hr class="mb-12">
+        <div class="block px-8">
+           {changer.bio} You can convert {convertFrom} to {convertTo} and {convertTo} to {convertFrom} on {changer.name}. As at {new Date(market.updatedAt)}, <strong>1 {convertFrom} is about {Money.format(convertResult.rate)} {convertTo} on {changer.name} and 1 {convertTo} is about {Money.format(convertResult.rateInverse)} {convertFrom} on {changer.name}</strong>.
         </div>
     </div>
 </div>
