@@ -107,7 +107,7 @@
     }
 
     async function getMoreConversions() {
-        let series = [ 1, 5, 10, 25, 50, 100, 500, 1000, 5000, 10000 ]
+        let series = [ 1, 3, 5, 7, 10, 12, 15, 25, 30, 45, 50, 75, 100, 300, 400, 500, 750, 1000, 3000, 5000, 7500, 10000, 15000, 25000, 50000, 75000, 100000 ]
         let conversions: any = {
             from: [],
             to: []
@@ -141,7 +141,7 @@
     convertNow()
 </script>
 
-<div class="bg-white pt-8 mb-24">
+<div class="bg-light pt-8 mb-24">
     <div class="w-[95%] md:w-[70%] px-8 py-4 mx-auto mb-4 text-center">
         <h1 class="text-2xl md:text-3xl">
             {Money.format(convertAmount)} {convertFrom} to {convertTo} on {changer.name} is {Money.format(convertResult.conversion)} {currencyTo.name}
