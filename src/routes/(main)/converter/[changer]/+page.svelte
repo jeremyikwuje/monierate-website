@@ -1,6 +1,6 @@
 <svelte:head>
 	<title>
-        {changer.name} exchange rate: {Money.format(convertAmount)} {convertFrom} to {convertTo}
+        {Money.format(convertAmount)} {convertFrom} to {convertTo} - {changer.name} {currencyFrom.name} to {currencyTo.name} Price Today
     </title>
     <meta name="description" content="Convert {currencyFrom.name} to {currencyTo.name} on {changer.name}. Track {changer.name} {convertFrom} to {convertTo} rate today. Enter any amount in {convertFrom} to see the conversion in {convertTo}.">
     <meta name="keywords" content="{changer.name} exchange rate, {changer.name} {currencyFrom.name} rate, {changer.name} {currencyTo.name} rate, {changer.name} currency converter.">
@@ -198,7 +198,7 @@
                             </svg>                          
                         </span>
                         <span class="text-gray-600 text-sm">
-                            We use the rate from {changer.name} for this conversion. This is for informational purposes only.
+                            We use the exchange rate from {changer.name} for this conversion. This is for informational purposes only.
                         </span>
                     </span>
                     <span class="block text-sm md:w-[50%] p-4">
@@ -290,7 +290,7 @@
     </div>
 
     <div class="w-[95%] mx-auto md:w-[70%] mt-24">
-        <h3 class="text-2xl mb-6 text-center">Currency infomation</h3>
+        <h3 class="text-2xl mb-6 text-center">Currency Infomation</h3>
         <hr class="mb-12">
         <div class="block md:flex md:justify-between md:items-center">
             <div class="shadow-lg md:w-[45%] p-8">
