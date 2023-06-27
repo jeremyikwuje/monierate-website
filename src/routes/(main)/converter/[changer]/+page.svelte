@@ -206,10 +206,10 @@
                     </span>
                 </div>
                 
-                <span class="block mt-12">
-                    <a href="{changer.link}" class="btn btn-primary btn-sm">
+                <span class="block mt-12 mb-4">
+                    <a href="{changer.link}" class="button">
                         Open {changer.name}
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4 ml-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="inline-block w-4 h-4 ml-2">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25" />
                         </svg>                          
                     </a>
@@ -220,7 +220,7 @@
 
     <div class="block w-[95%] mx-auto md:w-[70%] md:flex md:justify-between md:items-center mt-24">
         <div class="bg-white shadow-lg rounded-lg md:w-[40%] mb-4">
-            <span class="bg-green-100 block py-4 px-8">
+            <span class="bg-blue-100 block py-4 px-8">
                 <h2 class="text-center text-lg">
                     Convert {currencyFrom.name} to {currencyTo.name} on {changer.name}
                 </h2>
@@ -230,7 +230,7 @@
                     <span class="block text-center py-8 px-4">Loading...</span>
                 {:then data}
                 <table class="w-full text-center px-8">
-                    <thead class="bg-green-100">
+                    <thead class="bg-blue-100">
                         <tr>
                             <th class="py-4">{convertFrom}</th>
                             <th class="py-4">{convertTo}</th>
@@ -255,7 +255,7 @@
             </div>
         </div>
         <div class="bg-white shadow-lg rounded-lg md:w-[40%] mb-4">
-            <span class="bg-green-100 block py-4 px-8">
+            <span class="bg-blue-100 block py-4 px-8">
                 <h2 class="text-center text-lg">Convert {currencyTo.name} to {currencyFrom.name} on {changer.name}</h2>
             </span>
             <div class="pb-4">
@@ -263,7 +263,7 @@
                     <span class="block text-center py-8 px-4">Loading...</span>
                 {:then data}
                     <table class="w-full text-center px-8">
-                        <thead class="bg-green-100">
+                        <thead class="bg-blue-100">
                             <tr>
                                 <th class="py-4">{convertTo}</th>
                                 <th class="py-4">{convertFrom}</th>

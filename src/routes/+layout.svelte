@@ -30,7 +30,7 @@ let year = (new Date()).getFullYear()
     
 <slot />
     
-<footer class="pt-16 pb-8 mt-8 bg-black text-white">
+<footer class="pt-16 pb-8 mt-8 bg-white text-gray-500">
     <div class="w-[95%] md:w-[70%] mx-auto block md:flex justify-between item-center">
         <div class="w-full md:w-[30%]">
         <h3 class="font-bold">Currency converter</h3>
@@ -51,8 +51,8 @@ let year = (new Date()).getFullYear()
         </div>
         <div class="w-full md:w-[50%]">
             <span class="block mb-8">
-                <span class="font-bold block mb-2">Contacts</span>
-                <span class="font-bold text-xl block mb-2">hello@monierate.com</span>
+                <span class="font-bold block mb-2 text-gray-800">Contacts</span>
+                <span class="font-bold text-xl block mb-2 text-gray-800">hello@monierate.com</span>
             </span>
 
             <span class="block text-sm">
@@ -60,14 +60,14 @@ let year = (new Date()).getFullYear()
             </span>
 
             <div class="mt-4">
-            <p class="text-sm mb-4">
+            <p class="text-sm mb-4 text-gray-500">
                 We aggregate the exchange rates from multiple market providers. This is for informational purposes only.
             </p>
-            <p class="text-sm mb-4">
+            <p class="text-sm mb-4 text-gray-500">
                 References made to third party names, logos and trademarks on this website are to identify corresponding goods and services that Monierate visitor can themselves exchange currencies. Unless otherwise specified, the trademark holders are not affiliated with Monierate, our products or website, and they do not sponsor or endorse Monierate services. Such references are included strictly as nominative fair use under applicable trademark law and remain fully the property of their respective trademark holders.
             </p>
             <p class="text-sm">
-                Built and maintained by <a href="https://twitter.com/jeremyikwuje" class="text-white">@jeremyikwuje ⚡</a> and <a href="https://twitter.com/onionsman" class="text-white">@onionsman</a>
+                Built and maintained by <a href="https://twitter.com/jeremyikwuje" class="text-gray-800">@jeremyikwuje ⚡</a> and <a href="https://twitter.com/onionsman" class="text-gray-800">@onionsman</a>
             </p>
             </div>
         </div>
@@ -93,7 +93,7 @@ let year = (new Date()).getFullYear()
         @apply mr-0;
     }
     .nav-link a.active {
-        @apply text-black border-b-4 border-primary;
+        @apply text-black border-b-4 border-gray-800;
     }
 
     footer .converter-list {
@@ -103,6 +103,6 @@ let year = (new Date()).getFullYear()
         @apply mb-4
     }
     footer .converter-list a {
-        @apply text-white block text-sm;
+        @apply block text-sm text-gray-500 font-semibold;
     }
 </style>

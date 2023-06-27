@@ -7,14 +7,14 @@
 
 @layer base {
     body, html {
-        @apply font-worksans bg-gray-50 font-normal min-h-screen;
+        @apply font-worksans bg-gray-100 font-normal min-h-screen;
         padding: 0;
         margin: 0;
         overflow-x: hidden;
     }
 
     h1, h2, h3, h4, h5, h6 {
-        @apply font-bitter font-semibold;
+        @apply font-bitter font-semibold text-gray-800;
     }
 
     a, button, input, textbox, p, span, div {
@@ -45,13 +45,17 @@
         outline: 0;
     }
 
+    .button {
+        @apply text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700;
+    }
+
     .select {
         @apply block text-black bg-white p-2.5 w-full;
         border: 1px solid #ddd;
         box-shadow: none;
     }
     .select:focus, .select:hover {
-        @apply border-indigo-800;
+        @apply border-black;
         box-shadow: none;
         outline: 0;
     }
