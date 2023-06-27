@@ -1,14 +1,8 @@
 export const load = (async ({ params, url, fetch }) => {
-    let res: any
 
-    res = await fetch(`/api/changer?code=${params.changer}`);
-    const changer = (await res.json())
-
-    res = await fetch(`/api/market?changer=${params.changer}`);
-    const market = (await res.json())
-
-    res = await fetch(`/api/currencies`);
-    const currencies = (await res.json())
+    let resChanger = fetch(`/api/changer?code=${params.changer}`);
+    let resMarket = fetch(`/api/market?changer=${params.changer}`);
+    let resCurrencies = fetch(`/api/currencies`);
 
     let urlParams = url.searchParams
     const convert = {
@@ -19,6 +13,10 @@ export const load = (async ({ params, url, fetch }) => {
 
     console.log('yeah')
 
+    const changer = (await (await resChanger).json())
+    const market = (await (await resMarket).json())
+    const currencies = (await (await resCurrencies).json())
+    
     return {
         changer,
         market,

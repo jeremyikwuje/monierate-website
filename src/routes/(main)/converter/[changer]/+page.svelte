@@ -147,7 +147,7 @@
             <span class="block font-black mb-4 text-xl">{changer.name}:</span> {Money.format(convertAmount)} {convertFrom} to {convertTo} is {Money.format(convertResult.conversion)} {currencyTo.name}
         </h1>
         <span class="inline-block bg-transparent border border-black rounded-full w-[32px] h-[32px] mt-4">
-            <img src="/icons/{changer.icon}" class="rounded-full" alt="{changer.icon}">
+            <img src="/icons/{changer.icon}" width="30px" height="30px" class="rounded-full" alt="{changer.name} icon">
         </span>
     </div>
     
@@ -221,9 +221,9 @@
     <div class="block w-[95%] mx-auto md:w-[70%] md:flex md:justify-between md:items-center mt-24">
         <div class="bg-white shadow-lg rounded-lg md:w-[40%] mb-4">
             <span class="bg-green-100 block py-4 px-8">
-                <h3 class="text-center text-lg">
+                <h2 class="text-center text-lg">
                     Convert {currencyFrom.name} to {currencyTo.name} on {changer.name}
-                </h3>
+                </h2>
             </span>
             <div class="pb-4">
                 {#await moreConversions}
@@ -256,7 +256,7 @@
         </div>
         <div class="bg-white shadow-lg rounded-lg md:w-[40%] mb-4">
             <span class="bg-green-100 block py-4 px-8">
-                <h3 class="text-center text-lg">Convert {currencyTo.name} to {currencyFrom.name} on {changer.name}</h3>
+                <h2 class="text-center text-lg">Convert {currencyTo.name} to {currencyFrom.name} on {changer.name}</h2>
             </span>
             <div class="pb-4">
                 {#await moreConversions}
@@ -290,7 +290,7 @@
     </div>
 
     <div class="w-[95%] mx-auto md:w-[70%] mt-24">
-        <h3 class="text-2xl mb-6 text-center">Currency Infomation</h3>
+        <h2 class="text-2xl mb-6 text-center">Currency Infomation</h2>
         <hr class="mb-12">
         <div class="block md:flex md:justify-between md:items-center">
             <div class="shadow-lg md:w-[45%] p-8 bg-white">
@@ -309,7 +309,7 @@
     </div>
 
     <div class="w-[95%] mx-auto md:w-[70%] mt-24 pb-8">
-        <h3 class="text-2xl mb-6 text-center">About {changer.name}</h3>
+        <h2 class="text-2xl mb-6 text-center">About {changer.name}</h2>
         <hr class="mb-12">
         <div class="block px-8">
            {changer.bio} You can convert {convertFrom} to {convertTo} and {convertTo} to {convertFrom} on {changer.name}. As at {new Date(market.updatedAt)}, <strong>1 {convertFrom} is about {Money.format(convertResult.rate)} {convertTo} on {changer.name} and 1 {convertTo} is about {Money.format(convertResult.rateInverse)} {convertFrom} on {changer.name}</strong>.
