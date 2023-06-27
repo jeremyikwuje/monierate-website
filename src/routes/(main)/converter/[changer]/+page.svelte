@@ -12,11 +12,11 @@
 </svelte:head>
 
 <script lang="ts">
-    import type { PageServerData } from "./$types"
+    import type { PageData } from "./$types"
     import Money from "$lib/money";
     import { round, chain } from "mathjs"
 
-    export let data: PageServerData;
+    export let data: PageData;
     let changer = data.changer
     let market = data.market
     let convert = data.convert
