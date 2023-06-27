@@ -1,6 +1,3 @@
-import type { PageServerLoad } from "./$types"
-import { basicAuth, getEndpoint } from "$lib/helper.svelte";
-
 export const load = (async ({ params, url, fetch }) => {
     let res: any
 
@@ -28,4 +25,4 @@ export const load = (async ({ params, url, fetch }) => {
         convert,
         currencies
     }
-}) satisfies PageServerLoad
+})
