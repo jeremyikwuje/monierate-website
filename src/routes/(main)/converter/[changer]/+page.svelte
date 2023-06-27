@@ -1,149 +1,144 @@
 <svelte:head>
 	<title>
-        {Money.format(convertAmount)} {convertFrom} to {convertTo} on {changer.name} - Convert {currencyFrom.name} to {currencyTo.name} on {changer.name}
+        {changer.name} exchange rate: {Money.format(convertAmount)} {convertFrom} to {convertTo}
     </title>
-    <meta name="description" content="Convert {currencyFrom.name} to {currencyTo.name} on {changer.name}. {changer.name} {currencyFrom.name} rate. {changer.name} {currencyFrom.name} rate. {changer.name} {currencyTo.name} rate. {changer.name} converter">
-    <meta name="keywords" content="{changer.name} {currencyFrom.name} rate, {changer.name} {currencyTo.name} rate, {changer.name} converter, {changer.name} exchange rate.">
+    <meta name="description" content="Convert {currencyFrom.name} to {currencyTo.name} on {changer.name}. Track {changer.name} {convertFrom} to {convertTo} rate today. Enter any amount in {convertFrom} to see the conversion in {convertTo}.">
+    <meta name="keywords" content="{changer.name} exchange rate, {changer.name} {currencyFrom.name} rate, {changer.name} {currencyTo.name} rate, {changer.name} currency converter.">
 
     <!-- OG -->
     <meta property="og:type" content="website" />
-	<meta property="og:title" content="{Money.format(convertAmount)} {convertFrom} to {convertTo} on {changer.name}" />
-	<meta property="og:description" content="Convert {currencyFrom.name} to {currencyTo.name} on {changer.name}. {changer.name} {currencyFrom.name} rate." />
+	<meta property="og:title" content="{changer.name} exchange rate: {Money.format(convertAmount)} {convertFrom} to {convertTo}" />
+	<meta property="og:description" content="Convert {currencyFrom.name} to {currencyTo.name} on {changer.name}. Enter any amount in {convertFrom} to see the conversion in {convertTo}." />
 </svelte:head>
 
 <script lang="ts">
-import type { PageServerData } from "./$types"
-import Money from "$lib/money";
-import { round, chain } from "mathjs"
+    import type { PageServerData } from "./$types"
+    import Money from "$lib/money";
+    import { round, chain } from "mathjs"
 
-export let data: PageServerData;
-let changer = data.changer
-let market = data.market
-let convert = data.convert
-const currencies = data.currencies
+    export let data: PageServerData;
+    let changer = data.changer
+    let market = data.market
+    let convert = data.convert
+    const currencies = data.currencies
 
-let rates = JSON.parse(market.rates)
-let convertFrom = convert.From.toUpperCase()
-let convertTo = convert.To.toUpperCase()
-let convertAmount = parseFloat(`${convert.Amount}`)
+    let rates = JSON.parse(market.rates)
+    let convertFrom = convert.From.toUpperCase()
+    let convertTo = convert.To.toUpperCase()
+    let convertAmount = parseFloat(`${convert.Amount}`)
 
-let convertResult = {
-    rate: 0,
-    rateInverse: 0,
-    conversion: 0,
-}
-
-// initialize market currencies
-var marketCurrencies: [] = []
-var currencyFrom: any = {}
-var currencyTo: any = {}
-var moreConversions: any = {
-    from: [],
-    to: []
-}
-
-function convertNow() {
-    let from = convertFrom.toLowerCase()
-    let to = convertTo.toLowerCase()
-
-    console.log(from + to)
-
-    let rate = 1  // 1:1
-    let rateInverse = 1
-    
-    if (from != to) {
-        
-        if (!rates.hasOwnProperty(from)) {
-            convertResult.rate = 0
-            convertResult.rateInverse = 0
-            convertResult.conversion = 0
-
-            return
-        }
-
-        let pair = JSON.parse(rates[from])
-        if (!pair.hasOwnProperty(to)) {
-            convertResult.rate = 0
-            convertResult.rateInverse = 0
-            convertResult.conversion = 0
-            
-            return
-        }
-
-        let pairInverse = JSON.parse(rates[to])
-        if (!pairInverse.hasOwnProperty(from)) {
-            convertResult.rate = 0
-            convertResult.rateInverse = 0
-            convertResult.conversion = 0
-            
-            return
-        }
-
-        rate = pair[to]
-        rateInverse = pairInverse[from]
+    let convertResult = {
+        rate: 0,
+        rateInverse: 0,
+        conversion: 0,
     }
 
-    /** Calcuate the conversion*/
-    convertResult.rate = rate
-    convertResult.rateInverse = rateInverse
-    convertResult.conversion = round(chain(rate).multiply(convertAmount).done(), 8)
-
-    currencyFrom = marketCurrencies.find( c => c.code === from)
-    currencyTo = marketCurrencies.find( c => c.code === to)
-    reloadMoreConversions()
-}
-
-function updateCurrencies() {
-    let from = convertFrom.toLowerCase()
-    let to = convertTo.toLowerCase()
-    
-    currencies.forEach( (currency: any) => {
-        let code = currency.code
-
-        if (rates.hasOwnProperty(code)) {
-            marketCurrencies.push(currency)
-        }
-    })
-}
-
-async function getMoreConversions() {
-    let series = [ 1, 5, 10, 25, 50, 100, 500, 1000, 5000, 10000 ]
-    let conversions: any = {
+    // initialize market currencies
+    var marketCurrencies: [] = []
+    var currencyFrom: any = {}
+    var currencyTo: any = {}
+    var moreConversions: any = {
         from: [],
         to: []
     }
 
-    series.forEach( serie => {
+    function convertNow() {
+        let from = convertFrom.toLowerCase()
+        let to = convertTo.toLowerCase()
 
-        let rate = convertResult.rate
-        conversions.from.push({
-            amount: serie,
-            conversion: round(chain(rate).multiply(serie).done(), 8)
+        console.log(from + to)
+
+        let rate = 1  // 1:1
+        let rateInverse = 1
+        
+        if (from != to) {
+            
+            if (!rates.hasOwnProperty(from)) {
+                convertResult.rate = 0
+                convertResult.rateInverse = 0
+                convertResult.conversion = 0
+
+                return
+            }
+
+            let pair = JSON.parse(rates[from])
+            if (!pair.hasOwnProperty(to)) {
+                convertResult.rate = 0
+                convertResult.rateInverse = 0
+                convertResult.conversion = 0
+                
+                return
+            }
+
+            let pairInverse = JSON.parse(rates[to])
+            if (!pairInverse.hasOwnProperty(from)) {
+                convertResult.rate = 0
+                convertResult.rateInverse = 0
+                convertResult.conversion = 0
+                
+                return
+            }
+
+            rate = pair[to]
+            rateInverse = pairInverse[from]
+        }
+
+        /** Calcuate the conversion*/
+        convertResult.rate = rate
+        convertResult.rateInverse = rateInverse
+        convertResult.conversion = round(chain(rate).multiply(convertAmount).done(), 8)
+
+        currencyFrom = marketCurrencies.find( c => c.code === from)
+        currencyTo = marketCurrencies.find( c => c.code === to)
+        reloadMoreConversions()
+    }
+
+    function updateCurrencies() {
+        let from = convertFrom.toLowerCase()
+        let to = convertTo.toLowerCase()
+        
+        currencies.forEach( (currency: any) => {
+            let code = currency.code
+
+            if (rates.hasOwnProperty(code)) {
+                marketCurrencies.push(currency)
+            }
+        })
+    }
+
+    async function getMoreConversions() {
+        let series = [ 1, 5, 10, 25, 50, 100, 500, 1000, 5000, 10000 ]
+        let conversions: any = {
+            from: [],
+            to: []
+        }
+
+        series.forEach( serie => {
+
+            let rate = convertResult.rate
+            conversions.from.push({
+                amount: serie,
+                conversion: round(chain(rate).multiply(serie).done(), 8)
+            })
+
+            let rateInverse = convertResult.rateInverse
+            conversions.to.push({
+                amount: serie,
+                conversion: round(chain(rateInverse).multiply(serie).done(), 8)
+            })
         })
 
-        let rateInverse = convertResult.rateInverse
-        conversions.to.push({
-            amount: serie,
-            conversion: round(chain(rateInverse).multiply(serie).done(), 8)
-        })
-    })
+        return conversions
+    }
 
-    return conversions
-}
+    function reloadMoreConversions() {
+        moreConversions = getMoreConversions()
+    }
 
-function reloadMoreConversions() {
-    moreConversions = getMoreConversions()
-}
+    // run the conversions
 
-function getCurrencyInfo() {
-
-}
-
-// run the conversions
-
-updateCurrencies()
-convertNow()
-
+    updateCurrencies()
+    convertNow()
 </script>
 
 <div class="bg-white pt-8 mb-24">

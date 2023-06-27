@@ -18,7 +18,7 @@
         <a
             href="/"
             class="px-6 py-2 text-sm font-semibold text-black bg-primary uppercase"
-            >Go home</a
+            >$1 today</a
         >
         </div>
     </div>

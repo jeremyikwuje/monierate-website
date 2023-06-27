@@ -10,11 +10,11 @@
 </script>
 
 <svelte:head>
-	<title>Currency Prices & Calculator &mdash; Monierate</title>
-	<meta name="description" content="Today's dollar price in naira. Convert Nigerian Naira to US Dollar. Calculate your finance using our various financial tools.">
+	<title>Dollar to naira today black market | Monierate</title>
+	<meta name="description" content="Track exchange rate. Convert dollar to naira today black market. Get alerted before anyone does.">
 	<meta property="og:type" content="website" />
-	<meta property="og:title" content="Currency Prices & Calculator &mdash; Monierate" />
-	<meta property="og:description" content="Today's dollar price in naira. Convert Nigerian Naira to US Dollar. Calculate your finance using our various financial tools." />
+	<meta property="og:title" content="Exchange rate & Currency converter | Monierate" />
+	<meta property="og:description" content="Track exchange rate. Convert US dollar to Nigerian Naira." />
 	<meta property="og:url" content="monierate.com" />
 </svelte:head>
 
