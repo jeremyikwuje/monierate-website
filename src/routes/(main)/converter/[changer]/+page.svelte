@@ -144,7 +144,7 @@
 <div class="bg-white pt-8 mb-24">
     <div class="w-[95%] md:w-[70%] px-8 py-4 mx-auto mb-4 text-center">
         <h1 class="text-2xl md:text-3xl">
-            {Money.format(convertAmount)} {convertFrom} to {convertTo} on {changer.name} - Convert {currencyFrom.name} to {currencyTo.name} on {changer.name}
+            {Money.format(convertAmount)} {convertFrom} to {convertTo} on {changer.name} is {Money.format(convertResult.conversion)} {currencyTo.name}
         </h1>
         <span class="inline-block bg-transparent border border-black rounded-full w-[32px] h-[32px] mt-4">
             <img src="/icons/{changer.icon}" class="rounded-full" alt="{changer.icon}">
