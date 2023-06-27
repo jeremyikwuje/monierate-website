@@ -84,7 +84,7 @@ let year = (new Date()).getFullYear()
 
 <style> 
     .nav-link a {
-        @apply block w-[33%] md:inline-block md:w-auto text-gray-600 mr-0 md:mr-6 py-2 px-2 hover:text-black text-center;
+        @apply block md:inline-block md:w-auto text-gray-600 mr-0 md:mr-6 py-2 px-2 hover:text-black text-center;
     }
     .nav-link a:first-child {
         @apply mr-4 md:mr-6;

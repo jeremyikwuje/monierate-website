@@ -141,8 +141,8 @@
     convertNow()
 </script>
 
-<div class="bg-light pt-8 mb-24">
-    <div class="w-[95%] md:w-[70%] px-8 py-4 mx-auto mb-4 text-center">
+<div class="bg-light mb-24">
+    <div class="w-[100%] md:w-[100%] px-8 pt-8 pb-4 mx-auto mb-4 text-center">
         <h1 class="text-2xl md:text-4xl">
             <span class="block font-black mb-4 text-xl">{changer.name}:</span> {Money.format(convertAmount)} {convertFrom} to {convertTo} is {Money.format(convertResult.conversion)} {currencyTo.name}
         </h1>
@@ -293,13 +293,13 @@
         <h3 class="text-2xl mb-6 text-center">Currency Infomation</h3>
         <hr class="mb-12">
         <div class="block md:flex md:justify-between md:items-center">
-            <div class="shadow-lg md:w-[45%] p-8">
+            <div class="shadow-lg md:w-[45%] p-8 bg-white">
                 <h2 class="text-2xl">{convertFrom} - {currencyFrom.name}</h2>
                 <span class="block mt-6">
                     {currencyFrom.bio}
                 </span>
             </div>
-            <div class="shadow-lg md:w-[45%] p-8">
+            <div class="shadow-lg md:w-[45%] p-8 bg-white">
                 <h2 class="text-2xl">{convertTo} - {currencyTo.name}</h2>
                 <span class="block mt-6">
                     {currencyTo.bio}
