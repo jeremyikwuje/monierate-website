@@ -311,7 +311,7 @@
     <div class="w-[95%] mx-auto md:w-[70%] mt-24 pb-8">
         <h2 class="text-2xl mb-6 text-center">About {changer.name}</h2>
         <hr class="mb-12">
-        <div class="block px-8">
+        <div class="block px-8 bg-white py-4 shadow-lg">
            {changer.bio} You can convert {convertFrom} to {convertTo} and {convertTo} to {convertFrom} on {changer.name}. As at {new Date(market.updatedAt)}, <strong>1 {convertFrom} is about {Money.format(convertResult.rate)} {convertTo} on {changer.name} and 1 {convertTo} is about {Money.format(convertResult.rateInverse)} {convertFrom} on {changer.name}</strong>.
         </div>
     </div>

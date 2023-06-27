@@ -17,9 +17,9 @@
 </svelte:head>
 
 
-<main class="pt-8 pb-16 lg:pt-16 lg:pb-24 bg-white dark:bg-gray-900">
+<main class="pt-8 pb-16 lg:pt-16 lg:pb-24 dark:bg-gray-900">
 	<div class="flex justify-between px-4 mx-auto max-w-screen-xl ">
-		<article id="entry" class="mx-auto w-full max-w-2xl format format-sm sm:format-base lg:format-lg format-primary dark:format-invert lg:w-[700px]">
+		<article id="entry" class="mx-auto w-full max-w-2xl format text-gray-800 format-sm sm:format-base lg:format-lg format-primary dark:format-invert lg:w-[700px]">
 			<header class="mb-4 lg:mb-6 not-format text-center">
 				<!-- Tags -->
 				<div class="tags text-center">

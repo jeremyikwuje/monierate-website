@@ -18,7 +18,7 @@
 	<meta property="og:url" content="monierate.com" />
 </svelte:head>
 
-<div class="bg-gray-50 pt-12 pb-4">
+<div class="pt-12 pb-4">
     <div class="container">
         <h1 class="text-2xl md:text-3xl mb-2">Today's Dollar Prices in Black Market</h1>
         <div class="mb-12 text-gray-600 font-normal">
@@ -38,7 +38,7 @@
     </div>
 </div>
 
-<main class="bg-gray-50">
+<main>
     <div class="container">
         <div class="changers-box bg-white py-[10px] shadow-t-md mb-16">
             <div class="relative overflow-x-auto">
