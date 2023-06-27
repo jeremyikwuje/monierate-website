@@ -71,7 +71,7 @@
                             <td>
                                 <a data-sveltekit-reload href="/converter/{rate.changer.code}?Amount=1&From=USD&To=NGN" class="flex items-center" title="{rate.changer.name} dollar to naira rate.">
                                     <span class="changer-icon">
-                                        <img src="/icons/{rate.changer.icon}" class="rounded-full" alt="{rate.changer.name} icon">
+                                        <img width="22px" height="22px" src="/icons/{rate.changer.icon}" class="rounded-full" alt="{rate.changer.name} icon">
                                     </span>
                                     <span class="changer-title">{rate.changer.name}</span>
                                 </a>
