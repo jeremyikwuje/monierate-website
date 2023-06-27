@@ -1,13 +1,13 @@
 <svelte:head>
 	<title>
-        {Money.format(convertAmount)} {convertFrom} to {convertTo} - {changer.name} {currencyFrom.name} to {currencyTo.name} Price Today
+        {changer.name}: {Money.format(convertAmount)} {currencyFrom.name} to {currencyTo.name}, {convertFrom}/{convertTo} Exchange Rate 
     </title>
     <meta name="description" content="Convert {currencyFrom.name} to {currencyTo.name} on {changer.name}. Track {changer.name} {convertFrom} to {convertTo} rate today. Enter any amount in {convertFrom} to see the conversion in {convertTo}.">
     <meta name="keywords" content="{changer.name} exchange rate, {changer.name} {currencyFrom.name} rate, {changer.name} {currencyTo.name} rate, {changer.name} currency converter.">
 
     <!-- OG -->
     <meta property="og:type" content="website" />
-	<meta property="og:title" content="{changer.name} exchange rate: {Money.format(convertAmount)} {convertFrom} to {convertTo}" />
+	<meta property="og:title" content="{changer.name}: {Money.format(convertAmount)} {currencyFrom.name} to {currencyTo.name}, {convertFrom}/{convertTo} Exchange Rate" />
 	<meta property="og:description" content="Convert {currencyFrom.name} to {currencyTo.name} on {changer.name}. Enter any amount in {convertFrom} to see the conversion in {convertTo}." />
 </svelte:head>
 
