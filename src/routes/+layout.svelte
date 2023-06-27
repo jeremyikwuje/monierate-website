@@ -15,7 +15,7 @@ let year = (new Date()).getFullYear()
         <div class="container flex flex-col md:flex-row justify-between items-center pt-4 md:py-4">
             <div class="mb-8 md:mb-0">
                 <a href="/">
-                    <img src="/monierate.png" width="150px" height="24px" class="w-[150px] h-[24px]" alt="Monierate Logo">
+                    <img src="/monierate.png" height="24px" class="h-[28px] md:h-[34px]" alt="Monierate Logo">
                 </a>
             </div>
             
