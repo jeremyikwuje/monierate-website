@@ -39,7 +39,5 @@
 </main>
 
 <style>
-	.post-content a {
-		@apply text-primary border-b-4 border-primary
-	}
+	
 </style>
