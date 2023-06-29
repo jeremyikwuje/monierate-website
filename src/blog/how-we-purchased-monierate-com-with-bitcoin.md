@@ -5,7 +5,7 @@ description: In this article, I shared how we purchased the Monierate.com domain
   for less than $3 with Bitcoin. If you are interested in learning how to
   purchased a domain with Bitcoin, conitinue reading.
 createdAt: 2023-05-22T11:00:23.387Z
-updatedAt: 2023-06-29T19:58:23.522Z
+updatedAt: 2023-05-22T11:00:23.522Z
 tag: virtualcard
 image: https://substackcdn.com/image/fetch/f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F2bb229ac-611a-49bd-9ea6-b66f371ec9fd_720x701.png
 published: true
