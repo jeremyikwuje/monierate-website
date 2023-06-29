@@ -13,7 +13,7 @@ published: true
 
 I wanted to title this article, "How to buy a domain with Bitcoin for less than $3". However, I feel it is important to tell a practical story. The domain [monierate.com](http://monierate.com/) is a practical story.  
   
-In my last post, I shared how I came up with the domain. Well, one interesting thing I didn't mention was how we purchased the domain with Bitcoin for less than $3.
+In the [last](https://monierate.com/blog/virtualcard/how-i-came-up-with-the-name-monierate-com) post, I shared how we came up with the domain. Well, one interesting thing I didn't mention was how we purchased the domain with Bitcoin for less than $3.
 
 Come with me.
 
@@ -22,7 +22,7 @@ As a team, our approach is to build a simple tool that will require very little 
 
 ### Choosing a name
 
-I already explained how we came up with the name Monierate in my last post, and how the goal was to get a .COM TLD. The problem was, .COM domains cost $8 - $20 on the internet.
+I already explained how we came up with the name Monierate in the last post, and how the goal was to get a .COM TLD. The problem was, .COM domains cost $8 - $20 on the internet.
 
 **Is there a way I can get it for free?**
 
