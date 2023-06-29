@@ -2,8 +2,8 @@
 layout: blog
 title: How I came up with the name Monierate.com
 description: In this article, I share how I came up with the domain name
-  Monierate.com. A good name is priceless, it took me three long weeks to come
-  up with the name.
+  Monierate.com. A good name is priceless, it took three long weeks to come up
+  with the name, Monierate..
 createdAt: 2023-05-08T09:00:25.122Z
 updatedAt: 2023-05-08T09:00:25.189Z
 tag: virtualcard
