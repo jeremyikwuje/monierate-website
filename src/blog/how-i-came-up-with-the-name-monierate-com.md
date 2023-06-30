@@ -6,7 +6,7 @@ description: In this article, I share how I came up with the domain name
   with the name, Monierate..
 createdAt: 2023-05-08T09:00:25.122Z
 updatedAt: 2023-05-08T09:00:25.189Z
-tag: virtualcard
+tag: company
 image: https://substackcdn.com/image/fetch/w_1456,c_limit,f_webp,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2Fc6f0fa53-a481-49f2-b657-3f4aa15ebb3c_845x233.png
 published: true
 ---
