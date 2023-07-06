@@ -1,13 +1,13 @@
 <svelte:head>
 	<title>
-        {changer.name}: {Money.format(convertAmount)} {currencyFrom.name} to {currencyTo.name}, {convertFrom}/{convertTo} Exchange Rate 
+       {convertAmount} {convertFrom} to {convertTo} on {changer.name} - Convert {currencyFrom.name} to {currencyTo.name} using {changer.name} exchange rate 
     </title>
-    <meta name="description" content="Convert {currencyFrom.name} to {currencyTo.name} on {changer.name}. Track {changer.name} {convertFrom} to {convertTo} rate today. Enter any amount in {convertFrom} to see the conversion in {convertTo}.">
+    <meta name="description" content="Convert {currencyFrom.name} to {currencyTo.name} on {changer.name}. We use the exchange rate from {changer.name} for this conversion. This is for information purposes only.">
     <meta name="keywords" content="{changer.name} exchange rate, {changer.name} {currencyFrom.name} rate, {changer.name} {currencyTo.name} rate, {changer.name} currency converter.">
 
     <!-- OG -->
     <meta property="og:type" content="website" />
-	<meta property="og:title" content="{changer.name}: {Money.format(convertAmount)} {currencyFrom.name} to {currencyTo.name}, {convertFrom}/{convertTo} Exchange Rate" />
+	<meta property="og:title" content="{convertFrom} to {convertTo} on {changer.name} - Convert {currencyFrom.name} to {currencyTo.name} using {changer.name} exchange rate." />
 	<meta property="og:description" content="Convert {currencyFrom.name} to {currencyTo.name} on {changer.name}. Enter any amount in {convertFrom} to see the conversion in {convertTo}." />
 </svelte:head>
 
@@ -144,7 +144,7 @@
 <div class="bg-light mb-24">
     <div class="w-[100%] md:w-[100%] px-8 pt-8 pb-4 mx-auto mb-4 text-center">
         <h1 class="text-2xl md:text-4xl">
-            <span class="block font-black mb-4 text-xl">{changer.name}:</span> {Money.format(convertAmount)} {convertFrom} to {convertTo} is {Money.format(convertResult.conversion)} {currencyTo.name}
+            <span class="block font-black mb-4 text-xl">{changer.name} Converter:</span> {Money.format(convertAmount)} {convertFrom} to {convertTo} is {Money.format(convertResult.conversion)} {currencyTo.name} on {changer.name}
         </h1>
         <span class="inline-block bg-transparent border border-black rounded-full w-[32px] h-[32px] mt-4">
             <img src="/icons/{changer.icon}" width="30px" height="30px" class="rounded-full" alt="{changer.name} icon">
@@ -312,7 +312,7 @@
         <h2 class="text-2xl mb-6 text-center">About {changer.name}</h2>
         <hr class="mb-12">
         <div class="block px-8 bg-white py-4 shadow-lg">
-           {changer.bio} You can convert {convertFrom} to {convertTo} and {convertTo} to {convertFrom} on {changer.name}. As at {new Date(market.updatedAt)}, <strong>1 {convertFrom} is about {Money.format(convertResult.rate)} {convertTo} on {changer.name} and 1 {convertTo} is about {Money.format(convertResult.rateInverse)} {convertFrom} on {changer.name}</strong>.
+           You can convert {convertFrom} to {convertTo} and {convertTo} to {convertFrom} on {changer.name}. As at {new Date(market.updatedAt)}, <strong>1 {convertFrom} is about {Money.format(convertResult.rate)} {convertTo} on {changer.name} and 1 {convertTo} is about {Money.format(convertResult.rateInverse)} {convertFrom} on {changer.name}</strong>.
         </div>
     </div>
 </div>
