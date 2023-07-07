@@ -7,7 +7,7 @@ description: Are you looking to convert dollars to naira? In this article, we
 createdAt: 2023-07-07T15:43:07.459Z
 updatedAt: 2023-07-07T15:43:07.526Z
 tag: currency
-image: https://images.unsplash.com/photo-1518458028785-8fbcd101ebb9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8Y3VycmVuY3klMjBleGNoYW5nZXxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60
+image: https://monierate.com/uploads/alexander-grey-8a5ej1-mmq-unsplash-1-.jpg
 published: true
 ---
 Are you looking to convert dollars to naira? Understanding the currency exchange rate between the US dollar (USD) and the Nigerian naira (NGN) is crucial, especially for those involved in international trade, travel, remittances, or even cryptocurrency trading. In this article, we will walk you through the process of converting dollars to naira, providing you with the necessary information to make informed decisions.
