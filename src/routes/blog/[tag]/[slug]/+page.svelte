@@ -17,7 +17,7 @@
 </svelte:head>
 
 
-<main class="container mt-8 mb-8 pb-8 md:mt-16 md:mb-8 dark:bg-dark dark:text-gray-300">
+<main class="container mt-8 mb-8 pb-8 md:mt-16 md:mb-8">
 	<header class="mb-4 md:mb-6 not-format text-center">
 		<!-- Tags -->
 		<div class="tags text-center">
