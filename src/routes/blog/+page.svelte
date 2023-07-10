@@ -3,8 +3,6 @@
 	import * as config from '$lib/blog/config'
 	import type { Post } from '$lib/blog/types'
 
-	export let data
-
 	async function getPosts() {
 		const response = await fetch(`/api/blog`)
 		const posts: Post[] = await response.json()
