@@ -141,7 +141,7 @@
     convertNow()
 </script>
 
-<div class="bg-light mb-24">
+<div class="mb-24">
     <div class="w-[100%] md:w-[100%] px-8 pt-8 pb-4 mx-auto mb-4 text-center">
         <h1 class="text-2xl md:text-4xl">
             <span class="block font-black mb-4 text-xl">{changer.name} Converter:</span> {Money.format(convertAmount)} {convertFrom} to {convertTo} is {Money.format(convertResult.conversion)} {currencyTo.name} on {changer.name}
@@ -151,7 +151,7 @@
         </span>
     </div>
     
-    <div id="changer-rate-wrapper" class="w-[95%] md:w-[70%] bg-white shadow-lg rounded-lg px-8 py-4 mx-auto">
+    <div id="changer-rate-wrapper" class="w-[95%] md:w-[70%] bg-white dark:bg-black shadow-lg rounded-lg px-8 py-4 mx-auto">
         <div class="flex justify-center item-center">
             <div class="w-full">
                 <div class="block md:flex md:justify-between md:items-center">
@@ -177,27 +177,27 @@
                     </span>
                 </div>
                 <div id="convert-result" class="mt-8 mb-8">
-                    <span class="block font-semibold text-lg text-gray-600 mb-2">
+                    <span class="block font-semibold text-lg text-gray-600 dark:text-gray-300 mb-2">
                         {Money.format(convertAmount)} {currencyFrom.name} =
                     </span>
-                    <span class="block font-bold text-3xl mb-2 text-dark">
+                    <span class="block font-bold text-3xl mb-2 dark:text-gray-200">
                         {Money.format(convertResult.conversion)} {currencyTo.name}
                     </span>
-                    <span class="block text-gray-500">
+                    <span class="block text-gray-500 dark:text-gray-400">
                         1 {convertFrom} = {Money.format(convertResult.rate)} {convertTo}
                     </span>
-                    <span class="block text-gray-500">
+                    <span class="block text-gray-500 dark:text-gray-400">
                         1 {convertTo} = {Money.format(convertResult.rateInverse)} {convertFrom}
                     </span>
                 </div>
                 <div class="block md:flex md:justify-between md:items-center">
-                    <span class="flex justify-between items-center bg-accent-100 md:w-[40%] border rounded-lg p-4 mb-8 md:mb-0">
+                    <span class="flex justify-between items-center bg-accent-100 md:w-[40%] border dark:border-gray-900 rounded-lg p-4 mb-8 md:mb-0">
                         <span class="inline-block mr-2">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M11.25 11.25l.041-.02a.75.75 0 011.063.852l-.708 2.836a.75.75 0 001.063.853l.041-.021M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9-3.75h.008v.008H12V8.25z" />
                             </svg>                          
                         </span>
-                        <span class="text-gray-600 text-sm">
+                        <span class="text-gray-600 dark:text-gray-300 text-sm">
                             We use the exchange rate from {changer.name} for this conversion. This is for informational purposes only.
                         </span>
                     </span>
@@ -219,8 +219,8 @@
     </div>
 
     <div class="block w-[95%] mx-auto md:w-[70%] md:flex md:justify-between md:items-center mt-24">
-        <div class="bg-white shadow-lg rounded-lg md:w-[40%] mb-4">
-            <span class="bg-blue-100 block py-4 px-8">
+        <div class="bg-white dark:bg-black shadow-lg rounded-lg md:w-[40%] mb-4">
+            <span class="bg-blue-100 dark:bg-gray-900 block py-4 px-8">
                 <h2 class="text-center text-lg">
                     Convert {currencyFrom.name} to {currencyTo.name} on {changer.name}
                 </h2>
@@ -230,7 +230,7 @@
                     <span class="block text-center py-8 px-4">Loading...</span>
                 {:then data}
                 <table class="w-full text-center px-8">
-                    <thead class="bg-blue-100">
+                    <thead class="bg-blue-100 dark:bg-gray-900">
                         <tr>
                             <th class="py-4">{convertFrom}</th>
                             <th class="py-4">{convertTo}</th>
@@ -254,8 +254,8 @@
                 {/await}
             </div>
         </div>
-        <div class="bg-white shadow-lg rounded-lg md:w-[40%] mb-4">
-            <span class="bg-blue-100 block py-4 px-8">
+        <div class="bg-white dark:bg-black shadow-lg rounded-lg md:w-[40%] mb-4">
+            <span class="bg-blue-100 dark:bg-gray-900 block py-4 px-8">
                 <h2 class="text-center text-lg">Convert {currencyTo.name} to {currencyFrom.name} on {changer.name}</h2>
             </span>
             <div class="pb-4">
@@ -263,7 +263,7 @@
                     <span class="block text-center py-8 px-4">Loading...</span>
                 {:then data}
                     <table class="w-full text-center px-8">
-                        <thead class="bg-blue-100">
+                        <thead class="bg-blue-100 dark:bg-gray-900">
                             <tr>
                                 <th class="py-4">{convertTo}</th>
                                 <th class="py-4">{convertFrom}</th>
@@ -293,13 +293,13 @@
         <h2 class="text-2xl mb-6 text-center">Currency Infomation</h2>
         <hr class="mb-12">
         <div class="block md:flex md:justify-between md:items-center">
-            <div class="shadow-lg md:w-[45%] p-8 bg-white">
+            <div class="shadow-lg md:w-[45%] p-8 bg-white dark:bg-black">
                 <h2 class="text-2xl">{convertFrom} - {currencyFrom.name}</h2>
                 <span class="block mt-6">
                     {currencyFrom.bio}
                 </span>
             </div>
-            <div class="shadow-lg md:w-[45%] p-8 bg-white">
+            <div class="shadow-lg md:w-[45%] p-8 bg-white dark:bg-black">
                 <h2 class="text-2xl">{convertTo} - {currencyTo.name}</h2>
                 <span class="block mt-6">
                     {currencyTo.bio}
@@ -311,7 +311,7 @@
     <div class="w-[95%] mx-auto md:w-[70%] mt-24 pb-8">
         <h2 class="text-2xl mb-6 text-center">About {changer.name}</h2>
         <hr class="mb-12">
-        <div class="block px-8 bg-white py-4 shadow-lg">
+        <div class="block px-8 bg-white dark:bg-black py-4 shadow-lg">
            You can convert {convertFrom} to {convertTo} and {convertTo} to {convertFrom} on {changer.name}. As at {new Date(market.updatedAt)}, <strong>1 {convertFrom} is about {Money.format(convertResult.rate)} {convertTo} on {changer.name} and 1 {convertTo} is about {Money.format(convertResult.rateInverse)} {convertFrom} on {changer.name}</strong>.
         </div>
     </div>
