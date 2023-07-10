@@ -17,19 +17,19 @@
 </svelte:head>
 
 
-<main class="pt-8 pb-16 lg:pt-16 lg:pb-24 dark:bg-gray-900">
-	<div class="flex justify-between px-4 mx-auto max-w-screen-xl ">
-		<article id="entry" class="mx-auto w-full max-w-2xl format text-gray-800 format-sm sm:format-base lg:format-lg format-primary dark:format-invert lg:w-[700px]">
-			<header class="mb-4 lg:mb-6 not-format text-center">
-				<!-- Tags -->
-				<div class="tags text-center">
-					<a href="/blog/{data.meta.tag}" class="inline-block text-green-500 font-semibold text-xs mb-1 leading-none mr-2 last:mr-0">&num;{data.meta.tag.toUpperCase()}</a>
-				</div>
-				<!-- Title -->
-				<h1 class="mb-2 text-3xl font-extrabold leading-tight text-gray-900 lg:mb-2 lg:text-4xl dark:text-white">{data.meta.title}</h1>
-				<p>Published {formatDate(data.meta.createdAt)}</p>
-			</header>
-	
+<main class="container mt-8 mb-8 pb-8 md:mt-16 md:mb-8 dark:bg-dark dark:text-gray-300">
+	<header class="mb-4 md:mb-6 not-format text-center">
+		<!-- Tags -->
+		<div class="tags text-center">
+			<a href="/blog/{data.meta.tag}" class="inline-block text-green-500 font-semibold text-xs mb-1 leading-none mr-2 last:mr-0">&num;{data.meta.tag.toUpperCase()}</a>
+		</div>
+		<!-- Title -->
+		<h1 class="mb-2 text-3xl font-extrabold leading-tight text-gray-900 lg:mb-2 lg:text-4xl dark:text-gray-300 dark:font-semibold">{data.meta.title}</h1>
+		<p>Published {formatDate(data.meta.createdAt)}</p>
+	</header>
+
+	<div class="bg-white dark:bg-black flex justify-between px-4 mx-auto max-w-screen-xl">
+		<article id="entry" class="mx-auto w-full max-w-2xl format text-gray-800 dark:text-gray-300 format-sm sm:format-base lg:format-lg format-primary dark:format-invert lg:w-[700px]">
 			<!-- Post -->
 			<div class="post-content">
 				<svelte:component this={data.content} />

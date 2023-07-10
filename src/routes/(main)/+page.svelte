@@ -20,15 +20,15 @@
 
 <div class="pt-12 pb-4">
     <div class="container">
-        <h1 class="text-2xl md:text-3xl mb-2">Today's Dollar Prices in Black Market</h1>
-        <div class="mb-12 text-gray-600 font-normal">
+        <h1 class="text-2xl md:text-3xl mb-2 dark:text-gray-100">Today's Dollar Prices in Black Market</h1>
+        <div class="mb-12 text-gray-600 font-normal dark:text-gray-300">
             {#if first && last}
             <p>
                 The price of dollar today is between ₦{Money.toDollar(first.rate_buy)} and ₦{Money.toDollar(last.rate_buy)}. Prices are displayed from lowest to highest.
             </p>
             {/if}
         </div>
-        <div class="flex justify-between items-center">
+        <div class="flex justify-between items-center dark:text-gray-300">
             <span></span>
             <span>
                 <span class="text-semibold">Sort by:</span>
@@ -40,7 +40,7 @@
 
 <main>
     <div class="container">
-        <div class="changers-box bg-white py-[10px] shadow-t-md mb-16">
+        <div class="changers-box bg-white py-[10px] shadow-t-md mb-16 dark:bg-black dark:text-light">
             <div class="relative overflow-x-auto">
                 <table class="w-full text-sm text-left">
                     <thead>
@@ -48,23 +48,23 @@
                             <th scope="col" class="pr-2 py-3 md:pl-4 font-bitter hidden md:inline-block">
                                 #
                             </th>
-                            <th scope="col" class="pr-6 py-3 pl-2 md:pl-0 text-black font-bold font-bitter w-[40%]">
+                            <th scope="col" class="pr-6 py-3 pl-2 md:pl-0 font-bold font-bitter w-[40%]">
                                 Provider
                             </th>
-                            <th scope="col" class="pl-6 py-3 text-black font-bold font-bitter text-right">
+                            <th scope="col" class="pl-6 py-3 font-bold font-bitter text-right">
                                 Buy Price
                             </th>
-                            <th scope="col" class="pl-6 py-3 text-black font-bold font-bitter text-right">
+                            <th scope="col" class="pl-6 py-3 font-bold font-bitter text-right">
                                 Sell Price
                             </th>
-                            <th scope="col" class="pl-6 py-3 text-black font-bold font-bitter text-right pr-2 md:pr-4">
+                            <th scope="col" class="pl-6 py-3 font-bold font-bitter text-right pr-2 md:pr-4">
                                 Services
                             </th>
                         </tr>
                     </thead>
                     <tbody class="changers">
                         {#each Object.entries(rates) as [index, rate]}
-                        <tr class="mb-4 border-t border-gray-100">
+                        <tr class="mb-4 border-t border-gray-100 dark:border-gray-900">
                             <th scope="row" class="text-gray-500 py-6 pl-4 hidden md:inline-block">
                                 {parseInt(index) + 1}
                             </th>
@@ -86,7 +86,7 @@
                             </td>
                             <td class="text-right py-2 pr-2 md:pr-4">
                                 {#each Object.entries(rate.changer.changer_tags) as [index, tag]}
-                                <span class="inline-block p-2 border border-gray-300 text-black rounded-lg text-xs mr-2 font-semibold mb-2">
+                                <span class="inline-block p-2 border border-gray-300 text-black rounded-lg text-xs mr-2 font-semibold mb-2 dark:text-light">
                                     {tag.tag_id}
                                 </span>
                                 {/each}
@@ -98,7 +98,7 @@
             </div>
         </div>
 
-        <div class="">
+        <div class="dark:text-gray-300"> 
             <span class="block mb-4">
                 <h3>What is a Provider?</h3>
                 <p>A provider is an entity that help you facilitate the exchange of currencies. If you have 100 USDT, and you want to exchange it for naira. You will need an exchange provider to convert your USDT to naira. A provider can be an individual or entity. On Monierate, we only list trusted entities for you to choose from not individual traders.</p>
@@ -125,6 +125,10 @@
 </main>
 
 <style>
+    table thead th {
+        @apply dark:text-gray-300 text-black
+    }
+
     .changer {
         @apply flex justify-between items-center py-2 border-b border-gray-200;
     }
@@ -135,12 +139,12 @@
         @apply bg-transparent border border-black rounded-full w-[24px] h-[24px] mr-2;
     }
     .changer-title {
-        @apply font-semibold text-lg capitalize text-gray-800;
+        @apply font-semibold text-lg capitalize text-gray-800 dark:text-gray-300;
     }
     .changer-rate-base {
-        @apply text-gray-500;
+        @apply text-gray-500 dark:text-gray-400;
     }
     .changer-rate {
-        @apply block font-semibold text-lg text-gray-800;
+        @apply block font-semibold text-lg text-gray-800 dark:text-light;
     }
 </style>

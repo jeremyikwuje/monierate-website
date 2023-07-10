@@ -10,12 +10,17 @@ console.log(path)
 let year = (new Date()).getFullYear()
 </script>
 
+<svelte:head>
+    
+</svelte:head>
+
 <header>
     <nav id="brand" class="">
         <div class="container flex flex-col md:flex-row justify-between items-center pt-4 md:py-4">
             <div class="mb-8 md:mb-0">
                 <a href="/">
-                    <img src="/monierate.png" height="24px" class="h-[28px] md:h-[34px]" alt="Monierate Logo">
+                    <img src="/monierate.png" height="24px" class="block dark:hidden h-[28px] md:h-[34px]" alt="Monierate Logo">
+                    <img alt="Monierate Logo" height="24px" class="hidden dark:block h-[28px] md:h-[34px]" src="/monierate-logo-white.png">
                 </a>
             </div>
             
@@ -30,8 +35,9 @@ let year = (new Date()).getFullYear()
     
 <slot />
     
-<hr class="mt-16">
-<footer class="pt-16 pb-8 mt-8 text-gray-500">
+<hr class="mt-16 dark:border-gray-900">
+
+<footer class="pt-16 pb-8 mt-8 text-gray-500 dark:text-gray-300">
     <div class="w-[95%] md:w-[70%] mx-auto block md:flex justify-between item-center">
         <div class="w-full md:w-[30%]">
         <h3 class="font-bold">Currency converter</h3>
@@ -52,8 +58,8 @@ let year = (new Date()).getFullYear()
         </div>
         <div class="w-full md:w-[50%]">
             <span class="block mb-8">
-                <span class="font-bold block mb-2 text-gray-800">Contacts</span>
-                <span class="font-bold text-xl block mb-2 text-gray-800">hello@monierate.com</span>
+                <h3 class="font-bold block mb-2 text-gray-800 dark:text-gray-300">Contacts</h3>
+                <span class="font-bold text-xl block mb-2 text-gray-800 dark:text-gray-300">hello@monierate.com</span>
             </span>
 
             <span class="block text-sm">
@@ -61,14 +67,14 @@ let year = (new Date()).getFullYear()
             </span>
 
             <div class="mt-4">
-            <p class="text-sm mb-4 text-gray-500">
+            <p class="text-sm mb-4 text-gray-500 dark:text-gray-300">
                 We aggregate the exchange rates from multiple market providers. This is for informational purposes only.
             </p>
-            <p class="text-sm mb-4 text-gray-500">
+            <p class="text-sm mb-4 text-gray-500 dark:text-gray-300">
                 References made to third party names, logos and trademarks on this website are to identify corresponding goods and services that Monierate visitor can themselves exchange currencies. Unless otherwise specified, the trademark holders are not affiliated with Monierate, our products or website, and they do not sponsor or endorse Monierate services. Such references are included strictly as nominative fair use under applicable trademark law and remain fully the property of their respective trademark holders.
             </p>
             <p class="text-sm">
-                Built and maintained by <a href="https://twitter.com/jeremyikwuje" class="text-gray-800">@jeremyikwuje ⚡</a> and <a href="https://twitter.com/onionsman" class="text-gray-800">@onionsman</a>
+                Built and maintained by <a href="https://twitter.com/jeremyikwuje" class="text-gray-800 dark:text-gray-300">@jeremyikwuje ⚡</a> and <a href="https://twitter.com/onionsman" class="text-gray-800 dark:text-gray-300">@onionsman</a>
             </p>
             </div>
         </div>
@@ -85,7 +91,7 @@ let year = (new Date()).getFullYear()
 
 <style> 
     .nav-link a {
-        @apply block md:inline-block md:w-auto text-gray-800 mr-0 md:mr-6 py-2 px-2 hover:text-black text-center font-bold;
+        @apply block md:inline-block md:w-auto text-gray-800 mr-0 md:mr-6 py-2 px-2 hover:text-black dark:hover:text-gray-100 text-center font-bold dark:text-gray-300;
     }
     .nav-link a:first-child {
         @apply mr-4 md:mr-6;
@@ -94,7 +100,7 @@ let year = (new Date()).getFullYear()
         @apply mr-0;
     }
     .nav-link a.active {
-        @apply text-black border-b-4 border-gray-800;
+        @apply text-black border-b-4 border-gray-800 dark:text-light dark:border-primary;
     }
 
     footer .converter-list {
@@ -104,6 +110,6 @@ let year = (new Date()).getFullYear()
         @apply mb-4
     }
     footer .converter-list a {
-        @apply block text-sm text-gray-500 font-semibold;
+        @apply block text-sm text-gray-500 font-semibold dark:text-gray-300;
     }
 </style>

@@ -8,15 +8,14 @@
 
 @layer base {
     body, html {
-        @apply font-worksans font-normal min-h-screen;
-        background-color: #EEFEF8;
+        @apply font-worksans font-normal min-h-screen dark:bg-dark dark:text-gray-300;
         padding: 0;
         margin: 0;
         overflow-x: hidden;
     }
 
     h1, h2, h3, h4, h5, h6 {
-        @apply font-bitter font-semibold text-gray-800;
+        @apply font-bitter font-semibold text-gray-800 dark:text-gray-300;
     }
 
     a, button, input, textbox, p, span, div {
@@ -24,7 +23,7 @@
     }
 
     a {
-        @apply text-blue-800;
+        @apply text-blue-800 dark:text-light;
     }
 }
 
@@ -32,10 +31,7 @@
     .container {
         @apply w-[95%] md:w-[1124px] mx-auto;
     }
-    
-    .bg-light {
-        background-color: #EEFEF8;
-    }
+
     .input, .select {
         @apply block border-white text-black bg-white py-2.5 px-2.5 mb-4 w-full;
         border: 1px solid #ddd;
@@ -48,7 +44,7 @@
     }
 
     .button {
-        @apply text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700;
+        @apply text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700 dark:text-light;
     }
 
     .select {

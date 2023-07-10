@@ -1,7 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 const colors = require('tailwindcss/colors')
 
-
 module.exports = {
   content: ['./src/**/*.{html,js,svelte,ts}'],
   theme: {
@@ -34,6 +33,10 @@ module.exports = {
       'yellow': colors.yellow,
       'green': colors.green,
       'red': colors.red,
+      'light': '#EEFEF8',
+      'lighter': '#EEFEF8',
+      'dark': '#121212',
+      'primary': '#06D68A'
     },
   },
   plugins: [require('flowbite-typography'),],
