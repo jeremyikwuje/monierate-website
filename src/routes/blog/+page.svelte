@@ -1,8 +1,15 @@
 <script lang="ts">
 	import { formatDate } from '$lib/blog/utils'
 	import * as config from '$lib/blog/config'
+	import type { Post } from '$lib/blog/types'
 
 	export let data
+
+	async function getPosts() {
+		const response = await fetch(`/api/blog`)
+		const posts: Post[] = await response.json()
+		return posts
+	}
 </script>
 
 <svelte:head>
@@ -24,8 +31,11 @@
 	<!-- Posts -->
 	<div class="container bg-white px-4 shadow-md dark:bg-black">
 		<section id="entries" class="mt-8">
+			{#await getPosts()}
+				<span class="loading">Loading...</span>
+			{:then values}
 			<ul class="posts">
-				{#each data.posts as post}
+				{#each values as post}
 					<li class="flex flex-col md:flex-row justify-between item-left md:items-center mb-4 py-6 border-b-2 border-dotted border-gray-300 dark:border-gray-500 last:border-none">
 						<span class="block">
 							<a href="/blog/{post.tag}" class="inline-block text-green-500 font-semibold text-xs mb-1 leading-none">{post.tag.toUpperCase()}</a>
@@ -36,6 +46,9 @@
 					</li>
 				{/each}
 			</ul>
+			{:catch error}
+				{error.message}
+			{/await}
 		</section>
 	</div>
 </div>
