@@ -40,7 +40,7 @@
 
 <main>
     <div class="container">
-        <div class="changers-box bg-white py-[10px] shadow-t-md mb-16 dark:bg-black dark:text-light">
+        <div class="changers-box bg-white py-[10px] shadow-t-md mb-16 dark:bg-black dark:text-light min-h-[100vh]">
             <div class="relative overflow-x-auto">
                 <table class="w-full text-sm text-left">
                     <thead>

@@ -34,15 +34,14 @@
 </svelte:head>
 
 
-<main class="container mt-8 mb-8 pb-8 md:mt-16 md:mb-8">
-
+<main class="container mt-8 mb-8 pb-8 md:mt-16 md:mb-8 min-h-[100vh]">
 	{#await getPost()}
         <span class="loading">Loading...</span>
     {:then value}
 	<header class="mb-4 md:mb-6 not-format text-center">
 		<!-- Tags -->
 		<div class="tags text-center">
-			<a href="/blog/{value.metadata.tag}" class="inline-block text-green-500 font-semibold text-xs mb-1 leading-none mr-2 last:mr-0">&num;{value.metadata.tag.toUpperCase()}</a>
+			<a href="/blog/{value.metadata.tag}" class="inline-block text-green-500 font-semibold text-xs mb-4 leading-none mr-2 last:mr-0">&num;{value.metadata.tag.toUpperCase()}</a>
 		</div>
 		<!-- Title -->
 		<h1 class="mb-2 text-3xl font-extrabold leading-tight text-gray-900 lg:mb-2 lg:text-4xl dark:text-gray-300 dark:font-semibold">{value.metadata.title}</h1>

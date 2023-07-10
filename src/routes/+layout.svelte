@@ -19,8 +19,8 @@ let year = (new Date()).getFullYear()
         <div class="container flex flex-col md:flex-row justify-between items-center pt-4 md:py-4">
             <div class="mb-8 md:mb-0">
                 <a href="/">
-                    <img src="/monierate.png" height="24px" class="block dark:hidden h-[28px] md:h-[34px]" alt="Monierate Logo">
-                    <img alt="Monierate Logo" height="24px" class="hidden dark:block h-[28px] md:h-[34px]" src="/monierate-logo-white.png">
+                    <img src="/monierate.png" width="142px" height="24px" class="block dark:hidden h-[28px] md:h-[34px]" alt="Monierate Logo">
+                    <img alt="Monierate Logo" width="142px" height="24px" class="hidden dark:block h-[24px] md:h-[24px]" src="/monierate-logo-white.png">
                 </a>
             </div>
             
@@ -35,7 +35,7 @@ let year = (new Date()).getFullYear()
     
 <slot />
     
-<hr class="mt-16 dark:border-gray-900">
+<div class="w-full h-1 mt-16 dark:border-gray-900"></div>
 
 <footer class="pt-16 pb-8 mt-8 text-gray-500 dark:text-gray-300">
     <div class="w-[95%] md:w-[70%] mx-auto block md:flex justify-between item-center">
@@ -80,14 +80,6 @@ let year = (new Date()).getFullYear()
         </div>
     </div>
 </footer>
-
-<div id="alert" class="hidden w-auto md:min-w-[200px] toast toast-end">
-    <div class="alert shadow-lg bg-white text-gray-900 border border-gray-700">
-    <div>
-        <span id="alert-message"></span>
-    </div>
-    </div>
-</div>
 
 <style> 
     .nav-link a {
