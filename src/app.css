@@ -32,6 +32,10 @@
         @apply w-[95%] md:w-[1124px] mx-auto;
     }
 
+    .loading {
+        @apply text-center block;
+    }
+
     .input, .select {
         @apply block border-[#ddd] text-black bg-white dark:bg-dark dark:text-gray-300 dark:border-gray-900 dark:font-semibold py-2.5 px-2.5 mb-4 w-full;
         box-shadow: none;
