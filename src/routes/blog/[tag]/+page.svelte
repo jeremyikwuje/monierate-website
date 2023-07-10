@@ -36,7 +36,7 @@
 				{#each values as post}
 					<li class="flex flex-col md:flex-row justify-between item-left md:items-center mb-4 py-6 border-b-2 border-dotted border-gray-300 dark:border-gray-500 last:border-none">
 						<span class="block">
-							<a href="/blog/{post.tag}" class="inline-block text-green-500 font-semibold text-xs mb-1 leading-none mb-4">{post.tag.toUpperCase()}</a>
+							<a href="/blog/{post.tag}" class="inline-block text-gray-600 dark:text-green-500 font-semibold text-xs mb-1 leading-none mb-4">{post.tag.toUpperCase()}</a>
 							<p></p>
 							<a href="/blog/{post.tag}/{post.slug}" class="text-lg md:text-2xl text-gray-900 hover:underline dark:text-gray-300">{post.title}</a>
 						</span>
