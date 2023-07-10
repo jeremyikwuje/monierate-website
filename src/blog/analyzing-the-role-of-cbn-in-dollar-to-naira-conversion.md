@@ -4,8 +4,8 @@ title: Analyzing the Role of CBN in Dollar to Naira Conversion
 description: In this article, we will delve into the intricate workings of the
   CBN and explore how it influences the exchange rate between the US dollar and
   the Nigerian Naira.
-createdAt: 2023-07-10T13:10:38.068Z
-updatedAt: 2023-07-10T13:10:38.197Z
+createdAt: 2023-07-11T13:10:38.068Z
+updatedAt: 2023-07-11T13:10:38.197Z
 tag: currency
 image: /uploads/central-bank-of-nigeria.jpg
 published: true
