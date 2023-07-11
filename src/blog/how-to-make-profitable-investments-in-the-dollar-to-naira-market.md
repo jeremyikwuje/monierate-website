@@ -4,8 +4,8 @@ title: How to Make Profitable Investments in the Dollar to Naira Market
 description: Whether you are a student, a techie, or an aspiring investor, the
   dollar to naira market presents numerous opportunities to make profitable
   investments.
-createdAt: 2023-07-12T05:24:11.221Z
-updatedAt: 2023-07-12T05:24:11.297Z
+createdAt: 2023-07-11T05:24:11.221Z
+updatedAt: 2023-07-11T05:24:11.297Z
 tag: currency
 image: /uploads/m-zzoa5g8hspi-unsplash-1-.jpg
 published: true
