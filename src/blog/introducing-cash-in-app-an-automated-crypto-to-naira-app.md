@@ -22,7 +22,7 @@ If you are an individual, crypto enthusiast, remote worker, online creator, and 
 3.  Instant crypto purchases using Transak and swift conversion to your bank account within 5 minutes.
 4.  Unique crypto address dedicated for you, for prompt conversion and naira transfer to your designated bank account.
     
-This comprehensive set of features makes Cash-in App a versatile and efficient solution for crypto-to-naira transactions. To get started download ‘cash-in’ on Applestore for Iphone and Playstore for Android devices, as at the time of this review, the team said the web app would soon be deployed on “www.cash-in.app”.
+This comprehensive set of features makes Cash-in App a versatile and efficient solution for crypto-to-naira transactions. To get started download ‘Cash-in App’ on Applestore for Iphone and Playstore for Android devices, as at the time of this review, the team said the web app would soon be deployed on “www.cash-in.app”.
 
 ## Coins supported on Cash-in App
 The Cash-in App currently supports the following coins for sending or receiving to a naira bank account with plans for expansion to include more coins and tokens:
@@ -37,18 +37,18 @@ When sending or receiving bitcoins to your Cash-in App Bitcoin address, it is im
 ## Security of Cash-in App
 Dealing with crypto can be complex, ensuring security in such a complex system would require simplifying the knowledge needed to use the app effectively.
 
--   Relative to other apps, Cash-in app has been simplified and designed with security in mind, minimizing the crypto expertise needed to transact crypto to naira. This design approach significantly reduces the likelihood of user errors, enhancing overall security.
+-   Relative to other apps, Cash-in App has been simplified and designed with security in mind, minimizing the crypto expertise needed to transact crypto to naira. This design approach significantly reduces the likelihood of user errors, enhancing overall security.
     
 -   Notably, Cash-in App doesn’t provide wallet services, meaning they do not store or manage users' funds on their platform. The app solely facilitates the seamless transfer of crypto to any Nigerian bank account, without holding the funds. This unique approach makes Cash-in App unattractive to hackers, as there are no customer funds stored within the app, mitigating the risk of potential theft.
 
 ## Customer support  
-They offer an in-app communication channel without the burden of having to open your email. Cash-in support channel works on a 24-hour timeline with a response time of 10 minutes. Whatsapp customer support is also available.  
+They offer an in-app communication channel without the burden of having to open your email. Cash-in App support channel works on a 24-hour timeline with a response time of 10 minutes. Whatsapp customer support is also available.  
 Barring network-induced issues, complaints get resolved within 10 minutes from the time of interaction.
 
 ## How does Cash-in App work?
 Detailed below are the steps to get going on Cash-in:
 
-1.  Download the ‘Cash-in’ App mobile app from your smartphone's app store.
+1.  Download the ‘Cash-in App’ from your smartphone's app store.
 2.  Create a profile by providing your bank details (BVN is not required).  
 3.  Send crypto to your Cash-in address and instantly receive naira in your bank account. Alternatively, you can use Binance Pay, Trust Wallet, or Transak to send the crypto to Cash-in App.
 4.  Obtain a dedicated receiving address for each supported crypto and send crypto from other third-party wallets.
