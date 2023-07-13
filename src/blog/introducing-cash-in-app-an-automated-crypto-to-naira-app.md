@@ -118,7 +118,7 @@ Moreover, the app provides flexibility when sending crypto to your naira bank ac
  - Apple:
 
 ## Monierate Wrap up
-If you require an app to convert crypto and send naira to a Nigerian bank account, Cash-in is a top pick. From the user-friendly interface that requires zero knowledge of crypto to use and set up, to having one of the best exchange rates in the market, currently at N785, up to N35 higher than some remittance apps (as at the time of review).  
+If you require an app to convert crypto and send naira to a Nigerian bank account, Cash-in App is a top pick. From the user-friendly interface that requires zero knowledge of crypto to use and set up, to having one of the best exchange rates in the market, currently at N785, up to N35 higher than some remittance apps (as at the time of review).  
 So converting your crypto to naira using Cash-in App gets you more naira for dollars. (shoutout to inflation😎)
 
 Here is an overview of how much naira you are getting when you convert $5,000 to naira on Cash-in App compared to some apps.
