@@ -33,7 +33,7 @@ Visit the Eversend [website](https://eversend.co) or download the Eversend mobil
 
 Complete the verification process by submitting the required identification documents, ensuring compliance with Eversend's guidelines.
 
-### 2. Fund your Eversend wallet:
+### 2. Fund your Eversend wallet
 To convert Dollar to Naira, you need to have funds in your Eversend wallet. Link your bank account or use other available funding options, such as debit/credit cards, stable coins or mobile money, to add funds to your Eversend wallet. Another possible possible funding options is to recieve dollars from another Eversend user into your Eversend USD wallet. 
 
 Ensures you have up to 1 or more Dollar to convert into Naira. You can also check the Eversend rates on Monierate website and see how it fare along side other exchange apps.
