@@ -7,7 +7,7 @@ createdAt: 2023-07-13T13:00:54.842Z
 updatedAt: 2023-07-13T13:00:31.599Z
 tag: currency
 image: https://monierate.com/uploads/automated-crypto-to-naira-app.png
-published: true
+published: false
 ---
 ![Cash-in App - Automated Crypto to Naira App](https://monierate.com/uploads/automated-crypto-to-naira-app.png)
 
