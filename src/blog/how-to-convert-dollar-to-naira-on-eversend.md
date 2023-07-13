@@ -34,18 +34,18 @@ Visit the Eversend [website](https://eversend.co) or download the Eversend mobil
 Complete the verification process by submitting the required identification documents, ensuring compliance with Eversend's guidelines.
 
 ### 2. Fund your Eversend wallet
-To convert Dollar to Naira, you need to have funds in your Eversend wallet. Link your bank account or use other available funding options, such as debit/credit cards, stable coins or mobile money, to add funds to your Eversend wallet. Another possible possible funding options is to recieve dollars from another Eversend user into your Eversend USD wallet. 
+To convert Dollar to Naira, you need to have funds in your Eversend wallet. Link your bank account or use other available funding options, such as debit/credit cards, stable coins or mobile money, to add funds to your Eversend wallet. Another possible funding option is to receive dollars from another Eversend user into your Eversend USD wallet. 
 
-Ensures you have up to 1 or more Dollar to convert into Naira. You can also check the Eversend rates on Monierate website and see how it fare along side other exchange apps.
+Ensures you have up to 1 or more Dollars to convert into Naira. You can also check the Eversend rates on Monierate website and see how it fares alongside other exchange apps.
 
 ### 3. Access the currency exchange feature
-Once your Eversend wallet is funded, open the app, look for the currency exchange section, usually the exchange rate is shown when you are try to convert by clicking the Exchange icon.
+Once your Eversend wallet is funded, open the app, and look for the currency exchange section, usually the exchange rate is shown when you try to convert by clicking the Exchange icon.
 
 ### 4. Select the currency pair 
 Swipe right (or left) to your USD wallet and tap on the Exchange icon below your USD balance.  Alternatively, you can tap on the *Exchange* icon below your NGN balance if you are converting from Naira to Dollar.  Just ensure you select the correct currency pair.
 
 ### 5. Enter the amount
-Specify the amount of Dollar you want to convert to Naira. Eversend will display the approximate conversion rate and the resulting Naira amount based on the current exchange rate. If you are converting from naira to dollar, specify the amount of Naira you want to convert to Dollar.
+Specify the amount of Dollars you want to convert to Naira. Eversend will display the approximate conversion rate and the resulting Naira amount based on the current exchange rate. If you are converting from naira to dollar, specify the amount of Naira you want to convert to Dollar.
 
 ### 6. Confirm the transaction
 Review the transaction details, including the exchange rate, fees (if any), and the Naira amount you will receive. If everything is accurate, confirm the transaction to initiate the currency exchange process.
