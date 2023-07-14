@@ -11,11 +11,13 @@ export const load = (async ({ params, url, fetch }) => {
         Amount: urlParams.get('Amount') || 0
     }
 
-    console.log('yeah')
+    console.log(params.changer)
 
     const changer = (await (await resChanger).json())
     const market = (await (await resMarket).json())
     const currencies = (await (await resCurrencies).json())
+
+    console.log(market)
     
     return {
         changer,

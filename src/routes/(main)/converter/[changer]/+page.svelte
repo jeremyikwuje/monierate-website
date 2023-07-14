@@ -70,6 +70,7 @@
                 return
             }
 
+            
             let pairInverse = JSON.parse(rates[to])
             if (!pairInverse.hasOwnProperty(from)) {
                 convertResult.rate = 0
