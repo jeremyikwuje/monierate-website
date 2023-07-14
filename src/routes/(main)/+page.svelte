@@ -11,16 +11,16 @@
 
 <svelte:head>
 	<title>Dollar to naira today black market | Monierate</title>
-	<meta name="description" content="Track exchange rate. Convert dollar to naira today black market. Get alerted before anyone does.">
+	<meta name="description" content="Track naira exchange rate today. Convert dollar to naira using CBN, Black market, and rates exchanges such as Binance, Bybit, Payday, etc. Get alerted before anyone does.">
 	<meta property="og:type" content="website" />
-	<meta property="og:title" content="Exchange rate & Currency converter | Monierate" />
-	<meta property="og:description" content="Track exchange rate. Convert US dollar to Nigerian Naira." />
+	<meta property="og:title" content="Naira exchange rates & converter | Monierate" />
+	<meta property="og:description" content="Track naira exchange rates. Convert US dollar to Nigerian Naira." />
 	<meta property="og:url" content="monierate.com" />
 </svelte:head>
 
 <div class="pt-12 pb-4">
     <div class="container">
-        <h1 class="text-2xl md:text-3xl mb-2 dark:text-gray-100">Today's Dollar Prices in Black Market</h1>
+        <h1 class="text-2xl md:text-3xl mb-2 dark:text-gray-100">Dollar to naira rates today</h1>
         <div class="mb-12 text-gray-600 font-normal dark:text-gray-300">
             {#if first && last}
             <p>
