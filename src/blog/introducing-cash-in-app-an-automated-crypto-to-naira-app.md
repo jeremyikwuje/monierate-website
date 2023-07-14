@@ -66,6 +66,7 @@ Cash-in App seamlessly integrates with Binance Pay, streamlining the process of 
 
 This feature offers several benefits:
 -   Swift liquidation of your crypto holdings on Binance.
+-   All coins supported on Binance are also supported on Cash-in App
 -   Savings on network fees associated with the transfer.
 -   Avoidance of engaging with unknown individuals on the Binance P2P Market.
 -   Elimination of the risk of mistakenly sending your crypto to the wrong address.
