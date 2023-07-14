@@ -7,6 +7,7 @@
 
     let first = rates[0]
     let last = rates[rates.length - 1]
+    let total = rates.length
 </script>
 
 <svelte:head>
@@ -20,11 +21,11 @@
 
 <div class="pt-12 pb-4">
     <div class="container">
-        <h1 class="text-2xl md:text-3xl mb-2 dark:text-gray-100">Dollar to naira rates today</h1>
-        <div class="mb-12 text-gray-600 font-normal dark:text-gray-300">
+        <h1 class="text-2xl md:text-4xl mb-2 dark:text-gray-100 text-center">{total} Naira Exchange Rates</h1>
+        <div class="mb-12 text-gray-600 font-normal dark:text-gray-300 text-center">
             {#if first && last}
             <p>
-                The price of dollar today is between ₦{Money.toDollar(first.rate_buy)} and ₦{Money.toDollar(last.rate_buy)}. Prices are displayed from lowest to highest.
+                Compare the prices of dollar to naira from {total} providers.
             </p>
             {/if}
         </div>
@@ -40,21 +41,20 @@
 
 <main>
     <div class="container">
-        <div class="changers-box bg-white py-[10px] shadow-t-md mb-16 dark:bg-black dark:text-light min-h-[100vh]">
-            <div class="relative overflow-x-auto">
-                <table class="w-full text-sm text-left">
+        <div class="changers-box bg-white py-[10px] shadow-t-md mb-16 dark:bg-black dark:text-light min-h-[100vh] w-full overflow-x-scroll md:overflow-x-hidden">
+                <table class="table-auto overflow-x-scroll w-full text-sm text-left">
                     <thead>
                         <tr>
-                            <th scope="col" class="pr-2 py-3 md:pl-4 font-bitter hidden md:inline-block">
+                            <th scope="col" class="pr-4 py-3 md:pl-4 font-bitter hidden md:inline-block">
                                 #
                             </th>
-                            <th scope="col" class="pr-6 py-3 pl-2 md:pl-0 font-bold font-bitter w-[40%]">
+                            <th scope="col" class="py-3 pl-2 md:pl-6 md:pl-0 font-bold font-bitter">
                                 Provider
                             </th>
-                            <th scope="col" class="pl-6 py-3 font-bold font-bitter text-right">
+                            <th scope="col" class="pl-6 pr-6 py-3 w-[40%] font-bold font-bitter text-right">
                                 Buy Price
                             </th>
-                            <th scope="col" class="pl-6 py-3 font-bold font-bitter text-right">
+                            <th scope="col" class="pl-6 pr-6 py-3 font-bold font-bitter text-right">
                                 Sell Price
                             </th>
                             <th scope="col" class="pl-6 py-3 font-bold font-bitter text-right pr-2 md:pr-4">
@@ -76,11 +76,11 @@
                                     <span class="changer-title">{rate.changer.name}</span>
                                 </a>
                             </td>
-                            <td class="text-right">
+                            <td class="text-right pl-6 pr-6">
                                 <span class="changer-rate">₦{Money.toDollar(rate.rate_buy)}</span>
                                 <small class="changer-rate-base">per $1</small>
                             </td>
-                            <td class="text-right">
+                            <td class="text-right pl-6 pr-6">
                                 <span class="changer-rate">₦{Money.toDollar(rate.rate_sell)}</span>
                                 <small class="changer-rate-base">per $1</small>
                             </td>
@@ -95,7 +95,6 @@
                         {/each}
                     </tbody>
                 </table>
-            </div>
         </div>
 
         <div class="dark:text-gray-300"> 
