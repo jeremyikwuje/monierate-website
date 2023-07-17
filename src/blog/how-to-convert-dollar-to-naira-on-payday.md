@@ -9,8 +9,7 @@ tag: currency
 image: /uploads/screenshot-www.usepayday.com-2023.07.17-09_02_58.png
 published: true
 ---
-# How to Convert Dollar to Naira on Payday Nigeria
-
+![Payday Website Homepage](https://monierate.com/uploads/screenshot-www.usepayday.com-2023.07.17-09_02_58.png)
 
 In today's globalized economy, the ability to convert Dollar to Naira seamlessly is of utmost importance for Nigerians engaged in international transactions. Payday, a digital financial services platform, offers a convenient solution for currency conversion. In this article, we will walk you through the process of converting Dollar to Naira on Payday, specifically tailored for the Nigerian audience.
 
@@ -30,17 +29,22 @@ Visit the Payday [website](https://usepayday.com) or download the Payday mobile 
 
 Complete the verification process by submitting the required identification documents, ensuring compliance with Paday's guidelines.
 
-### 2. Fund your Payday wallet:
-To convert Dollar to Naira, you need to have funds in your Payday's USD account. Previously, you can fund your Payday's USD account via bank wire. However, currently you can only fund your USD account by recieving dollars from another Payday account or fund your NGN account before swapping from NGN to USD. 
+### 2. Top up your Payday account
+![Topup your Payday USD Account](https://monierate.com/uploads/screenshot_20230717-091908.jpg)
+To convert Dollar to Naira, you need to have funds in your Payday's USD account. Previously, you can top up your Payday's USD account via bank wire. However, currently you can only fund your USD account by recieving dollars from another Payday USD account or fund your NGN account before swapping from NGN to USD. 
 
-Ensure you have up to 1 Dollar in your Payday's USD account.
+Ensure you have up to 1 dollar in your Payday's USD account.
 
 ### 3. Access the currency exchange feature
+![Payday Rates in App](https://monierate.com/uploads/screenshot_20230717-092934.jpg)
 Open the app, look for the _Rate & Fees_ option in _Settings_ section (you can go to _Settings_ by tapping on your account icon at the top), usually the exchange rate is shown when you are trying to convert between currencies pairs.
 
 You can also check the Payday [rates](https://monierate.com/converter/payday?Amount=1&From=USD&To=NGN) on [Monierate](https://monierate.com) and see how it fares alongside other exchange apps.
 
 ### 4. Select the currency pair 
+
+![Payday USD to NGN swap screen in App](https://monierate.com/uploads/screenshot_20230713-123317.jpg)
+
 On the _Home_ screen, Tap the the ***Swap*** options. You will see a screen to select the currency pairs you want to swap between. Tap the first pair and select USD before selecting NGN as the second pair.
 
 Ensure you select the correct currency pair USD to NGN ie you are converting from USD to NGN .
