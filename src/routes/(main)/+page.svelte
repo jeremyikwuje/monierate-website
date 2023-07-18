@@ -108,7 +108,7 @@
             </span>
             <span class="block mb-4">
                 <h3>What is Sell Price?</h3>
-                <p>Buy price is the rate at which you will pay to convert <strong>dollar to naira</strong>. It is how much naira you are paying for every dollar you get. An example is, you have USDT, but you need naira to pay a bill, you will need to exchange your USDT for naira. The provider will credit naira to you at a Sell Price.</p>
+                <p>Buy price is the rate at which you will pay to convert <strong>dollar to naira</strong>. It is how much naira you are getting for every dollar you exchange. An example is, you have USDT, but you need naira to pay a bill, you will need to exchange your USDT for naira. The provider will credit naira to you at a Sell Price.</p>
             </span>
             <span class="block mb-4">
                 <h3>Why is Buy Price always higher than Sell Price?</h3>
