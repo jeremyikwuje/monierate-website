@@ -21,7 +21,7 @@
 
 <div class="pt-12 pb-4">
     <div class="container">
-        <h1 class="text-2xl md:text-4xl mb-2 dark:text-gray-100 text-center">{total} Naira Exchange Rates</h1>
+        <h1 class="text-2xl md:text-4xl mb-2 dark:text-gray-100 text-center">Dollar to Naira Today</h1>
         <div class="mb-12 text-gray-600 font-normal dark:text-gray-300 text-center">
             {#if first && last}
             <p>
@@ -115,7 +115,7 @@
                 <p>Exchange Providers makes money from the difference between the exchange price of dollar. This is popularly known as arbitrage or trading profit, buy low and sell high. If you have USDT but need naira, they buy the USDT from you at a lower naira price and sell at a higher naira price to someone else who need USDT.</p>
             </span>
             <span class="block">
-                <h3>How does Monierate works</h3>
+                <h3>How Monierate works</h3>
                 <p class="mb-2">Monierate is a website for you to compare the prices of dollar accross multiple providers in Nigeria. You can use Monierate to know the exchange rate of dollar to naira, get more dollars for naira and vice versa. By default, prices are arranged from lowest to highest. The cheapest rate is rank first and the most expensive rate is ranked last. In the future, you can change the order of the selection between *low to high* or by *Buy* or *Sell* price..</p>
                 <p>Monierate currently tracks the 24-hour price of dollar accross 10+ providers including Binance, Luno, Remitano, Yellow Card, Quidax, and Payday.</p>
             </span>
