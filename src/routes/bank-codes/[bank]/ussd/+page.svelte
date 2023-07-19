@@ -33,7 +33,7 @@
 						<th scope="col" class="py-3 w-[50%] md:w-[25%] md:pl-0 font-bold font-bitter">
 							Options
 						</th>
-						<th scope="col" class="pr-6 py-3 font-bold font-bitter text-right">
+						<th scope="col" class="pl-6 pr-6 py-3 font-bold font-bitter text-left md:text-right">
 							USSD
 						</th>
 					</tr>
@@ -43,7 +43,7 @@
 						<td class="w-[50%] md:w-[25%]">
 							<span class="bank-title">Start</span>
 						</td>
-						<td class="text-right pl-6 pr-6">
+						<td class="pl-6 pr-6 text-left md:text-right">
 							<span class="bank-code">{code.start}</span>
 						</td>
 					</tr>
@@ -51,7 +51,7 @@
 						<td class="w-[50%] md:w-[25%]">
 							<span class="bank-title">Transfer (to {bank.name})</span>
 						</td>
-						<td class="text-right pl-6 pr-6">
+						<td class="pl-6 pr-6 text-left md:text-right">
 							<span class="bank-code">{code.transfer[0]}</span>
 						</td>
 					</tr>
@@ -59,7 +59,7 @@
 						<td class="w-[50%] md:w-[25%]">
 							<span class="bank-title">Transfer (Other banks)</span>
 						</td>
-						<td class="text-right pl-6 pr-6">
+						<td class="pl-6 pr-6 text-left md:text-right">
 							<span class="bank-code">{code.transfer[1]}</span>
 						</td>
 					</tr>
@@ -67,7 +67,7 @@
 						<td class="w-[50%] md:w-[25%]">
 							<span class="bank-title">Airtime (Self)</span>
 						</td>
-						<td class="text-right pl-6 pr-6">
+						<td class="pl-6 pr-6 text-left md:text-right">
 							<span class="bank-code">{code.airtime[0]}</span>
 						</td>
 					</tr>
@@ -75,7 +75,7 @@
 						<td class="w-[50%] md:w-[25%]">
 							<span class="bank-title">Airtime (Others)</span>
 						</td>
-						<td class="text-right pl-6 pr-6">
+						<td class="text-left md:text-right pl-6 pr-6">
 							<span class="bank-code">{code.airtime[1]}</span>
 						</td>
 					</tr>
@@ -83,7 +83,7 @@
 						<td class="w-[50%] md:w-[25%]">
 							<span class="bank-title">Check Balance</span>
 						</td>
-						<td class="text-right pl-6 pr-6">
+						<td class="text-left md:text-right pl-6 pr-6">
 							<span class="bank-code">{code.balance}</span>
 						</td>
 					</tr>
@@ -91,7 +91,7 @@
 						<td class="w-[50%] md:w-[25%]">
 							<span class="bank-title">BVN</span>
 						</td>
-						<td class="text-right pl-6 pr-6">
+						<td class="text-left md:text-right pl-6 pr-6">
 							<span class="bank-code">{code.bvn}</span>
 						</td>
 					</tr>
@@ -101,7 +101,7 @@
 						<td class="w-[50%] md:w-[25%]">
 							<span class="bank-title">{options.text}</span>
 						</td>
-						<td class="text-right pl-6 pr-6">
+						<td class="text-left md:text-right pl-6 pr-6">
 							<span class="bank-code">{options.code}</span>
 						</td>
 					</tr>
