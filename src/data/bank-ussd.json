@@ -10,6 +10,7 @@
         "*966*Amount*Mobile Number#"
       ],
       "balance": "*966*00#",
+      "bvn": "*565*0#",
       "others": [
         {
           "text": "Update BVN details",
@@ -36,6 +37,7 @@
         "*894*Amount*Phone Number#"
       ],
       "balance": "*894*00#",
+      "bvn": "*565*0#",
       "others": [
         {
           "text": "Deactivate Your Mobile Number",
@@ -62,6 +64,7 @@
         "*919*Phone Number*Amount#"
       ],
       "balance": "*919*00#",
+      "bvn": "*565*0#",
       "others": [
         {
           "text": "Pay your flight",
@@ -92,6 +95,7 @@
         "*955*3*amount*Phone Number#"
       ],
       "balance": "*955*0#",
+      "bvn": "*565*0#",
       "others": [
         {
           "text": "Get OTP",
