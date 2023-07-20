@@ -38,6 +38,7 @@
 	"dependencies": {
 		"@multiavatar/multiavatar": "^1.0.7",
 		"currency.js": "^2.0.4",
+		"date-and-time": "^3.0.2",
 		"mathjs": "^11.8.0",
 		"svelte-clipboard": "^1.0.0",
 		"svelte-gestures": "^1.4.1"

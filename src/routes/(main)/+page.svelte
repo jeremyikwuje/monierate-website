@@ -1,6 +1,7 @@
 <script>
     /** @type {import('./$types').PageData} */
 	import Money from "$lib/money";
+    import date from 'date-and-time'
 
     export let data;
     let rates = data.rates || {}
@@ -8,6 +9,16 @@
     let first = rates[0]
     let last = rates[rates.length - 1]
     let total = rates.length
+
+
+    const format = (dt, d = "datetime") => {
+    
+        if (d == 'date') {
+            return date.format(dt, 'YYYY-MM-DD')
+        }
+
+        return date.format(dt, 'YYYY-MM-DD HH:mm:ss')
+    }
 </script>
 
 <svelte:head>
@@ -58,7 +69,7 @@
                                 Sell Price
                             </th>
                             <th scope="col" class="pl-6 py-3 font-bold font-bitter text-right pr-2 md:pr-4">
-                                Services
+                                Last updated
                             </th>
                         </tr>
                     </thead>
@@ -84,12 +95,15 @@
                                 <span class="changer-rate">₦{Money.toDollar(rate.rate_sell)}</span>
                                 <small class="changer-rate-base">per $1</small>
                             </td>
-                            <td class="text-right py-2 pr-2 md:pr-4">
+                            <!-- <td class="text-right py-2 pr-2 md:pr-4">
                                 {#each Object.entries(rate.changer.changer_tags) as [index, tag]}
                                 <span class="inline-block p-2 border border-gray-300 text-black rounded-lg text-xs mr-2 font-semibold mb-2 dark:text-light">
                                     {tag.tag_id}
                                 </span>
                                 {/each}
+                            </td> -->
+                            <td class="text-right py-2 pr-2 md:pr-4">
+                                {format(new Date(rate.updatedAt))}
                             </td>
                         </tr>
                         {/each}
