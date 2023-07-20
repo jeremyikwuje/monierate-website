@@ -30,13 +30,13 @@
 	<meta property="og:url" content="monierate.com" />
 </svelte:head>
 
-<div class="pt-12 pb-4">
+<div class="pb-4">
     <div class="container">
-        <h1 class="text-2xl md:text-4xl mb-2 dark:text-gray-100 text-center">Dollar to Naira Today</h1>
-        <div class="mb-12 text-gray-600 font-normal dark:text-gray-300 text-center">
+        <h1 class="text-2xl md:text-4xl mb-2 dark:text-gray-100">Today's dollar to naira rates on exchanges</h1>
+        <div class="mb-12 text-gray-600 font-normal dark:text-gray-300">
             {#if first && last}
             <p>
-                Compare the prices of dollar to naira from {total} providers.
+                Compare the prices of dollar to naira from {total} exchange providers.
             </p>
             {/if}
         </div>
@@ -52,63 +52,63 @@
 
 <main>
     <div class="container">
-        <div class="changers-box bg-white py-[10px] shadow-t-md mb-16 dark:bg-black dark:text-light min-h-[100vh] w-full overflow-x-scroll md:overflow-x-hidden">
-                <table class="table-auto overflow-x-scroll w-full text-sm text-left">
-                    <thead>
-                        <tr>
-                            <th scope="col" class="pr-4 py-3 md:pl-4 font-bitter hidden md:inline-block">
-                                #
-                            </th>
-                            <th scope="col" class="py-3 pl-2 md:pl-6 md:pl-0 font-bold font-bitter">
-                                Provider
-                            </th>
-                            <th scope="col" class="pl-6 pr-6 py-3 w-[40%] font-bold font-bitter text-right">
-                                Buy Price
-                            </th>
-                            <th scope="col" class="pl-6 pr-6 py-3 font-bold font-bitter text-right">
-                                Sell Price
-                            </th>
-                            <th scope="col" class="pl-6 py-3 font-bold font-bitter text-right pr-2 md:pr-4">
-                                Last updated
-                            </th>
-                        </tr>
-                    </thead>
-                    <tbody class="changers">
-                        {#each Object.entries(rates) as [index, rate]}
-                        <tr class="mb-4 border-t border-gray-100 dark:border-gray-900">
-                            <th scope="row" class="text-gray-500 py-6 pl-4 hidden md:inline-block">
-                                {parseInt(index) + 1}
-                            </th>
-                            <td>
-                                <a data-sveltekit-reload href="/converter/{rate.changer.code}?Amount=1&From=USD&To=NGN" class="flex items-center" title="{rate.changer.name} dollar to naira rate.">
-                                    <span class="changer-icon">
-                                        <img width="22px" height="22px" src="/icons/{rate.changer.icon}" class="rounded-full" alt="{rate.changer.name} icon">
-                                    </span>
-                                    <span class="changer-title">{rate.changer.name}</span>
-                                </a>
-                            </td>
-                            <td class="text-right pl-6 pr-6">
-                                <span class="changer-rate">₦{Money.toDollar(rate.rate_buy)}</span>
-                                <small class="changer-rate-base">per $1</small>
-                            </td>
-                            <td class="text-right pl-6 pr-6">
-                                <span class="changer-rate">₦{Money.toDollar(rate.rate_sell)}</span>
-                                <small class="changer-rate-base">per $1</small>
-                            </td>
-                            <!-- <td class="text-right py-2 pr-2 md:pr-4">
-                                {#each Object.entries(rate.changer.changer_tags) as [index, tag]}
-                                <span class="inline-block p-2 border border-gray-300 text-black rounded-lg text-xs mr-2 font-semibold mb-2 dark:text-light">
-                                    {tag.tag_id}
+        <div class="changers-box bg-white py-[10px] shadow-t-md mb-16 dark:bg-gray-900 dark:text-light min-h-[100vh] w-full overflow-x-scroll md:overflow-x-hidden">
+            <table class="table-auto overflow-x-scroll w-full text-sm text-left">
+                <thead>
+                    <tr>
+                        <th scope="col" class="pr-4 py-3 md:pl-4 font-bitter hidden md:inline-block">
+                            #
+                        </th>
+                        <th scope="col" class="py-3 pl-2 md:pl-6 md:pl-0 font-bold font-bitter">
+                            Provider
+                        </th>
+                        <th scope="col" class="pl-6 pr-6 py-3 w-[40%] font-bold font-bitter text-right">
+                            Buy Price
+                        </th>
+                        <th scope="col" class="pl-6 pr-6 py-3 font-bold font-bitter text-right">
+                            Sell Price
+                        </th>
+                        <th scope="col" class="pl-6 py-3 font-bold font-bitter text-right pr-2 md:pr-4 whitespace-nowrap">
+                            Last updated
+                        </th>
+                    </tr>
+                </thead>
+                <tbody class="changers">
+                    {#each Object.entries(rates) as [index, rate]}
+                    <tr class="mb-4 border-t border-gray-200 dark:border-gray-700">
+                        <th scope="row" class="text-gray-500 py-6 pl-4 hidden md:inline-block">
+                            {parseInt(index) + 1}
+                        </th>
+                        <td>
+                            <a href="/converter/{rate.changer.code}?Amount=1&From=USD&To=NGN" class="flex items-center" title="{rate.changer.name} dollar to naira rate.">
+                                <span class="changer-icon">
+                                    <img width="22px" height="22px" src="/icons/{rate.changer.icon}" class="rounded-full" alt="{rate.changer.name} icon">
                                 </span>
-                                {/each}
-                            </td> -->
-                            <td class="text-right py-2 pr-2 md:pr-4">
-                                {format(new Date(rate.updatedAt))}
-                            </td>
-                        </tr>
-                        {/each}
-                    </tbody>
-                </table>
+                                <span class="changer-title">{rate.changer.name}</span>
+                            </a>
+                        </td>
+                        <td class="text-right pl-6 pr-6">
+                            <span class="changer-rate">₦{Money.toDollar(rate.rate_buy)}</span>
+                            <small class="changer-rate-base">per $1</small>
+                        </td>
+                        <td class="text-right pl-6 pr-6">
+                            <span class="changer-rate">₦{Money.toDollar(rate.rate_sell)}</span>
+                            <small class="changer-rate-base">per $1</small>
+                        </td>
+                        <!-- <td class="text-right py-2 pr-2 md:pr-4">
+                            {#each Object.entries(rate.changer.changer_tags) as [index, tag]}
+                            <span class="inline-block p-2 border border-gray-300 text-black rounded-lg text-xs mr-2 font-semibold mb-2 dark:text-light">
+                                {tag.tag_id}
+                            </span>
+                            {/each}
+                        </td> -->
+                        <td class="text-right py-2 pr-2 md:pr-4 whitespace-nowrap">
+                            {format(new Date(rate.updatedAt))}
+                        </td>
+                    </tr>
+                    {/each}
+                </tbody>
+            </table>
         </div>
 
         <div class="dark:text-gray-300"> 

@@ -22,12 +22,12 @@
 	</div>
 	
 	<!-- Posts -->
-	<div class="container bg-white px-4 shadow-md dark:bg-black">
-		<div class="banks-box bg-white py-[10px] shadow-t-md mb-16 dark:bg-black dark:text-light min-h-[100vh] w-full overflow-x-scroll">
+	<div class="container">
+		<div class="banks-box bg-white py-[10px] shadow-t-md mb-16 dark:bg-gray-900 dark:text-light min-h-[100vh] w-full overflow-x-scroll">
 			<table class="table-auto overflow-x-scroll w-full text-sm text-left">
 				<thead>
 					<tr>
-						<th scope="col" class="py-3 w-[50%] md:w-[25%] md:pl-0 font-bold font-bitter">
+						<th scope="col" class="pl-2 py-3 w-[50%] md:w-[25%] md:pl-4 font-bold font-bitter">
 							Bank
 						</th>
 						<th scope="col" class="pr-6 py-3 font-bold font-bitter text-right">
@@ -46,8 +46,8 @@
 				</thead>
 				<tbody class="banks">
 					{#each Object.entries(codes) as [bank, code]}
-					<tr class="mb-4 border-t border-gray-100 dark:border-gray-900">
-						<td class="w-[50%] md:w-[25%]">
+					<tr class="mb-4 border-t border-gray-100 dark:border-gray-700">
+						<td class="pl-2 md:pl-4 w-[50%] md:w-[25%]">
 							<a href="/bank-codes/{bank}/ussd" class="flex items-center" title="">
 								<span class="bank-icon">
 									<img width="22px" height="22px" src="/icons/{banks[bank].icon}" class="rounded-full" alt=" icon">

@@ -29,7 +29,7 @@
 		<p>Published {formatDate(post.metadata.createdAt)}</p>
 	</header>
 
-	<div class="bg-white dark:bg-black flex justify-between px-4 mx-auto max-w-screen-xl">
+	<div class="flex justify-between px-4 mx-auto max-w-screen-xl">
 		<article id="entry" class="mx-auto w-full max-w-2xl format text-gray-800 dark:text-gray-300 format-sm sm:format-base lg:format-lg format-primary dark:format-invert lg:w-[700px]">
 			<!-- Post -->
 			<div class="post-content">

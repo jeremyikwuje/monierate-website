@@ -25,12 +25,12 @@
 	</div>
 	
 	<!-- Posts -->
-	<div class="container bg-white px-4 shadow-md dark:bg-black">
-		<div class="banks-box bg-white py-[10px] shadow-t-md mb-16 dark:bg-black dark:text-light min-h-[100vh] w-full overflow-x-scroll">
+	<div class="container">
+		<div class="banks-box bg-white py-[10px] shadow-t-md mb-16 dark:bg-gray-900 dark:text-light min-h-[100vh] w-full overflow-x-scroll">
 			<table class="table-auto overflow-x-scroll w-full text-sm text-left">
 				<thead>
 					<tr>
-						<th scope="col" class="py-3 w-[50%] md:w-[25%] md:pl-0 font-bold font-bitter">
+						<th scope="col" class="pl-2 md:pl-4 py-3 pl-2 md:pl-4 w-[50%] md:w-[25%] md:pl-4 font-bold font-bitter">
 							Options
 						</th>
 						<th scope="col" class="pl-6 pr-6 py-3 font-bold font-bitter text-left md:text-right">
@@ -39,56 +39,56 @@
 					</tr>
 				</thead>
 				<tbody class="banks">
-					<tr class="mb-4 border-t border-gray-100 dark:border-gray-900">
-						<td class="w-[50%] md:w-[25%]">
+					<tr class="mb-4 border-t border-gray-100 dark:border-gray-700">
+						<td class="pl-2 md:pl-4 pl-2 md:pl-4 w-[50%] md:w-[25%]">
 							<span class="bank-title">Start</span>
 						</td>
 						<td class="pl-6 pr-6 text-left md:text-right">
 							<span class="bank-code">{code.start}</span>
 						</td>
 					</tr>
-                    <tr class="mb-4 border-t border-gray-100 dark:border-gray-900">
-						<td class="w-[50%] md:w-[25%]">
+                    <tr class="mb-4 border-t border-gray-100 dark:border-gray-700">
+						<td class="pl-2 md:pl-4 pl-2 md:pl-4 w-[50%] md:w-[25%]">
 							<span class="bank-title">Transfer (to {bank.name})</span>
 						</td>
 						<td class="pl-6 pr-6 text-left md:text-right">
 							<span class="bank-code">{code.transfer[0]}</span>
 						</td>
 					</tr>
-                    <tr class="mb-4 border-t border-gray-100 dark:border-gray-900">
-						<td class="w-[50%] md:w-[25%]">
+                    <tr class="mb-4 border-t border-gray-100 dark:border-gray-700">
+						<td class="pl-2 md:pl-4 w-[50%] md:w-[25%]">
 							<span class="bank-title">Transfer (Other banks)</span>
 						</td>
 						<td class="pl-6 pr-6 text-left md:text-right">
 							<span class="bank-code">{code.transfer[1]}</span>
 						</td>
 					</tr>
-                    <tr class="mb-4 border-t border-gray-100 dark:border-gray-900">
-						<td class="w-[50%] md:w-[25%]">
+                    <tr class="mb-4 border-t border-gray-100 dark:border-gray-700">
+						<td class="pl-2 md:pl-4 w-[50%] md:w-[25%]">
 							<span class="bank-title">Airtime (Self)</span>
 						</td>
 						<td class="pl-6 pr-6 text-left md:text-right">
 							<span class="bank-code">{code.airtime[0]}</span>
 						</td>
 					</tr>
-                    <tr class="mb-4 border-t border-gray-100 dark:border-gray-900">
-						<td class="w-[50%] md:w-[25%]">
+                    <tr class="mb-4 border-t border-gray-100 dark:border-gray-700">
+						<td class="pl-2 md:pl-4 w-[50%] md:w-[25%]">
 							<span class="bank-title">Airtime (Others)</span>
 						</td>
 						<td class="text-left md:text-right pl-6 pr-6">
 							<span class="bank-code">{code.airtime[1]}</span>
 						</td>
 					</tr>
-                    <tr class="mb-4 border-t border-gray-100 dark:border-gray-900">
-						<td class="w-[50%] md:w-[25%]">
+                    <tr class="mb-4 border-t border-gray-100 dark:border-gray-700">
+						<td class="pl-2 md:pl-4 w-[50%] md:w-[25%]">
 							<span class="bank-title">Check Balance</span>
 						</td>
 						<td class="text-left md:text-right pl-6 pr-6">
 							<span class="bank-code">{code.balance}</span>
 						</td>
 					</tr>
-                    <tr class="mb-4 border-t border-gray-100 dark:border-gray-900">
-						<td class="w-[50%] md:w-[25%]">
+                    <tr class="mb-4 border-t border-gray-100 dark:border-gray-700">
+						<td class="pl-2 md:pl-4 w-[50%] md:w-[25%]">
 							<span class="bank-title">BVN</span>
 						</td>
 						<td class="text-left md:text-right pl-6 pr-6">
@@ -98,7 +98,7 @@
 
                     {#each Object.entries(code.others) as [index, options]}
                     <tr class="mb-4 border-t border-gray-100 dark:border-gray-900">
-						<td class="w-[50%] md:w-[25%]">
+						<td class="pl-2 md:pl-4 w-[50%] md:w-[25%]">
 							<span class="bank-title">{options.text}</span>
 						</td>
 						<td class="text-left md:text-right pl-6 pr-6">

@@ -1,4 +1,4 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Kanit:wght@400;500&family=Maitree:wght@200;300;400;500;600;700&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Bitter:wght@600;700&family=Work+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;1,400;1,500&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -6,13 +6,13 @@
 
 @layer base {
     body, html {
-        @apply font-worksans font-normal min-h-screen bg-light dark:bg-dark dark:text-gray-300;
+        @apply font-worksans font-normal min-h-screen bg-white dark:bg-gray-800 dark:text-gray-300;
         padding: 0;
         margin: 0;
     }
 
     h1, h2, h3, h4, h5, h6 {
-        @apply font-bitter font-semibold text-gray-800 dark:text-gray-300;
+        @apply font-bitter font-semibold text-black dark:text-gray-200;
     }
 
     a, button, input, textbox, p, span, div {
@@ -26,7 +26,7 @@
 
 @layer components {
     .container {
-        @apply w-[95%] md:w-[1124px] mx-auto;
+        @apply w-[95%] md:max-w-[1200px] mx-auto p-4;
     }
 
     .loading {
@@ -34,7 +34,7 @@
     }
 
     .input, .select {
-        @apply block border-[#ddd] text-black bg-white dark:bg-dark dark:text-gray-300 dark:border-gray-900 dark:font-semibold py-2.5 px-2.5 mb-4 w-full;
+        @apply block border border-[#ddd] text-black bg-white dark:bg-gray-800 dark:text-gray-300 dark:border-gray-900 dark:font-semibold py-3.5 px-2.5 mb-4 w-full;
         box-shadow: none;
     }
     .input:focus, .input:hover {
@@ -44,9 +44,12 @@
     }
 
     .button {
-        @apply text-white bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700 dark:text-light;
+        @apply text-white bg-gray-700 hover:bg-gray-800 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700 dark:text-light;
     }
 
+    .select {
+        @apply py-4;
+    }
 
     .select:focus, .select:hover {
         @apply border-gray-900 dark:border-dark;
