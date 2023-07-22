@@ -31,7 +31,7 @@
 </script>
 <div class="container">
     <div class="md:w-[700px]"> 
-        <h1 class="text-2xl md:text-4xl mb-4">Get financial updates</h1>
+        <h1 class="text-xl md:text-3xl mb-4">Get monie updates</h1>
         <span class="text-gray-600 font-normal dark:text-gray-300">Do you want to get notified when a new exchange is added to Monierate? Sign up for our newsletter and you'll be among the first to find out about new features, exchanges, rates, and tools.</span>
 
         <div class="mt-8">
