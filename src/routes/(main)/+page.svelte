@@ -23,10 +23,10 @@
 
 <svelte:head>
 	<title>Dollar to naira today black market | Monierate</title>
-	<meta name="description" content="Track naira exchange rate today. Convert dollar to naira using CBN, Black market, and rates exchanges such as Binance, Bybit, Payday, etc. Get alerted before anyone does.">
+	<meta name="description" content="Compare the naira exchange rates from over 16 exchanges in Nigeria. Track naira rates today. Convert dollar to naira using CBN and black market rate. Get price alert from your favourite crypto exchange such as Binance, Bybit, Quidax, etc.">
 	<meta property="og:type" content="website" />
 	<meta property="og:title" content="Naira exchange rates & converter | Monierate" />
-	<meta property="og:description" content="Track naira exchange rates. Convert US dollar to Nigerian Naira." />
+	<meta property="og:description" content="Compare the naira exchange rates from over 16 exchanges in Nigeria. Track naira rates today. Convert dollar to naira using CBN and black market rate. Get price alert from your favourite crypto exchange such as Binance, Bybit, Quidax, etc." />
 	<meta property="og:url" content="monierate.com" />
     <meta property="og:image" content="/monierate-og-image.png">
 </svelte:head>
