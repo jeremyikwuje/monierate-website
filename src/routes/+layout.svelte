@@ -1,7 +1,7 @@
 <script>
 import "../app.css";
 import { page } from "$app/stores";
-	import { onMount } from "svelte";
+import { onMount } from "svelte";
 
 $: paths = $page.url.pathname.split('/')
 $: path = paths[1] ?? 'home'
