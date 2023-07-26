@@ -28,6 +28,7 @@
 	<meta property="og:title" content="Naira exchange rates & converter | Monierate" />
 	<meta property="og:description" content="Track naira exchange rates. Convert US dollar to Nigerian Naira." />
 	<meta property="og:url" content="monierate.com" />
+    <meta property="og:image" content="/monierate-og-image.png">
 </svelte:head>
 
 <div class="pb-4">
