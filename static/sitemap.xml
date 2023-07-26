@@ -5,12 +5,15 @@
       xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 <!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
-
-
 <url>
   <loc>https://monierate.com/</loc>
   <lastmod>2023-07-26T10:07:13+00:00</lastmod>
   <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://monierate.com/blog</loc>
+  <lastmod>2023-07-26T10:07:13+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
   <loc>https://monierate.com/bank-codes</loc>
@@ -94,36 +97,6 @@
 </url>
 <url>
   <loc>https://monierate.com/converter/eversend?Amount=1&amp;From=USD&amp;To=NGN</loc>
-  <lastmod>2023-07-26T10:07:13+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://monierate.com/converter/binance?Amount=1&amp;From=USDT&amp;To=NGN</loc>
-  <lastmod>2023-07-26T10:07:13+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://monierate.com/converter/remitano?Amount=1&amp;From=USDT&amp;To=NGN</loc>
-  <lastmod>2023-07-26T10:07:13+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://monierate.com/converter/quidax?Amount=1&amp;From=USDT&amp;To=NGN</loc>
-  <lastmod>2023-07-26T10:07:13+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://monierate.com/converter/yellowcard?Amount=1&amp;From=USDT&amp;To=NGN</loc>
-  <lastmod>2023-07-26T10:07:13+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://monierate.com/converter/luno?Amount=1&amp;From=USDC&amp;To=NGN</loc>
-  <lastmod>2023-07-26T10:07:13+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://monierate.com/converter/bitmama?Amount=1&amp;From=USDC&amp;To=NGN</loc>
   <lastmod>2023-07-26T10:07:13+00:00</lastmod>
   <priority>0.80</priority>
 </url>
