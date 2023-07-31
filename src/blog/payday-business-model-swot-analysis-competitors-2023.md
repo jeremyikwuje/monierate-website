@@ -7,7 +7,7 @@ description: Payday, a financial technology company founded by Favour Ori, is
   growing at a user rate of 4000+ new users per day.
 createdAt: 2023-07-31T12:49:43.415Z
 updatedAt: 2023-07-31T12:49:43.544Z
-tag: currency
+tag: product
 image: https://monierate.com/uploads/screenshot-www.usepayday.com-2023.07.17-09_02_58.png
 published: true
 ---
