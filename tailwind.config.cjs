@@ -6,7 +6,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        bitter: ["Bitter", "serif"],
+        bitter: ["Roboto", "serif"],
         worksans: ["Work Sans", "sans-serif"],
       },
       typography: {

@@ -49,7 +49,7 @@ onMount(() => {
                     <a href="/" class="{path == '' ? 'active': ''}" aria-current="page">$1 Today</a>
                     </li>
                     <li>
-                    <a href="/blog" class="{path == 'blog' ? 'active': ''}">Blog</a>
+                    <a data-sveltekit-reload href="/blog" class="{path == 'blog' ? 'active': ''}">Blog</a>
                     </li>
                     <li>
                     <a href="/bank-codes" class="{path == 'bank-codes' ? 'active': ''}">Bank Codes</a>

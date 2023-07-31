@@ -19,17 +19,17 @@
 
 
 <main class="container mt-8 mb-8 pb-8 md:mt-16 md:mb-8 min-h-[100vh]">
-	<header class="mb-4 md:mb-6 not-format text-center">
+	<header class="mb-4 md:mb-6 not-format text-left max-w-2xl mx-auto">
 		<!-- Tags -->
-		<div class="tags text-center">
-			<a href="/blog/{post.metadata.tag}" class="inline-block text-gray-600 dark:text-green-500 font-semibold text-xs mb-4 leading-none mr-2 last:mr-0">&num;{post.metadata.tag.toUpperCase()}</a>
+		<div class="tags text-left">
+			<a href="/blog?tag={post.metadata.tag}" class="inline-block text-gray-600 dark:text-green-500 font-semibold text-xs mb-4 leading-none mr-2 last:mr-0">&num;{post.metadata.tag.toUpperCase()}</a>
 		</div>
 		<!-- Title -->
-		<h1 class="mb-2 text-3xl font-extrabold leading-tight text-gray-900 lg:mb-2 lg:text-4xl dark:text-gray-300 dark:font-semibold">{post.metadata.title}</h1>
+		<h1 class="mb-2 text-3xl font-extrabold leading-tight text-gray-900 lg:mb-2 lg:text-4xl dark:text-gray-300 dark:font-semibold leading-10 md:leading-10">{post.metadata.title}</h1>
 		<p>Published {formatDate(post.metadata.createdAt)}</p>
 	</header>
 
-	<div class="flex justify-between px-4 mx-auto max-w-screen-xl">
+	<div class="flex justify-between mx-auto max-w-screen-xl">
 		<article id="entry" class="mx-auto w-full max-w-2xl format text-gray-800 dark:text-gray-300 format-sm sm:format-base lg:format-lg format-primary dark:format-invert lg:w-[700px]">
 			<!-- Post -->
 			<div class="post-content">
