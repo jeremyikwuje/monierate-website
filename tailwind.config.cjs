@@ -7,7 +7,7 @@ module.exports = {
     extend: {
       fontFamily: {
         bitter: ["Roboto", "serif"],
-        worksans: ["Work Sans", "sans-serif"],
+        worksans: ["Roboto", "sans-serif"],
       },
       typography: {
         DEFAULT: {
