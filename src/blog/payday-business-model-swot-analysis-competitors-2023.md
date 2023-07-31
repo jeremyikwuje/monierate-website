@@ -8,7 +8,7 @@ description: Payday, a financial technology company founded by Favour Ori, is
 createdAt: 2023-07-31T12:49:43.415Z
 updatedAt: 2023-07-31T12:49:43.544Z
 tag: currency
-image: /uploads/screenshot-www.usepayday.com-2023.07.17-09_02_58.png
+image: https://monierate.com/uploads/screenshot-www.usepayday.com-2023.07.17-09_02_58.png
 published: true
 ---
 ![Payday officla website](https://monierate.com/uploads/screenshot-www.usepayday.com-2023.07.17-09_02_58.png)
