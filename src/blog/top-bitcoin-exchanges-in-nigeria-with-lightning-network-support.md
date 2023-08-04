@@ -95,7 +95,7 @@ To send/pay with Bitcoin via Lightning on Bitnob:
 
 ![Paxful website](https://monierate.com/uploads/screenshot-paxful.com-2023.08.03-23_38_46.png)
 
-Paxful is a top P2P online marketplace for Bitcoin trading, once popular among Nigerians. It supports Lightning Network for BTC transactions. Accessible via web and mobile app (Apple/Android). To begin buying Bitcoin, create and verify your [Paxful](https://paxful.com/) account.
+Paxful is a top P2P online marketplace for Bitcoin trading, once a leading bitcoin exchange in Nigeria. It supports Lightning Network for BTC transactions. Accessible via web and mobile app (Apple/Android). To begin buying Bitcoin, create and verify your [Paxful](https://paxful.com/) account.
 
 ### How to Buy Bitcoin in Nigeria on Paxful
 To buy Bitcoin on Paxful and use Lightning Network:
@@ -132,7 +132,7 @@ Ensure sufficient Bitcoin and correct recipient address for successful payment.
 
 ![CashWyre Homepage](http://monierate.com/uploads/screenshot-cashwyre.io-2023.08.03-23_41_59.jpg)
 
-CashWyre is a Bitcoin-centric app enabling buying, selling, sending, and receiving Bitcoin. Similar to Bitnob, it supports Lightning Network for payments. With [CashWyre](https://cashwyre.io/), you can purchase Bitcoin for as low as $5 (~N5,000) and make online payments with BTC. Download the app on Apple/Android, then create and verify your account using IDs (e.g., Passport) to get started.
+CashWyre is a Bitcoin-centric app enabling buying, selling, sending, and receiving Bitcoin. Similar to Bitnob, it supports Lightning Network for payments. With [CashWyre](https://cashwyre.io/), you can purchase Bitcoin for as low as $1 and make online payments with BTC. Download the app on Apple/Android, then create and verify your account using IDs (e.g., Passport) to get started.
 
 ### How to buy Bitcoin in Nigeria on CashWyre
 
