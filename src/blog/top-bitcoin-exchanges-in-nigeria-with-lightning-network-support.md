@@ -7,7 +7,7 @@ description: Discover faster and cheaper Bitcoin transactions through the
 createdAt: 2023-08-03T23:45:01.837Z
 updatedAt: 2023-08-03T23:45:01.968Z
 tag: finance
-image: https://monierate.com/uploads/general-bytes-q6j4tjji-qi-unsplash.png
+image: /uploads/general-bytes-e9vmx2zihvq-unsplash-1-.jpg
 published: true
 ---
 If you're in Nigeria, buying Bitcoin is no longer an issue with 100+ platforms available. But, most platforms lack Lightning Network support, making transactions slow and costly on-chain. Discover faster and cheaper Bitcoin transactions through the Lightning Network in this article, featuring Nigeria's Lightning-friendly exchanges/apps.
