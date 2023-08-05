@@ -1,14 +1,12 @@
 import type { PageServerLoad } from './$types'
 import { error } from '@sveltejs/kit'
+import * as CurrenciesMajor from '$data/currencies-major.json'
+import * as CurrenciesAfrica from '$data/currencies-africa.json'
 
 export const load: PageServerLoad = async ({ }) => {
     try {
-        const dataPath = `../../../../../data`
-        let major_currencies = await import(`${dataPath}/currencies-major.json`)
-        let african_currencies = await import(`${dataPath}/currencies-africa.json`)
-
-        major_currencies = JSON.parse(JSON.stringify(major_currencies.default))
-        african_currencies = JSON.parse(JSON.stringify(african_currencies.default))
+        let major_currencies = JSON.parse(JSON.stringify(CurrenciesMajor))
+        let african_currencies = JSON.parse(JSON.stringify(CurrenciesAfrica))
 
         return {
             major_currencies,
