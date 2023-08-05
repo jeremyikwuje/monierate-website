@@ -31,7 +31,7 @@
     <meta property="og:image" content="https://monierate.com/monierate-og-image.png">
 </svelte:head>
 
-<div class="pb-4">
+<div class="pt-8 pb-4">
     <div class="container">
         <h1 class="text-2xl md:text-4xl mb-2 dark:text-gray-100">Today's dollar to naira rates on exchanges</h1>
         <div class="mb-12 text-gray-600 font-normal dark:text-gray-300">
@@ -53,7 +53,7 @@
 
 <main>
     <div class="container">
-        <div class="changers-box bg-white py-[10px] shadow-t-md mb-16 dark:bg-gray-900 dark:text-light min-h-[100vh] w-full overflow-x-scroll md:overflow-x-hidden">
+        <div class="border border-gray-100 bg-white py-[10px] shadow-md mb-16 dark:bg-gray-900 dark:text-light dark:border-none min-h-[100vh] w-full overflow-x-scroll md:overflow-x-hidden">
             <table class="table-auto overflow-x-scroll w-full text-sm text-left">
                 <thead>
                     <tr>

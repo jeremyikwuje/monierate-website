@@ -40,6 +40,7 @@
 		"currency.js": "^2.0.4",
 		"date-and-time": "^3.0.2",
 		"mathjs": "^11.8.0",
+		"superjson": "^1.13.1",
 		"svelte-clipboard": "^1.0.0",
 		"svelte-gestures": "^1.4.1"
 	}

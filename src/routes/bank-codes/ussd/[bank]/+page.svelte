@@ -11,7 +11,7 @@
 	<meta property="og:type" content="website" />
 	<meta property="og:title" content="List of {bank.name} USSD Codes" />
 	<meta property="og:description" content="List of all {bank.name} USSD Codes codes for your mobile banking." />
-	<meta property="og:url" content="https://moniecode.com/bank-ussd" />
+	<meta property="og:url" content="https://monierate.com/bank-codes/ussd" />
 </svelte:head>
 
 <div class="mt-8 mb-8">

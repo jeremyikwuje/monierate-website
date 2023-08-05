@@ -15,7 +15,10 @@ const mdsvexOptions = {
 const config = {
 	extensions: ['.svelte', '.md'],
 	kit: {
-		adapter: adapter()
+		adapter: adapter(),
+		alias: {
+			$data: "./src/data",
+		},
 	},
 	preprocess: [
 		preprocess({

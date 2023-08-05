@@ -1,12 +1,16 @@
 import { error } from '@sveltejs/kit'
+import type { PageLoad } from './$types'
+import superjson from 'superjson'
 
-export async function load({ params }) {
+
+export const load: PageLoad = async ({ params }) => {
 	try {
 		const post = await import(`../../../blog/${params.slug}.md`)
-
+		
 		return {
 			slug: params.slug,
-			post: post
+			metadata: post.metadata,
+			content: post.default
 		}
 	} catch (e) {
 		throw error(404, `Could not find ${params.slug}`)

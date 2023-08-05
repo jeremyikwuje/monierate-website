@@ -16,7 +16,7 @@
 	<meta property="og:url" content={config.url} />
 </svelte:head>
 
-<div class="mt-8 mb-8">
+<div class="mb-8">
 	<div class="w-[95%] md:w-[70%] px-8 py-4 mx-auto mb-4 md:mb-6 text-center">
 		<h1 class="text-2xl md:text-4xl">
 			Make the right money move

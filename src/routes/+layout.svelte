@@ -4,7 +4,10 @@ import { page } from "$app/stores";
 import { onMount } from "svelte";
 
 $: paths = $page.url.pathname.split('/')
-$: path = paths[1] ?? 'home'
+$: paths.shift()
+$: path = paths[0] ?? 'home'
+$: currentPath = paths[paths.length - 1]
+$: paths.pop()
 
 let year = (new Date()).getFullYear()
 
@@ -21,14 +24,25 @@ onMount(() => {
     collapse()
 })
 
+function breadcrumbs(paths, current) {
+    let url = ""
+    for (let i = 0; i < paths.length; i++) {
+        console.log(paths[i], i)
+        if (i > current) continue
+        url += `/${paths[i]}`
+    }
+
+    return url
+}
+
 </script>
 
 <svelte:head>
     
 </svelte:head>
 
-<header class="mb-24">
-    <nav class="bg-white fixed w-full z-20 top-0 left-0 border-b border-gray-200 dark:bg-gray-900 dark:border-gray-600">
+<header class="mb-20">
+    <nav class="fixed bg-white w-full z-20 top-0 left-0 border-b border-gray-200 dark:bg-gray-900 dark:border-none">
         <div class="w-[95%] md:max-w-[1200px] flex flex-wrap items-center justify-between mx-auto p-4">
             <a href="/" class="flex items-center">
                 <img src="/monierate.png" width="142px" height="24px" class="block dark:hidden h-[24px] w-[142px] md:h-[24px] h-8 mr-3" alt="Monierate Logo" loading="lazy">
@@ -46,19 +60,46 @@ onMount(() => {
             <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
                 <ul class="nav-link">
                     <li>
-                    <a href="/" class="{path == '' ? 'active': ''}" aria-current="page">$1 Today</a>
+                        <a href="/" class="{path == '' ? 'active': ''}" aria-current="page">$1 Today</a>
                     </li>
                     <li>
-                    <a data-sveltekit-reload href="/blog" class="{path == 'blog' ? 'active': ''}">Blog</a>
+                        <a href="/ng/compare" class="{path == 'ng' ? 'active': ''}">Compare</a>
                     </li>
                     <li>
-                    <a href="/bank-codes" class="{path == 'bank-codes' ? 'active': ''}">Bank Codes</a>
+                        <a href="/bank-codes" class="{path == 'bank-codes' ? 'active': ''}">Bank Codes</a>
+                    </li>
+                    <li>
+                        <a data-sveltekit-reload href="/blog" class="{path == 'blog' ? 'active': ''}">Blog</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
 </header>
+
+{#if path != ''}
+<div class="bg-white dark:bg-gray-900 dark:border-gray-600 shadow-b-md mb-16">
+    <div class="container">
+        <span class="text-sm">
+            <a href="/" class="mr-2 underline">Home</a>
+            {#each paths as path, index}
+                <span class="inline-block mr-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="inline-block w-3 h-3">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                    </svg>                  
+                </span>  
+                <a href="{breadcrumbs(paths, index)}" class="mr-2 text-gray-700">{path}</a>
+            {/each}
+            <span class="inline-block mr-2">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="inline-block w-3 h-3">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                </svg>                  
+            </span>  
+            <span class="text-gray-700">{currentPath}</span>
+        </span>
+    </div>
+</div>
+{/if}
     
 <slot />
     
@@ -86,7 +127,7 @@ onMount(() => {
         <div class="w-full md:w-[30%]">
             <h3 class="font-bold">Tools</h3>
             <ul class="py-4 converter-list">
-                <li><a href="/">Exchange rates</a></li>
+                <li><a href="/bank-codes">Compare exchange rates</a></li>
                 <li><a href="/bank-codes">Bank Codes</a></li>
             </ul>
         </div>
