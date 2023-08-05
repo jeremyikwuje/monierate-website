@@ -8,6 +8,9 @@ export const load: PageServerLoad = async ({ }) => {
         let major_currencies = JSON.parse(JSON.stringify(CurrenciesMajor))
         let african_currencies = JSON.parse(JSON.stringify(CurrenciesAfrica))
 
+        delete major_currencies.default
+        delete african_currencies.default
+
         return {
             major_currencies,
             african_currencies,
