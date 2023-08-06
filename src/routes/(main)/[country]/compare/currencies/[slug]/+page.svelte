@@ -98,7 +98,7 @@
                         <svg class="mx-auto" width="85px" height="85px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M5.0315 6.93751C4.75731 4.72857 6.30192 2.69766 8.54207 2.32168L8.93963 2.25496C10.9651 1.91501 13.0349 1.91501 15.0604 2.25496L15.4579 2.32168C17.6981 2.69766 19.2427 4.72857 18.9685 6.93751L18.9505 7.08273C18.8855 7.6063 18.4315 8 17.8928 8H6.10719C5.56847 8 5.11452 7.6063 5.04953 7.08273L5.0315 6.93751Z" stroke="#888888" stroke-width="1.5"></path> <path d="M9 8L6 22" stroke="#888888" stroke-width="1.5" stroke-linecap="round"></path> <path d="M15 8L15.75 11.5M18 22L16.5 15" stroke="#888888" stroke-width="1.5" stroke-linecap="round"></path> <path d="M16.5 17H7.5" stroke="#888888" stroke-width="1.5" stroke-linecap="round"></path> </g></svg>
                     </span>
                     <span class="text-xl fold-bold block">
-                        We should have shown you more rates from popular market providers – we haven’t gotten to them all yet.
+                        We should have shown you rates from other market providers – we haven’t gotten to them all yet.
                     </span>
                     <p></p>
                 </div>
