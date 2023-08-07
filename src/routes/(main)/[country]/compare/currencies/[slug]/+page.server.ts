@@ -7,7 +7,7 @@ export const load: PageServerLoad = async ({ fetch, params }) => {
     try {
         // get currencies and country data
         const countries = JSON.parse(JSON.stringify(Countries))
-        const currencies = JSON.parse(JSON.stringify(Currencies))
+        let currencies = JSON.parse(JSON.stringify(Currencies))
         
         // get url params
         const slug = params.slug
@@ -15,7 +15,15 @@ export const load: PageServerLoad = async ({ fetch, params }) => {
 
         // get currency from slug
         const splitSlug = slug.split('-')
+        const currency_type = splitSlug[splitSlug.length - 1]
         const currency_code = splitSlug[1].toUpperCase()
+
+        if (currency_type == 'crypto') {
+            currencies = currencies.coins
+        }
+        else {
+            currencies = currencies.fiat
+        }
 
         // prepared country and currency data
         const country = {
@@ -24,7 +32,7 @@ export const load: PageServerLoad = async ({ fetch, params }) => {
         }
         const currency = {
             code: currency_code,
-            name: currencies[currency_code]
+            name: currencies[currency_code] || ""
         }
 
         if (country.name.length == 0) {

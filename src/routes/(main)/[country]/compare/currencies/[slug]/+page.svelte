@@ -38,11 +38,11 @@
         <section class="bg-white py-[10px] mb-16 border rounded-lg shadow-sm dark:bg-gray-900 dark:text-light min-h-[50vh] w-full md:w-[768px] md:mx-auto overflow-x-scroll md:overflow-x-hidden">
             <div class="py-8 text-center">
                 <span class="market-rate block text-xl md:text-2xl font-bold">
-                    1 {currency.code} = {round(rates['market'].buy || "0", 4)} NGN
+                    1 {currency.code} = {Money.format(round(rates['market'].buy || "0", 4))} NGN
                 </span>
                 <span class="block text-sm text-gray-700 dark:text-gray-300">
                     Mid-market exchange rate
-                    <span class="block">12 minutes ago</span>
+                    <span class="block">60 minutes ago</span>
                 </span>
             </div>
 
