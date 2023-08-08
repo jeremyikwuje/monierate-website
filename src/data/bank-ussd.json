@@ -85,7 +85,7 @@
       ]
     },
     "opay": {
-      "start": "*919#",
+      "start": "*955#",
       "transfer": [
         "*955*1*amount*10 digit account number#",
         "*955*2*amount*10 digit account number#"
