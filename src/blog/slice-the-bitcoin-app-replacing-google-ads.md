@@ -64,6 +64,8 @@ Before dismissing this as another tool cluttering websites with ads or as a plat
 
 Slice remains non-intrusive, refraining from hindering your browsing experience. Having used the application on my home PC for several weeks now, I scarcely noticed any ads, except when browsing on Google. Even these Google ads display in such an unobtrusive manner that they often go unnoticed.
 
+![Slice ad on Google.com](https://monierate.com/uploads/screenshot-www.google.com-2023.08.10-07_00_10.png)
+
 Much like billboards arranged across the cityscape of Lagos, Slice delivers ads that don't disrupt your online journey. Plus, you possess the ability to customize how these ads are presented, and you can deactivate them at your convenience.
 
 Beyond the ad delivery method and the ad quality, Slice rewards you in Bitcoin. Your browsing remains unchanged, yet your Bitcoin earnings see a remarkable increase.
@@ -78,7 +80,7 @@ To date, in just three weeks, my home PC has accrued 116 Satoshis. This is intri
 
 Bitcoin represents the future's global currency, a pioneering monetary protocol.
 
-In 2010, 10,000 bitcoins would barely secure you a pizza; however, today, a mere 5 bitcoins would suffice for the latest Macbook 15, iPhone 13, and even a brand-new Tesla Model S.
+In 2010, 10,000 bitcoins would barely secure you a pizza; however, today, a mere 5 bitcoins would suffice for the latest MacBook Pro 16, iPhone 14, and the 2024 BMW 7 Series (~$100,000).
 
 ![2024 BMW 7 Series](https://static.tcimg.net/vehicles/oem/25d60abf704dbe95/2023-BMW-7_Series.jpg?auto=format&fit=crop&h=514.9464668094218&w=720)
 
