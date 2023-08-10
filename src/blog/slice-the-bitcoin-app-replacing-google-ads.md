@@ -24,9 +24,9 @@ Google and its counterparts need to generate income.
 
 In 2022, Google reported an astonishing ad revenue of 224.47 billion U.S. dollars. This massive sum was yielded through their Google Ads platform. Facebook, not far behind, raked in 135 billion U.S. dollars in ad revenue during the same year. On the flip side, Twitter managed to amass 4.14 billion U.S. dollars in ad revenue in 2022.
 
-Mamoth figures!
+Mammoth figures!
 
-In Nigeria, a study uncovered that digital advertising was valued at 81.2 billion Nigerian nairas, with a projection indicating an increase to 133 million U.S. dollars.
+In Nigeria, a study [uncovered](https://www.statista.com/outlook/dmo/digital-advertising/nigeria) that digital advertising was valued at 81.2 billion Nigerian nairas, with a projection indicating an increase to 255 million U.S. dollars in 2023.
 
 However, there's a catch.
 
