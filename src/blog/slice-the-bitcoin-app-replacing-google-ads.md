@@ -63,7 +63,7 @@ Before dismissing this as another tool cluttering websites with ads or as a plat
 
 Slice remains non-intrusive, refraining from hindering your browsing experience. Having used the application on my home PC for several weeks now, I scarcely noticed any ads, except when browsing on Google. Even these Google ads display in such an unobtrusive manner that they often go unnoticed.
 
-Much like billboards scattered across the cityscape of Lagos, Slice delivers ads that don't disrupt your online journey. Plus, you possess the ability to customize how these ads are presented, and you can deactivate them at your convenience.
+Much like billboards arranged across the cityscape of Lagos, Slice delivers ads that don't disrupt your online journey. Plus, you possess the ability to customize how these ads are presented, and you can deactivate them at your convenience.
 
 Beyond the ad delivery method and the ad quality, Slice rewards you in Bitcoin. Your browsing remains unchanged, yet your Bitcoin earnings see a remarkable increase.
 
