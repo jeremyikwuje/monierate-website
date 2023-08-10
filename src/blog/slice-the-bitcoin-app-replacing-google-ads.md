@@ -125,7 +125,7 @@ Slice incorporates a Payout feature, streamlining the withdrawal process. Earnin
 
 Payouts become accessible after a 30-day period. According to Slice, this delay serves to deter fraudulent activities.
 
-For those residing in Africa, [several platforms](https://monierate.com/blog/top-bitcoin-exchanges-in-nigeria-with-lightning-network-support) are available to facilitate receipt of Bitcoin earnings, allowing for conversion into naira.
+For those residing in Africa, [several platforms](https://monierate.com/blog/top-bitcoin-exchanges-in-nigeria-with-lightning-network-support) are available to facilitate receipt of Bitcoin earnings, allowing for conversion into naira and other local currencies.
 
 ### Key Features of Slice
 
