@@ -62,7 +62,7 @@ How does it work? The concept is simple. While you browse, you're presented with
 
 Before dismissing this as another tool cluttering websites with ads or as a platform where you earn some trivial cryptocurrency named after a bird or dog, read on.
 
-Slice remains non-intrusive, refraining from hindering your browsing experience. Having used the application on my home PC for several weeks now, I scarcely noticed any ads, except when browsing on Google. Even these Google ads display in such an unobtrusive manner that they often go unnoticed.
+Slice remains non-intrusive, refraining from hindering your browsing experience. Having used the application on my home PC for a few weeks now, I scarcely noticed any ads, except when browsing on Google. Even these Google ads display in such an unobtrusive manner that they often go unnoticed.
 
 ![Slice ad on Google.com](https://monierate.com/uploads/screenshot-www.google.com-2023.08.10-07_00_10.png)
 
