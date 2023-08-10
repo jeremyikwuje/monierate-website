@@ -2,6 +2,7 @@
     /** @type {import('./$types').PageServerData} */
     import Money from "$lib/money";
     import { round, chain } from "mathjs"
+    import { format } from "$lib/functions";
 
     export let data;
 
@@ -9,7 +10,14 @@
     const country = data.country
     const rates = data.rates
     const providers = data.providers
-    
+
+    function sortRates(rates) {
+        const sortedObject = Object.entries(rates).sort((x, y) => x[1].buy - y[1].buy)
+        console.log(sortedObject)
+        return sortedObject
+    }
+
+    const sortedRates = sortRates(rates)
 </script>
 
 <svelte:head>
@@ -46,7 +54,7 @@
                 </span>
             </div>
 
-            {#if rates.length > 0}
+            {#if sortedRates.length > 0}
                 <table class="table-auto overflow-x-scroll w-full text-sm text-left ">
                     <thead>
                         <tr>
@@ -65,7 +73,7 @@
                         </tr>
                     </thead>
                     <tbody class="providers">
-                        {#each Object.entries(rates) as [provider, rate]}
+                        {#each sortedRates as [provider, rate]}
                             {#if provider != 'market'}
                             <tr class="mb-4 border-t border-gray-200 dark:border-gray-700">
                                 <td>
@@ -77,15 +85,17 @@
                                     </a>
                                 </td>
                                 <td class="text-right pl-6 pr-6">
-                                    <span class="provider-rate">₦{Money.toDollar(rate.buy)}</span>
+                                    <span class="provider-rate">₦{rate.buy}</span>
                                     <small class="provider-rate-base">per {currency.code}</small>
                                 </td>
                                 <td class="text-right pl-6 pr-6">
-                                    <span class="provider-rate">₦{Money.toDollar(rate.sell)}</span>
+                                    <span class="provider-rate">₦{rate.sell}</span>
                                     <small class="provider-rate-base">per {currency.code}</small>
                                 </td>
                                 <td class="text-right py-2 pr-2 md:pr-4 whitespace-nowrap">
-                                    
+                                    {#if (rate.updatedAt) }
+                                        {format(new Date(rate.updatedAt))}
+                                    {/if}
                                 </td>
                             </tr>
                             {/if}

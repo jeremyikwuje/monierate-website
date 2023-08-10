@@ -1,3 +1,5 @@
+import date from 'date-and-time'
+
 export function toggleMessage(message, type = "error")
 {
     let alert = document.querySelector("#alert");
@@ -37,4 +39,15 @@ export function toggleButtonLoad(selector, timeout = 3000)
             button.disabled = false;
         }, timeout)
     }
+}
+
+export const format = (dt, d = "datetime") => {
+    
+    if (dt == "") return ""
+
+    if (d == 'date') {
+        return date.format(dt, 'ddd, MMM DD YYYY')
+    }
+
+    return date.format(dt, 'ddd, MMM DD YYYY h:mm:ss A')
 }

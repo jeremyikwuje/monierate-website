@@ -5,15 +5,15 @@ import { json, redirect } from "@sveltejs/kit";
 export async function GET({ url })
 {
     let urlParams = url.searchParams
-    const pair = urlParams.get('pair') || null
+    const currenypair = urlParams.get('pair') || null
     
-    let endpoint = getEndpoint(`/public/pairs/${pair}`);
+    let endpoint = getEndpoint(`/public/pairs/${currenypair}`);
 
     let res = await fetch(
         endpoint,
         basicAuth('GET', {})
     );
-    const changer = (await res.json()).data || {}
+    const pairRates = (await res.json()).data || {}
 
-    return json(changer);
+    return json(pairRates);
 }

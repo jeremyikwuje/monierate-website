@@ -42,9 +42,9 @@ export const load: PageServerLoad = async ({ fetch, params }) => {
             throw error(500, `Currency name couldn't be obtained`)
         }
 
-        let pair = `${currency.code.toLowerCase()}ngn`
-        const getRates = await fetch(`/api/pairs?pair=${pair}`);
-        const rates = await getRates.json()
+        let currencypair = `${currency.code.toLowerCase()}ngn`
+        const getPair = await fetch(`/api/pairs?pair=${currencypair}`);
+        const rates = await getPair.json()
 
         const getChangers = await fetch(`/api/changer`);
         let providers = await getChangers.json()
