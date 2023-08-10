@@ -69,7 +69,7 @@ Beyond the ad delivery method and the ad quality, Slice rewards you in Bitcoin. 
 
 ![Add Slice Bitcoin earning dashboard](http://monierate.com/uploads/screenshot-addslice.com-2023.08.09-13_33_33.png)
 
-To date, my home PC has accrued 116 Satoshis. This is intriguing because I typically utilize my home PC for roughly 10 hours weekly. In recent weeks, my usage has been even lower:
+To date, in just three weeks, my home PC has accrued 116 Satoshis. This is intriguing because I typically utilize my home PC for roughly 10 hours weekly. In recent days, my usage has been even lower:
 
 ![Add Slice usage graph](https://monierate.com/uploads/screenshot-addslice.com-2023.08.10-05_46_51.png)
 
