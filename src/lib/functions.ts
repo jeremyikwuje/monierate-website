@@ -42,8 +42,9 @@ export function toggleButtonLoad(selector, timeout = 3000)
 }
 
 export const format = (dt, d = "datetime") => {
-    
-    if (dt == "") return ""
+    if (typeof(dt) === "string") {
+        dt = new Date(dt)
+    }
 
     if (d == 'date') {
         return date.format(dt, 'ddd, MMM DD YYYY')
@@ -51,3 +52,20 @@ export const format = (dt, d = "datetime") => {
 
     return date.format(dt, 'ddd, MMM DD YYYY h:mm:ss A')
 }
+
+// ✅ Or get a Date object with the specified Time zone
+function changeTimeZone(date: any, timeZone: string = "Africa/Lagos") {
+    if (typeof date === 'string') {
+      return new Date(
+        new Date(date).toLocaleString('en-US', {
+          timeZone,
+        }),
+      );
+    }
+  
+    return new Date(
+      date.toLocaleString('en-US', {
+        timeZone,
+      }),
+    );
+  }

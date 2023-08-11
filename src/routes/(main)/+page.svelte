@@ -1,7 +1,8 @@
 <script>
     /** @type {import('./$types').PageData} */
 	import Money from "$lib/money";
-    import date from 'date-and-time'
+    import { format } from "$lib/functions";
+
 
     export let data;
     let rates = data.rates || {}
@@ -9,16 +10,6 @@
     let first = rates[0]
     let last = rates[rates.length - 1]
     let total = rates.length
-
-
-    const format = (dt, d = "datetime") => {
-    
-        if (d == 'date') {
-            return date.format(dt, 'YYYY-MM-DD')
-        }
-
-        return date.format(dt, 'YYYY-MM-DD HH:mm:ss')
-    }
 </script>
 
 <svelte:head>

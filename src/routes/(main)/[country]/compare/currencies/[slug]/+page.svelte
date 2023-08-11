@@ -46,15 +46,15 @@
         <section class="bg-white py-[10px] mb-16 border rounded-lg shadow-sm dark:bg-gray-900 dark:text-light min-h-[50vh] w-full md:w-[768px] md:mx-auto overflow-x-scroll md:overflow-x-hidden">
             <div class="py-8 text-center">
                 <span class="market-rate block text-xl md:text-2xl font-bold">
-                    1 {currency.code} = {round(rates['market'].buy || "0", 4)} NGN
+                    1 {currency.code} = {Money.format(rates['market'].buy || "0")} NGN
                 </span>
                 <span class="block text-sm text-gray-700 dark:text-gray-300">
                     Mid-market exchange rate
-                    <span class="block">60 minutes ago</span>
+                    <span class="block">{format(rates['market'].updatedAt)}</span>
                 </span>
             </div>
 
-            {#if sortedRates.length > 0}
+            {#if Object.entries(rates).length > 1}
                 <table class="table-auto overflow-x-scroll w-full text-sm text-left ">
                     <thead>
                         <tr>
@@ -85,11 +85,11 @@
                                     </a>
                                 </td>
                                 <td class="text-right pl-6 pr-6">
-                                    <span class="provider-rate">₦{rate.buy}</span>
+                                    <span class="provider-rate">₦{Money.format(rate.buy)}</span>
                                     <small class="provider-rate-base">per {currency.code}</small>
                                 </td>
                                 <td class="text-right pl-6 pr-6">
-                                    <span class="provider-rate">₦{rate.sell}</span>
+                                    <span class="provider-rate">₦{Money.format(rate.sell)}</span>
                                     <small class="provider-rate-base">per {currency.code}</small>
                                 </td>
                                 <td class="text-right py-2 pr-2 md:pr-4 whitespace-nowrap">
