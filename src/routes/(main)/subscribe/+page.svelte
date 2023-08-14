@@ -1,5 +1,5 @@
 <script>
-    import {toggleButtonLoad, toggleMessage} from '$lib/functions.js'
+    import {toggleButtonLoad, toggleMessage} from '$lib/functions'
 
     let email = ""
 
