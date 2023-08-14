@@ -41,7 +41,7 @@
         </section>
 
         <section class="bg-white py-[10px] mb-16 border rounded-lg shadow-sm dark:bg-gray-900 dark:text-light min-h-[50vh] w-full md:w-[768px] md:mx-auto overflow-x-scroll md:overflow-x-hidden">
-            {#if pairs.length > 0}
+            {#if pairs.length > 1}
                 <table class="table-auto overflow-x-scroll w-full text-sm text-left ">
                     <thead>
                         <tr>
