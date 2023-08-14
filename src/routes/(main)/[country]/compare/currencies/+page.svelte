@@ -52,7 +52,7 @@
                 {#each Object.entries(crypto_currencies) as [currency, code]}
                     <a href="/ng/compare/currencies/best-{currency.toLowerCase()}-exchange-rates-crypto" class="inline-block w-[100%] md:w-[22%] shadow-md rounded-lg border border-gray-100 dark:border-gray-700 text-black dark:text-white mr-8 last-child:mr-0 p-4 mb-4">
                         <span class="flex items-center">
-                            <span class="inline-block w-[32px] h-[32px] rounded-full bg-no-repeat bg-cover border border-black bg-black-200 mr-4" style="background-image: url('https://raw.githubusercontent.com/monierate/currencies/main/assets/coins/{currency.toLowerCase()}.png');"></span>
+                            <span class="inline-block w-[32px] h-[32px] rounded-full bg-no-repeat bg-cover border border-black bg-black-200 mr-4" style="background-image: url('https://raw.githubusercontent.com/monierate/currencies/main/assets/available_icons/{currency.toLowerCase()}.png');"></span>
                             <span class="">{ code }</span> 
                         </span>
                     </a>
@@ -66,7 +66,7 @@
                 {#each Object.entries(african_currencies) as [currency, code]}
                     <a href="/ng/compare/currencies/best-{currency.toLowerCase()}-exchange-rates" class="block md:inline-block w-[100%] md:w-[22%] shadow-md rounded-lg border border-gray-100 dark:border-gray-700 text-black dark:text-white mr-8 last-child:mr-0 p-4 mb-4">
                         <span class="flex items-center">
-                            <span class="inline-block w-[32px] h-[32px] rounded-full bg-no-repeat bg-cover border border-black bg-black-200 mr-4" style="background-image: url('https://raw.githubusercontent.com/monierate/currencies/main/assets/flags_png_rectangle/{currency.toLowerCase()}.png');"></span>
+                            <span class="inline-block w-[32px] h-[32px] rounded-full bg-no-repeat bg-cover border border-black bg-black-200 mr-4" style="background-image: url('https://raw.githubusercontent.com/monierate/currencies/main/assets/available_icons/{currency.toLowerCase()}.png');"></span>
                             <span>{ code }</span> 
                         </span>
                     </a>

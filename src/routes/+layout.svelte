@@ -41,7 +41,7 @@ function breadcrumbs(paths, current) {
     
 </svelte:head>
 
-<header class="mb-20">
+<header class="mb-16">
     <nav class="fixed bg-white w-full z-20 top-0 left-0 border-b border-gray-200 dark:bg-gray-900 dark:border-none">
         <div class="w-[95%] md:max-w-[1200px] flex flex-wrap items-center justify-between mx-auto p-4">
             <a href="/" class="flex items-center">
@@ -78,7 +78,7 @@ function breadcrumbs(paths, current) {
 </header>
 
 {#if path != ''}
-<div class="bg-white dark:bg-gray-900 dark:border-gray-600 shadow-b-md mb-16">
+<div class="bg-white dark:bg-gray-800 dark:border-gray-600 shadow-b-md mb-16">
     <div class="container">
         <span class="text-sm">
             <a href="/" class="mr-2 underline">Home</a>
@@ -88,14 +88,14 @@ function breadcrumbs(paths, current) {
                         <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
                     </svg>                  
                 </span>  
-                <a href="{breadcrumbs(paths, index)}" class="mr-2 text-gray-700">{path}</a>
+                <a href="{breadcrumbs(paths, index)}" class="mr-2 text-gray-700 dark:text-gray-300">{path}</a>
             {/each}
             <span class="inline-block mr-2">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="inline-block w-3 h-3">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
                 </svg>                  
             </span>  
-            <span class="text-gray-700">{currentPath}</span>
+            <span class="text-gray-700 dark:text-gray-300">{currentPath}</span>
         </span>
     </div>
 </div>
