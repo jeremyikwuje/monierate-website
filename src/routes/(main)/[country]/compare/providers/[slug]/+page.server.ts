@@ -19,6 +19,7 @@ export const load: PageServerLoad = async ({ fetch, params }) => {
         }
     }
     catch(e: any) {
-        throw error(404, `${e}`)
+        console.log(e)
+        throw error(500, `Unable to fetch provider data`)
     }
 }

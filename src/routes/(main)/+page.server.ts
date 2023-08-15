@@ -1,19 +1,41 @@
 import { basicAuth, getEndpoint } from "$lib/helper.svelte";
+import { error } from "@sveltejs/kit";
 import type { PageServerLoad } from './$types'
 
-export const load: PageServerLoad = async ({locals}) => {
+export const load: PageServerLoad = async ({ fetch }) => {
 
-    let endpoint = getEndpoint("/public/rates");
-    let res = await fetch(
-        endpoint,
-        basicAuth('GET', {})
-    );
+    try {
+        let endpoint = getEndpoint("/public/rates");
+        let res = await fetch(
+            endpoint,
+            basicAuth('GET', {})
+        );
 
-    const rates = (await res.json()).data || {}
+        console.log(res.status)
+        if (res.status != 200) {
+            throw error(500, {
+                message: "Unable to fetch data, try again in few minutes."
+            })
+        }
 
-    console.log(rates)
+        const rates = (await res.json()).data || []
 
-    return {
-        rates
+        if (rates.length == 0) {
+            throw error(500, {
+                message: "Unable to fetch data, try again in few minutes."
+            })
+        }
+
+        console.log(rates)
+
+        return {
+            rates
+        }
     }
+    catch(error: any) {
+        throw error(500, {
+            message: "Unable to display data, try again in few minutes."
+        })
+    }
+    
 }
