@@ -54,7 +54,7 @@ Utilize your USD balance for various transactions, including funding your virtua
 3. Enter the amount in dollars for conversion to Naira
 4. **Confirm** the transaction
 
-**Conclusion:**
+## Conclusion
 Chipper Cash provides modern finance solutions and convenient money transfers. This guide has equipped you with the know-how to convert both NGN to USD and USD to NGN using the Chipper Cash app.
 
 *Monierate.com is a website to compare naira exchange rates by currencies and providers. You can track the exchange rates of Chipper Cash [here](https://monierate.com/ng/compare/providers/chippercash-exchange-rates).*
