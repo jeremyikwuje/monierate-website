@@ -43,7 +43,7 @@
             </div>
         </section>
 
-        <section class="bg-white py-[10px] mb-16 border rounded-lg shadow-sm dark:bg-gray-900 dark:text-light min-h-[50vh] w-full md:w-[768px] md:mx-auto overflow-x-scroll md:overflow-x-hidden">
+        <section class="bg-white py-[10px] mb-16 border rounded-lg shadow-sm dark:bg-gray-900 dark:text-light w-full md:w-[768px] md:mx-auto overflow-x-scroll md:overflow-x-hidden">
             <div class="py-8 text-center">
                 <span class="market-rate block text-xl md:text-2xl font-bold">
                     1 {currency.code} = {Money.format(rates['market'].buy || "0")} NGN
