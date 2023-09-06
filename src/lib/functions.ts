@@ -42,6 +42,9 @@ export function toggleButtonLoad(selector, timeout = 3000)
 }
 
 export const format = (dt, d = "datetime") => {
+
+    dt = changeTimeZone(dt)
+    
     if (typeof(dt) === "string") {
         dt = new Date(dt)
     }
