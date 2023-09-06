@@ -145,7 +145,7 @@
 <div class="mb-24">
     <div class="w-[100%] md:w-[100%] px-8 pb-4 mx-auto mb-4 text-center">
         <h1 class="text-2xl md:text-4xl">
-            <span class="block font-black mb-4 text-xl">{changer.name} Converter:</span> {Money.format(convertAmount)} {convertFrom} is {Money.format(convertResult.conversion)} {currencyTo.name} on {changer.name}
+            <span class="block font-black mb-4 text-xl">{changer.name} Converter:</span> {Money.format(convertAmount)} {convertFrom} is {Money.format(convertResult.conversion)} {convertTo} on {changer.name}
         </h1>
         <span class="inline-block bg-transparent border border-black rounded-full w-[32px] h-[32px] mt-4">
             <img src="/icons/{changer.icon}" width="30px" height="30px" class="rounded-full" alt="{changer.name} icon">
