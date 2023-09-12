@@ -12,7 +12,7 @@ published: true
 ---
 ![Chipper Cash website](https://monierate.com/uploads/screenshot-chippercash.com-2023.08.15-21_22_21.jpg)
 
-You recently heard of Chipper Cash, and you would like to know if the app is legit or not. 
+You have heard of Chipper Cash, and you would like to know if the app is legit or not. 
 
 Well, before I try to answer the question "is Chippercash legit?", here are things you need to know about Chipper Cash.
 
