@@ -31,11 +31,11 @@ I will go into more detail about each of these apps and how they compare to Chip
 ### 1. Grey Finance
 Grey Finance is a good app for sending and receiving money internationally and for holding multiple currencies.
 
-**Grey has better exchange rates than Chipper Cash. For example, if you exchange [NGN to USD](https://monierate.com/converter/grey?Amount=1&From=USD&To=NGN) on Grey, you will pay N934 for every $1. On Chipper Cash, you will only pay N964 for every $1. This means that you will save N30 for every $1 you buy on Grey.**
+**Grey has better exchange rates than Chipper Cash. For example, at the time of writing this post, if you exchange [NGN to USD](https://monierate.com/converter/grey?Amount=1&From=USD&To=NGN) on Grey, you will pay N934 for every $1. On Chipper Cash, you will only pay N964 for every $1. This means that you will save N30 for every $1 you buy on Grey.**
 
 If you exchange NGN to USD for $3,000 on Grey, you will save N90,000. That's a lot of money!
 
-Here are some of the benefits of using Grey:
+**Here are some of the benefits of using Grey:**
 
 -   You can hold up to 7 international currencies, including USD, EUR, GBP, and NGN.
 -   You can get foreign bank accounts in GBP and EUR.
@@ -44,7 +44,7 @@ Here are some of the benefits of using Grey:
 -   You can send and receive USD peer-to-peer.
 -   You can get a virtual dollar card for international payments.
 
-Here are some of the problems with using Grey:
+**Here are some of the problems with using Grey:**
 
 -   You cannot send or receive USD via international bank transfer.
 -   The virtual dollar card costs $4 to create and $1 to fund each time.
@@ -55,7 +55,7 @@ Overall, Grey is a good app for sending and receiving money internationally, but
 ### 2. Eversend
 Eversend is a good app for sending and receiving money across Africa and for holding multiple currencies. It has a virtual dollar card that is cheaper than Chipper Cash's virtual dollar card.
 
-Here are some of the benefits of using Eversend:
+**Here are some of the benefits of using Eversend:**
 
 -   You can hold up to 10 currencies, including USD, EUR, GBP, GHS, and NGN.
 -   You can convert funds from one currency to another.
@@ -66,7 +66,7 @@ Here are some of the benefits of using Eversend:
 -   You can pay bills such as airtime, electricity, etc.
 -   You can earn extra money when you invite friends.
 
-Here are some of the problems with using Eversend:
+**Here are some of the problems with using Eversend:**
 
 -   You are charged a recurring $1 every month on card maintenance.
 
@@ -77,7 +77,7 @@ If you are looking for an app that has a charge less for creating virtual dollar
 ### 3. Payday
 Payday is a money transfer and virtual card app that allows you to send money, get virtual cards, and pay bills in several currencies. It is similar to Chipper Cash, but it has some limitations.
 
-Here are some of the benefits of using Payday:
+**Here are some of the benefits of using Payday:**
 
 -   You can hold up to 6 currencies, including NGN, USD, KES, and GHS.
 -   You can send money to banks and mobile money wallets.
@@ -85,7 +85,7 @@ Here are some of the benefits of using Payday:
 -   You can get a virtual dollar card for international payments.
 -   You can pay bills such as airtime, electricity, and more.
 
-Here are some of the problems with using Payday:
+**Here are some of the problems with using Payday:**
 
 -   The exchange rates are expensive, similar to Chipper Cash.
 -   You are charged when you swap between currencies.
@@ -98,11 +98,11 @@ If you are looking for an app like Chipper Cash with the best exchange rates and
 ### 4. Bitnob
 Bitnob is a digital currency transfer app that you can use to send and receive money, both in Nigeria and internationally. It also has a virtual dollar card that you can use to make online payments.
 
-Bitnob usually has better exchange rates than Chipper Cash. For example, if you exchange [NGN to USD](https://monierate.com/converter/bitnob?Amount=1&From=USD&To=NGN) on Bitnob, you will pay N947 for every $1. On Chipper Cash, you will pay N964 for every $1. This means that you will save N17 for every $1 you buy on Bitnob.
+Bitnob usually has better exchange rates than Chipper Cash. For example, at the time of writing this post, if you exchange [NGN to USD](https://monierate.com/converter/bitnob?Amount=1&From=USD&To=NGN) on Bitnob, you will pay N947 for every $1. On Chipper Cash, you will pay N964 for every $1. This means that you will save N17 for every $1 you buy on Bitnob.
 
 The Bitnob virtual dollar card costs $1 to create and you are charged $1 or 1% when you fund the card.
 
-Here are some of the benefits of using Bitnob:
+**Here are some of the benefits of using Bitnob:**
 
 -   You can hold, send, and receive Bitcoin, USDT, and USDC.
 -   You can send USD and BTC to other Bitnob users.
@@ -110,7 +110,7 @@ Here are some of the benefits of using Bitnob:
 -   You can pay bills such as airtime, electricity, and more.
 -   You get competitive exchange rates.
 
-Here are some of the problems with using Bitnob:
+**Here are some of the problems with using Bitnob:**
 
 -   You are charged when you convert between currencies or fund your virtual card.
 
@@ -121,7 +121,7 @@ If you are looking for an app like Chipper Cash with more competitive exchange r
 ### 5. Wirepay 
 Wirepay is another money transfer app that lets you send money abroad, swap currencies, and pay for things online with a virtual card. It is similar to Chipper Cash, but it has some limitations.
 
-Here are some of the benefits of using Wirepay:
+**Here are some of the benefits of using Wirepay:**
 
 -   You can hold up to 5 currencies, including USD, GHS, KES, NGN, and CFA Franc.
 -   You can swap between currencies.
@@ -130,7 +130,7 @@ Here are some of the benefits of using Wirepay:
 -   You can get a virtual dollar card for international payments.
 -   You get competitive exchange rates.
 
-Here are some of the problems with using Wirepay:
+**Here are some of the problems with using Wirepay:**
 
 -   It does not support international currencies like GBP or EUR.
 -   The exchange rates can be weird at times.
@@ -147,13 +147,13 @@ The Bitmama virtual dollar card is free to create and you can load the card with
 
 As at the time of this writing, $1 on [Bitmama](https://monierate.com/ng/compare/providers/bitmama-exchange-rates) is ₦955 but ₦964 on [Chipper Cash](https://monierate.com/ng/compare/providers/chippercash-exchange-rates) - that's a difference of N9.
 
-Here are some of the benefits of using Bitmama:
+**Here are some of the benefits of using Bitmama:**
 
 -   You can send and receive cryptocurrencies such as BTC, ETH, and more.
 -   You can get a virtual dollar card for international payments.
 -   You get competitive exchange rates.
 
-Here are some of the problems with using Bitmama:
+**Here are some of the problems with using Bitmama:**
 
 -   You can only transact in cryptocurrencies.
 
@@ -168,7 +168,7 @@ Accrue is a money transfer app that you can use to send money across Africa. It 
 
 The exchange rates on [Accrue](https://monierate.com/ng/compare/providers/accrue-exchange-rates) are determined by independent agents, and in most cases, they are better than the exchange rates on Chipper Cash.
 
-Here are some of the benefits of using Accrue:
+**Here are some of the benefits of using Accrue:**
 
 -   You can send and receive money across Africa.
 -   You can send money to other Accrue users.
@@ -176,7 +176,7 @@ Here are some of the benefits of using Accrue:
 -   You can get a virtual dollar card for international payments.
 -   You get competitive exchange rates.
 
-Here are some of the problems with using Accrue:
+**Here are some of the problems with using Accrue:**
 
 -   The virtual dollar card is costly. You pay $3 to create the card, 1% to fund it, and $2 to maintain the card every month.
 -   You can only transact in USD. There is no support for other currencies.
