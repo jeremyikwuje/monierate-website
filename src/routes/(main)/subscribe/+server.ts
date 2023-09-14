@@ -8,7 +8,7 @@ export async function PUT({ request, fetch })
     const payload = {
         email,
     };
-    const endpoint = getEndpoint("/account/signup");
+    const endpoint = getEndpoint("/public/account/signup");
     const res = await fetch(endpoint, basicAuth('PUT', payload, 'system'));
 
     const result = await res.json();
