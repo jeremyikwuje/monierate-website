@@ -1,33 +1,78 @@
 import date from 'date-and-time'
 
-export function toggleMessage(message, type = "error")
+export function bearer(method: string, bearer: string, body: object)
+{
+
+    const request: any = {
+        headers: {
+            "Authorization": `Bearer ${bearer}`,
+            "Content-Type": "application/json",
+        },
+        method: method,
+    }
+
+    if (method != 'GET')
+        request.body = JSON.stringify(body);
+
+    return request;
+}
+
+export function toggleMessage(message: string, type = "error")
 {
     let alert = document.querySelector("#alert");
 
     if (alert != null) {
         alert.classList.add("animate-bounce");
         alert.classList.remove("hidden");
+        alert.classList.remove("text-red-600");
+        alert.classList.remove("text-primary");
+
         alert.textContent = message;
 
         if (type == "error") {
-            alert.classList.add("text-red-800");
+            alert.classList.add("text-red-600");
         } else {
             alert.classList.add("text-primary");
         }
 
         setTimeout(() => {
-            alert.classList.remove("animate-bounce");
+            alert?.classList.remove("animate-bounce");
         }, 2000);
 
         setTimeout(() => {
-            alert.classList.add("hidden");
+            alert?.classList.add("hidden");
         }, 3000)
     }
 }
 
-export function toggleButtonLoad(selector, timeout = 3000)
+export function togglePopup(response: any)
 {
-    let button = document.querySelector(selector);
+    let popup: any = document.querySelector("#popup");
+    let message: any = document.querySelector("#popup-message");
+
+    if (alert === null)
+        return
+
+    popup.classList.remove("hidden");
+    message.classList.remove("text-red-600");
+
+    message.textContent = response.message;
+
+    if (response.status == "error") {
+        message.classList.add("text-red-600");
+    }
+}
+
+export function clearPopup() {
+    let popup: any = document.querySelector("#popup");
+    popup.classList.add("hidden");
+
+    return
+}
+
+export function toggleButtonLoad(selector: string, timeout = 3000)
+{
+    let button: any = document.querySelector(selector);
 
     if (button != null)
     {

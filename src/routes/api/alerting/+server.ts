@@ -1,0 +1,50 @@
+import { bearer } from "$lib/functions.js";
+import { basicAuth, getEndpoint  } from "$lib/helper.svelte";
+import { json } from "@sveltejs/kit";
+
+/** @type {import('./$types').RequestHandler} */
+export async function PUT({ request, fetch })
+{
+    const { email } = await request.json();
+    const payload = {
+        email,
+    };
+    const endpoint = getEndpoint("/alerting");
+    const res = await fetch(endpoint, basicAuth('PUT', payload, 'system'));
+
+    const result = await res.json();
+    console.log(result);
+
+    return json(result);
+}
+
+/** @type {import('./$types').RequestHandler} */
+export async function DELETE({ request, fetch, cookies })
+{
+    const { id } = await request.json();
+    const auth_token: string = cookies.get('auth') || ''
+    const endpoint = getEndpoint(`/auth/alerting?id=${id}`);
+    console.log(auth_token)
+    const res = await fetch(endpoint, bearer('DELETE', auth_token, {}));
+
+    const result = await res.json();
+    console.log(result);
+
+    return json(result);
+}
+
+/** @type {import('./$types').RequestHandler} */
+export async function POST({ request, fetch })
+{
+    const { email } = await request.json();
+    const payload = {
+        email,
+    };
+    const endpoint = getEndpoint("/public/alerting/signin");
+    const res = await fetch(endpoint, basicAuth('POST', payload, 'system'));
+
+    const result = await res.json();
+    console.log(result);
+
+    return json(result);
+}

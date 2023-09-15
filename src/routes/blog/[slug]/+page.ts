@@ -2,7 +2,6 @@ import { error } from '@sveltejs/kit'
 import type { PageLoad } from './$types'
 import superjson from 'superjson'
 
-
 export const load: PageLoad = async ({ params }) => {
 	try {
 		const post = await import(`../../../blog/${params.slug}.md`)
