@@ -1,6 +1,8 @@
 <script>
 	import { goto, invalidateAll } from '$app/navigation';
     import {  clearPopup, toggleButtonLoad, toggleMessage, togglePopup } from '$lib/functions'
+	import { i } from 'mathjs';
+	import { space } from 'postcss/lib/list';
 	import { onMount } from 'svelte';
 
     export let data
@@ -186,7 +188,8 @@
                 <h2 class="text-xl md:text-2xl mb-6">
                     My alerts
                 </h2>
-    
+                
+                {#if data.alerts.length > 0 }
                 <table class="table-auto overflow-x-scroll w-full text-sm text-left">
                     <tbody class="changers">
                         {#each Object.entries(data.alerts) as [index, alert]}
@@ -202,6 +205,9 @@
                         {/each}
                     </tbody>
                 </table>
+                {:else }
+                    <span>You currently have no alerts</span>
+                {/if}
             </div>
         {:else}
             <div class="border border-gray-300 rounded dark:border-gray-800 px-6 py-8 mb-8">
