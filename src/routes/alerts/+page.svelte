@@ -20,7 +20,7 @@
             if (auth.status == "error") {
                 togglePopup(auth)
             }
-            else {
+            else if (auth.status == "success") {
                 authenticated = true
             }
         }
