@@ -14,10 +14,11 @@ export const load: PageServerLoad = async ({ url, cookies }) => {
     let alerts: any
 
     // if the user is currently logged
-    if (cookies.get('auth')?.length != 0) {
-        const token = cookies.get('auth') || ''
+    const savedToken = cookies.get('auth') || ''
+    if (savedToken.length > 0) {
+        console.log(savedToken)
         auth = { status: "success" }
-        alerts = await getAlerts(token)
+        alerts = await getAlerts(savedToken)
     }
     else if (auth_token != '') {
         const result: any = await getAuth(auth_token)

@@ -25,6 +25,8 @@
             else if (auth.status == "success") {
                 authenticated = true
             }
+
+            console.log(auth)
         }
     })
 
@@ -183,7 +185,7 @@
             </div>
         </div>
 
-        {#if authenticated }
+        {#if authenticated == true }
             <div class="border border-gray-300 rounded dark:border-gray-800 px-6 py-8 mb-12">
                 <h2 class="text-xl md:text-2xl mb-6">
                     My alerts
