@@ -49,7 +49,10 @@ function breadcrumbs(paths, current) {
                 <img alt="Monierate Logo" width="142px" height="24px" class="hidden dark:block h-[24px] w-[142px] md:h-[24px]" src="/monierate-logo-white.png" loading="lazy">
             </a>
             <div class="flex md:order-2">
-                <a href="/subscribe" type="button" class="font-bold text-white bg-black hover:text-slate-200 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-lg text-sm px-4 py-2 text-center mr-3 md:mr-0 dark:bg-primary dark:hover:bg-white dark:focus:ring-blue-800">Subscribe</a>
+                <a href="/subscribe" type="button" class="font-bold text-white bg-black hover:text-slate-200 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-lg text-sm px-4 py-2 text-center mr-3 md:mr-0 dark:bg-primary dark:hover:bg-white dark:focus:ring-blue-800">
+                    Subscribe
+                </a>
+
                 <button id="nav-collapse-trigger" data-collapse-toggle="navbar-sticky" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-sticky" aria-expanded="false">
                 <span class="sr-only">Open main menu</span>
                     <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
@@ -66,7 +69,7 @@ function breadcrumbs(paths, current) {
                         <a href="/ng/compare" class="{path == 'ng' ? 'active': ''}">Compare</a>
                     </li>
                     <li>
-                        <a href="/bank-codes" class="{path == 'bank-codes' ? 'active': ''}">Bank Codes</a>
+                        <a href="/ng/compare" class="{path == 'ng' ? 'active': ''}">Price Alerts</a>
                     </li>
                     <li>
                         <a data-sveltekit-reload href="/blog" class="{path == 'blog' ? 'active': ''}">Blog</a>
@@ -111,23 +114,27 @@ function breadcrumbs(paths, current) {
             <h3 class="font-bold">Currency converter</h3>
             <ul class="py-4 converter-list">
                 <li><a data-sveltekit-reload href="/converter/binance?Amount=1&From=USDT&To=NGN">Convert USDT on Binance</a></li>
+                <li><a data-sveltekit-reload href="/converter/bybit?Amount=1&From=USDT&To=NGN">Convert USDT on Bybit</a></li>
+                <li><a data-sveltekit-reload href="/converter/bitmama?Amount=1&From=USDT&To=NGN">Convert USDT on Bitmama</a></li>
+                <li><a data-sveltekit-reload href="/converter/bitnob?Amount=1&From=USDT&To=NGN">Convert USDT on Bitnob</a></li>
+                <li><a data-sveltekit-reload href="/converter/chippercash?Amount=1&From=USD&To=NGN">Convert USD on Chipper Cash</a></li>
+                <li><a data-sveltekit-reload href="/converter/coinprofile?Amount=1&From=USD&To=NGN">Convert USDT on Coinprofile</a></li>
+                <li><a data-sveltekit-reload href="/converter/eversend?Amount=1&From=USD&To=NGN">Convert USD on Eversend</a></li>
+                <li><a data-sveltekit-reload href="/converter/klasha?Amount=1&From=USD&To=NGN">Convert USD on Klasha</a></li>
+                <li><a data-sveltekit-reload href="/converter/paxful?Amount=1&From=USDT&To=NGN">Convert USDT on Paxful</a></li>
                 <li><a data-sveltekit-reload href="/converter/remitano?Amount=1&From=USDT&To=NGN">Convert USDT on Remitano</a></li>
                 <li><a data-sveltekit-reload href="/converter/quidax?Amount=1&From=USDT&To=NGN">Convert USDT on Quidax</a></li>
                 <li><a data-sveltekit-reload href="/converter/yellowcard?Amount=1&From=USDT&To=NGN">Convert USDT on Yellow Card</a></li>
                 <li><a data-sveltekit-reload href="/converter/luno?Amount=1&From=USDC&To=NGN">Convert USDC on Luno</a></li>
-                <li><a data-sveltekit-reload href="/converter/bitmama?Amount=1&From=USDC&To=NGN">Convert USDC on Bitmama</a></li>
                 <li><a data-sveltekit-reload href="/converter/payday?Amount=1&From=USD&To=NGN">Convert USD on Payday</a></li>
                 <li><a data-sveltekit-reload href="/converter/wirepay?Amount=1&From=USD&To=NGN">Convert USD on Wirepay</a></li>
-                <li><a data-sveltekit-reload href="/converter/bitnob?Amount=1&From=USD&To=NGN">Convert USD on Bitnob</a></li>
-                <li><a data-sveltekit-reload href="/converter/eversend?Amount=1&From=USD&To=NGN">Convert USD on Eversend</a></li>
-                <li><a data-sveltekit-reload href="/converter/klasha?Amount=1&From=USD&To=NGN">Convert USD on Klasha</a></li>
-                <li><a data-sveltekit-reload href="/converter/coinprofile?Amount=1&From=USD&To=NGN">Convert USD on Coinprofile</a></li>
             </ul>
         </div>
         <div class="w-full md:w-[30%]">
             <h3 class="font-bold">Tools</h3>
             <ul class="py-4 converter-list">
-                <li><a href="/bank-codes">Compare exchange rates</a></li>
+                <li><a href="/alerts">Price Alerts</a></li>
+                <li><a href="/ng/compare">Compare exchange rates</a></li>
                 <li><a href="/bank-codes">Bank Codes</a></li>
             </ul>
         </div>

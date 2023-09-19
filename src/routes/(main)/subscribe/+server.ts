@@ -9,7 +9,7 @@ export async function PUT({ request, fetch })
         email,
     };
     const endpoint = getEndpoint("/public/account/signup");
-    const res = await fetch(endpoint, basicAuth('PUT', payload, 'system'));
+    const res = await fetch(endpoint, basicAuth('PUT', payload, 'api'));
 
     const result = await res.json();
     console.log(result);
