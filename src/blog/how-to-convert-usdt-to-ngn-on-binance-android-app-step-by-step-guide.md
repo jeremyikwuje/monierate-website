@@ -48,7 +48,7 @@ If you are happy with the naira amount on the preview, tap on the  **Deposit**  
 
 ![Binance app Convert page with Deposit button](https://monierate.com/uploads/binance-app-convert-confirm.jpeg)
 
-Your converted NGN will be deposited into your Binance spot wallet. You can then withdraw it to your bank account or use it to trade other cryptocurrencies.
+Your converted NGN will be deposited into your [Binance spot wallet](https://monierate.com/blog/binance-spot-wallet-nigeria). You can then withdraw it to your bank account or use it to trade other cryptocurrencies.
 
 ## Conclusion
 Converting USDT to NGN on the Binance Android app is a simple and straightforward process. Just follow these steps:
