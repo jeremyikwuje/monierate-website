@@ -10,7 +10,6 @@ tag: product
 image: https://monierate.com/uploads/binance-funding-wallet-web.png
 published: true
 ---
-# Binance Funding Wallet (Nigeria)
 **Binance has five types of wallets, and Nigerians can use them on the Binance app or website. One of these wallets is the Funding wallet.**
 
 ![Binance Funding wallet Android](https://monierate.com/uploads/binance-funding-wallet-web.png)
@@ -61,7 +60,7 @@ Yes, you can deposit funds into your Binance funding wallet. To deposit funds in
     
 2.  **P2P trading:** You can buy coins from other users on the Binance P2P marketplace. To do this, you will need to locate "P2P" under the "Funding" wallet. You can then click on a particular coin from the tab, then select a merchant and place an order. Once your order has been filled, the merchant will release the coins into your Binance Funding wallet.
     
-3.  **Transfer:** You can also deposit any coin into your Binance Funding wallet by transferring from other Binance wallets. To do this, login your binance account go to "Wallets", then click the wallet where you have coins e.g. Spot. Under the wallet (e.g. Spot) you can then click on "Transfer", and then transfer the coin to your Funding wallet.
+3.  **Transfer:** You can also deposit any coin into your Binance Funding wallet by transferring from other Binance wallets. To do this, login your binance account go to "Wallets", then click the wallet where you have coins e.g. [Spot](https://monierate.com/blog/binance-spot-wallet-nigeria). Under the wallet (e.g. Spot) you can then click on "Transfer", and then transfer the coin to your Funding wallet.
 
 Once you have deposited funds into your Binance Funding wallet, you can use them to trade cryptocurrencies on the Binance P2P marketplace or convert them to other cryptocurrencies.
 
