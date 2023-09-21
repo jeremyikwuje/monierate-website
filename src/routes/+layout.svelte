@@ -49,8 +49,8 @@ function breadcrumbs(paths, current) {
                 <img alt="Monierate Logo" width="142px" height="24px" class="hidden dark:block h-[24px] w-[142px] md:h-[24px]" src="/monierate-logo-white.png" loading="lazy">
             </a>
             <div class="flex md:order-2">
-                <a href="/subscribe" type="button" class="font-bold text-white bg-black hover:text-slate-200 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-lg text-sm px-4 py-2 text-center mr-3 md:mr-0 dark:bg-primary dark:hover:bg-white dark:focus:ring-blue-800">
-                    Subscribe
+                <a href="/alerts" type="button" class="font-bold text-white bg-black hover:text-slate-200 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-lg text-sm px-4 py-2 text-center mr-3 md:mr-0 dark:bg-primary dark:hover:bg-white dark:focus:ring-blue-800">
+                    Get alert
                 </a>
 
                 <button id="nav-collapse-trigger" data-collapse-toggle="navbar-sticky" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-sticky" aria-expanded="false">
