@@ -1,3 +1,4 @@
+import { browser } from '$app/environment';
 import date from 'date-and-time'
 
 export function bearer(method: string, bearer: string, body: object)
@@ -121,12 +122,18 @@ function changeTimeZone(date: any, timeZone: string = "Africa/Lagos") {
 export function setCookie(key: string, value: string, days: number) {
     var expires = new Date();
     expires.setTime(expires.getTime() + (days * 24 * 60 * 60 * 1000));
-    document.cookie = key + '=' + value + ';expires=' + expires.toUTCString();
+    if (browser) {
+        document.cookie = key + '=' + value + ';expires=' + expires.toUTCString();
+    }
 }
 
 export function getCookie(key: string) {
-    var keyValue = document.cookie.match('(^|;) ?' + key + '=([^;]*)(;|$)');
-    return keyValue ? keyValue[2] : null;
+    if (browser) {
+        var keyValue = document.cookie.match('(^|;) ?' + key + '=([^;]*)(;|$)');
+        return keyValue ? keyValue[2] : null;
+    }
+    
+    return null
 }
 
 function eraseCookie(key: string) {
