@@ -40,7 +40,7 @@ function hideBottomPromotion() {
     element?.classList.add('hidden')
     
     onMount(() => {
-        document.cookie
+        
     })
 }
 
