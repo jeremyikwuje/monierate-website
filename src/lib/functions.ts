@@ -116,4 +116,20 @@ function changeTimeZone(date: any, timeZone: string = "Africa/Lagos") {
         timeZone,
       }),
     );
-  }
+}
+
+export function setCookie(key: string, value: string, days: number) {
+    var expires = new Date();
+    expires.setTime(expires.getTime() + (days * 24 * 60 * 60 * 1000));
+    document.cookie = key + '=' + value + ';expires=' + expires.toUTCString();
+}
+
+export function getCookie(key: string) {
+    var keyValue = document.cookie.match('(^|;) ?' + key + '=([^;]*)(;|$)');
+    return keyValue ? keyValue[2] : null;
+}
+
+function eraseCookie(key: string) {
+    var keyValue = getCookie(key) || '';
+    setCookie(key, keyValue, -1);
+}
