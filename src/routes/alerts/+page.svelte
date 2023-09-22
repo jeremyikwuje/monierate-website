@@ -9,6 +9,7 @@
 
     let auth = data.auth
     let confirm = data.confirm
+    let market_avg = data.market_avg
     
     let authenticated = false
 
@@ -182,6 +183,10 @@
                 <button class="button py-4 bg-black mt-4" id="btn-subscribe" on:click={subscribe}>
                     Get rate alerts
                 </button>
+            </div>
+
+            <div class="text-center font-semibold">
+                $1 = ₦{market_avg.parallel} (Black market avg)
             </div>
         </div>
 
