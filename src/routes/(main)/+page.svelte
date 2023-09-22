@@ -44,8 +44,8 @@
 
 <main>
     <div class="container">
-        <div class="border border-gray-100 bg-white py-[10px] shadow-md mb-16 dark:bg-gray-900 dark:text-light dark:border-none min-h-[100vh] w-full overflow-x-scroll md:overflow-x-hidden">
-            <table class="table-auto overflow-x-scroll w-full text-sm text-left">
+        <div class="border border-gray-100 bg-white py-[10px] shadow-md mb-16 dark:bg-gray-900 dark:text-light dark:border-none min-h-[100vh] w-full overflow-x-scroll md:overflow-x-hidden overflow-y-scroll md:overflow-y-hidden">
+            <table class="table-auto overflow-x-scroll overflow-y-scroll w-full text-sm text-left">
                 <thead>
                     <tr>
                         <th scope="col" class="pr-4 py-3 md:pl-4 font-bitter hidden md:inline-block">
