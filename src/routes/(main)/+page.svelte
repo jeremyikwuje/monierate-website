@@ -1,15 +1,16 @@
 <script>
     /** @type {import('./$types').PageData} */
-	import Money from "$lib/money";
+	import Money from "$lib/money"
     import { format } from "$lib/functions";
-
 
     export let data;
     let rates = data.rates || {}
+    let providers = data.providers || {}
 
-    let first = rates[0]
-    let last = rates[rates.length - 1]
+    let count = 1
     let total = rates.length
+
+    const increment = () => count++;
 </script>
 
 <svelte:head>
@@ -26,11 +27,9 @@
     <div class="container">
         <h1 class="text-2xl md:text-4xl mb-2 dark:text-gray-100">Today's dollar to naira rates on exchanges</h1>
         <div class="mb-12 text-gray-600 font-normal dark:text-gray-300">
-            {#if first && last}
             <p>
                 Compare the prices of dollar to naira from {total} exchange providers.
             </p>
-            {/if}
         </div>
         <div class="flex justify-between items-center dark:text-gray-300">
             <span></span>
@@ -66,34 +65,27 @@
                     </tr>
                 </thead>
                 <tbody class="changers">
-                    {#each Object.entries(rates) as [index, rate]}
+                    {#each Object.entries(rates) as [changer, rate], i}
                     <tr class="mb-4 border-t border-gray-200 dark:border-gray-700">
                         <th scope="row" class="text-gray-500 py-6 pl-4 hidden md:inline-block">
-                            {parseInt(index) + 1}
+                            { i + 1 }
                         </th>
                         <td>
-                            <a href="/converter/{rate.changer.code}?Amount=1&From=USD&To=NGN" class="flex items-center" title="{rate.changer.name} dollar to naira rate.">
+                            <a href="/converter/{changer}?Amount=1&From=USD&To=NGN" class="flex items-center" title="{providers[changer].name} dollar to naira rate.">
                                 <span class="changer-icon">
-                                    <img width="22px" height="22px" src="/icons/{rate.changer.icon}" class="rounded-full" alt="{rate.changer.name} icon">
+                                    <img width="22px" height="22px" src="/icons/{providers[changer].icon}" class="rounded-full" alt="{providers[changer].name} icon">
                                 </span>
-                                <span class="changer-title">{rate.changer.name}</span>
+                                <span class="changer-title">{providers[changer].name}</span>
                             </a>
                         </td>
                         <td class="text-right pl-6 pr-6">
-                            <span class="changer-rate">₦{Money.toDollar(rate.rate_buy)}</span>
+                            <span class="changer-rate">₦{Math.round(rate.buy)}</span>
                             <small class="changer-rate-base">per $1</small>
                         </td>
                         <td class="text-right pl-6 pr-6">
-                            <span class="changer-rate">₦{Money.toDollar(rate.rate_sell)}</span>
+                            <span class="changer-rate">₦{Math.round(rate.sell)}</span>
                             <small class="changer-rate-base">per $1</small>
                         </td>
-                        <!-- <td class="text-right py-2 pr-2 md:pr-4">
-                            {#each Object.entries(rate.changer.changer_tags) as [index, tag]}
-                            <span class="inline-block p-2 border border-gray-300 text-black rounded-lg text-xs mr-2 font-semibold mb-2 dark:text-light">
-                                {tag.tag_id}
-                            </span>
-                            {/each}
-                        </td> -->
                         <td class="text-right py-2 pr-2 md:pr-4 whitespace-nowrap">
                             {format(new Date(rate.updatedAt))}
                         </td>

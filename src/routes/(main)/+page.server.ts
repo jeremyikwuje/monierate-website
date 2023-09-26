@@ -5,31 +5,37 @@ import type { PageServerLoad } from './$types'
 export const load: PageServerLoad = async ({ fetch }) => {
 
     try {
-        let endpoint = getEndpoint("/public/rates");
-        let res = await fetch(
-            endpoint,
-            basicAuth('GET', {})
-        );
-
-        console.log(res.status)
-        if (res.status != 200) {
-            throw error(500, {
-                message: "Unable to fetch data, try again in few minutes."
-            })
-        }
-
-        const rates = (await res.json()).data || []
+        let getRates = await fetch('/api/pairs?pair=usdngn');
+        let rates = await getRates.json()
 
         if (rates.length == 0) {
             throw error(500, {
-                message: "Unable to fetch data, try again in few minutes."
+                message: "Unable to fetch rates data, try again in few minutes."
             })
         }
 
-        console.log(rates)
+        delete rates.market
+
+        const getChangers = await fetch(`/api/changer`);
+        let providers = await getChangers.json()
+
+        if (providers.length == 0) {
+            throw error(500, {
+                message: "Unable to fetch platforms data, try again in few minutes."
+            })
+        }
+        
+        // change changers to object with changer code as key
+        let tmp_providers: any = {}
+        for (const key in providers) {
+            tmp_providers[providers[key].code] = providers[key]
+        }
+
+        providers = tmp_providers
 
         return {
-            rates
+            rates,
+            providers
         }
     }
     catch(error: any) {

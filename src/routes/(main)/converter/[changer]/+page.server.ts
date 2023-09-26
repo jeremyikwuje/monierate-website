@@ -22,6 +22,16 @@ export const load: PageServerLoad = (async ({ params, url, fetch }) => {
         const currencies = (await (await resCurrencies).json())
 
         console.log(market)
+
+        if (Object.keys(market).length == 0) {
+            throw error(500, "Market data failed.")
+        }
+        if (Object.keys(currencies).length == 0) {
+            throw error(500, "Currencies data failed.")
+        }
+        if (Object.keys(changer).length == 0) {
+            throw error(500, "Changer data failed.")
+        }
         
         return {
             changer,
@@ -31,6 +41,6 @@ export const load: PageServerLoad = (async ({ params, url, fetch }) => {
         }
     }
     catch(e: any) {
-        throw error(500, "Unable to fetch important data, try again in few minutes.")
+        throw error(500, e.message)
     }
 })
