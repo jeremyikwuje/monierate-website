@@ -14,7 +14,7 @@ published: true
 
 ![Image with text Do something great](https://monierate.com/uploads/make-something-great.jpg)
 
-How do you make something that people want? I've found that there are basically four routes you can take:
+How do you make something that people want? I've found that there are basically four ways to go about it:
 
 -   Make something that you want.
 -   Make something that people are already paying for.
