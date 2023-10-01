@@ -1,6 +1,6 @@
 ---
 layout: blog
-title: How to make something people want
+title: How to Make Something People Want
 description: In his famous essay "How to Make Wealth," Paul Graham states that
   one of the ways to make wealth is to make something that people want because
   wealth is what people want.
