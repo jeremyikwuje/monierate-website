@@ -40,9 +40,7 @@ If you study any great product, you'll see it has some or all of these qualities
 
 Making something people want alone won't guarantee financial success, as there are other things such as marketing, management, and raising money you may need to execute. But it is the first thing you must get right, or you will fail.
 
-I wish you great success.
-
-## Afterthoughts
+#### Afterthoughts
 
 Some builders don't want to build things that already exist, but something that already exists is a good sign that you are making something people want. Facebook wasn't the fifth social media platform, Binance wasn't the tenth cryptocurrency exchange, and Stripe wasn't the third internet payment processor. You want to build something that already exists in some form but with room for improvement. Avoid working on something that doesn't exist in any form.
 
