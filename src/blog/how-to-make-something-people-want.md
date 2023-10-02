@@ -14,14 +14,14 @@ published: true
 
 ![Image with text Do something great](https://monierate.com/uploads/make-something-great.jpg)
 
-How do you make something that people want? I've found that there are basically four ways to go about it:
+How do you make something that people want? I've found that there are basically four methods:
 
--   Make something that you want.
--   Make something that people are already paying for.
--   Make something that people are searching for.
--   Make something that people are spending time with.
+-   Make something you want
+-   Make something people are already paying for
+-   Make something people are searching for
+-   Make something people are spending time with
 
-These are self-explanatory. I consider them as frameworks for making things people want. If you make anything using one of this method, you'll end up making something people want. You can make something great by combining multiple of these methods.
+These are self-explanatory. I consider them as frameworks for making things people want. If you make anything using one of these methods, you'll end up making something people want. You can make something great by combining multiple of these methods.
 
 There are other methods, such as making something people are already sharing, but they are complicated. And I don't recommend you try such methods.
 
@@ -49,4 +49,4 @@ You can make things better by making them faster, cheaper, stronger, more secure
 
 You can think of these four tips as a framework for getting great product ideas. You may not need a framework to build anything, but using a framework can save you time, provide assurance, and reduce your chances of making common mistakes.
 
--
+— Written by [Jeremy](https://twitter.com/jeremyikwuje)
