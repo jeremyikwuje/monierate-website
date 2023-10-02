@@ -27,7 +27,7 @@ There are other methods, such as making something people are already sharing, bu
 
 Think of a great product like Facebook. Mark Zuckerberg **wanted the product himself**; people were already **spending money** to communicate with friends and family, and people love to **spend time** with their friends and know what their colleagues are up to.
 
-For a financial product like Binance, I don't know if CZ created Binance to satisfy his own desires, but it's clear that people are already **investing heavily** in crypto assets; millions were already **searching for** how to buy and sell Bitcoin, and traders **spend a lot of time** on existing trading platforms.
+For a financial product like Binance, I don't know if CZ created Binance to satisfy his own desires, but it's clear that people were already **investing heavily** in crypto assets; millions were already **searching for** how to buy and sell Bitcoin, and traders **spend a lot of time** on existing trading platforms.
 
 How about a religious product like YouVersion, a Bible app with over 100 million downloads? I believe the founders wanted to make a great Bible app because most Bible apps are simple. People were already looking up Bible verses online, and Christians spend their time and money on Bible-based products.  
 
