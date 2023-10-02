@@ -10,7 +10,7 @@ tag: company
 image: https://monierate.com/uploads/make-something-great.jpg
 published: true
 ---
-**In his famous essay "How to Make Wealth," Paul Graham states that one of the ways to make wealth is to make something that people want because wealth is what people want.**
+**In his famous essay "How to Make Wealth," Paul Graham states that one of the ways to make wealth is to make something people want because wealth is what people want.**
 
 ![Image with text Do something great](https://monierate.com/uploads/make-something-great.jpg)
 
