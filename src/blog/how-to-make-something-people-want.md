@@ -30,11 +30,13 @@ Think of a great product like Facebook. Mark Zuckerberg **wanted the product him
 
 For a financial product like Binance, I don't know if CZ created Binance to satisfy his own desires, but it's clear that people were already **investing money** in crypto assets; millions were already **searching for** how to buy and sell Bitcoin, and traders **spend a lot of time** on existing trading platforms.
 
+Whitney Wolfe founded Bumble, a popular dating app she wanted to make different. She felt it could change the way humans connect, something she wanted. And it happened that many people were already searching, spending money and time on new dates.
+
 How about a religious product like YouVersion, a Bible app with over 100 million downloads? I believe the founders wanted to make a great Bible app because most Bible apps are simple. People were already looking up Bible verses online, and Christians spend their time and money on Bible-based products.
 
-For a data-based product like monierate.com, we made something we wanted. Many people like to check currency exchange rates online. And as long as the world exists, people will always need to exchange currencies.
+For a data-based product like [monierate.com](https://monierate.com), we made something we wanted. Many Nigerians check currency exchange rates online and some of them spend money and several minutes a day on trading and money exchange platforms.  
 
-If you study any great product, you'll see it has some or all of these qualities. Either the founders wanted to solve their own problems, create a better alternative to what already exists, or make something people are looking to get.
+If you study any great product, you'll see it has some or all of these qualities. Either the founders wanted to solve their own problems, create a better alternative to what people spend time and money on, or make something people are looking to get.
 
 Making something people want alone won't guarantee financial success, as there are other things such as marketing, management, and raising money you may need to execute. But it is the first thing you must get right, or you will fail.
 
