@@ -27,13 +27,13 @@ There are other methods, such as making something people are already sharing, bu
 
 Think of a great product like Facebook. Mark Zuckerberg **wanted the product himself**; people were already **spending money** to communicate with friends and family, and people love to **spend time** with their friends and know what their colleagues are up to.
 
-For a financial product like Binance, I don't know if CZ created Binance to satisfy his own desires, but it's clear that people are already **investing heavily** in crypto assets; millions were already **searching for** how to buy and sell Bitcoin, and traders **spend a lot of time** on existing trading platforms.
+For a financial product like Binance, I don't know if CZ created Binance to satisfy his own desires, but it's clear that people were already **investing heavily** in crypto assets; millions were already **searching for** how to buy and sell Bitcoin, and traders **spend a lot of time** on existing trading platforms.
 
 How about a religious product like YouVersion, a Bible app with over 100 million downloads? I believe the founders wanted to make a great Bible app because most Bible apps are simple. People were already looking up Bible verses online, and Christians spend their time and money on Bible-based products.  
 
-For a data-based product like monierate.com, we made something we wanted. Many people like to check currency exchange rates, both on the internet and in person. And as long as the world exists, people will always need to exchange currencies.
+For a data-based product like monierate.com, we made something we wanted. Many people like to check currency exchange rates online. And as long as the world exists, people will always need to exchange currencies.
 
-If you study any great product, you'll see it has some or all of these qualities.
+If you study any great product, you'll see it has some or all of these qualities. Either the founders wanted to solve their own problems,  create a better alternative to what already exists, or make something people are looking to get.
 
 Making something people want alone won't guarantee financial success, as there are other things such as marketing, management, and raising money you may need to execute. But it is the first thing you must get right, or you will fail.
 
