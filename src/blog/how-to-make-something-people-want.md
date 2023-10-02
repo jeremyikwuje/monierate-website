@@ -21,7 +21,9 @@ How do you make something that people want? I've found that there are basically 
 -   Make something that people are searching for.
 -   Make something that people are spending time with.
 
-These are self-explanatory. If you try to make anything on this list, you'll make something people want. You can make something great by satisfying at least three of these criteria. I don't recommend trying other, more complicated methods, such as making something people are already sharing.
+These are self-explanatory. I consider them as frameworks for making things people want. If you make anything using one of this method, you'll end up making something people want. You can make something great by combining multiple of these methods.
+
+There are other methods, such as making something people are already sharing, but they are complicated. And I don't recommend you try such methods.
 
 Think of a great product like Facebook. Mark Zuckerberg **wanted the product himself**; people were already **spending money** to communicate with friends and family, and people love to **spend time** with their friends and know what their colleagues are up to.
 
