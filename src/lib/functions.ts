@@ -1,4 +1,5 @@
 import { browser } from '$app/environment';
+import { invalidateAll } from '$app/navigation';
 import date from 'date-and-time'
 
 export function bearer(method: string, bearer: string, body: object)
@@ -139,4 +140,11 @@ export function getCookie(key: string) {
 function eraseCookie(key: string) {
     var keyValue = getCookie(key) || '';
     setCookie(key, keyValue, -1);
+}
+
+export function changeParam(param: string, value: number | string) {
+    const url = new URL(window.location.toString())
+    url.searchParams.set(param, `${value}`)
+    history.replaceState(history.state, '', url);
+    invalidateAll()
 }

@@ -4,9 +4,30 @@ import { page, navigating } from "$app/stores";
 import { onMount } from "svelte";
 import { getCookie, setCookie } from "$lib/functions";
 import { browser } from "$app/environment";
+	import Money from "$lib/money";
 
 export let data
 let market_avg = data.market_avg
+let top_rates = {
+    usdngn: {
+        parallel: market_avg.usdngn.parallel,
+        name: 'USD/NGN',
+        from: 'USD',
+        to: 'NGN'
+    },
+    btcngn: {
+        parallel: market_avg.btcngn.parallel,
+        name: 'BTC/NGN',
+        from: 'BTC',
+        to: 'NGN'
+    },
+    usdtngn: {
+        parallel: market_avg.usdtngn.parallel,
+        name: 'USDT/NGN',
+        from: 'USDT',
+        to: 'NGN'
+    }
+}
 
 let year = (new Date()).getFullYear()
 let showPromotionBar = (getCookie('promotion_bar') == null ? true : false)
@@ -106,6 +127,16 @@ function hidePromotionBar() {
         </div>
     </nav>
 </header>
+<div class="bg-white w-full py-2 whitespace-nowrap overflow-x-auto no-scrollbar dark:bg-gray-800 dark:border-gray-600 border-b border-gray-100">
+    <div class="container">
+        {#each Object.entries(top_rates) as [pair, rate], i} 
+            <a data-sveltekit-reload href="/converter/?From={rate.from}&To={rate.to}&Amount=1" class="mr-2 text-gray-900 dark:text-gray-300 mr-6 text-[90%] md:text-lg">
+                <span class="font-medium mr-2">{rate.name}</span>
+                <span class="font-thin">{Money.format(rate.parallel)}</span>
+            </a>
+        {/each}
+    </div>
+</div>
 
 {#if path != ''}
 <div class="bg-white dark:bg-gray-800 dark:border-gray-600 shadow-b-md mb-16">
@@ -193,21 +224,21 @@ function hidePromotionBar() {
 {#if showPromotionBar }
 <div class="fixed inset-x-0 bottom-0 pb-2 sm:pb-5 z-50" id="promotion-bar">
     <div class="mx-auto w-[95%] md:w-[500px] px-2 sm:px-6 lg:px-8">
-        <div class="rounded-lg bg-gray-800 p-2 shadow-lg sm:p-3">
+        <div class="rounded-lg bg-gray-800 p-2 shadow-lg sm:p-3 dark:bg-gray-100">
             <div class="flex flex-wrap items-center justify-between">
                 <div class="flex w-0 flex-1 items-center">
-                    <span class="flex rounded-lg bg-gray-900 p-2">
+                    <span class="flex rounded-lg bg-gray-900 dark:bg-gray-600 p-2">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true" class="h-6 w-6 text-white"><path stroke-linecap="round" stroke-linejoin="round" d="M11 5.882V19.24a1.76 1.76 0 01-3.417.592l-2.147-6.15M18 13a3 3 0 100-6M5.436 13.683A4.001 4.001 0 017 6h1.832c4.1 0 7.625-1.234 9.168-3v14c-1.543-1.766-5.067-3-9.168-3H7a3.988 3.988 0 01-1.564-.317z"></path></svg>
                     </span>
-                    <p class="ml-3 truncate font-medium text-white">
-                        <span class="md:hidden">$1 = ₦{market_avg.parallel} (Black market avg)</span>
+                    <p class="ml-3 truncate font-medium text-white dark:text-gray-900">
+                        <span class="md:hidden">$1 = ₦{Money.format(market_avg.usdngn.parallel)}</span>
                         <span class="hidden md:inline">
-                            $1 = ₦{market_avg.parallel} (Black market avg.)
+                            $1 = ₦{Math.round(market_avg.usdngn.parallel)} (Black market avg.)
                         </span>
                     </p>
                 </div>
                 <div class="w-auto">
-                    <a class="flex items-center justify-center rounded-md border border-transparent bg-white px-4 py-2 text-sm font-medium text-gray-700 shadow-sm hover:bg-gray-50"
+                    <a class="flex items-center justify-center rounded-md border border-transparent bg-white px-4 py-2 text-sm font-medium text-gray-700 shadow-sm hover:bg-gray-50 dark:bg-gray-800 dark:text-gray-100 dark:hover:bg-gray-900"
                         href="/alerts">Get alert
                     </a>
                 </div>

@@ -4,7 +4,7 @@ import type { LayoutServerLoad } from "./$types"
 export const load = (async ({  }) => {
     let parallel_avg = "NULL"
 
-    let endpoint = getEndpoint("/public/rates/parallel");
+    let endpoint = getEndpoint("/public/rates/averages");
     let res = await fetch(endpoint, basicAuth('GET', {}));
 
     console.log(res.status)
@@ -12,13 +12,13 @@ export const load = (async ({  }) => {
         console.log(res)
     }
 
-    const rate = (await res.json()).data
-    parallel_avg = rate.parallel_avg
+    const rates = (await res.json()).data
+    parallel_avg = rates.usdngn.average || 0
+
+    console.log(rates)
 
     return {
-        market_avg: { 
-            parallel: parallel_avg
-        }
+        market_avg: rates,
     }
 
 }) satisfies LayoutServerLoad

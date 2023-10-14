@@ -49,13 +49,6 @@ export const load: PageServerLoad = async ({ fetch, params }) => {
         const getChangers = await fetch(`/api/changer`);
         let providers = await getChangers.json()
 
-        let tmp_providers: any = {}
-        for (const key in providers) {
-            tmp_providers[providers[key].code] = providers[key]
-        }
-
-        providers = tmp_providers
-
         return {
             currency,
             country,

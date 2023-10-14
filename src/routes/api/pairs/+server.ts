@@ -5,9 +5,10 @@ import { json, redirect } from "@sveltejs/kit";
 export async function GET({ url })
 {
     let urlParams = url.searchParams
-    const currenypair = urlParams.get('pair') || null
+    const currenypair = urlParams.get('pair') || ''
+    const split = urlParams.get('split') || 'no'
     
-    let endpoint = getEndpoint(`/public/pairs/${currenypair}`);
+    let endpoint = getEndpoint(`/public/pairs/${currenypair}?split=${split}`);
 
     let res = await fetch(
         endpoint,
