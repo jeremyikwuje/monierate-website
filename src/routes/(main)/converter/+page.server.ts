@@ -28,8 +28,6 @@ export const load: PageServerLoad = async ({ fetch, params, url }) => {
             throw error(500, "Changer data failed.")
         }
 
-        console.log(pairs)
-
         return {
             pairs,
             changers,

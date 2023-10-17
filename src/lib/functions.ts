@@ -1,5 +1,5 @@
 import { browser } from '$app/environment';
-import { invalidateAll } from '$app/navigation';
+import { invalidate, invalidateAll } from '$app/navigation';
 import date from 'date-and-time'
 
 export function bearer(method: string, bearer: string, body: object)
@@ -147,4 +147,20 @@ export function changeParam(param: string, value: number | string) {
     url.searchParams.set(param, `${value}`)
     history.replaceState(history.state, '', url);
     invalidateAll()
+}
+
+export function sortRates(rates: object | any[] ) {
+    if (typeof(rates) == 'object') {
+        rates = Object.entries(rates)
+    }
+
+    const sortedObject = Object.entries(rates).sort((x, y) => x[1].buy - y[1].buy)
+    console.log(sortedObject)
+    return sortedObject
+}
+
+export async function fireInvalidateAll() {
+    if (browser) {
+        await invalidate
+    }
 }

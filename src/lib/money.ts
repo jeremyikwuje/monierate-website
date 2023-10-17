@@ -36,13 +36,13 @@ export default class Money {
         return total
     }
 
-    static format(amount: string | number) {
+    static format(amount: string | number, decimal = 8) {
         amount = parseFloat(`${amount}`)
         // return currency(amount, { symbol: symbol, separator: ",", decimal: ".", precision: 8, }).format()
 
         const formatter = new Intl.NumberFormat('en-US', {
             minimumFractionDigits: 0,
-            maximumFractionDigits: 8
+            maximumFractionDigits: decimal
         })
 
         return formatter.format(amount)

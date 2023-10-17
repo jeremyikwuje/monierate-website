@@ -4,7 +4,7 @@ import { page, navigating } from "$app/stores";
 import { onMount } from "svelte";
 import { getCookie, setCookie } from "$lib/functions";
 import { browser } from "$app/environment";
-	import Money from "$lib/money";
+import Money from "$lib/money";
 
 export let data
 let market_avg = data.market_avg
@@ -114,6 +114,9 @@ function hidePromotionBar() {
                         <a href="/" class="{path == '' ? 'active': ''}" aria-current="page">$1 Today</a>
                     </li>
                     <li>
+                        <a href="/converter" class="{path == 'converter' ? 'active': ''}" aria-current="page">Converter</a>
+                    </li>
+                    <li>
                         <a href="/ng/compare" class="{path == 'ng' ? 'active': ''}">Compare</a>
                     </li>
                     <li>
@@ -192,6 +195,7 @@ function hidePromotionBar() {
             <h3 class="font-bold">Tools</h3>
             <ul class="py-4 converter-list">
                 <li><a href="/alerts">Price Alerts</a></li>
+                <li><a href="/converter">Currency Converter</a></li>
                 <li><a href="/ng/compare">Compare exchange rates</a></li>
                 <li><a href="/bank-codes">Bank Codes</a></li>
             </ul>

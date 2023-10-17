@@ -2,19 +2,20 @@
 import type { PageData } from "./$types"
 import Money from "$lib/money";
 import { round, chain } from "mathjs"
-import { changeParam } from "$lib/functions"
+import { changeParam, format } from "$lib/functions"
 
 export let data: PageData;
 let changers = data.changers
 let rates_avg = data.market_avg
 let pairs = data.pairs
+let pairRates: any = {}
 let convert = data.convert
 let currencies = data.currencies
 
 let convertFrom = convert.From.toUpperCase()
 let convertTo = convert.To.toUpperCase()
 let convertAmount = parseFloat(`${convert.Amount}`)
-
+let unitCurrency = convertFrom
 let convertResult = {
     rate: 0,
     rateInverse: 0,
@@ -28,34 +29,52 @@ var currencyFrom: any = {}
 var currencyTo: any = {}
 var updatedAt = ''
 
+var moreConversions: any = {
+    from: [],
+    to: []
+}
+
 function convertNow() {
     let from = convertFrom.toLowerCase()
     let to = convertTo.toLowerCase()
 
     console.log(from + to)
 
-    let rates: any = rates_avg
-    let average = 0
     let rate = 1  // 1:1
     let rateInverse = 1
 
     if (from != to) {
         /** Get the rate */
         let pair = `${from}${to}`
-        if (rates.hasOwnProperty(pair)) {
-            updatedAt = rates[pair].updatedAt // get last update time
-            rate = rates[pair].parallel
+        if (rates_avg.hasOwnProperty(pair)) {
+            updatedAt = rates_avg[pair].updatedAt // get last update time
+            rate = rates_avg[pair].parallel
             rateInverse = 1 / rate
+            unitCurrency = from.toUpperCase()
+            
+            // get rates of a pair
+            let pairData = pairs.find( (p: any) => p.pair === pair )
+            pairRates = Object.entries(pairData.rates || {})
+            // sort pair rates descending order
+            pairRates = pairRates.sort( (x: any, y: any) => x[1].buy - y[1].buy )
         }
         else {
             pair = `${to}${from}`
-            if (rates.hasOwnProperty(pair)) {
-                updatedAt = rates[pair].updatedAt // get last update time
-                rateInverse = rates[pair].parallel
+            if (rates_avg.hasOwnProperty(pair)) {
+                updatedAt = rates_avg[pair].updatedAt // get last update time
+                rateInverse = rates_avg[pair].parallel
                 rate = 1 / rateInverse
+                unitCurrency = to.toUpperCase()
+
+                // get rates of a pair
+                let pairData = pairs.find( (p: any) => p.pair === pair )
+                pairRates = Object.entries(pairData.rates || {})
+                // sort pair rates descending order
+                pairRates = pairRates.sort( (x: any, y: any) => x[1].buy - y[1].buy )
             } else {
                 rate = 0
                 rateInverse = 0
+                unitCurrency = from.toUpperCase()
             }
         }
     }
@@ -68,7 +87,32 @@ function convertNow() {
     currencyFrom = currencies.find( c => c.code === from)
     currencyTo = currencies.find( c => c.code === to)
 
-    console.log(currencyFrom)
+    getMoreConversions()
+}
+
+async function getMoreConversions() {
+    let series = [ 1, 3, 5, 7, 10, 12, 15, 25, 30, 45, 50, 75, 100, 300, 400, 500, 750, 1000, 3000, 5000, 7500, 10000, 15000, 25000, 50000, 75000, 100000 ]
+    let conversions: any = {
+        from: [],
+        to: []
+    }
+
+    series.forEach( serie => {
+
+        let rate = convertResult.rate
+        conversions.from.push({
+            amount: serie,
+            conversion: round(chain(rate).multiply(serie).done(), 8)
+        })
+
+        let rateInverse = convertResult.rateInverse
+        conversions.to.push({
+            amount: serie,
+            conversion: round(chain(rateInverse).multiply(serie).done(), 8)
+        })
+    })
+
+    moreConversions = conversions
 }
 
 /** Get the rates object and return the average rate */
@@ -114,7 +158,7 @@ convertNow()
         </h1>
     </div>
 
-    <div id="changer-rate-wrapper" class="w-[95%] md:w-[70%] bg-white dark:bg-gray-900 shadow-lg rounded-lg px-8 py-4 mx-auto">
+    <div id="changer-rate-wrapper" class="section">
         <div class="flex justify-center item-center">
             <div class="w-full">
                 <div class="block md:flex md:justify-between md:items-center">
@@ -180,8 +224,192 @@ convertNow()
             </div>
         </div>
     </div>
+    {#if pairRates.length > 0}
+    <div id="more-rates" class="mt-16">
+        <h2 class="mb-8 text-center text-2xl">Best {convertFrom} to {convertTo} rates</h2>
+        <div class="section">
+            <table class="table-auto overflow-x-scroll w-full text-sm text-left ">
+                <thead>
+                    <tr>
+                        <th scope="col" class="py-3 md:pl-0 font-bold font-bitter">
+                            Provider
+                        </th>
+                        <th scope="col" class="pl-6 pr-6 py-3 w-[40%] font-bold font-bitter text-right">
+                            Buy rate
+                        </th>
+                        <th scope="col" class="pl-6 pr-6 py-3 font-bold font-bitter text-right">
+                            Sell rate
+                        </th>
+                        <th scope="col" class="pl-6 py-3 font-bold font-bitter text-right pr-2 md:pr-4 whitespace-nowrap">
+                            Last updated
+                        </th>
+                    </tr>
+                </thead>
+                <tbody class="changers">
+                    {#each pairRates as [changer_code, rate]}
+                        {#if changer_code != 'market'}
+                        <tr class="mb-4 border-t border-gray-200 dark:border-gray-700">
+                            <td>
+                                <a href="/converter/{changer_code}?Amount=1&From=USD&To=NGN" class="flex items-center">
+                                    <span class="changer-icon">
+                                        <img width="22px" height="22px" src="/icons/{changers[changer_code].icon}" class="rounded-full" alt="{changers[changer_code].name} icon">
+                                    </span>
+                                    <span class="changer-title">{changers[changer_code].name}</span>
+                                </a>
+                            </td>
+                            <td class="text-right pl-6 pr-6">
+                                <span class="changer-rate">₦{Money.format(rate.buy, 0)}</span>
+                                <small class="changer-rate-base">per {unitCurrency}</small>
+                            </td>
+                            <td class="text-right pl-6 pr-6">
+                                <span class="changer-rate">₦{Money.format(rate.sell, 0)}</span>
+                                <small class="changer-rate-base">per {unitCurrency}</small>
+                            </td>
+                            <td class="text-right py-2 pr-2 md:pr-4 whitespace-nowrap">
+                                {#if (rate.updatedAt) }
+                                    {format(new Date(rate.updatedAt))}
+                                {/if}
+                            </td>
+                        </tr>
+                        {/if}
+                    {/each}
+                </tbody>
+            </table>
+        </div>
+    </div>
+    {/if}
+
+    <div class="more-conversion">
+        <div class="entry">
+            <span class="header">
+                <h2 class="text-center text-lg">
+                    Convert {currencyFrom.name} to {currencyTo.name}
+                </h2>
+            </span>
+            <div class="pb-4">
+                {#await moreConversions}
+                    <span class="block text-center py-8 px-4">Loading...</span>
+                {:then conversions}
+                <table class="w-full text-center px-8">
+                    <thead>
+                        <tr>
+                            <th class="py-4">{convertFrom}</th>
+                            <th class="py-4">{convertTo}</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {#each Object.entries(conversions.from) as [index, convert]}
+                        <tr>
+                            <td class="py-2.5">
+                                <a data-sveltekit-reload href="/converter/?Amount={convert.amount}&From={convertFrom}&To={convertTo}">
+                                    {Money.format(convert.amount)} {convertFrom}
+                                </a>
+                            </td>
+                            <td class="py-2.5">
+                                {Money.format(convert.conversion)} {convertTo}
+                            </td>
+                        </tr>
+                        {/each}
+                    </tbody>
+                </table>
+                {/await}
+            </div>
+        </div>
+        <div class="entry">
+            <span class="header">
+                <h2 class="text-center text-lg">Convert {currencyTo.name} to {currencyFrom.name}</h2>
+            </span>
+            <div class="pb-4">
+                {#await moreConversions}
+                    <span class="block text-center py-8 px-4">Loading...</span>
+                {:then conversions}
+                    <table class="w-full text-center px-8">
+                        <thead class="">
+                            <tr>
+                                <th class="py-4">{convertTo}</th>
+                                <th class="py-4">{convertFrom}</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                                {#each Object.entries(conversions.to) as [index, convert]}
+                                <tr>
+                                    <td class="py-2.5">
+                                        <a data-sveltekit-reload href="/converter?Amount={convert.amount}&From={convertTo}&To={convertFrom}">
+                                            {Money.format(convert.amount)} {convertTo}
+                                        </a>
+                                    </td>
+                                    <td class="py-2.5">
+                                        {Money.format(convert.conversion)} {convertFrom}
+                                    </td>
+                                </tr>
+                                {/each}
+                        </tbody>
+                    </table>
+                {/await}
+            </div>
+        </div>
+    </div>
+
+    <div class="w-[95%] mx-auto md:w-[70%] mt-24">
+        <h2 class="text-2xl mb-6 text-center">Currency Infomation</h2>
+        <div class="block md:flex md:justify-between md:items-center">
+            <div class="shadow-lg md:w-[45%] p-8 bg-white dark:bg-gray-900">
+                <h2 class="text-2xl">{convertFrom} - {currencyFrom.name}</h2>
+                <span class="block mt-6">
+                    {currencyFrom.bio}
+                </span>
+            </div>
+            <div class="shadow-lg md:w-[45%] p-8 bg-white dark:bg-gray-900">
+                <h2 class="text-2xl">{convertTo} - {currencyTo.name}</h2>
+                <span class="block mt-6">
+                    {currencyTo.bio}
+                </span>
+            </div>
+        </div>
+    </div>
 </div>
 
 <style>
+.section {
+    @apply w-[95%] md:w-[70%] bg-white dark:bg-gray-900 shadow-lg rounded-lg px-8 py-4 mx-auto;
+}
 
+.more-conversion {
+    @apply w-[95%] mx-auto md:w-[70%] md:flex md:justify-between md:items-center mt-16
+}
+.more-conversion .entry {
+    @apply bg-white dark:bg-gray-900 shadow-lg rounded-lg md:w-[40%] mb-4
+}
+.more-conversion .entry .header {
+    @apply border-b border-gray-200 dark:border-gray-700 block py-4 px-8
+}
+
+table thead th {
+    @apply dark:text-gray-300 text-black whitespace-nowrap
+}
+table tbody tr td {
+    @apply py-6 whitespace-nowrap
+}
+table tr td:first-child, table thead th:first-child {
+    @apply pl-4
+}
+
+.changer {
+    @apply flex justify-between items-center py-2 border-b border-gray-200;
+}
+.changer:last-child {
+    @apply border-b-0
+}
+.changer-icon {
+    @apply bg-transparent border border-black rounded-full w-[24px] h-[24px] mr-2;
+}
+.changer-title {
+    @apply font-semibold text-lg capitalize text-gray-800 dark:text-gray-300;
+}
+.changer-rate-base {
+    @apply text-gray-500 dark:text-gray-400;
+}
+.changer-rate {
+    @apply block font-semibold text-lg text-gray-800 dark:text-light;
+}
 </style>

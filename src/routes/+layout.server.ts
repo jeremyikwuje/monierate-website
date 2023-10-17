@@ -15,8 +15,6 @@ export const load = (async ({  }) => {
     const rates = (await res.json()).data
     parallel_avg = rates.usdngn.average || 0
 
-    console.log(rates)
-
     return {
         market_avg: rates,
     }
