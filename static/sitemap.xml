@@ -9,737 +9,1867 @@
 
 <url>
   <loc>https://monierate.com/</loc>
-  <lastmod>2023-08-07T03:39:21+00:00</lastmod>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
-  <loc>https://monierate.com/ng/compare/currencies</loc>
-  <lastmod>2023-08-07T03:39:21+00:00</lastmod>
+  <loc>https://monierate.com/alerts</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://monierate.com/bank-codes/ussd</loc>
-  <lastmod>2023-08-07T03:39:21+00:00</lastmod>
+  <loc>https://monierate.com/converter</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://monierate.com/ng/compare</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://monierate.com/blog</loc>
-  <lastmod>2023-08-07T03:39:21+00:00</lastmod>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://monierate.com/converter?From=USD&amp;To=NGN&amp;Amount=1</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://monierate.com/converter?From=BTC&amp;To=NGN&amp;Amount=1</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://monierate.com/converter?From=USDT&amp;To=NGN&amp;Amount=1</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://monierate.com/converter/cbn?Amount=1&amp;From=USD&amp;To=NGN</loc>
-  <lastmod>2023-08-07T03:39:21+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://monierate.com/converter/cash-in?Amount=1&amp;From=USD&amp;To=NGN</loc>
-  <lastmod>2023-08-07T03:39:21+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://monierate.com/converter/luno?Amount=1&amp;From=USD&amp;To=NGN</loc>
-  <lastmod>2023-08-07T03:39:21+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://monierate.com/converter/quidax?Amount=1&amp;From=USD&amp;To=NGN</loc>
-  <lastmod>2023-08-07T03:39:21+00:00</lastmod>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://monierate.com/converter/bybit?Amount=1&amp;From=USD&amp;To=NGN</loc>
-  <lastmod>2023-08-07T03:39:21+00:00</lastmod>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://monierate.com/converter/binance?Amount=1&amp;From=USD&amp;To=NGN</loc>
-  <lastmod>2023-08-07T03:39:21+00:00</lastmod>
+  <loc>https://monierate.com/converter/piggyvest?Amount=1&amp;From=USD&amp;To=NGN</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://monierate.com/converter/remitano?Amount=1&amp;From=USD&amp;To=NGN</loc>
-  <lastmod>2023-08-07T03:39:21+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://monierate.com/converter/coinprofile?Amount=1&amp;From=USD&amp;To=NGN</loc>
-  <lastmod>2023-08-07T03:39:21+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://monierate.com/converter/bitnob?Amount=1&amp;From=USD&amp;To=NGN</loc>
-  <lastmod>2023-08-07T03:39:21+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://monierate.com/converter/accrue?Amount=1&amp;From=USD&amp;To=NGN</loc>
-  <lastmod>2023-08-07T03:39:21+00:00</lastmod>
+  <loc>https://monierate.com/converter/grey?Amount=1&amp;From=USD&amp;To=NGN</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://monierate.com/converter/bitmama?Amount=1&amp;From=USD&amp;To=NGN</loc>
-  <lastmod>2023-08-07T03:39:21+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://monierate.com/converter/wirepay?Amount=1&amp;From=USD&amp;To=NGN</loc>
-  <lastmod>2023-08-07T03:39:21+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://monierate.com/converter/yellowcard?Amount=1&amp;From=USD&amp;To=NGN</loc>
-  <lastmod>2023-08-07T03:39:21+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://monierate.com/converter/eversend?Amount=1&amp;From=USD&amp;To=NGN</loc>
-  <lastmod>2023-08-07T03:39:21+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://monierate.com/converter/payday?Amount=1&amp;From=USD&amp;To=NGN</loc>
-  <lastmod>2023-08-07T03:39:21+00:00</lastmod>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://monierate.com/converter/klasha?Amount=1&amp;From=USD&amp;To=NGN</loc>
-  <lastmod>2023-08-07T03:39:21+00:00</lastmod>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://monierate.com/converter/binance?Amount=1&amp;From=USD&amp;To=NGN</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://monierate.com/converter/quidax?Amount=1&amp;From=USD&amp;To=NGN</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://monierate.com/converter/luno?Amount=1&amp;From=USD&amp;To=NGN</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://monierate.com/converter/wirepay?Amount=1&amp;From=USD&amp;To=NGN</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://monierate.com/converter/bitnob?Amount=1&amp;From=USD&amp;To=NGN</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://monierate.com/converter/coinprofile?Amount=1&amp;From=USD&amp;To=NGN</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://monierate.com/converter/cashwyre?Amount=1&amp;From=USD&amp;To=NGN</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://monierate.com/converter/accrue?Amount=1&amp;From=USD&amp;To=NGN</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://monierate.com/converter/remitano?Amount=1&amp;From=USD&amp;To=NGN</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://monierate.com/converter/eversend?Amount=1&amp;From=USD&amp;To=NGN</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://monierate.com/converter/paxful?Amount=1&amp;From=USD&amp;To=NGN</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://monierate.com/converter/chippercash?Amount=1&amp;From=USD&amp;To=NGN</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://monierate.com/converter/yellowcard?Amount=1&amp;From=USD&amp;To=NGN</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://monierate.com/converter/payday?Amount=1&amp;From=USD&amp;To=NGN</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://monierate.com/converter/cash-in?Amount=1&amp;From=USD&amp;To=NGN</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://monierate.com/converter/flutterwave?Amount=1&amp;From=USD&amp;To=NGN</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://monierate.com/converter/worldremit?Amount=1&amp;From=USD&amp;To=NGN</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://monierate.com/converter/paypal?Amount=1&amp;From=USD&amp;To=NGN</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://monierate.com/converter/skrill?Amount=1&amp;From=USD&amp;To=NGN</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://monierate.com/converter/payoneer?Amount=1&amp;From=USD&amp;To=NGN</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://monierate.com/converter/remitly?Amount=1&amp;From=USD&amp;To=NGN</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://monierate.com/converter/binance?Amount=1&amp;From=USDT&amp;To=NGN</loc>
-  <lastmod>2023-08-07T03:39:21+00:00</lastmod>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://monierate.com/converter/bybit?Amount=1&amp;From=USDT&amp;To=NGN</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://monierate.com/converter/bitmama?Amount=1&amp;From=USDT&amp;To=NGN</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://monierate.com/converter/bitnob?Amount=1&amp;From=USDT&amp;To=NGN</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://monierate.com/converter/paxful?Amount=1&amp;From=USDT&amp;To=NGN</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://monierate.com/converter/remitano?Amount=1&amp;From=USDT&amp;To=NGN</loc>
-  <lastmod>2023-08-07T03:39:21+00:00</lastmod>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://monierate.com/converter/quidax?Amount=1&amp;From=USDT&amp;To=NGN</loc>
-  <lastmod>2023-08-07T03:39:21+00:00</lastmod>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://monierate.com/converter/yellowcard?Amount=1&amp;From=USDT&amp;To=NGN</loc>
-  <lastmod>2023-08-07T03:39:21+00:00</lastmod>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://monierate.com/converter/luno?Amount=1&amp;From=USDC&amp;To=NGN</loc>
-  <lastmod>2023-08-07T03:39:21+00:00</lastmod>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://monierate.com/converter/bitmama?Amount=1&amp;From=USDC&amp;To=NGN</loc>
-  <lastmod>2023-08-07T03:39:21+00:00</lastmod>
+  <loc>https://monierate.com/bank-codes/ussd</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://monierate.com/ng/compare/currencies/best-aud-exchange-rates</loc>
-  <lastmod>2023-08-07T03:39:21+00:00</lastmod>
+  <loc>https://monierate.com/converter?Amount=1&amp;From=USD&amp;To=NGN</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://monierate.com/ng/compare/currencies/best-brl-exchange-rates</loc>
-  <lastmod>2023-08-07T03:39:21+00:00</lastmod>
+  <loc>https://monierate.com/converter?Amount=3&amp;From=USD&amp;To=NGN</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://monierate.com/ng/compare/currencies/best-cad-exchange-rates</loc>
-  <lastmod>2023-08-07T03:39:21+00:00</lastmod>
+  <loc>https://monierate.com/converter?Amount=5&amp;From=USD&amp;To=NGN</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://monierate.com/ng/compare/currencies/best-chf-exchange-rates</loc>
-  <lastmod>2023-08-07T03:39:21+00:00</lastmod>
+  <loc>https://monierate.com/converter?Amount=7&amp;From=USD&amp;To=NGN</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://monierate.com/ng/compare/currencies/best-cny-exchange-rates</loc>
-  <lastmod>2023-08-07T03:39:21+00:00</lastmod>
+  <loc>https://monierate.com/converter?Amount=10&amp;From=USD&amp;To=NGN</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://monierate.com/ng/compare/currencies/best-eur-exchange-rates</loc>
-  <lastmod>2023-08-07T03:39:21+00:00</lastmod>
+  <loc>https://monierate.com/converter?Amount=12&amp;From=USD&amp;To=NGN</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://monierate.com/ng/compare/currencies/best-gbp-exchange-rates</loc>
-  <lastmod>2023-08-07T03:39:21+00:00</lastmod>
+  <loc>https://monierate.com/converter?Amount=15&amp;From=USD&amp;To=NGN</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://monierate.com/ng/compare/currencies/best-inr-exchange-rates</loc>
-  <lastmod>2023-08-07T03:39:21+00:00</lastmod>
+  <loc>https://monierate.com/converter?Amount=25&amp;From=USD&amp;To=NGN</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://monierate.com/ng/compare/currencies/best-jpy-exchange-rates</loc>
-  <lastmod>2023-08-07T03:39:21+00:00</lastmod>
+  <loc>https://monierate.com/converter?Amount=30&amp;From=USD&amp;To=NGN</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://monierate.com/ng/compare/currencies/best-krw-exchange-rates</loc>
-  <lastmod>2023-08-07T03:39:21+00:00</lastmod>
+  <loc>https://monierate.com/converter?Amount=45&amp;From=USD&amp;To=NGN</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://monierate.com/ng/compare/currencies/best-sgd-exchange-rates</loc>
-  <lastmod>2023-08-07T03:39:21+00:00</lastmod>
+  <loc>https://monierate.com/converter?Amount=50&amp;From=USD&amp;To=NGN</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://monierate.com/ng/compare/currencies/best-usd-exchange-rates</loc>
-  <lastmod>2023-08-07T03:39:21+00:00</lastmod>
+  <loc>https://monierate.com/converter?Amount=75&amp;From=USD&amp;To=NGN</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://monierate.com/ng/compare/currencies/best-aave-exchange-rates-crypto</loc>
-  <lastmod>2023-08-07T03:39:21+00:00</lastmod>
+  <loc>https://monierate.com/converter?Amount=100&amp;From=USD&amp;To=NGN</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://monierate.com/ng/compare/currencies/best-ada-exchange-rates-crypto</loc>
-  <lastmod>2023-08-07T03:39:21+00:00</lastmod>
+  <loc>https://monierate.com/converter?Amount=300&amp;From=USD&amp;To=NGN</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://monierate.com/ng/compare/currencies/best-avax-exchange-rates-crypto</loc>
-  <lastmod>2023-08-07T03:39:21+00:00</lastmod>
+  <loc>https://monierate.com/converter?Amount=400&amp;From=USD&amp;To=NGN</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://monierate.com/ng/compare/currencies/best-bch-exchange-rates-crypto</loc>
-  <lastmod>2023-08-07T03:39:21+00:00</lastmod>
+  <loc>https://monierate.com/converter?Amount=500&amp;From=USD&amp;To=NGN</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://monierate.com/ng/compare/currencies/best-bnb-exchange-rates-crypto</loc>
-  <lastmod>2023-08-07T03:39:21+00:00</lastmod>
+  <loc>https://monierate.com/converter?Amount=750&amp;From=USD&amp;To=NGN</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://monierate.com/ng/compare/currencies/best-btc-exchange-rates-crypto</loc>
-  <lastmod>2023-08-07T03:39:21+00:00</lastmod>
+  <loc>https://monierate.com/converter?Amount=1000&amp;From=USD&amp;To=NGN</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://monierate.com/ng/compare/currencies/best-busd-exchange-rates-crypto</loc>
-  <lastmod>2023-08-07T03:39:21+00:00</lastmod>
+  <loc>https://monierate.com/converter?Amount=3000&amp;From=USD&amp;To=NGN</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://monierate.com/ng/compare/currencies/best-dai-exchange-rates-crypto</loc>
-  <lastmod>2023-08-07T03:39:21+00:00</lastmod>
+  <loc>https://monierate.com/converter?Amount=5000&amp;From=USD&amp;To=NGN</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://monierate.com/ng/compare/currencies/best-doge-exchange-rates-crypto</loc>
-  <lastmod>2023-08-07T03:39:21+00:00</lastmod>
+  <loc>https://monierate.com/converter?Amount=7500&amp;From=USD&amp;To=NGN</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://monierate.com/ng/compare/currencies/best-dot-exchange-rates-crypto</loc>
-  <lastmod>2023-08-07T03:39:21+00:00</lastmod>
+  <loc>https://monierate.com/converter?Amount=10000&amp;From=USD&amp;To=NGN</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://monierate.com/ng/compare/currencies/best-eos-exchange-rates-crypto</loc>
-  <lastmod>2023-08-07T03:39:21+00:00</lastmod>
+  <loc>https://monierate.com/converter?Amount=15000&amp;From=USD&amp;To=NGN</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://monierate.com/ng/compare/currencies/best-etc-exchange-rates-crypto</loc>
-  <lastmod>2023-08-07T03:39:21+00:00</lastmod>
+  <loc>https://monierate.com/converter?Amount=25000&amp;From=USD&amp;To=NGN</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://monierate.com/ng/compare/currencies/best-eth-exchange-rates-crypto</loc>
-  <lastmod>2023-08-07T03:39:21+00:00</lastmod>
+  <loc>https://monierate.com/converter?Amount=50000&amp;From=USD&amp;To=NGN</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://monierate.com/ng/compare/currencies/best-fil-exchange-rates-crypto</loc>
-  <lastmod>2023-08-07T03:39:21+00:00</lastmod>
+  <loc>https://monierate.com/converter?Amount=75000&amp;From=USD&amp;To=NGN</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://monierate.com/ng/compare/currencies/best-icp-exchange-rates-crypto</loc>
-  <lastmod>2023-08-07T03:39:21+00:00</lastmod>
+  <loc>https://monierate.com/converter?Amount=100000&amp;From=USD&amp;To=NGN</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://monierate.com/ng/compare/currencies/best-link-exchange-rates-crypto</loc>
-  <lastmod>2023-08-07T03:39:21+00:00</lastmod>
+  <loc>https://monierate.com/converter?Amount=1&amp;From=NGN&amp;To=USD</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://monierate.com/ng/compare/currencies/best-ltc-exchange-rates-crypto</loc>
-  <lastmod>2023-08-07T03:39:21+00:00</lastmod>
+  <loc>https://monierate.com/converter?Amount=3&amp;From=NGN&amp;To=USD</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://monierate.com/ng/compare/currencies/best-matic-exchange-rates-crypto</loc>
-  <lastmod>2023-08-07T03:39:21+00:00</lastmod>
+  <loc>https://monierate.com/converter?Amount=5&amp;From=NGN&amp;To=USD</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://monierate.com/ng/compare/currencies/best-sol-exchange-rates-crypto</loc>
-  <lastmod>2023-08-07T03:39:21+00:00</lastmod>
+  <loc>https://monierate.com/converter?Amount=7&amp;From=NGN&amp;To=USD</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://monierate.com/ng/compare/currencies/best-theta-exchange-rates-crypto</loc>
-  <lastmod>2023-08-07T03:39:21+00:00</lastmod>
+  <loc>https://monierate.com/converter?Amount=10&amp;From=NGN&amp;To=USD</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://monierate.com/ng/compare/currencies/best-trx-exchange-rates-crypto</loc>
-  <lastmod>2023-08-07T03:39:21+00:00</lastmod>
+  <loc>https://monierate.com/converter?Amount=12&amp;From=NGN&amp;To=USD</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://monierate.com/ng/compare/currencies/best-uni-exchange-rates-crypto</loc>
-  <lastmod>2023-08-07T03:39:21+00:00</lastmod>
+  <loc>https://monierate.com/converter?Amount=15&amp;From=NGN&amp;To=USD</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://monierate.com/ng/compare/currencies/best-usdc-exchange-rates-crypto</loc>
-  <lastmod>2023-08-07T03:39:21+00:00</lastmod>
+  <loc>https://monierate.com/converter?Amount=25&amp;From=NGN&amp;To=USD</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://monierate.com/ng/compare/currencies/best-usdt-exchange-rates-crypto</loc>
-  <lastmod>2023-08-07T03:39:21+00:00</lastmod>
+  <loc>https://monierate.com/converter?Amount=30&amp;From=NGN&amp;To=USD</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://monierate.com/ng/compare/currencies/best-vet-exchange-rates-crypto</loc>
-  <lastmod>2023-08-07T03:39:21+00:00</lastmod>
+  <loc>https://monierate.com/converter?Amount=45&amp;From=NGN&amp;To=USD</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://monierate.com/ng/compare/currencies/best-wld-exchange-rates-crypto</loc>
-  <lastmod>2023-08-07T03:39:21+00:00</lastmod>
+  <loc>https://monierate.com/converter?Amount=50&amp;From=NGN&amp;To=USD</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://monierate.com/ng/compare/currencies/best-xlm-exchange-rates-crypto</loc>
-  <lastmod>2023-08-07T03:39:21+00:00</lastmod>
+  <loc>https://monierate.com/converter?Amount=75&amp;From=NGN&amp;To=USD</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://monierate.com/ng/compare/currencies/best-xmr-exchange-rates-crypto</loc>
-  <lastmod>2023-08-07T03:39:21+00:00</lastmod>
+  <loc>https://monierate.com/converter?Amount=100&amp;From=NGN&amp;To=USD</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://monierate.com/ng/compare/currencies/best-xrp-exchange-rates-crypto</loc>
-  <lastmod>2023-08-07T03:39:21+00:00</lastmod>
+  <loc>https://monierate.com/converter?Amount=300&amp;From=NGN&amp;To=USD</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://monierate.com/ng/compare/currencies/best-xtz-exchange-rates-crypto</loc>
-  <lastmod>2023-08-07T03:39:21+00:00</lastmod>
+  <loc>https://monierate.com/converter?Amount=400&amp;From=NGN&amp;To=USD</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://monierate.com/ng/compare/currencies/best-aoa-exchange-rates</loc>
-  <lastmod>2023-08-07T03:39:21+00:00</lastmod>
+  <loc>https://monierate.com/converter?Amount=500&amp;From=NGN&amp;To=USD</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://monierate.com/ng/compare/currencies/best-bif-exchange-rates</loc>
-  <lastmod>2023-08-07T03:39:21+00:00</lastmod>
+  <loc>https://monierate.com/converter?Amount=750&amp;From=NGN&amp;To=USD</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://monierate.com/ng/compare/currencies/best-bwp-exchange-rates</loc>
-  <lastmod>2023-08-07T03:39:21+00:00</lastmod>
+  <loc>https://monierate.com/converter?Amount=1000&amp;From=NGN&amp;To=USD</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://monierate.com/ng/compare/currencies/best-cdf-exchange-rates</loc>
-  <lastmod>2023-08-07T03:39:21+00:00</lastmod>
+  <loc>https://monierate.com/converter?Amount=3000&amp;From=NGN&amp;To=USD</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://monierate.com/ng/compare/currencies/best-cve-exchange-rates</loc>
-  <lastmod>2023-08-07T03:39:21+00:00</lastmod>
+  <loc>https://monierate.com/converter?Amount=5000&amp;From=NGN&amp;To=USD</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://monierate.com/ng/compare/currencies/best-djf-exchange-rates</loc>
-  <lastmod>2023-08-07T03:39:21+00:00</lastmod>
+  <loc>https://monierate.com/converter?Amount=7500&amp;From=NGN&amp;To=USD</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://monierate.com/ng/compare/currencies/best-dzd-exchange-rates</loc>
-  <lastmod>2023-08-07T03:39:21+00:00</lastmod>
+  <loc>https://monierate.com/converter?Amount=10000&amp;From=NGN&amp;To=USD</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://monierate.com/ng/compare/currencies/best-egp-exchange-rates</loc>
-  <lastmod>2023-08-07T03:39:21+00:00</lastmod>
+  <loc>https://monierate.com/converter?Amount=15000&amp;From=NGN&amp;To=USD</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://monierate.com/ng/compare/currencies/best-ern-exchange-rates</loc>
-  <lastmod>2023-08-07T03:39:21+00:00</lastmod>
+  <loc>https://monierate.com/converter?Amount=25000&amp;From=NGN&amp;To=USD</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://monierate.com/ng/compare/currencies/best-etb-exchange-rates</loc>
-  <lastmod>2023-08-07T03:39:21+00:00</lastmod>
+  <loc>https://monierate.com/converter?Amount=50000&amp;From=NGN&amp;To=USD</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://monierate.com/ng/compare/currencies/best-ghs-exchange-rates</loc>
-  <lastmod>2023-08-07T03:39:21+00:00</lastmod>
+  <loc>https://monierate.com/converter?Amount=75000&amp;From=NGN&amp;To=USD</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://monierate.com/ng/compare/currencies/best-gmd-exchange-rates</loc>
-  <lastmod>2023-08-07T03:39:21+00:00</lastmod>
+  <loc>https://monierate.com/converter?Amount=100000&amp;From=NGN&amp;To=USD</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://monierate.com/ng/compare/currencies/best-gnf-exchange-rates</loc>
-  <lastmod>2023-08-07T03:39:21+00:00</lastmod>
+  <loc>https://monierate.com/ng/compare/currencies</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://monierate.com/ng/compare/currencies/best-kes-exchange-rates</loc>
-  <lastmod>2023-08-07T03:39:21+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://monierate.com/ng/compare/currencies/best-kmf-exchange-rates</loc>
-  <lastmod>2023-08-07T03:39:21+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://monierate.com/ng/compare/currencies/best-lrd-exchange-rates</loc>
-  <lastmod>2023-08-07T03:39:21+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://monierate.com/ng/compare/currencies/best-lsl-exchange-rates</loc>
-  <lastmod>2023-08-07T03:39:21+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://monierate.com/ng/compare/currencies/best-lyd-exchange-rates</loc>
-  <lastmod>2023-08-07T03:39:21+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://monierate.com/ng/compare/currencies/best-mad-exchange-rates</loc>
-  <lastmod>2023-08-07T03:39:21+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://monierate.com/ng/compare/currencies/best-mga-exchange-rates</loc>
-  <lastmod>2023-08-07T03:39:21+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://monierate.com/ng/compare/currencies/best-mro-exchange-rates</loc>
-  <lastmod>2023-08-07T03:39:21+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://monierate.com/ng/compare/currencies/best-mur-exchange-rates</loc>
-  <lastmod>2023-08-07T03:39:21+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://monierate.com/ng/compare/currencies/best-mwk-exchange-rates</loc>
-  <lastmod>2023-08-07T03:39:21+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://monierate.com/ng/compare/currencies/best-mzn-exchange-rates</loc>
-  <lastmod>2023-08-07T03:39:21+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://monierate.com/ng/compare/currencies/best-nad-exchange-rates</loc>
-  <lastmod>2023-08-07T03:39:21+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://monierate.com/ng/compare/currencies/best-rwf-exchange-rates</loc>
-  <lastmod>2023-08-07T03:39:21+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://monierate.com/ng/compare/currencies/best-scr-exchange-rates</loc>
-  <lastmod>2023-08-07T03:39:21+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://monierate.com/ng/compare/currencies/best-sdg-exchange-rates</loc>
-  <lastmod>2023-08-07T03:39:21+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://monierate.com/ng/compare/currencies/best-shp-exchange-rates</loc>
-  <lastmod>2023-08-07T03:39:21+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://monierate.com/ng/compare/currencies/best-sll-exchange-rates</loc>
-  <lastmod>2023-08-07T03:39:21+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://monierate.com/ng/compare/currencies/best-sos-exchange-rates</loc>
-  <lastmod>2023-08-07T03:39:21+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://monierate.com/ng/compare/currencies/best-ssp-exchange-rates</loc>
-  <lastmod>2023-08-07T03:39:21+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://monierate.com/ng/compare/currencies/best-std-exchange-rates</loc>
-  <lastmod>2023-08-07T03:39:21+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://monierate.com/ng/compare/currencies/best-szl-exchange-rates</loc>
-  <lastmod>2023-08-07T03:39:21+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://monierate.com/ng/compare/currencies/best-tnd-exchange-rates</loc>
-  <lastmod>2023-08-07T03:39:21+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://monierate.com/ng/compare/currencies/best-tzs-exchange-rates</loc>
-  <lastmod>2023-08-07T03:39:21+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://monierate.com/ng/compare/currencies/best-ugx-exchange-rates</loc>
-  <lastmod>2023-08-07T03:39:21+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://monierate.com/ng/compare/currencies/best-xaf-exchange-rates</loc>
-  <lastmod>2023-08-07T03:39:21+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://monierate.com/ng/compare/currencies/best-xof-exchange-rates</loc>
-  <lastmod>2023-08-07T03:39:21+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://monierate.com/ng/compare/currencies/best-zar-exchange-rates</loc>
-  <lastmod>2023-08-07T03:39:21+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://monierate.com/ng/compare/currencies/best-zmw-exchange-rates</loc>
-  <lastmod>2023-08-07T03:39:21+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://monierate.com/ng/compare/currencies/best-zwl-exchange-rates</loc>
-  <lastmod>2023-08-07T03:39:21+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://monierate.com/bank-codes/ussd/zenithbank</loc>
-  <lastmod>2023-08-07T03:39:21+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://monierate.com/bank-codes/ussd/firstbank</loc>
-  <lastmod>2023-08-07T03:39:21+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://monierate.com/bank-codes/ussd/uba</loc>
-  <lastmod>2023-08-07T03:39:21+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://monierate.com/bank-codes/ussd/opay</loc>
-  <lastmod>2023-08-07T03:39:21+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://monierate.com/bank-codes/ussd/ecobank</loc>
-  <lastmod>2023-08-07T03:39:21+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://monierate.com/bank-codes/ussd/accessbank</loc>
-  <lastmod>2023-08-07T03:39:21+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://monierate.com/bank-codes/ussd/gtbank</loc>
-  <lastmod>2023-08-07T03:39:21+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://monierate.com/bank-codes/ussd/unionbank</loc>
-  <lastmod>2023-08-07T03:39:21+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://monierate.com/bank-codes/ussd/wemabank</loc>
-  <lastmod>2023-08-07T03:39:21+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://monierate.com/bank-codes/ussd/keystonebank</loc>
-  <lastmod>2023-08-07T03:39:21+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://monierate.com/bank-codes/ussd/fidelitybank</loc>
-  <lastmod>2023-08-07T03:39:21+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://monierate.com/bank-codes/ussd/fcmb</loc>
-  <lastmod>2023-08-07T03:39:21+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://monierate.com/bank-codes/ussd/sterlingbank</loc>
-  <lastmod>2023-08-07T03:39:21+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://monierate.com/blog?tag=finance</loc>
-  <lastmod>2023-08-07T03:39:21+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://monierate.com/blog/top-bitcoin-exchanges-in-nigeria-with-lightning-network-support</loc>
-  <lastmod>2023-08-07T03:39:21+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://monierate.com/blog?tag=product</loc>
-  <lastmod>2023-08-07T03:39:21+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://monierate.com/blog/payday-business-model-swot-analysis-competitors-2023</loc>
-  <lastmod>2023-08-07T03:39:21+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://monierate.com/blog?tag=currency</loc>
-  <lastmod>2023-08-07T03:39:21+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://monierate.com/blog/what-led-jack-dorsey-to-bitcoin-this-was-unexpected</loc>
-  <lastmod>2023-08-07T03:39:21+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://monierate.com/blog/how-to-convert-dollar-to-naira-on-payday</loc>
-  <lastmod>2023-08-07T03:39:21+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://monierate.com/blog/introducing-cash-in-app-an-automated-crypto-to-naira-app</loc>
-  <lastmod>2023-08-07T03:39:21+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://monierate.com/blog/how-to-convert-dollar-to-naira-on-eversend</loc>
-  <lastmod>2023-08-07T03:39:21+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://monierate.com/blog/analyzing-the-role-of-cbn-in-dollar-to-naira-conversion</loc>
-  <lastmod>2023-08-07T03:39:21+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://monierate.com/blog/how-to-make-profitable-investments-in-the-dollar-to-naira-market</loc>
-  <lastmod>2023-08-07T03:39:21+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://monierate.com/blog/navigating-the-forex-market-strategies-for-dollar-to-naira-conversion</loc>
-  <lastmod>2023-08-07T03:39:21+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://monierate.com/blog/exploring-the-history-of-dollar-to-naira-conversion-key-milestones-and-changes</loc>
-  <lastmod>2023-08-07T03:39:21+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://monierate.com/blog/dollar-to-naira-conversion-a-comprehensive-guide</loc>
-  <lastmod>2023-08-07T03:39:21+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://monierate.com/blog?tag=virtualcard</loc>
-  <lastmod>2023-08-07T03:39:21+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://monierate.com/blog/payday-virtual-cards</loc>
-  <lastmod>2023-08-07T03:39:21+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://monierate.com/blog/cashex-dollar-virtual-card</loc>
-  <lastmod>2023-08-07T03:39:21+00:00</lastmod>
+  <loc>https://monierate.com/ng/compare/providers</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://monierate.com/blog?tag=company</loc>
-  <lastmod>2023-08-07T03:39:21+00:00</lastmod>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://monierate.com/blog/how-to-make-something-people-want</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://monierate.com/blog?tag=product</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://monierate.com/blog/binance-funding-wallet-nigeria</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://monierate.com/blog/binance-spot-wallet-nigeria</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://monierate.com/blog/how-to-convert-usdt-to-ngn-on-binance-android-app-step-by-step-guide</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://monierate.com/blog/chipper-cash-dollar-card-4-things-to-jot-down-in-nigeria</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://monierate.com/blog/how-to-send-money-from-chipper-cash-to-bank-account-in-nigeria</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://monierate.com/blog/how-to-delete-your-chipper-cash-account</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://monierate.com/blog/can-you-recieve-dollars-on-chipper-cash-2023</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://monierate.com/blog/7-best-apps-like-chipper-cash-in-nigeria</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://monierate.com/blog/how-legit-is-chipper-cash-2023</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://monierate.com/blog?tag=currency</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://monierate.com/blog/how-to-convert-nigerian-naira-to-us-dollar-on-chipper-cash</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://monierate.com/blog/slice-the-bitcoin-app-replacing-google-ads</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://monierate.com/blog?tag=Guide</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://monierate.com/blog/how-to-buy-a-domain-name-with-bitcoin-top-registrars</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://monierate.com/blog?tag=finance</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://monierate.com/blog/top-bitcoin-exchanges-in-nigeria-with-lightning-network-support</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://monierate.com/blog/payday-business-model-swot-analysis-competitors-2023</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://monierate.com/blog/what-led-jack-dorsey-to-bitcoin-this-was-unexpected</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://monierate.com/blog/how-to-convert-dollar-to-naira-on-payday</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://monierate.com/blog/introducing-cash-in-app-an-automated-crypto-to-naira-app</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://monierate.com/blog/how-to-convert-dollar-to-naira-on-eversend</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://monierate.com/blog/analyzing-the-role-of-cbn-in-dollar-to-naira-conversion</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://monierate.com/blog/how-to-make-profitable-investments-in-the-dollar-to-naira-market</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://monierate.com/blog/navigating-the-forex-market-strategies-for-dollar-to-naira-conversion</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://monierate.com/blog/exploring-the-history-of-dollar-to-naira-conversion-key-milestones-and-changes</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://monierate.com/blog/dollar-to-naira-conversion-a-comprehensive-guide</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://monierate.com/blog?tag=virtualcard</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://monierate.com/blog/payday-virtual-cards</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://monierate.com/blog/cashex-dollar-virtual-card</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://monierate.com/blog/how-we-purchased-monierate-com-with-bitcoin</loc>
-  <lastmod>2023-08-07T03:39:21+00:00</lastmod>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://monierate.com/blog/how-i-came-up-with-the-name-monierate-com</loc>
-  <lastmod>2023-08-07T03:39:21+00:00</lastmod>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://monierate.com/blog/payday-wirepay-eversend-and-others-disabled-their-virtual-card</loc>
-  <lastmod>2023-08-07T03:39:21+00:00</lastmod>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
   <loc>https://monierate.com/blog/what-is-a-prepaid-card</loc>
-  <lastmod>2023-08-07T03:39:21+00:00</lastmod>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://monierate.com/converter</loc>
-  <lastmod>2023-08-07T03:39:21+00:00</lastmod>
+  <loc>https://monierate.com/converter?Amount=1&amp;From=BTC&amp;To=NGN</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
   <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://monierate.com/converter?Amount=3&amp;From=BTC&amp;To=NGN</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://monierate.com/converter?Amount=5&amp;From=BTC&amp;To=NGN</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://monierate.com/converter?Amount=7&amp;From=BTC&amp;To=NGN</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://monierate.com/converter?Amount=10&amp;From=BTC&amp;To=NGN</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://monierate.com/converter?Amount=12&amp;From=BTC&amp;To=NGN</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://monierate.com/converter?Amount=15&amp;From=BTC&amp;To=NGN</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://monierate.com/converter?Amount=25&amp;From=BTC&amp;To=NGN</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://monierate.com/converter?Amount=30&amp;From=BTC&amp;To=NGN</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://monierate.com/converter?Amount=45&amp;From=BTC&amp;To=NGN</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://monierate.com/converter?Amount=50&amp;From=BTC&amp;To=NGN</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://monierate.com/converter?Amount=75&amp;From=BTC&amp;To=NGN</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://monierate.com/converter?Amount=100&amp;From=BTC&amp;To=NGN</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://monierate.com/converter?Amount=300&amp;From=BTC&amp;To=NGN</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://monierate.com/converter?Amount=400&amp;From=BTC&amp;To=NGN</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://monierate.com/converter?Amount=500&amp;From=BTC&amp;To=NGN</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://monierate.com/converter?Amount=750&amp;From=BTC&amp;To=NGN</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://monierate.com/converter?Amount=1000&amp;From=BTC&amp;To=NGN</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://monierate.com/converter?Amount=3000&amp;From=BTC&amp;To=NGN</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://monierate.com/converter?Amount=5000&amp;From=BTC&amp;To=NGN</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://monierate.com/converter?Amount=7500&amp;From=BTC&amp;To=NGN</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://monierate.com/converter?Amount=10000&amp;From=BTC&amp;To=NGN</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://monierate.com/converter?Amount=15000&amp;From=BTC&amp;To=NGN</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://monierate.com/converter?Amount=25000&amp;From=BTC&amp;To=NGN</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://monierate.com/converter?Amount=50000&amp;From=BTC&amp;To=NGN</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://monierate.com/converter?Amount=75000&amp;From=BTC&amp;To=NGN</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://monierate.com/converter?Amount=100000&amp;From=BTC&amp;To=NGN</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://monierate.com/converter?Amount=1&amp;From=NGN&amp;To=BTC</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://monierate.com/converter?Amount=3&amp;From=NGN&amp;To=BTC</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://monierate.com/converter?Amount=5&amp;From=NGN&amp;To=BTC</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://monierate.com/converter?Amount=7&amp;From=NGN&amp;To=BTC</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://monierate.com/converter?Amount=10&amp;From=NGN&amp;To=BTC</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://monierate.com/converter?Amount=12&amp;From=NGN&amp;To=BTC</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://monierate.com/converter?Amount=15&amp;From=NGN&amp;To=BTC</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://monierate.com/converter?Amount=25&amp;From=NGN&amp;To=BTC</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://monierate.com/converter?Amount=30&amp;From=NGN&amp;To=BTC</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://monierate.com/converter?Amount=45&amp;From=NGN&amp;To=BTC</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://monierate.com/converter?Amount=50&amp;From=NGN&amp;To=BTC</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://monierate.com/converter?Amount=75&amp;From=NGN&amp;To=BTC</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://monierate.com/converter?Amount=100&amp;From=NGN&amp;To=BTC</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://monierate.com/converter?Amount=300&amp;From=NGN&amp;To=BTC</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://monierate.com/converter?Amount=400&amp;From=NGN&amp;To=BTC</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://monierate.com/converter?Amount=500&amp;From=NGN&amp;To=BTC</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://monierate.com/converter?Amount=750&amp;From=NGN&amp;To=BTC</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://monierate.com/converter?Amount=1000&amp;From=NGN&amp;To=BTC</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://monierate.com/converter?Amount=3000&amp;From=NGN&amp;To=BTC</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://monierate.com/converter?Amount=5000&amp;From=NGN&amp;To=BTC</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://monierate.com/converter?Amount=7500&amp;From=NGN&amp;To=BTC</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://monierate.com/converter?Amount=10000&amp;From=NGN&amp;To=BTC</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://monierate.com/converter?Amount=15000&amp;From=NGN&amp;To=BTC</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://monierate.com/converter?Amount=25000&amp;From=NGN&amp;To=BTC</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://monierate.com/converter?Amount=50000&amp;From=NGN&amp;To=BTC</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://monierate.com/converter?Amount=75000&amp;From=NGN&amp;To=BTC</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://monierate.com/converter?Amount=100000&amp;From=NGN&amp;To=BTC</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://monierate.com/converter?Amount=1&amp;From=USDT&amp;To=NGN</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://monierate.com/converter?Amount=3&amp;From=USDT&amp;To=NGN</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://monierate.com/converter?Amount=5&amp;From=USDT&amp;To=NGN</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://monierate.com/converter?Amount=7&amp;From=USDT&amp;To=NGN</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://monierate.com/converter?Amount=10&amp;From=USDT&amp;To=NGN</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://monierate.com/converter?Amount=12&amp;From=USDT&amp;To=NGN</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://monierate.com/converter?Amount=15&amp;From=USDT&amp;To=NGN</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://monierate.com/converter?Amount=25&amp;From=USDT&amp;To=NGN</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://monierate.com/converter?Amount=30&amp;From=USDT&amp;To=NGN</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://monierate.com/converter?Amount=45&amp;From=USDT&amp;To=NGN</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://monierate.com/converter?Amount=50&amp;From=USDT&amp;To=NGN</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://monierate.com/converter?Amount=75&amp;From=USDT&amp;To=NGN</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://monierate.com/converter?Amount=100&amp;From=USDT&amp;To=NGN</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://monierate.com/converter?Amount=300&amp;From=USDT&amp;To=NGN</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://monierate.com/converter?Amount=400&amp;From=USDT&amp;To=NGN</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://monierate.com/converter?Amount=500&amp;From=USDT&amp;To=NGN</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://monierate.com/converter?Amount=750&amp;From=USDT&amp;To=NGN</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://monierate.com/converter?Amount=1000&amp;From=USDT&amp;To=NGN</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://monierate.com/converter?Amount=3000&amp;From=USDT&amp;To=NGN</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://monierate.com/converter?Amount=5000&amp;From=USDT&amp;To=NGN</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://monierate.com/converter?Amount=7500&amp;From=USDT&amp;To=NGN</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://monierate.com/converter?Amount=10000&amp;From=USDT&amp;To=NGN</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://monierate.com/converter?Amount=15000&amp;From=USDT&amp;To=NGN</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://monierate.com/converter?Amount=25000&amp;From=USDT&amp;To=NGN</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://monierate.com/converter?Amount=50000&amp;From=USDT&amp;To=NGN</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://monierate.com/converter?Amount=75000&amp;From=USDT&amp;To=NGN</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://monierate.com/converter?Amount=100000&amp;From=USDT&amp;To=NGN</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://monierate.com/converter?Amount=1&amp;From=NGN&amp;To=USDT</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://monierate.com/converter?Amount=3&amp;From=NGN&amp;To=USDT</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://monierate.com/converter?Amount=5&amp;From=NGN&amp;To=USDT</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://monierate.com/converter?Amount=7&amp;From=NGN&amp;To=USDT</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://monierate.com/converter?Amount=10&amp;From=NGN&amp;To=USDT</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://monierate.com/converter?Amount=12&amp;From=NGN&amp;To=USDT</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://monierate.com/converter?Amount=15&amp;From=NGN&amp;To=USDT</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://monierate.com/converter?Amount=25&amp;From=NGN&amp;To=USDT</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://monierate.com/converter?Amount=30&amp;From=NGN&amp;To=USDT</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://monierate.com/converter?Amount=45&amp;From=NGN&amp;To=USDT</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://monierate.com/converter?Amount=50&amp;From=NGN&amp;To=USDT</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://monierate.com/converter?Amount=75&amp;From=NGN&amp;To=USDT</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://monierate.com/converter?Amount=100&amp;From=NGN&amp;To=USDT</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://monierate.com/converter?Amount=300&amp;From=NGN&amp;To=USDT</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://monierate.com/converter?Amount=400&amp;From=NGN&amp;To=USDT</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://monierate.com/converter?Amount=500&amp;From=NGN&amp;To=USDT</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://monierate.com/converter?Amount=750&amp;From=NGN&amp;To=USDT</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://monierate.com/converter?Amount=1000&amp;From=NGN&amp;To=USDT</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://monierate.com/converter?Amount=3000&amp;From=NGN&amp;To=USDT</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://monierate.com/converter?Amount=5000&amp;From=NGN&amp;To=USDT</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://monierate.com/converter?Amount=7500&amp;From=NGN&amp;To=USDT</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://monierate.com/converter?Amount=10000&amp;From=NGN&amp;To=USDT</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://monierate.com/converter?Amount=15000&amp;From=NGN&amp;To=USDT</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://monierate.com/converter?Amount=25000&amp;From=NGN&amp;To=USDT</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://monierate.com/converter?Amount=50000&amp;From=NGN&amp;To=USDT</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://monierate.com/converter?Amount=75000&amp;From=NGN&amp;To=USDT</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://monierate.com/converter?Amount=100000&amp;From=NGN&amp;To=USDT</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://monierate.com/bank-codes/ussd/zenithbank</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://monierate.com/bank-codes/ussd/firstbank</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://monierate.com/bank-codes/ussd/uba</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://monierate.com/bank-codes/ussd/opay</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://monierate.com/bank-codes/ussd/ecobank</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://monierate.com/bank-codes/ussd/accessbank</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://monierate.com/bank-codes/ussd/gtbank</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://monierate.com/bank-codes/ussd/unionbank</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://monierate.com/bank-codes/ussd/wemabank</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://monierate.com/bank-codes/ussd/keystonebank</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://monierate.com/bank-codes/ussd/fidelitybank</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://monierate.com/bank-codes/ussd/fcmb</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://monierate.com/bank-codes/ussd/sterlingbank</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://monierate.com/ng/compare/currencies/best-aud-exchange-rates</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://monierate.com/ng/compare/currencies/best-brl-exchange-rates</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://monierate.com/ng/compare/currencies/best-cad-exchange-rates</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://monierate.com/ng/compare/currencies/best-chf-exchange-rates</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://monierate.com/ng/compare/currencies/best-cny-exchange-rates</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://monierate.com/ng/compare/currencies/best-eur-exchange-rates</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://monierate.com/ng/compare/currencies/best-gbp-exchange-rates</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://monierate.com/ng/compare/currencies/best-inr-exchange-rates</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://monierate.com/ng/compare/currencies/best-jpy-exchange-rates</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://monierate.com/ng/compare/currencies/best-krw-exchange-rates</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://monierate.com/ng/compare/currencies/best-sgd-exchange-rates</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://monierate.com/ng/compare/currencies/best-usd-exchange-rates</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://monierate.com/ng/compare/currencies/best-aave-exchange-rates-crypto</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://monierate.com/ng/compare/currencies/best-ada-exchange-rates-crypto</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://monierate.com/ng/compare/currencies/best-avax-exchange-rates-crypto</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://monierate.com/ng/compare/currencies/best-bch-exchange-rates-crypto</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://monierate.com/ng/compare/currencies/best-bnb-exchange-rates-crypto</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://monierate.com/ng/compare/currencies/best-btc-exchange-rates-crypto</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://monierate.com/ng/compare/currencies/best-busd-exchange-rates-crypto</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://monierate.com/ng/compare/currencies/best-celo-exchange-rates-crypto</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://monierate.com/ng/compare/currencies/best-dai-exchange-rates-crypto</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://monierate.com/ng/compare/currencies/best-doge-exchange-rates-crypto</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://monierate.com/ng/compare/currencies/best-dot-exchange-rates-crypto</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://monierate.com/ng/compare/currencies/best-eos-exchange-rates-crypto</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://monierate.com/ng/compare/currencies/best-etc-exchange-rates-crypto</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://monierate.com/ng/compare/currencies/best-eth-exchange-rates-crypto</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://monierate.com/ng/compare/currencies/best-fil-exchange-rates-crypto</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://monierate.com/ng/compare/currencies/best-icp-exchange-rates-crypto</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://monierate.com/ng/compare/currencies/best-link-exchange-rates-crypto</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://monierate.com/ng/compare/currencies/best-ltc-exchange-rates-crypto</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://monierate.com/ng/compare/currencies/best-matic-exchange-rates-crypto</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://monierate.com/ng/compare/currencies/best-op-exchange-rates-crypto</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://monierate.com/ng/compare/currencies/best-shib-exchange-rates-crypto</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://monierate.com/ng/compare/currencies/best-sol-exchange-rates-crypto</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://monierate.com/ng/compare/currencies/best-theta-exchange-rates-crypto</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://monierate.com/ng/compare/currencies/best-trx-exchange-rates-crypto</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://monierate.com/ng/compare/currencies/best-uni-exchange-rates-crypto</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://monierate.com/ng/compare/currencies/best-usdc-exchange-rates-crypto</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://monierate.com/ng/compare/currencies/best-usdt-exchange-rates-crypto</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://monierate.com/ng/compare/currencies/best-vet-exchange-rates-crypto</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://monierate.com/ng/compare/currencies/best-wld-exchange-rates-crypto</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://monierate.com/ng/compare/currencies/best-xlm-exchange-rates-crypto</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://monierate.com/ng/compare/currencies/best-xmr-exchange-rates-crypto</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://monierate.com/ng/compare/currencies/best-xrp-exchange-rates-crypto</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://monierate.com/ng/compare/currencies/best-xtz-exchange-rates-crypto</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://monierate.com/ng/compare/currencies/best-aoa-exchange-rates</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://monierate.com/ng/compare/currencies/best-bif-exchange-rates</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://monierate.com/ng/compare/currencies/best-bwp-exchange-rates</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://monierate.com/ng/compare/currencies/best-cdf-exchange-rates</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://monierate.com/ng/compare/currencies/best-cve-exchange-rates</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://monierate.com/ng/compare/currencies/best-djf-exchange-rates</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://monierate.com/ng/compare/currencies/best-dzd-exchange-rates</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://monierate.com/ng/compare/currencies/best-egp-exchange-rates</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://monierate.com/ng/compare/currencies/best-ern-exchange-rates</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://monierate.com/ng/compare/currencies/best-etb-exchange-rates</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://monierate.com/ng/compare/currencies/best-ghs-exchange-rates</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://monierate.com/ng/compare/currencies/best-gmd-exchange-rates</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://monierate.com/ng/compare/currencies/best-gnf-exchange-rates</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://monierate.com/ng/compare/currencies/best-kes-exchange-rates</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://monierate.com/ng/compare/currencies/best-kmf-exchange-rates</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://monierate.com/ng/compare/currencies/best-lrd-exchange-rates</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://monierate.com/ng/compare/currencies/best-lsl-exchange-rates</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://monierate.com/ng/compare/currencies/best-lyd-exchange-rates</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://monierate.com/ng/compare/currencies/best-mad-exchange-rates</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://monierate.com/ng/compare/currencies/best-mga-exchange-rates</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://monierate.com/ng/compare/currencies/best-mur-exchange-rates</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://monierate.com/ng/compare/currencies/best-mwk-exchange-rates</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://monierate.com/ng/compare/currencies/best-mzn-exchange-rates</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://monierate.com/ng/compare/currencies/best-nad-exchange-rates</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://monierate.com/ng/compare/currencies/best-rwf-exchange-rates</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://monierate.com/ng/compare/currencies/best-scr-exchange-rates</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://monierate.com/ng/compare/currencies/best-sdg-exchange-rates</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://monierate.com/ng/compare/currencies/best-shp-exchange-rates</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://monierate.com/ng/compare/currencies/best-sll-exchange-rates</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://monierate.com/ng/compare/currencies/best-sos-exchange-rates</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://monierate.com/ng/compare/currencies/best-ssp-exchange-rates</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://monierate.com/ng/compare/currencies/best-std-exchange-rates</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://monierate.com/ng/compare/currencies/best-szl-exchange-rates</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://monierate.com/ng/compare/currencies/best-tnd-exchange-rates</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://monierate.com/ng/compare/currencies/best-tzs-exchange-rates</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://monierate.com/ng/compare/currencies/best-ugx-exchange-rates</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://monierate.com/ng/compare/currencies/best-xaf-exchange-rates</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://monierate.com/ng/compare/currencies/best-xof-exchange-rates</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://monierate.com/ng/compare/currencies/best-zar-exchange-rates</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://monierate.com/ng/compare/currencies/best-zmw-exchange-rates</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://monierate.com/ng/compare/currencies/best-zwl-exchange-rates</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://monierate.com/ng/compare/providers/accrue-exchange-rates</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://monierate.com/ng/compare/providers/binance-exchange-rates</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://monierate.com/ng/compare/providers/bitmama-exchange-rates</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://monierate.com/ng/compare/providers/bitnob-exchange-rates</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://monierate.com/ng/compare/providers/bybit-exchange-rates</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://monierate.com/ng/compare/providers/cbn-exchange-rates</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://monierate.com/ng/compare/providers/cashwyre-exchange-rates</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://monierate.com/ng/compare/providers/chippercash-exchange-rates</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://monierate.com/ng/compare/providers/coinprofile-exchange-rates</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://monierate.com/ng/compare/providers/eversend-exchange-rates</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://monierate.com/ng/compare/providers/flutterwave-exchange-rates</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://monierate.com/ng/compare/providers/grey-exchange-rates</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://monierate.com/ng/compare/providers/klasha-exchange-rates</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://monierate.com/ng/compare/providers/luno-exchange-rates</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://monierate.com/ng/compare/providers/paxful-exchange-rates</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://monierate.com/ng/compare/providers/payday-exchange-rates</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://monierate.com/ng/compare/providers/payoneer-exchange-rates</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://monierate.com/ng/compare/providers/paypal-exchange-rates</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://monierate.com/ng/compare/providers/piggyvest-exchange-rates</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://monierate.com/ng/compare/providers/quidax-exchange-rates</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://monierate.com/ng/compare/providers/remitano-exchange-rates</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://monierate.com/ng/compare/providers/remitly-exchange-rates</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://monierate.com/ng/compare/providers/sendcash-exchange-rates</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://monierate.com/ng/compare/providers/skrill-exchange-rates</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://monierate.com/ng/compare/providers/wirepay-exchange-rates</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://monierate.com/ng/compare/providers/worldremit-exchange-rates</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://monierate.com/ng/compare/providers/yellowcard-exchange-rates</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://monierate.com/converter/chippercash?Amount=1&amp;From=NGN&amp;To=USD</loc>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
+  <priority>0.51</priority>
 </url>
 <url>
   <loc>https://monierate.com/converter/cash-in?From=USD&amp;To=NGN&amp;Amount=1</loc>
-  <lastmod>2023-08-07T03:39:21+00:00</lastmod>
+  <lastmod>2023-10-19T22:50:48+00:00</lastmod>
   <priority>0.51</priority>
 </url>
 
