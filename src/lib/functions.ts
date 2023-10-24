@@ -88,13 +88,9 @@ export function toggleButtonLoad(selector: string, timeout = 3000)
     }
 }
 
-export const format = (dt, d = "datetime") => {
+export const format = (dt: any, d = "datetime") => {
 
     dt = changeTimeZone(dt)
-    
-    if (typeof(dt) === "string") {
-        dt = new Date(dt)
-    }
 
     if (d == 'date') {
         return date.format(dt, 'ddd, MMM DD YYYY')

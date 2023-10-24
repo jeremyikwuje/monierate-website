@@ -227,7 +227,7 @@ convertNow()
     {#if pairRates.length > 0}
     <div id="more-rates" class="mt-16">
         <h2 class="mb-8 text-center text-2xl">Best {convertFrom} to {convertTo} rates</h2>
-        <div class="section">
+        <div class="section overflow-x-scroll md:overflow-x-hidden">
             <table class="table-auto overflow-x-scroll w-full text-sm text-left ">
                 <thead>
                     <tr>
