@@ -217,6 +217,9 @@ function hidePromotionBar() {
             <p class="text-sm mb-4 text-gray-500 dark:text-gray-300">
                 References made to third party names, logos and trademarks on this website are to identify corresponding goods and services that Monierate visitor can themselves exchange currencies. Unless otherwise specified, the trademark holders are not affiliated with Monierate, our products or website, and they do not sponsor or endorse Monierate services. Such references are included strictly as nominative fair use under applicable trademark law and remain fully the property of their respective trademark holders.
             </p>
+            <p class="text-sm mb-4 text-gray-500 dark:text-gray-300">
+                If you subscribe for our exchange rate <a href="/alert">alert</a>, you understand and accept the <a href="/policy/data">Monierate data policy</a>.
+            </p>
             <p class="text-sm">
                 Built and maintained by <a href="https://twitter.com/jeremyikwuje" class="text-gray-800 dark:text-gray-300">@jeremyikwuje ⚡</a> and <a href="https://twitter.com/onionsman" class="text-gray-800 dark:text-gray-300">@onionsman</a>
             </p>

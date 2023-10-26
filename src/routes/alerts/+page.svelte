@@ -240,11 +240,11 @@
             </div>
         {/if}
 
-        <!-- <div class="mt-12">
+        <div class="mt-12">
             <span class="block text-sm text-gray-600 dark:text-gray-300">
-                Monierate Naira Rate Alerts always shows the most reliable naira exchange rate in the market. We sourced and aggregate exchange rate data from multiple providers in Nigeria. Exchange rates move frequently and the current rate might not be available for long. Getting this rate doesn't gaurantee the rate may the same when you try to exchange using your favorite wallet, banks, or money agent. By creating a rate alert, you accept the Monierate terms.
+                We source currency data from multiple providers. If you subscribe for our exchange alert, you understand and accept the <a href="/policy/data">Monierate data policy</a>.
             </span>
-        </div> -->
+        </div>
     </section>
 </main>
 
