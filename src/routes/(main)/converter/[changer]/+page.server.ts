@@ -3,28 +3,26 @@ import { error } from "@sveltejs/kit";
 
 export const load: PageServerLoad = (async ({ params, url, fetch }) => {
 
-    try {    
-        let resChanger = fetch(`/api/changer?code=${params.changer}`);
-        let resMarket = fetch(`/api/market?changer=${params.changer}`);
+    try {
+        const platform = params.changer
+
+        let resPairs = fetch(`/api/pairs`)
         let resCurrencies = fetch(`/api/currencies`);
+        let resChanger = fetch(`/api/changer?code=${platform}`)
 
         let urlParams = url.searchParams
         const convert = {
-            From: urlParams.get('From') || '',
-            To: urlParams.get('To') || '',
-            Amount: urlParams.get('Amount') || 0
+            From: urlParams.get('From') || 'usd',
+            To: urlParams.get('To') || 'ngn',
+            Amount: urlParams.get('Amount') || 1
         }
 
-        console.log(params.changer)
-
+        const pairs = (await (await resPairs).json())
         const changer = (await (await resChanger).json())
-        const market = (await (await resMarket).json())
         const currencies = (await (await resCurrencies).json())
 
-        console.log(market)
-
-        if (Object.keys(market).length == 0) {
-            throw error(500, "Market data failed.")
+        if (Object.keys(pairs).length == 0) {
+            throw error(500, "Pairs data failed.")
         }
         if (Object.keys(currencies).length == 0) {
             throw error(500, "Currencies data failed.")
@@ -35,12 +33,13 @@ export const load: PageServerLoad = (async ({ params, url, fetch }) => {
         
         return {
             changer,
-            market,
+            pairs,
             convert,
             currencies
         }
     }
     catch(e: any) {
-        throw error(500, e.message)
+        console.log(e)
+        throw error(502, `Unable to fetch an important data`)
     }
 })

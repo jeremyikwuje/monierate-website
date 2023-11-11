@@ -12,134 +12,128 @@
 </svelte:head>
 
 <script lang="ts">
-    import type { PageData } from "./$types"
-    import Money from "$lib/money";
-    import { round, chain } from "mathjs"
+import type { PageData } from "./$types"
+import Money from "$lib/money";
+import { round, chain } from "mathjs"
+import { changeParam, format } from "$lib/functions"
 
-    export let data: PageData;
-    let changer = data.changer
-    let market = data.market
-    let convert = data.convert
-    const currencies = data.currencies
+export let data: PageData;
+let changer = data.changer
+let pairs = data.pairs
+let pairRates: any = {}
+let changerRate: any = {}
+let convert = data.convert
+let currencies = data.currencies
 
-    let rates = JSON.parse(market.rates)
-    let convertFrom = convert.From.toUpperCase()
-    let convertTo = convert.To.toUpperCase()
-    let convertAmount = parseFloat(`${convert.Amount}`)
+let convertFrom = convert.From.toUpperCase()
+let convertTo = convert.To.toUpperCase()
+let convertAmount = parseFloat(`${convert.Amount}`)
+let unitCurrency = convertFrom
+let convertResult = {
+    rate: 0,
+    rateInverse: 0,
+    conversion: 0,
+}
 
-    let convertResult = {
-        rate: 0,
-        rateInverse: 0,
-        conversion: 0,
+// initialize supported currencies
+var supported_pairs = ['usdngn', 'btcngn', 'usdtngn', 'usdcngn']
+
+var currencyFrom: any = {}
+var currencyTo: any = {}
+
+var moreConversions: any = {
+    from: [],
+    to: []
+}
+
+function convertNow() {
+    let from = convertFrom.toLowerCase()
+    let to = convertTo.toLowerCase()
+    
+    currencyFrom = currencies.find( c => c.code === from)
+    currencyTo = currencies.find( c => c.code === to)
+
+    convertResult.rate = 0
+    convertResult.rateInverse = 0
+
+    if (from != to) {
+        /** Get the rate */
+        let pair = `${from}${to}`
+        // get rates of a pair
+        let pairData = pairs.find( (p: any) => p.pair === pair )
+
+        // if pair is found
+        if (pairData !== undefined) {
+            pairRates = pairData.rates || {}
+
+            // if rate is found for this changer
+            if (pairRates.hasOwnProperty(changer.code)) {
+                changerRate = pairRates[changer.code]
+                changerRate.buy = parseFloat(`${changerRate.buy || 1}`)
+                
+                if (changerRate.buy > 0) {
+                    convertResult.rate = changerRate.buy
+                    convertResult.rateInverse = 1 / convertResult.rate
+                }
+            }
+        }
+        else {
+            pair = `${to}${from}`
+            pairData = pairs.find( (p: any) => p.pair === pair )
+
+            if (pairData) {
+                pairRates = pairData.rates || {}
+
+                // if rate is found for this changer
+                if (!pairRates.hasOwnProperty(changer.code)) {
+                    changerRate = pairRates[changer.code]
+                    changerRate.buy = parseFloat(`${changerRate.buy || 1}`)
+
+                    if (changerRate.buy > 0) {
+                        convertResult.rateInverse = changerRate.buy
+                        convertResult.rate = 1 / convertResult.rateInverse
+                    }
+                }
+            } 
+        }
     }
+    
+    convertResult.conversion = round(chain(convertResult.rate).multiply(convertAmount).done(), 8)
 
-    // initialize market currencies
-    var marketCurrencies: [] = []
-    var currencyFrom: any = {}
-    var currencyTo: any = {}
-    var moreConversions: any = {
+    getMoreConversions()
+}
+
+async function getMoreConversions() {
+    let series = [ 1, 3, 5, 7, 10, 12, 15, 25, 30, 45, 50, 75, 100, 300, 400, 500, 750, 1000, 3000, 5000, 7500, 10000, 15000, 25000, 50000, 75000, 100000 ]
+    let conversions: any = {
         from: [],
         to: []
     }
 
-    function convertNow() {
-        let from = convertFrom.toLowerCase()
-        let to = convertTo.toLowerCase()
+    series.forEach( serie => {
 
-        console.log(from + to)
-
-        let rate = 1  // 1:1
-        let rateInverse = 1
-        
-        if (from != to) {
-            
-            if (!rates.hasOwnProperty(from)) {
-                convertResult.rate = 0
-                convertResult.rateInverse = 0
-                convertResult.conversion = 0
-
-                return
-            }
-
-            let pair = JSON.parse(rates[from])
-            if (!pair.hasOwnProperty(to)) {
-                convertResult.rate = 0
-                convertResult.rateInverse = 0
-                convertResult.conversion = 0
-                
-                return
-            }
-
-            
-            let pairInverse = JSON.parse(rates[to])
-            if (!pairInverse.hasOwnProperty(from)) {
-                convertResult.rate = 0
-                convertResult.rateInverse = 0
-                convertResult.conversion = 0
-                
-                return
-            }
-
-            rate = pair[to]
-            rateInverse = pairInverse[from]
-        }
-
-        /** Calcuate the conversion*/
-        convertResult.rate = rate
-        convertResult.rateInverse = rateInverse
-        convertResult.conversion = round(chain(rate).multiply(convertAmount).done(), 8)
-
-        currencyFrom = marketCurrencies.find( c => c.code === from)
-        currencyTo = marketCurrencies.find( c => c.code === to)
-        reloadMoreConversions()
-    }
-
-    function updateCurrencies() {
-        let from = convertFrom.toLowerCase()
-        let to = convertTo.toLowerCase()
-        
-        currencies.forEach( (currency: any) => {
-            let code = currency.code
-
-            if (rates.hasOwnProperty(code)) {
-                marketCurrencies.push(currency)
-            }
-        })
-    }
-
-    async function getMoreConversions() {
-        let series = [ 1, 3, 5, 7, 10, 12, 15, 25, 30, 45, 50, 75, 100, 300, 400, 500, 750, 1000, 3000, 5000, 7500, 10000, 15000, 25000, 50000, 75000, 100000 ]
-        let conversions: any = {
-            from: [],
-            to: []
-        }
-
-        series.forEach( serie => {
-
-            let rate = convertResult.rate
-            conversions.from.push({
-                amount: serie,
-                conversion: round(chain(rate).multiply(serie).done(), 8)
-            })
-
-            let rateInverse = convertResult.rateInverse
-            conversions.to.push({
-                amount: serie,
-                conversion: round(chain(rateInverse).multiply(serie).done(), 8)
-            })
+        let rate = convertResult.rate
+        conversions.from.push({
+            amount: serie,
+            conversion: round(chain(rate).multiply(serie).done(), 8)
         })
 
-        return conversions
-    }
+        console.log(rate)
 
-    function reloadMoreConversions() {
-        moreConversions = getMoreConversions()
-    }
+        let rateInverse = convertResult.rateInverse
+        conversions.to.push({
+            amount: serie,
+            conversion: round(chain(rateInverse).multiply(serie).done(), 8)
+        })
 
-    // run the conversions
+        console.log(rateInverse)
+    })
 
-    updateCurrencies()
-    convertNow()
+    moreConversions = conversions
+}
+
+// run the conversions
+convertNow()
 </script>
 
 <div class="mb-24">
@@ -163,7 +157,7 @@
                     <span class="block md:w-[30%]">
                         <label class="label" for="field-convert-from">From</label>
                         <select id="field-convert-from" class="select" bind:value={convertFrom} on:change={convertNow}>
-                            {#each Object.entries(marketCurrencies) as [index, currency]}
+                            {#each Object.entries(currencies) as [index, currency]}
                                 <option value="{currency.code.toUpperCase()}">{currency.code.toUpperCase()} - {currency.name}</option>
                             {/each}
                         </select>
@@ -171,7 +165,7 @@
                     <span class="block md:w-[30%]">
                         <label class="label" for="field-convert-to">To</label>
                         <select id="field-convert-to" class="select" bind:value={convertTo} on:change={convertNow}>
-                            {#each Object.entries(marketCurrencies) as [index, currency]}
+                            {#each Object.entries(currencies) as [index, currency]}
                                 <option value="{currency.code.toUpperCase()}">{currency.code.toUpperCase()} - {currency.name}</option>
                             {/each}
                         </select>
@@ -203,7 +197,7 @@
                         </span>
                     </span>
                     <span class="block text-sm md:w-[50%] p-4">
-                        {currencyFrom.name} to {currencyTo.name} conversion on {changer.name} — Last updated {new Date(market.updatedAt)}
+                        {currencyFrom.name} to {currencyTo.name} conversion on {changer.name} — Last updated {new Date(changerRate.updatedAt)}
                     </span>
                 </div>
                 
@@ -219,17 +213,17 @@
         </div>
     </div>
 
-    <div class="block w-[95%] mx-auto md:w-[70%] md:flex md:justify-between md:items-center mt-24">
-        <div class="bg-white dark:bg-gray-900 shadow-lg rounded-lg md:w-[40%] mb-4">
-            <span class="border-b border-gray-200 dark:border-gray-700 block py-4 px-8">
+    <div class="more-conversion">
+        <div class="entry">
+            <span class="header">
                 <h2 class="text-center text-lg">
-                    Convert {currencyFrom.name} to {currencyTo.name} on {changer.name}
+                    Convert {currencyFrom.name} to {currencyTo.name}
                 </h2>
             </span>
             <div class="pb-4">
                 {#await moreConversions}
                     <span class="block text-center py-8 px-4">Loading...</span>
-                {:then data}
+                {:then conversions}
                 <table class="w-full text-center px-8">
                     <thead>
                         <tr>
@@ -238,7 +232,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                        {#each Object.entries(data.from) as [index, convert]}
+                        {#each Object.entries(conversions.from) as [index, convert]}
                         <tr>
                             <td class="py-2.5">
                                 <a data-sveltekit-reload href="/converter/{changer.code}?Amount={convert.amount}&From={convertFrom}&To={convertTo}">
@@ -255,14 +249,14 @@
                 {/await}
             </div>
         </div>
-        <div class="bg-white dark:bg-gray-900 shadow-lg rounded-lg md:w-[40%] mb-4">
-            <span class="border-b border-border-gray-200 dark:border-gray-700 block py-4 px-8">
-                <h2 class="text-center text-lg">Convert {currencyTo.name} to {currencyFrom.name} on {changer.name}</h2>
+        <div class="entry">
+            <span class="header">
+                <h2 class="text-center text-lg">Convert {currencyTo.name} to {currencyFrom.name}</h2>
             </span>
             <div class="pb-4">
                 {#await moreConversions}
                     <span class="block text-center py-8 px-4">Loading...</span>
-                {:then data}
+                {:then conversions}
                     <table class="w-full text-center px-8">
                         <thead class="">
                             <tr>
@@ -271,7 +265,7 @@
                             </tr>
                         </thead>
                         <tbody>
-                                {#each Object.entries(data.to) as [index, convert]}
+                                {#each Object.entries(conversions.to) as [index, convert]}
                                 <tr>
                                     <td class="py-2.5">
                                         <a data-sveltekit-reload href="/converter/{changer.code}?Amount={convert.amount}&From={convertTo}&To={convertFrom}">
@@ -313,14 +307,56 @@
         <h2 class="text-2xl mb-6 text-center">About {changer.name}</h2>
         <hr class="mb-12">
         <div class="block px-8 bg-white dark:bg-gray-900 py-4 shadow-lg">
-           You can convert {convertFrom} to {convertTo} and {convertTo} to {convertFrom} on {changer.name}. As at {new Date(market.updatedAt)}, <strong>1 {convertFrom} is about {Money.format(convertResult.rate)} {convertTo} on {changer.name} and 1 {convertTo} is about {Money.format(convertResult.rateInverse)} {convertFrom} on {changer.name}</strong>.
+           You can convert {convertFrom} to {convertTo} and {convertTo} to {convertFrom} on {changer.name}. As at {new Date(changerRate.updatedAt)}, <strong>1 {convertFrom} is about {Money.format(convertResult.rate)} {convertTo} on {changer.name} and 1 {convertTo} is about {Money.format(convertResult.rateInverse)} {convertFrom} on {changer.name}</strong>.
         </div>
     </div>
 </div>
 
 
 <style>
-   label {
+.section {
+    @apply w-[95%] md:w-[70%] bg-white dark:bg-gray-900 shadow-lg rounded-lg px-8 py-4 mx-auto;
+}
+
+.more-conversion {
+    @apply w-[95%] mx-auto md:w-[70%] md:flex md:justify-between md:items-center mt-16
+}
+.more-conversion .entry {
+    @apply bg-white dark:bg-gray-900 shadow-lg rounded-lg md:w-[40%] mb-4
+}
+.more-conversion .entry .header {
+    @apply border-b border-gray-200 dark:border-gray-700 block py-4 px-8
+}
+
+label {
     @apply font-bold;
-   }
+}
+table thead th {
+    @apply dark:text-gray-300 text-black whitespace-nowrap
+}
+table tbody tr td {
+    @apply py-6 whitespace-nowrap
+}
+table tr td:first-child, table thead th:first-child {
+    @apply pl-4
+}
+
+.changer {
+    @apply flex justify-between items-center py-2 border-b border-gray-200;
+}
+.changer:last-child {
+    @apply border-b-0
+}
+.changer-icon {
+    @apply bg-transparent border border-black rounded-full w-[24px] h-[24px] mr-2;
+}
+.changer-title {
+    @apply font-semibold text-lg capitalize text-gray-800 dark:text-gray-300;
+}
+.changer-rate-base {
+    @apply text-gray-500 dark:text-gray-400;
+}
+.changer-rate {
+    @apply block font-semibold text-lg text-gray-800 dark:text-light;
+}
 </style>

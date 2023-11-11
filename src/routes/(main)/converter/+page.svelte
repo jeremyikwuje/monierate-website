@@ -115,27 +115,6 @@ async function getMoreConversions() {
     moreConversions = conversions
 }
 
-/** Get the rates object and return the average rate */
-function calculateRate(rates: any) {
-    // do not include the following rates
-    const exclude = ['market', 'cbn', 'official']
-    
-    let n: number = 0
-    let sum: number = 0
-    for (let rate in rates) {
-        if (exclude.includes(rate)) {
-            continue
-        }
-
-        sum += parseFloat(`${rates[rate].buy}`)
-        n += 1
-    }
-
-    const average = sum / n
-
-    return round(average, 4)
-}
-
 convertNow()
 </script>
 
@@ -250,7 +229,7 @@ convertNow()
                         {#if changer_code != 'market'}
                         <tr class="mb-4 border-t border-gray-200 dark:border-gray-700">
                             <td>
-                                <a href="/converter/{changer_code}?Amount=1&From=USD&To=NGN" class="flex items-center">
+                                <a href="/converter/{changer_code}?Amount=1&From={convertFrom}&To={convertTo}" class="flex items-center">
                                     <span class="changer-icon">
                                         <img width="22px" height="22px" src="/icons/{changers[changer_code].icon}" class="rounded-full" alt="{changers[changer_code].name} icon">
                                     </span>
