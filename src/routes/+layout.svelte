@@ -7,6 +7,7 @@ import { browser } from "$app/environment";
 import Money from "$lib/money";
 
 export let data
+let sponsorLink = data.sponsorLink
 let market_avg = data.market_avg
 let top_rates = {
     usdngn: {
@@ -142,7 +143,7 @@ function hidePromotionBar() {
 </div>
 
 {#if path != ''}
-<div class="bg-white dark:bg-gray-800 dark:border-gray-600 shadow-b-md mb-16">
+<div class="bg-white dark:bg-gray-800 dark:border-gray-600 shadow-b-md">
     <div class="container">
         <span class="text-sm">
             <a href="/" class="mr-2 underline">Home</a>
@@ -164,6 +165,13 @@ function hidePromotionBar() {
     </div>
 </div>
 {/if}
+
+<!-- Landscape Top/Bottom -->
+<!-- <div class="ad-top-banner container mt-4">
+    <a href="{sponsorLink}" target="_blank">
+        <img src="/ad-banner-wide-landscape.jpg" alt="Top Ad Banner" class="ad-top-banner-img mx-auto md:w-[90%]">
+    </a>
+</div> -->
     
 <slot />
     

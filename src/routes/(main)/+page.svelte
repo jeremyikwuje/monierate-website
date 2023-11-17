@@ -23,10 +23,10 @@
     <meta property="og:image" content="https://monierate.com/monierate-og-image.png">
 </svelte:head>
 
-<div class="pt-8 pb-4">
+<div class="pt-4 pb-4">
     <div class="container">
-        <h1 class="text-2xl md:text-4xl mb-2 dark:text-gray-100">Today's dollar to naira rates on exchanges</h1>
-        <div class="mb-12 text-gray-600 font-normal dark:text-gray-300">
+        <h1 class="text-2xl md:text-4xl mb-2 dark:text-gray-100 md:text-center">Today's dollar to naira rates on exchanges</h1>
+        <div class="mb-12 text-gray-600 font-normal dark:text-gray-300 md:text-center">
             <p>
                 Compare the prices of dollar to naira from {total} exchange providers.
             </p>
