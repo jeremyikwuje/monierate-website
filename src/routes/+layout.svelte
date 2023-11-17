@@ -27,6 +27,12 @@ let top_rates = {
         name: 'USDT/NGN',
         from: 'USDT',
         to: 'NGN'
+    },
+    eurngn: {
+        parallel: market_avg.eurngn.parallel,
+        name: 'EUR/NGN',
+        from: 'EUR',
+        to: 'NGN'
     }
 }
 

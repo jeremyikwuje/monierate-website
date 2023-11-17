@@ -54,9 +54,9 @@ function convertNow() {
             
             // get rates of a pair
             let pairData = pairs.find( (p: any) => p.pair === pair )
-            pairRates = Object.entries(pairData.rates || {})
-            // sort pair rates descending order
-            pairRates = pairRates.sort( (x: any, y: any) => x[1].buy - y[1].buy )
+            pairRates = sortRates(pairData.rates || {})
+
+            console.log('yes', pairRates)
         }
         else {
             pair = `${to}${from}`
@@ -68,15 +68,15 @@ function convertNow() {
 
                 // get rates of a pair
                 let pairData = pairs.find( (p: any) => p.pair === pair )
-                pairRates = Object.entries(pairData.rates || {})
-                // sort pair rates descending order
-                pairRates = pairRates.sort( (x: any, y: any) => x[1].buy - y[1].buy )
+                pairRates = sortRates(pairData.rates || {})
             } else {
                 rate = 0
                 rateInverse = 0
                 unitCurrency = from.toUpperCase()
             }
         }
+
+
     }
 
     /** Calcuate the conversion*/
@@ -113,6 +113,38 @@ async function getMoreConversions() {
     })
 
     moreConversions = conversions
+}
+
+function sortRates(rates: any) {
+    // changer is not specified
+    // so get all rates from pair
+    let rates_entries = Object.entries(rates)
+
+    /** Seperate the rate with zero buy rate */
+    let only_buy_rates: any = []
+    let only_sell_rates: any = []
+    let key: string
+    let value: any
+    for ([key, value] of rates_entries) {
+        let rate = [key, value]
+
+        if (value.buy == 0) {
+            only_sell_rates.push(rate)
+        }
+        else {
+            only_buy_rates.push(rate)
+        }
+    }
+
+    // sort the rates by ascending order
+    const sort_only_buy_rates = only_buy_rates.sort((x: any, y: any) => x[1].buy - y[1].buy)
+    // sort the sell rates by decending order
+    const sort_only_sell_rates = only_sell_rates.sort(
+        (x: any, y: any) => y[1].sell - x[1].sell
+    )
+
+    let result: any = sort_only_buy_rates.concat(sort_only_sell_rates)
+    return result
 }
 
 convertNow()
