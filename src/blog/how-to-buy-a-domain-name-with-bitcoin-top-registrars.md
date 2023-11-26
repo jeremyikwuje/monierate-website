@@ -6,7 +6,7 @@ description: "Securing a domain name is the first step toward establishing an
   we'll delve into some of the top domain registrars that accept Bitcoin
   payments, highlighting their features and benefits.  "
 createdAt: 2023-08-08T16:54:53.283Z
-updatedAt: 2023-08-08T16:54:53.317Z
+updatedAt: 2023-11-26T18:58:54.182Z
 tag: Guide
 image: https://monierate.com/uploads/shocked-bitcoin-investor-on-laptop-1-.jpg
 published: true
