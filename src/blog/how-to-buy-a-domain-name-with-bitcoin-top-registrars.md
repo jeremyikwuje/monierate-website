@@ -21,7 +21,27 @@ While traditional payment methods are commonly used to purchase domain names, th
 
 ## Top domain registrars that accept Bitcoin
 
-### 1. Namecheap
+### 1. MonoVM
+MonoVM is another popular domain registrar that accept Bitcoins payments. MonoVM is a company that provides various hosting services, including virtual private servers (VPS), dedicated servers, and domain registration. They are known for offering affordable hosting solutions with a focus on VPS hosting.
+
+**.COM price**: $15.49 - 16.49
+
+**Free features**: DNS
+
+**Alternative payment methods**: Paypal, Mint, Perfect Money, Card, etc.
+
+#### How to purchase a domain on MonoVM using Bitcoin
+
+1. **Select domain**: Choose the domain you want from [MonoVM](https://monovm.com).
+2. **Add to Cart**: Add your selected domain to the shopping cart.
+3. **Proceed to Checkout**: Go to the checkout page to review your order.
+4. **Choose Payment Method**: During the checkout process, you should see various payment options. Select "Bitcoin" as your payment method.
+5. **Generate Payment Details**: MonoVM will likely provide you with the necessary information to complete the Bitcoin payment. This may include a Bitcoin address and the amount to pay.
+6. **Complete Bitcoin Payment**: Use your Bitcoin wallet to send the specified amount to the provided Bitcoin address. Follow the instructions carefully.
+7. **Payment Confirmation**: After sending the Bitcoin payment, you might need to wait for the transaction to be confirmed on the Bitcoin network.
+8. **Service Activation**: Once the Bitcoin transaction is confirmed, MonoVM will receive the payment and process your order. You should receive confirmation, and your services will be activated.
+
+### 2. Namecheap
 
 Namecheap is a well-established domain registrar known for its user-friendly interface and competitive pricing. It's no surprise that they also support Bitcoin payments. With a wide range of domain extensions and hosting services, Namecheap provides a seamless experience for customers looking to purchase domains using Bitcoin.  
 
@@ -46,7 +66,7 @@ Namecheap is a well-established domain registrar known for its user-friendly int
 
 These simplified steps should help guide you through the process of purchasing a domain on Namecheap using Bitcoin.
 
-### 2. Spaceship
+### 3. Spaceship
 
 Spaceship is a new domain registrar that embraces Bitcoin for payments. Offering a secure platform, it lets you purchase domains using cryptocurrency. With a user-friendly interface and commitment to digital innovation, [Spaceship](http://spaceship.com/) provides a modern way to establish your online presence.  
 
@@ -71,7 +91,7 @@ This domain registrar is owned by Namecheap.
 9.  **Confirmation Wait**: Wait for confirmation, your Account Funds will be credited.
 10.  **Checkout**: Finalize your purchase by choosing Account Funds as the payment method.
 
-### 3. Porkbun
+### 4. Porkbun
 
 Porkbun is another popular domain registrar that enables customers to pay in Bitcoin. It offers a variety of domain extensions and services, with user-friendly management tools. [Porkbun](https://porkbun.com/) stands out for its affordable domain prices, intuitive interface, and commitment to customer satisfaction.  
 
@@ -101,7 +121,7 @@ Porkbun is another popular domain registrar that enables customers to pay in Bit
 
 **10% FEE:** Paying with crypto on PorkBun incurs an additional 10% fee charged by Porkbun.  
 
-### 4. NameSilo
+### 5. NameSilo
 NameSilo stands out for its straightforward pricing structure and comprehensive suite of domain management tools. This domain registrar also recognizes the importance of embracing modern payment methods, including Bitcoin. NameSilo's user-friendly platform and emphasis on customer satisfaction make it a solid choice for those looking to purchase and manage domains while harnessing the benefits of cryptocurrencies.  
 
 **.COM price**: $9 - $10
@@ -123,7 +143,7 @@ NameSilo stands out for its straightforward pricing structure and comprehensive 
 9.  **Confirmation Wait:**  Wait for confirmation, your Account Funds will be credited.
 10.  **Checkout**: Finalize your domain purchase by choosing Account Funds as the payment method.
 
-### 5. Hostinger
+### 6. Hostinger
 
 Hostinger is another popular domain registrar that enables Bitcoin payments. Known for its affordability and high-performance hosting services, Hostinger makes it convenient for individuals and businesses to buy domains with Bitcoin. Their intuitive platform, coupled with a range of services, including shared hosting, VPS hosting, and more, makes Hostinger a strong contender in the domain registration market.  
 
@@ -146,7 +166,7 @@ Hostinger is another popular domain registrar that enables Bitcoin payments. Kno
 9.  **Confirmation Wait**: Wait for confirmation, your Hostinger Balance will be credited.
 10.  **Checkout**: Finalize your domain purchase by choosing Hostinger Balance as the payment method.
 
-### 6. Epik
+### 7. Epik
 
 Epik takes an innovative approach to domain registration and management by supporting a variety of payment methods, including Bitcoin. Known for its robust security features and domain portfolio management, Epik appeals to both individual domain owners and professional domain investors. With a focus on security and a commitment to transparency, Epik's acceptance of Bitcoin aligns well with the cryptocurrency community's values.  
 
@@ -169,7 +189,7 @@ Epik takes an innovative approach to domain registration and management by suppo
 9.  **Confirmation Wait**: Wait for confirmation, your Epik Balance will be credited.
 10.  **Checkout**: Finalize your domain purchase by choosing Store Credit Balance as the payment method.
 
-### 7. Domains4Bitcoin
+### 8. Domains4Bitcoin
 
 Domains4Bitcoin is a domain registrar that specializes in accepting Bitcoin as a payment method. Catering to the cryptocurrency community, it allows users to purchase domain names using Bitcoin. With a focus on convenience and digital innovation, Domains4Bitcoin offers an alternative way to establish an online presence using the popular cryptocurrency.  
 
@@ -187,26 +207,6 @@ Domains4Bitcoin is a domain registrar that specializes in accepting Bitcoin as a
 6.  **Pay from your Bitcoin Walle**t: Bitpay allows you to choose your favourite Bitcoin wallet.
 7.  **Confirmation Wait**: Wait for confirmation
 8.  **Checkout:**  Finalize your domain purchase
-
-### 8. MonoVM
-MonoVM is another popular domain registrar that accept Bitcoins payments. MonoVM is a company that provides various hosting services, including virtual private servers (VPS), dedicated servers, and domain registration. They are known for offering affordable hosting solutions with a focus on VPS hosting.
-
-**.COM price**: $15.49 - 16.49
-
-**Free features**: DNS
-
-**Alternative payment methods**: Paypal, Mint, Perfect Money, Card, etc.
-
-#### How to purchase a domain on MonoVM using Bitcoin
-
-1. **Select domain**: Choose the domain you want from [MonoVM](https://monovm.com)..
-2. **Add to Cart**: Add your selected domain to the shopping cart.
-3. **Proceed to Checkout**: Go to the checkout page to review your order.
-4. **Choose Payment Method**: During the checkout process, you should see various payment options. Select "Bitcoin" as your payment method.
-5. **Generate Payment Details**: MonoVM will likely provide you with the necessary information to complete the Bitcoin payment. This may include a Bitcoin address and the amount to pay.
-6. **Complete Bitcoin Payment**: Use your Bitcoin wallet to send the specified amount to the provided Bitcoin address. Follow the instructions carefully.
-7. **Payment Confirmation**: After sending the Bitcoin payment, you might need to wait for the transaction to be confirmed on the Bitcoin network.
-8. **Service Activation**: Once the Bitcoin transaction is confirmed, MonoVM will receive the payment and process your order. You should receive confirmation, and your services will be activated.
 
 ### 9. Njalla
 
