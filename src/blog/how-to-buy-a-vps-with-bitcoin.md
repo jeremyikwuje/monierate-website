@@ -42,7 +42,7 @@ MonoVM, a leading provider of domain names and Virtual Private Servers (VPS), is
 
 Now, you can enjoy MonoVM's powerful [VPS infrastructure](https://movovm.com/vps) without sharing sensitive financial information. Their VPS are affordable and reliable, starting at just $5.99 per month. They also offer a money-back guarantee if you're not satisfied with your plan.
 
-**Bitcoin Payments for Global Accessibility**
+#### Bitcoin Payments for Global Accessibility
 If you're located in regions like Africa, you may face challenges when making payments using traditional methods like credit cards. However, with MonoVM, you can pay for your VPS using Bitcoin, regardless of your location. This makes it easier than ever for businesses and individuals around the world to access MonoVM's VPS hosting services
   
 ## How to purchase VPS with Bitcoin on MonoVM  
@@ -53,7 +53,7 @@ To purchase a VPS on MonoVM with Bitcoin, you'll need a Bitcoin wallet with the 
 #### Steps to purchase VPS with MovoVM:  
 1.  Visit the [MonoVM](https://monovm.com) website and select "[VPS](https://monovm.com/vps)."
 2.  Choose the VPS plan that suits your needs. MonoVM offers Windows VPS, Linux VPS, RDP Server, and Forex VPS.
-3.  Add your chosen VPS to the cart and log in to your MonoVM account.
+3.  Add your chosen VPS to the cart and login to your MonoVM account.
 4.  Select Bitcoin as your payment method and proceed to checkout.
 5.  You'll be redirected to CoinPayments to complete your Bitcoin payment.
 6.  Enter your order information on CoinPayments and choose your payment method: Lightning Network or Onchain.
@@ -62,7 +62,7 @@ To purchase a VPS on MonoVM with Bitcoin, you'll need a Bitcoin wallet with the 
   
 **Congratulations!** You've successfully purchased a VPS on MonoVM with Bitcoin.
 
-Note that, during checkout, CoinPayments may charge a fee during payment. This fee is not from MonoVM.  MonoVM also supports BitPay and NOWPayments for Bitcoin payments.   
+Note that, CoinPayments may charge a fee during payment. This fee is not from MonoVM.  MonoVM also supports BitPay and NOWPayments for Bitcoin payments.   
  
 ## Benefits of Buying a VPS from MonoVM  
 MonoVM stands out as a premier VPS hosting provider, offering a multitude of benefits that cater to the diverse needs of businesses and individuals alike:  
@@ -88,7 +88,7 @@ In addition to VPS hosting, MonoVM offers a comprehensive suite of services to e
 With MonoVM's comprehensive suite of services, you have the tools and support to build, manage, and grow your online presence effectively.
 
 ## Now, take action!
-In today's technology-driven world, businesses and individuals rely on powerful and secure VPS hosting solutions. MonoVM, a leading domain and VPS provider, has revolutionized the hosting landscape by embracing Bitcoin as a payment method.
+In today's technology-driven world, businesses and individuals rely on powerful and secure VPS hosting solutions. MonoVM, a leading domain and VPS provider has revolutionized the hosting landscape by embracing Bitcoin as a payment method.
 
 This innovative approach offers a multitude of benefits:
 
