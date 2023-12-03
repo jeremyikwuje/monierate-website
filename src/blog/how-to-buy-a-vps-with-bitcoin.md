@@ -96,4 +96,4 @@ This innovative approach offers a multitude of benefits:
 -   **Global accessibility,** eliminating geographical barriers to VPS purchase.
 -   **Instantaneous transaction processing,** allowing for immediate VPS activation.
 
-By choosing Bitcoin for your VPS purchase at [MonoVM](https://monovm.com/vps), you're not just opting for a convenient payment method; you're embracing a secure, borderless, and future-oriented approach to hosting.
+By choosing Bitcoin for your VPS purchase at [MonoVM](https://monovm.com/buy-vps-with-bitcoin/), you're not just opting for a convenient payment method; you're embracing a secure, borderless, and future-oriented approach to hosting.
