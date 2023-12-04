@@ -40,7 +40,7 @@ While traditional payment methods are common, cryptocurrencies offer new and inn
 
 MonoVM, a leading provider of domain names and Virtual Private Servers (VPS), is revolutionizing hosting payments by embracing Bitcoin. This innovative approach offers a secure, anonymous, and globally accessible way to purchase your VPS, eliminating the need for traditional payment methods like credit cards.
 
-Now, you can enjoy MonoVM's powerful [VPS infrastructure](https://movovm.com/vps) without sharing sensitive financial information. Their VPS are affordable and reliable, starting at just $5.99 per month. They also offer a money-back guarantee if you're not satisfied with your plan.
+Now, you can enjoy MonoVM's powerful [VPS infrastructure](https://movovm.com/vps-sever/) without sharing sensitive financial information. Their VPS are affordable and reliable, starting at just $5.99 per month. They also offer a money-back guarantee if you're not satisfied with your plan.
 
 #### Bitcoin Payments for Global Accessibility
 If you're located in regions like Africa, you may face challenges when making payments using traditional methods like credit cards. However, with MonoVM, you can pay for your VPS using Bitcoin, regardless of your location. This makes it easier than ever for businesses and individuals around the world to access MonoVM's VPS hosting services
@@ -51,7 +51,7 @@ If you're located in regions like Africa, you may face challenges when making pa
 To purchase a VPS on MonoVM with Bitcoin, you'll need a Bitcoin wallet with the required amount of BTC.
 
 #### Steps to purchase VPS with MovoVM:  
-1.  Visit the [MonoVM](https://monovm.com) website and select "[VPS](https://monovm.com/vps)."
+1.  Visit the [MonoVM](https://monovm.com) website and select "[VPS](https://monovm.com/vps-server/)."
 2.  Choose the VPS plan that suits your needs. MonoVM offers Windows VPS, Linux VPS, RDP Server, and Forex VPS.
 3.  Add your chosen VPS to the cart and login to your MonoVM account.
 4.  Select Bitcoin as your payment method and proceed to checkout.
@@ -75,7 +75,7 @@ MonoVM stands out as a premier VPS hosting provider, offering a multitude of ben
   
  - **Affordable Pricing that Fits Your Needs**: MonoVM offers a range of affordable VPS hosting plans tailored to suit various budgets and requirements. 
 
-**Choose [MonoVM](https://monovm.com) and elevate your VPS hosting experience.**
+**Choose [MonoVM](https://monovm.com/vps-server/) and elevate your VPS hosting experience.**
   
 ## Not just VPS  
 In addition to VPS hosting, MonoVM offers a comprehensive suite of services to elevate your online presence:
