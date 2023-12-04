@@ -40,7 +40,7 @@ While traditional payment methods are common, cryptocurrencies offer new and inn
 
 MonoVM, a leading provider of domain names and Virtual Private Servers (VPS), is revolutionizing hosting payments by embracing Bitcoin. This innovative approach offers a secure, anonymous, and globally accessible way to purchase your VPS, eliminating the need for traditional payment methods like credit cards.
 
-Now, you can enjoy MonoVM's powerful [VPS infrastructure](https://movovm.com/vps-sever/) without sharing sensitive financial information. Their VPS are affordable and reliable, starting at just $5.99 per month. They also offer a money-back guarantee if you're not satisfied with your plan.
+Now, you can enjoy MonoVM's powerful [VPS infrastructure](https://monovm.com/vps-server/) without sharing sensitive financial information. Their VPS are affordable and reliable, starting at just $5.99 per month. They also offer a money-back guarantee if you're not satisfied with your plan.
 
 #### Bitcoin Payments for Global Accessibility
 If you're located in regions like Africa, you may face challenges when making payments using traditional methods like credit cards. However, with MonoVM, you can pay for your VPS using Bitcoin, regardless of your location. This makes it easier than ever for businesses and individuals around the world to access MonoVM's VPS hosting services
