@@ -20,9 +20,9 @@ We require the following parameters if you want to add your platform exchange ra
 - Request Header or Authentication (if any)  
 - Response format (JSON preferred)  
   
-**3. If you have all the above, kindly fill this form.**  
+**3. If you have all the above, kindly fill this [form](https://forms.gle/QskCfpayeMwafYhg7).**  
   
-**4. Send us an email requesting your rate to be added to [monierate.com](http://monierate.com/).**  
+**4. Send us an email (hello@monierate.com) requesting your rate to be added to [monierate.com](http://monierate.com/).**  
   
 Once you execute all the above, you will get a response from us within 3 business days.  
   
