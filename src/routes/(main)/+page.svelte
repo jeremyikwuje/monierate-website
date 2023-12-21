@@ -8,7 +8,7 @@
     let providers = data.providers || {}
 
     let count = 1
-    let total = rates.length
+    let total = providers.length
 
     const increment = () => count++;
 </script>
@@ -136,7 +136,7 @@
         @apply bg-transparent border border-black rounded-full w-[24px] h-[24px] mr-2;
     }
     .changer-title {
-        @apply font-semibold text-lg capitalize text-gray-800 dark:text-gray-300;
+        @apply font-semibold text-lg text-gray-800 dark:text-gray-300;
     }
     .changer-rate-base {
         @apply text-gray-500 dark:text-gray-400;
