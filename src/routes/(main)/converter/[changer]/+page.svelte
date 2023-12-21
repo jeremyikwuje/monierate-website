@@ -62,6 +62,8 @@ function convertNow() {
         // get rates of a pair
         let pairData = pairs.find( (p: any) => p.pair === pair )
 
+        console.log(pair, pairData)
+
         // if pair is found
         if (pairData !== undefined) {
             pairRates = pairData.rates || {}
@@ -81,11 +83,13 @@ function convertNow() {
             pair = `${to}${from}`
             pairData = pairs.find( (p: any) => p.pair === pair )
 
+            console.log(pair, pairData)
+
             if (pairData) {
                 pairRates = pairData.rates || {}
 
                 // if rate is found for this changer
-                if (!pairRates.hasOwnProperty(changer.code)) {
+                if (pairRates.hasOwnProperty(changer.code)) {
                     changerRate = pairRates[changer.code]
                     changerRate.buy = parseFloat(`${changerRate.buy || 1}`)
 
@@ -94,8 +98,14 @@ function convertNow() {
                         convertResult.rate = 1 / convertResult.rateInverse
                     }
                 }
-            } 
+            }
+            
+            //console.log(pair, convertResult)
         }
+    }
+    else {
+        convertResult.rate = 1
+        convertResult.rateInverse = 1
     }
     
     convertResult.conversion = round(chain(convertResult.rate).multiply(convertAmount).done(), 8)
@@ -118,15 +128,11 @@ async function getMoreConversions() {
             conversion: round(chain(rate).multiply(serie).done(), 8)
         })
 
-        console.log(rate)
-
         let rateInverse = convertResult.rateInverse
         conversions.to.push({
             amount: serie,
             conversion: round(chain(rateInverse).multiply(serie).done(), 8)
         })
-
-        console.log(rateInverse)
     })
 
     moreConversions = conversions
@@ -307,7 +313,8 @@ convertNow()
         <h2 class="text-2xl mb-6 text-center">About {changer.name}</h2>
         <hr class="mb-12">
         <div class="block px-8 bg-white dark:bg-gray-900 py-4 shadow-lg">
-           You can convert {convertFrom} to {convertTo} and {convertTo} to {convertFrom} on {changer.name}. As at {new Date(changerRate.updatedAt)}, <strong>1 {convertFrom} is about {Money.format(convertResult.rate)} {convertTo} on {changer.name} and 1 {convertTo} is about {Money.format(convertResult.rateInverse)} {convertFrom} on {changer.name}</strong>.
+           <p class="mb-4">{changer.bio}</p>
+           <p>You can convert {convertFrom} to {convertTo} and {convertTo} to {convertFrom} on {changer.name}. As at {new Date(changerRate.updatedAt)}, <strong>1 {convertFrom} is about {Money.format(convertResult.rate)} {convertTo} on {changer.name} and 1 {convertTo} is about {Money.format(convertResult.rateInverse)} {convertFrom} on {changer.name}</strong></p>
         </div>
     </div>
 </div>

@@ -74,6 +74,8 @@ function convertNow() {
                 rateInverse = 0
                 unitCurrency = from.toUpperCase()
             }
+
+            console.log(pair, rate)
         }
 
 
