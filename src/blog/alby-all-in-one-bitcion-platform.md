@@ -13,9 +13,9 @@ published: true
 
 As software takes over everything – from ordering pizza to getting a new haircut. Bitcoin will become the native currency of software.
 
-Think about it: Bitcoin is fast, secure, and can be used to pay for anything, anywhere in the world. It's like the ultimate digital currency, perfect for a world where everything is connected.
+**Think about it**: Bitcoin is fast, secure, and can be used to pay for anything, anywhere in the world. It's like the ultimate digital currency, perfect for a world where everything is connected.
 
-But here's the thing: dealing with Bitcoin can be a bit complicated, especially if you're new to the whole thing. That's where **Alby** comes in. Alby is like a magic tool that makes using Bitcoin super easy and fun. It's like having your own personal Bitcoin assistant, helping you manage your funds, pay for stuff online, and even connect with other Bitcoin users.
+**But here's the thing**: dealing with Bitcoin can be a bit complicated, especially if you're new to the whole thing. That's where **Alby** comes in. Alby is like a magic tool that makes using Bitcoin super easy and fun. It's like having your own personal Bitcoin assistant, helping you manage your funds, pay for stuff online, and even connect with other Bitcoin users.
 
 So, if you're ready to jump on the Bitcoin bandwagon but don't know where to start, Alby is your perfect guide. With Alby by your side, you'll be a Bitcoin pro in no time!
 
@@ -29,7 +29,7 @@ Alby is a Bitcoin browser extension for easy payments & logins.
 
 **Here's how it works:**
 
-1.  **Go to getalby.com and download the extension.** It's like installing a new app on your phone.
+1.  **You visit www.getalby.com and download the browser extension.** It's like installing a new app on your phone.
 2.  **Connect your existing Bitcoin wallet or create a new one.** Think of this like your personal piggy bank for Bitcoin.
 3.  **Now you can pay for stuff online using Bitcoin!** Just click on the QR code or paste the invoice into your Alby wallet.
 4.  **You can also log in to websites that accept anonymous logins via the Lightning Network.** This way, you don't have to create new accounts and remember passwords for every site.
@@ -39,18 +39,9 @@ Alby is a Bitcoin browser extension for easy payments & logins.
 ### Alby Extension vs Alby Account
 Imagine you're setting up a game online:
 
-**Alby Extension:**
+**Alby Extension** is like a **special tool** you add to your browser, like a cheat code. You can use it to **pay for things in the game** without needing a credit card. It's **easy to set up** and use, and you can **share it with your friends** who play the same game.
 
--   It's like a **special tool** you add to your browser, like a cheat code.
--   You can use it to **pay for things in the game** without needing a credit card.
--   It's **easy to set up** and use, and you can **share it with your friends** who play the same game.
-
-**Alby Account:**
-
--   It's like **having a bank account in the game**.
--   You can **store your game money** there and use it to buy things.
--   You can also **earn money** by completing tasks in the game.
--   It's a bit more complicated to set up than the extension, but it gives you more **control over your money**.
+**Alby Account** is like having a **bitcoin account** in the game**. You can **store your game money** there and use it to buy things. You can also **earn money** by completing tasks in the game. It's a bit more complicated to set up than the extension, but it gives you more **control over your money**.
 
 In the world of Bitcoin:
 
