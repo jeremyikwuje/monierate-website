@@ -5,9 +5,10 @@ import { json } from "@sveltejs/kit";
 /** @type {import('./$types').RequestHandler} */
 export async function PUT({ request, fetch })
 {
-    const { email } = await request.json();
+    const { email, interval } = await request.json();
     const payload = {
         email,
+        interval
     };
     const endpoint = getEndpoint("/alerting");
     const res = await fetch(endpoint, basicAuth('PUT', payload, 'system'));
