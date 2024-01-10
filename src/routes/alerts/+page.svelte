@@ -33,21 +33,21 @@
 
     let email = ""
     let emailManage = ""
-    let checked = false
+    let interval = "WEEK"
 
 	const subscribe = async () => {
-        console.log(checked)
+        console.log(interval)
 
         let emailField = document.querySelector('#field-email')
-        let checkedField = document.querySelector('#checked-wraper')
+        let intervalField = document.querySelector('#interval-wraper')
 
-        if (!checked) {
-            checkedField?.classList.add("border-red-600")
-            toggleMessage("Select a rate")
+        if (!interval) {
+            intervalField?.classList.add("border-red-600")
+            toggleMessage("Select interval")
             return
         }
         
-        checkedField?.classList.remove('border-red-600')
+        intervalField?.classList.remove('border-red-600')
 
         if (email.length == 0) {
             emailField?.classList.add("border-red-600")
@@ -61,7 +61,7 @@
 
         const payload = {
             email,
-            interval: 'DAY'
+            interval,
         }
         const response = await fetch('/api/alerting', {
             method: 'PUT',
@@ -77,11 +77,9 @@
         }
 
         email = ""
-        checked = false
     }
 
     const deleteAlert = async (id) => {
-        console.log(checked)
         
         if (id.length == 0) {
             return
@@ -165,11 +163,14 @@
                 Get rate alerts straight to your email inbox
             </h2>
 
-            <div class="flex items-center pl-4 border border-gray-400 rounded dark:border-gray-900 mb-8" id="checked-wraper">
-                <input bind:checked id="field-black-market" type="checkbox" name="bordered-checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
-                <label for="field-black-market" class="w-full py-4 ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">
-                    Daily email about the USD → NGN black market rate
+            <div class="mb-8" id="checked-wraper">
+                <label for="field-black-market" class="w-full py-4 ml-2 text-sm font-medium text-gray-900 dark:text-gray-300 mr-4">
+                    Every
                 </label>
+                <select bind:value={interval} id="field-black-market" class="inline-block border rounded border-gray-400 dark:border-gray-900 px-4 py-[0.4em]">
+                    <option value="DAY">Day</option>
+                    <option value="WEEK" selected>Monday</option>
+                </select>
             </div>
     
             <div>
@@ -219,7 +220,7 @@
         {:else}
             <div class="border border-gray-300 rounded dark:bg-gray-900 dark:border-gray-900 px-6 py-8 mb-8">
                 <h2 class="text-xl md:text-2xl mb-6">
-                    Manage alerts
+                    Delete alerts
                 </h2>
                 <span class="block mb-8 text-gray-600 dark:text-gray-300">
                     A magic link will be sent to your email to manage existing your alerts.
