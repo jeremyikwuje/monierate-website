@@ -6,6 +6,10 @@ export const load: PageServerLoad = async ({ fetch, params }) => {
         let slug = params.slug.split('-')
         let provider_code = slug[0]
 
+        if (slug.length > 3) {
+            provider_code = slug[0] + '-' + slug[1]
+        }
+
         if (provider_code.length == 0) {
             throw error(404, `Provider not found`)
         }
@@ -15,7 +19,6 @@ export const load: PageServerLoad = async ({ fetch, params }) => {
 
         return {
             provider,
-
         }
     }
     catch(e: any) {
