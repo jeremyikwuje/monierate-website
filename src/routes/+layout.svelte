@@ -171,13 +171,6 @@ function hidePromotionBar() {
     </div>
 </div>
 {/if}
-
-<!-- Landscape Top/Bottom -->
-<!-- <div class="ad-top-banner container mt-4">
-    <a href="{sponsorLink}" target="_blank">
-        <img src="/ad-banner-wide-landscape.jpg" alt="Top Ad Banner" class="ad-top-banner-img mx-auto md:w-[90%]">
-    </a>
-</div> -->
     
 <slot />
     

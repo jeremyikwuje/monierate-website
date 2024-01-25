@@ -8,7 +8,7 @@
     let providers = data.providers || {}
 
     let count = 1
-    let total = providers.length
+    let total = Object.entries(providers).length
 
     const increment = () => count++;
 </script>
@@ -37,6 +37,17 @@
                 <span class="text-semibold">Sort by:</span>
                 <span class="font-semibold">Low to high</span>
             </span>
+        </div>
+    </div>
+</div>
+
+<div class="bg-white dark:bg-gray-800">
+    <div class="container">
+        <!-- Landscape Top/Bottom -->
+        <div class="ad-top-banner">
+            <a href="https://cedar.money" target="_blank">
+                <img src="https://ik.imagekit.io/monierate/cedar-email-banner-get-dollar-international-trade.gif" alt="Top Ad Banner" class="ad-top-banner-img mx-auto max-w-full">
+            </a>
         </div>
     </div>
 </div>
