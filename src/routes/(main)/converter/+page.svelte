@@ -167,9 +167,9 @@ convertNow()
 <div class="bg-white dark:bg-gray-800">
     <div class="container">
         <!-- Landscape Top/Bottom -->
-        <div class="ad-top-banner">
+        <div class="cedar-money">
             <a href="https://bit.ly/monierate-cedar" target="_blank">
-                <img src="https://ik.imagekit.io/monierate/cedar-email-banner-get-dollar-international-trade.gif" alt="Top Ad Banner" class="ad-top-banner-img mx-auto max-w-full">
+                <img src="/cedar-1.gif" alt="Cedar Money" class="mx-auto max-w-full">
             </a>
         </div>
     </div>
