@@ -147,7 +147,7 @@ convertNow()
         <!-- Landscape Top/Bottom -->
         <div class="cedar-money">
             <a href="https://bit.ly/monierate-cedar" target="_blank">
-                <img src="/cedar-1.gif" alt="Cedar Money" class="mx-auto max-w-full">
+                <img src="/cedar-2.gif" alt="Cedar Money" class="mx-auto max-w-full">
             </a>
         </div>
     </div>
