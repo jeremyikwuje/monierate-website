@@ -45,7 +45,7 @@
     <div class="container">
         <!-- Landscape Top/Bottom -->
         <div class="ad-top-banner">
-            <a href="https://cedar.money" target="_blank">
+            <a href="https://bit.ly/monierate-cedar" target="_blank">
                 <img src="https://ik.imagekit.io/monierate/cedar-email-banner-get-dollar-international-trade.gif" alt="Top Ad Banner" class="ad-top-banner-img mx-auto max-w-full">
             </a>
         </div>

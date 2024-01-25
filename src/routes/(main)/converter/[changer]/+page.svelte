@@ -142,6 +142,17 @@ async function getMoreConversions() {
 convertNow()
 </script>
 
+<div class="bg-white dark:bg-gray-800">
+    <div class="container">
+        <!-- Landscape Top/Bottom -->
+        <div class="ad-top-banner">
+            <a href="https://bit.ly/monierate-cedar" target="_blank">
+                <img src="https://ik.imagekit.io/monierate/cedar-email-banner-get-dollar-international-trade.gif" alt="Top Ad Banner" class="ad-top-banner-img mx-auto max-w-full">
+            </a>
+        </div>
+    </div>
+</div>
+
 <div class="mb-24">
     <div class="w-[100%] md:w-[100%] px-8 pb-4 mx-auto mb-4 text-center">
         <h1 class="text-2xl md:text-4xl">
