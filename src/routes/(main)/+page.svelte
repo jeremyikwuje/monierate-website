@@ -109,24 +109,81 @@
         <div class="dark:text-gray-300"> 
             <span class="block mb-4">
                 <h3>What is a Provider?</h3>
-                <p>A provider is an entity that help you facilitate the exchange of currencies. If you have 100 USDT, and you want to exchange it for naira. You will need an exchange provider to convert your USDT to naira. A provider can be an individual or entity. On Monierate, we only list trusted entities for you to choose from not individual traders.</p>
+                <p>    
+                    A provider is an entity that helps facilitate the exchange of currencies. 
+                    If you have 100 USDT and want to exchange it for naira, you will need an exchange provider to convert your USDT to naira. 
+                    A provider can be an individual or entity. On Monierate, we only list trusted entities for you to choose from, not individual traders.
+                </p>
             </span>
             <span class="block mb-4">
                 <h3>What is Buy Price?</h3>
-                <p>Buy price is the rate at which you will pay to convert <strong>naira to dollar</strong>. It is how much naira you are paying for every dollar you get. An example is, you have naira, but you need USDT to pay for a bill, you will need to exchange your naira for USDT. The provider will credit USDT to you at a Buy Price.</p>
+                <p>
+                    The buy price is the rate at which you pay to convert naira to dollars. 
+                    It represents how much naira you're paying for every dollar obtained. 
+                    For instance, if you have naira but need USDT to pay a bill, you exchange your naira for USDT, and the provider credits USDT to you at the buy price.
+                </p>
             </span>
             <span class="block mb-4">
                 <h3>What is Sell Price?</h3>
-                <p>Sell price is the rate at which you will pay to convert <strong>dollar to naira</strong>. It is how much naira you are getting for every dollar you exchange. An example is, you have USDT, but you need naira to pay a bill, you will need to exchange your USDT for naira. The provider will credit naira to you at a Sell Price.</p>
+                <p>     
+                    The sell price is the rate at which you pay to convert dollars to naira. 
+                    It represents how much naira you're getting for every dollar exchanged. 
+                    For instance, if you have USDT but need naira to pay a bill, you exchange your USDT for naira, and the provider credits naira to you at the sell price.
+                </p>
             </span>
             <span class="block mb-4">
-                <h3>Why is Buy Price always higher than Sell Price?</h3>
-                <p>Exchange Providers makes money from the difference between the exchange price of dollar. This is popularly known as arbitrage or trading profit, buy low and sell high. If you have USDT but need naira, they buy the USDT from you at a lower naira price and sell at a higher naira price to someone else who need USDT.</p>
+                <h3>Why is the buy price usually higher than the sell price?</h3>
+                <p>
+                    Exchange providers make money from the difference between the buying and selling prices of the dollar. 
+                    This is commonly known as arbitrage or trading profit—buying low and selling high. 
+                    If you have USDT but need naira, they buy the USDT from you at a lower naira price and sell it at a higher naira price to someone else who needs USDT.</p>
             </span>
             <span class="block">
                 <h3>How Monierate works</h3>
-                <p class="mb-2">Monierate is a website for you to compare the prices of dollar accross multiple providers in Nigeria. You can use Monierate to know the exchange rate of dollar to naira, get more dollars for naira and vice versa. By default, prices are arranged from lowest to highest. The cheapest rate is rank first and the most expensive rate is ranked last. In the future, you can change the order of the selection between *low to high* or by *Buy* or *Sell* price..</p>
-                <p>Monierate currently tracks the 24-hour price of dollar accross 10+ providers including Binance, Luno, Remitano, Yellow Card, Quidax, and Payday.</p>
+                <p class="mb-2">
+                    Monierate operates as a platform for comparing dollar prices across various providers in Nigeria.
+                </p>
+                <p class="mb-2">Here&#39;s how it works:</p>
+                <ul class="list-inside ml-2">
+                    <li class="mb-2">
+                        <p>
+                            <strong>Comparison Functionality:</strong>
+                            Monierate gathers and displays the prices of the dollar from multiple providers in Nigeria. 
+                            You can compare these prices to find the best rates available in the market.
+                        </p>
+                    </li>
+                    <li class="mb-2">
+                        <p>
+                            <strong>Exchange Rate Information:</strong>
+                            You can use Monierate to obtain daily information on the exchange rate of the dollar to naira.
+                        </p>
+                    </li>
+                    <li class="mb-2">
+                        <p>
+                            <strong>Order Arrangement:</strong>
+                            Prices are presented by default from the lowest to the highest, allowing You to easily identify the most cost-effective rates.
+                        </p>
+                    </li>
+                    <li class="mb-2">
+                        <p>
+                            <strong>Buy and Sell Options:</strong>
+                            Monierate facilitates You in acquiring more dollars for naira or vice versa by presenting both buy and sell options.
+                        </p>
+                    </li>
+                    <li class="mb-2">
+                        <p>
+                            <strong>Customizable Sorting:</strong>
+                            You have the flexibility to customize the order of the displayed rates, choosing between low to high or sorting by buy or sell prices.
+                        </p>
+                    </li>
+                    <li class="mb-2">
+                        <p>
+                            <strong>Provider Tracking:</strong>
+                            Monierate actively tracks the 24-hour prices of the dollar across a diverse range of providers, including platforms such as Binance, Luno, Remitano, Yellow Card, Quidax, and Payday.
+                        </p>
+                    </li>
+                </ul>
+                <p>In essence, we simplifies the process of finding the most favorable dollar exchange rates in Nigeria by providing a user-friendly platform for comparison and real-time rate tracking.</p>
             </span>
         </div>
     </div>
