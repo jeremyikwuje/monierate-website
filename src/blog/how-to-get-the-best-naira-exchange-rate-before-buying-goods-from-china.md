@@ -2,8 +2,8 @@
 layout: blog
 title: "How to Get the Best Naira Exchange Rate Before Buying Goods From China"
 description: With over $2 billion in annual trade with China, it's crucial to understand how currency fluctuations can impact profitability. This guide arms Nigerian traders with insights on how to secure the best naira to yuan exchange rates in 2024.
-createdAt: 2023-09-16T11:07:23.581Z
-updatedAt: 2023-09-16T11:07:23.723Z
+createdAt: 2024-27-16T11:05:23.581Z
+updatedAt: 2024-27-16T11:05:23.723Z
 tag: guide
 image: https://lh7-us.googleusercontent.com/9OOx4y5rvcvpKRRc1h_QqtlcO992g1BiZcnaPAL592uwl69scMNvL_IeUyQwz4lgqNKSyIW6m-aVvvvJDrA21ZhYV4roFxF92r14L9BYnQlGs2bRPkMz-lkSNkQpKcKOh7IDrn-k7Tp_b0pnps6U2L0
 published: true
