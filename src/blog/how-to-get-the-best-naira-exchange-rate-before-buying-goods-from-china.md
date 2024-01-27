@@ -43,11 +43,11 @@ Since the black market is unregulated, the second question you might be asking i
 Here are some tips to help you get the best deal possible using the black market:
 
 1.  ### Compare the rates
-Before exchanging your naira, it's important to research and compare black market rates with the official ones, ensuring you get the best deal. You can use tools like [Ngnrates](https://www.ngnrates.com/exchange-rates/chinese-yuan-renminbi-to-naira) and [Monierate](https://monierate.com/)
+Before exchanging your naira, it's important to research and compare black market rates with the official ones, ensuring you get the best deal. You can use tools like [Ngnrates](https://www.ngnrates.com/exchange-rates/chinese-yuan-renminbi-to-naira) and [Monierate](https://monierate.com/).
 
 Reliable black market dealers, offering competitive rates and quality service, can be found both online and in person, but typically in major cities or commercial areas.
 
-Note that: Renminbi (RMB) and yuan are often used interchangeably to refer to China's currency. Yuan refers to the currency's primary unit. The yuan serves the same role as the dollar or the pound.
+*Note that: Renminbi (RMB) and yuan are often used interchangeably to refer to China's currency. Yuan refers to the currency's primary unit. The yuan serves the same role as the dollar or the pound.*
   
 2.  ### Negotiate the rate
 Yes, it is possible to negotiate rates on the black market. Once you find a dealer who can offer you a reasonable rate, it’s okay to bargain for a lower fee, a better rate, or a faster service. You can also ask for a written receipt or a confirmation message for the transaction.
