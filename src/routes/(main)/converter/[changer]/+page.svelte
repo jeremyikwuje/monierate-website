@@ -9,6 +9,7 @@
     <meta property="og:type" content="website" />
 	<meta property="og:title" content="{convertFrom} to {convertTo} on {changer.name} - Convert {currencyFrom.name} to {currencyTo.name} using {changer.name} exchange rate." />
 	<meta property="og:description" content="Convert {currencyFrom.name} to {currencyTo.name} on {changer.name}. Enter any amount in {convertFrom} to see the conversion in {convertTo}." />
+    <meta property="og:image" content="https://ik.imagekit.io/monierate/thumbnails/{changer.code}-og.png" />
 </svelte:head>
 
 <script lang="ts">
