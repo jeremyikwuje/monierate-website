@@ -45,7 +45,7 @@
     <div class="container">
         <!-- Landscape Top/Bottom -->
         <div class="cedar-money">
-            <a href="http://tinyurl.com/55vw7spj" target="_blank">
+            <a href="http://tinyurl.com/3yk55wm4" target="_blank">
                 <img src="/cedar-1.gif" alt="Cedar Money" class="mx-auto max-w-full">
             </a>
         </div>
