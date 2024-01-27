@@ -126,7 +126,7 @@ Each digital payment service provides clear instructions on how to send money in
 
 *N.b: The minimum payment volume you can process with Cedar is 10,000 US Dollars.*
 
-### Concluding
+## Concluding
 Getting the best exchange rates whilst running an importation business in Nigeria can get tricky, but thankfully, there are now cost-effective and profitable options to choose from. Several factors must be considered when determining how to send money internationally with the fewest and lowest fees. Compare your options and find a less expensive rate for your needs before buying goods from China.
  
 Happy importing!
