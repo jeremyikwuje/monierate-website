@@ -5,7 +5,7 @@ description: So you are finally ready to start sourcing your new product ideas f
 createdAt: 2024-01-29T17:12
 updatedAt: 2024-01-29T17:12
 tag: guide
-image: /uploads/alibaba-homepage.jpg
+image: https://monierate.com/uploads/alibaba-homepage.jpg
 published: true
 ---
 So you are finally ready to start sourcing your new product ideas from Alibaba, the Chinese e-commerce directory connecting buyers from all over the world and providing cheap sourcing options for businesses of all sizes?
