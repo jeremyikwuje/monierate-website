@@ -6,11 +6,11 @@ createdAt: 2024-01-29T17:12
 updatedAt: 2024-01-29T17:12
 tag: guide
 image: /uploads/alibaba-homepage.jpg
-published: false
+published: true
 ---
 So you are finally ready to start sourcing your new product ideas from Alibaba, the Chinese e-commerce directory connecting buyers from all over the world and providing cheap sourcing options for businesses of all sizes?
 
-![](https://lh7-us.googleusercontent.com/tjaiRXAocuDNwfIUGGRjp9ezK2AJxTegaiD4Ian0kjbBsBZScwI_ZZzFBJHexvOQgD0S0y1NPK7f6H4JMNHCWoKR2S1gKdNI_YzIMwlKXoVvL6gSj_dC7SJDe3ISVRGaUS3y243eecMBuoQMtG2JYf8)  
+![Alibaba official website homepage](https://monierate.com/uploads/alibaba-homepage.jpg)  
 
 But what's the next step?
 
@@ -47,9 +47,7 @@ Here are some tips on how to find quality products with the right supplier:
 3.  **Compare prices and shipping costs**: Once you’ve got quotes from the suppliers, it’s time to compare prices and shipping costs. Ensure you’re getting a fair price on the products and that the shipping costs are affordable. Remember that you’ll usually get what you pay for, so don’t choose the cheapest option if it compromises quality. After selecting a supplier you want to work with, the next step is to learn how to negotiate with them.
     
 
-*Alt: This chart shows the different levels of verification for Aibaba suppliers. Look for these before you decide to purchase from a supplier. | [Source](https://images.ctfassets.net/wowgx05xsdrr/56Nga3eO9joaLouf4MYCHW/ed1ac0f2b409d58b8a085eb8771def54/buying-from-alibaba-example-5-750x459.png?fm=webp&w=750&q=75)*![](https://lh7-us.googleusercontent.com/WXSjpytFG39BtYWz0fh6u_wPVEdjki1Pw6v9ZUijsREv5NQk64ZyaKVIbiulN_SAXrNw-AgxanlL_WNvqqsVgRZSvLis0ZQa282UsA9LbaNEd-feZZjoD5AnzqaI0et66rWI4EqtxOtjE_fD4Hkgkxg)
-
-  
+*Alt: This chart shows the different levels of verification for Aibaba suppliers. Look for these before you decide to purchase from a supplier. | [Source](https://images.ctfassets.net/wowgx05xsdrr/56Nga3eO9joaLouf4MYCHW/ed1ac0f2b409d58b8a085eb8771def54/buying-from-alibaba-example-5-750x459.png?fm=webp&w=750&q=75)*![](https://monierate.com/uploads/suppliers-verification-alibaba.jpg)
 
 ## How to negotiate with an Alibaba supplier
 
@@ -72,7 +70,8 @@ You’ll want to consider:
 -   **Payment terms**: How much will you pay in advance and when will the rest be due?
     
 
-[Image Source](https://ntmy.io/blog/negotiating-the-design-price/)![](https://lh7-us.googleusercontent.com/NYLpYaj8WxUTO4gktWJWmQj_mBdinClRE4Acl1WUoMWNyd8uKbcdnvXbqboGyvEHtdPezOHi1kLoI_bZrzQ8LfbEDBZ1VuNqa3Lu90mhL6bTt3qhcCHWUZBFcHg362RlCRJTavPaitmwKkGhJSqfmR4)
+[Image Source](https://ntmy.io/blog/negotiating-the-design-price/)
+![Illustration of a group in conversation](https://monierate.com/uploads/negotiation-skills.jpg)
 
 After you’ve thought about all of these factors, you can begin negotiating with the supplier. Remember to be courteous and be ready to compromise. It’s also important to remember that the supplier is also trying to make a profit, so don’t be too pushy in your negotiations. Try to find a balance that both parties are satisfied with.
 
@@ -160,7 +159,8 @@ Because of the current exorbitant shipping rates, sometimes suppliers can use th
 
 Air freight from China to the USA averages $2.50 to $4 per pound. In contrast, sea freight for a container ranges from $2,000 to $3,000.
 
-[Image Source](https://newseu.cgtn.com/news/2021-08-26/Shipping-costs-from-China-soar-as-consumers-face-price-rises-131rQHHWLao/img/8bd1b7ff125b4d999f8e5f260d45aacb/8bd1b7ff125b4d999f8e5f260d45aacb.jpeg)![](https://lh7-us.googleusercontent.com/srpqodM_ErbCxsgHGDFcdEdJKqZfpKEAozPhwGV0a3GuXBkKB2nMFXJ3U2hp1CMJvKVSj1e4bB8lUO9eUHuW1u3PPeCPLtPN6Qlj-oxk4jou61oUPt3Pqco4V9QofSxHXTiy5-rA5YfOp_EpN16E-as)
+[Image Source](https://newseu.cgtn.com/news/2021-08-26/Shipping-costs-from-China-soar-as-consumers-face-price-rises-131rQHHWLao/img/8bd1b7ff125b4d999f8e5f260d45aacb/8bd1b7ff125b4d999f8e5f260d45aacb.jpeg)
+![China Sea Shipping](https://monierate.com/uploads/china-shipping-1.jpg)
 
 ## Importing Fees for Goods from Alibaba
 These are costs to take note of :
