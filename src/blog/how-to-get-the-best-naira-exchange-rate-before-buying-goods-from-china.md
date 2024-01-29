@@ -5,7 +5,7 @@ description: With over $2 billion in annual trade with China, it's crucial to un
 createdAt: 2024-01-27T16:37:00.000Z
 updatedAt: 2024-01-27T16:37:00.000Z
 tag: guide
-image: https://lh7-us.googleusercontent.com/9OOx4y5rvcvpKRRc1h_QqtlcO992g1BiZcnaPAL592uwl69scMNvL_IeUyQwz4lgqNKSyIW6m-aVvvvJDrA21ZhYV4roFxF92r14L9BYnQlGs2bRPkMz-lkSNkQpKcKOh7IDrn-k7Tp_b0pnps6U2L0
+image: https://monierate.com/uploads/naira-cyn-currency.jpg
 published: true
 ---
 With over $2 billion in annual trade with China, it's crucial to understand how currency fluctuations can impact profitability. This guide arms Nigerian traders with insights on how to secure the best naira to yuan exchange rates in 2024.
