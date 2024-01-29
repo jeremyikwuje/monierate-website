@@ -10,7 +10,7 @@ published: true
 ---
 With over $2 billion in annual trade with China, it's crucial to understand how currency fluctuations can impact profitability. This guide arms Nigerian traders with insights on how to secure the best naira to yuan exchange rates in 2024.
 
-![](https://lh7-us.googleusercontent.com/9OOx4y5rvcvpKRRc1h_QqtlcO992g1BiZcnaPAL592uwl69scMNvL_IeUyQwz4lgqNKSyIW6m-aVvvvJDrA21ZhYV4roFxF92r14L9BYnQlGs2bRPkMz-lkSNkQpKcKOh7IDrn-k7Tp_b0pnps6U2L0)
+![Naira and Chinese Yen Currency](https://monierate.com/uploads/naira-cyn-currency.jpg)
 
 Importing products from China using 1688.com or Aliexpress has been saving businesses in Nigeria as it can be extremely lucrative. Nigerians tend to take advantage of the lower prices and high quality of goods. Currently, the mid-market exchange rate hovers around 1 Chinese Yuan to 127.73581862 Nigerian Naira. This over 30% swing in just a few years directly impacts the bottom line for local importers. As the Naira weakens compared to the Yuan, securing inventory from Shanghai to Lagos becomes more costly.
 
@@ -28,9 +28,8 @@ The black market also known as the parallel market, is an unofficial and unregul
   
 
 It is usually higher than the official rate, which is the price set by the [Central Bank of Nigeria (CBN)](https://www.cbn.gov.ng/rates/ExchRateByCurrency.asp) for the same currencies. The official CBN rate is based on the supply and demand of the foreign exchange market, as well as the monetary policy of the CBN
-
   
-![](https://lh7-us.googleusercontent.com/6wFBcW6hhPIjophhiMaMiNI13R-7Z8r25hEh9MAbwLro7cYl-pmaZz9Z6FWFa6hUK-z1aO-r7pj_ZY6ft1jXJRdbrmaHS9hwX7VCEAGQJids1iGOHeUsnAQTizFghonfjD9TCUlFIi8MqZnIdPPRiMQ)
+![CBN CYN/NGN rate](https://monierate.com/uploads/ngn-cyn-cbn.png)
 
 Many Nigerians use the black market rate to buy or sell foreign currency, especially when importing goods from China. According to [Monierate,](https://monierate.com/ng/compare/currencies/best-cny-exchange-rates) the current CNY/NGN black market rate is:
 
@@ -67,9 +66,9 @@ Savvy importers also watch out for economic or political news updates such as in
 
   
 
-![](https://lh7-us.googleusercontent.com/m1tnrtVZtTAnXh7Q02s1wa0do3RuydqKxDL7GHU0DhLmA1Mhmf7-DFfZ79s7OqocgS6NL5TaBvSLVdHrkR9BEyu3FHCdfHqShmK5FouwfJw7uNPv_MmcMXQKIAmtKJk8_U0GDy6J7TdIz5fINybjGaw)
+![China Nigeria Import Charge](https://monierate.com/uploads/china-nigeria-imports-chart.png)
 
-Nigeria Imports from China was US$13.77 Billion during 2022, according to the United Nations COMTRADE database on international trade.. | [Source](https://tradingeconomics.com/china/imports-from-nigeria)
+*Nigeria Imports from China was US$13.77 Billion during 2022, according to the United Nations COMTRADE database on international trade.. | [Source](https://tradingeconomics.com/china/imports-from-nigeria)*
 
 The black market is not the only way to send or receive CNY in Nigeria. There are other convenient and cost-effective methods. Keep reading as we explore some of them below.
 
@@ -95,7 +94,7 @@ Using the app with the best exchange rate ensures your recipient will receive ne
 
 And since we’ve long been committed to streamlining your digital transaction processes, platforms like [Cedar Money](https://www.cedar.money/) now offer competitive and more secure alternatives for international exchanges.
   
-![](https://lh7-us.googleusercontent.com/Jc0wYMzlIr3Dsj0txXvpCTgmzAGUKdS7F4JzoMSjCr4ApNpVfo6g1Xin1wZ5qtnXwqJdhXMCs5r98bZu9bXctDueEIH_UVEKquFrvrvvGC9lWTeMJYQcLGZ-k0I7SRWywVZJGbPG_FsbGEqo6S4oIUg)  
+![Cedar Dashboard Interface](https://monierate.com/uploads/cedar-ui-display.jpg)  
 
 You can use Cedar Money to send and receive money in over 40 currencies, including the Chinese yuan.
 
