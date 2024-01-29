@@ -96,47 +96,47 @@ Alibaba offers a variety of [payment methods](http://www.alibaba.com/help/safety
 
 Here's a breakdown of the payment methods available on Alibaba, ensuring you select a secure and fitting option for your business needs.
 
-1.  **WireTransfer (T/T Payment)**
+1.  #### WireTransfer (T/T Payment)
 Telegraphic Transfer (T/T), or bank wire transfer, stands as Alibaba's most utilized payment mode. Directly transferring funds from your bank to the supplier's, it boasts security with minimal involvement of third parties.
 -   **Pros**: Secure, with relatively low international transfer fees (USD 40) and generally favorable exchange rates.
 -   **Cons**: International transfers can take 3 to 7 business days, affecting planning due to potential delays.
 -   **Recommendations**: Exercise caution with new suppliers. Consider Alibaba’s Trade Assurance for added security and negotiate staggered payment terms (e.g., 30% upfront, 70% upon delivery) to mitigate risks.
 
-2. **Letter of Credit (L/C Payment)**
+2. #### Letter of Credit (L/C Payment)
 L/C Payment involves a financial institution guarantee. You establish a credit line with your bank, which pays the supplier post-shipment.
--   **Pros**: High security, with payment contingent on product receipt, aiding cash flow management.
--   **Cons**: Potentially costly with associated fees and slow transaction pace due to banking procedures.
--   **Recommendations**: Best for large orders with new suppliers, given the security and cash flow benefits.
+-   Pros: High security, with payment contingent on product receipt, aiding cash flow management.
+-   Cons: Potentially costly with associated fees and slow transaction pace due to banking procedures.
+-   Recommendations: Best for large orders with new suppliers, given the security and cash flow benefits.
 
-3. **PayPal**
+3. #### PayPal
 PayPal facilitates global payments directly from your bank account or via credit/debit cards.
--   **Pros**: Offers buyer protection, with instant fund transfer and widespread acceptance among Alibaba suppliers.
--   **Cons**: High fees for non-USD transactions and potentially unfavorable exchange rates.  
--   **Recommendations**: Optimal for transactions with trusted suppliers, provided you're aware of the exchange rates and fees.
+-   Pros: Offers buyer protection, with instant fund transfer and widespread acceptance among Alibaba suppliers.
+-   Cons: High fees for non-USD transactions and potentially unfavorable exchange rates.  
+-   Recommendations: Optimal for transactions with trusted suppliers, provided you're aware of the exchange rates and fees.
   
-4. **Alibaba Online Transfer**
+4. #### Alibaba Online Transfer
 Direct bank-to-bank transfers are secure but limited to certain countries.
--   **Pros**: Direct bank account transfers offer an Alibaba-secured method.
--   **Cons**: Transactions may take 1-2 days with transfer fees of $15 to $25. 
--   **Recommendations**: Suitable for small to medium orders. Consider other methods for larger transactions.
+-   Pros: Direct bank account transfers offer an Alibaba-secured method.
+-   Cons: Transactions may take 1-2 days with transfer fees of $15 to $25. 
+-   Recommendations: Suitable for small to medium orders. Consider other methods for larger transactions.
    
-5. **Debit or Credit Card**
+5. #### Debit or Credit Card
 Alibaba.com accepts multi-currency card payments at checkout.
--   **Pros**: Convenient for multi-currency transactions.
--   **Cons**: High transaction fees (2.99%) and potential currency conversion fees.
--   **Recommendations**: Use if transaction fees are acceptable for your budget.
+-   Pros: Convenient for multi-currency transactions.
+-   Cons: High transaction fees (2.99%) and potential currency conversion fees.
+-   Recommendations: Use if transaction fees are acceptable for your budget.
 
-6. **Payment Links**
+6. #### Payment Links
 Facilitates direct payments to suppliers within Alibaba's system.
--   **Advantages**: Immediate transaction reflection in the seller's account with minimal fees.
--   **Disadvantages**: Fixed transaction fee of 2%-4%, with some companies imposing additional charges.
--   **Recommendations**: Ideal for sample orders if fees are manageable.
+-   Pros: Immediate transaction reflection in the seller's account with minimal fees.
+-   Disadvantages: Fixed transaction fee of 2%-4%, with some companies imposing additional charges.
+-   Recommendations: Ideal for sample orders if fees are manageable.
     
-7. **Western Union**
+7. #### Western Union
 Available for US-based payments, offering another trade assurance payment option.
--   **Pros**: Convenient and secure for US users.
--   **Cons**: Limited availability, slow processing, and high fees starting from $30.
--   **Recommendations**: A viable option for US-based buyers comfortable with the fees.
+-   Pros: Convenient and secure for US users.
+-   Cons: Limited availability, slow processing, and high fees starting from $30.
+-   Recommendations: A viable option for US-based buyers comfortable with the fees.
     
 ## Other verified methods of payment
 
