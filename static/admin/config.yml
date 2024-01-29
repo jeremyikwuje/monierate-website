@@ -1,8 +1,8 @@
- backend:
+backend:
   name: github
-  repo: jeremyikwuje/sveltia-cms-auth
+  repo: jeremyikwuje/monierate-website
   branch: main
-  base_url: sveltia-cms-auth.monierate.workers.dev
+  base_url: https://sveltia-cms-auth.monierate.workers.dev
 
 # This line should *not* be indented
 publish_mode: editorial_workflow
