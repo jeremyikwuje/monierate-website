@@ -45,9 +45,9 @@ Here are some tips on how to find quality products with the right supplier:
 2.  **Ask about the products**: After you’ve identified a few possible Alibaba suppliers, the next step is to ask about the products. You can do this by sending a message via the Alibaba platform. Make sure to provide as much information as you can about what you need, such as specifications, quantities, etc. It’s also wise to request samples so you can verify the quality of the products yourself.
     
 3.  **Compare prices and shipping costs**: Once you’ve got quotes from the suppliers, it’s time to compare prices and shipping costs. Ensure you’re getting a fair price on the products and that the shipping costs are affordable. Remember that you’ll usually get what you pay for, so don’t choose the cheapest option if it compromises quality. After selecting a supplier you want to work with, the next step is to learn how to negotiate with them.
-    
 
-*Alt: This chart shows the different levels of verification for Aibaba suppliers. Look for these before you decide to purchase from a supplier. | [Source](https://images.ctfassets.net/wowgx05xsdrr/56Nga3eO9joaLouf4MYCHW/ed1ac0f2b409d58b8a085eb8771def54/buying-from-alibaba-example-5-750x459.png?fm=webp&w=750&q=75)*![](https://monierate.com/uploads/suppliers-verification-alibaba.jpg)
+  ![This chart shows the different levels of verification for Aibaba suppliers. Look for these before you decide to purchase from a supplier.](https://monierate.com/uploads/suppliers-verification-alibaba.jpg)
+[Source](https://images.ctfassets.net/wowgx05xsdrr/56Nga3eO9joaLouf4MYCHW/ed1ac0f2b409d58b8a085eb8771def54/buying-from-alibaba-example-5-750x459.png?fm=webp&w=750&q=75)
 
 ## How to negotiate with an Alibaba supplier
 
@@ -69,9 +69,8 @@ You’ll want to consider:
     
 -   **Payment terms**: How much will you pay in advance and when will the rest be due?
     
-
-[Image Source](https://ntmy.io/blog/negotiating-the-design-price/)
 ![Illustration of a group in conversation](https://monierate.com/uploads/negotiation-skills.jpg)
+[Image Source](https://ntmy.io/blog/negotiating-the-design-price/)
 
 After you’ve thought about all of these factors, you can begin negotiating with the supplier. Remember to be courteous and be ready to compromise. It’s also important to remember that the supplier is also trying to make a profit, so don’t be too pushy in your negotiations. Try to find a balance that both parties are satisfied with.
 
@@ -159,8 +158,8 @@ Because of the current exorbitant shipping rates, sometimes suppliers can use th
 
 Air freight from China to the USA averages $2.50 to $4 per pound. In contrast, sea freight for a container ranges from $2,000 to $3,000.
 
-[Image Source](https://newseu.cgtn.com/news/2021-08-26/Shipping-costs-from-China-soar-as-consumers-face-price-rises-131rQHHWLao/img/8bd1b7ff125b4d999f8e5f260d45aacb/8bd1b7ff125b4d999f8e5f260d45aacb.jpeg)
 ![China Sea Shipping](https://monierate.com/uploads/china-shipping-1.jpg)
+[Image Source](https://newseu.cgtn.com/news/2021-08-26/Shipping-costs-from-China-soar-as-consumers-face-price-rises-131rQHHWLao/img/8bd1b7ff125b4d999f8e5f260d45aacb/8bd1b7ff125b4d999f8e5f260d45aacb.jpeg)
 
 ## Importing Fees for Goods from Alibaba
 These are costs to take note of :
@@ -196,5 +195,4 @@ Common Terminologies when sourcing from Alibaba include:
 -   **RFQ**: The Request for Quotation (RFQ) feature on Alibaba.com is a handy tool for buyers to get the best prices for products they are interested in. Here's how it works: as a buyer, you describe what you're looking for, and sellers respond with their price estimates. This lets you easily compare prices from different suppliers to find the best deal.
    
 ## Conclusion
-
 Paying on Alibaba is easy and safe if you know what to do. Make sure to use payment methods you trust, talk clearly with your suppliers, and use Alibaba’s Trade Assurance to keep your money safe. By learning about each payment method, you can pick the best one for your business. We hope you find it useful.
