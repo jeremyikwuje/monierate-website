@@ -173,17 +173,15 @@ Importantly, Cedar offers the best dollar rate in countries they support and the
 
 **How much does it cost to transfer funds to China via Cedar Money?**
 
-- Reliability: High
+- Exchange rate: based on real-time mid-market rate
 
-- Transfer Fees: ??
+- Extra Fees: None
+
+- Reliability: High
 
 - Setup Difficulty: Low
 
 - Speed: Between 1 to 3 business days
-
-- Exchange rate: based on real-time mid-market rate
-
-- Extra Fees: None
 
 
 ## Conclusion
