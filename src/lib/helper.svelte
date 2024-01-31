@@ -48,7 +48,7 @@ export function basicAuth(method, body, level = "api")
 export function getEndpoint(endpoint)
 {
     const server = env.SERVER
-    let apiUrl = 'https://monierate-api-production.up.railway.app'
+    let apiUrl = 'https://monierate-api.onrender.com'
     if (server == 'LOCAL') {
         apiUrl = 'http://localhost:3000'
     }
