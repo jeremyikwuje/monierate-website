@@ -5,9 +5,11 @@ description: That's why we started Zillawire, a B2B cross-border FX payments pla
 createdAt: 2024-02-06T10:43:00.000Z
 updatedAt: 2024-02-06T10:43:00.000Z
 tag: product
-image: /uploads/zillawire-intro-design.jpg
-published: false
+image: https://monierate.com/uploads/zillawire-intro-design.jpg
+published: true
 ---
+![Zillawire](https://monierate.com/uploads/zillawire-intro-design.jpg)
+
 At Zilla, we understand the challenges businesses face when navigating the delicate world of cross-border transactions. The rates are ever-changing and a service that was available yesterday has put several restrictions in place today. We know this because we’ve been there.
 
 That's why we started Zillawire, a B2B cross-border FX payments platform. Designed to make international transactions a breeze, Zillawire is more than just a service; it's a partner in your business’ success. Now, when you need to pay your foreign suppliers, all you will need to do is log in to your [Zillawire account](https://app.zillawire.com/login).
