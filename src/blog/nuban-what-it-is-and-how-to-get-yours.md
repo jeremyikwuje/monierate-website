@@ -8,7 +8,6 @@ tag: terms
 image: https://monierate.com/uploads/number-boards.jpg
 published: true
 ---
-# NUBAN: What It Is and How To Get Yours
 ![Number boards](https://monierate.com/uploads/number-boards.jpg)
 
 ## What is a NUBAN?
