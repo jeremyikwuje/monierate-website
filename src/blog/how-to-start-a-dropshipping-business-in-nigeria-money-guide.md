@@ -29,7 +29,7 @@ In our previous post, we introduced the concept of[ dropshipping,](https://monie
 
 Let's focus on a product within the home niche, for instance, a baby headgear. We have chosen this due to the constant demand from Nigerian parents for affordable options for their 7-month-old to 1-year-old children. 
 
-![]()
+![AliExpress Product Search](https://monierate.com/uploads/aliexpress-product-search.png)
 
 While choosing a product or niche, select products that have a wow effect or that solve a problem. Competitor research is key; you can also pick various products within the same niche to stay competitive.
 
@@ -39,7 +39,7 @@ Next, we’re going to choose a platform to supply us with just that.
 
 Based on the products you have chosen to drop-ship, you need a trusted supplier who can deliver the product directly to your customer upon order. Search for suppliers on Facebook groups, Alibaba, or Instagram and discuss the business operations with them. This is often overlooked but it's important to ask if they offer special packaging or if you should collaborate with a local branding agency.
 
-![]()
+![Facebook search dropshipping](https://monierate.com/uploads/facebook-search-droppshipping.png)
 
 **Note**: The goal is to turn a popular product and try to build a brand out of it.
 
@@ -49,7 +49,7 @@ To start selling online, you need a website where you can showcase your products
 
 Typically, you won't handle the products yourself unless you're ordering samples. Acquiring a domain name is part of the process—use resources like YouTube to learn how to set it up using user-friendly assets. You also need to set up your payment methods, shipping options, taxes, and policies.
 
-![Set Up Your Dropshipping Store]()
+![Set Up Your Dropshipping Store](https://monierate.com/uploads/shopify-themes-page.jpg)
 
 #### Payments
 
