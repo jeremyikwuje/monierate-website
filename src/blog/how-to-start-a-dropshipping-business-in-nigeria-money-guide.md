@@ -48,10 +48,9 @@ To start selling online, you need a website where you can showcase your products
 
 Typically, you won't handle the products yourself unless you're ordering samples. Acquiring a domain name is part of the process—use resources like YouTube to learn how to set it up using user-friendly assets. You also need to set up your payment methods, shipping options, taxes, and policies.
 
-![Set Up Your Dropshipping Store](https://monierate.com/uploads/shopify-themes-page.jpg)
+[Set Up Your Dropshipping Store](https://monierate.com/uploads/shopify-themes-page.jpg)
 
 #### Payments
-
 A prominent step in setting up an online store is streamlining the checkout process. You want to let guests check out without an account, offer different ways to pay, and be upfront about shipping. 
 
 Shopify has various apps and gateways such as [Paystack](https://paystack.com/) and [Flutterwave](https://flutterwave.com/us/) for setting up your payment processes, which is handy when dealing with your customers.
