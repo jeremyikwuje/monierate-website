@@ -1,6 +1,6 @@
 ---
 layout: blog
-title: How to Start a Dropshipping Business in Nigeria - Money Guide
+title: How to Start a Dropshipping Business in Nigeria - Make Money Guide
 description: The start-up capital for this business is low, and the return on investment is huge. In this comprehensive article, we will illuminate the key steps, strategies, and insider insights that will empower you to navigate Nigeria’s dropshipping landscape.
 createdAt: 2024-02-08T12:09:00.000Z
 updatedAt: 2024-02-08T12:09:00.000Z
