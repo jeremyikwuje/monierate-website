@@ -8,7 +8,7 @@ tag: guide
 image: https://monierate.com/uploads/start-selling-shopify.jpg
 published: true
 ---
-**Brief:** The start-up capital for this business is low, and the return on investment is huge. In this comprehensive article, we will illuminate the key steps, strategies, and insider insights that will empower you to navigate Nigeria’s dropshipping landscape.
+The start-up capital for this business is low, and the return on investment is huge. In this comprehensive article, we will illuminate the key steps, strategies, and insider insights that will empower you to navigate Nigeria’s dropshipping landscape.
 
 ![Start selling on Shopping in Nigeria](https://monierate.com/uploads/start-selling-shopify.jpg)
 
@@ -20,8 +20,7 @@ Dropshipping is conducted solely online, so you may need to invest in a good lap
 
 Begin by planning your budget. Allocate funds for purchasing goods, monthly advertising, mentorship, domain claims, data, etc. Keep in mind also, that the Nigerian market for passive income strategies is becoming quite competitive.
 
-In our previous post, we introduced the concept of[ dropshipping,](https://monierate.com/blog/dropshipping-what-it-is-and-how-it-works-in-nigeria) and in this one, we're giving you a step-by-step guide from the perspective of a Nigerian eager to start making money through dropshipping.
-
+In our previous post, we introduced the concept of [dropshipping,](https://monierate.com/blog/dropshipping-what-it-is-and-how-it-works-in-nigeria) and in this one, we're giving you a step-by-step guide from the perspective of a Nigerian eager to start making money through dropshipping.
 
 ## How to start a dropshipping business in Nigeria
 
