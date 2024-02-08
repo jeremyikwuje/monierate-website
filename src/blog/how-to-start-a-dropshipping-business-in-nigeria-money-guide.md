@@ -29,8 +29,7 @@ In our previous post, we introduced the concept of[ dropshipping,](https://monie
 
 Let's focus on a product within the home niche, for instance, a baby headgear. We have chosen this due to the constant demand from Nigerian parents for affordable options for their 7-month-old to 1-year-old children. 
 
-\
-![](https://lh7-us.googleusercontent.com/sI1lRNYJKUiMiOQwqfQbvvJRcDXSd-S1SWQm79GDE0_oG_LgoBQJ-RFe3-YJKr0sUImZPDo01-8uhixgL0sFGq8i1Ej_RrqRZlFfLP4u5pjVOeKGhfl4i3qumks2_AxSE8DqYXprSjIBiRR6F0L6mBk)
+![]()
 
 While choosing a product or niche, select products that have a wow effect or that solve a problem. Competitor research is key; you can also pick various products within the same niche to stay competitive.
 
@@ -40,8 +39,7 @@ Next, we’re going to choose a platform to supply us with just that.
 
 Based on the products you have chosen to drop-ship, you need a trusted supplier who can deliver the product directly to your customer upon order. Search for suppliers on Facebook groups, Alibaba, or Instagram and discuss the business operations with them. This is often overlooked but it's important to ask if they offer special packaging or if you should collaborate with a local branding agency.
 
-\
-![](https://lh7-us.googleusercontent.com/dNFbpB1TRNJnk-pPt-szHS_v2x3ruTxx4EHZ4Z5_LZs9ASt_tCiOz3ID0cZheFVnG1-uIbBrQuz5avkdlozb3EjkBH5g9vuXy280GwxLkIlaWfw55u6MNN26A35oVe6yIvRhth_nEFHhh1MtjrEnc8s)
+![]()
 
 **Note**: The goal is to turn a popular product and try to build a brand out of it.
 
@@ -51,14 +49,13 @@ To start selling online, you need a website where you can showcase your products
 
 Typically, you won't handle the products yourself unless you're ordering samples. Acquiring a domain name is part of the process—use resources like YouTube to learn how to set it up using user-friendly assets. You also need to set up your payment methods, shipping options, taxes, and policies.
 
-\
-![Set Up Your Dropshipping Store](https://lh7-us.googleusercontent.com/5UFJ2mlFOPV35kHmezd2anTAoankUf4bazs4XlCt0AIzxiWqPP_dtcMXxURur2lgrfNtlD-4WACW6itX1il2F6A-VDfL0SfKczrZp8IN7dSzt9l_kK3Wppzat24EGSSnsINvzwF2OUE9jeoUVK_YKKE)
+![Set Up Your Dropshipping Store]()
 
 #### Payments
 
 A prominent step in setting up an online store is streamlining the checkout process. You want to let guests check out without an account, offer different ways to pay, and be upfront about shipping. 
 
-Shopify has various apps and gateways such as [Paystack](https://paystack.com/) and[ Flutterwave](https://flutterwave.com/us/) for setting up your payment processes, which is handy when dealing with your customers.
+Shopify has various apps and gateways such as [Paystack](https://paystack.com/) and [Flutterwave](https://flutterwave.com/us/) for setting up your payment processes, which is handy when dealing with your customers.
 
 But with international suppliers, you can effortlessly send funds with Cedar Money without hidden charges. Integrating this payment solution into your site allows you to start a free account to handle international payments or change foreign currencies to Nigerian Naira.
 
@@ -72,7 +69,7 @@ You might also need to create a launch plan, which includes setting a launch dat
 
 - ### Marketing Your Store
 
-Launching your store is not enough to make sales. To attract customers and keep them coming back, learn how to create engaging short videos. Buy and[ pay](https://www.cedar.money/) for the product samples for content creation and use them to make TikTok videos, which you can also share on Instagram and Facebook. If you find content creation challenging, ask your supplier for product images and videos to start with. 
+Launching your store is not enough to make sales. To attract customers and keep them coming back, learn how to create engaging short videos. Buy and [pay](https://www.cedar.money/) for the product samples for content creation and use them to make TikTok videos, which you can also share on Instagram and Facebook. If you find content creation challenging, ask your supplier for product images and videos to start with. 
 
 Once you're ready, invest in sponsored ads and consider collaborating with user-generated content (UGC) influencers, as people often prefer to purchase based on personal connection rather than just ads.
 
