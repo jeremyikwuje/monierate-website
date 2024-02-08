@@ -38,7 +38,7 @@ Next, we’re going to choose a platform to supply us with just that.
 
 Based on the products you have chosen to drop-ship, you need a trusted supplier who can deliver the product directly to your customer upon order. Search for suppliers on Facebook groups, Alibaba, or Instagram and discuss the business operations with them. This is often overlooked but it's important to ask if they offer special packaging or if you should collaborate with a local branding agency.
 
-![Facebook search dropshipping](https://monierate.com/uploads/facebook-search-droppshipping.png)
+![Facebook search dropshipping](https://monierate.com/uploads/facebook-search-dropshipping.png)
 
 **Note**: The goal is to turn a popular product and try to build a brand out of it.
 
