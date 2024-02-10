@@ -8,7 +8,7 @@ tag: terms
 image: https://monierate.com/uploads/finger-pressing-atm.jpg
 published: true
 ---
-Banking in today’s world has gone beyond what it used to be a couple of years ago. Some of this is a result of improved methods of operation. However, most of the industry’s advancement comes from the exciting new technologies coming onto the scene. One such technology, existing within the Nigerian banking space, is the NIBSS.  
+Banking in today’s world has gone beyond what it used to be a couple of years ago. Some of this is a result of improved methods of operation. However, most of the industry’s advancement comes from the exciting new technologies coming onto the scene. One such technology within the Nigerian banking space is the NIBSS.  
 
 ![Someone fingers on ATM keypad  - NIBSS](https://monierate.com/uploads/finger-pressing-atm.jpg)
 
@@ -33,11 +33,11 @@ NIBSS is short for “Nigeria Inter-Bank Settlement System”. The word “Niger
 
 ## History of NIBSS
 
-The Nigeria Inter-Bank Settlement System was established in 1993 with the firm’s incorporation. However, it wasn’t until June 1994 before major operations began. 
+The Nigeria Inter-Bank Settlement System was established in 1993 with the firm’s incorporation. However, it wasn’t until June 1994 that major operations began. 
 
 Not much development occurred within the next eight years. Finally, In 2002, the Nigeria Automated Clearing System (NACS) was implemented. This set the way for a series of innovations spanning more than a decade. 
 
-Guidelines for e-banking were drawn up in 2003. Just the following year, a new method for clearing cheque was already in use, and in the next two years, the Real-Time Gross Settlement System (RTGS) was launched.  
+Guidelines for e-banking were drawn up in 2003. Just the following year, a new method for clearing cheques was already in use, and in the next two years, the Real-Time Gross Settlement System (RTGS) was launched.  
 
 Three years went by and in 2009, the Mobile Payment Regulatory Framework was issued. This came along with guidelines for both Transition Switching and Stored Value as well as the establishment of a Direct Debit Rule. 
 
@@ -64,7 +64,7 @@ Standardization occurs because all Nigerian banks are adopting the same technolo
 
 **Interoperability:**
 
-We have mentioned that the NIBSS is an industry-owned product. Technically, this means one thing. All institutions within the industry would have to find a common ground for use of the product. 
+We have mentioned that the NIBSS is an industry-owned product. Technically, this means one thing. All institutions within the industry would have to find a common ground for the use of the product. 
 
 The interoperability function of NIBSS stems from having such common use. It prompts banks to communicate with each other and partner towards delivering payment services across the country. 
 
@@ -73,11 +73,11 @@ Furthermore, since the NIBSS serves as a backbone for online payment, banks can 
 
 ## NIBSS portal 
 
-Users trying to access the NIBSS portal can jump to their [official website](https://nibss-plc.com.ng/log-in/) or make use of the [log-in page](https://nibss-plc.com.ng/log-in/). The NIBSS portal is so-called because it opens to door to vast information, services, and products. 
+Users trying to access the NIBSS portal can jump to their [official website](https://nibss-plc.com.ng/log-in/) or make use of the [log-in page](https://nibss-plc.com.ng/log-in/). The NIBSS portal is so-called because it opens the door to vast information, services, and products. 
 
 It offers six unique services. They are Payment Services, Collections, Data & Identity Services, Payment Innovation, Nigeria Central Switch, Special Projects, Payment Terminal and Application Certification, and Bank Verification Number(BVN).
 
-In addition, users can access a number of really helpful resources. These include the latest banking and finance news, national payments data and analytics, and NIBSS media documents, 
+In addition, users can access several really helpful resources. These include the latest banking and finance news, national payments data and analytics, and NIBSS media documents, 
 
 Staying true to its name, the NIBSS portal maintains some useful links. This can be found at the bottom footer. Some of them are to the firm’s [partners](https://nibss-plc.com.ng/partners/), available [career](https://nibss-plc.com.ng/?page_id=495) opportunities, and a link for users to access [training](https://nibss-plc.com.ng/?page_id=495). There’s also a [support centre](https://contactcentre.nibss-plc.com.ng/support/home) link for people who might need clarification on the platform’s functions or services. 
 
@@ -86,7 +86,7 @@ Staying true to its name, the NIBSS portal maintains some useful links. This can
 
 Ideators of the NIBSS envisioned a system that would be integrated across all Nigerian banks. This includes every single commercial bank within the country. 
 
-But traditional banks are not the only ones uplinked and active on the platform. As pointed out in the reviewed NIBSS scheme, several unique financial industry players also utilize the inter-bank system. 
+However traditional banks are not the only ones uplinked and active on the platform. As pointed out in the reviewed NIBSS scheme, several unique financial industry players also utilize the inter-bank system. 
 
 This blankets commercial banks such as FirstBank, Guaranty Trust Bank, and United Bank of Africa. It also equally covers Opay, PalmPay, and the like. 
 
@@ -95,7 +95,7 @@ This blankets commercial banks such as FirstBank, Guaranty Trust Bank, and Unite
 
 The NIBSS Instant Payment or NIP,  is a service that delivers instantaneous payments. The aim is to create smooth seconds-fast transactions, driving business value and customer experience. 
 
-Designed with accessibility in mind, users can make use of the NIP platform in a variety of ways. The available options are through USSD, POS and ATM, mobile banking, web platforms, and third-party channels. 
+Designed with accessibility in mind, users can make use of the NIP platform in a variety of ways. The available options are USSD, POS and ATM, mobile banking, web platforms, and third-party channels. 
 
 
 ## How to Check if NIBSS is Down
@@ -103,20 +103,20 @@ While the interbank settlement service generally operates smoothly, occasional d
 
 In the event of NIBSS transfer service disruptions, banks or associated services typically inform their customers of the downtime and recommend refraining from initiating transfers until the service is restored, which may take up to 2 hours or even a full 24 hours. 
 
-Your bankwill promptly [notify](https://twitter.com/IkejaElectric/status/944554984984719360?lang=en) you of any such downtimes, and you may also become aware of them if others around you are experiencing failed transfers from various banks.
+Your bank will promptly [notify](https://twitter.com/IkejaElectric/status/944554984984719360?lang=en) you of any such downtimes, and you may also become aware of them if others around you are experiencing failed transfers from various banks.
 
 ## NIBSS vs BVN 
 
 BVN stands for “Bank Verification Number”. Of course, this is starkly different from the NIBSS as the former is a number whereas the latter is an entire digital system. 
 
 
-## How to Validate your BVN on NIBSS Website
+## How to Validate your BVN on the NIBSS Website
 
-Want to confirm your BVN? That is possible on the NIBSS portal. Here are the step-by-step guide to getting your BVN validated. 
+Want to confirm your BVN? That is possible on the NIBSS portal. Here is the step-by-step guide to getting your BVN validated. 
 
 - Open the NIBSS portal by typing <https://www.nibss-plc.com.ng/> into your browser or clicking on it 
 
-- Register with your details or Login if you have an existing account
+- Register with your details or log in if you have an existing account
 
 - Once in, proceed to click on “Services” at the top footer
 
