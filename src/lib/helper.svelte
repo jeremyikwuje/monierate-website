@@ -28,11 +28,11 @@ export function basicAuth(method, body, level = "api")
 
     let basicToken;
     if (typeof btoa === 'function') {
-        return btoa(apiAuth);
+        basicToken = btoa(apiAuth);
     } else {
         return Buffer.from(apiAuth).toString('base64');
     }
-    
+
     if (level == 'system') {
         basicToken = btoa(systemAuth)
     }
