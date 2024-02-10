@@ -4,11 +4,10 @@ title: "NUBAN: What It Is and How To Get Yours"
 description: Is NUBAN the same as an account number and how can you go about getting yours? Find out all about it in this article.
 createdAt: 2024-02-07T15:33:00.000Z
 updatedAt: 2024-02-07T15:33:00.000Z
-tag: guide
+tag: terms
 image: https://monierate.com/uploads/number-boards.jpg
 published: true
 ---
-# NUBAN: What It Is and How To Get Yours
 ![Number boards](https://monierate.com/uploads/number-boards.jpg)
 
 ## What is a NUBAN?
