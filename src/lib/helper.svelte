@@ -27,16 +27,15 @@ export function basicAuth(method, body, level = "api")
     const systemAuth = `ikwuje:xaS@Di2t#7Qry19M`
 
     let basicToken;
-    if (typeof btoa === 'function') {
-        basicToken = btoa(apiAuth);
-    } else {
-        return Buffer.from(apiAuth).toString('base64');
-    }
 
     if (level == 'system') {
-        basicToken = btoa(systemAuth)
+        if (typeof btoa === 'function') {
+            basicToken = btoa(apiAuth);
+        } else {
+            basicToken = Buffer.from(apiAuth).toString('base64');
+        }
     }
-
+   
     const request = {
         headers: {
             "Authorization": `Basic ${basicToken}`,
