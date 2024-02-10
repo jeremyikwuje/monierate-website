@@ -26,16 +26,11 @@ export function basicAuth(method, body, level = "api")
     const apiAuth = `changemoney_api:N4&**S%Vl0C7MubL`
     const systemAuth = `ikwuje:xaS@Di2t#7Qry19M`
 
-    let basicToken;
-
+    let basicToken = btoa(apiAuth)
     if (level == 'system') {
-        if (typeof btoa === 'function') {
-            basicToken = btoa(apiAuth);
-        } else {
-            basicToken = Buffer.from(apiAuth).toString('base64');
-        }
+        basicToken = btoa(systemAuth)
     }
-   
+
     const request = {
         headers: {
             "Authorization": `Basic ${basicToken}`,
