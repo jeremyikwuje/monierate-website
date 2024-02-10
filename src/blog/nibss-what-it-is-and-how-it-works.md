@@ -8,8 +8,9 @@ tag: terms
 image: https://monierate.com/uploads/finger-pressing-atm.jpg
 published: true
 ---
-![Someone fingers on ATM keypad  - NIBSS](https://monierate.com/uploads/finger-pressing-atm.jpg)
 Banking in today’s world has gone beyond what it used to be a couple of years ago. Some of this is a result of improved methods of operation. However, most of the industry’s advancement comes from the exciting new technologies coming onto the scene. One such technology, existing within the Nigerian banking space, is the NIBSS.  
+
+![Someone fingers on ATM keypad  - NIBSS](https://monierate.com/uploads/finger-pressing-atm.jpg)
 
 ## What is NIBSS?
 NIBSS is a multi-mode electronic payment system. It is designed to facilitate the digitized payment operations occurring across local banks. 
