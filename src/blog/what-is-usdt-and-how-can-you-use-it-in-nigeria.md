@@ -1,6 +1,6 @@
 ---
 layout: blog
-title: What is USDT and how can you use it in Nigeria
+title: What is USDT and How to  use It in Nigeria
 description: Learn what USDT is, how it works, and how you can use it in Nigeria to trade, invest, and transact with cryptocurrencies.
 createdAt: 2024-02-14T20:41:00.000Z
 updatedAt: 2024-02-14T20:41:00.000Z
