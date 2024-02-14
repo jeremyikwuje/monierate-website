@@ -107,7 +107,7 @@ Some of these exchanges are user-friendly while others are not. For example, Bin
 Compare the fees, rates, and security of each platform before making a transaction. 
 
 
-## Some USDT FAQs? 
+## Some USDT FAQs?
 
 **Is USDT Legal in Nigeria?**
 
