@@ -6,7 +6,7 @@ createdAt: 2024-02-14T20:41:00.000Z
 updatedAt: 2024-02-14T20:41:00.000Z
 tag: terms
 image: https://monierate.com/uploads/tether-usdt.jpg
-published: false
+published: true
 ---
 USDT, or Tether, is one of the most popular and widely used cryptocurrencies in the world. Unlike most cryptocurrencies, which have volatile and unpredictable prices, USDT is designed to maintain a stable value that is equal to the US dollar.
 
@@ -30,7 +30,7 @@ USDT is a controversial stablecoin that was created in 2014 by Brock Pierce, Ree
 
 However, its issuer, Tether, has faced many issues, such as banking problems, lack of transparency, legal disputes, and market manipulation allegations. In 2019, Tether and its partner exchange, Bitfinex, settled a lawsuit with the New York Attorney General for $18.5 million.
 
-![Tether Allocation](https://lh7-us.googleusercontent.com/T0Vok0x1O-7xGHfOTXWrwDlGK8huNbA1VYBH5T8UG7kbXxJ5XsJlPXvThzVgyFt9v1x1Ds5ZyuNV3zos60fm9_-L56KW8AStUSzDy25m6RCIH5bK3D1ejVaqWekkv_CAURnzWjjuK2vY61ClpVWQd9I)
+![Tether Allocation](https://monierate.com/uploads/tether-allocation.jpg)
 
 
 ## What makes Tether stand out from other stablecoins
