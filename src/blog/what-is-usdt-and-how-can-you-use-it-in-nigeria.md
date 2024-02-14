@@ -24,7 +24,7 @@ USDT is a type of cryptocurrency that is also known as a stablecoin. A stablecoi
 USDT is pegged to the US dollar, meaning that one USDT token is always supposed to be worth one US dollar. USDT is issued and managed by a Hong Kong-based company called Tether, which claims to back every USDT token with an equivalent amount of US dollars or other assets in its reserves. Tether publishes its reserve holdings daily on its website and also undergoes periodic audits by independent firms to verify its claims.
 
 
-## Who are the Founders of USDT
+##  Founders of USDT
 
 USDT is a controversial stablecoin that was created in 2014 by Brock Pierce, Reeve Collins, and Craig Sellars as Realcoin, and later renamed to Tether. It runs on the Bitcoin blockchain using the Omni Protocol and claims to be backed by US dollar reserves. 
 
@@ -58,7 +58,7 @@ USDT is accepted by many cryptocurrency exchanges and platforms, making it a pop
 Tether has tried to be more transparent by giving regular updates on the reserve holdings and letting third-party auditors check them. This transparency aims to create trust among users and regulators.
 
 
-## How does USDT work
+## How USDT works
 
 USDT works by issuing tokens based on demand and backed by a reserve of US dollars. It is traded on cryptocurrency exchanges and adjusted to keep its value at 1 US dollar. 
 
@@ -67,7 +67,7 @@ Tether Ltd., the company behind USDT, creates and sends tokens to users who pay 
 Tether may also create or redeem tokens to keep its supply and demand in balance.
 
 
-## How can I use USDT in Nigeria?
+## How to use USDT in Nigeria
 
 Tether (USDT) is very useful for different things in the crypto world, such as:
 
@@ -81,10 +81,7 @@ Tether (USDT) is very useful for different things in the crypto world, such as:
 
 - **Arbitrage:** Some traders use USDT to make money from crypto arbitrage, which is when you use the price differences between exchanges to buy and sell cryptos quickly and make a profit.
 
- 
-
-
-## What are USDT transaction fees?
+## What are USDT transaction fees
 
 To make the most of the use cases above, it's important to be aware of the fees typically involved in processing and verifying transactions on the blockchain and how they can influence your USDT/NGN trading experiences and otherwise:
 
@@ -101,7 +98,7 @@ To know the exact transaction fees for your USDT transaction, you should check w
 Also, [blockchain explorers](https://blockchair.com/tron) for specific networks can give real-time information on current transaction fees.
 
 
-## Where can I buy USDT in Nigeria?
+## Where to buy USDT in Nigeria
 
 You can buy USDT on various cryptocurrency exchanges, such as Binance, Luno, Dart Africa, etc. The process typically involves creating an account on an exchange, depositing funds (fiat or other cryptocurrencies), and then using those funds to purchase USDT. 
 
@@ -110,7 +107,7 @@ Some of these exchanges are user-friendly while others are not. For example, Bin
 Compare the fees, rates, and security of each platform before making a transaction. 
 
 
-## What are some USDT FAQs? 
+## Some USDT FAQs? 
 
 **Is USDT Legal in Nigeria?**
 
