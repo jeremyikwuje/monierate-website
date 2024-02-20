@@ -16,16 +16,16 @@ let top_rates = {
         from: 'USD',
         to: 'NGN'
     },
-    btcngn: {
-        parallel: market_avg.btcngn.parallel,
-        name: 'BTC/NGN',
-        from: 'BTC',
-        to: 'NGN'
-    },
     usdtngn: {
         parallel: market_avg.usdtngn.parallel,
         name: 'USDT/NGN',
         from: 'USDT',
+        to: 'NGN'
+    },
+    btcngn: {
+        parallel: market_avg.btcngn.parallel,
+        name: 'BTC/NGN',
+        from: 'BTC',
         to: 'NGN'
     },
     eurngn: {
