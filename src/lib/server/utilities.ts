@@ -27,7 +27,7 @@ export function basicAuth(method: string, body: any, level = "api")
 
 function universalBtoa(str: any) {
     try {
-      return btoa(str);
+       return Buffer.from(str, 'base64').toString('binary');
     } catch (err) {
       return Buffer.from(str, 'binary').toString('base64');
     }
