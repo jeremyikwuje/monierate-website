@@ -8,7 +8,7 @@ tag: terms
 image: https://monierate.com/uploads/black-woman-pos.jpg
 published: true
 ---
-![A nigeria woman standing beside a Point of Sale device PSP](https://monierate.com/uploads/black-woman-pos.jpg)
+![A Nigeria woman standing close to a Point of Sale device](https://monierate.com/uploads/black-woman-pos.jpg)
 
 On December 5, 2023, the Nigerian Inter-Bank Settlement System (NIBSS) published a circular that sparked a ton of conversations across the local financial industry. The circular required Deposit Money Banks (DMBs) to disconnect all non-deposit financial institutions from their NIBSS Instant Payment (NIP) platform. According to the NIBSS, this is because such institutions are not authorized to hold customers’ funds.
 
