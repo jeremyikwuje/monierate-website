@@ -1,3 +1,5 @@
+import { Buffer } from "buffer";
+
 export function basicAuth(method: string, body: any, level = "api")
 {
     const apiAuth = `changemoney_api:N4&**S%Vl0C7MubL`
