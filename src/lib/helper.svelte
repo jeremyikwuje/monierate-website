@@ -1,21 +1,20 @@
 
 <script context="module">
 import { env } from '$env/dynamic/private';
-global.Buffer = global.Buffer || require('buffer').Buffer;
 
-export const universalBtoa = str => {
+export function universalBtoa(str) {
   try {
     return btoa(str);
   } catch (err) {
-    return Buffer.from(str, 'binary').toString('base64');
+    //return Buffer.from(str, 'binary').toString('base64');
   }
 };
 
-export const universalAtob = b64Encoded => {
+export function universalAtob(b64Encoded) {
   try {
     return atob(b64Encoded);
   } catch (err) {
-    return Buffer.from(b64Encoded, 'base64').toString('binary');
+    //return Buffer.from(b64Encoded, 'base64').toString('binary');
   }
 };
 
