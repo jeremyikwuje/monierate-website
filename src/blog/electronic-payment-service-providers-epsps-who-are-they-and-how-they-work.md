@@ -5,9 +5,11 @@ description: Electronic Payment Service Providers (EPSPs) are special institutio
 createdAt: 2024-02-20T08:05:00.000Z
 updatedAt: 2024-02-20T08:05:00.000Z
 tag: terms
-image: /uploads/black-woman-pos.jpg
+image: https://monierate.com/uploads/black-woman-pos.jpg
 published: true
 ---
+![A nigeria woman standing beside a Point of Sale device PSP](https://monierate.com/uploads/black-woman-pos.jpg)
+
 On December 5, 2023, the Nigerian Inter-Bank Settlement System (NIBSS) published a circular that sparked a ton of conversations across the local financial industry. The circular required Deposit Money Banks (DMBs) to disconnect all non-deposit financial institutions from their NIBSS Instant Payment (NIP) platform. According to the NIBSS, this is because such institutions are not authorized to hold customers’ funds.
 
 Conversations surrounding the NIBSS circular reveal that a good number of people are unaware of what non-deposit financial institutions are. Hopefully, this article will serve to clear the air on non-deposit financial institutions by talking about Electronic Payment Service Providers (EPSPs). 
