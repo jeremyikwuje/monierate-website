@@ -72,10 +72,10 @@ function basicAuth(method: string, body: any, level = "api")
     const apiAuth = `changemoney_api:N4&**S%Vl0C7MubL`
     const systemAuth = `ikwuje:xaS@Di2t#7Qry19M`
 
-    let basicToken = universalBtoa(apiAuth);
+    let basicToken = Buffer.from(apiAuth, 'binary').toString('base64');
 
     if (level == 'system') {
-        basicToken = universalBtoa(systemAuth);
+        basicToken = Buffer.from(systemAuth, 'binary').toString('base64');
     }
 
     const request: any = {
