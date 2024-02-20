@@ -5,10 +5,10 @@ export function basicAuth(method: string, body: any, level = "api")
     const apiAuth = `changemoney_api:N4&**S%Vl0C7MubL`
     const systemAuth = `ikwuje:xaS@Di2t#7Qry19M`
 
-    let basicToken = universalBtoa(apiAuth);
+    let basicToken = toBase64(apiAuth);
 
     if (level == 'system') {
-        basicToken = universalBtoa(systemAuth);
+        basicToken = toBase64(systemAuth);
     }
 
     const request: any = {
@@ -25,18 +25,18 @@ export function basicAuth(method: string, body: any, level = "api")
     return request;
 }
 
-function universalBtoa(str: any) {
+function fromBase64(base64: any) {
     try {
-       return Buffer.from(str, 'base64').toString('binary');
+        return atob(base64);
     } catch (err) {
-      return Buffer.from(str, 'binary').toString('base64');
+        return Buffer.from(base64, 'base64').toString('utf8');
     }
 };
   
-function universalAtob(b64Encoded: any): any {
+function toBase64(str: any): any {
     try {
-        return atob(b64Encoded);
+        return btoa(str);
     } catch (err) {
-        return Buffer.from(b64Encoded, 'base64').toString('binary');
+        return Buffer.from(str, 'utf8').toString('base64');
     }
 };

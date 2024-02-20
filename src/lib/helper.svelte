@@ -2,19 +2,19 @@
 <script context="module">
 import { env } from '$env/dynamic/private';
 
-export function universalBtoa(str) {
+export function toBase64(str) {
   try {
     return btoa(str);
   } catch (err) {
-    //return Buffer.from(str, 'binary').toString('base64');
+    return Buffer.from(str, 'utf8').toString('base64');
   }
 };
 
-export function universalAtob(b64Encoded) {
+export function fromBase64(base64) {
   try {
-    return atob(b64Encoded);
+    return atob(base64);
   } catch (err) {
-    //return Buffer.from(b64Encoded, 'base64').toString('binary');
+    return Buffer.from(base64, 'base64').toString('utf8');
   }
 };
 
@@ -42,10 +42,10 @@ export function basicAuth(method, body, level = "api")
     const apiAuth = `changemoney_api:N4&**S%Vl0C7MubL`
     const systemAuth = `ikwuje:xaS@Di2t#7Qry19M`
 
-    let basicToken = universalBtoa(apiAuth);
+    let basicToken = toBase64(apiAuth);
 
     if (level == 'system') {
-        basicToken = universalBtoa(systemAuth);
+        basicToken = toBase64(systemAuth);
     }
 
     const request = {
