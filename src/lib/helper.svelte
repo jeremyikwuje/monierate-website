@@ -1,6 +1,23 @@
 
 <script context="module">
 import { env } from '$env/dynamic/private';
+global.Buffer = global.Buffer || require('buffer').Buffer;
+
+export const universalBtoa = str => {
+  try {
+    return btoa(str);
+  } catch (err) {
+    return Buffer.from(str, 'binary').toString('base64');
+  }
+};
+
+export const universalAtob = b64Encoded => {
+  try {
+    return atob(b64Encoded);
+  } catch (err) {
+    return Buffer.from(b64Encoded, 'base64').toString('binary');
+  }
+};
 
 export async function request(method, endpoint, body = {}) {
     let options = {
@@ -26,10 +43,10 @@ export function basicAuth(method, body, level = "api")
     const apiAuth = `changemoney_api:N4&**S%Vl0C7MubL`
     const systemAuth = `ikwuje:xaS@Di2t#7Qry19M`
 
-    let basicToken = Buffer.from(apiAuth).toString('base64');
+    let basicToken = universalBtoa(apiAuth);
 
     if (level == 'system') {
-        basicToken = Buffer.from(systemAuth).toString('base64');
+        basicToken = universalBtoa(systemAuth);
     }
 
     const request = {
