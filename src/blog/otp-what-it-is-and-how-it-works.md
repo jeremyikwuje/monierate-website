@@ -5,12 +5,12 @@ description: You’re probably not a stranger to those SMS with the text “OTP�
 createdAt: 2024-02-21T07:03:00.000Z
 updatedAt: 2024-02-21T07:03:00.000Z
 tag: terms
-image: https://monierate.com/uploads/black-man-paying-with-card-online.jpg
+image: https://monierate.com/uploads/a-black-woman-looking-at-her-phone-facing-her-laptop.jpg
 published: true
 ---
 You’re probably not a stranger to those SMS with the text “OTP” in it. They often come with registering to a new website or platform or attempting to access a digital banking service. Yes. Sure, you remember. Today, we’re looking at the nitty-gritty of this simple but essential form of digital security. 
 
-![A black man sitting in front of a laptop](https://monierate.com/uploads/black-man-paying-with-card-online.jpg)
+![A black man sitting in front of a laptop](https://monierate.com/uploads/a-black-woman-looking-at-her-phone-facing-her-laptop.jpg)
 
 ## What is OTP?
 
