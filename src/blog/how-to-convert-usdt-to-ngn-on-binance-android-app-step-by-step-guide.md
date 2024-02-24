@@ -47,7 +47,7 @@ Enter the amount of USDT you want to convert in the  **From**  field e.g 10 USDT
 #### Step 5: Preview conversion
 Tap on the  **Preview**  button to see how much NGN you will receive.
 
-![Preview conversion of USDT to NGN on Binance Lite](https://monierate.com/uploads/binance-lite-convert-preview-usdt-ngn.jpg)
+![Preview conversion of USDT to NGN on Binance Lite](https://monierate.com/uploads/binance-lite-convert-preview-usdt-ngn.jpeg)
 
 #### Step 6: Confirm conversion
 If you are happy with the naira amount on the preview, tap on the  **Convert**  button within 2 seconds to complete the conversion.
