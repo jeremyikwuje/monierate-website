@@ -184,7 +184,7 @@ function hidePromotionBar() {
 <footer class="pt-16 pb-8 mt-8 text-gray-500 dark:text-gray-300">
     <div class="container mx-auto block md:flex justify-between item-center">
         <div class="w-full md:w-[30%]">
-            <h3 class="font-bold">Currency converter </h3>
+            <h3 class="font-bold">Currency converter</h3>
             <ul class="py-4 converter-list">
                 <li><a data-sveltekit-reload href="/converter/binance?Amount=1&From=USDT&To=NGN">Convert USDT on Binance</a></li>
                 <li><a data-sveltekit-reload href="/converter/bybit?Amount=1&From=USDT&To=NGN">Convert USDT on Bybit</a></li>

@@ -1,16 +1,12 @@
 <script>
     /** @type {import('./$types').PageData} */
-	import Money from "$lib/money"
     import { format } from "$lib/functions";
 
     export let data;
     let rates = data.rates || {}
     let providers = data.providers || {}
 
-    let count = 1
     let total = Object.entries(providers).length
-
-    const increment = () => count++;
 </script>
 
 <svelte:head>
