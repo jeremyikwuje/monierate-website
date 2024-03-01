@@ -7,19 +7,19 @@ export const load = (async ({ request }) => {
     const userDevice = getDeviceName(request)
     const sponsorAdLink = getSponsorAdLink(userDevice)
 
-    let endpoint = getEndpoint("/public/rates/averages");
-    let res = await fetch(endpoint, basicAuth('GET', {}));
-
-    console.log(res.status)
-    if (res.status != 200) {
-        console.log(res)
+    let get_parallel_rate = getParallelRate();
+    let get_pairs_rate = getPairsRate();
+   
+    const rates = await get_pairs_rate;
+    if (rates === null) {
+        
     }
-
-    const rates = (await res.json()).data
-    parallel_avg = rates.usdngn.average || 0
+    
+    parallel_avg = (await get_parallel_rate).parallel_avg || 0
 
     return {
-        market_avg: rates,
+        market_avg: await get_pairs_rate,
+        parallel_avg: parallel_avg,
         sponsorLink: sponsorAdLink,
     }
 
@@ -61,4 +61,35 @@ const getSponsorAdLink = (device: string) => {
     else {
         return links[2]
     }
+}
+
+const getParallelRate = async () => {
+
+    let get_parallel_rate = await fetch(
+        getEndpoint("/public/rates/parallel"),
+        basicAuth('GET', {})
+    );
+
+    if (get_parallel_rate.status != 200) {
+        return null;
+    }
+
+    const parallel_rate = (await get_parallel_rate.json()).data;
+
+    console.log(parallel_rate);
+
+    return parallel_rate;
+}
+
+const getPairsRate = async () => {
+    let endpoint = getEndpoint("/public/rates/averages");
+    let get_pairs_rate = await fetch(endpoint, basicAuth('GET', {}));
+
+    if (get_pairs_rate.status != 200) {
+        return null;
+    }
+
+    const rates = (await get_pairs_rate.json()).data;
+
+    return rates;
 }

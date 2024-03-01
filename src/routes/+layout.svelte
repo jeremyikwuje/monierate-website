@@ -8,6 +8,7 @@ import Money from "$lib/money";
 
 export let data
 let sponsorLink = data.sponsorLink
+let parallel_avg = parseFloat(`${data.parallel_avg}`)
 let market_avg = data.market_avg
 let top_rates = {
     usdngn: {
@@ -104,7 +105,7 @@ function hidePromotionBar() {
                 <img alt="Monierate Logo" width="142px" height="24px" class="hidden dark:block h-[24px] w-[142px] md:h-[24px]" src="/monierate-logo-white.png" loading="lazy">
             </a>
             <div class="flex md:order-2">
-                <a href="/alerts" type="button" class="font-bold text-white bg-black hover:text-slate-200 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-lg text-sm px-4 py-2 text-center mr-3 md:mr-0 dark:bg-primary dark:hover:bg-white dark:focus:ring-blue-800">
+                <a href="/alerts" type="button" class="button bg-primary font-bold">
                     Get alert
                 </a>
 
@@ -245,9 +246,9 @@ function hidePromotionBar() {
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true" class="h-6 w-6 text-white"><path stroke-linecap="round" stroke-linejoin="round" d="M11 5.882V19.24a1.76 1.76 0 01-3.417.592l-2.147-6.15M18 13a3 3 0 100-6M5.436 13.683A4.001 4.001 0 017 6h1.832c4.1 0 7.625-1.234 9.168-3v14c-1.543-1.766-5.067-3-9.168-3H7a3.988 3.988 0 01-1.564-.317z"></path></svg>
                     </span>
                     <p class="ml-3 truncate font-medium text-white dark:text-gray-900">
-                        <span class="md:hidden">$1 = ₦{Money.format(market_avg.usdngn.parallel)}</span>
+                        <span class="md:hidden">$1 = ₦{Money.format(parallel_avg)}</span>
                         <span class="hidden md:inline">
-                            $1 = ₦{Math.round(market_avg.usdngn.parallel)} (Black market avg.)
+                            $1 = ₦{Math.round(parallel_avg)} (Black market avg.)
                         </span>
                     </p>
                 </div>

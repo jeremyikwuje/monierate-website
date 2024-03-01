@@ -37,7 +37,7 @@ module.exports = {
       'light': '#EEFEF8',
       'lighter': '#EEFEF8',
       'dark': '#121212',
-      'primary': '#06D68A'
+      'primary': '#35b782'
     },
   },
   plugins: [require('flowbite-typography'),],
