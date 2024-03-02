@@ -7,6 +7,7 @@
 
     let auth = data.auth
     let confirm = data.confirm
+    let parallel_avg = Number(data.parallel_avg)
     let market_avg = data.market_avg
     
     let authenticated = false
@@ -185,7 +186,7 @@
             </div>
 
             <div class="text-center font-semibold">
-                $1 = ₦{market_avg.usdngn.parallel} (Black market avg)
+                $1 = ₦{parallel_avg} (Black market avg)
             </div>
         </div>
 
