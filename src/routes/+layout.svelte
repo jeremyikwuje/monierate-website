@@ -147,7 +147,7 @@ function hidePromotionBar() {
         {#each Object.entries(top_rates) as [pair, rate], i} 
             <a data-sveltekit-reload href="/converter/?From={rate.from}&To={rate.to}&Amount=1" class="mr-2 text-gray-900 dark:text-gray-300 mr-6 text-[90%] md:text-lg">
                 <span class="font-medium mr-2">{rate.name}</span>
-                <span class="font-thin">{Money.format(rate.parallel)}</span>
+                <span class="font-thin">{Money.format(rate.parallel, 2)}</span>
             </a>
         {/each}
     </div>
