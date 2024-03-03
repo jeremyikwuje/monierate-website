@@ -8,6 +8,8 @@ tag: product
 image: https://ik.imagekit.io/monierate/uploads/beans-p2p-landing-page.png
 published: true
 ---
+![enter image description here](https://ik.imagekit.io/monierate/uploads/beans-p2p-landing-page.png)
+
 Beans is a financial technology (Fintech) application that facilitates the sending and receiving of cryptocurrency. 
 
 Developed by Beans IP BV and based out of England, Britain, Beans is a non-custodial wallet which users can employ for cross-border transactions. 
