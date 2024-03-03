@@ -31,13 +31,13 @@ There is, however, much limit to what MMOs can do in terms of financial operatio
 ## Two Mobile Money Models Functional In Nigeria
 According to the Central Bank of Nigeria (CBN), two mobile money models are identified as operating in Nigeria. These are the Bank-led model and the Non-bank-led model.
 
-**Bank-led Model:**
+#### 1. Bank-led Model:
 
 Saying “bank-led” alone should make it easy to guess what this model is about and the direction in which this description will go. However, for the sake of a good reference, we will still provide details.
 
 The Bank-led model is initiated by a bank or a consortium of banks to provide the said mobile money service by utilizing its access to electronic payment systems. 
 
-**Non-bank led Model:**
+#### 2. Non-bank led Model:
 
 The non-bank-led mobile money model is quite different from the first. For this one, a licensed corporate organization or a consortium of organisations must be responsible for initiating and managing the service. 
 
