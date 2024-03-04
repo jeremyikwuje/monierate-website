@@ -8,8 +8,7 @@ tag: product
 image: https://ik.imagekit.io/monierate/uploads/beans-p2p-landing-page.png
 published: true
 ---
-![enter image description here](https://ik.imagekit.io/monierate/uploads/beans-p2p-landing-page.png)
-
+![Beans Free P2P Transfer](https://monierate.com/uploads/beans-p2p-landing-page.png)
 Beans is a financial technology (Fintech) application that facilitates the sending and receiving of cryptocurrency. 
 
 Developed by Beans IP BV and based out of England, Britain, Beans is a non-custodial wallet which users can employ for cross-border transactions. 
@@ -21,7 +20,7 @@ For sure, Beans has a variety of amazing features and services available to its 
 To get started with these services, jump onto the official [website](https://www.beansapp.com/) or visit the App Store or PlayStore to download the Beans application.  
 
 
-# How To Access Beans App
+## How To Access Beans App
 
 1. Go to the application store on your device and search for “Beans App”. Click on the result with the corresponding name and a logo that has a white “b” in a purple square background. Download the app and wait for it to install before exiting your application store. 
 
