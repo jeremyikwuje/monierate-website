@@ -5,7 +5,7 @@ description: The term USSD stands for “Unstructured Supplementary Service Data
 createdAt: 2024-03-05T07:15:00.000Z
 updatedAt: 2024-03-05T07:15:00.000Z
 tag: terms
-image: https://ik.imagekit.io/monierate/uploads/phone-house-generator.jpg
+image: https://ik.imagekit.io/monierate/uploads/no-wifi-here.jpg
 published: true
 ---
 Onyeka, a car spare part dealer in Nnewi Nigeria, wanted to send money to one of his suppliers. He pulled out his phone and dialled some codes that looked similar to the one below:
