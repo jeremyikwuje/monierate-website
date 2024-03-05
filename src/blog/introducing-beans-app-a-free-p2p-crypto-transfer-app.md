@@ -11,7 +11,7 @@ published: true
 ![Beans Free P2P Transfer](https://monierate.com/uploads/beans-p2p-landing-page.png)
 Beans is a financial technology (Fintech) application that facilitates the sending and receiving of cryptocurrency. 
 
-Developed by Beans IP BV and based out of England, Britain, Beans is a non-custodial wallet which users can employ for cross-border transactions. 
+Developed by Beans bv and based in the Netherland, Beans is a non-custodial wallet which users can employ for cross-border transactions. 
 
 The app has a user interface (UI) which features an attractive blend of white and purple gradients and it’s impossible to overlook the excellent arrangement of icons and buttons throughout the platform. 
 
