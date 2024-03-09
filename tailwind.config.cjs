@@ -37,7 +37,7 @@ module.exports = {
       'light': '#EEFEF8',
       'lighter': '#EEFEF8',
       'dark': '#121212',
-      'primary': colors.blue,
+      'primary': '#1A2DE8',
       'top-banner': '#7449ee',
     },
   },
