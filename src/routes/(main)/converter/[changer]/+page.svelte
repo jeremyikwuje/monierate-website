@@ -16,7 +16,6 @@
 import type { PageData } from "./$types"
 import Money from "$lib/money";
 import { round, chain } from "mathjs"
-import { changeParam, format } from "$lib/functions"
 
 export let data: PageData;
 let changer = data.changer
@@ -47,6 +46,8 @@ var moreConversions: any = {
     to: []
 }
 
+console.log(pairs);
+
 function convertNow() {
     let from = convertFrom.toLowerCase()
     let to = convertTo.toLowerCase()
@@ -58,12 +59,12 @@ function convertNow() {
     convertResult.rateInverse = 0
 
     if (from != to) {
+        console.log(pairs);
+
         /** Get the rate */
         let pair = `${from}${to}`
         // get rates of a pair
         let pairData = pairs.find( (p: any) => p.pair === pair )
-
-        console.log(pair, pairData)
 
         // if pair is found
         if (pairData !== undefined) {
@@ -72,11 +73,21 @@ function convertNow() {
             // if rate is found for this changer
             if (pairRates.hasOwnProperty(changer.code)) {
                 changerRate = pairRates[changer.code]
-                changerRate.buy = parseFloat(`${changerRate.buy || 1}`)
+                console.log(changerRate);
+                changerRate.buy = Number(changerRate.buy || 0)
+                changerRate.sell = Number(changerRate.sell || 0)
                 
                 if (changerRate.buy > 0) {
                     convertResult.rate = changerRate.buy
                     convertResult.rateInverse = 1 / convertResult.rate
+                }
+                else if (changerRate.sell > 0) {
+                    convertResult.rate = changerRate.sell
+                    convertResult.rateInverse = 1 / convertResult.rate
+                }
+                else {
+                    convertResult.rate = 1
+                    convertResult.rateInverse = 1
                 }
             }
         }
@@ -84,19 +95,26 @@ function convertNow() {
             pair = `${to}${from}`
             pairData = pairs.find( (p: any) => p.pair === pair )
 
-            console.log(pair, pairData)
-
             if (pairData) {
                 pairRates = pairData.rates || {}
 
                 // if rate is found for this changer
                 if (pairRates.hasOwnProperty(changer.code)) {
                     changerRate = pairRates[changer.code]
-                    changerRate.buy = parseFloat(`${changerRate.buy || 1}`)
+                    changerRate.buy = Number(changerRate.buy || 0)
+                    changerRate.sell = Number(changerRate.sell || 0)
 
                     if (changerRate.buy > 0) {
                         convertResult.rateInverse = changerRate.buy
                         convertResult.rate = 1 / convertResult.rateInverse
+                    }
+                    else if (changerRate.sell > 0) {
+                        convertResult.rate = changerRate.sell
+                        convertResult.rateInverse = 1 / convertResult.rate
+                    }
+                    else {
+                        convertResult.rate = 1
+                        convertResult.rateInverse = 1
                     }
                 }
             }
