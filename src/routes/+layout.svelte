@@ -98,10 +98,10 @@ function hidePromotionBar() {
 </svelte:head>
 
 <header class="mb-0">
-    <div class="bg-top-banner w-full py-2 text-center text-white fixed z-20 top-0 left-0">
+    <!-- <div class="bg-top-banner w-full py-2 text-center text-white fixed z-20 top-0 left-0">
        Best Dollar App <a href="https://tinyurl.com/beansAppTopBanner" class="underline font-extrabold text-white">Get Now</a>
-    </div>
-    <nav class="bg-white w-full z-20 top-0 left-0 border-b border-gray-200 dark:bg-gray-900 dark:border-none mt-8">
+    </div> -->
+    <nav class="bg-white w-full z-20 top-0 left-0 border-b border-gray-200 dark:bg-gray-900 dark:border-none">
         <div class="w-[95%] md:max-w-[1200px] flex flex-wrap items-center justify-between mx-auto p-4">
             <a href="/" class="flex items-center">
                 <img src="/monierate.png" width="142px" height="24px" class="block dark:hidden h-[24px] w-[142px] md:h-[24px] h-8 mr-3" alt="Monierate Logo" loading="lazy">
