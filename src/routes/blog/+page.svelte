@@ -17,9 +17,19 @@
 </svelte:head>
 
 <div class="mb-8">
+	<div class="w-[95%] md:w-[70%] mx-auto mb-4 md:mb-6">
+		<!-- Landscape Top/Bottom -->
+		<ins class="adsbygoogle"
+			style="display:block"
+			data-ad-client="ca-pub-9886145381404391"
+			data-ad-slot="3727635247"
+			data-ad-format="auto"
+			data-full-width-responsive="true"></ins>
+	</div>
+
 	<div class="w-[95%] md:w-[70%] px-8 py-4 mx-auto mb-4 md:mb-6 text-center">
 		<h1 class="text-2xl md:text-4xl">
-			Make the right money move
+			Make knowledgeable transactions with our articles
 		</h1>
 	</div>
 	
