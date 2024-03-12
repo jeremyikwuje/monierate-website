@@ -17,9 +17,9 @@
 </svelte:head>
 
 <div class="mb-8">
-	<div class="w-[95%] md:w-[70%] mx-auto mb-4 md:mb-6">
+	<div class="container mx-auto mb-4 md:mb-6">
 		<!-- Landscape Top/Bottom -->
-		<ins class="adsbygoogle"
+		<ins class="adsbygoogle max-h-[70px]"
 			style="display:block"
 			data-ad-client="ca-pub-9886145381404391"
 			data-ad-slot="3727635247"
