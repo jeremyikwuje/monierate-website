@@ -287,15 +287,15 @@ convertNow()
                                     <span class="changer-title">{changers[changer_code].name}</span>
                                 </a>
                             </td>
-                            <td class="text-right pl-6 pr-6">
+                            <td class="text-right pl-6 pr-4">
                                 <span class="changer-rate">₦{Money.format(rate.buy, 0)}</span>
                                 <small class="changer-rate-base">per {unitCurrency}</small>
                             </td>
-                            <td class="text-right pl-6 pr-6">
+                            <td class="text-right pl-6 pr-4">
                                 <span class="changer-rate">₦{Money.format(rate.sell, 0)}</span>
                                 <small class="changer-rate-base">per {unitCurrency}</small>
                             </td>
-                            <td class="text-right py-2 pr-2 md:pr-4 whitespace-nowrap">
+                            <td class="text-right py-2 pr-4 md:pr-4 whitespace-nowrap">
                                 {#if (rate.updatedAt) }
                                     {format(new Date(rate.updatedAt))}
                                 {/if}
@@ -418,10 +418,10 @@ table thead th {
     @apply dark:text-gray-300 text-black whitespace-nowrap
 }
 table tbody tr td {
-    @apply py-6 whitespace-nowrap
+    @apply py-2 whitespace-nowrap
 }
 table tr td:first-child, table thead th:first-child {
-    @apply pl-4
+    @apply pl-2
 }
 
 .changer {
