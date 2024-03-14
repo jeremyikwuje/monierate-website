@@ -86,11 +86,23 @@
                             </a>
                         </td>
                         <td class="text-right pl-6 pr-6">
-                            <span class="changer-rate">₦{Math.round(rate.buy)}</span>
+                            <span class="changer-rate">
+                                {#if Math.round(rate.buy) === 0}
+                                    -
+                                {:else}
+                                    ₦{Math.round(rate.buy)}
+                                {/if}
+                            </span>
                             <small class="changer-rate-base">per $1</small>
                         </td>
                         <td class="text-right pl-6 pr-6">
-                            <span class="changer-rate">₦{Math.round(rate.sell)}</span>
+                            <span class="changer-rate">
+                                {#if Math.round(rate.sell) === 0}
+                                    -
+                                {:else}
+                                    ₦{Math.round(rate.sell)}
+                                {/if}
+                            </span>
                             <small class="changer-rate-base">per $1</small>
                         </td>
                         <td class="text-right py-2 pr-2 md:pr-4 whitespace-nowrap">
