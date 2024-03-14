@@ -288,11 +288,23 @@ convertNow()
                                 </a>
                             </td>
                             <td class="text-right pl-6 pr-4">
-                                <span class="changer-rate">₦{Money.format(rate.buy, 0)}</span>
+                                <span class="changer-rate">
+                                    {#if Money.format(rate.buy, 0) === "0"}
+                                    -
+                                    {:else}
+                                        ₦{Money.format(rate.buy, 0)}
+                                    {/if}
+                                </span>
                                 <small class="changer-rate-base">per {unitCurrency}</small>
                             </td>
                             <td class="text-right pl-6 pr-4">
-                                <span class="changer-rate">₦{Money.format(rate.sell, 0)}</span>
+                                <span class="changer-rate">
+                                    {#if Money.format(rate.sell, 0) === "0"}
+                                    -
+                                    {:else}
+                                        ₦{Money.format(rate.sell, 0)}
+                                    {/if}
+                                </span>
                                 <small class="changer-rate-base">per {unitCurrency}</small>
                             </td>
                             <td class="text-right py-2 pr-4 md:pr-4 whitespace-nowrap">
