@@ -2,7 +2,7 @@
 layout: blog
 title: "Virtual Account Number: What It Is and How It Works in Nigeria"
 description: A Virtual Account Number, often written as VA, is a digital or conceptualised version of a regular account number. VAs serve the same function as any account number and will work exactly like one. They are generated directly on financial technology (fintech) applications/websites.
-createdAt: 2024-03-16T19:22:00.000Z
+createdAt: 2024-03-15T19:22:00.000Z
 updatedAt: 2024-03-16T19:22:00.000Z
 tag: terms
 image: https://ik.imagekit.io/monierate/uploads/personal-banking.jpg
