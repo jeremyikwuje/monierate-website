@@ -2,7 +2,7 @@
 layout: blog
 title: What is USDT Wallet and Best USDT Wallets in Nigeria
 description: A USDT wallet is an application or a physical device that lets you store, send, and receive Tether (USDT). Tether is a stablecoin, meaning its value is tied directly to the US dollar.
-createdAt: 2024-03-16T21:33:00.000Z
+createdAt: 2024-03-14T21:33:00.000Z
 updatedAt: 2024-03-16T21:33:00.000Z
 tag: guide
 image: https://ik.imagekit.io/monierate/uploads/coins-by-wallet.jpg?updatedAt=1710624644515
