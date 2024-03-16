@@ -8,6 +8,8 @@ tag: guide
 image: https://ik.imagekit.io/monierate/uploads/coins-by-wallet.jpg?updatedAt=1710624644515
 published: true
 ---
+![Coins beside a wallet](https://ik.imagekit.io/monierate/uploads/coins-by-wallet.jpg)
+
 One of the ways many Nigerians are protecting their savings from the fluctuations of the Naira is through the use of USDT wallets. 
 
 USDT wallet enable you hold funds in [Tether (USDT),](https://monierate.com/blog/what-is-usdt-and-how-can-you-use-it-in-nigeria) a stablecoin pegged to the US dollar. 
