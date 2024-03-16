@@ -8,6 +8,8 @@ tag: terms
 image: https://ik.imagekit.io/monierate/uploads/personal-banking.jpg
 published: true
 ---
+![Personal Banking](https://ik.imagekit.io/monierate/uploads/personal-banking.jpg)
+
 In the banking world, there are many different types of numbers. Each one has its unique functions and use cases. There’s the [transaction authentication number](https://monierate.com/blog/transaction-authentication-number-what-it-is-and-how-it-works), [NUBAN](https://monierate.com/blog/nuban-what-it-is-and-how-to-get-yours), and even virtual account numbers to mention a few. 
 
 Virtual account numbers in particular are very unique given their multi-functional nature. This article is designed to familiarize you with what they are and how they work. 
