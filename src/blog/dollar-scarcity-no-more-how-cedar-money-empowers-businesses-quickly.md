@@ -6,7 +6,7 @@ createdAt: 2024-03-19T10:42:00.000Z
 updatedAt: 2024-03-19T10:42:00.000Z
 tag: product
 image: https://ik.imagekit.io/monierate/thumbnails/cedarmoney-og.png
-published: false
+published: true
 ---
 ![Cedar Money website shot](https://ik.imagekit.io/monierate/thumbnails/cedarmoney-og.png)
 
