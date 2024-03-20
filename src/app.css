@@ -54,7 +54,7 @@
     }
 
     .button.buy {
-        @apply text-white bg-green-800 hover:bg-blue-900 focus:ring-green-300 dark:bg-green-100 dark:hover:bg-green-200 dark:text-gray-900 dark:focus:ring-green-700;
+        @apply text-white bg-green-600 hover:bg-green-700 focus:ring-green-300 dark:bg-green-600 dark:hover:bg-green-700 dark:text-gray-900 dark:focus:ring-green-700;
         cursor: pointer;
     }
 
