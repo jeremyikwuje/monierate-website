@@ -44,7 +44,7 @@ Three years went by and in 2009, the Mobile Payment Regulatory Framework was iss
 
 A big bold change happened beyond this. It was the migration of the entire Nigerian banking system to [EMV cards](https://monierate.com/blog/emv-card-what-it-is-and-how-it-works). EMV cards are a product of the Europay, Mastercard, and Visa consortium. They possess microchips and operate on what has become a global standard for processing payments.  
 
-Part of the NIBSS history includes the introduction of charges on cash transactions in 2012. By the next year, guidelines for agent banking were developed. There was also the issuance of the along with Payment Card Industry Data and Security  Standards for compliance and lastly, a second release of the Payment System Vision 2020. 
+Part of the NIBSS history includes the introduction of charges on cash transactions in 2012. By the next year, guidelines for agent banking were developed. There was also the issuance of the along with Payment Card Industry Data and Security  Standards for compliance and lastly, a second release of the [Payment System Vision 2020](https://monierate.com/blog/payment-system-vision-2020). 
 
 ## Functions of NIBSS 
 
@@ -95,7 +95,7 @@ This blankets commercial banks such as First Bank, Guaranty Trust Bank, and Unit
 
 The NIBSS Instant Payment or NIP,  is a service that delivers instantaneous payments. The aim is to create smooth seconds-fast transactions, driving business value and customer experience. 
 
-Designed with accessibility in mind, users can make use of the NIP platform in a variety of ways. The available options are [USSD](https://monierate.com/blog/ussd-what-it-is-and-how-it-works-in-nigeria), POS and ATM, mobile banking, web platforms, and third-party channels. 
+Designed with accessibility in mind, users can make use of the NIP platform in a variety of ways. The available options are [USSD](https://monierate.com/blog/ussd-what-it-is-and-how-it-works-in-nigeria), [POS](https://monierate.com/blog/what-is-a-point-of-sale-pos-and-how-it-works-in-nigeria) and ATM, mobile banking, web platforms, and third-party channels.
 
 
 ## How to Check if NIBSS is Down
