@@ -50,7 +50,7 @@ You must understand that the development and deployment of businesses such as Mo
 
 The following are the licensing requirements for potential and existing Mobile Money Operators in the country:
 
-For a start, all MMOs are required to have a minimum share capital of two billion naira. The business - on registration - will receive unique shortcodes from the NCC and scheme codes from the NIBSS.
+For a start, all MMOs are required to have a minimum share capital of two billion naira. The business - on registration - will receive unique shortcodes from the NCC and scheme codes from the [NIBSS](https://monierate.com/blog/nibss-what-it-is-and-how-it-works).
 
 In addition to this, MMOs must ensure that their Know Your Customer (KYC) and Anti Money Laundering (AML) processes cover the entire scope required. This helps prevent fraud on the platform. 
 
