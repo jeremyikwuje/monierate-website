@@ -238,7 +238,7 @@ convertNow()
                 </div>
                 
                 <span class="block mt-12 mb-4">
-                    <a href="{changer.link}" class="block button w-full md:inline-block md:w-auto mr-4 mb-4 ">
+                    <a href="{changer.link}?utm_source=monierate&utm_medium=website&utm_campaign=monierate" class="block button w-full md:inline-block md:w-auto mr-4 mb-4 ">
                         Open {changer.name}                         
                     </a>
                     <a href="https://tinyurl.com/jackocoinsBuyButton" class="block button buy font-bold w-full md:inline-block md:w-auto">
