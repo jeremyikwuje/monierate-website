@@ -8,8 +8,6 @@ tag: terms
 image: https://ik.imagekit.io/monierate/uploads/personal-banking.jpg
 published: true
 ---
-![Personal Banking](https://ik.imagekit.io/monierate/uploads/personal-banking.jpg)
-
 In the banking world, there are many different types of numbers. Each one has its unique functions and use cases. There’s the [transaction authentication number](https://monierate.com/blog/transaction-authentication-number-what-it-is-and-how-it-works), [NUBAN](https://monierate.com/blog/nuban-what-it-is-and-how-to-get-yours), and even virtual account numbers to mention a few. 
 
 Virtual account numbers in particular are very unique given their multi-functional nature. This article is designed to familiarize you with what they are and how they work. 
@@ -19,7 +17,7 @@ Virtual account numbers in particular are very unique given their multi-function
 
 A Virtual Account Number, often written as VA, is a conceptualized version of a regular account number. VAs serve the same function as any account number and will work exactly like one. They serve as a substitute for a user’s actual account number, it also provides a layer of security for online transactions.
 
-Banks are mostly responsible for issuing virtual account numbers to their customers as part of their fraud prevention measures. In the US, virtual account numbers are typically linked to customers existing credit or debit card and can be accessed through the bank's online portal or mobile app.
+Banks are mostly responsible for issuing virtual account numbers to their customers as part of their fraud prevention measures. In the US, virtual account numbers are typically linked to customers existing credit or debit cards and can be accessed through the bank's online portal or mobile app.
 
 However, in Nigeria, virtual account numbers are commonly issued by payment apps to make it easy for their customers to receive payment or fund their wallets. They are generated directly on financial technology (fintech) applications/websites. Some of these apps may require you to provide your bank verification number (BVN).
 
@@ -30,7 +28,7 @@ Let’s say for instance, that you are making a transfer to a virtual account nu
 
 You will open your mobile banking application and proceed to click the “transfer” button. At the appropriate screen, you will input the recipient’s virtual account number, a payment amount, and any remark you wish to add. The next step is to click “send” and wait for your transfer to be processed.
 
-The payment you just made will utilize a traditional bank transfer system. This could be NEFT, [RTGS](https://monierate.com/blog/real-time-gross-settlement-system-rtgs-what-is-it-and-how-it-works), or IMPS.
+The payment you just made will utilize a traditional bank transfer system. This could be [NEFT](https://monierate.com/blog/nigeria-electronic-fraud-forum-what-it-is-and-how-it-works), [RTGS](https://monierate.com/blog/real-time-gross-settlement-system-rtgs-what-is-it-and-how-it-works), or IMPS.
 
 The fund moves through this network to a nodal/escrow payment gateway account. Such nodal accounts are operated by services like Flutterwave and Monnify. They serve as a transition point from where funds on traditional systems are transferred onto virtual account networks. 
 
@@ -89,7 +87,7 @@ The major highlight of the difference between virtual and real account numbers i
 
 **They simply serve as a channel for funds transfer.** 
 
-Ultimately, when funds reach these accounts, the transaction details get recorded/documented. The money then moves on to the traditional account number linked to such virtual account.
+Ultimately, when funds reach these accounts, the transaction details get recorded/documented. The money then moves on to the traditional account number linked to such a virtual account.
 
 ## Conclusion
 
