@@ -172,7 +172,7 @@ convertNow()
                 <img 
                     src="https://ik.imagekit.io/monierate/cedar-banner-send-money.gif"
                     alt="Cedar Money"
-                    class="mx-auto max-w-full md:w-[1000px] h-[143px]">
+                    class="mx-auto max-w-full md:w-[1000px] md:h-[143px]">
             </a>
         </div>
     </div>
