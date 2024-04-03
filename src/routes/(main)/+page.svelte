@@ -45,7 +45,7 @@
                 <img 
                     src="https://ik.imagekit.io/monierate/cedar-send-large-payment-homepage.gif"
                     alt="Cedar Money"
-                    class="mx-auto max-w-full md:w-[1000px]  md:h-[143px]">
+                    class="mx-auto max-w-full md:w-[800px] md:h-[114px]">
             </a>
         </div>
     </div>
