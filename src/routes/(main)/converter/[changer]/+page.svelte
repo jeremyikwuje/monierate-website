@@ -165,7 +165,7 @@ convertNow()
     <div class="container">
         <!-- Landscape Top/Bottom -->
         <div class="cedar-money">
-            <a href="https://tinyurl.com/55vw7spj" target="_blank">
+            <a href="https://tinyurl.com/k24snzvx" target="_blank">
                 <img 
                     src="https://ik.imagekit.io/monierate/cedar-banner-send-money.gif"
                     alt="Cedar Money"
