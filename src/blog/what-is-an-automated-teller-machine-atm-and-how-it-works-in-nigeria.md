@@ -8,11 +8,7 @@ tag: terms
 image: https://monierate.com/uploads/finger-pressing-atm.jpg
 published: true
 ---
-# What is an Automated Teller Machine (ATM) and How it Works in Nigeria
-
-**Reading Time:** 8 mins 38 secs
-**Meta Description:** An Automated Teller Machine or ATM, is a vault-like system that holds and dispenses cash to banking customers.
-**Keywords:** ATM, Automated Teller Machine, Banks,
+![Finger pressing ATM](https://monierate.com/uploads/finger-pressing-atm.jpg)
 
 Tega is really excited to follow her mum around town. On one of those outings, they both visit an ATM stand and she watches her mum take some money out of a machine. Tega knows that this is not the bank. She wants to know more about this money-issuing machine and looks around for helpful content.
 
