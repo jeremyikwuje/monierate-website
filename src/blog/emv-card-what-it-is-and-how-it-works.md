@@ -23,7 +23,7 @@ In other words, these three companies serve as a global authority on how smart c
 
 An EMV Card is a type of smart chip card that functions based on standards set by Europay, MasterCard, and Visa (EMV). 
 
-Needless to say, EMV cards are special. This type of card makes use of a metallic chip, programmed to work with the latest and most advanced banking and finance technologies, including ATMs and PoS machines. 
+Needless to say, EMV cards are special. This type of card makes use of a metallic chip, programmed to work with the latest and most advanced banking and finance technologies, including [ATMs](https://monierate.com/blog/what-is-an-automated-teller-machine-atm-and-how-it-works-in-nigeria) and PoS machines. 
 
 They stand out from non-EMV cards that make use of magnetic stripes and feature far less security.  
 
