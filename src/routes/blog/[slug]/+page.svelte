@@ -26,7 +26,7 @@
 			<a href="/blog?tag={metadata.tag}" class="inline-block text-gray-600 dark:text-green-500 font-semibold text-xs mb-4 leading-none mr-2 last:mr-0">&num;{metadata.tag.toUpperCase()}</a>
 		</div>
 		<!-- Title -->
-		<h1 class="mb-2 text-3xl font-extrabold leading-tight text-gray-900 lg:mb-2 lg:text-4xl dark:text-gray-300 dark:font-semibold leading-10 md:leading-10">{metadata.title}</h1>
+		<h1 class="mb-2 text-3xl font-extrabold leading-tight text-gray-900 lg:mb-2 lg:text-5xl dark:text-gray-300 dark:font-semibold leading-10 md:leading-10">{metadata.title}</h1>
 		<p>Published {formatDate(metadata.createdAt)}</p>
 	</header>
 
