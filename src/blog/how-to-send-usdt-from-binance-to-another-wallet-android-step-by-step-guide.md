@@ -6,7 +6,7 @@ createdAt: 2024-03-28T22:22:00.000Z
 updatedAt: 2024-03-28T22:22:00.000Z
 tag: guide
 image: https://ik.imagekit.io/monierate/Blog/Binance%20articles/How%20to%20Send%20USDT%20from%20Binance%20to%20another%20wallet%20(Android).png
-published: true
+published: false
 ---
 ![Binance Withdrawal Steps](https://ik.imagekit.io/monierate/Blog/Binance%20articles/How%20to%20Send%20USDT%20from%20Binance%20to%20another%20wallet%20(Android).png)
 
