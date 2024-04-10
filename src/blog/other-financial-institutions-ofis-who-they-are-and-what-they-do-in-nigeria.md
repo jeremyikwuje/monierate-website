@@ -2,7 +2,7 @@
 layout: blog
 title: "Other Financial Institutions (OFIs): Who They Are and What They Do In Nigeria"
 description: Other Financial Institutions, or OFIs, is a term that broadly describes finance-servicing institutions which are neither central banks nor deposit money banks (DMBs).
-createdAt: 2024-04-09T07:04:00.000Z
+createdAt: 2024-04-08T07:04:00.000Z
 updatedAt: 2024-04-09T07:04:00.000Z
 tag: terms
 image: https://monierate.com/uploads/central-bank-of-nigeria.jpg
