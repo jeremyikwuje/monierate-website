@@ -5,7 +5,7 @@ description: Other Financial Institutions, or OFIs, is a term that broadly descr
 createdAt: 2024-04-09T07:04:00.000Z
 updatedAt: 2024-04-09T07:04:00.000Z
 tag: terms
-image: /uploads/central-bank-of-nigeria.jpg
+image: https://monierate.com/uploads/central-bank-of-nigeria.jpg
 published: true
 ---
 Banks and central banks appear to be the most popular financial institutions out there. But while they are popular, they aren’t the only financial institutions. There is a long list of other institutions that engage in financial transactions. These are summed up as Other Financial Institutions.
