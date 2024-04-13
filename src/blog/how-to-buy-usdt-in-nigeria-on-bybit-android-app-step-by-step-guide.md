@@ -1,7 +1,7 @@
 ---
 layout: blog
 title: How to Buy USDT in Nigeria on Bybit Android App (Step by Step Guide)
-description: Binance is a good alternative to Binance. In this article, we’ll take you through the step-by-step process of buying USDT using the Bybit Android App.
+description: Binance is a good alternative to Bybit. In this article, we’ll take you through the step-by-step process of buying USDT using the Bybit Android App.
 createdAt: 2024-04-10T03:36:00.000Z
 updatedAt: 2024-04-10T03:36:00.000Z
 tag: guide
