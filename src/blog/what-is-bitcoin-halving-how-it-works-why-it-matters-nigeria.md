@@ -40,7 +40,7 @@ Some sources speculate that it could happen a few days earlier or later (remembe
 Whether it happens on the 19th or 21st, we’ll be here to watch and celebrate another amazing moment in Bitcoin history.
 
 ## Bitcoin Halving History
-It is popular knowledge that Bitcoin was launched in 2008. But many people don’t know about Bitcoin's halving history.
+It is popular knowledge that Bitcoin was launched in January 2009. But many people don’t know about Bitcoin's halving history.
 
 Previous halving dates were:  
 
