@@ -8,6 +8,8 @@ tag: terms
 image: https://monierate.com/uploads/central-bank-of-nigeria.jpg
 published: true
 ---
+![Central bank of Nigeria](https://monierate.com/uploads/central-bank-of-nigeria.jpg)
+
 **Tobi walks in for an interview at his dream company**. It’s a moment he won’t forget whether he passes or fails - but he sure hopes that he passes. He has read wide and deep before now. His eyes are almost gloomy from spending the entire night practising how to make a perfect presentation.
 
 **The interview begins with a simple question**, “Are you familiar with the internet and online payments?”
