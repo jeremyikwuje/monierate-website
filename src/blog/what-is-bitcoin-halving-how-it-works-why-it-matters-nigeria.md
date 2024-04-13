@@ -33,6 +33,8 @@ Want to join millions of Bitcoin enthusiasts in the countdown to the Bitcoin hal
 
 The halving is forecasted to take place on April 20 this year. You can have a look at it [here](https://www.thehalvening.com/).
 
+![Bitcoin Halving Countdown](https://ik.imagekit.io/monierate/uploads/bitcoin-halving-webpage.jpg.png?updatedAt=1713038573054)
+
 Some sources speculate that it could happen a few days earlier or later (remember it’s a matter of how many new blocks are on a blockchain). They give a timeframe of between 19th April to 21st April. These estimates - put together - suggest that the halving will occur anytime within a three-day period.
 
 Whether it happens on the 19th or 21st, we’ll be here to watch and celebrate another amazing moment in Bitcoin history.
