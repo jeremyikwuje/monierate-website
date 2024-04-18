@@ -95,7 +95,7 @@ This blankets commercial banks such as First Bank, Guaranty Trust Bank, and Unit
 
 The NIBSS Instant Payment or NIP,  is a service that delivers instantaneous payments. The aim is to create smooth seconds-fast transactions, driving business value and customer experience. 
 
-Designed with accessibility in mind, users can make use of the NIP platform in a variety of ways. The available options are [USSD](https://monierate.com/blog/ussd-what-it-is-and-how-it-works-in-nigeria), [POS](https://monierate.com/blog/what-is-a-point-of-sale-pos-and-how-it-works-in-nigeria) and ATM, mobile banking, web platforms, and third-party channels.
+Designed with accessibility in mind, users can make use of the NIP platform in a variety of ways. The available options are [USSD](https://monierate.com/blog/ussd-what-it-is-and-how-it-works-in-nigeria), [POS](https://monierate.com/blog/what-is-a-point-of-sale-pos-and-how-it-works-in-nigeria) and [ATM](https://monierate.com/blog/what-is-an-automated-teller-machine-atm-and-how-it-works-in-nigeria), mobile banking, web platforms, and third-party channels.
 
 
 ## How to Check if NIBSS is Down

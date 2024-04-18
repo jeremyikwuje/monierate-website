@@ -10,7 +10,7 @@ published: true
 ---
 ![Point of Sale](https://ik.imagekit.io/monierate/uploads/pos-hand.jpg)
 
-Point-of-sale (POS) services have since been in existence in Nigeria but they weren’t so popular until a few years ago. Before this time, customers relied more on the use of automated teller machines (ATMs) for quick and seamless transactions. But even this wasn’t much of a solution. 
+Point-of-sale (POS) services have since been in existence in Nigeria but they weren’t so popular until a few years ago. Before this time, customers relied more on the use of [automated teller machines (ATMs)](https://monierate.com/blog/what-is-an-automated-teller-machine-atm-and-how-it-works-in-nigeria) for quick and seamless transactions. But even this wasn’t much of a solution. 
 
 ATMs often have long queues, issues of power outages, and stuck customer cards or funds. In addition, they may be located far from a user’s residence. 
 
@@ -159,7 +159,6 @@ Deposit Money Banks (DMBs) also have the license to operate as point-of-sale (PO
 **QuickTeller**
 
 A 2.3% share of the POS service market and 35,490 POS agents ranked QuickTeller as the fourth company on this list. 
-
 
 ## Conclusion
 
