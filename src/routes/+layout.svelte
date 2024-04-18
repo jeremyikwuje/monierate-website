@@ -181,6 +181,20 @@ function hidePromotionBar() {
     
 <div class="w-full h-1 mt-16 dark:border-gray-900"></div>
 
+<div class="bg-white dark:bg-gray-800">
+    <div class="container">
+        <!-- Landscape Top/Bottom -->
+        <div class="cedar-money">
+            <a href="https://tinyurl.com/24ujvanp" target="_blank">
+                <img 
+                    src="https://ik.imagekit.io/monierate/cedar-banner-send-money.gif"
+                    alt="Cedar Money"
+                    class="mx-auto max-w-full md:w-[800px] md:h-[114px]">
+            </a>
+        </div>
+    </div>
+</div>
+
 <footer class="pt-16 pb-8 mt-8 text-gray-500 dark:text-gray-300">
     <div class="container mx-auto block md:flex justify-between item-center">
         <div class="w-full md:w-[30%]">

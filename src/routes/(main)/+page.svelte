@@ -19,6 +19,20 @@
     <meta property="og:image" content="https://monierate.com/monierate-og-image.png">
 </svelte:head>
 
+<div class="bg-white dark:bg-gray-800">
+    <div class="container">
+        <!-- Landscape Top/Bottom -->
+        <div class="cedar-money">
+            <a href="https://tinyurl.com/24ujvanp" target="_blank">
+                <img 
+                    src="https://ik.imagekit.io/monierate/cedar-send-large-payment-homepage.gif"
+                    alt="Cedar Money"
+                    class="mx-auto max-w-full md:w-[800px] md:h-[114px]">
+            </a>
+        </div>
+    </div>
+</div>
+
 <div class="pt-4 pb-4">
     <div class="container">
         <h1 class="text-2xl md:text-4xl mb-2 dark:text-gray-100 md:text-center">Today's dollar to naira rates on exchanges</h1>
@@ -40,11 +54,11 @@
 <div class="bg-white dark:bg-gray-800">
     <div class="container">
         <!-- Landscape Top/Bottom -->
-        <div class="cedar-money">
-            <a href="https://tinyurl.com/24ujvanp" target="_blank">
+        <div class="pst-net">
+            <a href="https://tinyurl.com/mpz2jv3t" target="_blank">
                 <img 
-                    src="https://ik.imagekit.io/monierate/cedar-send-large-payment-homepage.gif"
-                    alt="Cedar Money"
+                    src="https://ik.imagekit.io/monierate/partners/pst.gif"
+                    alt="PST NET Virtual Cards"
                     class="mx-auto max-w-full md:w-[800px] md:h-[114px]">
             </a>
         </div>
