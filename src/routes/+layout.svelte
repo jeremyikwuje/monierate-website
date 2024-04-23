@@ -200,7 +200,7 @@ function hidePromotionBar() {
         <div class="w-full md:w-[30%]">
             <h3 class="font-bold">Currency converter</h3>
             <ul class="py-4 converter-list">
-                <li><a data-sveltekit-reload href="/converter/cedarmoney?Amount=1&From=USD&To=NGN" class="font-bold text-purple-500">Send USD on Cedar</a></li>
+                <li><a data-sveltekit-reload href="/converter/cedarmoney?Amount=1&From=USD&To=NGN" class="font-bold text-indigo-500">Send USD on Cedar</a></li>
                 <li><a data-sveltekit-reload href="/converter/bybit?Amount=1&From=USDT&To=NGN">Convert USDT on Bybit</a></li>
                 <li><a data-sveltekit-reload href="/converter/bitmama?Amount=1&From=USDT&To=NGN">Convert USDT on Bitmama</a></li>
                 <li><a data-sveltekit-reload href="/converter/bitnob?Amount=1&From=USDT&To=NGN">Convert USDT on Bitnob</a></li>
