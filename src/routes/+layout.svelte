@@ -200,7 +200,7 @@ function hidePromotionBar() {
         <div class="w-full md:w-[30%]">
             <h3 class="font-bold">Currency converter</h3>
             <ul class="py-4 converter-list">
-                <li><a data-sveltekit-reload href="/converter/binance?Amount=1&From=USDT&To=NGN">Convert USDT on Binance</a></li>
+                <li><a data-sveltekit-reload href="/converter/cedarmoney?Amount=1&From=USD&To=NGN">Convert USDT on Cedar</a></li>
                 <li><a data-sveltekit-reload href="/converter/bybit?Amount=1&From=USDT&To=NGN">Convert USDT on Bybit</a></li>
                 <li><a data-sveltekit-reload href="/converter/bitmama?Amount=1&From=USDT&To=NGN">Convert USDT on Bitmama</a></li>
                 <li><a data-sveltekit-reload href="/converter/bitnob?Amount=1&From=USDT&To=NGN">Convert USDT on Bitnob</a></li>
@@ -213,7 +213,7 @@ function hidePromotionBar() {
                 <li><a data-sveltekit-reload href="/converter/quidax?Amount=1&From=USDT&To=NGN">Convert USDT on Quidax</a></li>
                 <li><a data-sveltekit-reload href="/converter/yellowcard?Amount=1&From=USDT&To=NGN">Convert USDT on Yellow Card</a></li>
                 <li><a data-sveltekit-reload href="/converter/luno?Amount=1&From=USDC&To=NGN">Convert USDC on Luno</a></li>
-                <li><a data-sveltekit-reload href="/converter/payday?Amount=1&From=USD&To=NGN">Convert USD on Payday</a></li>
+                <li><a data-sveltekit-reload href="/converter/payday?Amount=1&From=USD&To=NGN">Convert USD on Changera</a></li>
                 <li><a data-sveltekit-reload href="/converter/wirepay?Amount=1&From=USD&To=NGN">Convert USD on Wirepay</a></li>
             </ul>
         </div>
