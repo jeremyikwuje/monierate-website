@@ -2,7 +2,7 @@
 layout: blog
 title: "Credit Score: What It Is and How It Applies in Nigeria"
 description: Credit Score is a number-based scoring system used to determine if an individual who is in need of a loan will be able to repay it.
-createdAt: 2024-04-26T22:40:00.000Z
+createdAt: 2024-04-22T22:40:00.000Z
 updatedAt: 2024-04-26T22:40:00.000Z
 tag: terms
 image: https://ik.imagekit.io/monierate/uploads/pen-calculator-score.jpg
