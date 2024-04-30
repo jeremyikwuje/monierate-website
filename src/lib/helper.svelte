@@ -65,7 +65,7 @@ export function basicAuth(method, body, level = "api")
 export function getEndpoint(endpoint)
 {
     const server = env.SERVER
-    let apiUrl = 'https://data.monierate.com'
+    let apiUrl = env.API_URL || 'https://data.monierate.com'
     if (server == 'LOCAL') {
         apiUrl = 'http://localhost:3000'
     }
