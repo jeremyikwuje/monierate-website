@@ -2,8 +2,8 @@
 layout: blog
 title: How Anti Money Laundering is Handled in Nigeria
 description: In this article, you’ll get to know what Anti Money Laundering is, the Nigerian agencies concerned with enforcing it, and more importantly, requirement steps for institutions and entities that want to promote AML practices.
-createdAt: 2024-05-02T15:31:00.000Z
-updatedAt: 2024-05-07T15:31:00.000Z
+createdAt: 2024-05-02T16:31
+updatedAt: 2024-05-07T16:31
 tag: terms
 image: https://ik.imagekit.io/monierate/uploads/dollar-and-chains.jpg
 published: true
@@ -31,8 +31,6 @@ For those who don’t know, there’s an active Money Laundering (Prohibition) A
 This law is set to describe the scope of money laundering offences and iterate measures such as customer due diligence. It also seeks to strengthen existing AML systems and to develop an appropriate legal and institutional framework.
 
 The Money Laundering (Prohibition) Act was first introduced in 2002 through the action of the National Assembly. Since then, a total of four reforms have been made. These reforms occurred in 2003, 2011, 2013, and 2022, with each one updating the law to cover more and more aspects.
-
-offences
 
 ## List of Anti-Money Laundering (AML) Requirements
 
