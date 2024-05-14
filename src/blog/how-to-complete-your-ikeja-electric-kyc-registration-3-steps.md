@@ -2,7 +2,7 @@
 layout: blog
 title: How to Complete Your Ikeja Electric KYC Registration (3 Steps)
 description: In this article, we shed light on Ikeja electricity disco and also address how to complete your Ikeja Electric KYC registration. Whether you’re living within or around Lagos, chances are you’ve probably heard of Ikeja Electric.
-createdAt: 2024-05-14T07:55
+createdAt: 2024-05-08T07:55
 updatedAt: 2024-05-14T07:55
 tag: guide
 image: https://ik.imagekit.io/monierate/Blog/how-to/ikeja-electricity-singleview.jpg
