@@ -152,7 +152,7 @@
             Naira Rate Alerts
         </h1>
         <span class="text-lg">
-            The NGN market is disorganized and complex. Stay ahead every morning.
+            The NGN rate is disorganized and unstable. Stay ahead every Monday.
         </span>
     </section>
 
@@ -166,7 +166,7 @@
                 <label for="field-interval" class="w-full py-4 ml-2 text-sm font-medium text-gray-900 dark:text-gray-300 mr-4">
                     Every
                 </label>
-                <select bind:value={interval} id="field-interval" class="inline-block border rounded border-gray-400 dark:text-white dark:bg-gray-700 dark:border-gray-900 px-4 py-[0.4em]">
+                <select bind:value={interval} id="field-interval" class="inline-block border rounded border-gray-400 dark:text-white dark:bg-gray-800 dark:border-gray-900 px-4 py-[0.4em]">
                     <!-- <option value="DAY">Day</option> -->
                     <option value="WEEK" selected>Monday</option>
                 </select>
