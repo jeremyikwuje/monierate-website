@@ -167,7 +167,7 @@
                     Every
                 </label>
                 <select bind:value={interval} id="field-interval" class="inline-block border rounded border-gray-400 dark:text-white dark:border-gray-900 px-4 py-[0.4em]">
-                    <option value="DAY">Day</option>
+                    <!-- <option value="DAY">Day</option> -->
                     <option value="WEEK" selected>Monday</option>
                 </select>
             </div>
