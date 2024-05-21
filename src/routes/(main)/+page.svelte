@@ -51,9 +51,8 @@
     </div>
 </div>
 
-<div class="bg-white dark:bg-gray-800">
+<!-- <div class="bg-white dark:bg-gray-800">
     <div class="container">
-        <!-- Landscape Top/Bottom -->
         <div class="pst-net">
             <a href="https://tinyurl.com/mpz2jv3t" target="_blank">
                 <img 
@@ -63,7 +62,7 @@
             </a>
         </div>
     </div>
-</div>
+</div> -->
 
 <main>
     <div class="container">
