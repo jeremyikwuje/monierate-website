@@ -1,14 +1,15 @@
-<!-- <div class="bg-white dark:bg-gray-800">
+<div class="bg-white dark:bg-gray-800">
     <div class="container">
-        <div class="pst-net">
-            <a href="https://tinyurl.com/mpz2jv3t" target="_blank">
+        <!-- Landscape Top/Bottom -->
+        <div class="cedar-money">
+            <a href="https://tinyurl.com/24ujvanp" target="_blank">
                 <img 
-                    src="https://ik.imagekit.io/monierate/partners/pst.gif"
+                    src="https://monierate.com/uploads/cedar-banner-send-money-from-nigeria-to-your-suppliers.gif"
                     alt="Cedar Money"
                     class="mx-auto max-w-full md:w-[800px] md:h-[114px]">
             </a>
         </div>
     </div>
-</div> -->
+</div>
 
 <slot />

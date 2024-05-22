@@ -187,7 +187,7 @@ function hidePromotionBar() {
         <div class="cedar-money">
             <a href="https://tinyurl.com/24ujvanp" target="_blank">
                 <img 
-                    src="https://ik.imagekit.io/monierate/cedar-banner-send-money.gif"
+                    src="https://monierate.com/uploads/cedar-banner-send-money-from-nigeria-to-your-suppliers.gif"
                     alt="Cedar Money"
                     class="mx-auto max-w-full md:w-[800px] md:h-[114px]">
             </a>
