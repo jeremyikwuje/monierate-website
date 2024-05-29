@@ -6,7 +6,7 @@ createdAt: 2024-05-14T21:54
 updatedAt: 2024-05-29T21:54
 tag: terms
 image: https://monierate.com/uploads/general-bytes-e9vmx2zihvq-unsplash-1-.jpg
-published: false
+published: true
 ---
 ![Bitcoin ATM Machine](https://monierate.com/uploads/general-bytes-e9vmx2zihvq-unsplash-1-.jpg)
 
