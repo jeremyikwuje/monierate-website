@@ -27,7 +27,13 @@
 		</div>
 		<!-- Title -->
 		<h1 class="mb-2 text-3xl font-extrabold leading-tight text-gray-900 lg:mb-2 lg:text-5xl dark:text-gray-300 dark:font-semibold leading-10 md:leading-10">{metadata.title}</h1>
-		<p>Published {formatDate(metadata.createdAt)}</p>
+		<p class="text-gray-600 dark:text-gray-300 mt-4">
+			{#if metadata.author }
+				<span class="mr-4">By <strong>{metadata.author}</strong></span>
+			{/if}
+			
+			Published {formatDate(metadata.createdAt)}
+		</p>
 	</header>
 
 	<div class="flex justify-between mx-auto max-w-screen-xl">

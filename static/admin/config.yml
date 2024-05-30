@@ -27,4 +27,5 @@ collections:
       - {label: "Tags", name: "tag", widget: "string"}
       - {label: "Featured Image", name: "image", widget: "image"}
       - {label: "Published", name: "published", widget: "boolean"}
+      - {label: "Author", name: "author", widget: "string"}
       - {label: "Body", name: "body", widget: "markdown"}
