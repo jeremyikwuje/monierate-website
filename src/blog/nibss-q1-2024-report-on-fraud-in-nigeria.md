@@ -7,6 +7,7 @@ updatedAt: 2024-05-30T20:20
 tag: report
 image: https://ik.imagekit.io/monierate/Snapshot-from-the-NIBSS-Q1-2024-Fraud-Report.PNG
 published: true
+author: Uyah Mfonobong
 ---
 ![NIBSS 2024 Q1 Report](https://ik.imagekit.io/monierate/Snapshot-from-the-NIBSS-Q1-2024-Fraud-Report.PNG)
 
