@@ -27,8 +27,6 @@ Having a backup allows you to access your crypto wallet in the case of a missing
 
 **There are several ways you can back up your wallet:**
 
-
-
 1. You can back up your Trust Wallet by writing the recovery phrase in a paper and keeping it in a hidden and secure place.
 
 2. You can back up your recovery phrase on a flash drive or CD.
@@ -36,11 +34,7 @@ Having a backup allows you to access your crypto wallet in the case of a missing
 3. You can back up your wallet using Google Drive.
 
 
-
-
-
 *You can find your secret keys within the "Backup" or "Security" settings. Write them down carefully on a piece of paper and store it in a secure, fireproof location.*
-
 
 
 The focus of this article is on step **#3**. If you plan on backing up your wallet using Google Drive, below are the steps you should follow.
