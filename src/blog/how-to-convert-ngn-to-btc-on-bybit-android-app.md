@@ -7,7 +7,7 @@ updatedAt: 2024-06-11T13:17
 tag: guide
 image: https://ik.imagekit.io/monierate/Blog/how-to/ngn-btc-bybit-fiat-amount.png?updatedAt=1717460339888
 published: true
-author: Monierate Editorial Team
+author: Victory Emmanuel
 ---
 ![How to Convert NGN to BTC on Bybit Android App](https://ik.imagekit.io/monierate/Blog/how-to/ngn-btc-bybit-fiat-amount.png?updatedAt=1717460339888)
 
