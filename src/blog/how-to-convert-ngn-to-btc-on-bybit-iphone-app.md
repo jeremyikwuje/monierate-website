@@ -7,7 +7,7 @@ updatedAt: 2024-06-11T13:12
 tag: guide
 image: https://ik.imagekit.io/monierate/Blog/how-to/ngn-btc-bybit-payment-method.png?updatedAt=1717460339707
 published: true
-author: Monierate Editorial Team
+author: Victory Emmanuel
 ---
 ![How to Convert NGN to BTC on Bybit iPhone App](https://ik.imagekit.io/monierate/Blog/how-to/ngn-btc-bybit-payment-method.png?updatedAt=1717460339707)
 
