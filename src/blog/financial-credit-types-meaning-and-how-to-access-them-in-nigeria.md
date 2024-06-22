@@ -5,10 +5,12 @@ description: Credit refers to a financial concept in which funds or other resour
 createdAt: 2024-06-22T13:31
 updatedAt: 2024-06-22T13:31
 tag: terms
-image: /uploads/hand-on-coin-stack.jpg
+image: https://monierate.com/uploads/hand-on-coin-stack.jpg
 published: true
 author: Uyah Mfonobong
 ---
+![Hand on stack coins](https://monierate.com/uploads/hand-on-coin-stack.jpg)
+
 Given the present economic situation, credit - which was already an important financial instrument - has become more relevant. Entire businesses and economic systems depend on it for continuation, survival, and growth. This huge dependence makes it necessary for us to speak about credit, its meaning and its types.
 
 ## Meaning of Credit
