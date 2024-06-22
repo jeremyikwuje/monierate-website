@@ -60,7 +60,7 @@ You can use [monierate.com](https://monierate.com) to easily convert Euro to Nai
 
 Here are some practical options you can try out:
 
-### From Banks and Financial Institutions**
+### 1. From Banks and Financial Institutions
 
 Many banks in Nigeria provide currency exchange services. You can visit your local bank or any authorised forex dealer to convert your Euros to Naira. It’s important to note that banks may charge a commission or fee for their services, and the exchange rates may not be as competitive as other options.
 
@@ -82,7 +82,7 @@ Many banks in Nigeria provide currency exchange services. You can visit your loc
 
     
 
-### From Bureau de Change (BDC)
+### 2. From Bureau de Change (BDC)
 
 BDCs are licensed currency exchange providers and are commonly found in Nigeria. Known locally as ‘Abokis’, partly because the majority of the people providing this service are individuals from the Northern part of Nigeria, where Hausa is a commonly spoken language. 
 
@@ -106,7 +106,7 @@ They offer competitive rates and are conveniently located in major cities, airpo
 
 -   They may not be as readily available in less populated areas.
 
-### Online Currency Exchange Platforms
+### 3. Online Currency Exchange Platforms
 
 With the digital age, online currency exchange platforms have become increasingly popular. They offer the convenience of converting Euros to Naira from anywhere, provided you have an internet connection. Platforms like Xe and Monito allow you to check live exchange rates and perform transactions securely. When using these services, it’s key to ensure the platform is reputable and offers competitive exchange rates. Some have mobile apps are specifically designed for currency conversion and often provide the added benefit of tracking the exchange rate fluctuations in real-time, allowing you to convert your money when the rate is favorable.
 
@@ -126,7 +126,7 @@ With the digital age, online currency exchange platforms have become increasingl
 
 -   Some platforms may have hidden fees or charges for currency conversion.
 
-### Peer-to-Peer Exchange Services
+### 4. Peer-to-Peer Exchange Services
 
 This is a modern and increasingly popular method for currency exchange, including the conversion of Euros to Naira. 
 
