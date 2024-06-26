@@ -1,4 +1,4 @@
-export type Tags = 'virtualcard' | 'guide' | 'terms' | 'company' | 'finance' | 'engineering' | 'product' | 'report'
+export type Tags = 'virtualcard' | 'guide' | 'terms' | 'company' | 'finance' | 'engineering' | 'product' | 'report' | 'people'
 
 export type Post = {
 	title: string
