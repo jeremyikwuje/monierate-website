@@ -2,7 +2,7 @@
 layout: blog
 title: "Bitcoin to Naira: The Simple Guide"
 description: So let’s assume you’ve invested in Bitcoin, seen its value skyrocket, and now you’re eager to transform those virtual riches into good old-fashioned Naira.
-createdAt: 2024-07-01T22:26
+createdAt: 2024-06-12T22:26
 updatedAt: 2024-07-01T22:26
 tag: guide
 image: https://ik.imagekit.io/monierate/Blog/Listicles/bitcoin-to-naira.jpg
