@@ -1,6 +1,6 @@
 ---
 layout: blog
-title: The Uprising of Past CBN Governor Charles Soludo
+title: "Charles Soludo: The Uprising of Past CBN Governor"
 description: Reputed as one of the most productive governors of the Central Bank of Nigeria, Charles Soludo is one name Nigerians won’t forget in a hurry. This article speaks about his uprising from his early days as a child to his days at the CBN and beyond.
 createdAt: 2024-06-26T00:06
 updatedAt: 2024-06-26T00:06
