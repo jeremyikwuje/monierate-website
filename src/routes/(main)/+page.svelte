@@ -23,9 +23,9 @@
     <div class="container">
         <!-- Landscape Top/Bottom -->
         <div class="cedar-money">
-            <a href="https://tinyurl.com/24ujvanp" target="_blank">
+            <a href="https://tinyurl.com/k24snzvx" target="_blank">
                 <img 
-                    src="https://monierate.com/uploads/cedar-banner-pay-in-NGN-XOF-GHS-KES.gif"
+                    src="https://monierate.com/cedar-banner-2.gif"
                     alt="Cedar Money"
                     class="mx-auto max-w-full md:w-[800px] md:h-[114px]">
             </a>
