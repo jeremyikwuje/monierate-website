@@ -106,7 +106,7 @@ function hidePromotionBar() {
                 <span class="sr-only">Discount</span>
             </span>
             <span>
-                Send Pounds & Euros to 55+ Countries, Including UK
+                Send Pounds & Euros to 55+ Countries, Including UK on 
                 <a href="https://tinyurl.com/cambridge-currences-top-banner" class="break-word text-sm font-medium text-blue-600 dark:text-blue-500 hover:underline text-wrap">
                     Cambridge Currencies
                     <svg class="inline-block w-3 h-3 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
