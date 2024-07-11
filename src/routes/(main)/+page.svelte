@@ -51,7 +51,7 @@
     </div>
 </div>
 
-<!-- <div class="bg-white dark:bg-gray-800">
+<!--<div class="bg-white dark:bg-gray-800">
     <div class="container">
         <div class="pst-net">
             <a href="https://tinyurl.com/mpz2jv3t" target="_blank">
@@ -62,7 +62,7 @@
             </a>
         </div>
     </div>
-</div> -->
+</div>-->
 
 <main>
     <div class="container">
@@ -89,6 +89,7 @@
                 </thead>
                 <tbody class="changers">
                     {#each Object.entries(rates) as [changer, rate], i}
+                    {#if changer != 'binance' }
                     <tr class="mb-4 border-t border-gray-200 dark:border-gray-700">
                         <th scope="row" class="text-gray-500 py-6 pl-4 hidden md:inline-block">
                             { i + 1 }
@@ -125,6 +126,7 @@
                             {format(new Date(rate.updatedAt))}
                         </td>
                     </tr>
+                    {/if}
                     {/each}
                 </tbody>
             </table>

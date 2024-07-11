@@ -108,7 +108,7 @@ function hidePromotionBar() {
                 <img alt="Monierate Logo" width="142px" height="24px" class="hidden dark:block h-[24px] w-[142px] md:h-[24px]" src="/monierate-logo-white.png" loading="lazy">
             </a>
             <div class="flex md:order-2">
-                <a href="/alerts" type="button" class="button bg-primary font-bold">
+                <a href="/alerts" type="button" class="button bg-primary text-white font-bold">
                     Get alert
                 </a>
 
