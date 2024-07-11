@@ -94,10 +94,30 @@ function hidePromotionBar() {
 </script>
 
 <svelte:head>
-    
 </svelte:head>
 
-<header class="mb-0">
+<div id="bottom-banner" tabindex="-1" class="fixed top-0 mb-8 start-0 z-50 flex justify-between w-full p-4 border-t border-gray-200 bg-gray-100 dark:bg-gray-700 dark:border-gray-600">
+    <div class="flex items-center mx-auto">
+        <p class="flex items-center text-sm font-normal text-gray-600 dark:text-gray-400">
+            <span class="inline-flex p-1 me-3 bg-gray-200 rounded-full dark:bg-gray-600 w-6 h-6 items-center justify-center">
+                <svg class="w-3.5 h-3.5 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M18.435 7.546A2.32 2.32 0 0 1 17.7 5.77a3.354 3.354 0 0 0-3.47-3.47 2.322 2.322 0 0 1-1.776-.736 3.357 3.357 0 0 0-4.907 0 2.281 2.281 0 0 1-1.776.736 3.414 3.414 0 0 0-2.489.981 3.372 3.372 0 0 0-.982 2.49 2.319 2.319 0 0 1-.736 1.775 3.36 3.36 0 0 0 0 4.908A2.317 2.317 0 0 1 2.3 14.23a3.356 3.356 0 0 0 3.47 3.47 2.318 2.318 0 0 1 1.777.737 3.36 3.36 0 0 0 4.907 0 2.36 2.36 0 0 1 1.776-.737 3.356 3.356 0 0 0 3.469-3.47 2.319 2.319 0 0 1 .736-1.775 3.359 3.359 0 0 0 0-4.908ZM8.5 5.5a1 1 0 1 1 0 2 1 1 0 0 1 0-2Zm3 9.063a1 1 0 1 1 0-2 1 1 0 0 1 0 2Zm2.207-6.856-6 6a1 1 0 0 1-1.414-1.414l6-6a1 1 0 0 1 1.414 1.414Z"/>
+                </svg>
+                <span class="sr-only">Discount</span>
+            </span>
+            <span>Send Pounds & Euros to 55+ Countries, Including UK
+                <a href="https://tinyurl.com/cambridge-currences-top-banner" class="flex items-center ms-0 text-sm font-medium text-blue-600 md:ms-1 md:inline-flex dark:text-blue-500 hover:underline">
+                    Cambridge Currencies
+                    <svg class="w-3 h-3 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
+                    </svg>
+                </a>
+            </span>
+        </p>
+    </div>
+</div>
+
+<header class="mb-0 mt-16">
     <!-- <div class="bg-top-banner w-full py-2 text-center text-white fixed z-20 top-0 left-0">
        Best Dollar App <a href="https://tinyurl.com/beansAppTopBanner" class="underline font-extrabold text-white">Get Now</a>
     </div> -->
@@ -220,6 +240,8 @@ function hidePromotionBar() {
         <div class="w-full md:w-[30%]">
             <h3 class="font-bold">Tools</h3>
             <ul class="py-4 converter-list">
+                <li><a href="https://tinyurl.com/cambridge-currencies-foot-link">Send Money to Europe</a></li>
+                <li><a href="https://tinyurl.com/cedar-bottom-link">Pay your Importers</a></li>
                 <li><a href="/alerts">Price Alerts</a></li>
                 <li><a href="/converter">Currency Converter</a></li>
                 <li><a href="/ng/compare">Compare exchange rates</a></li>
