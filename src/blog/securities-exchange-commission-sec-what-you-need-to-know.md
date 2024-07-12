@@ -5,7 +5,7 @@ description: Josh, who loves trading, comes across the term Securities Exchange 
 createdAt: 2024-07-04T08:26
 updatedAt: 2024-07-12T08:26
 tag: terms
-image: /uploads/sec-nigeria.jpg
+image: https://monierate.com/uploads/sec-nigeria.jpg
 published: true
 author: Uyah Mfonobong
 ---
