@@ -17,7 +17,7 @@ Want a depth exploration of Bitcoin as an investment mechanism? You should read 
 
 ## Authors of the Investment Case for Bitcoin Report
 
-The following summary comes from a release titled the [Investment Case for Bitcoin Report](https://etc-group.com/blog/special-reports/the-investment-case-for-bitcoin/). The well-articulated document is the work of the ETC Group.
+The below summary comes from a release titled the Investment Case for Bitcoin Report. The well-articulated document is the work of the ETC Group.
 
 ETC stands for Exchange Traded Cryptocurrencies. The ETC Group has interest in traditional and digital financial services and works to strengthen the interrelationship of both worlds. Just a year after its establishment in 2019, it launched the world’s first centrally cleared bitcoin ETF on Europe’s largest reading venue, Deutsche Borse XETRA.
 
@@ -27,7 +27,7 @@ Furthermore, in 2023, the ETC Group initiated a crypto basket ETP on an MSCI dig
 
 There would be no Bitcoin report if there were no Bitcoin. So we must begin this article with a rundown of what Bitcoin is.
 
-Bitcoin is the first-ever cryptocurrency. It was developed many years ago in 2008, by an individual known by the pseudonym of Satoshi Nakamoto. The true identity of the Bitcoin creator is hidden but the same cannot be said of his invention. 
+Bitcoin is the first-ever cryptocurrency. It was developed many years ago in 2008, by an individual known by the pseudonym of Satoshi Nakamoto. The true identity of the Bitcoin creator is hidden but the same cannot be said of his invention.
 
 The asset, Bitcoin, brought the terms cryptocurrency, blockchain, and digital assets to life. Although many systems representing/utilizing digital currency and cryptography already existed such as DigiCash and Liberty Reserve, none other have experienced a successful implementation or adoption as Bitcoin.
 
@@ -83,11 +83,11 @@ Here, see for yourself:
 
 The question on whether Bitcoin is an inflation hedge or not has been asked for many years, often by Bitcoin enthusiasts and investors seeking to test the waters. Page 42 of the Investment Case for Bitcoin Report delves into a factual answer.
 
-It reads that the disinflationary supply growth schedule coupled with increasing scarcity makes the Bitcoin asset a suitable hedge against inflation.  
+It reads that the disinflationary supply growth schedule coupled with increasing scarcity makes the Bitcoin asset a suitable hedge against inflation.
 
 Moreover, while it is impossible to completely tell the future, past and present events prove really helpful for conducting predictions and forecasts. The case in point here is the behavior of Bitcoin in correlation with global money supply.
 
-Let’s explain.  
+Let’s explain.
 
 Prior to the covid-19 pandemic, Bitcoin price had nothing to do with the amount of money in circulation worldwide. However, a noticeable change began in 2020 when governments printed large amounts of money for aid and stimulus packages. Coincidentally, the Bitcoin ecosystem witnessed a halving event that same year.
 
