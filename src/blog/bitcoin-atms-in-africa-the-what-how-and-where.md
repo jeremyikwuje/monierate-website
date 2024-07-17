@@ -1,6 +1,6 @@
 ---
 layout: blog
-title: "Bitcoin ATMs in Africa: The What, How, and Where"
+title: "Bitcoin ATMs in Africa: What You Need to Know Now"
 description: Have you ever stumbled on a Bitcoin ATM? Maybe not. But a couple of African countries could offer you the experience. Find out which African countries have Bitcoin ATMs and how many there are.
 createdAt: 2024-07-16T09:58
 updatedAt: 2024-07-16T09:58
