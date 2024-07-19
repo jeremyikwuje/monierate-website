@@ -168,7 +168,7 @@ convertNow()
     <div class="container">
         <!-- Landscape Top/Bottom -->
         <div class="cedar-money">
-            <a href="https://tinyurl.com/24ujvanp" target="_blank">
+            <a href="https://tinyurl.com/4zuasuhv" target="_blank">
                 <img 
                     src="https://monierate.com/cedar-banner-1.gif"
                     alt="Cedar Money"
@@ -247,7 +247,7 @@ convertNow()
                             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
                         </svg>                                                  
                     </a>
-                    <a href="https://tinyurl.com/24ujvanp" class="block button buy font-bold w-full md:inline-block md:w-auto">
+                    <a href="https://tinyurl.com/4zuasuhv" class="block button buy font-bold w-full md:inline-block md:w-auto">
                         Pay your suppliers abroad
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="inline-block w-4 h-4 ml-2">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25" />
