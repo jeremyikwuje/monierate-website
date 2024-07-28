@@ -5,7 +5,7 @@ description: Given the right circumstances, honest men will turn crooks. For Law
 createdAt: 2024-07-28T15:38
 updatedAt: 2024-07-28T15:38
 tag: people
-image: /uploads/hand-gun-shadow.jpg
+image: https://monierate.com/uploads/hand-gun-shadow.jpg
 published: true
 author: Uyah Mfonobong
 ---
