@@ -17,13 +17,13 @@ Lawrence Anini is the legend of bloody, murderous crime in Nigeria. His speciali
 
 **Anini’s Unlikely Beginnings**
 
-Anini of unblessed memory was born in 1960 in a village believed to be a stone's throw from what is, today, Edo State. The exact name of the village is Orogho and it is located in Orhionmwon local government area. 
+Anini of unblessed memory was born in 1960 in a village believed to be a stone's throw from what is, today, Edo State. The exact name of the village is Orogho and it is located in Orhionmwon local government area.
 
 His mother, Madam Akuguehia Oghadomwangbe had three children of which he was the second child and only son.
 
 You could tell Anini was a vibrant and promising young man, full of drive and that never-back-downness that pulsates through every Nigerian’s veins. The clue is that he learned to drive at an early age. He later moved from his birth town to pursue his dreams, and get things going for himself.
 
-He became a taxi driver - one who was particularly skilled and prominent. But it did not stop there. His search for a livelihood led him to work at a motor park. 
+He became a taxi driver - one who was particularly skilled and prominent. But it did not stop there. His search for a livelihood led him to work at a motor park.
 
 It was here that his bold, forceful nature slowly became evident. Of course, anyone would agree that this was just the right mix for the kind of environment he found himself. You’d often have to be a man of timber and iron and fire and igneous rock to work in these parks.
 
@@ -53,27 +53,25 @@ But while it looked like it, all hell was yet to break loose. It did later on in
 
 These criminals were caught and arrested - bound to face severe punishment for their crimes. However, it appears the rest of the gang used their ill-gotten resources to bargain an agreement with corrupt officials. So when their former members got prosecuted, the whole team felt betrayed, with an unsung bitterness towards the police force.
 
-![Newspaper-publication-on-Anini.jpg
-
-](https://ik.imagekit.io/monierate/Blog/Newsletter/Newsletter%20publication%20on%20Anini%20Source%20Neusroom.jpg)
+![Newspaper-publication-on-Anini.jpg](https://ik.imagekit.io/monierate/Blog/Newsletter/Newsletter%20publication%20on%20Anini%20Source%20Neusroom.jpg)
 
 **Anini’s Career in Crime**
 
 In August 1986, a barrage of operations began. You don’t need a soothsayer to tell why. Anini and his band of robbers were bent on repaying the actions of the government.
 
-First, there was a fatal bank robbery which the police reportedly linked to the rouge gang. Also, Anini and his team shot dead two police officers for trying to stop their car at a checkpoint. 
+First, there was a fatal bank robbery which the police reportedly linked to the rouge gang. Also, Anini and his team shot dead two police officers for trying to stop their car at a checkpoint.
 
 That same month, the team executed a heist at First Bank, Sabongida-Ora, where they left a surprise; stealing what was considered a meagre sum ($2,000 or NGN10,000 at the time) but creating a blood bath in the process.
 
 In a span of three months, the team was believed to have committed over nine police murders.
 
-It was an awful period to live in as a law enforcement official and a frightening one for people in general. The worst part? There was no end in sight. 
+It was an awful period to live in as a law enforcement official and a frightening one for people in general. The worst part? There was no end in sight.
 
 Anini and his gang committed more treachery by snatching the official car of an Assistant Inspector General of Police, Christopher Omeben. During this incident, the driver, Albert Otoe, was murdered, with his body hidden by the perpetrators.
 
 It is said that the driver’s body was recovered months later at the Benin-Agbor highway; 16 kilometres from where the crime occurred.
 
-Several other series of carjackings, armed robberies, and police killings that pointed to Anini and his men took place. 
+Several other series of carjackings, armed robberies, and police killings that pointed to Anini and his men took place.
 
 Two policemen were killed in Oriohwon local government and a Peugeot 504 (similar to the Assistant IGP’s car) was stolen near the former FEDECO office. The crooks even had the audacity of spraying robbery money in the market, drawing large crowds of free pickers.
 
@@ -87,7 +85,7 @@ The bank, rather than report this to the police, fled to the Oba of Benin. Count
 
 Another of those letters was addressed to the Head of State himself in October 1986. It read, “Tell our President, we like him but we are not happy here in Bendel. The payment for everything is too much. That is why I now divide any money I get to the people.”
 
-More of the letter was on the demands for peace to reign in Bendel. 
+More of the letter was on the demands for peace to reign in Bendel.
 
 “No more prosecution of innocent armed robbers; a stop to collusion between the police and the Nigerian Union of Road Transport Workers, and with members of the Ogboni cult; no more harassment of market women returning from their work; the ‘abolition of the collection of 50K-N5 [by the Highway Patrol] equal treatment for everybody; and fair treatment for all legitimate drivers by the police.”
 
@@ -95,7 +93,7 @@ Anini’s notes sometimes came with an air of ambiguity yet they also left a cou
 
 **The Dead End for Anini; a Taxi Driver Turned Murderer**
 
-A surprising detail about this story is that Anini performed his nefarious acts under a military government. 
+A surprising detail about this story is that Anini performed his nefarious acts under a military government.
 
 Whether it was out of carelessness or disregard, we can never say. But the length of his sadistic reign and the success of his operations are highly questionable given the type of political power present at the time.
 
@@ -121,7 +119,7 @@ This sealed the deal for the 26-year-old criminal. He was taken to the Police He
 
 It is easy to support the trial and prosecution of Anini and his gang. But in many cases, the atrocities of criminals bring prosecution upon their friends and families too. Here’s an example.
 
-In 1985, the police - likely in search of The Law - performed a raid on Anini’s village, arresting his mother, younger sister and several others. Speaking to This Week magazine in 1987, Madam Akuguehia explained the dread of the incident and how the entire family was subjected to torture.  
+In 1985, the police - likely in search of The Law - performed a raid on Anini’s village, arresting his mother, younger sister and several others. Speaking to This Week magazine in 1987, Madam Akuguehia explained the dread of the incident and how the entire family was subjected to torture.
 
 As if the trauma from this was not enough, Anini’s family reportedly continues to suffer public stigmatisation.
 
