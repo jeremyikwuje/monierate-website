@@ -111,9 +111,7 @@ Despite shoving and head-butting, the lead officer quickly pulled his gun and bl
 
 This sealed the deal for the 26-year-old criminal. He was taken to the Police Headquarters before being moved to a military hospital where his leg was amputated.
 
-![Newspaper-image-of-Anini.jpg
-
-](https://ik.imagekit.io/monierate/Blog/Newsletter/Newsletter%20image%20of%20Anini%20Source%20Neusroom.jpg)
+![Newspaper-image-of-Anini.jpg](https://ik.imagekit.io/monierate/Blog/Newsletter/Newsletter%20image%20of%20Anini%20Source%20Neusroom.jpg)
 
 **Trial and Prosecution of Lawrence Anini**
 
