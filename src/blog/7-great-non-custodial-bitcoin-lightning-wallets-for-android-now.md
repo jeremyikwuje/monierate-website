@@ -1,6 +1,6 @@
 ---
 layout: blog
-title: 7 Great Non-Custodial Bitcoin & Lightning Wallets for Android Now
+title: 10 Great Non-Custodial Bitcoin & Lightning Wallets for Android Now
 description: If you're using an Android device and searching for the best non-custodial Bitcoin wallets in the market today, this guide is for you. We'll explore the top options available, helping you choose the most secure and user-friendly wallet for your needs.
 createdAt: 2024-07-22T01:11
 updatedAt: 2024-07-22T01:11
