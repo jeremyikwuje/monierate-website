@@ -4,7 +4,7 @@ title: "Consensus Failure: The Simple Things You Need to Know"
 description: A Consensus Failure is a situation in which nodes disagree on what blockchain to adopt or whether a block transaction is valid or not.
 createdAt: 2024-08-04T11:26
 updatedAt: 2024-08-04T11:26
-tag: term
+tag: terms
 image: /uploads/blockchain-network.jpg
 published: true
 author: Uyah Mfonobong
