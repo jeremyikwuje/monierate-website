@@ -17,7 +17,7 @@ As the name implies, the consensus mechanism fails. But what exactly is this pro
 
 ## What is a Consensus Failure?
 
-A Consensus Failure is a situation in which nodes disagree on what blockchain to adopt or whether a block transaction is valid or not.   
+A Consensus Failure is a situation in which nodes disagree on what blockchain to adopt or whether a block transaction is valid or not.
 
 It is a special blockchain problem. Generally speaking, this failure stems from poor/wrongful operation of blockchain participants.
 
