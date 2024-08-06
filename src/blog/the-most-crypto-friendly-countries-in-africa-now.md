@@ -1,6 +1,6 @@
 ---
 layout: blog
-title: The Most Crypto-Friendly Countries in Africa Now
+title: 5 Most Crypto-Friendly Countries in Africa Now
 description: It is quite interesting to note that crypto goes beyond individuals. Entire countries these days have experiences that are recognizable and valid. These can be termed as crypto-friendly countries.
 createdAt: 2024-07-08T03:07
 updatedAt: 2024-07-13T03:07
