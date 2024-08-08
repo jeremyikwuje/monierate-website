@@ -95,7 +95,7 @@ function hidePromotionBar() {
 <svelte:head>
 </svelte:head>
 
-<div id="top-banner" tabindex="-1" class="flex md:hidden fixed top-0 mb-8 start-0 z-50 justify-between w-full p-4 border-t border-gray-200 bg-gray-50 dark:bg-gray-700 dark:border-gray-600">
+<!-- <div id="top-banner" tabindex="-1" class="flex md:hidden fixed top-0 mb-8 start-0 z-50 justify-between w-full p-4 border-t border-gray-200 bg-gray-50 dark:bg-gray-700 dark:border-gray-600">
     <div class="flex items-center mx-auto">
         <p class="flex items-center text-sm font-normal text-gray-500 dark:text-gray-400">
             <span class="inline-flex p-1 me-3 bg-gray-200 rounded-full dark:bg-gray-600 w-6 h-6 items-center justify-center">
@@ -115,12 +115,12 @@ function hidePromotionBar() {
             </span>
         </p>
     </div>
-</div>
+</div> -->
 
 <!-- <div id="top-banner" tabindex="-1" class="fixed top-0 mb-8 start-0 z-50 flex justify-between w-full p-4"> -->
 
 
-<div id="top-banner" tabindex="-1" class="hidden md:flex fixed top-0 mb-8 w-full z-50 gap-x-6 overflow-hidden bg-gray-50 px-6 py-3 sm:px-3.5 sm:before:flex-1">
+<div id="top-banner" tabindex="-1" class="flex fixed top-0 mb-8 w-full z-50 gap-x-6 overflow-hidden bg-gray-50 px-6 py-3 sm:px-3.5 sm:before:flex-1">
     <div class="absolute left-[max(-7rem,calc(50%-52rem))] top-1/2 -z-10 -translate-y-1/2 transform-gpu blur-2xl" aria-hidden="true">
       <div class="aspect-[577/310] w-[36.0625rem] bg-gradient-to-r from-[#ff80b5] to-[#9089fc] opacity-30" style="clip-path: polygon(74.8% 41.9%, 97.2% 73.2%, 100% 34.9%, 92.5% 0.4%, 87.5% 0%, 75% 28.6%, 58.5% 54.6%, 50.1% 56.8%, 46.9% 44%, 48.3% 17.4%, 24.7% 53.9%, 0% 27.9%, 11.9% 74.2%, 24.9% 54.1%, 68.6% 100%, 74.8% 41.9%)"></div>
     </div>
@@ -129,16 +129,16 @@ function hidePromotionBar() {
     </div>
     <div class="flex flex-wrap items-center gap-x-4 gap-y-2">
       <span class="text-sm leading-6 text-gray-900">
-        <strong class="font-semibold">{ selected_partner_top.brand }</strong>
-        <svg viewBox="0 0 2 2" class="mx-2 inline h-0.5 w-0.5 fill-current" aria-hidden="true"><circle cx="1" cy="1" r="1" /></svg>
+        <strong class="font-semibold hidden md:inline-block">{ selected_partner_top.brand }</strong>
+        <svg viewBox="0 0 2 2" class="mx-2 hidden md:inline h-0.5 w-0.5 fill-current" aria-hidden="true"><circle cx="1" cy="1" r="1" /></svg>
         { selected_partner_top.text }
     
-        <svg viewBox="0 0 2 2" class="mx-2 inline h-0.5 w-0.5 fill-current" aria-hidden="true"><circle cx="1" cy="1" r="1" /></svg>
+        <svg viewBox="0 0 2 2" class="mx-2 hidden md:inline h-0.5 w-0.5 fill-current" aria-hidden="true"><circle cx="1" cy="1" r="1" /></svg>
         <a href="{ selected_partner_top.link }" class="hidden md:inline-block rounded-full bg-gray-900 px-3.5 py-1 text-sm font-semibold text-white shadow-sm hover:bg-gray-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-900">
             {selected_partner_top.cta} <span aria-hidden="true">&rarr;</span>
         </a>
         <a href="{ selected_partner_top.link }" class="inline-block md:hidden break-word text-sm font-semibold text-sm text-gray-900 dark:text-gray-900 hover:underline text-wrap">
-            { selected_partner_top.cta }
+            { selected_partner_top.brand }
             <svg class="inline-block md:hidden w-3 h-3 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
             </svg>
