@@ -138,7 +138,7 @@ function hidePromotionBar() {
             {selected_partner_top.cta} <span aria-hidden="true">&rarr;</span>
         </a>
         <a href="{ selected_partner_top.link }" class="inline-block md:hidden break-word text-sm font-semibold text-sm text-gray-900 dark:text-gray-900 hover:underline text-wrap">
-            { selected_partner_top.brand }
+            on { selected_partner_top.brand }
             <svg class="inline-block md:hidden w-3 h-3 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
             </svg>
