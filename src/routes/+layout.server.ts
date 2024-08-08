@@ -75,14 +75,14 @@ const getPairsRate = async () => {
 const sponsored_partners = [
     {
         image: 'https://bit.ly/3svJGhQ',
-        text: 'Send Pounds & Euros to 55+ Countries, Including UK',
+        text: 'Send Pounds & Euros to 55+ Countries, Including UK.',
         link: 'https://tinyurl.com/cambridge-currences-top-banner',
         brand: 'Cambridge Currencies',
         cta: 'Send Money'
     },
     {
         image: 'https://bit.ly/3svJGhQ',
-        text: 'Send money from Nigeria to your suppliers abroad',
+        text: 'Send & Receive Cross-border Payments Globally.',
         link: 'https://tinyurl.com/4zuasuhv',
         brand: 'Cedar App',
         cta: 'Start Sending'
