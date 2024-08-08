@@ -19,7 +19,7 @@
     <meta property="og:image" content="https://monierate.com/monierate-og-image.png">
 </svelte:head>
 
-<div class="bg-white dark:bg-gray-800">
+<div class="bg-white dark:bg-gray-800"> 
     <div class="container">
         <!-- Landscape Top/Bottom -->
         <div class="cedar-money">
