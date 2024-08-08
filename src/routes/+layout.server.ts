@@ -1,11 +1,9 @@
 import { basicAuth, getEndpoint } from "$lib/helper.svelte";
-import type { LayoutServerLoad } from "./$types"
+import type { LayoutServerLoad } from "./$types";
 
 export const load = (async ({ request }) => {
-    let parallel_avg = "NULL"
-
-    const userDevice = getDeviceName(request)
-    const sponsorAdLink = getSponsorAdLink(userDevice)
+    
+    const selected_partner_top = selectTopPartnerBanner();
 
     let get_parallel_rate = getParallelRate();
     let get_pairs_rate = getPairsRate();
@@ -15,12 +13,12 @@ export const load = (async ({ request }) => {
         
     }
     
-    parallel_avg = (await get_parallel_rate).parallel_avg || 0
+    const parallel_avg = (await get_parallel_rate).parallel_avg || 0;
 
     return {
         market_avg: await get_pairs_rate,
         parallel_avg: parallel_avg,
-        sponsorLink: sponsorAdLink,
+        selected_partner_top: selected_partner_top,
     }
 
 }) satisfies LayoutServerLoad
@@ -41,26 +39,6 @@ const getDeviceName = (request: any) => {
     }
 
     return detectedDevice;
-}
-
-const getSponsorAdLink = (device: string) => {
-    console.log(device)
-
-    const links = [
-        'https://bit.ly/3svJGhQ',
-        'https://bit.ly/monierate-sponsor-click',
-        'https://bit.ly/monierate-sponsor-click'
-    ]
-
-    if (device === 'Android') {
-        return links[0]
-    }
-    else if (device === 'iPhone') {
-        return links[1]
-    }
-    else {
-        return links[2]
-    }
 }
 
 const getParallelRate = async () => {
@@ -92,4 +70,24 @@ const getPairsRate = async () => {
     const rates = (await get_pairs_rate.json()).data;
 
     return rates;
+}
+
+const sponsored_partners = [
+    {
+        image: 'https://bit.ly/3svJGhQ',
+        text: 'Send Pounds & Euros to 55+ Countries, Including UK on ',
+        link: 'https://tinyurl.com/cambridge-currences-top-banner',
+        brand: 'Cambridge Currencies'
+    },
+    {
+        image: 'https://bit.ly/3svJGhQ',
+        text: 'Send money from Nigeria to your suppliers abroad on ',
+        link: 'https://tinyurl.com/4zuasuhv',
+        brand: 'Cedar App'
+    },
+];
+
+const selectTopPartnerBanner = () => {
+    const random_index = Math.floor(Math.random() * sponsored_partners.length);
+    return sponsored_partners[random_index];
 }

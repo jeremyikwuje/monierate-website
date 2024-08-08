@@ -6,10 +6,10 @@ import { getCookie, setCookie } from "$lib/functions";
 import { browser } from "$app/environment";
 import Money from "$lib/money";
 
-export let data
-let sponsorLink = data.sponsorLink
-let parallel_avg = parseFloat(`${data.parallel_avg}`)
-let market_avg = data.market_avg
+export let data;
+let selected_partner_top = data.selected_partner_top;
+let parallel_avg = parseFloat(`${data.parallel_avg}`);
+let market_avg = data.market_avg;
 let top_rates = {
     usdngn: {
         parallel: market_avg.usdngn.parallel,
@@ -35,59 +35,58 @@ let top_rates = {
         from: 'EUR',
         to: 'NGN'
     }
-}
+};
 
-let year = (new Date()).getFullYear()
-let showPromotionBar = (getCookie('promotion_bar') == null ? true : false)
+let year = (new Date()).getFullYear();
+let showPromotionBar = (getCookie('promotion_bar') == null ? true : false);
 
 // get the current page path
-$: paths = $page.url.pathname.split('/')
-$: paths.shift()
-$: path = paths[0] ?? 'home'
-$: currentPath = paths[paths.length - 1]
-$: paths.pop()
+$: paths = $page.url.pathname.split('/');
+$: paths.shift();
+$: path = paths[0] ?? 'home';
+$: currentPath = paths[paths.length - 1];
+$: paths.pop();
 
 // hide promotion bar on alert page
-$: showPromotionBar = (path == 'alerts' ? false : true)
+$: showPromotionBar = (path == 'alerts' ? false : true);
 // hide sticky navbar menu on page change
 $: if ($navigating) {
     if (browser) {
-        const targetEl = document.getElementById('navbar-sticky')
-        targetEl?.classList.add("hidden")
+        const targetEl = document.getElementById('navbar-sticky');
+        targetEl?.classList.add("hidden");
     }
 }
 
 // toggle navbar collapse menu on mobile
 onMount(() => {
     const collapse = () => {
-        const triggerEl = document.getElementById('nav-collapse-trigger')
-        const targetEl = document.getElementById('navbar-sticky')
+        const triggerEl = document.getElementById('nav-collapse-trigger');
+        const targetEl = document.getElementById('navbar-sticky');
 
         triggerEl?.addEventListener('click', () => {
             //if (targetEl?.classList.contains('hidden'))
-            targetEl?.classList.toggle("hidden")
+            targetEl?.classList.toggle("hidden");
         })
     }
-    collapse()
+    collapse();
 })
 
 function breadcrumbs(paths, current) {
-    let url = ""
+    let url = "";
     for (let i = 0; i < paths.length; i++) {
-        console.log(paths[i], i)
-        if (i > current) continue
-        url += `/${paths[i]}`
+        if (i > current) continue;
+        url += `/${paths[i]}`;
     }
 
-    return url
+    return url;
 }
 
 function hidePromotionBar() {
     if (browser) {
-        let element = document.querySelector('#promotion-bar')
-        element?.classList.add('hidden')
+        let element = document.querySelector('#promotion-bar');
+        element?.classList.add('hidden');
     
-        setCookie('promotion_bar', 'hide', 7)
+        setCookie('promotion_bar', 'hide', 7);
     }
 }
 
@@ -96,7 +95,7 @@ function hidePromotionBar() {
 <svelte:head>
 </svelte:head>
 
-<div id="bottom-banner" tabindex="-1" class="fixed top-0 mb-8 start-0 z-50 flex justify-between w-full p-4 border-t border-gray-200 bg-gray-50 dark:bg-gray-700 dark:border-gray-600">
+<div id="top-banner" tabindex="-1" class="fixed top-0 mb-8 start-0 z-50 flex justify-between w-full p-4 border-t border-gray-200 bg-gray-50 dark:bg-gray-700 dark:border-gray-600">
     <div class="flex items-center mx-auto">
         <p class="flex items-center text-sm font-normal text-gray-500 dark:text-gray-400">
             <span class="inline-flex p-1 me-3 bg-gray-200 rounded-full dark:bg-gray-600 w-6 h-6 items-center justify-center">
@@ -106,9 +105,9 @@ function hidePromotionBar() {
                 <span class="sr-only">Discount</span>
             </span>
             <span>
-                Send Pounds & Euros to 55+ Countries, Including UK on 
-                <a href="https://tinyurl.com/cambridge-currences-top-banner" class="break-word text-sm font-medium text-blue-600 dark:text-blue-500 hover:underline text-wrap">
-                    Cambridge Currencies
+                { selected_partner_top.text } 
+                <a href="{ selected_partner_top.link }" class="break-word text-sm font-medium text-blue-600 dark:text-blue-500 hover:underline text-wrap">
+                    { selected_partner_top.brand }
                     <svg class="inline-block w-3 h-3 ms-2 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
                         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 5h12m0 0L9 1m4 4L9 9"/>
                     </svg>
@@ -348,7 +347,7 @@ function hidePromotionBar() {
                     </a>
                 </div>
                 <div class="">
-                    <button on:click={hidePromotionBar} type="button" class="-mr-1 flex rounded-md p-2 hover:bg-gray-500 focus:outline-none focus:ring-2 focus:ring-white"><span class="sr-only">Dismiss</span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" class="h-6 w-6 text-white"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg></button>
+                    <button on:click={hidePromotionBar} type="button" class="-mr-1 flex rounded-md p-2 hover:bg-gray-500 focus:outline-none focus:ring-2 focus:ring-white dark:text-gray-200"><span class="sr-only">Dismiss</span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" class="h-6 w-6 text-white"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg></button>
                 </div>
             </div>
         </div>
