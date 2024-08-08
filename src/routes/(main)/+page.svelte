@@ -77,10 +77,10 @@
                             Provider
                         </th>
                         <th scope="col" class="pl-6 pr-6 py-3 w-[40%] font-bold font-bitter text-right">
-                            Buy Price
+                            Buy <span class="hidden md:inline">Price</span>
                         </th>
                         <th scope="col" class="pl-6 pr-6 py-3 font-bold font-bitter text-right">
-                            Sell Price
+                            Sell <span class="hidden md:inline">Price</span>
                         </th>
                         <th scope="col" class="pl-6 py-3 font-bold font-bitter text-right pr-2 md:pr-4 whitespace-nowrap">
                             Last updated
