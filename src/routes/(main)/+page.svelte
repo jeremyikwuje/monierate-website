@@ -1,6 +1,6 @@
 <script>
     /** @type {import('./$types').PageData} */
-    import { format } from "$lib/functions";
+    import { format, friendlyDate } from "$lib/functions";
 
     export let data;
     let rates = data.rates || {}
@@ -123,7 +123,7 @@
                             <small class="changer-rate-base">per $1</small>
                         </td>
                         <td class="text-right py-2 pr-2 md:pr-4 whitespace-nowrap">
-                            {format(new Date(rate.updatedAt))}
+                            {friendlyDate(new Date(rate.updatedAt))}
                         </td>
                     </tr>
                     {/if}
