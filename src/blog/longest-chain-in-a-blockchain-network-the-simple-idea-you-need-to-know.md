@@ -2,7 +2,7 @@
 layout: blog
 title: "Longest Chain in a Blockchain Network: The Simple Idea You Need to Know"
 description: The Longest Chain is a blockchain concept that you will come to understand in this article. And if you read till the end, you’d probably also appreciate this concept.
-createdAt: 2024-08-10T21:25
+createdAt: 2024-08-07T21:25
 updatedAt: 2024-08-10T21:25
 tag: terms
 image: /uploads/triange-in-chain.jpg
