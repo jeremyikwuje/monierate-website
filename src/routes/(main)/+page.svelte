@@ -25,7 +25,7 @@
         <div class="cedar-money">
             <a href="https://tinyurl.com/cedar-app-banner-2" target="_blank">
                 <img 
-                    src="https://monierate.com/uploads/cedar-2-compressed.gif"
+                    src="https://monierate.com/cedar-2-compressed.gif"
                     alt="Cedar Money"
                     class="mx-auto max-w-full md:w-[800px] md:h-[114px]">
             </a>
