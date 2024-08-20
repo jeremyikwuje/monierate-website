@@ -238,9 +238,9 @@ function hidePromotionBar() {
     <div class="container">
         <!-- Landscape Top/Bottom -->
         <div class="cedar-money">
-            <a href="https://tinyurl.com/4zuasuhv" target="_blank">
+            <a href="https://tinyurl.com/cedar-app-banner-1" target="_blank">
                 <img 
-                    src="https://monierate.com/uploads/cedar-banner-pay-in-NGN-XOF-GHS-KES.gif"
+                    src="https://monierate.com/uploads/cedar-1-compressed.gif"
                     alt="Cedar Money"
                     class="mx-auto max-w-full md:w-[800px] md:h-[114px]">
             </a>
@@ -274,7 +274,7 @@ function hidePromotionBar() {
             <h3 class="font-bold">Tools</h3>
             <ul class="py-4 converter-list">
                 <li><a href="https://tinyurl.com/cambridge-currencies-foot-link">Send Money to Europe</a></li>
-                <li><a href="https://tinyurl.com/cedar-bottom-link">Pay your Importers</a></li>
+                <li><a href="https://tinyurl.com/cedar-app-monierate-footer">Pay your Importers</a></li>
                 <li><a href="/alerts">Price Alerts</a></li>
                 <li><a href="/converter">Currency Converter</a></li>
                 <li><a href="/ng/compare">Compare exchange rates</a></li>
