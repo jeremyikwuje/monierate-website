@@ -1,14 +1,14 @@
 <script>
 	import { goto, invalidateAll } from '$app/navigation';
     import {  clearPopup, toggleButtonLoad, toggleMessage, togglePopup } from '$lib/functions'
+	import Money from '$lib/money';
 	import { onMount } from 'svelte';
 
     export let data
 
     let auth = data.auth
     let confirm = data.confirm
-    let parallel_avg = Number(data.parallel_avg)
-    let market_avg = data.market_avg
+    const market_avg_rate = Number(`${data.market_avg_rate}`);
     
     let authenticated = false
 
@@ -186,7 +186,7 @@
             </div>
 
             <div class="text-center font-semibold">
-                $1 = ₦{parallel_avg} (Black market avg)
+                $1 = ₦{Money.format(market_avg_rate)} (market avg)
             </div>
         </div>
 

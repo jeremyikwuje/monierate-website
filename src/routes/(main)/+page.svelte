@@ -1,12 +1,25 @@
 <script>
+	import A from "$lib/blog/components/a.svelte";
     /** @type {import('./$types').PageData} */
-    import { format, friendlyDate } from "$lib/functions";
+    import { friendlyDate } from "$lib/functions";
 
     export let data;
-    let rates = data.rates || {}
-    let providers = data.providers || {}
+    const pairs = data.pairs || {};
+    const pair = pairs.find((pair) => pair.code === 'usdngn');
+    
+    let rates = pair.changers;
+    // sort rates in decending order by price_buy;
+    rates.sort((a, b) => a.price_buy - b.price_buy);
+    // filter out rate with price_buy as 0
+    const filtered_non_zero_rates = rates.filter((rate) => rate.price_buy > 0);
+    const filtered_zero_rates = rates.filter((rate) => rate.price_buy <= 0);
+    // soirt rates in descending order by price_buy
+    filtered_zero_rates.sort((a, b) => b.price_sell - a.price_sell);
+    // merge both rates
+    rates = filtered_non_zero_rates.concat(filtered_zero_rates);
 
-    let total = Object.entries(providers).length
+    const providers = data.providers || {};
+    const total = Object.entries(rates).length;
 </script>
 
 <svelte:head>
@@ -88,42 +101,42 @@
                     </tr>
                 </thead>
                 <tbody class="changers">
-                    {#each Object.entries(rates) as [changer, rate], i}
-                    {#if changer != 'binance' }
+                    {#each rates as rate, i}
+                    {#if rate.changer_code != 'market' }
                     <tr class="mb-4 border-t border-gray-200 dark:border-gray-700">
                         <th scope="row" class="text-gray-500 py-6 pl-4 hidden md:inline-block">
                             { i + 1 }
                         </th>
                         <td>
-                            <a href="/converter/{changer}?Amount=1&From=USD&To=NGN" class="flex items-center" title="{providers[changer].name} dollar to naira rate.">
+                            <a href="/converter/{rate.changer_code}?Amount=1&From=USD&To=NGN" class="flex items-center" title="{providers[rate.changer_code].name} dollar to naira rate.">
                                 <span class="changer-icon">
-                                    <img width="22px" height="22px" src="/icons/{providers[changer].icon}" class="rounded-full" alt="{providers[changer].name} icon">
+                                    <img width="22px" height="22px" src="/icons/{providers[rate.changer_code].icon}" class="rounded-full" alt="{providers[rate.changer_code].name} icon">
                                 </span>
-                                <span class="changer-title">{providers[changer].name}</span>
+                                <span class="changer-title">{providers[rate.changer_code].name}</span>
                             </a>
                         </td>
                         <td class="text-right pl-6 pr-6">
                             <span class="changer-rate">
-                                {#if Math.round(rate.buy) === 0}
+                                {#if Math.round(rate.price_buy) === 0}
                                     -
                                 {:else}
-                                    ₦{Math.round(rate.buy)}
+                                    ₦{Math.round(rate.price_buy)}
                                 {/if}
                             </span>
                             <small class="changer-rate-base">per $1</small>
                         </td>
                         <td class="text-right pl-6 pr-6">
                             <span class="changer-rate">
-                                {#if Math.round(rate.sell) === 0}
+                                {#if Math.round(rate.price_sell) === 0}
                                     -
                                 {:else}
-                                    ₦{Math.round(rate.sell)}
+                                    ₦{Math.round(rate.price_sell)}
                                 {/if}
                             </span>
                             <small class="changer-rate-base">per $1</small>
                         </td>
                         <td class="text-right py-2 pr-2 md:pr-4 whitespace-nowrap">
-                            {friendlyDate(new Date(rate.updatedAt))}
+                            {friendlyDate(new Date(rate.updated_at))}
                         </td>
                     </tr>
                     {/if}

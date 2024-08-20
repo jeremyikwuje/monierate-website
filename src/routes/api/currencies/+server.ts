@@ -7,9 +7,9 @@ export async function GET({ url })
     let urlParams = url.searchParams
     const code = urlParams.get('code') || null
     
-    let endpoint = getEndpoint(`/public/currencies`);
+    let endpoint = getEndpoint(`/currencies/get_all_currencies?page=1&limit=100`);
     if (code != null) {
-        endpoint = getEndpoint(`/public/currencies?code=${code}`);
+        endpoint = getEndpoint(`/currencies/get_currency?code=${code.toUpperCase()}`);
     }
 
     let res = await fetch(

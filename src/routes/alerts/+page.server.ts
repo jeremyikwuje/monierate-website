@@ -1,5 +1,4 @@
-import { error, redirect } from '@sveltejs/kit'
-import { basicAuth, getEndpoint  } from "$lib/helper.svelte";
+import { basicAuth, getEndpoint  } from "$lib/helper";
 import type { PageServerLoad } from './$types'
 import { bearer } from '$lib/functions';
 

@@ -2,32 +2,31 @@
 import type { PageData } from "./$types"
 import Money from "$lib/money";
 import { round, chain } from "mathjs"
-import { changeParam, format } from "$lib/functions"
+import { changeParam, format, friendlyDate } from "$lib/functions"
 
 export let data: PageData;
-let changers = data.changers
-let rates_avg = data.market_avg
-let pairs = data.pairs
-let pairRates: any = {}
-let convert = data.convert
-let currencies = data.currencies
+let changers = data.changers;
+let pairs = data.pairs;
+let pair_rates: any = {};
+let convert = data.convert;
+let currencies = data.currencies;
 
-let convertFrom = convert.From.toUpperCase()
-let convertTo = convert.To.toUpperCase()
-let convertAmount = parseFloat(`${convert.Amount}`)
-let unitCurrency = convertFrom
+let convertFrom = convert.From.toUpperCase();
+let convertTo = convert.To.toUpperCase();
+let convertAmount = parseFloat(`${convert.Amount}`);
+let unit_currency = convertFrom;
 let convertResult = {
     rate: 0,
-    rateInverse: 0,
+    rate_inverse: 0,
     conversion: 0,
-}
+};
 
 // initialize supported currencies
 var supported_pairs = ['usdngn', 'btcngn', 'usdtngn', 'usdcngn']
 
 var currencyFrom: any = {}
 var currencyTo: any = {}
-var updatedAt = ''
+var updated_at = ''
 
 var moreConversions: any = {
     from: [],
@@ -35,55 +34,47 @@ var moreConversions: any = {
 }
 
 function convertNow() {
-    let from = convertFrom.toLowerCase()
-    let to = convertTo.toLowerCase()
+    const from = convertFrom.toLowerCase();
+    const to = convertTo.toLowerCase();
 
-    console.log(from + to)
-
-    let rate = 1  // 1:1
-    let rateInverse = 1
+    let rate = 1;  // 1:1
+    let rate_inverse = 1;
 
     if (from != to) {
         /** Get the rate */
-        let pair = `${from}${to}`
-        if (rates_avg.hasOwnProperty(pair)) {
-            updatedAt = rates_avg[pair].updatedAt // get last update time
-            rate = rates_avg[pair].parallel
-            rateInverse = 1 / rate
-            unitCurrency = from.toUpperCase()
+        let pair_code = `${from}${to}`.toLowerCase();
+        let pair = pairs.find((p) => p.code === pair_code);
+        if (pair) {
+            updated_at = pair.updatedAt; // get last update time
+            rate = pair.price.current;
+            rate_inverse = 1 / rate;
+            unit_currency = from.toUpperCase();
             
             // get rates of a pair
-            let pairData = pairs.find( (p: any) => p.pair === pair )
-            pairRates = sortRates(pairData.rates || {})
-
-            console.log('yes', pairRates)
+            pair_rates = sortRates(pair.changers || {});
         }
         else {
-            pair = `${to}${from}`
-            if (rates_avg.hasOwnProperty(pair)) {
-                updatedAt = rates_avg[pair].updatedAt // get last update time
-                rateInverse = rates_avg[pair].parallel
-                rate = 1 / rateInverse
-                unitCurrency = to.toUpperCase()
+            pair_code = `${from}${to}`.toLowerCase();
+            pair = pairs.find((p) => p.code === pair_code);
+            if (pair) {
+                updated_at = pair.updatedAt; // get last update time
+                rate_inverse = pair.price.current;
+                rate = 1 / rate_inverse
+                unit_currency = to.toUpperCase()
 
                 // get rates of a pair
-                let pairData = pairs.find( (p: any) => p.pair === pair )
-                pairRates = sortRates(pairData.rates || {})
+                pair_rates = sortRates(pair.changers || {});
             } else {
                 rate = 0
-                rateInverse = 0
-                unitCurrency = from.toUpperCase()
+                rate_inverse = 0
+                unit_currency = from.toUpperCase()
             }
-
-            console.log(pair, rate)
         }
-
-
     }
 
     /** Calcuate the conversion*/
     convertResult.rate = rate
-    convertResult.rateInverse = rateInverse
+    convertResult.rate_inverse = rate_inverse
     convertResult.conversion = round(chain(rate).multiply(convertAmount).done(), 8)
 
     currencyFrom = currencies.find( c => c.code === from)
@@ -107,10 +98,10 @@ async function getMoreConversions() {
             conversion: round(chain(rate).multiply(serie).done(), 8)
         })
 
-        let rateInverse = convertResult.rateInverse
+        let rate_inverse = convertResult.rate_inverse
         conversions.to.push({
             amount: serie,
-            conversion: round(chain(rateInverse).multiply(serie).done(), 8)
+            conversion: round(chain(rate_inverse).multiply(serie).done(), 8)
         })
     })
 
@@ -118,35 +109,17 @@ async function getMoreConversions() {
 }
 
 function sortRates(rates: any) {
-    // changer is not specified
-    // so get all rates from pair
-    let rates_entries = Object.entries(rates)
+    // sort rates in decending order by price_buy;
+    rates.sort((a, b) => a.price_buy - b.price_buy);
+    // filter out rate with price_buy as 0
+    const filtered_non_zero_rates = rates.filter((rate) => rate.price_buy > 0);
+    const filtered_zero_rates = rates.filter((rate) => rate.price_buy <= 0);
+    // soirt rates in descending order by price_buy
+    filtered_zero_rates.sort((a, b) => b.price_sell - a.price_sell);
+    // merge both rates
+    rates = filtered_non_zero_rates.concat(filtered_zero_rates);
 
-    /** Seperate the rate with zero buy rate */
-    let only_buy_rates: any = []
-    let only_sell_rates: any = []
-    let key: string
-    let value: any
-    for ([key, value] of rates_entries) {
-        let rate = [key, value]
-
-        if (value.buy == 0) {
-            only_sell_rates.push(rate)
-        }
-        else {
-            only_buy_rates.push(rate)
-        }
-    }
-
-    // sort the rates by ascending order
-    const sort_only_buy_rates = only_buy_rates.sort((x: any, y: any) => x[1].buy - y[1].buy)
-    // sort the sell rates by decending order
-    const sort_only_sell_rates = only_sell_rates.sort(
-        (x: any, y: any) => y[1].sell - x[1].sell
-    )
-
-    let result: any = sort_only_buy_rates.concat(sort_only_sell_rates)
-    return result
+    return rates;
 }
 
 convertNow()
@@ -221,7 +194,7 @@ convertNow()
                         1 {convertFrom} = {Money.format(convertResult.rate)} {convertTo}
                     </span>
                     <span class="block text-gray-500 dark:text-gray-400">
-                        1 {convertTo} = {Money.format(convertResult.rateInverse)} {convertFrom}
+                        1 {convertTo} = {Money.format(convertResult.rate_inverse)} {convertFrom}
                     </span>
                 </div>
                 <div class="block md:flex md:justify-between md:items-center">
@@ -236,7 +209,7 @@ convertNow()
                         </span>
                     </span>
                     <span class="block text-sm md:w-[50%] p-4">
-                        {currencyFrom.name} to {currencyTo.name} conversion — Last updated {new Date(updatedAt)}
+                        {currencyFrom.name} to {currencyTo.name} conversion — Last updated {new Date(updated_at)}
                     </span>
                 </div>
                 
@@ -258,7 +231,7 @@ convertNow()
         </div>
     </div>
 
-    {#if pairRates.length > 0}
+    {#if pair_rates.length > 0}
     <div id="more-rates" class="mt-16">
         <h2 class="mb-8 text-center text-2xl">Best {convertFrom} to {convertTo} rates</h2>
         <div class="px-2 section px-2 overflow-x-scroll md:overflow-x-hidden">
@@ -280,40 +253,40 @@ convertNow()
                     </tr>
                 </thead>
                 <tbody class="changers">
-                    {#each pairRates as [changer_code, rate]}
-                        {#if changer_code != 'market'}
+                    {#each pair_rates as pair_rate, i }
+                        {#if pair_rate.changer_code != 'market'}
                         <tr class="mb-4 border-t border-gray-200 dark:border-gray-700">
                             <td>
-                                <a href="/converter/{changer_code}?Amount=1&From={convertFrom}&To={convertTo}" class="flex items-center">
+                                <a href="/converter/{pair_rate.changer_code}?Amount=1&From={convertFrom}&To={convertTo}" class="flex items-center">
                                     <span class="changer-icon">
-                                        <img width="22px" height="22px" src="/icons/{changers[changer_code].icon}" class="rounded-full" alt="{changers[changer_code].name} icon">
+                                        <img width="22px" height="22px" src="/icons/{changers[pair_rate.changer_code].icon}" class="rounded-full" alt="{changers[pair_rate.changer_code].name} icon">
                                     </span>
-                                    <span class="changer-title">{changers[changer_code].name}</span>
+                                    <span class="changer-title">{changers[pair_rate.changer_code].name}</span>
                                 </a>
                             </td>
                             <td class="text-right pl-6 pr-4">
                                 <span class="changer-rate">
-                                    {#if Money.format(rate.buy, 0) === "0"}
+                                    {#if Money.format(pair_rate.price_buy, 0) === "0"}
                                     -
                                     {:else}
-                                        ₦{Money.format(rate.buy, 0)}
+                                        ₦{Money.format(pair_rate.price_buy, 0)}
                                     {/if}
                                 </span>
-                                <small class="changer-rate-base">per {unitCurrency}</small>
+                                <small class="changer-rate-base">per {unit_currency}</small>
                             </td>
                             <td class="text-right pl-6 pr-4">
                                 <span class="changer-rate">
-                                    {#if Money.format(rate.sell, 0) === "0"}
+                                    {#if Money.format(pair_rate.price_sell, 0) === "0"}
                                     -
                                     {:else}
-                                        ₦{Money.format(rate.sell, 0)}
+                                        ₦{Money.format(pair_rate.price_sell, 0)}
                                     {/if}
                                 </span>
-                                <small class="changer-rate-base">per {unitCurrency}</small>
+                                <small class="changer-rate-base">per {unit_currency}</small>
                             </td>
                             <td class="text-right py-2 pr-4 md:pr-4 whitespace-nowrap">
-                                {#if (rate.updatedAt) }
-                                    {format(new Date(rate.updatedAt))}
+                                {#if (pair_rate.updated_at) }
+                                    {friendlyDate(new Date(pair_rate.updated_at))}
                                 {/if}
                             </td>
                         </tr>
@@ -402,13 +375,13 @@ convertNow()
             <div class="shadow-lg md:w-[45%] p-8 bg-white dark:bg-gray-900">
                 <h2 class="text-2xl">{convertFrom} - {currencyFrom.name}</h2>
                 <span class="block mt-6">
-                    {currencyFrom.bio}
+                    {currencyFrom.description}
                 </span>
             </div>
             <div class="shadow-lg md:w-[45%] p-8 bg-white dark:bg-gray-900">
                 <h2 class="text-2xl">{convertTo} - {currencyTo.name}</h2>
                 <span class="block mt-6">
-                    {currencyTo.bio}
+                    {currencyTo.description}
                 </span>
             </div>
         </div>

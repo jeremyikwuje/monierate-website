@@ -2,7 +2,7 @@
     /** @type {import('./$types').PageServerData} */
 
     export let data;
-    const providers = data.providers
+    const providers = data.changers
 </script>
 
 <svelte:head>
@@ -32,11 +32,11 @@
     <div class="container">
         <section id="popular" class="mt-12">
             <div class="block md:flex md:items-center md:flex-wrap">
-                {#each Object.entries(providers) as [code, values]}
-                    <a href="/ng/compare/providers/{code}-exchange-rates" class="inline-block w-[100%] md:w-[22%] shadow-md rounded-lg border border-gray-100 dark:border-gray-700 text-black dark:text-white mr-8 last-child:mr-0 p-4 mb-4">
+                {#each providers as provider}
+                    <a href="/ng/compare/providers/{provider.code}-exchange-rates" class="inline-block w-[100%] md:w-[22%] shadow-md rounded-lg border border-gray-100 dark:border-gray-700 text-black dark:text-white mr-8 last-child:mr-0 p-4 mb-4">
                         <span class="flex items-center">
-                            <span class="inline-block w-[32px] h-[32px] rounded-full bg-no-repeat bg-cover border border-black bg-black-200 mr-4" style="background-image: url('/icons/{values.icon}');"></span>
-                            <span class="">{ values.name }</span> 
+                            <span class="inline-block w-[32px] h-[32px] rounded-full bg-no-repeat bg-cover border border-black bg-black-200 mr-4" style="background-image: url('/icons/{provider.icon}');"></span>
+                            <span class="">{ provider.name }</span> 
                         </span>
                     </a>
                 {/each}

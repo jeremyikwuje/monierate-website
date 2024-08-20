@@ -1,14 +1,12 @@
+import { get_changers } from '$lib/server/changer.service';
+import { get_currencies } from '$lib/server/currency.service';
 import type { PageServerLoad } from './$types'
 import { error } from "@sveltejs/kit";
 
 export const load: PageServerLoad = (async ({ params, url, fetch }) => {
 
     try {
-        const platform = params.changer
-
-        let resPairs = fetch(`/api/pairs`)
-        let resCurrencies = fetch(`/api/currencies`);
-        let resChanger = fetch(`/api/changer?code=${platform}`)
+        const changer_code = params.changer;
 
         let urlParams = url.searchParams
         const convert = {
@@ -17,13 +15,9 @@ export const load: PageServerLoad = (async ({ params, url, fetch }) => {
             Amount: urlParams.get('Amount') || 1
         }
 
-        const pairs = (await (await resPairs).json())
-        const changer = (await (await resChanger).json())
-        const currencies = (await (await resCurrencies).json())
+        const changer = await get_changers(changer_code);
+        const currencies = await get_currencies();
 
-        if (Object.keys(pairs).length == 0) {
-            throw error(500, "Pairs data failed.")
-        }
         if (Object.keys(currencies).length == 0) {
             throw error(500, "Currencies data failed.")
         }
@@ -33,7 +27,6 @@ export const load: PageServerLoad = (async ({ params, url, fetch }) => {
         
         return {
             changer,
-            pairs,
             convert,
             currencies
         }

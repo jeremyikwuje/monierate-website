@@ -37,7 +37,7 @@ export default class Money {
     }
 
     static format(amount: string | number, decimal = 8) {
-        amount = parseFloat(`${amount}`)
+        amount = Number(`${amount}`)
         // return currency(amount, { symbol: symbol, separator: ",", decimal: ".", precision: 8, }).format()
 
         const formatter = new Intl.NumberFormat('en-US', {

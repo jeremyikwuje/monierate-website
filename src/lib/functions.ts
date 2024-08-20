@@ -132,12 +132,6 @@ export function friendlyDate(dt: any, d = "datetime") {
     }
 }
 
-// Example usage:
-console.log(friendlyDate("Thu, Aug 08 2024 2:00:37 PM")); // Output will depend on the current date and time
-
-// Example usage:
-console.log(friendlyDate("Thu, Aug 08 2024 2:00:37 PM")); // Output will depend on the current date and time
-
 // ✅ Or get a Date object with the specified Time zone
 function changeTimeZone(date: any, timeZone: string = "Africa/Lagos") {
     if (typeof date === 'string') {
@@ -184,14 +178,18 @@ export function changeParam(param: string, value: number | string) {
     invalidateAll()
 }
 
-export function sortRates(rates: object | any[] ) {
-    if (typeof(rates) == 'object') {
-        rates = Object.entries(rates)
-    }
+export function sortRates(rates: any) {
+    // sort rates in decending order by price_buy;
+    rates.sort((a: any, b: any) => a.price_buy - b.price_buy);
+    // filter out rate with price_buy as 0
+    const filtered_non_zero_rates = rates.filter((rate: any) => rate.price_buy > 0);
+    const filtered_zero_rates = rates.filter((rate: any) => rate.price_buy <= 0);
+    // soirt rates in descending order by price_buy
+    filtered_zero_rates.sort((a: any, b: any) => b.price_sell - a.price_sell);
+    // merge both rates
+    rates = filtered_non_zero_rates.concat(filtered_zero_rates);
 
-    const sortedObject = Object.entries(rates).sort((x, y) => x[1].buy - y[1].buy)
-    console.log(sortedObject)
-    return sortedObject
+    return rates;
 }
 
 export async function fireInvalidateAll() {

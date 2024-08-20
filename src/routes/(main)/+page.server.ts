@@ -1,23 +1,13 @@
-import { basicAuth, getEndpoint } from "$lib/helper.svelte";
+import { basicAuth, getEndpoint } from "$lib/helper";
 import { error } from "@sveltejs/kit";
 import type { PageServerLoad } from './$types'
+import { get_changers } from "$lib/server/changer.service";
 
 export const load: PageServerLoad = async ({ fetch }) => {
 
     try {
-        let getRates = await fetch('/api/pairs?pair=usdngn');
-        let rates = await getRates.json()
-
-        if (rates.length == 0) {
-            throw error(500, {
-                message: "Unable to fetch rates data, try again in few minutes."
-            })
-        }
-
-        delete rates.market
-
-        const getChangers = await fetch(`/api/changer`);
-        let providers = await getChangers.json()
+        let providers = await get_changers();
+        console.log(providers);
 
         if (providers.length == 0) {
             throw error(500, {
@@ -28,17 +18,17 @@ export const load: PageServerLoad = async ({ fetch }) => {
         // change changers to object with changer code as key
         let tmp_providers: any = {}
         for (const key in providers) {
-            tmp_providers[providers[key].code] = providers[key]
+            tmp_providers[providers[key].code] = providers[key];
         }
 
-        providers = tmp_providers
+        providers = tmp_providers;
 
         return {
-            rates,
             providers
         }
     }
     catch(error: any) {
+        console.log(error);
         throw error(500, {
             message: "Unable to display data, try again in few minutes."
         })

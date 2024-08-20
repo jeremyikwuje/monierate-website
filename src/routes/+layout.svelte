@@ -7,35 +7,10 @@ import { browser } from "$app/environment";
 import Money from "$lib/money";
 
 export let data;
-let selected_partner_top = data.selected_partner_top;
-let parallel_avg = parseFloat(`${data.parallel_avg}`);
-let market_avg = data.market_avg;
-let top_rates = {
-    usdngn: {
-        parallel: market_avg.usdngn.parallel,
-        name: 'USD/NGN',
-        from: 'USD',
-        to: 'NGN'
-    },
-    usdtngn: {
-        parallel: market_avg.usdtngn.parallel,
-        name: 'USDT/NGN',
-        from: 'USDT',
-        to: 'NGN'
-    },
-    btcngn: {
-        parallel: market_avg.btcngn.parallel,
-        name: 'BTC/NGN',
-        from: 'BTC',
-        to: 'NGN'
-    },
-    eurngn: {
-        parallel: market_avg.eurngn.parallel,
-        name: 'EUR/NGN',
-        from: 'EUR',
-        to: 'NGN'
-    }
-};
+const selected_partner_top = data.selected_partner_top;
+const market_avg_rate = parseFloat(`${data.market_avg_rate}`);
+
+const top_pairs = data.top_pairs;
 
 let year = (new Date()).getFullYear();
 let showPromotionBar = (getCookie('promotion_bar') == null ? true : false);
@@ -197,10 +172,26 @@ function hidePromotionBar() {
 
 <div class="bg-white w-full py-2 whitespace-nowrap overflow-x-auto no-scrollbar dark:bg-gray-800 dark:border-gray-600 border-b border-gray-100">
     <div class="container">
-        {#each Object.entries(top_rates) as [pair, rate], i} 
-            <a data-sveltekit-reload href="/converter/?From={rate.from}&To={rate.to}&Amount=1" class="mr-2 text-gray-900 dark:text-gray-300 mr-6 text-[90%] md:text-lg">
-                <span class="font-medium mr-2">{rate.name}</span>
-                <span class="font-thin">{Money.format(rate.parallel, 2)}</span>
+        {#each Object.entries(top_pairs) as [code, value], i} 
+            <a data-sveltekit-reload href="/converter/?From={value.from}&To={value.to}&Amount=1" class="mr-2 text-gray-900 dark:text-gray-300 mr-6 text-[90%] md:text-lg">
+                <span class="font-medium mr-[2px]">{value.name}</span>
+                <span class="font-thin mr-[2px]">{Money.format(value.price, 2)}</span>
+                <!-- display 24hr price change in green or red -->
+                {#if value.price_change_percent_24hr > 0}
+                <span class="inline-block text-green-500 font-thin">
+                    <svg viewBox="0 0 320 512" width="16" height="16" class="inline-block bg-transparent text-2xl" fill="green" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9.39 265.4l127.1-128C143.6 131.1 151.8 128 160 128s16.38 3.125 22.63 9.375l127.1 128c9.156 9.156 11.9 22.91 6.943 34.88S300.9 320 287.1 320H32.01c-12.94 0-24.62-7.781-29.58-19.75S.2333 274.5 9.39 265.4z"/>
+                    </svg>
+                    {Money.format(value.price_change_percent_24hr, 2)}%
+                </span>
+                {:else}
+                    <span class="inline-block text-red-500 font-thin">
+                        <svg viewBox="0 0 320 512" width="16" height="16" class="inline-block bg-transparent text-2xl" fill="red" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M310.6 246.6l-127.1 128C176.4 380.9 168.2 384 160 384s-16.38-3.125-22.63-9.375l-127.1-128C.2244 237.5-2.516 223.7 2.438 211.8S19.07 192 32 192h255.1c12.94 0 24.62 7.781 29.58 19.75S319.8 237.5 310.6 246.6z"/>
+                        </svg>
+                        {Money.format(value.price_change_percent_24hr, 2)}%
+                    </span>
+                {/if}
             </a>
         {/each}
     </div>
@@ -368,9 +359,9 @@ function hidePromotionBar() {
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true" class="h-6 w-6 text-white"><path stroke-linecap="round" stroke-linejoin="round" d="M11 5.882V19.24a1.76 1.76 0 01-3.417.592l-2.147-6.15M18 13a3 3 0 100-6M5.436 13.683A4.001 4.001 0 017 6h1.832c4.1 0 7.625-1.234 9.168-3v14c-1.543-1.766-5.067-3-9.168-3H7a3.988 3.988 0 01-1.564-.317z"></path></svg>
                     </span>
                     <p class="ml-3 truncate font-medium text-white dark:text-gray-900">
-                        <span class="md:hidden">$1 = ₦{Money.format(parallel_avg)}</span>
+                        <span class="md:hidden">$1 = ₦{Money.format(market_avg_rate)}</span>
                         <span class="hidden md:inline">
-                            $1 = ₦{Math.round(parallel_avg)} (Black market avg.)
+                            $1 = ₦{Math.round(market_avg_rate)} (market avg.)
                         </span>
                     </p>
                 </div>

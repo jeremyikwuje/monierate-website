@@ -1,8 +1,7 @@
 
-<script context="module">
 import { env } from '$env/dynamic/private';
 
-export function toBase64(str) {
+export function toBase64(str: string) {
   try {
     return btoa(str);
   } catch (err) {
@@ -10,7 +9,7 @@ export function toBase64(str) {
   }
 };
 
-export function fromBase64(base64) {
+export function fromBase64(base64: any) {
   try {
     return atob(base64);
   } catch (err) {
@@ -18,26 +17,29 @@ export function fromBase64(base64) {
   }
 };
 
-export async function request(method, endpoint, body = {}) {
-    let options = {
+export async function request(
+  method: string,
+  endpoint: string,
+  body = {}
+) {
+    let options: any = {
         method: method.toUpperCase()
     }
 
     if (method != 'get') {
         options = {
-            method: method.toUpperCase(),
-            body: JSON.stringify(body)
+          method: method.toUpperCase(),
+          body: JSON.stringify(body),
         }
     }
 
     const res = await fetch(endpoint, options);
     const json = await res.json();
-    console.log(json);
 
     return json;
 }
 
-export function basicAuth(method, body, level = "api")
+export function basicAuth(method: string, body: any, level = "api")
 {
     const apiAuth = `changemoney_api:N4&**S%Vl0C7MubL`
     const systemAuth = `ikwuje:xaS@Di2t#7Qry19M`
@@ -48,7 +50,7 @@ export function basicAuth(method, body, level = "api")
         basicToken = toBase64(systemAuth);
     }
 
-    const request = {
+    const request: any = {
         headers: {
             "Authorization": `Basic ${basicToken}`,
             "Content-Type": "application/json",
@@ -56,21 +58,31 @@ export function basicAuth(method, body, level = "api")
         method: method,
     }
 
-    if (method != 'GET')
+    if (method != 'GET') {
         request.body = JSON.stringify(body);
+    }
 
     return request;
 }
 
-export function getEndpoint(endpoint)
+export function getEndpoint(endpoint: string)
 {
-    const server = env.SERVER
-    let apiUrl = env.API_URL || 'https://monierate-api.onrender.com'
-    if (server == 'LOCAL') {
-        apiUrl = 'http://localhost:3000'
-    }
-    console.log(env.SERVER);
+  const server = env.SERVER
+  let apiUrl = env.API_URL || 'https://monierate-api.onrender.com';
+  if (server == 'LOCAL') {
+    apiUrl = 'http://localhost:4001/core';
+  }
 
-    return `${apiUrl}${endpoint}`;
+  console.log(env.SERVER);
+
+  return `${apiUrl}${endpoint}`;
 }
-</script>
+
+export function array_to_key_object (entries: any, property:string) {
+  let entries_obj: any = {};
+  for (const key in entries) {
+      entries_obj[entries[key][property]] = entries[key];
+  }
+
+  return entries_obj;
+}

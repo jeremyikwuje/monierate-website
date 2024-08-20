@@ -1,28 +1,28 @@
+import { array_to_key_object } from '$lib/helper'
+import { get_changers } from '$lib/server/changer.service'
 import type { PageServerLoad } from './$types'
 import { error } from '@sveltejs/kit'
 
 export const load: PageServerLoad = async ({ fetch, params }) => {
     try {
-        let slug = params.slug.split('-')
-        let provider_code = slug[0]
+        let slug = params.slug.split('-');
+        let changer_code = slug[0];
 
         if (slug.length > 3) {
-            provider_code = slug[0] + '-' + slug[1]
+            changer_code = slug[0] + '-' + slug[1];
         }
 
-        if (provider_code.length == 0) {
-            throw error(404, `Provider not found`)
+        if (changer_code.length == 0) {
+            throw error(404, `Provider not found`);
         }
 
-        const getChangers = await fetch(`/api/changer?code=${provider_code}`);
-        let provider = await getChangers.json()
+        const changer = await get_changers(changer_code);
 
         return {
-            provider,
+            changer,
         }
     }
     catch(e: any) {
-        console.log(e)
-        throw error(500, `Unable to fetch provider data`)
+        throw error(500, `Unable to fetch provider data`);
     }
 }

@@ -15,150 +15,147 @@
 <script lang="ts">
 import type { PageData } from "./$types"
 import Money from "$lib/money";
-import { round, chain } from "mathjs"
+import { round, chain } from "mathjs";
 
 export let data: PageData;
-let changer = data.changer
-let pairs = data.pairs
-let pairRates: any = {}
-let changerRate: any = {}
-let convert = data.convert
-let currencies = data.currencies
+const changer = data.changer;
+const pairs = data.pairs
+let pair_rates: any = {};
+let changer_rate: any = {};
+let convert = data.convert;
+let currencies = data.currencies;
 
-let convertFrom = convert.From.toUpperCase()
-let convertTo = convert.To.toUpperCase()
-let convertAmount = parseFloat(`${convert.Amount}`)
-let unitCurrency = convertFrom
+let convertFrom = convert.From.toUpperCase();
+let convertTo = convert.To.toUpperCase();
+let convertAmount = parseFloat(`${convert.Amount}`);
+let unitCurrency = convertFrom;
 let convertResult = {
     rate: 0,
     rateInverse: 0,
     conversion: 0,
-}
+};
 
-// initialize supported currencies
-var supported_pairs = ['usdngn', 'btcngn', 'usdtngn', 'usdcngn']
-
-var currencyFrom: any = {}
-var currencyTo: any = {}
+var currencyFrom: any = {};
+var currencyTo: any = {};
 
 var moreConversions: any = {
     from: [],
     to: []
-}
-
-console.log(pairs);
+};
 
 function convertNow() {
-    let from = convertFrom.toLowerCase()
-    let to = convertTo.toLowerCase()
+    let from = convertFrom.toLowerCase();
+    let to = convertTo.toLowerCase();
     
-    currencyFrom = currencies.find( c => c.code === from)
-    currencyTo = currencies.find( c => c.code === to)
+    currencyFrom = currencies.find( c => c.code === from);
+    currencyTo = currencies.find( c => c.code === to);
 
-    convertResult.rate = 0
-    convertResult.rateInverse = 0
+    convertResult.rate = 0;
+    convertResult.rateInverse = 0;
 
     if (from != to) {
-        console.log(pairs);
-
         /** Get the rate */
-        let pair = `${from}${to}`
+        let pair_code = `${from}${to}`.toLowerCase();
         // get rates of a pair
-        let pairData = pairs.find( (p: any) => p.pair === pair )
+        let pair = pairs.find( (p: any) => p.code === pair_code );
 
         // if pair is found
-        if (pairData !== undefined) {
-            pairRates = pairData.rates || {}
+        if (pair) {
+            // get rates of a pair
+            pair_rates = pair.changers;
+            let changer_rate = pair_rates.find( (p: any) => p.changer_code === changer.code );
+
+            console.log(changer_rate);
 
             // if rate is found for this changer
-            if (pairRates.hasOwnProperty(changer.code)) {
-                changerRate = pairRates[changer.code]
-                console.log(changerRate);
-                changerRate.buy = Number(changerRate.buy || 0)
-                changerRate.sell = Number(changerRate.sell || 0)
+            if (changer_rate) {
+                changer_rate.price_buy = Number(changer_rate.price_buy || 0);
+                changer_rate.price_sell = Number(changer_rate.price_sell || 0);
                 
-                if (changerRate.buy > 0) {
-                    convertResult.rate = changerRate.buy
-                    convertResult.rateInverse = 1 / convertResult.rate
+                if (changer_rate.price_buy > 0) {
+                    convertResult.rate = changer_rate.price_buy;
+                    convertResult.rateInverse = 1 / convertResult.rate;
                 }
-                else if (changerRate.sell > 0) {
-                    convertResult.rate = changerRate.sell
-                    convertResult.rateInverse = 1 / convertResult.rate
+                else if (changer_rate.price_sell > 0) {
+                    convertResult.rate = changer_rate.price_sell;
+                    convertResult.rateInverse = 1 / convertResult.rate;
                 }
                 else {
-                    convertResult.rate = 1
-                    convertResult.rateInverse = 1
+                    convertResult.rate = 1;
+                    convertResult.rateInverse = 1;
                 }
             }
         }
         else {
-            pair = `${to}${from}`
-            pairData = pairs.find( (p: any) => p.pair === pair )
-
-            if (pairData) {
-                pairRates = pairData.rates || {}
+            pair_code = `${to}${from}`.toLowerCase();
+            pair = pairs.find( (p: any) => p.code === pair_code );
+            
+            if (pair) {
+                // get rates of a pair
+                pair_rates = pair.changers;
+                let changer_rate = pair_rates.find( (p: any) => p.changer_code === changer.code );
 
                 // if rate is found for this changer
-                if (pairRates.hasOwnProperty(changer.code)) {
-                    changerRate = pairRates[changer.code]
-                    changerRate.buy = Number(changerRate.buy || 0)
-                    changerRate.sell = Number(changerRate.sell || 0)
-
-                    if (changerRate.buy > 0) {
-                        convertResult.rateInverse = changerRate.buy
-                        convertResult.rate = 1 / convertResult.rateInverse
+                if (changer_rate) {
+                    changer_rate.price_buy = Number(changer_rate.price_buy || 0);
+                    changer_rate.price_sell = Number(changer_rate.price_sell || 0);
+                    
+                    if (changer_rate.price_buy > 0) {
+                        convertResult.rateInverse = changer_rate.price_buy;
+                        convertResult.rate = 1 / convertResult.rateInverse;
                     }
-                    else if (changerRate.sell > 0) {
-                        convertResult.rate = changerRate.sell
-                        convertResult.rateInverse = 1 / convertResult.rate
+                    else if (changer_rate.price_sell > 0) {
+                        convertResult.rate = changer_rate.price_sell;
+                        convertResult.rateInverse = 1 / convertResult.rate;
                     }
                     else {
-                        convertResult.rate = 1
-                        convertResult.rateInverse = 1
+                        convertResult.rate = 1;
+                        convertResult.rateInverse = 1;
                     }
                 }
             }
-            
-            //console.log(pair, convertResult)
         }
     }
     else {
-        convertResult.rate = 1
-        convertResult.rateInverse = 1
+        convertResult.rate = 1;
+        convertResult.rateInverse = 1;
     }
     
-    convertResult.conversion = round(chain(convertResult.rate).multiply(convertAmount).done(), 8)
+    convertResult.conversion = round(chain(convertResult.rate).multiply(convertAmount).done(), 8);
 
-    getMoreConversions()
+    getMoreConversions();
 }
 
 async function getMoreConversions() {
-    let series = [ 1, 3, 5, 7, 10, 12, 15, 25, 30, 45, 50, 75, 100, 300, 400, 500, 750, 1000, 3000, 5000, 7500, 10000, 15000, 25000, 50000, 75000, 100000 ]
+    let series = [ 
+        1, 3, 5, 7, 10, 12, 15, 25, 30, 45, 50, 75, 100,
+        300, 400, 500, 750, 1000, 3000, 5000, 7500, 10000,
+        15000, 25000, 50000, 75000, 100000
+    ];
     let conversions: any = {
         from: [],
         to: []
-    }
+    };
 
     series.forEach( serie => {
-
-        let rate = convertResult.rate
+        let rate = convertResult.rate;
         conversions.from.push({
             amount: serie,
             conversion: round(chain(rate).multiply(serie).done(), 8)
-        })
+        });
 
-        let rateInverse = convertResult.rateInverse
+        let rateInverse = convertResult.rateInverse;
         conversions.to.push({
             amount: serie,
             conversion: round(chain(rateInverse).multiply(serie).done(), 8)
-        })
+        });
     })
 
-    moreConversions = conversions
+    moreConversions = conversions;
 }
 
 // run the conversions
-convertNow()
+convertNow();
 </script>
 
 <div class="bg-white dark:bg-gray-800">
@@ -236,7 +233,7 @@ convertNow()
                         </span>
                     </span>
                     <span class="block text-sm md:w-[50%] p-4">
-                        {currencyFrom.name} to {currencyTo.name} conversion on {changer.name} — Last updated {new Date(changerRate.updatedAt)}
+                        {currencyFrom.name} to {currencyTo.name} conversion on {changer.name} — Last updated {new Date(changer_rate.updatedAt)}
                     </span>
                 </div>
                 
@@ -333,13 +330,13 @@ convertNow()
             <div class="shadow-lg md:w-[45%] p-8 bg-white dark:bg-gray-900">
                 <h2 class="text-2xl">{convertFrom} - {currencyFrom.name}</h2>
                 <span class="block mt-6">
-                    {currencyFrom.bio}
+                    {currencyFrom.description}
                 </span>
             </div>
             <div class="shadow-lg md:w-[45%] p-8 bg-white dark:bg-gray-900">
                 <h2 class="text-2xl">{convertTo} - {currencyTo.name}</h2>
                 <span class="block mt-6">
-                    {currencyTo.bio}
+                    {currencyTo.description}
                 </span>
             </div>
         </div>
@@ -350,7 +347,7 @@ convertNow()
         <hr class="mb-12">
         <div class="block px-8 bg-white dark:bg-gray-900 py-4 shadow-lg">
            <p class="mb-4">{changer.bio}</p>
-           <p>You can convert {convertFrom} to {convertTo} and {convertTo} to {convertFrom} on {changer.name}. As at {new Date(changerRate.updatedAt)}, <strong>1 {convertFrom} is about {Money.format(convertResult.rate)} {convertTo} on {changer.name} and 1 {convertTo} is about {Money.format(convertResult.rateInverse)} {convertFrom} on {changer.name}</strong></p>
+           <p>You can convert {convertFrom} to {convertTo} and {convertTo} to {convertFrom} on {changer.name}. As at {new Date(changer_rate.updatedAt)}, <strong>1 {convertFrom} is about {Money.format(convertResult.rate)} {convertTo} on {changer.name} and 1 {convertTo} is about {Money.format(convertResult.rateInverse)} {convertFrom} on {changer.name}</strong></p>
         </div>
     </div>
 </div>
