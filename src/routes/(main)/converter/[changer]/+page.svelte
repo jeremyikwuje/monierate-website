@@ -251,7 +251,7 @@ convertNow()
                         </svg> 
                     </a>
                  </span>
-            </div>
+            </div> 
         </div>
     </div>
 
