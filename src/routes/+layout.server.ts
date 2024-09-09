@@ -83,14 +83,14 @@ const sponsored_partners = [
     {
         image: 'https://bit.ly/3svJGhQ',
         text: 'Send & Receive Cross-border Payments Globally.',
-        link: 'https://tinyurl.com/yeprmsmt',
+        link: 'https://bit.ly/47lmfHX',
         brand: 'Cedar App',
         cta: 'Start Sending'
     },
     {
         image: 'https://bit.ly/3svJGhQ',
         text: 'Send & Receive Cross-border Payments Globally.',
-        link: 'https://tinyurl.com/yeprmsmt',
+        link: 'https://bit.ly/47lmfHX',
         brand: 'Cedar App',
         cta: 'Start Sending'
     }

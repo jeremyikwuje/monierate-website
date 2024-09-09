@@ -119,7 +119,6 @@ function hidePromotionBar() {
 
 <!-- <div id="top-banner" tabindex="-1" class="fixed top-0 mb-8 start-0 z-50 flex justify-between w-full p-4"> -->
 
-
 <div id="top-banner" tabindex="-1" class="flex fixed top-0 mb-8 w-full z-50 gap-x-6 overflow-hidden bg-gray-50 px-6 py-3 sm:px-3.5 sm:before:flex-1">
     <div class="absolute left-[max(-7rem,calc(50%-52rem))] top-1/2 -z-10 -translate-y-1/2 transform-gpu blur-2xl" aria-hidden="true">
       <div class="aspect-[577/310] w-[36.0625rem] bg-gradient-to-r from-[#ff80b5] to-[#9089fc] opacity-30" style="clip-path: polygon(74.8% 41.9%, 97.2% 73.2%, 100% 34.9%, 92.5% 0.4%, 87.5% 0%, 75% 28.6%, 58.5% 54.6%, 50.1% 56.8%, 46.9% 44%, 48.3% 17.4%, 24.7% 53.9%, 0% 27.9%, 11.9% 74.2%, 24.9% 54.1%, 68.6% 100%, 74.8% 41.9%)"></div>
@@ -238,9 +237,9 @@ function hidePromotionBar() {
     <div class="container">
         <!-- Landscape Top/Bottom -->
         <div class="cedar-money">
-            <a href="https://tinyurl.com/cedar-app-banner-1" target="_blank">
+            <a href="https://bit.ly/4gj4L2V" target="_blank">
                 <img 
-                    src="https://monierate.com/cedar-1-compressed.gif"
+                    src="https://monierate.com/cedar-homepage.gif"
                     alt="Cedar Money"
                     class="mx-auto max-w-full md:w-[800px] md:h-[114px]">
             </a>
@@ -253,7 +252,7 @@ function hidePromotionBar() {
         <div class="w-full md:w-[30%]">
             <h3 class="font-bold">Currency converter</h3>
             <ul class="py-4 converter-list">
-                <li><a data-sveltekit-reload href="https://tinyurl.com/24ujvanp" class="font-bold text-indigo-500">Send USD on Cedar</a></li>
+                <li><a data-sveltekit-reload href="https://bit.ly/3Xlo8jv" class="font-bold text-indigo-500">Send USD on Cedar</a></li>
                 <li><a data-sveltekit-reload href="/converter/bybit?Amount=1&From=USDT&To=NGN">Convert USDT on Bybit</a></li>
                 <li><a data-sveltekit-reload href="/converter/bitmama?Amount=1&From=USDT&To=NGN">Convert USDT on Bitmama</a></li>
                 <li><a data-sveltekit-reload href="/converter/bitnob?Amount=1&From=USDT&To=NGN">Convert USDT on Bitnob</a></li>
@@ -274,7 +273,7 @@ function hidePromotionBar() {
             <h3 class="font-bold">Tools</h3>
             <ul class="py-4 converter-list">
                 <li><a href="https://tinyurl.com/cambridge-currencies-foot-link">Send Money to Europe</a></li>
-                <li><a href="https://tinyurl.com/cedar-app-monierate-footer">Pay your Importers</a></li>
+                <li><a href="https://bit.ly/3Xlo8jv">Pay your Importers</a></li>
                 <li><a href="/alerts">Price Alerts</a></li>
                 <li><a href="/converter">Currency Converter</a></li>
                 <li><a href="/ng/compare">Compare exchange rates</a></li>

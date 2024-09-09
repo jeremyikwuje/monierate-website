@@ -168,9 +168,9 @@ convertNow()
     <div class="container">
         <!-- Landscape Top/Bottom -->
         <div class="cedar-money">
-            <a href="https://tinyurl.com/cedar-app-banner-1" target="_blank">
+            <a href="https://bit.ly/3zfhZgz" target="_blank">
                 <img 
-                    src="https://monierate.com/uploads/cedar-banner-send-money-from-nigeria-to-your-suppliers.gif"
+                    src="https://monierate.com/uploads/cedar-converter.gif"
                     alt="Cedar Money"
                     class="mx-auto max-w-full md:w-[800px] md:h-[114px]">
             </a>
