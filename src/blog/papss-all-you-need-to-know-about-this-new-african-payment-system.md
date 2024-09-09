@@ -105,30 +105,23 @@ Each PAPSS channel has well-explained steps for users to follow. This works like
 
 For instance, if you’re accessing the service through a bank app, such a platform will provide full details on how to make a transfer. The same is true for the online banking option.
 
-  
-
 ## Features of the Pan African Payment and Settlement System
 
 The Pan African Payment and Settlement System sports some unique features:
 
 - Payments are directly converted from one African currency to another. This maintains the value of local currencies. It also fosters the adoption of local financial instruments.
-
 - The PAPSS is said to conduct payments in under 2 minutes max. During this time, the platform conducts multiple checks on transactions. Some of the confirmations include compliance, sanctions, etc.
-
 - Transactions on PAPSS occur on a Multilateral Net Basis.
-
 - The PAPSS remains online 24/7, ready for use.
+
+![PAPSS-operation.jpeg](https://ik.imagekit.io/monierate/Blog/Listicles/PAPSS-operation.jpeg?)
 
 ## Benefits of the Pan African Payment and Settlement System
 
 - **Improved infrastructure within African banks**: This involves the availability of systems and servers that support the PAPSS process.
-
 - **Upskilling among banking staff and financial authorities**: The PAPSS functions differently from conventional intra-African payment methods. Technical staff will have to familiarize themselves with the new technology. Non-technical staff, such as managers, may also need to learn a thing or two.
-
 - **Increased level of collaboration among the participating countries**:  Take settlement agreements for example. Participating countries must have mutual understanding and give their consent and support. That is the only way a settlement can be implemented.
-
 - **Ease of trade payments**:  Previously, the US dollar stood as a central payment currency. Sender’s funds were converted to this denomination. Afterwards, the funds were then converted to the receiver’s currency. This is no longer the case. The introduction of PAPSS allows for the sender’s funds to be switched to the receiver’s denomination. The US dollar and associated infrastructure is no longer needed.
-
 - **Reduced Cost of intra-African transactions**: Costs are now significantly reduced for intra-African traders. Both governments and individual entities trading amongst themselves stand to benefit here. This is because 3rd parties are eliminated from the transfer/settlement process.
   
 
@@ -164,4 +157,5 @@ In addition to the above, the following institutions are making preparations to 
 - First City Monument Bank  
 
 ## Conclusion
+
 The Pan African Payment Service Solution (PAPSS) is here to stay. This technology has successfully redirected funds back into Africa. It is also promoting transactions among African countries.
