@@ -2,7 +2,7 @@
     <div class="container">
         <!-- Landscape Top/Bottom -->
         <div class="cedar-money">
-            <a href="https://bit.ly/3zfhZgz" target="_blank">
+            <a href="https://bit.ly/3XAE96f" target="_blank">
                 <img 
                     src="https://monierate.com/cedar-blogs.gif"
                     alt="Cedar Money"
