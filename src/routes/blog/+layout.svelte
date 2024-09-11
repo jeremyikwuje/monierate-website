@@ -6,7 +6,7 @@
                 <img 
                     src="https://monierate.com/cedar-blogs.gif"
                     alt="Cedar Money"
-                    class="mx-auto max-w-full md:w-[800px] md:h-[114px]">
+                    class="mx-auto max-w-full md:w-[800px] md:h-[114px] ">
             </a>
         </div>
     </div>
