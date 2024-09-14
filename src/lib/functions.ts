@@ -88,6 +88,30 @@ export function toggleButtonLoad(selector: string, timeout = 3000)
     }
 }
 
+// get the user timezone
+function getUserTimezone(): string {
+    return Intl.DateTimeFormat().resolvedOptions().timeZone;
+}
+
+// ✅ Or get a Date object with the specified Time zone
+function changeTimeZone(date: any) {
+    const timeZone = getUserTimezone();
+
+    if (typeof date === 'string') {
+      return new Date(
+        new Date(date).toLocaleString('en-US', {
+          timeZone,
+        }),
+      );
+    }
+  
+    return new Date(
+      date.toLocaleString('en-US', {
+        timeZone,
+      }),
+    );
+}
+
 export const format = (dt: any, d = "datetime") => {
 
     dt = changeTimeZone(dt)
@@ -130,29 +154,6 @@ export function friendlyDate(dt: any, d = "datetime") {
         const years = Math.floor(diffInSeconds / 31536000);
         return `${years} year${years > 1 ? 's' : ''} ago`;
     }
-}
-
-// Example usage:
-console.log(friendlyDate("Thu, Aug 08 2024 2:00:37 PM")); // Output will depend on the current date and time
-
-// Example usage:
-console.log(friendlyDate("Thu, Aug 08 2024 2:00:37 PM")); // Output will depend on the current date and time
-
-// ✅ Or get a Date object with the specified Time zone
-function changeTimeZone(date: any, timeZone: string = "Africa/Lagos") {
-    if (typeof date === 'string') {
-      return new Date(
-        new Date(date).toLocaleString('en-US', {
-          timeZone,
-        }),
-      );
-    }
-  
-    return new Date(
-      date.toLocaleString('en-US', {
-        timeZone,
-      }),
-    );
 }
 
 export function setCookie(key: string, value: string, days: number) {
