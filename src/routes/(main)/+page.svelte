@@ -1,12 +1,78 @@
 <script>
     /** @type {import('./$types').PageData} */
-    import { format, friendlyDate } from "$lib/functions";
-
     export let data;
     let rates = data.rates || {}
     let providers = data.providers || {}
 
-    let total = Object.entries(providers).length
+    let total = Object.entries(providers).length;
+
+    // get the user timezone
+    function getUserTimezone() {
+        return Intl.DateTimeFormat().resolvedOptions().timeZone;
+    }
+
+    // ✅ Or get a Date object with the specified Time zone
+    function changeTimeZone(date) {
+        const timeZone = getUserTimezone();
+
+        if (typeof date === 'string') {
+        return new Date(
+            new Date(date).toLocaleString('en-US', {
+            timeZone,
+            }),
+        );
+        }
+    
+        return new Date(
+        date.toLocaleString('en-US', {
+            timeZone,
+        }),
+        );
+    }
+
+    export const format = (dt, d = "datetime") => {
+
+        dt = changeTimeZone(dt)
+
+        if (d == 'date') {
+            return date.format(dt, 'ddd, MMM DD YYYY')
+        }
+
+        return date.format(dt, 'ddd, MMM DD YYYY h:mm:ss A')
+    }
+
+    export function friendlyDate(dt, d = "datetime") {
+        const dateString = format(dt, d);
+        const date = new Date(dateString);
+        const now = new Date();
+        const diffInSeconds = Math.floor((now.getTime() - date.getTime()) / 1000);
+
+        const isSameDay = date.getDate() === now.getDate() &&
+                        date.getMonth() === now.getMonth() &&
+                        date.getFullYear() === now.getFullYear();
+
+        if (diffInSeconds < 900) {
+            return 'Just now';
+        } else if (diffInSeconds < 3600) {
+            const minutes = Math.floor(diffInSeconds / 60);
+            return `${minutes} minute${minutes > 1 ? 's' : ''} ago`;
+        } else if (isSameDay) {
+            //const hours = Math.floor(diffInSeconds / 3600);
+            return `Today, ${date.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}`;
+        } else if (diffInSeconds < 86400) {
+            const hours = Math.floor(diffInSeconds / 3600);
+            return `${hours} hour${hours > 1 ? 's' : ''} ago`;
+        } else if (diffInSeconds < 2592000) {
+            const days = Math.floor(diffInSeconds / 86400);
+            return `${days} day${days > 1 ? 's' : ''} ago`;
+        } else if (diffInSeconds < 31536000) {
+            const months = Math.floor(diffInSeconds / 2592000);
+            return `${months} month${months > 1 ? 's' : ''} ago`;
+        } else {
+            const years = Math.floor(diffInSeconds / 31536000);
+            return `${years} year${years > 1 ? 's' : ''} ago`;
+        }
+    }
 </script>
 
 <svelte:head>
