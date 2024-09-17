@@ -1,12 +1,69 @@
 <script>
     /** @type {import('./$types').PageData} */
-    import { format, friendlyDate } from "$lib/functions";
+    import { format } from "$lib/functions";
 
     export let data;
     let rates = data.rates || {}
     let providers = data.providers || {}
 
-    let total = Object.entries(providers).length
+    let total = Object.entries(providers).length;
+
+    function getUserTimezone() {
+        return Intl.DateTimeFormat().resolvedOptions().timeZone;
+    }
+
+    // If you need to use this timezone in a date formatting function
+    function formatDateToUserTimezone(date) {
+        
+         // Example usage
+        const userTimezone = getUserTimezone();
+
+        const options = {
+            timeZone: userTimezone,
+            year: 'numeric',
+            month: 'numeric',
+            day: 'numeric',
+            hour: '2-digit',
+            minute: '2-digit',
+            second: '2-digit',
+        };
+        
+        return new Intl.DateTimeFormat('en-US', options).format(date);
+    }
+
+    export function friendlyDate(dt) {
+        const dateString = formatDateToUserTimezone(dt);
+        console.log(dateString);
+        const date = new Date(dateString);
+        const now = new Date();
+        const diffInSeconds = Math.floor((now.getTime() - date.getTime()) / 1000);
+
+        const isSameDay = date.getDate() === now.getDate() &&
+                        date.getMonth() === now.getMonth() &&
+                        date.getFullYear() === now.getFullYear();
+
+        if (diffInSeconds < 900) {
+            return 'Just now';
+        } else if (diffInSeconds < 3600) {
+            const minutes = Math.floor(diffInSeconds / 60);
+            return `${minutes} minute${minutes > 1 ? 's' : ''} ago`;
+        } else if (isSameDay) {
+            //const hours = Math.floor(diffInSeconds / 3600);
+            return `Today, ${date.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}`;
+        } else if (diffInSeconds < 86400) {
+            const hours = Math.floor(diffInSeconds / 3600);
+            return `${hours} hour${hours > 1 ? 's' : ''} ago`;
+        } else if (diffInSeconds < 2592000) {
+            const days = Math.floor(diffInSeconds / 86400);
+            return `${days} day${days > 1 ? 's' : ''} ago`;
+        } else if (diffInSeconds < 31536000) {
+            const months = Math.floor(diffInSeconds / 2592000);
+            return `${months} month${months > 1 ? 's' : ''} ago`;
+        } else {
+            const years = Math.floor(diffInSeconds / 31536000);
+            return `${years} year${years > 1 ? 's' : ''} ago`;
+        }
+    }
 </script>
 
 <svelte:head>
@@ -123,7 +180,7 @@
                             <small class="changer-rate-base">per $1</small>
                         </td>
                         <td class="text-right py-2 pr-2 md:pr-4 whitespace-nowrap">
-                            {friendlyDate(new Date(rate.updatedAt))}
+                            {friendlyDate(new Date(rate.updatedAt))} 
                         </td>
                     </tr>
                     {/if}
