@@ -69,27 +69,27 @@
                                 </td>
                                 <td class="text-right pl-6 pr-6">
                                     <span class="changer-rate">
-                                        {#if Money.format(rate.buy, 0) === "0"}
+                                        {#if Money.format(rate.price_buy, 0) === "0"}
                                         -
                                         {:else}
-                                            ₦{Money.format(rate.buy, 0)}
+                                            ₦{Money.format(rate.price_buy, 0)}
                                         {/if}
                                     </span>
                                     <small class="changer-rate-base">per {pair}</small>
                                 </td>
                                 <td class="text-right pl-6 pr-6">
                                     <span class="changer-rate">
-                                        {#if Money.format(rate.sell, 0) === "0"}
+                                        {#if Money.format(rate.price_sell, 0) === "0"}
                                         -
                                         {:else}
-                                            ₦{Money.format(rate.sell, 0)}
+                                            ₦{Money.format(rate.price_sell, 0)}
                                         {/if}
                                     </span>
                                     <small class="changer-rate-base">per {pair}</small>
                                 </td>
                                 <td class="text-right py-2 pr-2 md:pr-4 whitespace-nowrap text-sm">
-                                    {#if (rate.updatedAt) }
-                                        {friendlyDate(new Date(rate.updatedAt))}
+                                    {#if (rate.updated_at) }
+                                        {friendlyDate(new Date(rate.updated_at))}
                                     {/if}
                                 </td>
                             </tr>
