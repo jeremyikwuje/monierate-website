@@ -1,5 +1,5 @@
 import { bearer } from "$lib/functions.js";
-import { getEndpoint  } from "$lib/helper.svelte";
+import { getEndpoint  } from "$lib/helper";
 import { basicAuth } from "$lib/server/utilities.js";
 import { json } from "@sveltejs/kit";
 
