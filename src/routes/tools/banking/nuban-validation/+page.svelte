@@ -1,6 +1,7 @@
 <script>
     import { browser } from "$app/environment";
 	import { onMount } from 'svelte';
+    import Choices from "choices.js";
 
     /** @type {import('./$types').PageServerData} */
     let fieldBank;
@@ -22,8 +23,6 @@
 
         alert('Valid account number');
     }
-
-    export let data;
 </script>
 
 <svelte:head>
