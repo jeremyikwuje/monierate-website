@@ -2,11 +2,11 @@
     <div class="container">
         <!-- Landscape Top/Bottom -->
         <div class="cedar-money">
-            <a href="https://tinyurl.com/4zuasuhv" target="_blank">
+            <a href="https://bit.ly/3XAE96f" target="_blank">
                 <img 
-                    src="https://monierate.com/uploads/cedar-banner-pay-in-NGN-XOF-GHS-KES.gif"
+                    src="https://monierate.com/cedar-blog.gif"
                     alt="Cedar Money"
-                    class="mx-auto max-w-full md:w-[800px] md:h-[114px]">
+                    class="mx-auto max-w-full md:w-[800px] md:h-[114px] ">
             </a>
         </div>
     </div>

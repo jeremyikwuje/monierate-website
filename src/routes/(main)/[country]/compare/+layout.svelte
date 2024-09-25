@@ -2,7 +2,7 @@
     <div class="container">
         <!-- Landscape Top/Bottom -->
         <div class="cedar-money">
-            <a href="https://tinyurl.com/24ujvanp" target="_blank">
+            <a href="https://bit.ly/3zfhZgz" target="_blank">
                 <img 
                     src="https://monierate.com/uploads/cedar-banner-send-money-from-nigeria-to-your-suppliers.gif"
                     alt="Cedar Money"

@@ -88,6 +88,30 @@ export function toggleButtonLoad(selector: string, timeout = 3000)
     }
 }
 
+// get the user timezone
+function getUserTimezone(): string {
+    return Intl.DateTimeFormat().resolvedOptions().timeZone;
+}
+
+// ✅ Or get a Date object with the specified Time zone
+function changeTimeZone(date: any) {
+    const timeZone = getUserTimezone();
+
+    if (typeof date === 'string') {
+      return new Date(
+        new Date(date).toLocaleString('en-US', {
+          timeZone,
+        }),
+      );
+    }
+  
+    return new Date(
+      date.toLocaleString('en-US', {
+        timeZone,
+      }),
+    );
+}
+
 export const format = (dt: any, d = "datetime") => {
 
     dt = changeTimeZone(dt)
