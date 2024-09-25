@@ -1,4 +1,5 @@
 import { Buffer } from "buffer";
+import { env } from '$env/dynamic/private';
 
 export function basicAuth(method: string, body: any, level = "api")
 {
@@ -40,3 +41,16 @@ function toBase64(str: any): any {
         return Buffer.from(str, 'utf8').toString('base64');
     }
 };
+
+export function getEndpointV1(endpoint: string)
+{
+  const server = env.SERVER
+  let apiUrl = env.API_URL_V1 || 'https://data.monierate.com';
+  if (server == 'LOCAL') {
+    apiUrl = 'http://localhost:3000';
+  }
+
+  console.log(env.SERVER);
+
+  return `${apiUrl}${endpoint}`;
+}

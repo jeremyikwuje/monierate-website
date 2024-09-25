@@ -7,7 +7,6 @@ export const load: PageServerLoad = async ({ fetch }) => {
 
     try {
         let providers = await get_changers();
-        console.log(providers);
 
         if (providers.length == 0) {
             throw error(500, {
@@ -28,7 +27,6 @@ export const load: PageServerLoad = async ({ fetch }) => {
         }
     }
     catch(error: any) {
-        console.log(error);
         throw error(500, {
             message: "Unable to display data, try again in few minutes."
         })

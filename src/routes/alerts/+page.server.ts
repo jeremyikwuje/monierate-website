@@ -1,6 +1,7 @@
-import { basicAuth, getEndpoint  } from "$lib/helper";
+import { basicAuth  } from "$lib/helper";
 import type { PageServerLoad } from './$types'
 import { bearer } from '$lib/functions';
+import { getEndpointV1 } from "$lib/server/utilities";
 
 export const load: PageServerLoad = async ({ url, cookies }) => {
     const params = url.searchParams
@@ -49,7 +50,7 @@ export const load: PageServerLoad = async ({ url, cookies }) => {
 }
 
 async function getAlerts(token: string) {
-    const endpoint = getEndpoint("/auth/alerting");
+    const endpoint = getEndpointV1("/auth/alerting");
     const res = await fetch(endpoint, bearer('GET', token, {}));
     const result = await res.json();
 
@@ -64,7 +65,7 @@ async function getAuth(token: string) {
     const payload = {
         token,
     };
-    const endpoint = getEndpoint("/public/alerting/auth");
+    const endpoint = getEndpointV1("/public/alerting/auth");
     const res = await fetch(endpoint, basicAuth('POST', payload, 'system'));
     const result = await res.json();
 
@@ -75,7 +76,7 @@ async function confirmAlert(token: string) {
     const payload = {
         token,
     };
-    const endpoint = getEndpoint("/public/alerting/confirm");
+    const endpoint = getEndpointV1("/public/alerting/confirm");
     const res = await fetch(endpoint, basicAuth('POST', payload, 'system'));
     const result = await res.json();
 

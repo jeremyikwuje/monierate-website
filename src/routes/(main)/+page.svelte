@@ -102,7 +102,7 @@
                 </thead>
                 <tbody class="changers">
                     {#each rates as rate, i}
-                    {#if rate.changer_code != 'market' }
+                    {#if rate.changer_code !== 'market' && rate.changer_code !== 'binance' }
                     <tr class="mb-4 border-t border-gray-200 dark:border-gray-700">
                         <th scope="row" class="text-gray-500 py-6 pl-4 hidden md:inline-block">
                             { i + 1 }
