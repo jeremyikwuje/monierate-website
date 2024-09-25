@@ -50,7 +50,5 @@ export function getEndpointV1(endpoint: string)
     apiUrl = 'http://localhost:3000';
   }
 
-  console.log(env.SERVER);
-
   return `${apiUrl}${endpoint}`;
 }

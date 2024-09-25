@@ -73,8 +73,6 @@ export function getEndpoint(endpoint: string)
     apiUrl = 'http://localhost:4001/core';
   }
 
-  console.log(env.SERVER);
-
   return `${apiUrl}${endpoint}`;
 }
 
