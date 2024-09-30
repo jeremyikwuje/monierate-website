@@ -111,7 +111,7 @@
                         <th scope="col" class="py-3 pl-2 md:pl-6 md:pl-0 font-bold font-bitter">
                             Provider
                         </th>
-                        <th scope="col" class="pl-32 md:pl-6 pr-6 py-3 font-bold font-bitter text-right">
+                        <th scope="col" class="pl-16 md:pl-6 pr-6 py-3 font-bold font-bitter text-right">
                             Buy <span class="hidden md:inline">Price</span>
                         </th>
                         <th scope="col" class="pl-6 pr-6 py-3 font-bold font-bitter text-right">
