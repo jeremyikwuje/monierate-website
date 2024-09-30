@@ -20,6 +20,12 @@
 
     const providers = data.providers || {};
     const total = Object.entries(rates).length;
+    
+    let searchTerm = '';
+    $: filteredRates = rates.filter(rate => {
+        const providerName = providers[rate.changer_code]?.name || ''; 
+        return providerName.toLowerCase().includes(searchTerm.toLowerCase());
+    });
 </script>
 
 <svelte:head>
@@ -46,7 +52,7 @@
     </div>
 </div>
 
-<div class="pt-4 pb-4">
+<div class="pt-4 mb-4">
     <div class="container">
         <h1 class="text-2xl md:text-4xl mb-2 dark:text-gray-100 md:text-center">Today's dollar to naira rates on exchanges</h1>
         <div class="mb-12 text-gray-600 font-normal dark:text-gray-300 md:text-center">
@@ -54,13 +60,29 @@
                 Compare the prices of dollar to naira from {total} exchange providers.
             </p>
         </div>
-        <div class="flex justify-between items-center dark:text-gray-300">
-            <span></span>
+        <div class="flex justify-between items-center dark:text-gray-300 mb-4">
             <span>
+            </span>
+            <span class="text-right">
                 <span class="text-semibold">Sort by:</span>
                 <span class="font-semibold">Low to high</span>
             </span>
-        </div>
+        </div>    
+        <div class="md:flex justify-between items-center dark:text-gray-300">
+            <span>
+            </span>
+            <span class="text-right">
+                <label class="relative block">
+                    <span class="sr-only">Search</span>
+                    <input 
+                        bind:value={searchTerm} 
+                        class="placeholder:italic placeholder:text-slate-400 block bg-white dark:bg-gray-900 w-full border border-gray-200 dark:border-gray-500 rounded-lg py-2 pl-2 pr-3 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm" 
+                        placeholder="Search providers..." 
+                        type="text" 
+                        name="search"/>
+                </label>
+            </span>
+        </div>               
     </div>
 </div>
 
@@ -78,8 +100,8 @@
 </div>-->
 
 <main>
-    <div class="container">
-        <div class="border border-gray-100 bg-white py-[10px] shadow-md mb-16 dark:bg-gray-900 dark:text-light dark:border-none min-h-[100vh] w-full overflow-x-scroll md:overflow-x-hidden overflow-y-scroll md:overflow-y-hidden">
+    <div class="w-full">
+        <div class="container border border-none bg-white py-[10px] mb-16 dark:bg-gray-900 dark:text-light dark:border-none w-full overflow-x-scroll md:overflow-x-hidden overflow-y-scroll md:overflow-y-hidden">
             <table class="table-auto overflow-x-scroll overflow-y-scroll w-full text-sm text-left">
                 <thead>
                     <tr>
@@ -89,7 +111,7 @@
                         <th scope="col" class="py-3 pl-2 md:pl-6 md:pl-0 font-bold font-bitter">
                             Provider
                         </th>
-                        <th scope="col" class="pl-6 pr-6 py-3 w-[40%] font-bold font-bitter text-right">
+                        <th scope="col" class="pl-32 md:pl-6 pr-6 py-3 font-bold font-bitter text-right">
                             Buy <span class="hidden md:inline">Price</span>
                         </th>
                         <th scope="col" class="pl-6 pr-6 py-3 font-bold font-bitter text-right">
@@ -101,51 +123,51 @@
                     </tr>
                 </thead>
                 <tbody class="changers">
-                    {#each rates as rate, i}
-                    {#if rate.changer_code !== 'market' && rate.changer_code !== 'binance' }
-                    <tr class="mb-4 border-t border-gray-200 dark:border-gray-700">
-                        <th scope="row" class="text-gray-500 py-6 pl-4 hidden md:inline-block">
-                            { i + 1 }
-                        </th>
-                        <td>
-                            <a href="/converter/{rate.changer_code}?Amount=1&From=USD&To=NGN" class="flex items-center" title="{providers[rate.changer_code].name} dollar to naira rate.">
-                                <span class="changer-icon">
-                                    <img width="22px" height="22px" src="/icons/{providers[rate.changer_code].icon}" class="rounded-full" alt="{providers[rate.changer_code].name} icon">
+                    {#each filteredRates as rate, i}
+                        {#if rate.changer_code !== 'market' && rate.changer_code !== 'binance'}
+                        <tr class="py-32 mb-4 border-t border-gray-150 dark:border-gray-800">
+                            <th scope="row" class="text-gray-500 py-6 pl-4 hidden md:inline-block">
+                                { i + 1 }
+                            </th>
+                            <td>
+                                <a href="/converter/{rate.changer_code}?Amount=1&From=USD&To=NGN" class="flex items-center" title="{providers[rate.changer_code].name} dollar to naira rate.">
+                                    <span class="changer-icon">
+                                        <img width="22px" height="22px" src="/icons/{providers[rate.changer_code].icon}" class="rounded-full" alt="{providers[rate.changer_code].name} icon">
+                                    </span>
+                                    <span class="changer-title text-sm md:text-lg whitespace-nowrap">{providers[rate.changer_code].name}</span>
+                                </a>
+                            </td>
+                            <td class="text-right pl-6 pr-6">
+                                <span class="changer-rate text-sm md:text-lg whitespace-nowrap">
+                                    {#if Math.round(rate.price_buy) === 0}
+                                        -
+                                    {:else}
+                                        ₦{Math.round(rate.price_buy)}
+                                    {/if}
                                 </span>
-                                <span class="changer-title">{providers[rate.changer_code].name}</span>
-                            </a>
-                        </td>
-                        <td class="text-right pl-6 pr-6">
-                            <span class="changer-rate">
-                                {#if Math.round(rate.price_buy) === 0}
-                                    -
-                                {:else}
-                                    ₦{Math.round(rate.price_buy)}
-                                {/if}
-                            </span>
-                            <small class="changer-rate-base">per $1</small>
-                        </td>
-                        <td class="text-right pl-6 pr-6">
-                            <span class="changer-rate">
-                                {#if Math.round(rate.price_sell) === 0}
-                                    -
-                                {:else}
-                                    ₦{Math.round(rate.price_sell)}
-                                {/if}
-                            </span>
-                            <small class="changer-rate-base">per $1</small>
-                        </td>
-                        <td class="text-right py-2 pr-2 md:pr-4 whitespace-nowrap">
-                            {friendlyDate(new Date(rate.updated_at))}
-                        </td>
-                    </tr>
-                    {/if}
+                                <small class="changer-rate-base">per $1</small>
+                            </td>
+                            <td class="text-right pl-6 pr-6">
+                                <span class="changer-rate text-sm md:text-lg whitespace-nowrap">
+                                    {#if Math.round(rate.price_sell) === 0}
+                                        -
+                                    {:else}
+                                        ₦{Math.round(rate.price_sell)}
+                                    {/if}
+                                </span>
+                                <small class="changer-rate-base">per $1</small>
+                            </td>
+                            <td class="text-right py-2 pr-2 md:pr-4 whitespace-nowrap">
+                                {friendlyDate(new Date(rate.updated_at))}
+                            </td>
+                        </tr>
+                        {/if}
                     {/each}
                 </tbody>
             </table>
         </div>
 
-        <div class="dark:text-gray-300"> 
+        <div class="container dark:text-gray-300"> 
             <span class="block mb-4">
                 <h3>What is a Provider?</h3>
                 <p>    
@@ -230,7 +252,13 @@
 
 <style>
     table thead th {
-        @apply dark:text-gray-300 text-black
+        @apply dark:text-gray-300 text-black whitespace-nowrap
+    }
+    table tbody tr td {
+        @apply py-2.5 whitespace-nowrap
+    }
+    table tr td:first-child, table thead th:first-child {
+        @apply pl-0
     }
 
     .changer {
@@ -243,12 +271,12 @@
         @apply bg-transparent border border-black rounded-full w-[24px] h-[24px] mr-2;
     }
     .changer-title {
-        @apply font-semibold text-lg text-gray-800 dark:text-gray-300;
+        @apply font-semibold text-gray-800 dark:text-gray-300;
     }
     .changer-rate-base {
         @apply text-gray-500 dark:text-gray-400;
     }
     .changer-rate {
-        @apply block font-semibold text-lg text-gray-800 dark:text-light;
+        @apply block font-semibold text-gray-800 dark:text-light;
     }
 </style>
