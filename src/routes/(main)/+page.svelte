@@ -52,7 +52,7 @@
     </div>
 </div>
 
-<div class="pt-4 pb-4">
+<div class="pt-4 mb-4">
     <div class="container">
         <h1 class="text-2xl md:text-4xl mb-2 dark:text-gray-100 md:text-center">Today's dollar to naira rates on exchanges</h1>
         <div class="mb-12 text-gray-600 font-normal dark:text-gray-300 md:text-center">
@@ -60,30 +60,27 @@
                 Compare the prices of dollar to naira from {total} exchange providers.
             </p>
         </div>
-        <div class="flex justify-between items-center dark:text-gray-300">
+        <div class="flex justify-between items-center dark:text-gray-300 mb-4">
             <span>
             </span>
             <span class="text-right">
                 <span class="text-semibold">Sort by:</span>
                 <span class="font-semibold">Low to high</span>
-                <form method="post" action="">
-
-                    <label class="relative block">
-                        <span class="sr-only">Search</span>
-                        <span class="absolute inset-y-0 left-0 flex items-center pl-2">
-                            <svg class="h-5 w-5 fill-slate-300" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
-                                <path fill-rule="evenodd" d="M12.9 14.32a8 8 0 111.41-1.41l4.61 4.61a1 1 0 01-1.42 1.42l-4.6-4.62zm-.9-6.32a6 6 0 11-12 0 6 6 0 0112 0z" clip-rule="evenodd"/>
-                            </svg>
-                        </span>
-                        <input 
-                            bind:value={searchTerm} 
-                            class="placeholder:italic placeholder:text-slate-400 block bg-white w-full border border-slate-300 rounded-md py-2 pl-9 pr-3 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm" 
-                            placeholder="Search providers..." 
-                            type="text" 
-                            name="search"/>
-                      </label>
-
-                </form>
+            </span>
+        </div>    
+        <div class="md:flex justify-between items-center dark:text-gray-300">
+            <span>
+            </span>
+            <span class="text-right">
+                <label class="relative block">
+                    <span class="sr-only">Search</span>
+                    <input 
+                        bind:value={searchTerm} 
+                        class="placeholder:italic placeholder:text-slate-400 block bg-white dark:bg-gray-900 w-full border border-gray-200 dark:border-gray-500 rounded-lg py-2 pl-2 pr-3 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm" 
+                        placeholder="Search providers..." 
+                        type="text" 
+                        name="search"/>
+                </label>
             </span>
         </div>               
     </div>
@@ -103,8 +100,8 @@
 </div>-->
 
 <main>
-    <div class="container w-full p-3 sm:p-4">
-        <div class="border border-none bg-white py-[10px] mb-16 dark:bg-gray-900 dark:text-light dark:border-none w-full overflow-x-scroll md:overflow-x-hidden overflow-y-scroll md:overflow-y-hidden">
+    <div class="w-full">
+        <div class="container border border-none bg-white py-[10px] mb-16 dark:bg-gray-900 dark:text-light dark:border-none w-full overflow-x-scroll md:overflow-x-hidden overflow-y-scroll md:overflow-y-hidden">
             <table class="table-auto overflow-x-scroll overflow-y-scroll w-full text-sm text-left">
                 <thead>
                     <tr>
@@ -114,7 +111,7 @@
                         <th scope="col" class="py-3 pl-2 md:pl-6 md:pl-0 font-bold font-bitter">
                             Provider
                         </th>
-                        <th scope="col" class="pl-6 pr-6 py-3 w-[40%] font-bold font-bitter text-right">
+                        <th scope="col" class="pl-32 md:pl-6 pr-6 py-3 font-bold font-bitter text-right">
                             Buy <span class="hidden md:inline">Price</span>
                         </th>
                         <th scope="col" class="pl-6 pr-6 py-3 font-bold font-bitter text-right">
@@ -128,7 +125,7 @@
                 <tbody class="changers">
                     {#each filteredRates as rate, i}
                         {#if rate.changer_code !== 'market' && rate.changer_code !== 'binance'}
-                        <tr class="mb-4 border-t border-gray-300 dark:border-gray-800">
+                        <tr class="py-32 mb-4 border-t border-gray-150 dark:border-gray-800">
                             <th scope="row" class="text-gray-500 py-6 pl-4 hidden md:inline-block">
                                 { i + 1 }
                             </th>
@@ -170,7 +167,7 @@
             </table>
         </div>
 
-        <div class="dark:text-gray-300"> 
+        <div class="container dark:text-gray-300"> 
             <span class="block mb-4">
                 <h3>What is a Provider?</h3>
                 <p>    
@@ -255,7 +252,13 @@
 
 <style>
     table thead th {
-        @apply dark:text-gray-300 text-black
+        @apply dark:text-gray-300 text-black whitespace-nowrap
+    }
+    table tbody tr td {
+        @apply py-2.5 whitespace-nowrap
+    }
+    table tr td:first-child, table thead th:first-child {
+        @apply pl-0
     }
 
     .changer {
