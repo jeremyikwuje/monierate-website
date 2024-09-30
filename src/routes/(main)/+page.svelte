@@ -60,9 +60,14 @@
                 Compare the prices of dollar to naira from {total} exchange providers.
             </p>
         </div>
-        <div class="flex flex-col md:flex-row justify-between items-center dark:text-gray-300 w-full">
-            <span class="w-full md:w-auto mb-4 md:mb-0">
+        <div class="flex justify-between items-center dark:text-gray-300">
+            <span>
+            </span>
+            <span class="text-right">
+                <span class="text-semibold">Sort by:</span>
+                <span class="font-semibold">Low to high</span>
                 <form method="post" action="">
+
                     <label class="relative block">
                         <span class="sr-only">Search</span>
                         <span class="absolute inset-y-0 left-0 flex items-center pl-2">
@@ -72,20 +77,15 @@
                         </span>
                         <input 
                             bind:value={searchTerm} 
-                            class="placeholder:italic placeholder:text-slate-400 block bg-white w-full border border-slate-300 rounded-md py-2 pl-9 pr-3 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm text-gray-500" 
+                            class="placeholder:italic placeholder:text-slate-400 block bg-white w-full border border-slate-300 rounded-md py-2 pl-9 pr-3 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm" 
                             placeholder="Search providers..." 
                             type="text" 
-                            name="search"
-                            autocomplete="off"
-                        />
-                    </label>
+                            name="search"/>
+                      </label>
+
                 </form>
             </span>
-            <span class="text-center md:text-right">
-                <span class="font-semibold">Sort by:</span>
-                <span class="font-semibold">Low to high</span>
-            </span>
-        </div>                        
+        </div>               
     </div>
 </div>
 
@@ -103,8 +103,8 @@
 </div>-->
 
 <main>
-    <div class="container">
-        <div class="border border-gray-100 bg-white py-[10px] shadow-md mb-16 dark:bg-gray-900 dark:text-light dark:border-none min-h-[100vh] w-full overflow-x-scroll md:overflow-x-hidden overflow-y-scroll md:overflow-y-hidden">
+    <div class="container w-full p-3 sm:p-4">
+        <div class="border border-none bg-white py-[10px] mb-16 dark:bg-gray-900 dark:text-light dark:border-none w-full overflow-x-scroll md:overflow-x-hidden overflow-y-scroll md:overflow-y-hidden">
             <table class="table-auto overflow-x-scroll overflow-y-scroll w-full text-sm text-left">
                 <thead>
                     <tr>
@@ -128,7 +128,7 @@
                 <tbody class="changers">
                     {#each filteredRates as rate, i}
                         {#if rate.changer_code !== 'market' && rate.changer_code !== 'binance'}
-                        <tr class="mb-4 border-t border-gray-200 dark:border-gray-700">
+                        <tr class="mb-4 border-t border-gray-300 dark:border-gray-800">
                             <th scope="row" class="text-gray-500 py-6 pl-4 hidden md:inline-block">
                                 { i + 1 }
                             </th>
@@ -137,11 +137,11 @@
                                     <span class="changer-icon">
                                         <img width="22px" height="22px" src="/icons/{providers[rate.changer_code].icon}" class="rounded-full" alt="{providers[rate.changer_code].name} icon">
                                     </span>
-                                    <span class="changer-title">{providers[rate.changer_code].name}</span>
+                                    <span class="changer-title text-sm md:text-lg whitespace-nowrap">{providers[rate.changer_code].name}</span>
                                 </a>
                             </td>
                             <td class="text-right pl-6 pr-6">
-                                <span class="changer-rate">
+                                <span class="changer-rate text-sm md:text-lg whitespace-nowrap">
                                     {#if Math.round(rate.price_buy) === 0}
                                         -
                                     {:else}
@@ -151,7 +151,7 @@
                                 <small class="changer-rate-base">per $1</small>
                             </td>
                             <td class="text-right pl-6 pr-6">
-                                <span class="changer-rate">
+                                <span class="changer-rate text-sm md:text-lg whitespace-nowrap">
                                     {#if Math.round(rate.price_sell) === 0}
                                         -
                                     {:else}
@@ -268,12 +268,12 @@
         @apply bg-transparent border border-black rounded-full w-[24px] h-[24px] mr-2;
     }
     .changer-title {
-        @apply font-semibold text-lg text-gray-800 dark:text-gray-300;
+        @apply font-semibold text-gray-800 dark:text-gray-300;
     }
     .changer-rate-base {
         @apply text-gray-500 dark:text-gray-400;
     }
     .changer-rate {
-        @apply block font-semibold text-lg text-gray-800 dark:text-light;
+        @apply block font-semibold text-gray-800 dark:text-light;
     }
 </style>
