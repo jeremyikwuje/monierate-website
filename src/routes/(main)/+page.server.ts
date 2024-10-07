@@ -4,7 +4,6 @@ import type { PageServerLoad } from './$types'
 import { get_changers } from "$lib/server/changer.service";
 
 export const load: PageServerLoad = async ({ fetch }) => {
-
     try {
         let providers = await get_changers();
 
