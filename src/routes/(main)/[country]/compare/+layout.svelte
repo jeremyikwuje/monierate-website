@@ -4,7 +4,7 @@
         <div class="cedar-money">
             <a href="https://bit.ly/3zfhZgz" target="_blank">
                 <img 
-                    src="https://monierate.com/uploads/cedar-banner-send-money-from-nigeria-to-your-suppliers.gif"
+                    src="https://monierate.com/cedar-converter-1.gif"
                     alt="Cedar Money"
                     class="mx-auto max-w-full md:w-[800px] md:h-[114px]">
             </a>
