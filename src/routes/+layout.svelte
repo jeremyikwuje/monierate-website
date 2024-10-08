@@ -172,7 +172,7 @@ function hidePromotionBar() {
 <div class="bg-white w-full py-2 whitespace-nowrap overflow-x-auto no-scrollbar dark:bg-gray-800 dark:border-gray-600 border-b border-gray-100">
     <div class="container">
         {#each Object.entries(top_pairs) as [code, value], i} 
-            <a data-sveltekit-reload href="/converter/?From={value.from}&To={value.to}&Amount=1" class="mr-2 text-gray-900 dark:text-gray-300 mr-6 text-[90%] md:text-lg">
+            <a data-sveltekit-reload href="/converter/?From={value.from}&To={value.to}&Amount=1" class="mr-2 text-gray-900 dark:text-gray-300 mr-6 text-[90%] md:text-base">
                 <span class="font-medium mr-[2px]">{value.name}</span>
                 <span class="font-thin mr-[2px]">{Money.format(value.price, 2)}</span>
                 <!-- display 24hr price change in green or red -->

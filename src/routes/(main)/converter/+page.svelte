@@ -2,7 +2,7 @@
 import type { PageData } from "./$types"
 import Money from "$lib/money";
 import { round, chain } from "mathjs"
-import { changeParam, format, friendlyDate } from "$lib/functions"
+import { changeParam, friendlyDate } from "$lib/functions"
 
 export let data: PageData;
 let changers = data.changers;
@@ -20,9 +20,6 @@ let convertResult = {
     rate_inverse: 0,
     conversion: 0,
 };
-
-// initialize supported currencies
-var supported_pairs = ['usdngn', 'btcngn', 'usdtngn', 'usdcngn', 'eurngn', 'gbpngn']
 
 var currencyFrom: any = {}
 var currencyTo: any = {}
