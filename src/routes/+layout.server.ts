@@ -21,7 +21,7 @@ export const load = (async ({ request }) => {
 
 const select_top_pairs = (pairs: any) => {
     // hardcoded top pairs for now, dynamic in the future based on user IP
-    const top_pairs = ['usdngn', 'usdtngn', 'btcngn', 'eurngn'];
+    const top_pairs = ['usdngn', 'usdtngn', 'btcngn', 'eurngn', 'gbpngn'];
     // filter pairs to get top selected pairs by code
     // but filter should be in order of the top pairs hardcoded above
     // then sort them by price in descending order

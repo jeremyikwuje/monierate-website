@@ -22,7 +22,7 @@ let convertResult = {
 };
 
 // initialize supported currencies
-var supported_pairs = ['usdngn', 'btcngn', 'usdtngn', 'usdcngn']
+var supported_pairs = ['usdngn', 'btcngn', 'usdtngn', 'usdcngn', 'eurngn', 'gbpngn']
 
 var currencyFrom: any = {}
 var currencyTo: any = {}
