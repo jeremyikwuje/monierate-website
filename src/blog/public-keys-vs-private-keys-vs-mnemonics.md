@@ -45,15 +45,15 @@ Mnemonics are different from public-private keys. They are not automatically app
 
 Here’s what mnemonics are like.
 
-Think of ten words - without repeating any. Ensure these words are random and more than three letters on average. Number them from one to ten.
+Think of ten words - without repeating any. Ensure these words are random and have more than three letters on average. Number them from one to ten.
 
-Now, write all the words down in a list format. You should have a word numbered one, another numbered two, and another numbered three - up to ten. You’ve just created a mnemonic.
+Now, write all the words down in a list format. It would help if you had a word numbered one, another numbered two, and another numbered three - up to ten. You’ve just created a mnemonic.
 
 In a mnemonics system, the first word is the first key. The second word is the second key, and so on. A typical mnemonic will consist of ten keys, but some can have up to twelve.
 
-Websites or systems that rely on mnemonics create new ones for each new user. The list is displayed to the user. They are then asked to copy it out.
+Websites or systems that rely on mnemonics create new ones for each new user. The list is displayed to the user, who is then asked to copy it out.
 
-Once the user confirms that they’ve copied their mnemonics key, they’re given a quick test. The system might ask what keys 1, 5, and 9 are - for example.
+Once the user confirms that they’ve copied their mnemonics key, they’re given a quick test. For example, the system might ask what keys 1, 5, and 9 are.
 
 ## Technologies Associated with Public and Private Keys
 
@@ -89,4 +89,5 @@ If an HTTPS symbol appears, it implies that an SSL/TLS is active for that specif
 |**Phishing Risks** |Vulnerable to social engineering attacks if keys are not protected |High risk if the mnemonic is exposed or forgotten |
 
 ## Conclusion
+
 Public-private keys and mnemonics are both relevant as security measures. They are a thing in the crypto world, as they help protect assets.
