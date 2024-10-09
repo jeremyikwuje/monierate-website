@@ -3,6 +3,7 @@ import type { PageData } from "./$types"
 import Money from "$lib/money";
 import { round, chain } from "mathjs"
 import { changeParam, friendlyDate } from "$lib/functions"
+	import ChangerRates from "$lib/components/ChangerRates.svelte";
 
 export let data: PageData;
 let changers = data.changers;
@@ -229,69 +230,9 @@ convertNow()
     </div>
 
     {#if pair_rates.length > 0}
-    <div id="more-rates" class="mt-16">
+    <div class="container mt-16 border border-none bg-white py-[10px] dark:bg-gray-900 dark:text-light dark:border-none w-full overflow-x-scroll md:overflow-x-hidden overflow-y-scroll md:overflow-y-hidden">
         <h2 class="mb-8 text-center text-2xl">Best {convertFrom} to {convertTo} rates</h2>
-        <div class="px-2 section px-2 overflow-x-scroll md:overflow-x-hidden">
-            <table class="table-auto overflow-x-scroll w-full text-sm text-left ">
-                <thead>
-                    <tr>
-                        <th scope="col" class="py-3 md:pl-0 font-bold font-bitter">
-                            Provider
-                        </th>
-                        <th scope="col" class="pl-6 pr-6 py-3 w-[40%] font-bold font-bitter text-right">
-                            Buy rate
-                        </th>
-                        <th scope="col" class="pl-6 pr-6 py-3 font-bold font-bitter text-right">
-                            Sell rate
-                        </th>
-                        <th scope="col" class="pl-6 py-3 font-bold font-bitter text-right pr-2 md:pr-4 whitespace-nowrap">
-                            Last updated
-                        </th>
-                    </tr>
-                </thead>
-                <tbody class="changers">
-                    {#each pair_rates as pair_rate, i }
-                        {#if pair_rate.changer_code != 'market'}
-                        <tr class="mb-4 border-t border-gray-200 dark:border-gray-700">
-                            <td>
-                                <a href="/converter/{pair_rate.changer_code}?Amount=1&From={convertFrom}&To={convertTo}" class="flex items-center">
-                                    <span class="changer-icon">
-                                        <img width="22px" height="22px" src="/icons/{changers[pair_rate.changer_code].icon}" class="rounded-full" alt="{changers[pair_rate.changer_code].name} icon">
-                                    </span>
-                                    <span class="changer-title">{changers[pair_rate.changer_code].name}</span>
-                                </a>
-                            </td>
-                            <td class="text-right pl-6 pr-4">
-                                <span class="changer-rate">
-                                    {#if Money.format(pair_rate.price_buy, 0) === "0"}
-                                    -
-                                    {:else}
-                                        ₦{Money.format(pair_rate.price_buy, 0)}
-                                    {/if}
-                                </span>
-                                <small class="changer-rate-base">per {unit_currency}</small>
-                            </td>
-                            <td class="text-right pl-6 pr-4">
-                                <span class="changer-rate">
-                                    {#if Money.format(pair_rate.price_sell, 0) === "0"}
-                                    -
-                                    {:else}
-                                        ₦{Money.format(pair_rate.price_sell, 0)}
-                                    {/if}
-                                </span>
-                                <small class="changer-rate-base">per {unit_currency}</small>
-                            </td>
-                            <td class="text-right py-2 pr-4 md:pr-4 whitespace-nowrap">
-                                {#if (pair_rate.updated_at) }
-                                    {friendlyDate(new Date(pair_rate.updated_at))}
-                                {/if}
-                            </td>
-                        </tr>
-                        {/if}
-                    {/each}
-                </tbody>
-            </table>
-        </div>
+        <ChangerRates rates={pair_rates} changers={changers} />
     </div>
     {/if}
 
@@ -387,7 +328,7 @@ convertNow()
 
 <style>
 .section {
-    @apply w-[95%] md:w-[70%] bg-white dark:bg-gray-900 shadow-lg rounded-lg px-8 py-4 mx-auto;
+    @apply w-[95%] md:w-[70%] bg-white dark:bg-gray-900 shadow-lg rounded-lg px-4 py-4 mx-auto;
 }
 
 .more-conversion {
@@ -420,12 +361,12 @@ table tr td:first-child, table thead th:first-child {
     @apply bg-transparent border border-black rounded-full w-[24px] h-[24px] mr-2;
 }
 .changer-title {
-    @apply font-semibold text-lg capitalize text-gray-800 dark:text-gray-300;
+    @apply font-semibold text-sm md:text-lg whitespace-nowrap capitalize text-gray-800 dark:text-gray-300;
 }
 .changer-rate-base {
     @apply text-gray-500 dark:text-gray-400;
 }
 .changer-rate {
-    @apply block font-semibold text-lg text-gray-800 dark:text-light;
+    @apply block font-semibold text-sm md:text-lg whitespace-nowrap text-gray-800 dark:text-light;
 }
 </style>
