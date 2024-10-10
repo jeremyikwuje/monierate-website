@@ -27,7 +27,7 @@
 		</div>
 		<!-- Title -->
 		<h1 class="mb-2 text-3xl font-extrabold leading-tight text-gray-900 lg:mb-2 lg:text-5xl dark:text-gray-300 dark:font-semibold leading-10 md:leading-10">{metadata.title}</h1>
-		<p class="text-gray-600 dark:text-gray-300 mt-4 text-lg">
+		<p class="text-gray-600 dark:text-gray-300 mt-4 text-sm">
 			{#if metadata.author }
 				<span class="mr-4">By <strong>{metadata.author}</strong></span>
 			{/if}
