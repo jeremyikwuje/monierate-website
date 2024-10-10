@@ -27,11 +27,17 @@
 		%sveltekit.head%
 	</head>
 	<body data-sveltekit-preload-data="tap">
+		<!-- Loading Indicator -->
+		<div id="loading-container" class="fixed top-0 left-0 w-full h-1 rounded-full" style="z-index: 9999;display: none;">
+			<div id="loading-bar" class="bg-blue-500 h-1 w-0 rounded-full" style="transition: 1s;"></div>
+		</div>
+
 		<div style="display: contents">%sveltekit.body%</div>
 
 		<script>
 			(adsbygoogle = window.adsbygoogle || []).push({});
 	    </script>
 		<script src="/index.js"></script>
+		<script src="/js/request-interceptor.js"></script>
 	</body>
 </html>
