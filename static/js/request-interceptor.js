@@ -7,7 +7,7 @@ class RequestInterceptor {
         this.trackProgress = trackProgress; // Optional parameter to track progress
         this.initFetchInterceptor();
         this.initXHRInterceptor();
-        this.initPageLoadProgress();
+        //this.initPageLoadProgress();
     }
 
     // Method to handle request status and invoke the callback
@@ -107,11 +107,8 @@ class RequestInterceptor {
                 } else if (document.readyState === 'interactive') {
                     loaderBar.style.width = '80%';
                 } else if (document.readyState === 'complete') {
-                    loaderBar.style.width = '100%';  // Complete load at 100%
-                    setTimeout(() => {
-                        loaderContainer.style.display = "none";
-                        loaderBar.style.width = "0%";
-                    }, (1000));
+                    loaderContainer.style.display = "none";
+                    loaderBar.style.width = "0%";
                     clearInterval(progressInterval);  // Stop interval once the page is fully loaded
                 }
             }, 20);  // Speed of progress increase (lower for faster progress)
@@ -120,21 +117,12 @@ class RequestInterceptor {
 }
 
 // Usage Example: Instantiate the class and pass a callback function with progress tracking enabled
-var hideContainerTimeout;
 new RequestInterceptor((status) => {
     if (!status.ended) {
         loaderContainer.style.display = "block";
     } else if (status.ended) {
-        try {
-            clearTimeout(hideContainerTimeout);
-        } catch(e){
-            //Catch unusual error
-        }
-        loaderBar.style.width = "100%";
-        hideContainerTimeout = setTimeout(() => {
-            loaderContainer.style.display = "none";
-            loaderBar.style.width = "0%";
-        }, (1000));
+        loaderContainer.style.display = "none";
+        loaderBar.style.width = "0%";
     }
     if (status.progress !== null) {
         if(!status.ended && status.progress === 100) {
