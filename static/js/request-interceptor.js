@@ -121,6 +121,7 @@ var loaderContainerTimeout;
 new RequestInterceptor((status) => {
     if (!status.ended) {
         loaderContainer.style.display = "block";
+        loaderBar.style.width = "40%";
     } else if (status.ended) {
         try {
             clearImmediate(loaderContainerTimeout);
