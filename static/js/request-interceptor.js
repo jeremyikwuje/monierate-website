@@ -117,12 +117,21 @@ class RequestInterceptor {
 }
 
 // Usage Example: Instantiate the class and pass a callback function with progress tracking enabled
+var loaderContainerTimeout;
 new RequestInterceptor((status) => {
     if (!status.ended) {
         loaderContainer.style.display = "block";
     } else if (status.ended) {
-        loaderContainer.style.display = "none";
-        loaderBar.style.width = "0%";
+        try {
+            clearImmediate(loaderContainerTimeout);
+        } catch(e){
+            //
+        }
+        loaderBar.style.width = "100%";
+        loaderContainerTimeout = setTimeout(()=>{
+            loaderContainer.style.display = "none";
+            loaderBar.style.width = "0%";
+        }, 200);
     }
     if (status.progress !== null) {
         if(!status.ended && status.progress === 100) {
