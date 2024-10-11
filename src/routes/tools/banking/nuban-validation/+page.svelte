@@ -1,17 +1,14 @@
 <script>
     import { browser } from "$app/environment";
 	import { onMount } from 'svelte';
-    import Choices from "choices.js";
 
     /** @type {import('./$types').PageServerData} */
     let fieldBank;
-    let accountNumber;
-
-    onMount(() => {
-        if (browser) {
-            const choice = new Choices('#field-bank');
-        }
-    });
+    let accountNumber = '';
+    let accountName = '';
+    let bankCode = '';
+    let bankName = '';
+    let accountType = '';
 
     const validateAccount = () => {
         console.log(fieldBank);
@@ -66,7 +63,7 @@
             </select>
         </div>
         <div class="py-8">
-            <button type="submit" class="button w-full" on:click={validateAccount}>Validate</button>
+            <button type="submit" class="button w-full" on:click={validateAccount}>Check Account</button>
         </div>
     </div>
 </main>
