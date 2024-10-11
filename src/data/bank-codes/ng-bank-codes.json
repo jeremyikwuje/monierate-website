@@ -1,0 +1,23 @@
+{
+  "zenithbank": {
+    "swift": [
+      "ZEBLNGLA"
+    ]
+  },
+  "gtbank": {
+    "swift": [
+      "GTBINGLA",
+      "GTBINGLAIFP"
+    ]
+  },
+  "uba": {
+    "swift": [
+      "UNAFNGLA"
+    ]
+  },
+  "standardchartered": {
+    "swift": [
+      "SCBLNL2A"
+    ]
+  }
+}
