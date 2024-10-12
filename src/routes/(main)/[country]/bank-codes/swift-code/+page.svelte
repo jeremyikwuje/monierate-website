@@ -26,43 +26,52 @@
 	</div>
 	
 	<!-- Posts -->
-	<div class="container">
+	<div class="container w-full">
 		<div class="border rounded-md bg-white py-[10px] shadow-t-md mb-16 dark:bg-gray-900 dark:text-light dark:border-none w-full min-h-[100vh] overflow-x-auto">
-			<table class="table-auto overflow-x-scroll w-full text-sm text-left">
-				<thead>
+			<div class="overflow-x-auto w-full">
+				<table class="table-auto w-full text-sm text-left">
+				  <thead>
 					<tr>
-						<th scope="col" class="pl-2 py-3 w-[50%] md:w-[25%] md:pl-4 font-bold font-bitter">
-							Bank
-						</th>
-						<th scope="col" class="pr-6 py-3 font-bold font-bitter text-right pr-2 md:pr-4 hidden md:table-cell">
-							SWIFT Code
-						</th>
-						<th scope="col" class="pl-6 py-3 font-bold font-bitter text-right pr-2 md:pr-4 md:w-[20%] whitespace-nowrap">
-							More
-						</th>
+					  <th scope="col" class="pl-2 py-3 w-[50%] md:w-[25%] md:pl-4 font-bold font-bitter">
+						Bank
+					  </th>
+					  <th scope="col" class="py-3 font-bold font-bitter text-right pr-2 md:pr-4">
+						City
+					  </th>
+					  <th scope="col" class="py-3 font-bold font-bitter text-right pr-2 md:pr-4">
+						SWIFT Code
+					  </th>
+					  <th scope="col" class="py-3 font-bold font-bitter text-right pr-2 md:pr-4 md:w-[20%]">
+						More
+					  </th>
 					</tr>
-				</thead>
-				<tbody class="banks">
+				  </thead>
+				  <tbody class="banks">
 					{#each Object.entries(banksData) as [bank, data]}
-					<tr class="mb-4 border-t border-gray-100 dark:border-gray-700">
-						<td class="pl-2 md:pl-4 w-[50%] md:w-[25%]">
-							<a href="/{countryCode}/bank-codes/swift-code/{data.id}" class="flex items-center" title="">
-								<span class="bank-icon">
-									<img width="22px" height="22px" src="/icons/{data.icon}" class="rounded-full" alt="{data.name} icon">
-								</span>
-								<span class="bank-title">{data.name}</span>
-							</a>
-						</td>
-						<td class="text-right pl-6 pr-6 hidden md:table-cell bank-codes">
-							{data.swift.codes ? data.swift.codes.join(', ') : ''}
-						</td>
-						<td class="text-right py-2 pr-2 md:pr-4 w-[100px]">
-							<a href="/{countryCode}/bank-codes/swift-code/{data.id}" class="inline-block p-2 border border-gray-300 text-black rounded-lg text-xs mr-2 font-semibold mb-2 dark:text-light whitespace-nowrap">more</a>
-						</td>
+					<tr class="border-t border-gray-100 dark:border-gray-700">
+					  <td class="pl-2 md:pl-4 w-[50%] md:w-[25%]">
+						<a href="/{countryCode}/bank-codes/swift-code/{data.id}" class="flex items-center" title="">
+						  <span class="bank-icon">
+							<img width="22px" height="22px" src="/icons/{data.icon}" class="rounded-full" alt="{data.name} icon">
+						  </span>
+						  <span class="bank-title ml-2">{data.name}</span>
+						</a>
+					  </td>
+					  <td class="text-right pr-4 md:pr-6 w-[20%] break-words">
+						{data.city ? data.city : ''}
+					  </td>
+					  <td class="text-right pr-4 md:pr-6 w-[20%] break-words">
+						{data.swift.codes ? data.swift.codes.join(', ') : ''}
+					  </td>
+					  <td class="text-right py-2 pr-2 md:pr-4 w-[100px]">
+						<a href="/{countryCode}/bank-codes/swift-code/{data.id}" class="inline-block p-2 border border-gray-300 text-black rounded-lg text-xs font-semibold mb-2 dark:text-light whitespace-nowrap">more</a>
+					  </td>
 					</tr>
 					{/each}
-				</tbody>
-			</table>
+				  </tbody>
+				</table>
+			  </div>
+			  
 		</div>
 	</div>
 </div>

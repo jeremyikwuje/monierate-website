@@ -19,5 +19,85 @@
     "swift": [
       "SCBLNL2A"
     ]
+  },
+  "accessbank": {
+    "swift": [
+      "ABNGNGLA"
+    ]
+  },
+  "firstbank": {
+    "swift": [
+      "FBNINGLA"
+    ]
+  },
+  "fidelitybank": {
+    "swift": [
+      "FBNINGLA"
+    ]
+  },
+  "sterlingbank": {
+    "swift": [
+      "STBINGLA"
+    ]
+  },
+  "wemabank": {
+    "swift": [
+      "WEMANGLA"
+    ]
+  },
+  "ecobank": {
+    "swift": [
+      "ECOCNGLL"
+    ]
+  },
+  "fcmb": {
+    "swift": [
+      "FCMBNGLA"
+    ]
+  },
+  "unionbank": {
+    "swift": [
+      "UNIONNGLA"
+    ]
+  },
+  "unitybank": {
+    "swift": [
+      "UNBKNGNG"
+    ]
+  },
+  "jaizbank": {
+    "swift": [
+      "JAZBNGLA"
+    ]
+  },
+  "polarisbank": {
+    "swift": [
+      "POLINGLA"
+    ]
+  },
+  "kudabank": {
+    "swift": [
+      "KUDANGLA"
+    ]
+  },
+  "rubiesbank": {
+    "swift": [
+      "RUBINGLA"
+    ]
+  },
+  "vbank": {
+    "swift": [
+      "VBNKNGLA"
+    ]
+  },
+  "titantrust": {
+    "swift": [
+      "TTBINGLA"
+    ]
+  },
+  "heritagebank": {
+    "swift": [
+      "HBNKNGLA"
+    ]
   }
 }

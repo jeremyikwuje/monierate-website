@@ -62,29 +62,29 @@
 						</h2>
 
 						<div class="space-y-4">
-							<div class="flex items-center justify-between border border-gray-800 rounded-lg p-4">
+							<div class="flex items-center justify-between border border-gray-300 dark:border-gray-800 rounded-lg p-4">
 								<div class="flex space-x-4">
 									<span class="text-sm font-medium text-gray-500 whitespace-nowrap">SWIFT CODE</span
 									>
-									<span class="text-sm font-semibold text-gray-400"
+									<span class="text-sm font-semibold text-gray-600 dark:text-gray-400"
 										>{bankInfo.swift.codes.join(', ')}</span
 									>
 								</div>
 							</div>
 
-							<div class="flex items-center justify-between border border-gray-800 rounded-lg p-4">
+							<div class="flex items-center justify-between border border-gray-300 dark:border-gray-800 rounded-lg p-4">
 								<div class="flex space-x-4">
 									<span class="text-sm font-medium text-gray-500">BANK</span>
-									<span class="text-sm font-semibold text-gray-400"
+									<span class="text-sm font-semibold text-gray-600 dark:text-gray-400"
 										>{bankInfo.name.toUpperCase()}</span
 									>
 								</div>
 							</div>
 
-							<div class="flex items-center justify-between border border-gray-800 rounded-lg p-4">
+							<div class="flex items-center justify-between border border-gray-300 dark:border-gray-800 rounded-lg p-4">
 								<div class="flex space-x-4">
 									<span class="text-sm font-medium text-gray-500">ADDRESS</span>
-									<span class="text-sm font-semibold text-gray-400">
+									<span class="text-sm font-semibold text-gray-600 dark:text-gray-400">
 										{bankInfo.address ? bankInfo.address.toUpperCase() : ''}
 									</span>
 								</div>
@@ -101,56 +101,56 @@
 						</h2>
 
 						<div class="space-y-4">
-							<div class="flex items-center justify-between border border-gray-800 rounded-lg p-4">
+							<div class="flex items-center justify-between border border-gray-300 dark:border-gray-800 rounded-lg p-4">
 								<div class="flex space-x-4">
 									<span class="text-sm font-medium text-gray-500 whitespace-nowrap">SWIFT CODE</span
 									>
-									<span class="text-sm font-semibold text-gray-400"
+									<span class="text-sm font-semibold text-gray-600 dark:text-gray-400"
 										>{bankInfo.swift.codes.join(', ')}</span
 									>
 								</div>
 							</div>
 
-							<div class="flex items-center justify-between border border-gray-800 rounded-lg p-4">
+							<div class="flex items-center justify-between border border-gray-300 dark:border-gray-800 rounded-lg p-4">
 								<div class="flex space-x-4">
 									<span class="text-sm font-medium text-gray-500">BANK</span>
-									<span class="text-sm font-semibold text-gray-400"
+									<span class="text-sm font-semibold text-gray-600 dark:text-gray-400"
 										>{bankInfo.name.toUpperCase()}</span
 									>
 								</div>
 							</div>
 
-							<div class="flex items-center justify-between border border-gray-800 rounded-lg p-4">
+							<div class="flex items-center justify-between border border-gray-300 dark:border-gray-800 rounded-lg p-4">
 								<div class="flex space-x-4">
 									<span class="text-sm font-medium text-gray-500">ADDRESS</span>
-									<span class="text-sm font-semibold text-gray-400">
+									<span class="text-sm font-semibold text-gray-600 dark:text-gray-400">
 										{bankInfo.address ? bankInfo.address.toUpperCase() : ''}
 									</span>
 								</div>
 							</div>
 
-							<div class="flex items-center justify-between border border-gray-800 rounded-lg p-4">
+							<div class="flex items-center justify-between border border-gray-300 dark:border-gray-800 rounded-lg p-4">
 								<div class="flex space-x-4">
-									<span class="text-sm font-medium text-gray-500">City</span>
-									<span class="text-sm font-semibold text-gray-400">
+									<span class="text-sm font-medium text-gray-500">CITY</span>
+									<span class="text-sm font-semibold text-gray-600 dark:text-gray-400">
 										{bankInfo.city ? bankInfo.city.toUpperCase() : ''}
 									</span>
 								</div>
 							</div>
 
-							<div class="flex items-center justify-between border border-gray-800 rounded-lg p-4">
+							<div class="flex items-center justify-between border border-gray-300 dark:border-gray-800 rounded-lg p-4">
 								<div class="flex space-x-4">
-									<span class="text-sm font-medium text-gray-500">ADDRESS</span>
-									<span class="text-sm font-semibold text-gray-400">
+									<span class="text-sm font-medium text-gray-500">BRANCH</span>
+									<span class="text-sm font-semibold text-gray-600 dark:text-gray-400">
 										{bankInfo.branch ? bankInfo.branch.toUpperCase() : ''}
 									</span>
 								</div>
 							</div>
 
-							<div class="flex items-center justify-between border border-gray-800 rounded-lg p-4">
+							<div class="flex items-center justify-between border border-gray-300 dark:border-gray-800 rounded-lg p-4">
 								<div class="flex space-x-4">
-									<span class="text-sm font-medium text-gray-500">ADDRESS</span>
-									<span class="text-sm font-semibold text-gray-400">
+									<span class="text-sm font-medium text-gray-500">COUNTRY</span>
+									<span class="text-sm font-semibold text-gray-600 dark:text-gray-400">
 										{countryName ? countryName.toUpperCase() : ''}
 									</span>
 								</div>
@@ -159,47 +159,49 @@
 					</div>
 				</div>
 
-				<div class="container overflow-x-auto">
+				<div class="container">
 					<h2 class="text-lg font-bold font-bitter text-center pb-10 pt-5">
 						{bankInfo.name.toUpperCase()} SWIFT CODE DETAILS
 					</h2>
-					<table class="table-auto w-full text-sm md:text-base text-center">
-						<thead class="whitespace-nowrap">
-							<tr class="text-gray-800 dark:text-gray-300">
-								<th scope="col" class="py-2 px-2 font-bold text-base md:text-xl text-center">
-									SWIFT
-								</th>
-								<th scope="col" class="py-2 px-2 font-bold text-base md:text-xl text-center">
-									Bank Code
-								</th>
-								<th scope="col" class="py-2 px-2 font-bold text-base md:text-xl text-center">
-									Country Code
-								</th>
-								<th scope="col" class="py-2 px-2 font-bold text-base md:text-xl text-center">
-									Location Code
-								</th>
-								<th scope="col" class="py-2 px-2 font-bold text-base md:text-xl text-center">
-									Branch Code
-								</th>
-							</tr>
-						</thead>
-						<tbody class="banks">
-							{#each bankInfo.swift.details as code}
-								<tr class="border-t border-gray-100 dark:border-gray-700">
-									<td
-										class="py-2 px-2 text-xs md:text-sm text-center text-gray-800 dark:text-gray-400"
-										>{code.codes}</td
-									>
-									<td class="py-2 px-2 text-xs md:text-sm text-center">{code.details.bank}</td>
-									<td class="py-2 px-2 text-xs md:text-sm text-center">{code.details.country}</td>
-									<td class="py-2 px-2 text-xs md:text-sm text-center">{code.details.location}</td>
-									<td class="py-2 px-2 text-xs md:text-sm text-center"
-										>{code.details.branch ? code.details.branch : ''}</td
-									>
+					<div class="overflow-x-auto">
+						<table class="table-auto w-full text-sm md:text-base text-center">
+							<thead class="whitespace-nowrap">
+								<tr class="text-gray-800 dark:text-gray-300">
+									<th scope="col" class="py-2 px-2 font-bold text-base md:text-xl text-center">
+										SWIFT
+									</th>
+									<th scope="col" class="py-2 px-2 font-bold text-base md:text-xl text-center">
+										Bank Code
+									</th>
+									<th scope="col" class="py-2 px-2 font-bold text-base md:text-xl text-center">
+										Country Code
+									</th>
+									<th scope="col" class="py-2 px-2 font-bold text-base md:text-xl text-center">
+										Location Code
+									</th>
+									<th scope="col" class="py-2 px-2 font-bold text-base md:text-xl text-center">
+										Branch Code
+									</th>
 								</tr>
-							{/each}
-						</tbody>
-					</table>
+							</thead>
+							<tbody class="banks">
+								{#each bankInfo.swift.details as code}
+									<tr class="border-t border-gray-100 dark:border-gray-700">
+										<td
+											class="py-2 px-2 text-xs md:text-sm text-center text-gray-800 dark:text-gray-400"
+											>{code.codes}</td
+										>
+										<td class="py-2 px-2 text-xs md:text-sm text-center">{code.details.bank}</td>
+										<td class="py-2 px-2 text-xs md:text-sm text-center">{code.details.country}</td>
+										<td class="py-2 px-2 text-xs md:text-sm text-center">{code.details.location}</td>
+										<td class="py-2 px-2 text-xs md:text-sm text-center"
+											>{code.details.branch ? code.details.branch : ''}</td
+										>
+									</tr>
+								{/each}
+							</tbody>
+						</table>
+					</div>
 				</div>
 			</div>
 		</div>

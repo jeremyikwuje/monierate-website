@@ -2,76 +2,177 @@
   "accessbank": {
     "name": "Access Bank",
     "link": "https://www.accessbankplc.com",
-    "icon": "accessbank.svg"
+    "icon": "accessbank.svg",
+    "address": "Plot 999c, Danmole Street, Victoria Island",
+    "city": "Lagos",
+    "branch": "Victoria Island Branch"
   },
   "zenithbank": {
     "name": "Zenith Bank",
     "link": "https://www.zenithbank.com",
-    "icon": "zenithbank.png"
+    "icon": "zenithbank.png",
+    "address": "87, Ajose Adeogun Street, Victoria Island",
+    "city": "Lagos",
+    "branch": "Victoria Island Branch"
   },
   "uba": {
     "name": "UBA",
     "link": "https://www.ubagroup.com",
-    "icon": "uba.png"
+    "icon": "uba.png",
+    "address": "57 Marina, Lagos",
+    "city": "Lagos",
+    "branch": "Marina Branch"
   },
   "firstbank": {
     "name": "First Bank",
     "link": "https://www.firstbanknigeria.com",
-    "icon": "firstbank.svg"
+    "icon": "firstbank.svg",
+    "address": "35 Marina, Lagos",
+    "city": "Lagos",
+    "branch": "Marina Branch"
   },
   "gtbank": {
     "name": "GT Bank",
     "link": "https://www.gtbank.com",
-    "icon": "gtbank.png"
+    "icon": "gtbank.png",
+    "address": "635, Akin Adesola Street, Victoria Island",
+    "city": "Lagos",
+    "branch": "Victoria Island Branch"
   },
   "fidelitybank": {
     "name": "Fidelity Bank",
     "link": "https://www.fidelitybank.ng",
-    "icon": "fidelitybank.svg"
+    "icon": "fidelitybank.svg",
+    "address": "2, Akin Adesola Street, Victoria Island",
+    "city": "Lagos",
+    "branch": "Victoria Island Branch"
   },
   "opay": {
     "name": "Opay",
     "link": "https://www.opayweb.com",
-    "icon": "opay.png"
+    "icon": "opay.png",
+    "address": "1, Oju Olobun Close, Off Adetokunbo Ademola Street",
+    "city": "Lagos",
+    "branch": "Victoria Island Branch"
   },
   "sterlingbank": {
     "name": "Sterling Bank",
     "link": "https://sterling.ng",
-    "icon": "sterlingbank.png"
+    "icon": "sterlingbank.png",
+    "address": "20, Adebayo Doherty Street, Lekki Phase 1",
+    "city": "Lagos",
+    "branch": "Lekki Branch"
   },
   "wemabank": {
     "name": "Wema Bank",
     "link": "https://wemabank.com",
-    "icon": "wemabank.png"
+    "icon": "wemabank.png",
+    "address": "54, Eko Akete Street, Lagos",
+    "city": "Lagos",
+    "branch": "Ikeja Branch"
   },
   "keystonebank": {
     "name": "Keystone Bank",
     "link": "https://www.keystonebankng.com",
-    "icon": "keystonebank.png"
+    "icon": "keystonebank.png",
+    "address": "27, Adeola Odeku Street, Victoria Island",
+    "city": "Lagos",
+    "branch": "Victoria Island Branch"
   },
   "ecobank": {
     "name": "Ecobank",
     "link": "https://ecobank.com",
-    "icon": "ecobank.png"
+    "icon": "ecobank.png",
+    "address": "1, Akin Adesola Street, Victoria Island",
+    "city": "Lagos",
+    "branch": "Victoria Island Branch"
   },
   "fcmb": {
     "name": "FCMB",
     "link": "https://www.fcmb.com/un",
-    "icon": "fcmb.svg"
+    "icon": "fcmb.svg",
+    "address": "1, Ajose Adeogun Street, Victoria Island",
+    "city": "Lagos",
+    "branch": "Victoria Island Branch"
   },
   "unionbank": {
     "name": "Union Bank",
     "link": "https://www.unionbankng.com",
-    "icon": "unionbank.png"
+    "icon": "unionbank.png",
+    "address": "16, Akin Adesola Street, Victoria Island",
+    "city": "Lagos",
+    "branch": "Victoria Island Branch"
   },
   "unitybank": {
     "name": "Unity Bank",
     "link": "https://www.unitybankng.com",
-    "icon": "unitybank.svg"
+    "icon": "unitybank.png",
+    "address": "25, Adebayo Doherty Street, Lekki Phase 1",
+    "city": "Lagos",
+    "branch": "Lekki Branch"
   },
   "standardchartered": {
     "name": "Standard Chartered Bank",
     "link": "https://www.sc.com/ng",
-    "icon": "standardchartered.png"
+    "icon": "standardchartered.png",
+    "address": "15, Old Ojo Road, Apapa",
+    "city": "Lagos",
+    "branch": "Apapa Branch"
+  },
+  "jaizbank": {
+    "name": "Jaiz Bank",
+    "link": "https://www.jaizbankplc.com",
+    "icon": "jaizbank.png",
+    "address": "1, Adamawa Street, Off NNPC Road, Area 11",
+    "city": "Abuja",
+    "branch": "Area 11 Branch"
+  },
+  "polarisbank": {
+    "name": "Polaris Bank",
+    "link": "https://www.polarisbanklimited.com",
+    "icon": "polarisbank.png",
+    "address": "2, Bode Thomas Street, Surulere",
+    "city": "Lagos",
+    "branch": "Surulere Branch"
+  },
+  "kudabank": {
+    "name": "Kuda Bank",
+    "link": "https://www.kuda.com",
+    "icon": "kudabank.png",
+    "address": "1, Kuda House, Lagos",
+    "city": "Lagos",
+    "branch": "Lagos Branch"
+  },
+  "rubiesbank": {
+    "name": "Rubies Bank",
+    "link": "https://www.rubies.ng",
+    "icon": "rubiesbank.png",
+    "address": "26, Adebayo Doherty Street, Lekki Phase 1",
+    "city": "Lagos",
+    "branch": "Lekki Branch"
+  },
+  "vbank": {
+    "name": "VBank",
+    "link": "https://vbank.ng",
+    "icon": "vbank.jpg",
+    "address": "14, Saka Tinubu Street, Victoria Island",
+    "city": "Lagos",
+    "branch": "Victoria Island Branch"
+  },
+  "titantrust": {
+    "name": "Titan Trust Bank",
+    "link": "https://www.titantrustbank.com",
+    "icon": "titantrust.png",
+    "address": "1, Akin Adesola Street, Victoria Island",
+    "city": "Lagos",
+    "branch": "Victoria Island Branch"
+  },
+  "heritagebank": {
+    "name": "Heritage Bank",
+    "link": "https://www.hbng.com",
+    "icon": "heritagebank.png",
+    "address": "36, Akin Adesola Street, Victoria Island",
+    "city": "Lagos",
+    "branch": "Victoria Island Branch"
   }
 }
