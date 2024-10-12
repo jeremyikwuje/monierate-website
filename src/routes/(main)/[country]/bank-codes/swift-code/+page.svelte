@@ -2,8 +2,6 @@
 	/** @type {import('./$types').PageServerData} */
 	export let data;
 
-	let banks = data.banks;
-	let swiftCodes = data.swiftCodes;
 	let countryName = data.countryName;
 	let countryCode = data.countryCode;
 	let banksData = data.banksData;
@@ -47,7 +45,7 @@
 					</tr>
 				  </thead>
 				  <tbody class="banks">
-					{#each Object.entries(banksData) as [bank, data]}
+					{#each Object.values(banksData) as data}
 					<tr class="border-t border-gray-100 dark:border-gray-700">
 					  <td class="pl-2 md:pl-4 w-[50%] md:w-[25%]">
 						<a href="/{countryCode}/bank-codes/swift-code/{data.id}" class="flex items-center" title="">
@@ -81,19 +79,10 @@
         @apply dark:text-gray-300 text-black
     }
 
-    .bank {
-        @apply flex justify-between items-center py-2 border-b border-gray-200;
-    }
-    .bank:last-child {
-        @apply border-b-0
-    }
     .bank-icon {
         @apply bg-transparent border border-black rounded-full w-[24px] h-[24px] mr-2;
     }
     .bank-title {
         @apply font-semibold md:text-lg capitalize text-gray-800 dark:text-gray-300 whitespace-nowrap;
-    }
-	.bank-codes {
-        @apply block font-semibold text-gray-800 dark:text-light whitespace-nowrap;
     }
 </style>
