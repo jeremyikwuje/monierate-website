@@ -1,5 +1,4 @@
 <script lang="ts">
-	/** @type {import('./$types').PageServerData} */
 	export let data;
 
 	let bankInfo = data.bankInfo;
