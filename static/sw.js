@@ -1,4 +1,4 @@
-const staticCacheName = 'static-v1'; // Current cache name
+const staticCacheName = 'static-v1.00'; // Current cache name
 
 // Function to cache resources
 async function cacheResources(resources) {
