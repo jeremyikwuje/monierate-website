@@ -3,6 +3,8 @@
 
   export let rates;
   export let changers;
+  export let from;
+  export let to;
 </script>
 
 <table class="table-auto overflow-x-scroll overflow-y-scroll w-full text-sm text-left">
@@ -33,7 +35,7 @@
                     { i + 1 }
                 </th>
                 <td>
-                    <a href="/converter/{rate.changer_code}?Amount=1&From=USD&To=NGN" class="flex items-center" title="{changers[rate.changer_code].name} dollar to naira rate.">
+                    <a href="/converter/{rate.changer_code}?Amount=1&From={from}&To={to}" class="flex items-center" title="{changers[rate.changer_code].name} dollar to naira rate.">
                         <span class="changer-icon">
                             <img width="22px" height="22px" src="/icons/{changers[rate.changer_code].icon}" class="rounded-full" alt="{changers[rate.changer_code].name} icon">
                         </span>

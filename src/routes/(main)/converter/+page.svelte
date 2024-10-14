@@ -232,7 +232,7 @@ convertNow()
     {#if pair_rates.length > 0}
     <div class="container mt-16 border border-none bg-white py-[10px] dark:bg-gray-900 dark:text-light dark:border-none w-full overflow-x-scroll md:overflow-x-hidden overflow-y-scroll md:overflow-y-hidden">
         <h2 class="mb-8 text-center text-2xl">Best {convertFrom} to {convertTo} rates</h2>
-        <ChangerRates rates={pair_rates} changers={changers} />
+        <ChangerRates rates={pair_rates} changers={changers} from={convertFrom} to={convertTo} />
     </div>
     {/if}
 
