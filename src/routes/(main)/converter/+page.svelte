@@ -107,13 +107,13 @@ async function getMoreConversions() {
 }
 
 function sortRates(rates: any) {
-    // sort rates in decending order by price_buy;
-    rates.sort((a, b) => a.price_buy - b.price_buy);
-    // filter out rate with price_buy as 0
-    const filtered_non_zero_rates = rates.filter((rate) => rate.price_buy > 0);
-    const filtered_zero_rates = rates.filter((rate) => rate.price_buy <= 0);
+    // sort rates in decending order by price_sell;
+    rates.sort((a, b) => a.price_sell - b.price_sell);
+    // filter out rate with price_sell as 0
+    const filtered_non_zero_rates = rates.filter((rate) => rate.price_sell > 0);
+    const filtered_zero_rates = rates.filter((rate) => rate.price_sell <= 0);
     // soirt rates in descending order by price_buy
-    filtered_zero_rates.sort((a, b) => b.price_sell - a.price_sell);
+    filtered_zero_rates.sort((a, b) => b.price_buy - a.price_buy);
     // merge both rates
     rates = filtered_non_zero_rates.concat(filtered_zero_rates);
 
