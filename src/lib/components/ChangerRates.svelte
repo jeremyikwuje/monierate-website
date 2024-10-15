@@ -17,10 +17,7 @@
                 Provider
             </th>
             <th scope="col" class="pl-16 md:pl-6 pr-6 py-3 font-bold font-bitter text-right">
-                Buy <span class="hidden md:inline">Price</span>
-            </th>
-            <th scope="col" class="pl-6 pr-6 py-3 font-bold font-bitter text-right">
-                Sell <span class="hidden md:inline">Price</span>
+                Rate
             </th>
             <th scope="col" class="pl-6 py-3 font-bold font-bitter text-right pr-2 md:pr-4 whitespace-nowrap">
                 Last updated
@@ -41,16 +38,6 @@
                         </span>
                         <span class="changer-title">{changers[rate.changer_code].name}</span>
                     </a>
-                </td>
-                <td class="text-right pl-6 pr-6">
-                    <span class="changer-rate">
-                        {#if Math.round(rate.price_buy) === 0}
-                            -
-                        {:else}
-                            ₦{Math.round(rate.price_buy)}
-                        {/if}
-                    </span>
-                    <small class="changer-rate-base">per $1</small>
                 </td>
                 <td class="text-right pl-6 pr-6">
                     <span class="changer-rate">
