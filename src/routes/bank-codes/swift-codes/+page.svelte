@@ -25,7 +25,6 @@
 	let cities: string[] = [];
 	let bankData: Record<string, { name: string; city: string; swift: string }> = {};
 
-	// Load banks for the selected country
     async function loadBanks() {
         if (!selectedCountry) return;
 
@@ -33,7 +32,7 @@
             const Banks = await import(`../../../data/banks/${selectedCountry.toLowerCase()}-banks.json`);
             bankData = Banks.default || Banks;
             banks = Object.keys(bankData);
-            cities = []; // Reset cities until bank is selected
+            cities = []; 
             selectedBank = '';
             selectedCity = '';
         } catch (error) {
@@ -41,7 +40,6 @@
         }
     }
 
-	// Load cities for the selected bank
 	function loadCities() {
 		if (!selectedBank || !bankData[selectedBank]) {
 			console.error('Invalid bank selection or bank data unavailable.');
@@ -51,7 +49,6 @@
 		selectedCity = '';
 	}
 
-	// Redirect based on user selections
 	function findSwiftCode() {
 		if (!selectedCountry) {
 			alert('Please select a country.');
