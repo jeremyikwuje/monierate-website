@@ -43,13 +43,17 @@ export const load: PageLoad = async ({ params }) => {
             ...bankData,
             swift: {
                 codes: swiftCodesData,
-                details: swiftCodesData.length > 0 ? parsedCodes : null
+                details: (swiftCodesData.length > 0) ? parsedCodes : null
             }
         };
+
+        if (!(swiftCodesData.length > 0)) {
+            throw error(404, `No SWIFT code for selected bank.`);
+        }
 
         return { bankInfo, countryName, countryCode };
 
     } catch (e) {
-        throw error(404, `Could not find bank codes for ${params.country}`);
+        throw error(404, `Could not find SWIFT code for selected bank.`);
     }
 };
