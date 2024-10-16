@@ -1,0 +1,63 @@
+{
+    "commercial_bank": {
+      "swift": [
+        "GHCBGHAC"
+      ]
+    },
+    "ecobank": {
+      "swift": [
+        "ECOCGHAC"
+      ]
+    },
+    "absa": {
+      "swift": [
+        "BARCGHAC"
+      ]
+    },
+    "stanbic": {
+      "swift": [
+        "SBICGHAC"
+      ]
+    },
+    "fidelity_bank": {
+      "swift": [
+        "FBLIGHAC"
+      ]
+    },
+    "zenith_bank": {
+      "swift": [
+        "ZEIBGHAC"
+      ]
+    },
+    "uba": {
+      "swift": [
+        "UNAFGHAC"
+      ]
+    },
+    "calbank": {
+      "swift": [
+        "CALSCHAC"
+      ]
+    },
+    "gtbank": {
+      "swift": [
+        "GTBIGHAC"
+      ]
+    },
+    "access_bank": {
+      "swift": [
+        "ABNGGHAC"
+      ]
+    },
+    "societe_generale": {
+      "swift": [
+        "SOGEGHAC"
+      ]
+    },
+    "republic_bank": {
+      "swift": [
+        "HBLIGHAC"
+      ]
+    }
+  }
+  
