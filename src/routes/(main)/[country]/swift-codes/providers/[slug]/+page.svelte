@@ -14,7 +14,7 @@
 	<meta property="og:description" content="Get all {countryName} Bank SWIFT codes." />
 	<meta
 		property="og:url"
-		content="https://monierate.com/{countryCode}/bank-codes/swift-code/{bankInfo.id}"
+		content="https://monierate.com/{countryCode}/swift-code/{bankInfo.id}"
 	/>
 </svelte:head>
 
@@ -47,7 +47,7 @@
 							class="bg-transparent border-none text-gray-800 dark:text-gray-300 focus:outline-none w-full px-5"
 						/>
 						<button
-							class="bg-transparent text-white underline dark:text-gray-300 px-4 py-2 rounded-md font-medium focus:outline-none focus:ring-2 focus:ring-gray-700"
+							class="bg-transparent text-gray-800 dark:text-gray-300 underline px-4 py-2 rounded-md font-medium focus:outline-none focus:ring-2 focus:ring-gray-700"
 							on:click={() => navigator.clipboard.writeText(bankInfo.swift.codes.join(', '))}
 						>
 							Copy
@@ -90,8 +90,10 @@
 
 					<div class="pt-8">
 						<p class="inline-block border border-gray-200 rounded-md dark:border-gray-700 p-5">
-							This SWIFT detail is for {bankInfo.name}
-							{countryName}.
+							This SWIFT detail <strong>{bankInfo.swift.codes.join(', ')}</strong> is for {bankInfo.name.toUpperCase()}
+							{#if !bankInfo.name.includes(countryName)}
+							in {countryName.toUpperCase()}
+							{/if}
 						</p>
 					</div>
 				</div>
@@ -101,7 +103,7 @@
 
 	<div class="container">
 		<div
-			class="border rounded-md bg-white py-4 shadow-md dark:bg-gray-900 dark:text-light dark:border-none"
+			class="bg-white py-4 dark:bg-gray-900 dark:text-light dark:border-none"
 		>
 			<div class="p-4">
 				<div class="flex flex-col md:flex-row md:space-x-8 justify-center items-start">
@@ -175,10 +177,14 @@
 
 					<!-- Second List (Right) -->
 					<div
-						class="flex-grow md:basis-2/3 p-6 bg-white border rounded-md shadow-t-md dark:bg-gray-900 dark:text-light dark:border-none px-0 md:px-16"
+						class="flex-grow md:basis-2/3 p-6 bg-white rounded-md shadow-t-md dark:bg-gray-900 dark:text-light dark:border-none px-0 md:px-16"
 					>
 						<h2 class="text-lg md:text-3xl font-normal mb-4">
-							{bankInfo.name.toUpperCase()} SWIFT Code Details
+							{bankInfo.name.toUpperCase()} 
+							{#if !bankInfo.name.includes(countryName)}
+							in {countryName.toUpperCase()}
+							{/if}
+							 SWIFT Code Details
 						</h2>
 						<p class="text-dark dark:text-gray-300">
 							A SWIFT/BIC is an 8-11 character code that identifies your country, city, bank, and

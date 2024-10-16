@@ -30,7 +30,7 @@
         if (!selectedCountry) return;
 
         try {
-            const Banks = await import(`../../../../../data/banks/${selectedCountry.toLowerCase()}-banks.json`);
+            const Banks = await import(`../../../../data/banks/${selectedCountry.toLowerCase()}-banks.json`);
             bankData = Banks.default || Banks;
             banks = Object.keys(bankData);
             cities = []; 
@@ -56,7 +56,7 @@
 			return;
 		}
 
-		let url = `/${selectedCountry.toLowerCase()}/bank-codes/swift-codes/providers`;
+		let url = `/${selectedCountry.toLowerCase()}/swift-codes/providers`;
 
 		if (selectedBank) {
 			url += `/${selectedBank.toLowerCase()}`;
@@ -91,10 +91,12 @@
 </svelte:head>
 
 <div class="container">
-	<h1 class="text-2xl md:text-4xl mb-2 text-center mb-8">Looking for SWIFT code in Africa?</h1>
+	<h1 class="text-2xl md:text-4xl text-center mb-4 md:mb-8">SWIFT/BANK codes in Africa</h1>
 	
 	<div class="select-form section flex justify-center items-center mb-32">
 		<div class="w-full">
+			<span class="block text-xl md:text-2xl font-bold mb-4 text-center">Find a SWIFT code</span>
+			<p class="text-sm md:text-base text-gray-500 mb-8 md:mb-8 text-center">Just select the african country and bank below.</p>
 			<div class="block md:flex md:justify-between md:items-center">
 				<!-- Select Country -->
 				<span class="block md:w-[30%]">
@@ -139,8 +141,8 @@
 				</span>
 			</div>
 	
-			<div class="mt-4">
-				<button class="button w-full md:w-[20%]" on:click={findSwiftCode}>Find SWIFT Code</button>
+			<div class="mt-4 text-center">
+				<button class="button w-full md:w-auto py-4" on:click={findSwiftCode}>Find SWIFT Code</button>
 			</div>
 		</div>
 	</div>
@@ -164,13 +166,13 @@
 			<div class="block md:flex md:items-center md:flex-wrap">
 				{#each Object.entries(countries) as [code, name]}
 					<a
-						href="/{code.toLowerCase()}/bank-codes/swift-codes/providers"
+						href="/{code.toLowerCase()}/swift-codes/providers"
 						class="inline-block w-[100%] md:w-[22%] shadow-md rounded-lg border border-gray-100 dark:border-gray-700 text-black dark:text-white mr-8 last-child:mr-0 p-4 mb-4"
 					>
 						<span class="flex items-center">
 							<span
 								class="inline-block w-[32px] h-[32px] rounded-full bg-no-repeat bg-cover border border-black bg-black-200 mr-4"
-								style="background-image: url('https://wise.com/public-resources/assets/flags/rectangle/{code.toLowerCase()}.png');"
+								style="background-image: url('https://raw.githubusercontent.com/monierate/asset-icons/refs/heads/main/country-flags-4x3-svg/{code.toLowerCase()}.svg');"
 							/>
 							<span>{name}</span>
 						</span>
