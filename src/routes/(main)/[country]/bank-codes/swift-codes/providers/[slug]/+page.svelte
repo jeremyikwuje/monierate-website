@@ -56,7 +56,7 @@
 				</div>
 			</div>
 			<p class="py-5">
-				Copy the SWIFT code above when making SWIFT payments to our Bank domiciliary account.
+				Copy the SWIFT code above only when making SWIFT payments to your {bankInfo.name} account in {countryName}.
 			</p>
 		</div>
 	</div>

@@ -18,7 +18,7 @@
 	<meta property="og:type" content="website" />
 	<meta property="og:title" content="{countryName} SWIFT Codes" />
 	<meta property="og:description" content="Get all {countryName} Bank SWIFT codes." />
-	<meta property="og:url" content="https://monierate.com/{countryCode}/bank-codes/swift-code" />
+	<meta property="og:url" content="https://monierate.com/{countryCode}/bank-codes/swift-codes/providers" />
 </svelte:head>
 
 <div class="mb-8">
@@ -40,6 +40,9 @@
 							<th scope="col" class="pl-2 py-3 w-[50%] md:w-[25%] md:pl-4 font-bold font-bitter">
 								Bank
 							</th>
+							<th scope="col" class="py-3 w-[10%] text-right md:w-[25%] md:pl-4 font-bold font-bitter">
+								City
+							</th>
 							<th scope="col" class="py-3 font-bold font-bitter text-right pr-2 md:pr-4">
 								SWIFT Code
 							</th>
@@ -50,7 +53,7 @@
 							<tr class="border-t border-gray-100 dark:border-gray-700">
 								<td class="pl-2 md:pl-4 w-[50%] md:w-[25%] py-3">
 									<a
-										href="/{countryCode}/bank-codes/swift-code/{data.id}"
+										href="/{countryCode}/bank-codes/swift-codes/providers/{data.id}"
 										class="flex items-center"
 										title=""
 									>
@@ -66,9 +69,12 @@
 										<span class="bank-title ml-2">{data.name}</span>
 									</a>
 								</td>
+								<td class="text-right w-[20%] break-words py-3">
+								    {data.city ? data.city : ''}
+								</td>
 								<td class="text-right pr-4 md:pr-6 w-[20%] break-words py-3">
 									<a
-										href="/{countryCode}/bank-codes/swift-code/{data.id}"
+										href="/{countryCode}/bank-codes/swift-codes/providers/{data.id}"
 										class="text-decoration underline bank-code"
 										title=""
 									>

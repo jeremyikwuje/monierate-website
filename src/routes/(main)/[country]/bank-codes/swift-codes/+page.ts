@@ -6,21 +6,20 @@ type GroupedCountries = { [letter: string]: Countries };
 import { error } from '@sveltejs/kit';
 import * as CountriesData from '$data/countries.json';
 import { validCountryKeys } from './validCountryKeys'; // Import the valid country keys (Countries to be listed)
+import type { PageLoad } from './$types';
 
-export const load = async () => {
+export const load: PageLoad = async ({ params }) => {
+    const countryCode = params.country;
+
     try {
         const countries: Countries = CountriesData as Countries;
+        const sortedCountries = Object.entries(countries)
+            .filter(([code, name]) => validCountryKeys.includes(code) && typeof name === 'string')
+            .sort(([, nameA], [, nameB]) => nameA.localeCompare(nameB));
 
-        const groupedByAlpha: GroupedCountries = Object.entries(countries).reduce(
+        // Step 2: Group the countries by their first letter.
+        const groupedByAlpha: GroupedCountries = sortedCountries.reduce(
             (acc, [code, name]) => {
-                if (!validCountryKeys.includes(code)) {
-                    return acc;
-                }
-
-                if (typeof name !== 'string') {
-                    return acc;
-                }
-
                 const firstLetter = name.charAt(0).toUpperCase();
 
                 if (!firstLetter.match(/[A-Z]/)) {
@@ -37,6 +36,7 @@ export const load = async () => {
 
         return {
             countries: groupedByAlpha,
+            countryCode,
         };
     } catch (e) {
         console.error('Error loading countries:', e);

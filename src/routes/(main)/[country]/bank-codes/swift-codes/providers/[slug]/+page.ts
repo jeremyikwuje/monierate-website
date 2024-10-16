@@ -6,9 +6,9 @@ export const load: PageLoad = async ({ params }) => {
         const countryCode = params.country;
         const bankID = params.slug;
 
-        const Banks = await import(`../../../../../../data/banks/${countryCode}-banks.json`);
-        const SwiftCodes = await import(`../../../../../../data/bank-codes/${countryCode}-bank-codes.json`);
-        const Countries = await import(`../../../../../../data/countries.json`);
+        const Banks = await import(`../../../../../../../data/banks/${countryCode}-banks.json`);
+        const SwiftCodes = await import(`../../../../../../../data/bank-codes/${countryCode}-bank-codes.json`);
+        const Countries = await import(`../../../../../../../data/countries.json`);
 
         const banks = JSON.parse(JSON.stringify(Banks.default));
         const swiftCodes = JSON.parse(JSON.stringify(SwiftCodes.default));

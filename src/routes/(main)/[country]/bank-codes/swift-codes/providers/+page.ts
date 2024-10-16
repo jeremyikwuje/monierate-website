@@ -23,9 +23,9 @@ export const load: PageLoad = async ({ params }) => {
 
 	try {
 		const countryCode = params.country;
-		const Banks = await import(`../../../../../data/banks/${countryCode}-banks.json`);
-		const SwiftCodes = await import(`../../../../../data/bank-codes/${countryCode}-bank-codes.json`);
-		const Countries = await import(`../../../../../data/countries.json`);
+		const Banks = await import(`../../../../../../data/banks/${countryCode}-banks.json`);
+		const SwiftCodes = await import(`../../../../../../data/bank-codes/${countryCode}-bank-codes.json`);
+		const Countries = await import(`../../../../../../data/countries.json`);
 
 		const banks: Record<string, Omit<BankData, 'id' | 'swift'>> = JSON.parse(JSON.stringify(Banks.default));
 		const swiftCodes: Record<string, { swift: string[] }> = JSON.parse(JSON.stringify(SwiftCodes.default));

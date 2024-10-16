@@ -2,6 +2,7 @@
 	import { goto } from '$app/navigation';
 	export let data;
 	let groupedByAlpha = data.countries;
+	let countryCode = data.countryCode;
 
 	function scrollToHash(event: MouseEvent) {
 		event.preventDefault();
@@ -29,7 +30,7 @@
         if (!selectedCountry) return;
 
         try {
-            const Banks = await import(`../../../data/banks/${selectedCountry.toLowerCase()}-banks.json`);
+            const Banks = await import(`../../../../../data/banks/${selectedCountry.toLowerCase()}-banks.json`);
             bankData = Banks.default || Banks;
             banks = Object.keys(bankData);
             cities = []; 
@@ -55,7 +56,7 @@
 			return;
 		}
 
-		let url = `/${selectedCountry.toLowerCase()}/bank-codes/swift-code`;
+		let url = `/${selectedCountry.toLowerCase()}/bank-codes/swift-codes/providers`;
 
 		if (selectedBank) {
 			url += `/${selectedBank.toLowerCase()}`;
@@ -74,27 +75,25 @@
 </script>
 
 <svelte:head>
-	<title>Select Provider & Swift Code | Monierate</title>
+	<title>Bank SWIFT/BIC Codes in Africa | Monierate</title>
 	<meta
 		name="description"
-		content="Find and select the best provider and get the Swift code for your transactions."
+		content="Select your country and bank to get the Swift code for your transactions."
 	/>
 	<meta property="og:type" content="website" />
-	<meta property="og:title" content="Find Swift Codes for Transactions | Monierate" />
+	<meta property="og:title" content="Find Bank SWIFT Codes in Africa | Monierate" />
 	<meta
 		property="og:description"
-		content="Select a provider and get the correct Swift code for your financial transactions."
+		content="Select your country and bank to get the Swift code for your transactions."
 	/>
-	<meta property="og:url" content="monierate.com/ng/select/provider/swift-code" />
-	<meta property="og:image" content="https://monierate.com/monierate-swift-code-og-image.png" />
+	<meta property="og:url" content="monierate.com/{countryCode}/bank-codes" />
+	<meta property="og:image" content="https://monierate.com/uploads/monierate-swift-code-og-image.png" />
 </svelte:head>
 
 <div class="container">
-	<h1 class="text-2xl md:text-4xl mb-2 text-center">Looking for SWIFT code?</h1>
-</div>
-
-<div class="section">
-	<div class="flex justify-center items-center">
+	<h1 class="text-2xl md:text-4xl mb-2 text-center mb-8">Looking for SWIFT code in Africa?</h1>
+	
+	<div class="select-form section flex justify-center items-center mb-32">
 		<div class="w-full">
 			<div class="block md:flex md:justify-between md:items-center">
 				<!-- Select Country -->
@@ -116,7 +115,7 @@
 						{/each}
 					</select>
 				</span>
-
+	
 				<!-- Select Bank -->
 				<span class="block md:w-[30%]">
 					<label class="label" for="field-bank">Select Bank</label>
@@ -127,7 +126,7 @@
 						{/each}
 					</select>
 				</span>
-
+	
 				<!-- Select City -->
 				<span class="block md:w-[30%]">
 					<label class="label" for="field-city">Select City</label>
@@ -139,56 +138,51 @@
 					</select>
 				</span>
 			</div>
-
+	
 			<div class="mt-4">
 				<button class="button w-full md:w-[20%]" on:click={findSwiftCode}>Find SWIFT Code</button>
 			</div>
 		</div>
 	</div>
-</div>
 
-<main>
-	<div class="container">
-		<section id="grouped" class="mt-12">
-			<h2 class="text-xl md:text-2xl mb-4">Countries</h2>
+	<div id="grouped" class="select-country section">
 
-			<div class="flex justify-center items-center flex-wrap gap-2 mt-8">
-				{#each Object.entries(groupedByAlpha) as [letter]}
+		<div class="flex justify-center items-center flex-wrap gap-2 mb-16">
+			{#each Object.entries(groupedByAlpha) as [letter]}
+				<a
+					href="#{letter.toUpperCase()}-label"
+					class="px-3 py-1 bg-gray-200 rounded-md hover:bg-gray-500 hover:text-white"
+					on:click={scrollToHash}
+				>
+					{letter.toUpperCase()}
+				</a>
+			{/each}
+		</div>
+
+		{#each Object.entries(groupedByAlpha) as [letter, countries]}
+			<h3 class="text-lg md:text-xl mb-2 py-2" id="{letter.toUpperCase()}-label">{letter}</h3>
+			<div class="block md:flex md:items-center md:flex-wrap">
+				{#each Object.entries(countries) as [code, name]}
 					<a
-						href="#{letter.toUpperCase()}-label"
-						class="px-3 py-1 bg-gray-200 rounded-md hover:bg-gray-500 hover:text-white"
-						on:click={scrollToHash}
+						href="/{code.toLowerCase()}/bank-codes/swift-codes/providers"
+						class="inline-block w-[100%] md:w-[22%] shadow-md rounded-lg border border-gray-100 dark:border-gray-700 text-black dark:text-white mr-8 last-child:mr-0 p-4 mb-4"
 					>
-						{letter.toUpperCase()}
+						<span class="flex items-center">
+							<span
+								class="inline-block w-[32px] h-[32px] rounded-full bg-no-repeat bg-cover border border-black bg-black-200 mr-4"
+								style="background-image: url('https://wise.com/public-resources/assets/flags/rectangle/{code.toLowerCase()}.png');"
+							/>
+							<span>{name}</span>
+						</span>
 					</a>
 				{/each}
 			</div>
-
-			{#each Object.entries(groupedByAlpha) as [letter, countries]}
-				<h3 class="text-lg md:text-xl mb-2 py-2" id="{letter.toUpperCase()}-label">{letter}</h3>
-				<div class="block md:flex md:items-center md:flex-wrap">
-					{#each Object.entries(countries) as [code, name]}
-						<a
-							href="/{code.toLowerCase()}/bank-codes/swift-code"
-							class="inline-block w-[100%] md:w-[22%] shadow-md rounded-lg border border-gray-100 dark:border-gray-700 text-black dark:text-white mr-8 last-child:mr-0 p-4 mb-4"
-						>
-							<span class="flex items-center">
-								<span
-									class="inline-block w-[32px] h-[32px] rounded-full bg-no-repeat bg-cover border border-black bg-black-200 mr-4"
-									style="background-image: url('https://wise.com/public-resources/assets/flags/rectangle/{code.toLowerCase()}.png');"
-								/>
-								<span>{name}</span>
-							</span>
-						</a>
-					{/each}
-				</div>
-			{/each}
-		</section>
-	</div>
-</main>
+		{/each}
+		</div>
+</div>
 
 <style>
-	.section {
-		@apply w-[95%] md:w-[70%] bg-white dark:bg-gray-900 shadow-lg rounded-lg px-4 py-4 mx-auto;
+	.select-form {
+		@apply bg-white dark:bg-gray-900 shadow-lg rounded-lg px-8 py-12 mx-auto;
 	}
 </style>
