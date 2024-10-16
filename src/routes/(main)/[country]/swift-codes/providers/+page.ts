@@ -68,6 +68,7 @@ export const load: PageLoad = async ({ params }) => {
 					icon: '',
 					city: '',
 					address: '',
+					branch: '',
 					swift: {
 						codes: swiftCodes[bank].swift,
 						details: parseSwiftCode(swiftCodes[bank].swift[0]),

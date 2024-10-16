@@ -11,6 +11,7 @@ export type BankData = {
     icon: string;
     city: string;
     address: string;
+    branch: string;
     swift: {
         codes: string[];
         details: SwiftDetails;

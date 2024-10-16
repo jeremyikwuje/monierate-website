@@ -37,7 +37,7 @@
 			class="bg-white py-[10px] shadow-t-md mb-16 dark:bg-gray-900 dark:text-light dark:border-none w-full min-h-[100vh] overflow-x-auto"
 		>
 			<div class="overflow-x-auto w-full">
-				<table class="table-auto w-full text-sm text-left">
+				<table class="table-auto w-full text-sm text-left whitespace-nowrap">
 					<thead>
 						<tr>
 							<th scope="col" class="py-3 md:pl-4 font-bitter hidden md:inline-block">
@@ -46,18 +46,18 @@
 							<th scope="col" class="py-3 pl-2 md:pl-6 md:pl-0 font-bold font-bitter">
 								Bank
 							</th>
-							<th scope="col" class="py-3 w-[10%] text-right md:w-[25%] md:pl-4 font-bold font-bitter">
-								City
-							</th>
-							<th scope="col" class="py-3 w-[10%] text-right md:w-[25%] md:pl-4 font-bold font-bitter">
-								Branch
-							</th>
 							<th scope="col" class="py-3 font-bold font-bitter text-right pr-2 md:pr-4">
 								SWIFT Code
 							</th>
+							<th scope="col" class="py-3 pr-8 w-[10%] text-right md:w-[25%] md:pl-4 font-bold font-bitter">
+								City
+							</th>
+							<th scope="col" class="py-3 w-[10%] text-right md:w-[25%] md:pl-4 font-bold font-bitter pr-4">
+								Branch
+							</th>
 						</tr>
 					</thead>
-					<tbody class="banks">
+					<tbody class="banks ">
 						{#each Object.values(banksData) as data, i}
 						    <tr class="border-t border-gray-150 dark:border-gray-700">
 								<td class="text-gray-500 py-6 pl-4 hidden md:inline-block">
@@ -81,20 +81,20 @@
 										<span class="bank-title ml-2">{data.name}</span>
 									</a>
 								</td>
-								<td class="text-right w-[20%] break-words py-3">
-								    {data.city ? data.city : ''}
-								</td>
-								<td class="text-right w-[20%] break-words py-3">
-								    {data.branch ? data.branch : ''}
-								</td>
 								<td class="text-right pr-4 md:pr-6 w-[20%] break-words py-3">
 									<a
 										href="/{countryCode}/swift-codes/providers/{data.id}"
 										class="text-decoration underline bank-code"
 										title=""
 									>
-									    {data.swift.codes ? data.swift.codes.join(', ') : ''}
-								    </a>
+										{data.swift.codes ? data.swift.codes.join(', ') : ''}
+									</a>
+								</td>
+								<td class="text-right w-[20%] break-words py-3 pr-8">
+								    {data.city ? data.city : ''}
+								</td>
+								<td class="text-right w-[20%] break-words py-3 pr-4">
+								    {data.branch ? data.branch : ''}
 								</td>
 							</tr>
 						{/each}
