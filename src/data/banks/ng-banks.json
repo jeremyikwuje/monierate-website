@@ -135,14 +135,6 @@
     "city": "Lagos",
     "branch": "Surulere Branch"
   },
-  "kudabank": {
-    "name": "Kuda Bank",
-    "link": "https://www.kuda.com",
-    "icon": "kudabank.png",
-    "address": "1, Kuda House, Lagos",
-    "city": "Lagos",
-    "branch": "Lagos Branch"
-  },
   "rubiesbank": {
     "name": "Rubies Bank",
     "link": "https://www.rubies.ng",
@@ -150,14 +142,6 @@
     "address": "26, Adebayo Doherty Street, Lekki Phase 1",
     "city": "Lagos",
     "branch": "Lekki Branch"
-  },
-  "vbank": {
-    "name": "VBank",
-    "link": "https://vbank.ng",
-    "icon": "vbank.jpg",
-    "address": "14, Saka Tinubu Street, Victoria Island",
-    "city": "Lagos",
-    "branch": "Victoria Island Branch"
   },
   "titantrust": {
     "name": "Titan Trust Bank",
@@ -174,5 +158,77 @@
     "address": "36, Akin Adesola Street, Victoria Island",
     "city": "Lagos",
     "branch": "Victoria Island Branch"
+  },
+  "lotusbank": {
+    "name": "Lotus Bank",
+    "link": "https://lotusbank.com.ng",
+    "icon": "lotusbank.png",
+    "address": "No 1, Murtala Mohammed Way",
+    "city": "Lagos",
+    "branch": "Main Branch"
+  },
+  "nib": {
+    "name": "Nigerian International Bank",
+    "link": "https://www.nib.com.ng",
+    "icon": "nib.png",
+    "address": "22, Victoria Island Road",
+    "city": "Lagos",
+    "branch": "Victoria Island Branch"
+  },
+  "mfb": {
+    "name": "Microfinance Bank",
+    "link": "https://mfb.com.ng",
+    "icon": "mfb.webp",
+    "address": "12, Babs Animashaun Street",
+    "city": "Surulere",
+    "branch": "Surulere Branch"
+  },
+  "fidelityinvestment": {
+    "name": "Fidelity Investment Bank",
+    "link": "https://fidelityinvestmentbank.com",
+    "icon": "fidelityinvestment.png",
+    "address": "22, Ogoja Street",
+    "city": "Calabar",
+    "branch": "Main Branch"
+  },
+  "paga": {
+    "name": "Paga",
+    "link": "https://paga.com",
+    "icon": "paga.png",
+    "address": "No 23, Campbell Street",
+    "city": "Lagos",
+    "branch": "Main Branch"
+  },
+  "diamondbank": {
+    "name": "Diamond Bank",
+    "link": "https://www.diamondbank.com",
+    "icon": "diamondbank.png",
+    "address": "7, Cotonou Crescent, Off T.Y. Danjuma Street",
+    "city": "Wuse II",
+    "branch": "Wuse Branch"
+  },
+  "coronationbank": {
+    "name": "Coronation Bank",
+    "link": "https://coronationbank.com",
+    "icon": "coronationbank.jpeg",
+    "address": "45, Alfred Rewane Road",
+    "city": "Ikoyi",
+    "branch": "Ikoyi Branch"
+  },
+  "nigeria_lng_limited": {
+    "name": "Nigeria LNG Limited",
+    "link": "https://nigerialng.com",
+    "icon": "nigeria_lng_limited.png",
+    "address": "NLNG Plant, Bonny Island",
+    "city": "Port Harcourt",
+    "branch": "Main Branch"
+  },
+  "fbc": {
+    "name": "FBC Bank",
+    "link": "https://fbcbank.com.ng",
+    "icon": "fbc.jpeg",
+    "address": "10, Alhaji Adebayo Street",
+    "city": "Lekki",
+    "branch": "Lekki Branch"
   }
 }

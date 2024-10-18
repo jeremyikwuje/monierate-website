@@ -13,15 +13,15 @@
 </script>
 
 <svelte:head>
-	<title>{countryName} Banks SWIFT Codes</title>
-	<meta name="description" content="Get all {countryName} Banks SWIFT codes." />
+	<title>SWIFT Codes in {countryName}: Find Your Bank's BIC Code</title>
+	<meta name="description" content="Learn about SWIFT/BIC codes in {countryName}. Quickly find your bank's code for international money transfers. Ensure your funds reach the right destination account." />
 	<meta property="og:type" content="website" />
-	<meta property="og:title" content="{countryName} SWIFT Codes" />
-	<meta property="og:description" content="Get all {countryName} Bank SWIFT codes." />
+	<meta property="og:title" content="SWIFT Codes in {countryName}: Find Your Bank's BIC Code" />
+	<meta property="og:description" content="Learn about SWIFT/BIC codes in {countryName}. Quickly find your bank's code for international money transfers. Ensure your funds reach the right destination account." />
 	<meta property="og:url" content="https://monierate.com/{countryCode}/swift-codes/providers" />
 </svelte:head>
 
-<div class="mb-8">
+<div class="mb-4">
 	<div class="w-[95%] md:w-[70%] px-8 py-4 mx-auto mb-4 md:mb-6 text-center">
 		<h1 class="text-2xl md:text-4xl mb-8">
 			SWIFT Codes for banks in {countryName}
@@ -34,7 +34,7 @@
 	<!-- Posts -->
 	<div class="container w-full">
 		<div
-			class="bg-white py-[10px] shadow-t-md mb-16 dark:bg-gray-900 dark:text-light dark:border-none w-full min-h-[100vh] overflow-x-auto"
+			class="bg-white py-[10px] shadow-t-md dark:bg-gray-900 dark:text-light dark:border-none w-full min-h-[100vh] overflow-x-auto"
 		>
 			<div class="overflow-x-auto w-full">
 				<table class="table-auto w-full text-sm text-left whitespace-nowrap">

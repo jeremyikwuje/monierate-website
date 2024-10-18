@@ -3,6 +3,7 @@
 	export let data;
 	let groupedByAlpha = data.countries;
 	let countryCode = data.countryCode;
+	let countryName = data.countryName;
 
 	function scrollToHash(event: MouseEvent) {
 		event.preventDefault();
@@ -75,16 +76,16 @@
 </script>
 
 <svelte:head>
-	<title>Bank SWIFT/BIC Codes in Africa | Monierate</title>
+	<title>SWIFT Codes in Africa: Find Your Bank's BIC Code | Monierate</title>
 	<meta
 		name="description"
-		content="Select your country and bank to get the Swift code for your transactions."
+		content="Learn about SWIFT/BIC codes in Africa. Quickly find your bank's code for international money transfers. Ensure your funds reach the right destination account."
 	/>
 	<meta property="og:type" content="website" />
-	<meta property="og:title" content="Find Bank SWIFT Codes in Africa | Monierate" />
+	<meta property="og:title" content="SWIFT Codes in Africa: Find Your Bank's BIC Code | Monierate" />
 	<meta
 		property="og:description"
-		content="Select your country and bank to get the Swift code for your transactions."
+		content="Learn about SWIFT/BIC codes in Africa. Quickly find your bank's code for international money transfers. Ensure your funds reach the right destination account."
 	/>
 	<meta property="og:url" content="monierate.com/{countryCode}/bank-codes" />
 	<meta property="og:image" content="https://monierate.com/uploads/monierate-swift-code-og-image.png" />

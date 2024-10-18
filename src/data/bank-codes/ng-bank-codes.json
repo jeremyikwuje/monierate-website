@@ -74,19 +74,9 @@
       "POLINGLA"
     ]
   },
-  "kudabank": {
-    "swift": [
-      "KUDANGLA"
-    ]
-  },
   "rubiesbank": {
     "swift": [
       "RUBINGLA"
-    ]
-  },
-  "vbank": {
-    "swift": [
-      "VBNKNGLA"
     ]
   },
   "titantrust": {
@@ -97,6 +87,51 @@
   "heritagebank": {
     "swift": [
       "HBNKNGLA"
+    ]
+  },
+  "lotusbank": {
+    "swift": [
+      "LOTUSNGLA"
+    ]
+  },
+  "nib": {
+    "swift": [
+      "NIBNGNGL"
+    ]
+  },
+  "mfb": {
+    "swift": [
+      "MFBINGLA"
+    ]
+  },
+  "fidelityinvestment": {
+    "swift": [
+      "FICBNGLA"
+    ]
+  },
+  "paga": {
+    "swift": [
+      "PAGANGLA"
+    ]
+  },
+  "diamondbank": {
+    "swift": [
+      "DMBNGNGL"
+    ]
+  },
+  "coronationbank": {
+    "swift": [
+      "CORNGBLA"
+    ]
+  },
+  "nigeria_lng_limited": {
+    "swift": [
+      "NLNGBNGN"
+    ]
+  },
+  "fbc": {
+    "swift": [
+      "FBCNGNGL"
     ]
   }
 }
