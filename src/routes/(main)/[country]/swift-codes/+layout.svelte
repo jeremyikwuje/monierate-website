@@ -32,7 +32,7 @@
 <slot />
 
 <div>
-    <div class="container mt-24">
+    <div class="container mt-5">
         <div>
             <h3 class="text-2xl font-bold mb-4">
                 SWIFT Codes: Your Guide to International Money Transfers in
@@ -84,17 +84,8 @@
     
 </div>
 
-<div class="container mt-24">
-	<h3 class="text-2xl font-bold mb-4">Disclaimer</h3>
-	<p class="text-sm mb-4">
-        The tools provided on this website are for informational purposes only. While we strive for
-		accuracy, we cannot guarantee the correctness of the data. Always verify SWIFT codes with your
-		bank, especially for important or time-sensitive transactions.
-	</p>
-</div>
-
 <div class="container py-10 px-5">
-	<h3 class="text-3xl font-bold mb-8">Your Questions, Answered</h3>
+	<h3 class="text-2xl font-bold mb-4">Your Questions, Answered</h3>
 
 	{#each faqItems as { question, answer }, index}
 		<div class="border-b border-gray-700">
@@ -131,6 +122,15 @@
 			</div>
 		</div>
 	{/each}
+</div>
+
+<div class="container mt-5">
+	<h3 class="text-2xl font-bold mb-4">Disclaimer</h3>
+	<p class="text-sm mb-4">
+        The tools provided on this website are for informational purposes only. While we strive for
+		accuracy, we cannot guarantee the correctness of the data. Always verify SWIFT codes with your
+		bank, especially for important or time-sensitive transactions.
+	</p>
 </div>
 
 <script context="module">
