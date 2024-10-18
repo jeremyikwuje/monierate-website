@@ -40,7 +40,7 @@
                     to {bankName}
                     {bankName.toLowerCase().includes(countryName.toLowerCase()) ? '' : countryName}
                 {:else}
-                    {currentPath.endsWith('/swift-codes') ? 'Africa' : countryName}
+                    {(currentPath.endsWith('/swift-codes') || currentPath.endsWith('/swift-codes/')) ? 'Africa' : countryName}
                 {/if}
             </h3>
             <p class="text-sm mb-4">
@@ -49,7 +49,7 @@
                     to {bankName}
                     {bankName.toLowerCase().includes(countryName.toLowerCase()) ? '' : countryName}
                 {:else}
-                    {currentPath.endsWith('/swift-codes') ? 'from Africa' : 'from ' + countryName}
+                    {(currentPath.endsWith('/swift-codes') || currentPath.endsWith('/swift-codes/')) ? 'from Africa' : 'from ' + countryName}
                 {/if}
                 ? Understanding SWIFT codes is essential for ensuring your transactions are accurate and efficient.
             </p>
