@@ -13,11 +13,11 @@
 </script>
 
 <svelte:head>
-	<title>{countryName} Banks SWIFT Codes</title>
-	<meta name="description" content="Get all {countryName} Banks SWIFT codes." />
+	<title>SWIFT Codes in {countryName}: Find Your Bank's BIC Code</title>
+	<meta name="description" content="Learn about SWIFT/BIC codes in {countryName}. Quickly find your bank's code for international money transfers. Ensure your funds reach the right destination account." />
 	<meta property="og:type" content="website" />
-	<meta property="og:title" content="{countryName} SWIFT Codes" />
-	<meta property="og:description" content="Get all {countryName} Bank SWIFT codes." />
+	<meta property="og:title" content="SWIFT Codes in {countryName}: Find Your Bank's BIC Code" />
+	<meta property="og:description" content="Learn about SWIFT/BIC codes in {countryName}. Quickly find your bank's code for international money transfers. Ensure your funds reach the right destination account." />
 	<meta property="og:url" content="https://monierate.com/{countryCode}/swift-codes/providers" />
 </svelte:head>
 
