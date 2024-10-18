@@ -32,7 +32,7 @@
 <slot />
 
 <div>
-    <div class="container mt-5">
+    <div class="container mt-8">
         <div>
             <h3 class="text-2xl font-bold mb-4">
                 SWIFT Codes: Your Guide to International Money Transfers in

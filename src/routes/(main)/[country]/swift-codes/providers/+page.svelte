@@ -21,7 +21,7 @@
 	<meta property="og:url" content="https://monierate.com/{countryCode}/swift-codes/providers" />
 </svelte:head>
 
-<div class="mb-8">
+<div class="mb-4">
 	<div class="w-[95%] md:w-[70%] px-8 py-4 mx-auto mb-4 md:mb-6 text-center">
 		<h1 class="text-2xl md:text-4xl mb-8">
 			SWIFT Codes for banks in {countryName}
@@ -34,7 +34,7 @@
 	<!-- Posts -->
 	<div class="container w-full">
 		<div
-			class="bg-white py-[10px] shadow-t-md mb-16 dark:bg-gray-900 dark:text-light dark:border-none w-full min-h-[100vh] overflow-x-auto"
+			class="bg-white py-[10px] shadow-t-md dark:bg-gray-900 dark:text-light dark:border-none w-full min-h-[100vh] overflow-x-auto"
 		>
 			<div class="overflow-x-auto w-full">
 				<table class="table-auto w-full text-sm text-left whitespace-nowrap">

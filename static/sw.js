@@ -1,52 +1,48 @@
-const staticCacheName = 'static-v1'; // Current cache name
+const staticCacheName = 'static-v1';
 
-// Function to cache resources
 async function cacheResources(resources) {
     const cache = await caches.open(staticCacheName);
     return cache.addAll(resources);
 }
 
-// Serve cached response or fetch from network
 async function serveCachedOrNetwork(request) {
     const cache = await caches.open(staticCacheName);
     const sameOrigin = new URL(request.url).origin === location.origin;
+    const acceptHeader = request.headers.get('Accept') || '';
+    const isHtmlRequest = acceptHeader.includes('text/html');
 
-    // Handle HTML requests if online
-    if (sameOrigin && request.method === 'GET' && request.headers.get('Accept').includes('text/html')) {
+    if (isHtmlRequest && navigator.onLine && sameOrigin && request.method === 'GET') {
         try {
             const networkResponse = await fetch(request);
-            cache.put(request, networkResponse.clone()); // Update cache with fresh response
+            cache.put(request, networkResponse.clone()); 
             return networkResponse;
         } catch (error) {
-            const cachedResponse = await cache.match(request);
-            return cachedResponse || Promise.reject(error); // Serve from cache if available, otherwise rethrow error
+            console.error('Network fetch failed; serving from cache:', error);
+            return cache.match(request); 
         }
     }
 
-    // Handle other GET requests
     try {
         const cachedResponse = await cache.match(request);
         if (cachedResponse) return cachedResponse;
 
         const networkResponse = await fetch(request);
-        if (sameOrigin && request.method === 'GET' && !request.url.includes('/index.js')) {
+        if (sameOrigin && request.method === 'GET') {
             cache.put(request, networkResponse.clone());
         }
         return networkResponse;
     } catch (error) {
-        console.error('Fetch failed; returning offline fallback:', error);
-        return Promise.reject(error); // Optional: add an offline fallback response if needed
+        console.error('Fetch failed:', error);
+        return Promise.reject(error); 
     }
 }
 
-// Install event
 self.addEventListener('install', (event) => {
     event.waitUntil(
-        cacheResources([]).then(() => self.skipWaiting()) // Add resources to cache here if needed
+        cacheResources([]).then(() => self.skipWaiting())
     );
 });
 
-// Activate event
 self.addEventListener('activate', (event) => {
     event.waitUntil(
         caches.keys().then((cacheNames) =>
@@ -61,7 +57,6 @@ self.addEventListener('activate', (event) => {
     );
 });
 
-// Fetch event
 self.addEventListener('fetch', (event) => {
     event.respondWith(serveCachedOrNetwork(event.request));
 });
