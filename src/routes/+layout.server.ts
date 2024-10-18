@@ -45,8 +45,6 @@ const select_top_pairs = (pairs: any) => {
             to: quote,
             price_change_percent_24hr:  pair.price_change_percent_24hr,
         };
-
-        console.log(pair.price_change_percent_24hr);
     });
 
     return top_selected_pairs_obj;

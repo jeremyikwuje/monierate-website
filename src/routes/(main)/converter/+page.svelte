@@ -107,13 +107,13 @@ async function getMoreConversions() {
 }
 
 function sortRates(rates: any) {
-    // sort rates in decending order by price_buy;
-    rates.sort((a, b) => a.price_buy - b.price_buy);
-    // filter out rate with price_buy as 0
-    const filtered_non_zero_rates = rates.filter((rate) => rate.price_buy > 0);
-    const filtered_zero_rates = rates.filter((rate) => rate.price_buy <= 0);
+    // sort rates in decending order by price_sell;
+    rates.sort((a, b) => b.price_sell - a.price_sell);
+    // filter out rate with price_sell as 0
+    const filtered_non_zero_rates = rates.filter((rate) => rate.price_sell > 0);
+    const filtered_zero_rates = rates.filter((rate) => rate.price_sell <= 0);
     // soirt rates in descending order by price_buy
-    filtered_zero_rates.sort((a, b) => b.price_sell - a.price_sell);
+    filtered_zero_rates.sort((a, b) => a.price_buy - b.price_buy);
     // merge both rates
     rates = filtered_non_zero_rates.concat(filtered_zero_rates);
 
@@ -232,7 +232,7 @@ convertNow()
     {#if pair_rates.length > 0}
     <div class="container mt-16 border border-none bg-white py-[10px] dark:bg-gray-900 dark:text-light dark:border-none w-full overflow-x-scroll md:overflow-x-hidden overflow-y-scroll md:overflow-y-hidden">
         <h2 class="mb-8 text-center text-2xl">Best {convertFrom} to {convertTo} rates</h2>
-        <ChangerRates rates={pair_rates} changers={changers} />
+        <ChangerRates rates={pair_rates} changers={changers} from={convertFrom} to={convertTo} />
     </div>
     {/if}
 
