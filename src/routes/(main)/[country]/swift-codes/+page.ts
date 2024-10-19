@@ -8,7 +8,7 @@ import * as CountriesData from '$data/countries.json';
 import { validCountryKeys } from './validCountryKeys';
 import type { PageLoad } from './$types';
 
-export const load: PageLoad = async ({ params }) => {
+export const load: PageLoad = async ({ params }: any) => {
     const countryCode = params.country;
 
     const hasBank = async (code: string) => {
