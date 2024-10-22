@@ -1,4 +1,4 @@
-<script lang="ts">
+<script>
 	import { page } from '$app/stores';
 	export let data;
 
@@ -6,10 +6,10 @@
 	$: bankName = data.bankName;
 	$: countryName = data.countryName;
 
-    let countryCode = data.countryCode;
-	let openQuestion: any = null;
+  let countryCode = data.countryCode;
+	let openQuestion = null;
 
-	function toggleQuestion(index: any) {
+	function toggleQuestion(index) {
 		openQuestion = openQuestion === index ? null : index;
 	}
 </script>

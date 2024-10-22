@@ -2,9 +2,9 @@
 	import { formatDate } from '$lib/blog/utils'
 	import * as config from '$lib/blog/config'
 
-	export let data
+	export let data;
 
-	const posts = data.posts
+	const posts = data.posts;
 </script>
 
 <svelte:head>
