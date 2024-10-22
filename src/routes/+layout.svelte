@@ -263,6 +263,7 @@ function hidePromotionBar() {
         <div class="w-full md:w-[30%]">
             <h3 class="font-bold">Tools</h3>
             <ul class="py-4 converter-list">
+                <li><a href="https://tinyurl.com/monierate-cleva-footer" title="Recieve USD Payments with Cleva">Open a USD Account</a></li>
                 <li><a href="https://tinyurl.com/cambridge-currencies-foot-link">Send Money to Europe</a></li>
                 <li><a href="https://bit.ly/3Xlo8jv">Pay your Importers</a></li>
                 <li><a href="/alerts">Price Alerts</a></li>
