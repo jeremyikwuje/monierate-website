@@ -163,6 +163,11 @@ function hidePromotionBar() {
                     <li>
                         <a data-sveltekit-reload href="/blog" class="{path == 'blog' ? 'active': ''}">Blog</a>
                     </li>
+                    <li>
+                        <a href="https://tinyurl.com/monierate-cleva-top-link" title="Recieve USD Payments with Cleva">
+                            USD Account
+                        </a>
+                    </li>
                 </ul>
             </div>
         </div>
