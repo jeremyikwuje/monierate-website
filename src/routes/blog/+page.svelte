@@ -29,7 +29,7 @@
 	<div class="w-[95%] md:w-[70%] px-8 py-4 mx-auto mb-4 md:mb-6 text-center">
 		<h1 class="text-2xl md:text-4xl">
 			Make knowledgeable transactions with our articles
-		</h1>
+		</h1> 
 	</div>
 	
 	<!-- Posts -->
