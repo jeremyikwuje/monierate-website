@@ -1,4 +1,4 @@
-const staticCacheName = 'static-v1';
+const staticCacheName = 'static-v1.00'; // Current cache name
 
 async function cacheResources(resources) {
     const cache = await caches.open(staticCacheName);
