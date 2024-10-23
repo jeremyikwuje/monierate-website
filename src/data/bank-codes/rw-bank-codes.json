@@ -1,0 +1,83 @@
+{
+    "bankofrwanda": {
+      "swift": ["BKIGRWF"],
+      "ussd": {
+        "start": "*200#",
+        "balance": "*200*1#",
+        "transfer_to_same_bank": "*200*amount*account_number#"
+      }
+    },
+    "eco": {
+      "swift": ["ECOCRWF"],
+      "ussd": {
+        "start": "*300#",
+        "balance": "*300*1#",
+        "transfer_to_same_bank": "*300*amount*account_number#"
+      }
+    },
+    "brd": {
+      "swift": ["BRDRWF"],
+      "ussd": {
+        "start": "*400#",
+        "balance": "*400*1#",
+        "transfer_to_same_bank": "*400*amount*account_number#"
+      }
+    },
+    "kcb": {
+      "swift": ["KCBLRWF"],
+      "ussd": {
+        "start": "*500#",
+        "balance": "*500*1#",
+        "transfer_to_same_bank": "*500*amount*account_number#"
+      }
+    },
+    "gtbank": {
+      "swift": ["GTBRWF"],
+      "ussd": {
+        "start": "*600#",
+        "balance": "*600*1#",
+        "transfer_to_same_bank": "*600*amount*account_number#"
+      }
+    },
+    "bpr": {
+      "swift": ["BPRRWF"],
+      "ussd": {
+        "start": "*700#",
+        "balance": "*700*1#",
+        "transfer_to_same_bank": "*700*amount*account_number#"
+      }
+    },
+    "brc": {
+      "swift": ["BRCRWF"],
+      "ussd": {
+        "start": "*800#",
+        "balance": "*800*1#",
+        "transfer_to_same_bank": "*800*amount*account_number#"
+      }
+    },
+    "bankofafrica": {
+      "swift": ["BOARWF"],
+      "ussd": {
+        "start": "*900#",
+        "balance": "*900*1#",
+        "transfer_to_same_bank": "*900*amount*account_number#"
+      }
+    },
+    "imb": {
+      "swift": ["IMBRWF"],
+      "ussd": {
+        "start": "*1000#",
+        "balance": "*1000*1#",
+        "transfer_to_same_bank": "*1000*amount*account_number#"
+      }
+    },
+    "cogebanque": {
+      "swift": ["COGERWF"],
+      "ussd": {
+        "start": "*1100#",
+        "balance": "*1100*1#",
+        "transfer_to_same_bank": "*1100*amount*account_number#"
+      }
+    }
+  }
+  

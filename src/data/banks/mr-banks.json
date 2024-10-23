@@ -1,0 +1,83 @@
+{
+    "bmci": {
+      "name": "BMCI (Banque Mauritanienne pour le Commerce International)",
+      "link": "https://www.bmci.mr",
+      "icon": "bmci.png",
+      "address": "Avenue Moussa Tavele, Nouakchott",
+      "city": "Nouakchott",
+      "branch": "Head Office"
+    },
+    "mauribank": {
+      "name": "Mauribank",
+      "link": "https://www.mauribank.mr",
+      "icon": "mauribank.png",
+      "address": "Avenue de la République, Nouakchott",
+      "city": "Nouakchott",
+      "branch": "Main Branch"
+    },
+    "bnm": {
+      "name": "BNM (Banque Nationale de Mauritanie)",
+      "link": "https://www.bnm.mr",
+      "icon": "bnm.png",
+      "address": "Avenue Abdallahi Ould Yacoub, Nouakchott",
+      "city": "Nouakchott",
+      "branch": "Head Office"
+    },
+    "sociétégenerale": {
+      "name": "Société Générale de Banques en Mauritanie",
+      "link": "https://www.sgbm.mr",
+      "icon": "sgbm.png",
+      "address": "Avenue de la République, Nouakchott",
+      "city": "Nouakchott",
+      "branch": "Main Branch"
+    },
+    "eco": {
+      "name": "EcoBank Mauritania",
+      "link": "https://www.ecobank.com",
+      "icon": "ecobank.png",
+      "address": "Avenue de la République, Nouakchott",
+      "city": "Nouakchott",
+      "branch": "Nouakchott Branch"
+    },
+    "ibank": {
+      "name": "iBank",
+      "link": "https://www.ibank.mr",
+      "icon": "ibank.png",
+      "address": "Avenue Ahmed Ould Abdallah, Nouakchott",
+      "city": "Nouakchott",
+      "branch": "Main Branch"
+    },
+    "cmf": {
+      "name": "CMF (Caisse Malienne de Financement)",
+      "link": "https://www.cmf.mr",
+      "icon": "cmf.png",
+      "address": "Avenue de la République, Nouakchott",
+      "city": "Nouakchott",
+      "branch": "Head Office"
+    },
+    "mauritanieleasing": {
+      "name": "Mauritanie Leasing",
+      "link": "https://www.mauritanieleasing.com",
+      "icon": "mauritanieleasing.png",
+      "address": "Avenue Moussa Tavele, Nouakchott",
+      "city": "Nouakchott",
+      "branch": "Main Branch"
+    },
+    "bankalgerie": {
+      "name": "Banque d'Algérie",
+      "link": "https://www.bankalgerie.mr",
+      "icon": "bankalgerie.png",
+      "address": "Avenue de la République, Nouakchott",
+      "city": "Nouakchott",
+      "branch": "Nouakchott Branch"
+    },
+    "bims": {
+      "name": "BIMS (Banque Islamique de Mauritanie)",
+      "link": "https://www.bims.mr",
+      "icon": "bims.png",
+      "address": "Avenue Ahmed Ould Abdallah, Nouakchott",
+      "city": "Nouakchott",
+      "branch": "Main Branch"
+    }
+  }
+  

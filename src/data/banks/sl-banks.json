@@ -1,0 +1,83 @@
+{
+    "slb": {
+      "name": "Sierra Leone Bank",
+      "link": "https://www.slb.sl",
+      "icon": "slb.png",
+      "address": "68, Charlotte Street, Freetown",
+      "city": "Freetown",
+      "branch": "Head Office"
+    },
+    "afrb": {
+      "name": "African Renaissance Bank",
+      "link": "https://www.afrb.sl",
+      "icon": "afrb.png",
+      "address": "7, Kissy Road, Freetown",
+      "city": "Freetown",
+      "branch": "Main Branch"
+    },
+    "skgb": {
+      "name": "Sierra Leone Commercial Bank",
+      "link": "https://www.slcb.com",
+      "icon": "skgb.png",
+      "address": "47, Campbell Street, Freetown",
+      "city": "Freetown",
+      "branch": "Main Branch"
+    },
+    "ecobank": {
+      "name": "Ecobank Sierra Leone",
+      "link": "https://www.ecobank.com",
+      "icon": "ecobank.png",
+      "address": "90, Campbell Street, Freetown",
+      "city": "Freetown",
+      "branch": "Head Office"
+    },
+    "frb": {
+      "name": "First International Bank",
+      "link": "https://www.firstinternationalbank.sl",
+      "icon": "frb.png",
+      "address": "57, Main Motor Road, Freetown",
+      "city": "Freetown",
+      "branch": "Main Branch"
+    },
+    "zenith": {
+      "name": "Zenith Bank Sierra Leone",
+      "link": "https://www.zenithbank.com/sl",
+      "icon": "zenith.png",
+      "address": "Broadway, Freetown",
+      "city": "Freetown",
+      "branch": "Head Office"
+    },
+    "bsl": {
+      "name": "Bank of Sierra Leone",
+      "link": "https://www.bsl.gov.sl",
+      "icon": "bsl.png",
+      "address": "11, BSL Building, Freetown",
+      "city": "Freetown",
+      "branch": "Main Branch"
+    },
+    "mcb": {
+      "name": "Microfinance Bank",
+      "link": "https://www.mcb.sl",
+      "icon": "mcb.png",
+      "address": "10, Main Street, Freetown",
+      "city": "Freetown",
+      "branch": "Head Office"
+    },
+    "sldb": {
+      "name": "Sierra Leone Development Bank",
+      "link": "https://www.sldb.sl",
+      "icon": "sldb.png",
+      "address": "4, Siaka Stevens Street, Freetown",
+      "city": "Freetown",
+      "branch": "Main Branch"
+    },
+    "ssl": {
+      "name": "Standard Chartered Bank Sierra Leone",
+      "link": "https://www.sc.com/sl",
+      "icon": "ssl.png",
+      "address": "40, Walpole Street, Freetown",
+      "city": "Freetown",
+      "branch": "Head Office"
+    }
+  }
+  

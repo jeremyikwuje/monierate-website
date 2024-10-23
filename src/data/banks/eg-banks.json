@@ -1,0 +1,75 @@
+{
+    "nbe": {
+      "name": "National Bank of Egypt",
+      "link": "https://www.nbe.com.eg",
+      "icon": "nbe.svg",
+      "address": "11111, 3 Sphinx Rd, Al Dokki",
+      "city": "Cairo",
+      "branch": "Dokki Branch"
+    },
+    "cib": {
+      "name": "Commercial International Bank",
+      "link": "https://www.cibeg.com",
+      "icon": "cib.svg",
+      "address": "5, Mohamed Farid St, Downtown",
+      "city": "Cairo",
+      "branch": "Downtown Branch"
+    },
+    "ahli": {
+      "name": "Ahli United Bank",
+      "link": "https://www.ahliunited.com",
+      "icon": "ahli.svg",
+      "address": "6, Abo Bakr El Seddik St, Nasr City",
+      "city": "Cairo",
+      "branch": "Nasr City Branch"
+    },
+    "qnb": {
+      "name": "Qatar National Bank",
+      "link": "https://www.qnb.com.eg",
+      "icon": "qnb.svg",
+      "address": "14, Mohy El Din Abou El Ezz St, Dokki",
+      "city": "Cairo",
+      "branch": "Dokki Branch"
+    },
+    "bcb": {
+      "name": "Bank of Alexandria",
+      "link": "https://www.bcb.eg",
+      "icon": "bcb.svg",
+      "address": "7, Abdel Azim Hassan St, Al Azhar",
+      "city": "Cairo",
+      "branch": "Al Azhar Branch"
+    },
+    "hsbc": {
+      "name": "HSBC Egypt",
+      "link": "https://www.hsbc.com.eg",
+      "icon": "hsbc.svg",
+      "address": "202, Corniche El Nile, Maadi",
+      "city": "Cairo",
+      "branch": "Maadi Branch"
+    },
+    "alexbank": {
+      "name": "Alex Bank",
+      "link": "https://www.alexbank.com",
+      "icon": "alexbank.svg",
+      "address": "2, Bank El Ahly St, Alexandria",
+      "city": "Alexandria",
+      "branch": "Alexandria Branch"
+    },
+    "piraeus": {
+      "name": "Piraeus Bank Egypt",
+      "link": "https://www.piraeusbank.com.eg",
+      "icon": "piraeus.svg",
+      "address": "6, Abdel Rahman El Bazz St, Zamalek",
+      "city": "Cairo",
+      "branch": "Zamalek Branch"
+    },
+    "misr": {
+      "name": "Misr Bank",
+      "link": "https://www.misrbank.com",
+      "icon": "misr.svg",
+      "address": "1, Gamal Abdel Nasser St, Heliopolis",
+      "city": "Cairo",
+      "branch": "Heliopolis Branch"
+    }
+  }
+  

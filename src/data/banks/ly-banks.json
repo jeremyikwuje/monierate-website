@@ -1,0 +1,83 @@
+{
+    "bankofcommerce": {
+      "name": "Bank of Commerce & Development",
+      "link": "https://www.bankofcommerce.ly",
+      "icon": "bankofcommerce.png",
+      "address": "Jamahiriya Street",
+      "city": "Benghazi",
+      "branch": "Head Office"
+    },
+    "gumhouria": {
+      "name": "Gumhouria Bank",
+      "link": "https://www.gumhouria.com.ly",
+      "icon": "gumhouria.png",
+      "address": "Martyrs' Square",
+      "city": "Tripoli",
+      "branch": "Main Branch"
+    },
+    "nationalcommercial": {
+      "name": "National Commercial Bank",
+      "link": "https://www.ncb.ly",
+      "icon": "ncb.png",
+      "address": "Dahra Street",
+      "city": "Tripoli",
+      "branch": "Dahra Branch"
+    },
+    "wahdabank": {
+      "name": "Wahda Bank",
+      "link": "https://www.wahdabank.ly",
+      "icon": "wahda.png",
+      "address": "7th October Street",
+      "city": "Benghazi",
+      "branch": "Head Office"
+    },
+    "libyanforeignbank": {
+      "name": "Libyan Foreign Bank",
+      "link": "https://www.lfb.ly",
+      "icon": "libyanforeignbank.png",
+      "address": "Jamahiriya Street",
+      "city": "Tripoli",
+      "branch": "Main Branch"
+    },
+    "sahara": {
+      "name": "Sahara Bank",
+      "link": "https://www.saharabank.ly",
+      "icon": "sahara.png",
+      "address": "Gargaresh Road",
+      "city": "Tripoli",
+      "branch": "Main Branch"
+    },
+    "alwaha": {
+      "name": "Al-Waha Bank",
+      "link": "https://www.alwahabank.ly",
+      "icon": "alwaha.png",
+      "address": "Al-Nasr Street",
+      "city": "Tripoli",
+      "branch": "Al-Nasr Branch"
+    },
+    "bankofnorthafrica": {
+      "name": "Bank of North Africa",
+      "link": "https://www.bna.ly",
+      "icon": "bna.png",
+      "address": "Dahra Street",
+      "city": "Tripoli",
+      "branch": "Dahra Branch"
+    },
+    "alsaraya": {
+      "name": "Al-Saraya Bank",
+      "link": "https://www.sarayabank.ly",
+      "icon": "sarayabank.png",
+      "address": "Martyrs' Square",
+      "city": "Tripoli",
+      "branch": "Main Branch"
+    },
+    "alaminbank": {
+      "name": "Al-Amin Bank",
+      "link": "https://www.alaminbank.ly",
+      "icon": "alaminbank.png",
+      "address": "Gargaresh Road",
+      "city": "Tripoli",
+      "branch": "Main Branch"
+    }
+  }
+  

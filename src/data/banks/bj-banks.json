@@ -1,0 +1,75 @@
+{
+    "banque_internationale_du_benin": {
+      "name": "Banque Internationale du Bénin",
+      "link": "https://www.bib.bj",
+      "icon": "banque_internationale_du_benin.svg",
+      "address": "Avenue de la République",
+      "city": "Cotonou",
+      "branch": "Cotonou Branch"
+    },
+    "banque_atlantique": {
+      "name": "Banque Atlantique",
+      "link": "https://www.banqueatlantique.bj",
+      "icon": "banque_atlantique.svg",
+      "address": "Avenue de la Révolution",
+      "city": "Cotonou",
+      "branch": "Cotonou Branch"
+    },
+    "banque_de_lhabitat": {
+      "name": "Banque de l'Habitat",
+      "link": "https://www.bh.bj",
+      "icon": "banque_de_lhabitat.svg",
+      "address": "Avenue de la Victoire",
+      "city": "Cotonou",
+      "branch": "Cotonou Branch"
+    },
+    "ecobank_benin": {
+      "name": "Ecobank Benin",
+      "link": "https://www.ecobank.com",
+      "icon": "ecobank_benin.svg",
+      "address": "Avenue de l'Indépendance",
+      "city": "Cotonou",
+      "branch": "Cotonou Branch"
+    },
+    "banque_royale": {
+      "name": "Banque Royale",
+      "link": "https://www.banqueroyale.bj",
+      "icon": "banque_royale.svg",
+      "address": "Avenue des Réformes",
+      "city": "Cotonou",
+      "branch": "Cotonou Branch"
+    },
+    "banque_de_linnovation": {
+      "name": "Banque de l'Innovation",
+      "link": "https://www.banqueinnovation.bj",
+      "icon": "banque_de_linnovation.svg",
+      "address": "Avenue des Nations Unies",
+      "city": "Cotonou",
+      "branch": "Cotonou Branch"
+    },
+    "bank_of_africa": {
+      "name": "Bank of Africa",
+      "link": "https://www.bankofafrica.bj",
+      "icon": "bank_of_africa.svg",
+      "address": "Avenue de la Liberté",
+      "city": "Cotonou",
+      "branch": "Cotonou Branch"
+    },
+    "financiere_du_benin": {
+      "name": "Financière du Bénin",
+      "link": "https://www.financiere.bj",
+      "icon": "financiere_du_benin.svg",
+      "address": "Avenue de l'Engagement",
+      "city": "Cotonou",
+      "branch": "Cotonou Branch"
+    },
+    "bank_of_benin": {
+      "name": "Bank of Benin",
+      "link": "https://www.bankofbenin.bj",
+      "icon": "bank_of_benin.svg",
+      "address": "Avenue de la Concorde",
+      "city": "Cotonou",
+      "branch": "Cotonou Branch"
+    }
+  }
+  

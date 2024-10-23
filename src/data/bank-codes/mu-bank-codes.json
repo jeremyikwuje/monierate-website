@@ -1,0 +1,83 @@
+{
+    "mcb": {
+      "swift": ["MCBLMU"],
+      "ussd": {
+        "start": "*888#",
+        "balance": "*888*1#",
+        "transfer_to_same_bank": "*888*amount*account_number#"
+      }
+    },
+    "sbm": {
+      "swift": ["SBMUMU"],
+      "ussd": {
+        "start": "*999#",
+        "balance": "*999*1#",
+        "transfer_to_same_bank": "*999*amount*account_number#"
+      }
+    },
+    "abc": {
+      "swift": ["ABCUMU"],
+      "ussd": {
+        "start": "*777#",
+        "balance": "*777*1#",
+        "transfer_to_same_bank": "*777*amount*account_number#"
+      }
+    },
+    "hsbc": {
+      "swift": ["HSBCMU"],
+      "ussd": {
+        "start": "*555#",
+        "balance": "*555*1#",
+        "transfer_to_same_bank": "*555*amount*account_number#"
+      }
+    },
+    "boi": {
+      "swift": ["BOIUMU"],
+      "ussd": {
+        "start": "*444#",
+        "balance": "*444*1#",
+        "transfer_to_same_bank": "*444*amount*account_number#"
+      }
+    },
+    "ncb": {
+      "swift": ["NCBMRU"],
+      "ussd": {
+        "start": "*222#",
+        "balance": "*222*1#",
+        "transfer_to_same_bank": "*222*amount*account_number#"
+      }
+    },
+    "bof": {
+      "swift": ["BOFUMU"],
+      "ussd": {
+        "start": "*333#",
+        "balance": "*333*1#",
+        "transfer_to_same_bank": "*333*amount*account_number#"
+      }
+    },
+    "smb": {
+      "swift": ["SMBUMU"],
+      "ussd": {
+        "start": "*888#",
+        "balance": "*888*1#",
+        "transfer_to_same_bank": "*888*amount*account_number#"
+      }
+    },
+    "mib": {
+      "swift": ["MIBMU"],
+      "ussd": {
+        "start": "*1010#",
+        "balance": "*1010*1#",
+        "transfer_to_same_bank": "*1010*amount*account_number#"
+      }
+    },
+    "fnb": {
+      "swift": ["FNBMU"],
+      "ussd": {
+        "start": "*121#",
+        "balance": "*121*1#",
+        "transfer_to_same_bank": "*121*amount*account_number#"
+      }
+    }
+  }
+  

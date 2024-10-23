@@ -1,0 +1,75 @@
+{
+    "banque_nationale_du_burundi": {
+      "name": "Banque Nationale du Burundi",
+      "link": "https://www.bnb.bi",
+      "icon": "banque_nationale_du_burundi.svg",
+      "address": "Avenue du Large",
+      "city": "Bujumbura",
+      "branch": "Bujumbura Branch"
+    },
+    "eco_bank": {
+      "name": "Eco Bank Burundi",
+      "link": "https://www.ecobank.com",
+      "icon": "eco_bank.svg",
+      "address": "Avenue du Commerce",
+      "city": "Bujumbura",
+      "branch": "Bujumbura Branch"
+    },
+    "banque_de_l_union": {
+      "name": "Banque de l'Union",
+      "link": "https://www.banqueunion.bi",
+      "icon": "banque_de_l_union.svg",
+      "address": "Avenue des États-Unis",
+      "city": "Bujumbura",
+      "branch": "Bujumbura Branch"
+    },
+    "bancobu": {
+      "name": "Bancobu",
+      "link": "https://www.bancobu.bi",
+      "icon": "bancobu.svg",
+      "address": "Avenue de la République",
+      "city": "Bujumbura",
+      "branch": "Bujumbura Branch"
+    },
+    "banque_bujumbura": {
+      "name": "Banque Bujumbura",
+      "link": "https://www.banque-bujumbura.bi",
+      "icon": "banque_bujumbura.svg",
+      "address": "Rue des Moulins",
+      "city": "Bujumbura",
+      "branch": "Bujumbura Branch"
+    },
+    "banque_de_credit": {
+      "name": "Banque de Crédit",
+      "link": "https://www.banque-credit.bi",
+      "icon": "banque_de_credit.svg",
+      "address": "Avenue de la République",
+      "city": "Bujumbura",
+      "branch": "Bujumbura Branch"
+    },
+    "banque_populaire_du_burundi": {
+      "name": "Banque Populaire du Burundi",
+      "link": "https://www.bpb.bi",
+      "icon": "banque_populaire_du_burundi.svg",
+      "address": "Avenue des Cocotiers",
+      "city": "Bujumbura",
+      "branch": "Bujumbura Branch"
+    },
+    "financiere_du_burundi": {
+      "name": "Financière du Burundi",
+      "link": "https://www.financiere.bi",
+      "icon": "financiere_du_burundi.svg",
+      "address": "Avenue du Commerce",
+      "city": "Bujumbura",
+      "branch": "Bujumbura Branch"
+    },
+    "banque_zenith": {
+      "name": "Banque Zenith",
+      "link": "https://www.banquezenith.bi",
+      "icon": "banque_zenith.svg",
+      "address": "Avenue des Nation Unies",
+      "city": "Bujumbura",
+      "branch": "Bujumbura Branch"
+    }
+  }
+  

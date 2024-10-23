@@ -1,0 +1,83 @@
+{
+    "banque_de_djibouti": {
+      "name": "Banque de Djibouti",
+      "link": "https://www.banquededjibouti.dj",
+      "icon": "banque_de_djibouti.svg",
+      "address": "Avenue 13, Djibouti",
+      "city": "Djibouti",
+      "branch": "Main Branch"
+    },
+    "caisse_nationale_depargne": {
+      "name": "Caisse Nationale d'Épargne",
+      "link": "https://www.cne.dj",
+      "icon": "caisse_nationale_depargne.svg",
+      "address": "Boulevard de la République, Djibouti",
+      "city": "Djibouti",
+      "branch": "Head Office"
+    },
+    "commercial_bank_of_ethiopia_djibouti": {
+      "name": "Commercial Bank of Ethiopia (Djibouti)",
+      "link": "https://www.combanketh.et",
+      "icon": "commercial_bank_of_ethiopia.svg",
+      "address": "Place Lagarde, Djibouti",
+      "city": "Djibouti",
+      "branch": "Djibouti Branch"
+    },
+    "bank_of_africa_djibouti": {
+      "name": "Bank of Africa Djibouti",
+      "link": "https://www.bankofafrica.dj",
+      "icon": "bank_of_africa.svg",
+      "address": "Rue de Geneve, Djibouti",
+      "city": "Djibouti",
+      "branch": "Djibouti Branch"
+    },
+    "ecobank_djibouti": {
+      "name": "Ecobank Djibouti",
+      "link": "https://www.ecobank.com",
+      "icon": "ecobank.svg",
+      "address": "Boulevard Cheikh Osman, Djibouti",
+      "city": "Djibouti",
+      "branch": "Head Office"
+    },
+    "bcimr": {
+      "name": "Banque pour le Commerce et l'Industrie - Mer Rouge",
+      "link": "https://www.bcimr.dj",
+      "icon": "bcimr.svg",
+      "address": "Boulevard de la République, Djibouti",
+      "city": "Djibouti",
+      "branch": "Main Branch"
+    },
+    "banque_sahélo_saharienne_djibouti": {
+      "name": "Banque Sahélo-Saharienne (Djibouti)",
+      "link": "https://www.bsic.dj",
+      "icon": "banque_sahelo_saharienne.svg",
+      "address": "Rue de Rome, Djibouti",
+      "city": "Djibouti",
+      "branch": "Head Office"
+    },
+    "banque_islamique_de_djibouti": {
+      "name": "Banque Islamique de Djibouti",
+      "link": "https://www.bid.dj",
+      "icon": "banque_islamique_de_djibouti.svg",
+      "address": "Rue de Marseille, Djibouti",
+      "city": "Djibouti",
+      "branch": "Djibouti Branch"
+    },
+    "bank_of_djibouti": {
+      "name": "Bank of Djibouti",
+      "link": "https://www.bankofdjibouti.dj",
+      "icon": "bank_of_djibouti.svg",
+      "address": "Rue du Port, Djibouti",
+      "city": "Djibouti",
+      "branch": "Main Branch"
+    },
+    "exim_bank_djibouti": {
+      "name": "Exim Bank Djibouti",
+      "link": "https://www.eximbankdjibouti.dj",
+      "icon": "exim_bank.svg",
+      "address": "Place Menelik, Djibouti",
+      "city": "Djibouti",
+      "branch": "Head Office"
+    }
+  }
+  

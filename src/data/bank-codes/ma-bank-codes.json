@@ -1,0 +1,83 @@
+{
+    "bmce": {
+      "swift": ["BMCE MA"],
+      "ussd": {
+        "start": "*123#",
+        "balance": "*123*1#",
+        "transfer_to_same_bank": "*123*amount*account_number#"
+      }
+    },
+    "bcp": {
+      "swift": ["BCP MA"],
+      "ussd": {
+        "start": "*456#",
+        "balance": "*456*1#",
+        "transfer_to_same_bank": "*456*amount*account_number#"
+      }
+    },
+    "attijariwafa": {
+      "swift": ["ATWABA"],
+      "ussd": {
+        "start": "*789#",
+        "balance": "*789*1#",
+        "transfer_to_same_bank": "*789*amount*account_number#"
+      }
+    },
+    "bankalmaghrib": {
+      "swift": ["BAM MA"],
+      "ussd": {
+        "start": "*101#",
+        "balance": "*101*1#",
+        "transfer_to_same_bank": "*101*amount*account_number#"
+      }
+    },
+    "cih": {
+      "swift": ["CIH MA"],
+      "ussd": {
+        "start": "*202#",
+        "balance": "*202*1#",
+        "transfer_to_same_bank": "*202*amount*account_number#"
+      }
+    },
+    "sgmb": {
+      "swift": ["SGMB MA"],
+      "ussd": {
+        "start": "*303#",
+        "balance": "*303*1#",
+        "transfer_to_same_bank": "*303*amount*account_number#"
+      }
+    },
+    "bmo": {
+      "swift": ["BMO MA"],
+      "ussd": {
+        "start": "*404#",
+        "balance": "*404*1#",
+        "transfer_to_same_bank": "*404*amount*account_number#"
+      }
+    },
+    "rih": {
+      "swift": ["RIH MA"],
+      "ussd": {
+        "start": "*505#",
+        "balance": "*505*1#",
+        "transfer_to_same_bank": "*505*amount*account_number#"
+      }
+    },
+    "magma": {
+      "swift": ["MAGMA MA"],
+      "ussd": {
+        "start": "*606#",
+        "balance": "*606*1#",
+        "transfer_to_same_bank": "*606*amount*account_number#"
+      }
+    },
+    "pariba": {
+      "swift": ["PARIBA"],
+      "ussd": {
+        "start": "*707#",
+        "balance": "*707*1#",
+        "transfer_to_same_bank": "*707*amount*account_number#"
+      }
+    }
+  }
+  

@@ -1,0 +1,87 @@
+{
+    "kcb": {
+      "swift": ["KCBLKENX"],
+      "ussd": {
+        "start": "*522#",
+        "transfer_to_same_bank": "*522*amount*account_number#",
+        "transfer_other_banks": "*522*amount*account_number*bank_code#",
+        "airtime_self": "*522*amount#",
+        "balance": "*522*1#"
+      }
+    },
+    "equity": {
+      "swift": ["EQBLKENX"],
+      "ussd": {
+        "start": "*247#",
+        "transfer_to_same_bank": "*247*amount*account_number#",
+        "airtime_self": "*247*amount#",
+        "balance": "*247*0#"
+      }
+    },
+    "absa": {
+      "swift": ["BARCKENX"],
+      "ussd": {
+        "start": "*224#",
+        "transfer_to_same_bank": "*224*amount*account_number#",
+        "balance": "*224*1#"
+      }
+    },
+    "coop": {
+      "swift": ["KCOOKENX"],
+      "ussd": {
+        "start": "*667#",
+        "transfer_to_same_bank": "*667*amount*account_number#",
+        "balance": "*667*1#"
+      }
+    },
+    "stanbic": {
+      "swift": ["SBICKENX"],
+      "ussd": {
+        "start": "*208#",
+        "transfer_to_same_bank": "*208*amount*account_number#",
+        "airtime_self": "*208*amount#"
+      }
+    },
+    "dtb": {
+      "swift": ["DTKEKENX"],
+      "ussd": {
+        "start": "*382#",
+        "transfer_to_same_bank": "*382*amount*account_number#",
+        "balance": "*382*1#"
+      }
+    },
+    "nbk": {
+      "swift": ["NBKEKENX"],
+      "ussd": {
+        "start": "*625#",
+        "transfer_to_same_bank": "*625*amount*account_number#",
+        "airtime_self": "*625*amount#",
+        "balance": "*625*0#"
+      }
+    },
+    "sbm": {
+      "swift": ["SBMKKENX"],
+      "ussd": {
+        "start": "*275#",
+        "transfer_to_same_bank": "*275*amount*account_number#",
+        "balance": "*275*1#"
+      }
+    },
+    "familybank": {
+      "swift": ["FMBKKENX"],
+      "ussd": {
+        "start": "*325#",
+        "transfer_to_same_bank": "*325*amount*account_number#",
+        "airtime_self": "*325*amount#"
+      }
+    },
+    "guarantytrust": {
+      "swift": ["GTBKENX"],
+      "ussd": {
+        "start": "*826#",
+        "transfer_to_same_bank": "*826*amount*account_number#",
+        "balance": "*826*1#"
+      }
+    }
+  }
+  

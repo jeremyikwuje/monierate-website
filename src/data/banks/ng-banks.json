@@ -230,5 +230,14 @@
     "address": "10, Alhaji Adebayo Street",
     "city": "Lekki",
     "branch": "Lekki Branch"
+  },
+  "venturegarden": {
+    "name": "Venture Garden Nigeria Limited",
+    "link": "https://venturegardengroup.com",
+    "icon": "venturegarden.png",
+    "address": "7, Association Avenue, Harmony Villas, Isheri, Ojodu Berger, Lagos",
+    "city": "Lagos",
+    "branch": "Ikeja and Ojodu Berger",
+    "founded": "2010"
   }
 }

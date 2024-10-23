@@ -1,0 +1,83 @@
+{
+    "bmce": {
+      "name": "BMCE Bank",
+      "link": "https://www.bmcebank.ma",
+      "icon": "bmce.png",
+      "address": "Avenue Abdelmoumen, Casablanca",
+      "city": "Casablanca",
+      "branch": "Head Office"
+    },
+    "bcp": {
+      "name": "BCP (Banque Centrale Populaire)",
+      "link": "https://www.groupebcp.com",
+      "icon": "bcp.png",
+      "address": "Avenue des FAR, Casablanca",
+      "city": "Casablanca",
+      "branch": "Main Branch"
+    },
+    "attijariwafa": {
+      "name": "Attijariwafa Bank",
+      "link": "https://www.attijariwafabank.com",
+      "icon": "attijariwafa.png",
+      "address": "Boulevard Mohammed VI, Casablanca",
+      "city": "Casablanca",
+      "branch": "Main Branch"
+    },
+    "bankalmaghrib": {
+      "name": "Bank Al Maghrib",
+      "link": "https://www.bkam.ma",
+      "icon": "bankalmaghrib.png",
+      "address": "Avenue Mohammed V, Rabat",
+      "city": "Rabat",
+      "branch": "Head Office"
+    },
+    "cih": {
+      "name": "CIH Bank (Crédit Immobilier et Hôtelier)",
+      "link": "https://www.cihbank.ma",
+      "icon": "cih.png",
+      "address": "Boulevard Mohammed V, Casablanca",
+      "city": "Casablanca",
+      "branch": "Head Office"
+    },
+    "sgmb": {
+      "name": "Société Générale Maroc",
+      "link": "https://www.sg.ma",
+      "icon": "sgmb.png",
+      "address": "Avenue des FAR, Casablanca",
+      "city": "Casablanca",
+      "branch": "Main Branch"
+    },
+    "bmo": {
+      "name": "Banque Marocaine du Commerce Extérieur",
+      "link": "https://www.bmcebank.ma",
+      "icon": "bmo.png",
+      "address": "Avenue des FAR, Casablanca",
+      "city": "Casablanca",
+      "branch": "Main Branch"
+    },
+    "rih": {
+      "name": "Rothschild & Co. Morocco",
+      "link": "https://www.rothschildandco.com",
+      "icon": "rih.png",
+      "address": "Avenue de la Victoire, Casablanca",
+      "city": "Casablanca",
+      "branch": "Main Branch"
+    },
+    "magma": {
+      "name": "Magma Bank",
+      "link": "https://www.magma.ma",
+      "icon": "magma.png",
+      "address": "Rue Al Massira, Casablanca",
+      "city": "Casablanca",
+      "branch": "Main Branch"
+    },
+    "pariba": {
+      "name": "Paribas Maroc",
+      "link": "https://www.paribas.ma",
+      "icon": "pariba.png",
+      "address": "Avenue des FAR, Casablanca",
+      "city": "Casablanca",
+      "branch": "Main Branch"
+    }
+  }
+  

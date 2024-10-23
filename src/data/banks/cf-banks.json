@@ -1,0 +1,75 @@
+{
+    "banco_central_africano": {
+      "name": "Banco Central Africano",
+      "link": "https://www.bca.cf",
+      "icon": "banco_central_africano.svg",
+      "address": "Avenue des Nations, Bangui",
+      "city": "Bangui",
+      "branch": "Bangui Branch"
+    },
+    "credit_du_sangha": {
+      "name": "Crédit du Sangha",
+      "link": "https://www.creditdusangha.cf",
+      "icon": "credit_du_sangha.svg",
+      "address": "Avenue de l'Indépendance, Bangui",
+      "city": "Bangui",
+      "branch": "Bangui Branch"
+    },
+    "banco_iberico": {
+      "name": "Banco Ibérico",
+      "link": "https://www.bancoiberico.cf",
+      "icon": "banco_iberico.svg",
+      "address": "Rue de la République, Bangui",
+      "city": "Bangui",
+      "branch": "Bangui Branch"
+    },
+    "union_bancaire_centrale": {
+      "name": "Union Bancaire Centrale",
+      "link": "https://www.ubc.cf",
+      "icon": "union_bancaire_centrale.svg",
+      "address": "Avenue de la Liberté, Bangui",
+      "city": "Bangui",
+      "branch": "Bangui Branch"
+    },
+    "bank_of_central_africa": {
+      "name": "Bank of Central Africa",
+      "link": "https://www.bankofcentralafrica.cf",
+      "icon": "bank_of_central_africa.svg",
+      "address": "Avenue de la Réunification, Bangui",
+      "city": "Bangui",
+      "branch": "Bangui Branch"
+    },
+    "banque_centrafrique": {
+      "name": "Banque Centrafrique",
+      "link": "https://www.banquecentrAfrique.cf",
+      "icon": "banque_centrAfrique.svg",
+      "address": "Rue de la Paix, Bangui",
+      "city": "Bangui",
+      "branch": "Bangui Branch"
+    },
+    "financiere_et_developpement": {
+      "name": "Banque Financière et de Développement",
+      "link": "https://www.financierededeveloppement.cf",
+      "icon": "financiere_et_developpement.svg",
+      "address": "Avenue de l'Environnement, Bangui",
+      "city": "Bangui",
+      "branch": "Bangui Branch"
+    },
+    "banco_exploration": {
+      "name": "Banco Exploration",
+      "link": "https://www.bancoexploration.cf",
+      "icon": "banco_exploration.svg",
+      "address": "Avenue des Explorateurs, Bangui",
+      "city": "Bangui",
+      "branch": "Bangui Branch"
+    },
+    "banco_rural": {
+      "name": "Banco Rural",
+      "link": "https://www.bancorural.cf",
+      "icon": "banco_rural.svg",
+      "address": "Rue du Commerce, Bangui",
+      "city": "Bangui",
+      "branch": "Bangui Branch"
+    }
+  }
+  

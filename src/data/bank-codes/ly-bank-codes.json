@@ -1,0 +1,83 @@
+{
+    "bankofcommerce": {
+      "swift": ["BCDBLYLX"],
+      "ussd": {
+        "start": "*101#",
+        "balance": "*101*1#",
+        "transfer_to_same_bank": "*101*amount*account_number#"
+      }
+    },
+    "gumhouria": {
+      "swift": ["GUMHLYLT"],
+      "ussd": {
+        "start": "*102#",
+        "balance": "*102*1#",
+        "transfer_to_same_bank": "*102*amount*account_number#"
+      }
+    },
+    "nationalcommercial": {
+      "swift": ["NCBQLYLT"],
+      "ussd": {
+        "start": "*103#",
+        "balance": "*103*1#",
+        "transfer_to_same_bank": "*103*amount*account_number#"
+      }
+    },
+    "wahdabank": {
+      "swift": ["WAHLLYLT"],
+      "ussd": {
+        "start": "*104#",
+        "balance": "*104*1#",
+        "transfer_to_same_bank": "*104*amount*account_number#"
+      }
+    },
+    "libyanforeignbank": {
+      "swift": ["LFBNLYLT"],
+      "ussd": {
+        "start": "*105#",
+        "balance": "*105*1#",
+        "transfer_to_same_bank": "*105*amount*account_number#"
+      }
+    },
+    "sahara": {
+      "swift": ["SAHALYLT"],
+      "ussd": {
+        "start": "*106#",
+        "balance": "*106*1#",
+        "transfer_to_same_bank": "*106*amount*account_number#"
+      }
+    },
+    "alwaha": {
+      "swift": ["WAHLLYLT"],
+      "ussd": {
+        "start": "*107#",
+        "balance": "*107*1#",
+        "transfer_to_same_bank": "*107*amount*account_number#"
+      }
+    },
+    "bankofnorthafrica": {
+      "swift": ["BNAFLYLT"],
+      "ussd": {
+        "start": "*108#",
+        "balance": "*108*1#",
+        "transfer_to_same_bank": "*108*amount*account_number#"
+      }
+    },
+    "alsaraya": {
+      "swift": ["SARALYLT"],
+      "ussd": {
+        "start": "*109#",
+        "balance": "*109*1#",
+        "transfer_to_same_bank": "*109*amount*account_number#"
+      }
+    },
+    "alaminbank": {
+      "swift": ["ALAMLYLT"],
+      "ussd": {
+        "start": "*110#",
+        "balance": "*110*1#",
+        "transfer_to_same_bank": "*110*amount*account_number#"
+      }
+    }
+  }
+  

@@ -1,0 +1,156 @@
+{
+    "nbe": {
+      "swift": [
+        "NBEGEGCX"
+      ],
+      "ussd": {
+        "start": "*202#",
+        "transfer_to_same_bank": "*202*amount*account_number#",
+        "transfer_other_banks": "*202*amount*account_number*bank_code#",
+        "airtime_self": "*202*amount#",
+        "airtime_others": "*202*amount*phone_number#",
+        "balance": "*202*00#",
+        "bvn": "*202*BVN#",
+        "update_bvn_details": "*202*BVN*details#",
+        "stop_debit_transactions": "*202*911#",
+        "activate_code": "*202*activate#"
+      }
+    },
+    "cib": {
+      "swift": [
+        "CIBEEGCX"
+      ],
+      "ussd": {
+        "start": "*123#",
+        "transfer_to_same_bank": "*123*amount*account_number#",
+        "transfer_other_banks": "*123*amount*account_number*bank_code#",
+        "airtime_self": "*123*amount#",
+        "airtime_others": "*123*amount*phone_number#",
+        "balance": "*123*00#",
+        "bvn": "*123*BVN#",
+        "update_bvn_details": "*123*BVN*details#",
+        "stop_debit_transactions": "*123*911#",
+        "activate_code": "*123*activate#"
+      }
+    },
+    "ahli": {
+      "swift": [
+        "AHLEEGCX"
+      ],
+      "ussd": {
+        "start": "*777#",
+        "transfer_to_same_bank": "*777*amount*account_number#",
+        "transfer_other_banks": "*777*amount*account_number*bank_code#",
+        "airtime_self": "*777*amount#",
+        "airtime_others": "*777*amount*phone_number#",
+        "balance": "*777*00#",
+        "bvn": "*777*BVN#",
+        "update_bvn_details": "*777*BVN*details#",
+        "stop_debit_transactions": "*777*911#",
+        "activate_code": "*777*activate#"
+      }
+    },
+    "qnb": {
+      "swift": [
+        "QNBAEGCX"
+      ],
+      "ussd": {
+        "start": "*500#",
+        "transfer_to_same_bank": "*500*amount*account_number#",
+        "transfer_other_banks": "*500*amount*account_number*bank_code#",
+        "airtime_self": "*500*amount#",
+        "airtime_others": "*500*amount*phone_number#",
+        "balance": "*500*00#",
+        "bvn": "*500*BVN#",
+        "update_bvn_details": "*500*BVN*details#",
+        "stop_debit_transactions": "*500*911#",
+        "activate_code": "*500*activate#"
+      }
+    },
+    "bcb": {
+      "swift": [
+        "BCBEGECX"
+      ],
+      "ussd": {
+        "start": "*333#",
+        "transfer_to_same_bank": "*333*amount*account_number#",
+        "transfer_other_banks": "*333*amount*account_number*bank_code#",
+        "airtime_self": "*333*amount#",
+        "airtime_others": "*333*amount*phone_number#",
+        "balance": "*333*00#",
+        "bvn": "*333*BVN#",
+        "update_bvn_details": "*333*BVN*details#",
+        "stop_debit_transactions": "*333*911#",
+        "activate_code": "*333*activate#"
+      }
+    },
+    "alexbank": {
+      "swift": [
+        "ALAXEGCX"
+      ],
+      "ussd": {
+        "start": "*800#",
+        "transfer_to_same_bank": "*800*amount*account_number#",
+        "transfer_other_banks": "*800*amount*account_number*bank_code#",
+        "airtime_self": "*800*amount#",
+        "airtime_others": "*800*amount*phone_number#",
+        "balance": "*800*00#",
+        "bvn": "*800*BVN#",
+        "update_bvn_details": "*800*BVN*details#",
+        "stop_debit_transactions": "*800*911#",
+        "activate_code": "*800*activate#"
+      }
+    },
+    "hsbc": {
+      "swift": [
+        "HSBCEGCX"
+      ],
+      "ussd": {
+        "start": "*400#",
+        "transfer_to_same_bank": "*400*amount*account_number#",
+        "transfer_other_banks": "*400*amount*account_number*bank_code#",
+        "airtime_self": "*400*amount#",
+        "airtime_others": "*400*amount*phone_number#",
+        "balance": "*400*00#",
+        "bvn": "*400*BVN#",
+        "update_bvn_details": "*400*BVN*details#",
+        "stop_debit_transactions": "*400*911#",
+        "activate_code": "*400*activate#"
+      }
+    },
+    "piraeus": {
+      "swift": [
+        "PIRAEGCX"
+      ],
+      "ussd": {
+        "start": "*222#",
+        "transfer_to_same_bank": "*222*amount*account_number#",
+        "transfer_other_banks": "*222*amount*account_number*bank_code#",
+        "airtime_self": "*222*amount#",
+        "airtime_others": "*222*amount*phone_number#",
+        "balance": "*222*00#",
+        "bvn": "*222*BVN#",
+        "update_bvn_details": "*222*BVN*details#",
+        "stop_debit_transactions": "*222*911#",
+        "activate_code": "*222*activate#"
+      }
+    },
+    "misr": {
+      "swift": [
+        "MISREGCX"
+      ],
+      "ussd": {
+        "start": "*600#",
+        "transfer_to_same_bank": "*600*amount*account_number#",
+        "transfer_other_banks": "*600*amount*account_number*bank_code#",
+        "airtime_self": "*600*amount#",
+        "airtime_others": "*600*amount*phone_number#",
+        "balance": "*600*00#",
+        "bvn": "*600*BVN#",
+        "update_bvn_details": "*600*BVN*details#",
+        "stop_debit_transactions": "*600*911#",
+        "activate_code": "*600*activate#"
+      }
+    }
+  }
+  

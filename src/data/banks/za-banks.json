@@ -1,0 +1,82 @@
+{
+    "fnb": {
+        "name": "First National Bank",
+        "link": "https://www.fnb.co.za",
+        "icon": "fnb.png",
+        "address": "1 First Place, Bank City",
+        "city": "Johannesburg",
+        "branch": "Bank City Branch"
+    },
+    "standardbank": {
+        "name": "Standard Bank",
+        "link": "https://www.standardbank.co.za",
+        "icon": "standardbank.png",
+        "address": "5 Simmonds Street",
+        "city": "Johannesburg",
+        "branch": "Head Office"
+    },
+    "absa": {
+        "name": "ABSA Bank",
+        "link": "https://www.absa.co.za",
+        "icon": "absa.png",
+        "address": "15 Troye Street",
+        "city": "Johannesburg",
+        "branch": "Johannesburg Branch"
+    },
+    "capitec": {
+        "name": "Capitec Bank",
+        "link": "https://www.capitecbank.co.za",
+        "icon": "capitec.png",
+        "address": "10 Quantum Road",
+        "city": "Stellenbosch",
+        "branch": "Head Office"
+    },
+    "nedbank": {
+        "name": "Nedbank",
+        "link": "https://www.nedbank.co.za",
+        "icon": "nedbank.png",
+        "address": "135 Rivonia Road",
+        "city": "Sandton",
+        "branch": "Sandton Branch"
+    },
+    "tymebank": {
+        "name": "TymeBank",
+        "link": "https://www.tymebank.co.za",
+        "icon": "tymebank.png",
+        "address": "The MARC, 129 Rivonia Road",
+        "city": "Sandton",
+        "branch": "Head Office"
+    },
+    "africanbank": {
+        "name": "African Bank",
+        "link": "https://www.africanbank.co.za",
+        "icon": "africanbank.png",
+        "address": "59 16th Road",
+        "city": "Midrand",
+        "branch": "Midrand Branch"
+    },
+    "ubank": {
+        "name": "UBank",
+        "link": "https://www.ubank.co.za",
+        "icon": "ubank.png",
+        "address": "1 Wilton Crescent",
+        "city": "Umhlanga",
+        "branch": "Umhlanga Branch"
+    },
+    "sasfin": {
+        "name": "Sasfin Bank",
+        "link": "https://www.sasfin.com",
+        "icon": "sasfin.png",
+        "address": "29 Scott Street",
+        "city": "Waverley",
+        "branch": "Head Office"
+    },
+    "bidvest": {
+        "name": "Bidvest Bank",
+        "link": "https://www.bidvestbank.co.za",
+        "icon": "bidvest.png",
+        "address": "18 Crescent Drive",
+        "city": "Sandton",
+        "branch": "Sandton Branch"
+    }
+}

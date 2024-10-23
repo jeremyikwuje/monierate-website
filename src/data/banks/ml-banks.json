@@ -1,0 +1,83 @@
+{
+    "bms": {
+      "name": "BMS (Banque Malienne de Solidarité)",
+      "link": "https://www.bms.ml",
+      "icon": "bms.png",
+      "address": "Avenue Moussa Tavele, Hamdallaye",
+      "city": "Bamako",
+      "branch": "Head Office"
+    },
+    "bmim": {
+      "name": "BMIM (Banque Malienne de l'Industrie et du Commerce)",
+      "link": "https://www.bmim.ml",
+      "icon": "bmim.png",
+      "address": "Avenue Moussa Tavele, Bamako",
+      "city": "Bamako",
+      "branch": "Main Branch"
+    },
+    "banquemali": {
+      "name": "Banque Malienne",
+      "link": "https://www.banquemali.ml",
+      "icon": "banquemali.png",
+      "address": "Avenue Moussa Tavele, ACI 2000",
+      "city": "Bamako",
+      "branch": "ACI 2000 Branch"
+    },
+    "bcs": {
+      "name": "BCS (Banque Commerciale du Sahel)",
+      "link": "https://www.bcs.ml",
+      "icon": "bcs.png",
+      "address": "Avenue Moussa Tavele, Badalabougou",
+      "city": "Bamako",
+      "branch": "Badalabougou Branch"
+    },
+    "uba": {
+      "name": "UBA Mali (United Bank for Africa)",
+      "link": "https://www.ubamali.com",
+      "icon": "uba.png",
+      "address": "Avenue Moussa Tavele, Badalabougou",
+      "city": "Bamako",
+      "branch": "Main Branch"
+    },
+    "bnm": {
+      "name": "BNM (Banque Nationale de Mali)",
+      "link": "https://www.bnm.ml",
+      "icon": "bnm.png",
+      "address": "Avenue Moussa Tavele, Kalaban Koura",
+      "city": "Bamako",
+      "branch": "Kalaban Koura Branch"
+    },
+    "cim": {
+      "name": "CIM (Crédit Immobilier du Mali)",
+      "link": "https://www.cim.ml",
+      "icon": "cim.png",
+      "address": "Avenue Moussa Tavele, Koulouba",
+      "city": "Bamako",
+      "branch": "Koulouba Branch"
+    },
+    "ecobank": {
+      "name": "Ecobank Mali",
+      "link": "https://www.ecobank.com",
+      "icon": "ecobank.png",
+      "address": "Avenue Moussa Tavele, Bamako",
+      "city": "Bamako",
+      "branch": "Bamako Branch"
+    },
+    "maliwat": {
+      "name": "Mali Watany Bank",
+      "link": "https://www.maliwat.com",
+      "icon": "maliwat.png",
+      "address": "Avenue Moussa Tavele, Bamako",
+      "city": "Bamako",
+      "branch": "Main Branch"
+    },
+    "bici": {
+      "name": "BICI (Banque Internationale pour le Commerce et l'Industrie)",
+      "link": "https://www.bici.ml",
+      "icon": "bici.png",
+      "address": "Avenue Moussa Tavele, ACI 2000",
+      "city": "Bamako",
+      "branch": "ACI 2000 Branch"
+    }
+  }
+  

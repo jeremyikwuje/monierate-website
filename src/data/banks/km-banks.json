@@ -1,0 +1,75 @@
+{
+    "banque_de_lhabitat_des_comores": {
+      "name": "Banque de l'Habitat des Comores",
+      "link": "https://www.bhcomores.com",
+      "icon": "banque_de_lhabitat_des_comores.svg",
+      "address": "Avenue des Républiques, Moroni",
+      "city": "Moroni",
+      "branch": "Moroni Branch"
+    },
+    "banque_comorienne_de_developpement": {
+      "name": "Banque Comorienne de Développement",
+      "link": "https://www.bcdc.com",
+      "icon": "banque_comorienne_de_developpement.svg",
+      "address": "Avenue de la Liberté, Moroni",
+      "city": "Moroni",
+      "branch": "Moroni Branch"
+    },
+    "banque_comorienne_de_lhabitat": {
+      "name": "Banque Comorienne de l'Habitat",
+      "link": "https://www.bch.com",
+      "icon": "banque_comorienne_de_lhabitat.svg",
+      "address": "Rue de l'Économie, Moroni",
+      "city": "Moroni",
+      "branch": "Moroni Branch"
+    },
+    "banque_internationale_des_comores": {
+      "name": "Banque Internationale des Comores",
+      "link": "https://www.bic.com",
+      "icon": "banque_internationale_des_comores.svg",
+      "address": "Avenue de l'Indépendance, Moroni",
+      "city": "Moroni",
+      "branch": "Moroni Branch"
+    },
+    "banque_de_lunion_comorienne": {
+      "name": "Banque de l'Union Comorienne",
+      "link": "https://www.buc.com",
+      "icon": "banque_de_lunion_comorienne.svg",
+      "address": "Avenue de la Révolution, Moroni",
+      "city": "Moroni",
+      "branch": "Moroni Branch"
+    },
+    "banque_comorienne_de_financement": {
+      "name": "Banque Comorienne de Financement",
+      "link": "https://www.bcf.com",
+      "icon": "banque_comorienne_de_financement.svg",
+      "address": "Avenue du Commerce, Moroni",
+      "city": "Moroni",
+      "branch": "Moroni Branch"
+    },
+    "banque_comorienne_de_developpement2": {
+      "name": "Banque Comorienne de Développement",
+      "link": "https://www.bcdc.com",
+      "icon": "banque_comorienne_de_developpement.svg",
+      "address": "Rue de la Banque, Moroni",
+      "city": "Moroni",
+      "branch": "Moroni Branch"
+    },
+    "banque_de_commerce_et_de_developpement": {
+      "name": "Banque de Commerce et de Développement",
+      "link": "https://www.bcdc.com",
+      "icon": "banque_de_commerce_et_de_developpement.svg",
+      "address": "Avenue du Marché, Moroni",
+      "city": "Moroni",
+      "branch": "Moroni Branch"
+    },
+    "banque_de_financement_commercial": {
+      "name": "Banque de Financement Commercial",
+      "link": "https://www.bfc.com",
+      "icon": "banque_de_financement_commercial.svg",
+      "address": "Avenue de la Banque, Moroni",
+      "city": "Moroni",
+      "branch": "Moroni Branch"
+    }
+  }
+  

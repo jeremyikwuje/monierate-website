@@ -1,0 +1,156 @@
+{
+    "gbc": {
+      "swift": [
+        "GBGSGM22"
+      ],
+      "ussd": {
+        "start": "*120#",
+        "transfer_to_same_bank": "*120*amount*account_number#",
+        "transfer_other_banks": "*120*amount*account_number*bank_code#",
+        "airtime_self": "*120*amount#",
+        "airtime_others": "*120*amount*phone_number#",
+        "balance": "*120*00#",
+        "bvn": "*120*BVN#",
+        "update_bvn_details": "*120*BVN*details#",
+        "stop_debit_transactions": "*120*911#",
+        "activate_code": "*120*activate#"
+      }
+    },
+    "gtbank": {
+      "swift": [
+        "GTBINGLA"
+      ],
+      "ussd": {
+        "start": "*737#",
+        "transfer_to_same_bank": "*737*amount*account_number#",
+        "transfer_other_banks": "*737*amount*account_number*bank_code#",
+        "airtime_self": "*737*amount#",
+        "airtime_others": "*737*2*amount*phone_number#",
+        "balance": "*737*6*1#",
+        "bvn": "*737*6*2#",
+        "update_bvn_details": "*737*6*3#",
+        "stop_debit_transactions": "*737*51#",
+        "activate_code": "*737*7#"
+      }
+    },
+    "eco": {
+      "swift": [
+        "ECOGGM22"
+      ],
+      "ussd": {
+        "start": "*222#",
+        "transfer_to_same_bank": "*222*amount*account_number#",
+        "transfer_other_banks": "*222*amount*account_number*bank_code#",
+        "airtime_self": "*222*amount#",
+        "airtime_others": "*222*amount*phone_number#",
+        "balance": "*222*00#",
+        "bvn": "*222*BVN#",
+        "update_bvn_details": "*222*BVN*details#",
+        "stop_debit_transactions": "*222*911#",
+        "activate_code": "*222*activate#"
+      }
+    },
+    "gmb": {
+      "swift": [
+        "GMBGGM22"
+      ],
+      "ussd": {
+        "start": "*100#",
+        "transfer_to_same_bank": "*100*amount*account_number#",
+        "transfer_other_banks": "*100*amount*account_number*bank_code#",
+        "airtime_self": "*100*amount#",
+        "airtime_others": "*100*amount*phone_number#",
+        "balance": "*100*00#",
+        "bvn": "*100*BVN#",
+        "update_bvn_details": "*100*BVN*details#",
+        "stop_debit_transactions": "*100*911#",
+        "activate_code": "*100*activate#"
+      }
+    },
+    "guaranty": {
+      "swift": [
+        "GUBGGM22"
+      ],
+      "ussd": {
+        "start": "*444#",
+        "transfer_to_same_bank": "*444*amount*account_number#",
+        "transfer_other_banks": "*444*amount*account_number*bank_code#",
+        "airtime_self": "*444*amount#",
+        "airtime_others": "*444*amount*phone_number#",
+        "balance": "*444*00#",
+        "bvn": "*444*BVN#",
+        "update_bvn_details": "*444*BVN*details#",
+        "stop_debit_transactions": "*444*911#",
+        "activate_code": "*444*activate#"
+      }
+    },
+    "fbm": {
+      "swift": [
+        "FBMGGM22"
+      ],
+      "ussd": {
+        "start": "*300#",
+        "transfer_to_same_bank": "*300*amount*account_number#",
+        "transfer_other_banks": "*300*amount*account_number*bank_code#",
+        "airtime_self": "*300*amount#",
+        "airtime_others": "*300*amount*phone_number#",
+        "balance": "*300*00#",
+        "bvn": "*300*BVN#",
+        "update_bvn_details": "*300*BVN*details#",
+        "stop_debit_transactions": "*300*911#",
+        "activate_code": "*300*activate#"
+      }
+    },
+    "ecobank": {
+      "swift": [
+        "ECOCGM22"
+      ],
+      "ussd": {
+        "start": "*555#",
+        "transfer_to_same_bank": "*555*amount*account_number#",
+        "transfer_other_banks": "*555*amount*account_number*bank_code#",
+        "airtime_self": "*555*amount#",
+        "airtime_others": "*555*amount*phone_number#",
+        "balance": "*555*00#",
+        "bvn": "*555*BVN#",
+        "update_bvn_details": "*555*BVN*details#",
+        "stop_debit_transactions": "*555*911#",
+        "activate_code": "*555*activate#"
+      }
+    },
+    "gambia_community": {
+      "swift": [
+        "GCBGGM22"
+      ],
+      "ussd": {
+        "start": "*888#",
+        "transfer_to_same_bank": "*888*amount*account_number#",
+        "transfer_other_banks": "*888*amount*account_number*bank_code#",
+        "airtime_self": "*888*amount#",
+        "airtime_others": "*888*amount*phone_number#",
+        "balance": "*888*00#",
+        "bvn": "*888*BVN#",
+        "update_bvn_details": "*888*BVN*details#",
+        "stop_debit_transactions": "*888*911#",
+        "activate_code": "*888*activate#"
+      }
+    },
+    "gtbankgambia": {
+      "swift": [
+        "GTBGGM22"
+      ],
+      "ussd": {
+        "start": "*777#",
+        "transfer_to_same_bank": "*777*amount*account_number#",
+        "transfer_other_banks": "*777*amount*account_number*bank_code#",
+        "airtime_self": "*777*amount#",
+        "airtime_others": "*777*amount*phone_number#",
+        "balance": "*777*00#",
+        "bvn": "*777*BVN#",
+        "update_bvn_details": "*777*BVN*details#",
+        "stop_debit_transactions": "*777*911#",
+        "activate_code": "*777*activate#"
+      }
+    }
+  }
+  

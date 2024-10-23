@@ -1,0 +1,75 @@
+{
+    "bicec": {
+      "name": "Banque Internationale du Cameroun pour l'Épargne et le Crédit (BICEC)",
+      "link": "https://www.bicec.com",
+      "icon": "bicec.svg",
+      "address": "Avenue de la République, Douala",
+      "city": "Douala",
+      "branch": "Douala Branch"
+    },
+    "société_generale": {
+      "name": "Société Générale Cameroon",
+      "link": "https://www.societegenerale.cm",
+      "icon": "societe_generale.svg",
+      "address": "Avenue des Nations Unies, Yaoundé",
+      "city": "Yaoundé",
+      "branch": "Yaoundé Branch"
+    },
+    "ecobank": {
+      "name": "Ecobank Cameroon",
+      "link": "https://www.ecobank.com",
+      "icon": "ecobank.svg",
+      "address": "Avenue des Forces Armées, Douala",
+      "city": "Douala",
+      "branch": "Douala Branch"
+    },
+    "attijariwafa": {
+      "name": "Attijariwafa Bank",
+      "link": "https://www.attijariwafa.com",
+      "icon": "attijariwafa.svg",
+      "address": "Avenue des Découvertes, Yaoundé",
+      "city": "Yaoundé",
+      "branch": "Yaoundé Branch"
+    },
+    "uob": {
+      "name": "United Overseas Bank (UOB)",
+      "link": "https://www.uobgroup.com",
+      "icon": "uob.svg",
+      "address": "Avenue du Général de Gaulle, Yaoundé",
+      "city": "Yaoundé",
+      "branch": "Yaoundé Branch"
+    },
+    "cameroon_development_bank": {
+      "name": "Cameroon Development Bank",
+      "link": "https://www.cdb.cm",
+      "icon": "cdb.svg",
+      "address": "Avenue de l'Économie, Yaoundé",
+      "city": "Yaoundé",
+      "branch": "Yaoundé Branch"
+    },
+    "banque_atlantique": {
+      "name": "Banque Atlantique Cameroon",
+      "link": "https://www.banqueatlantique.cm",
+      "icon": "banque_atlantique.svg",
+      "address": "Avenue des Banques, Douala",
+      "city": "Douala",
+      "branch": "Douala Branch"
+    },
+    "caisse_d_epargne": {
+      "name": "Caisse d'Épargne Cameroon",
+      "link": "https://www.caisse-epargne.cm",
+      "icon": "caisse_epargne.svg",
+      "address": "Avenue de la Réserve, Yaoundé",
+      "city": "Yaoundé",
+      "branch": "Yaoundé Branch"
+    },
+    "banque_postale": {
+      "name": "Banque Postale du Cameroun",
+      "link": "https://www.banquepostale.cm",
+      "icon": "banque_postale.svg",
+      "address": "Avenue de l'Innovation, Douala",
+      "city": "Douala",
+      "branch": "Douala Branch"
+    }
+  }
+  

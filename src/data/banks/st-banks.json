@@ -1,0 +1,83 @@
+{
+    "bcstp": {
+      "name": "Banco Central de São Tomé e Príncipe (BCSTP)",
+      "link": "https://www.bcstp.st",
+      "icon": "bcstp.png",
+      "address": "Praça da Independência, São Tomé",
+      "city": "São Tomé",
+      "branch": "Head Office"
+    },
+    "bancoest": {
+      "name": "Banco Estádio",
+      "link": "https://www.bancoestadio.st",
+      "icon": "bancoest.png",
+      "address": "Avenida da Independência, São Tomé",
+      "city": "São Tomé",
+      "branch": "Main Branch"
+    },
+    "bancointernacional": {
+      "name": "Banco Internacional de São Tomé e Príncipe (BISP)",
+      "link": "https://www.bisp.st",
+      "icon": "bancointernacional.png",
+      "address": "Rua do Cemitério, São Tomé",
+      "city": "São Tomé",
+      "branch": "Head Office"
+    },
+    "bancotrade": {
+      "name": "Banco Trade",
+      "link": "https://www.bancotrade.st",
+      "icon": "bancotrade.png",
+      "address": "Avenida Marginal, São Tomé",
+      "city": "São Tomé",
+      "branch": "Main Branch"
+    },
+    "banqueabidjan": {
+      "name": "Banque d'Abidjan et des Pays de l'Ouest (BAPO)",
+      "link": "https://www.bapobank.st",
+      "icon": "banqueabidjan.png",
+      "address": "Avenida 12 de Julho, São Tomé",
+      "city": "São Tomé",
+      "branch": "Head Office"
+    },
+    "bancoangola": {
+      "name": "Banco Angolano de Investimentos",
+      "link": "https://www.bai.st",
+      "icon": "bancoangola.png",
+      "address": "Avenida da Liberdade, São Tomé",
+      "city": "São Tomé",
+      "branch": "Main Branch"
+    },
+    "bcai": {
+      "name": "Banco Comercial e de Investimento (BCAI)",
+      "link": "https://www.bcaistp.st",
+      "icon": "bcai.png",
+      "address": "Rua do Comércio, São Tomé",
+      "city": "São Tomé",
+      "branch": "Head Office"
+    },
+    "bancotributario": {
+      "name": "Banco Tributário",
+      "link": "https://www.bancotributario.st",
+      "icon": "bancotributario.png",
+      "address": "Avenida 1º de Maio, São Tomé",
+      "city": "São Tomé",
+      "branch": "Main Branch"
+    },
+    "bancocentrol": {
+      "name": "Banco Central do Oeste Africano",
+      "link": "https://www.bcoaa.st",
+      "icon": "bancocentrol.png",
+      "address": "Avenida da Paz, São Tomé",
+      "city": "São Tomé",
+      "branch": "Head Office"
+    },
+    "bancodereforma": {
+      "name": "Banco de Reforma",
+      "link": "https://www.bancodereforma.st",
+      "icon": "bancodereforma.png",
+      "address": "Avenida de São João, São Tomé",
+      "city": "São Tomé",
+      "branch": "Main Branch"
+    }
+  }
+  

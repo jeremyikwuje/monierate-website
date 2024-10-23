@@ -34,7 +34,7 @@
 	<!-- Posts -->
 	<div class="container w-full">
 		<div
-			class="bg-white py-[10px] shadow-t-md dark:bg-gray-900 dark:text-light dark:border-none w-full min-h-[100vh] overflow-x-auto"
+			class="bg-white py-[10px] shadow-t-md dark:bg-gray-900 dark:text-light dark:border-none w-full overflow-x-auto"
 		>
 			<div class="overflow-x-auto w-full">
 				<table class="table-auto w-full text-sm text-left whitespace-nowrap">

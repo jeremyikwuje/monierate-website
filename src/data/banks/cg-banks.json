@@ -1,0 +1,75 @@
+{
+    "banque_postale_du_congo": {
+      "name": "Banque Postale du Congo",
+      "link": "https://www.banque-postale.cg",
+      "icon": "banque_postale_du_congo.svg",
+      "address": "Avenue du 15 Août, Brazzaville",
+      "city": "Brazzaville",
+      "branch": "Brazzaville Branch"
+    },
+    "banque_internationale_pour_lafrique": {
+      "name": "Banque Internationale pour l'Afrique",
+      "link": "https://www.biap.com",
+      "icon": "banque_internationale_pour_lafrique.svg",
+      "address": "Avenue de l'Indépendance, Brazzaville",
+      "city": "Brazzaville",
+      "branch": "Brazzaville Branch"
+    },
+    "banque_de_lhabitat_du_congo": {
+      "name": "Banque de l'Habitat du Congo",
+      "link": "https://www.bhc.com",
+      "icon": "banque_de_lhabitat_du_congo.svg",
+      "address": "Avenue du Commerce, Brazzaville",
+      "city": "Brazzaville",
+      "branch": "Brazzaville Branch"
+    },
+    "banque_commerciale_du_congo": {
+      "name": "Banque Commerciale du Congo",
+      "link": "https://www.bcc.com",
+      "icon": "banque_commerciale_du_congo.svg",
+      "address": "Avenue des Nations, Brazzaville",
+      "city": "Brazzaville",
+      "branch": "Brazzaville Branch"
+    },
+    "banque_de_developpement_de_congo": {
+      "name": "Banque de Développement de Congo",
+      "link": "https://www.bdc.com",
+      "icon": "banque_de_developpement_de_congo.svg",
+      "address": "Avenue de la Liberté, Brazzaville",
+      "city": "Brazzaville",
+      "branch": "Brazzaville Branch"
+    },
+    "banque_regionale_de_developpement": {
+      "name": "Banque Régionale de Développement",
+      "link": "https://www.brd.com",
+      "icon": "banque_regionale_de_developpement.svg",
+      "address": "Avenue du 30 Juin, Brazzaville",
+      "city": "Brazzaville",
+      "branch": "Brazzaville Branch"
+    },
+    "société_générale_de_banque_du_congo": {
+      "name": "Société Générale de Banque du Congo",
+      "link": "https://www.sgbc.com",
+      "icon": "societe_generale_de_banque_du_congo.svg",
+      "address": "Avenue de la Révolution, Brazzaville",
+      "city": "Brazzaville",
+      "branch": "Brazzaville Branch"
+    },
+    "banque_de_lunion": {
+      "name": "Banque de l'Union",
+      "link": "https://www.bu.com",
+      "icon": "banque_de_lunion.svg",
+      "address": "Avenue de l'Amitié, Brazzaville",
+      "city": "Brazzaville",
+      "branch": "Brazzaville Branch"
+    },
+    "banque_intercontinentale": {
+      "name": "Banque Intercontinentale",
+      "link": "https://www.bic.com",
+      "icon": "banque_intercontinentale.svg",
+      "address": "Avenue des Fêtes, Brazzaville",
+      "city": "Brazzaville",
+      "branch": "Brazzaville Branch"
+    }
+  }
+  

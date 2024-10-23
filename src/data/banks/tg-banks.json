@@ -1,0 +1,83 @@
+{
+    "togobank": {
+      "name": "Togo Bank",
+      "link": "https://www.togobank.tg",
+      "icon": "togobank.png",
+      "address": "Centre d'Affaires, Avenue de la République, Lomé",
+      "city": "Lomé",
+      "branch": "Main Branch"
+    },
+    "ecobank": {
+      "name": "Ecobank Togo",
+      "link": "https://www.ecobank.com",
+      "icon": "ecobank.png",
+      "address": "Avenue Moussa Tavele, Lomé",
+      "city": "Lomé",
+      "branch": "Main Branch"
+    },
+    "banqueatlantique": {
+      "name": "Banque Atlantique Togo",
+      "link": "https://www.banqueatlantique.tg",
+      "icon": "banqueatlantique.png",
+      "address": "Rue de la Libération, Lomé",
+      "city": "Lomé",
+      "branch": "Main Branch"
+    },
+    "bni": {
+      "name": "Banque Nationale d'Investissement (BNI)",
+      "link": "https://www.bni.tg",
+      "icon": "bni.png",
+      "address": "Avenue de la République, Lomé",
+      "city": "Lomé",
+      "branch": "Main Branch"
+    },
+    "utb": {
+      "name": "Union Togolaise de Banque (UTB)",
+      "link": "https://www.utb.tg",
+      "icon": "utb.png",
+      "address": "Rue du 24 Janvier, Lomé",
+      "city": "Lomé",
+      "branch": "Main Branch"
+    },
+    "bicec": {
+      "name": "BICEC Togo",
+      "link": "https://www.bicec.tg",
+      "icon": "bicec.png",
+      "address": "Avenue Jean-Paul II, Lomé",
+      "city": "Lomé",
+      "branch": "Main Branch"
+    },
+    "bmci": {
+      "name": "Banque de la Méditerranée et des Caraïbes (BMCI)",
+      "link": "https://www.bmci.tg",
+      "icon": "bmci.png",
+      "address": "Avenue de la Réunification, Lomé",
+      "city": "Lomé",
+      "branch": "Main Branch"
+    },
+    "sociétégenerale": {
+      "name": "Société Générale Togo",
+      "link": "https://www.societegenerale.tg",
+      "icon": "sociétégenerale.png",
+      "address": "Avenue de la Réunification, Lomé",
+      "city": "Lomé",
+      "branch": "Main Branch"
+    },
+    "banquesocred": {
+      "name": "Banque Socred",
+      "link": "https://www.banquesocred.tg",
+      "icon": "banquesocred.png",
+      "address": "Avenue de la République, Lomé",
+      "city": "Lomé",
+      "branch": "Main Branch"
+    },
+    "banquefrihet": {
+      "name": "Banque Frihet",
+      "link": "https://www.banquefrihet.tg",
+      "icon": "banquefrihet.png",
+      "address": "Avenue du Togo, Lomé",
+      "city": "Lomé",
+      "branch": "Main Branch"
+    }
+  }
+  

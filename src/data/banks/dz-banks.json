@@ -1,0 +1,75 @@
+{
+    "bna": {
+      "name": "Banque Nationale d'Algérie",
+      "link": "https://www.bna.dz",
+      "icon": "bna.svg",
+      "address": "Algiers, Algeria",
+      "city": "Algiers",
+      "branch": "Algiers Branch"
+    },
+    "bea": {
+      "name": "Banque Extérieure d'Algérie",
+      "link": "https://www.bea.dz",
+      "icon": "bea.svg",
+      "address": "El Madania, Algiers",
+      "city": "Algiers",
+      "branch": "El Madania Branch"
+    },
+    "cne": {
+      "name": "Caisse Nationale d'Épargne et de Prévoyance",
+      "link": "https://www.cne.dz",
+      "icon": "cne.svg",
+      "address": "Boulevard Ahmed Zabana, Algiers",
+      "city": "Algiers",
+      "branch": "Boulevard Branch"
+    },
+    "sgb": {
+      "name": "Société Générale Algérie",
+      "link": "https://www.societegenerale.dz",
+      "icon": "sgb.svg",
+      "address": "Boulevard des Martyrs, Algiers",
+      "city": "Algiers",
+      "branch": "Martyrs Branch"
+    },
+    "el_ahli": {
+      "name": "Banque El Ahli",
+      "link": "https://www.banqueelahlidz",
+      "icon": "el_ahli.svg",
+      "address": "Rue des Frères Boumendil, Algiers",
+      "city": "Algiers",
+      "branch": "Boumendil Branch"
+    },
+    "bda": {
+      "name": "Banque de Développement Local",
+      "link": "https://www.bdl.dz",
+      "icon": "bda.svg",
+      "address": "Alger Center, Algiers",
+      "city": "Algiers",
+      "branch": "Center Branch"
+    },
+    "fnb": {
+      "name": "First National Bank",
+      "link": "https://www.fnb.dz",
+      "icon": "fnb.svg",
+      "address": "Rue de la République, Algiers",
+      "city": "Algiers",
+      "branch": "Republic Branch"
+    },
+    "bde": {
+      "name": "Banque de l'Agriculture et du Développement Rural",
+      "link": "https://www.bad.dz",
+      "icon": "bde.svg",
+      "address": "Place des Martyrs, Algiers",
+      "city": "Algiers",
+      "branch": "Martyrs Branch"
+    },
+    "bad": {
+      "name": "Banque d'Algérie",
+      "link": "https://www.banquedalarabie.dz",
+      "icon": "bad.svg",
+      "address": "Alger City, Algiers",
+      "city": "Algiers",
+      "branch": "City Branch"
+    }
+  }
+  

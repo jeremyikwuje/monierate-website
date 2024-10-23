@@ -1,0 +1,153 @@
+{
+    "banque_de_djibouti": {
+      "swift": ["BDDJDJJD"],
+      "ussd": {
+        "start": "*123#",
+        "transfer_to_same_bank": "*123*amount*account_number#",
+        "transfer_other_banks": "*123*amount*account_number*bank_code#",
+        "airtime_self": "*123*amount#",
+        "airtime_others": "*123*amount*phone_number#",
+        "balance": "*123*00#",
+        "bvn": "*123*BVN#",
+        "update_bvn_details": "*123*BVN*details#",
+        "stop_debit_transactions": "*123*911#",
+        "activate_code": "*123*activate#"
+      }
+    },
+    "bcimr": {
+      "swift": ["BCDJDJJD"],
+      "ussd": {
+        "start": "*124#",
+        "transfer_to_same_bank": "*124*amount*account_number#",
+        "transfer_other_banks": "*124*amount*account_number*bank_code#",
+        "airtime_self": "*124*amount#",
+        "airtime_others": "*124*amount*phone_number#",
+        "balance": "*124*00#",
+        "bvn": "*124*BVN#",
+        "update_bvn_details": "*124*BVN*details#",
+        "stop_debit_transactions": "*124*911#",
+        "activate_code": "*124*activate#"
+      }
+    },
+    "ecobank_djibouti": {
+      "swift": ["ECOCDJJD"],
+      "ussd": {
+        "start": "*125#",
+        "transfer_to_same_bank": "*125*amount*account_number#",
+        "transfer_other_banks": "*125*amount*account_number*bank_code#",
+        "airtime_self": "*125*amount#",
+        "airtime_others": "*125*amount*phone_number#",
+        "balance": "*125*00#",
+        "bvn": "*125*BVN#",
+        "update_bvn_details": "*125*BVN*details#",
+        "stop_debit_transactions": "*125*911#",
+        "activate_code": "*125*activate#"
+      }
+    },
+    "bank_of_africa_djibouti": {
+      "swift": ["BOADJDJD"],
+      "ussd": {
+        "start": "*126#",
+        "transfer_to_same_bank": "*126*amount*account_number#",
+        "transfer_other_banks": "*126*amount*account_number*bank_code#",
+        "airtime_self": "*126*amount#",
+        "airtime_others": "*126*amount*phone_number#",
+        "balance": "*126*00#",
+        "bvn": "*126*BVN#",
+        "update_bvn_details": "*126*BVN*details#",
+        "stop_debit_transactions": "*126*911#",
+        "activate_code": "*126*activate#"
+      }
+    },
+    "banque_islamique_de_djibouti": {
+      "swift": ["BIDJDJJD"],
+      "ussd": {
+        "start": "*127#",
+        "transfer_to_same_bank": "*127*amount*account_number#",
+        "transfer_other_banks": "*127*amount*account_number*bank_code#",
+        "airtime_self": "*127*amount#",
+        "airtime_others": "*127*amount*phone_number#",
+        "balance": "*127*00#",
+        "bvn": "*127*BVN#",
+        "update_bvn_details": "*127*BVN*details#",
+        "stop_debit_transactions": "*127*911#",
+        "activate_code": "*127*activate#"
+      }
+    },
+    "caisse_nationale_depargne": {
+      "swift": ["CNEDDJJD"],
+      "ussd": {
+        "start": "*128#",
+        "transfer_to_same_bank": "*128*amount*account_number#",
+        "transfer_other_banks": "*128*amount*account_number*bank_code#",
+        "airtime_self": "*128*amount#",
+        "airtime_others": "*128*amount*phone_number#",
+        "balance": "*128*00#",
+        "bvn": "*128*BVN#",
+        "update_bvn_details": "*128*BVN*details#",
+        "stop_debit_transactions": "*128*911#",
+        "activate_code": "*128*activate#"
+      }
+    },
+    "banque_sahélo_saharienne_djibouti": {
+      "swift": ["BSSDJDJD"],
+      "ussd": {
+        "start": "*129#",
+        "transfer_to_same_bank": "*129*amount*account_number#",
+        "transfer_other_banks": "*129*amount*account_number*bank_code#",
+        "airtime_self": "*129*amount#",
+        "airtime_others": "*129*amount*phone_number#",
+        "balance": "*129*00#",
+        "bvn": "*129*BVN#",
+        "update_bvn_details": "*129*BVN*details#",
+        "stop_debit_transactions": "*129*911#",
+        "activate_code": "*129*activate#"
+      }
+    },
+    "commercial_bank_of_ethiopia_djibouti": {
+      "swift": ["CBEDDJJD"],
+      "ussd": {
+        "start": "*130#",
+        "transfer_to_same_bank": "*130*amount*account_number#",
+        "transfer_other_banks": "*130*amount*account_number*bank_code#",
+        "airtime_self": "*130*amount#",
+        "airtime_others": "*130*amount*phone_number#",
+        "balance": "*130*00#",
+        "bvn": "*130*BVN#",
+        "update_bvn_details": "*130*BVN*details#",
+        "stop_debit_transactions": "*130*911#",
+        "activate_code": "*130*activate#"
+      }
+    },
+    "banque_de_credit_et_depargne_djibouti": {
+      "swift": ["BCEDDJJD"],
+      "ussd": {
+        "start": "*131#",
+        "transfer_to_same_bank": "*131*amount*account_number#",
+        "transfer_other_banks": "*131*amount*account_number*bank_code#",
+        "airtime_self": "*131*amount#",
+        "airtime_others": "*131*amount*phone_number#",
+        "balance": "*131*00#",
+        "bvn": "*131*BVN#",
+        "update_bvn_details": "*131*BVN*details#",
+        "stop_debit_transactions": "*131*911#",
+        "activate_code": "*131*activate#"
+      }
+    },
+    "exim_bank_djibouti": {
+      "swift": ["EXIMDJJD"],
+      "ussd": {
+        "start": "*132#",
+        "transfer_to_same_bank": "*132*amount*account_number#",
+        "transfer_other_banks": "*132*amount*account_number*bank_code#",
+        "airtime_self": "*132*amount#",
+        "airtime_others": "*132*amount*phone_number#",
+        "balance": "*132*00#",
+        "bvn": "*132*BVN#",
+        "update_bvn_details": "*132*BVN*details#",
+        "stop_debit_transactions": "*132*911#",
+        "activate_code": "*132*activate#"
+      }
+    }
+  }
+  

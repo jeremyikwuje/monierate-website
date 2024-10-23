@@ -1,0 +1,89 @@
+{
+    "ecobank": {
+      "swift": ["ECOCLRLM"],
+      "ussd": {
+        "start": "*326#",
+        "transfer_to_same_bank": "*326*amount*account_number#",
+        "airtime_self": "*326*amount#",
+        "balance": "*326*0#"
+      }
+    },
+    "gtbank": {
+      "swift": ["GTBILRLM"],
+      "ussd": {
+        "start": "*737#",
+        "transfer_to_same_bank": "*737*1*amount*account_number#",
+        "airtime_self": "*737*amount#",
+        "balance": "*737*6*1#"
+      }
+    },
+    "uba": {
+      "swift": ["UNAFLRLM"],
+      "ussd": {
+        "start": "*919#",
+        "transfer_to_same_bank": "*919*amount*account_number#",
+        "airtime_self": "*919*amount#",
+        "balance": "*919*00#"
+      }
+    },
+    "lbdibank": {
+      "swift": ["LBDILRLM"],
+      "ussd": {
+        "start": "*553#",
+        "transfer_to_same_bank": "*553*amount*account_number#",
+        "balance": "*553*1#"
+      }
+    },
+    "africanbank": {
+      "swift": ["AFBKLRLM"],
+      "ussd": {
+        "start": "*150#",
+        "transfer_to_same_bank": "*150*amount*account_number#",
+        "balance": "*150*1#"
+      }
+    },
+    "internationalbank": {
+      "swift": ["INBKLRLM"],
+      "ussd": {
+        "start": "*120#",
+        "transfer_to_same_bank": "*120*amount*account_number#",
+        "airtime_self": "*120*amount#",
+        "balance": "*120*1#"
+      }
+    },
+    "globalbank": {
+      "swift": ["GBLKLRLM"],
+      "ussd": {
+        "start": "*601#",
+        "transfer_to_same_bank": "*601*amount*account_number#",
+        "balance": "*601*1#"
+      }
+    },
+    "fidelitybank": {
+      "swift": ["FIDBLRLM"],
+      "ussd": {
+        "start": "*707#",
+        "transfer_to_same_bank": "*707*amount*account_number#",
+        "balance": "*707*0#"
+      }
+    },
+    "firstbank": {
+      "swift": ["FIBKLRLM"],
+      "ussd": {
+        "start": "*894#",
+        "transfer_to_same_bank": "*894*amount*account_number#",
+        "airtime_self": "*894*amount#",
+        "balance": "*894*0#"
+      }
+    },
+    "wellsfargo": {
+      "swift": ["WFGRLRLM"],
+      "ussd": {
+        "start": "*144#",
+        "transfer_to_same_bank": "*144*amount*account_number#",
+        "airtime_self": "*144*amount#",
+        "balance": "*144*1#"
+      }
+    }
+  }
+  

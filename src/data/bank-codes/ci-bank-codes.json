@@ -1,0 +1,99 @@
+{
+    "ecobank": {
+      "swift": ["ECOCCIAB"],
+      "ussd": {
+        "start": "*326#",
+        "transfer_to_same_bank": "*326*amount*account_number#",
+        "transfer_other_banks": "*326*amount*account_number*bank_code#",
+        "airtime_self": "*326*amount#",
+        "airtime_others": "*326*amount*phone_number#",
+        "balance": "*326*00#",
+        "bvn": "*326*BVN#",
+        "stop_debit_transactions": "*326*911#",
+        "activate_code": "*326*activate#"
+      }
+    },
+    "sgci": {
+      "swift": ["SGCBCIAB"],
+      "ussd": {
+        "start": "*144#",
+        "transfer_to_same_bank": "*144*amount*account_number#",
+        "transfer_other_banks": "*144*amount*account_number*bank_code#",
+        "airtime_self": "*144*amount#",
+        "airtime_others": "*144*amount*phone_number#",
+        "balance": "*144*1#",
+        "stop_debit_transactions": "*144*9#"
+      }
+    },
+    "bni": {
+      "swift": ["BNICCIAB"],
+      "ussd": {
+        "start": "*179#",
+        "transfer_to_same_bank": "*179*amount*account_number#",
+        "transfer_other_banks": "*179*amount*account_number*bank_code#",
+        "airtime_self": "*179*amount#",
+        "balance": "*179*0#"
+      }
+    },
+    "uba": {
+      "swift": ["UNAFCIAB"],
+      "ussd": {
+        "start": "*919#",
+        "transfer_to_same_bank": "*919*amount*account_number#",
+        "transfer_other_banks": "*919*amount*account_number*bank_code#",
+        "airtime_self": "*919*amount#",
+        "airtime_others": "*919*amount*phone_number#",
+        "balance": "*919*00#"
+      }
+    },
+    "nsia": {
+      "swift": ["NSIAFIAB"],
+      "ussd": {
+        "start": "*200#",
+        "transfer_to_same_bank": "*200*amount*account_number#",
+        "balance": "*200*1#"
+      }
+    },
+    "oragroup": {
+      "swift": ["ORABCIAB"],
+      "ussd": {
+        "start": "*161#",
+        "transfer_to_same_bank": "*161*amount*account_number#",
+        "balance": "*161*2#"
+      }
+    },
+    "afribank": {
+      "swift": ["AFRICIAB"],
+      "ussd": {
+        "start": "*711#",
+        "transfer_to_same_bank": "*711*amount*account_number#",
+        "airtime_self": "*711*amount#"
+      }
+    },
+    "corisbank": {
+      "swift": ["CORICIAB"],
+      "ussd": {
+        "start": "*222#",
+        "transfer_to_same_bank": "*222*amount*account_number#",
+        "balance": "*222*0#"
+      }
+    },
+    "bridgebank": {
+      "swift": ["BBGCICIA"],
+      "ussd": {
+        "start": "*505#",
+        "transfer_to_same_bank": "*505*amount*account_number#",
+        "balance": "*505*1#"
+      }
+    },
+    "bici": {
+      "swift": ["BICICIAB"],
+      "ussd": {
+        "start": "*123#",
+        "transfer_to_same_bank": "*123*amount*account_number#",
+        "airtime_self": "*123*amount#",
+        "balance": "*123*1#"
+      }
+    }
+  }
+  

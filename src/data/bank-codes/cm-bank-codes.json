@@ -1,0 +1,156 @@
+{
+    "bicec": {
+      "swift": [
+        "BICECMTC"
+      ],
+      "ussd": {
+        "start": "*186#",
+        "transfer_to_same_bank": "*186*1*amount*account_number#",
+        "transfer_other_banks": "*186*2*amount*account_number*bank_code#",
+        "airtime_self": "*186*3*amount#",
+        "airtime_others": "*186*4*amount*phone_number#",
+        "balance": "*186*5#",
+        "bvn": null,
+        "update_bvn_details": null,
+        "stop_debit_transactions": null,
+        "activate_code": null
+      }
+    },
+    "société_generale": {
+      "swift": [
+        "SGCMCMTC"
+      ],
+      "ussd": {
+        "start": "*210#",
+        "transfer_to_same_bank": "*210*1*amount*account_number#",
+        "transfer_other_banks": "*210*2*amount*account_number*bank_code#",
+        "airtime_self": "*210*3*amount#",
+        "airtime_others": "*210*4*amount*phone_number#",
+        "balance": "*210*5#",
+        "bvn": null,
+        "update_bvn_details": null,
+        "stop_debit_transactions": null,
+        "activate_code": null
+      }
+    },
+    "ecobank": {
+      "swift": [
+        "ECOCCMTC"
+      ],
+      "ussd": {
+        "start": "*326#",
+        "transfer_to_same_bank": "*326*1*amount*account_number#",
+        "transfer_other_banks": "*326*2*amount*account_number*bank_code#",
+        "airtime_self": "*326*3*amount#",
+        "airtime_others": "*326*4*amount*phone_number#",
+        "balance": "*326*5#",
+        "bvn": null,
+        "update_bvn_details": null,
+        "stop_debit_transactions": null,
+        "activate_code": null
+      }
+    },
+    "attijariwafa": {
+      "swift": [
+        "AWCMCMTC"
+      ],
+      "ussd": {
+        "start": "*123#",
+        "transfer_to_same_bank": "*123*1*amount*account_number#",
+        "transfer_other_banks": "*123*2*amount*account_number*bank_code#",
+        "airtime_self": "*123*3*amount#",
+        "airtime_others": "*123*4*amount*phone_number#",
+        "balance": "*123*5#",
+        "bvn": null,
+        "update_bvn_details": null,
+        "stop_debit_transactions": null,
+        "activate_code": null
+      }
+    },
+    "uob": {
+      "swift": [
+        "UOBCCMTC"
+      ],
+      "ussd": {
+        "start": "*214#",
+        "transfer_to_same_bank": "*214*1*amount*account_number#",
+        "transfer_other_banks": "*214*2*amount*account_number*bank_code#",
+        "airtime_self": "*214*3*amount#",
+        "airtime_others": "*214*4*amount*phone_number#",
+        "balance": "*214*5#",
+        "bvn": null,
+        "update_bvn_details": null,
+        "stop_debit_transactions": null,
+        "activate_code": null
+      }
+    },
+    "cameroon_development_bank": {
+      "swift": [
+        "CDBMCMTC"
+      ],
+      "ussd": {
+        "start": "*211#",
+        "transfer_to_same_bank": "*211*1*amount*account_number#",
+        "transfer_other_banks": "*211*2*amount*account_number*bank_code#",
+        "airtime_self": "*211*3*amount#",
+        "airtime_others": "*211*4*amount*phone_number#",
+        "balance": "*211*5#",
+        "bvn": null,
+        "update_bvn_details": null,
+        "stop_debit_transactions": null,
+        "activate_code": null
+      }
+    },
+    "banque_atlantique": {
+      "swift": [
+        "BACMCMTC"
+      ],
+      "ussd": {
+        "start": "*222#",
+        "transfer_to_same_bank": "*222*1*amount*account_number#",
+        "transfer_other_banks": "*222*2*amount*account_number*bank_code#",
+        "airtime_self": "*222*3*amount#",
+        "airtime_others": "*222*4*amount*phone_number#",
+        "balance": "*222*5#",
+        "bvn": null,
+        "update_bvn_details": null,
+        "stop_debit_transactions": null,
+        "activate_code": null
+      }
+    },
+    "caisse_d_epargne": {
+      "swift": [
+        "CECMCMTC"
+      ],
+      "ussd": {
+        "start": "*218#",
+        "transfer_to_same_bank": "*218*1*amount*account_number#",
+        "transfer_other_banks": "*218*2*amount*account_number*bank_code#",
+        "airtime_self": "*218*3*amount#",
+        "airtime_others": "*218*4*amount*phone_number#",
+        "balance": "*218*5#",
+        "bvn": null,
+        "update_bvn_details": null,
+        "stop_debit_transactions": null,
+        "activate_code": null
+      }
+    },
+    "banque_postale": {
+      "swift": [
+        "BPMCMTMC"
+      ],
+      "ussd": {
+        "start": "*215#",
+        "transfer_to_same_bank": "*215*1*amount*account_number#",
+        "transfer_other_banks": "*215*2*amount*account_number*bank_code#",
+        "airtime_self": "*215*3*amount#",
+        "airtime_others": "*215*4*amount*phone_number#",
+        "balance": "*215*5#",
+        "bvn": null,
+        "update_bvn_details": null,
+        "stop_debit_transactions": null,
+        "activate_code": null
+      }
+    }
+  }
+  

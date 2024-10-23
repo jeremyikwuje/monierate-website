@@ -1,0 +1,83 @@
+{
+    "bni": {
+      "swift": ["BNINNE"],
+      "ussd": {
+        "start": "*111#",
+        "balance": "*111*1#",
+        "transfer_to_same_bank": "*111*amount*account_number#"
+      }
+    },
+    "bnpc": {
+      "swift": ["BNPCNE"],
+      "ussd": {
+        "start": "*222#",
+        "balance": "*222*1#",
+        "transfer_to_same_bank": "*222*amount*account_number#"
+      }
+    },
+    "bniim": {
+      "swift": ["BNIIMNE"],
+      "ussd": {
+        "start": "*333#",
+        "balance": "*333*1#",
+        "transfer_to_same_bank": "*333*amount*account_number#"
+      }
+    },
+    "sonibank": {
+      "swift": ["SONINE"],
+      "ussd": {
+        "start": "*444#",
+        "balance": "*444*1#",
+        "transfer_to_same_bank": "*444*amount*account_number#"
+      }
+    },
+    "ecobank": {
+      "swift": ["ECOCNE"],
+      "ussd": {
+        "start": "*555#",
+        "balance": "*555*1#",
+        "transfer_to_same_bank": "*555*amount*account_number#"
+      }
+    },
+    "bmc": {
+      "swift": ["BMCNE"],
+      "ussd": {
+        "start": "*666#",
+        "balance": "*666*1#",
+        "transfer_to_same_bank": "*666*amount*account_number#"
+      }
+    },
+    "cni": {
+      "swift": ["CNIINE"],
+      "ussd": {
+        "start": "*777#",
+        "balance": "*777*1#",
+        "transfer_to_same_bank": "*777*amount*account_number#"
+      }
+    },
+    "sogeb": {
+      "swift": ["SOGEBNE"],
+      "ussd": {
+        "start": "*888#",
+        "balance": "*888*1#",
+        "transfer_to_same_bank": "*888*amount*account_number#"
+      }
+    },
+    "nigerbank": {
+      "swift": ["NIGERNE"],
+      "ussd": {
+        "start": "*999#",
+        "balance": "*999*1#",
+        "transfer_to_same_bank": "*999*amount*account_number#"
+      }
+    },
+    "tbank": {
+      "swift": ["TBNKNE"],
+      "ussd": {
+        "start": "*1010#",
+        "balance": "*1010*1#",
+        "transfer_to_same_bank": "*1010*amount*account_number#"
+      }
+    }
+  }
+  

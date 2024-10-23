@@ -1,0 +1,83 @@
+{
+    "bankofsudan": {
+      "name": "Bank of Sudan",
+      "link": "https://www.cbos.gov.sd",
+      "icon": "bankofsudan.png",
+      "address": "Khartoum, Sudan",
+      "city": "Khartoum",
+      "branch": "Head Office"
+    },
+    "sudapet": {
+      "name": "Sudapet Bank",
+      "link": "https://www.sudapet.com",
+      "icon": "sudapet.png",
+      "address": "Khartoum, Sudan",
+      "city": "Khartoum",
+      "branch": "Main Branch"
+    },
+    "exportimport": {
+      "name": "Export and Import Bank of Sudan",
+      "link": "https://www.eibsd.com",
+      "icon": "exportimport.png",
+      "address": "Khartoum, Sudan",
+      "city": "Khartoum",
+      "branch": "Head Office"
+    },
+    "albaraka": {
+      "name": "Al Baraka Bank",
+      "link": "https://www.albaraka.com.sd",
+      "icon": "albaraka.png",
+      "address": "Khartoum, Sudan",
+      "city": "Khartoum",
+      "branch": "Main Branch"
+    },
+    "sudanese": {
+      "name": "Sudanese French Bank",
+      "link": "https://www.sudfrbank.com",
+      "icon": "sudanese.png",
+      "address": "Khartoum, Sudan",
+      "city": "Khartoum",
+      "branch": "Head Office"
+    },
+    "farmers": {
+      "name": "Farmers Bank of Sudan",
+      "link": "https://www.farmersbank.sd",
+      "icon": "farmers.png",
+      "address": "Khartoum, Sudan",
+      "city": "Khartoum",
+      "branch": "Main Branch"
+    },
+    "national": {
+      "name": "National Bank of Sudan",
+      "link": "https://www.nbsd.sd",
+      "icon": "national.png",
+      "address": "Khartoum, Sudan",
+      "city": "Khartoum",
+      "branch": "Head Office"
+    },
+    "khartoum": {
+      "name": "Khartoum Bank",
+      "link": "https://www.khartoumbank.sd",
+      "icon": "khartoum.png",
+      "address": "Khartoum, Sudan",
+      "city": "Khartoum",
+      "branch": "Main Branch"
+    },
+    "alshamal": {
+      "name": "Al Shamal Islamic Bank",
+      "link": "https://www.alshamalbank.sd",
+      "icon": "alshamal.png",
+      "address": "Khartoum, Sudan",
+      "city": "Khartoum",
+      "branch": "Head Office"
+    },
+    "sudana": {
+      "name": "Sudan Bank",
+      "link": "https://www.sudanbank.sd",
+      "icon": "sudana.png",
+      "address": "Khartoum, Sudan",
+      "city": "Khartoum",
+      "branch": "Main Branch"
+    }
+  }
+  

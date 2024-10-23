@@ -1,0 +1,83 @@
+{
+    "cbz": {
+      "name": "CBZ Bank Limited",
+      "link": "https://www.cbz.co.zw",
+      "icon": "cbz.png",
+      "address": "CBZ House, 2nd Floor, 57 G. Silundika Street, Harare",
+      "city": "Harare",
+      "branch": "Main Branch"
+    },
+    "stanbic": {
+      "name": "Stanbic Bank Zimbabwe",
+      "link": "https://www.stanbicbank.co.zw",
+      "icon": "stanbic.png",
+      "address": "Stanbic Bank Centre, 1st Floor, 79 Jason Moyo Avenue, Harare",
+      "city": "Harare",
+      "branch": "Main Branch"
+    },
+    "fbc": {
+      "name": "FBC Bank",
+      "link": "https://www.fbc.co.zw",
+      "icon": "fbc.png",
+      "address": "FBC House, 100, Borrowdale Road, Harare",
+      "city": "Harare",
+      "branch": "Main Branch"
+    },
+    "ecobank": {
+      "name": "Ecobank Zimbabwe",
+      "link": "https://www.ecobank.com",
+      "icon": "ecobank.png",
+      "address": "Ecobank Building, 18th Floor, 45-47 Kaguvi Street, Harare",
+      "city": "Harare",
+      "branch": "Main Branch"
+    },
+    "mbc": {
+      "name": "MBC Holdings Limited",
+      "link": "https://www.mbc.co.zw",
+      "icon": "mbc.png",
+      "address": "MBC House, 14 Tredgold Avenue, Harare",
+      "city": "Harare",
+      "branch": "Main Branch"
+    },
+    "zimbank": {
+      "name": "ZB Bank",
+      "link": "https://www.zbbank.co.zw",
+      "icon": "zbbank.png",
+      "address": "ZB Centre, 22 Baines Avenue, Harare",
+      "city": "Harare",
+      "branch": "Main Branch"
+    },
+    "firstcapital": {
+      "name": "First Capital Bank",
+      "link": "https://www.firstcapitalbank.co.zw",
+      "icon": "firstcapital.png",
+      "address": "First Capital House, 13th Avenue, Harare",
+      "city": "Harare",
+      "branch": "Main Branch"
+    },
+    "cabs": {
+      "name": "CABS (Central Africa Building Society)",
+      "link": "https://www.cabs.co.zw",
+      "icon": "cabs.png",
+      "address": "CABS House, 51-53 Kwame Nkrumah Avenue, Harare",
+      "city": "Harare",
+      "branch": "Main Branch"
+    },
+    "nmb": {
+      "name": "NMB Bank",
+      "link": "https://www.nmbz.co.zw",
+      "icon": "nmb.png",
+      "address": "NMB House, 13th Avenue, Harare",
+      "city": "Harare",
+      "branch": "Main Branch"
+    },
+    "zimbabwe": {
+      "name": "Zimbabwe Investment Bank",
+      "link": "https://www.zib.co.zw",
+      "icon": "zib.png",
+      "address": "Zimbabwe Investment Bank Building, 21st Floor, Harare",
+      "city": "Harare",
+      "branch": "Main Branch"
+    }
+  }
+  

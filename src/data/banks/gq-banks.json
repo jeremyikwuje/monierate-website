@@ -1,0 +1,75 @@
+{
+    "bange": {
+      "name": "Banco Nacional de Guinea Ecuatorial",
+      "link": "https://www.bange.gq",
+      "icon": "bange.svg",
+      "address": "Avenida de la Independencia, Malabo",
+      "city": "Malabo",
+      "branch": "Main Branch"
+    },
+    "uge": {
+      "name": "Unión de Bancos de Guinea Ecuatorial",
+      "link": "https://www.uge.gq",
+      "icon": "uge.svg",
+      "address": "Avenida de las Fuerzas Armadas, Malabo",
+      "city": "Malabo",
+      "branch": "Main Branch"
+    },
+    "sg": {
+      "name": "Sociedad General de Guinea Ecuatorial",
+      "link": "https://www.sg.gq",
+      "icon": "sg.svg",
+      "address": "Avenida de la Paz, Malabo",
+      "city": "Malabo",
+      "branch": "Main Branch"
+    },
+    "mbg": {
+      "name": "Banco de Malabo",
+      "link": "https://www.mbg.gq",
+      "icon": "mbg.svg",
+      "address": "Avenida del Comercio, Malabo",
+      "city": "Malabo",
+      "branch": "Main Branch"
+    },
+    "bcn": {
+      "name": "Banco de la Ciudad de Malabo",
+      "link": "https://www.bcn.gq",
+      "icon": "bcn.svg",
+      "address": "Calle de los Trabajadores, Malabo",
+      "city": "Malabo",
+      "branch": "Main Branch"
+    },
+    "bmi": {
+      "name": "Banco de Inversión de Guinea Ecuatorial",
+      "link": "https://www.bmi.gq",
+      "icon": "bmi.svg",
+      "address": "Avenida de la Industria, Malabo",
+      "city": "Malabo",
+      "branch": "Main Branch"
+    },
+    "bda": {
+      "name": "Banco de Desarrollo de Guinea Ecuatorial",
+      "link": "https://www.bda.gq",
+      "icon": "bda.svg",
+      "address": "Avenida de la Revolución, Malabo",
+      "city": "Malabo",
+      "branch": "Main Branch"
+    },
+    "bpg": {
+      "name": "Banco de Participación de Guinea Ecuatorial",
+      "link": "https://www.bpg.gq",
+      "icon": "bpg.svg",
+      "address": "Avenida de la Solidaridad, Malabo",
+      "city": "Malabo",
+      "branch": "Main Branch"
+    },
+    "btd": {
+      "name": "Banco de Transferencia de Guinea Ecuatorial",
+      "link": "https://www.btd.gq",
+      "icon": "btd.svg",
+      "address": "Calle de la Amistad, Malabo",
+      "city": "Malabo",
+      "branch": "Main Branch"
+    }
+  }
+  

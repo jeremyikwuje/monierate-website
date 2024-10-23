@@ -1,0 +1,83 @@
+{
+    "cbz": {
+      "swift": ["CBZBZWHA"],
+      "ussd": {
+        "start": "*266#",
+        "balance": "*266*1#",
+        "transfer_to_same_bank": "*266*2*amount*account_number#"
+      }
+    },
+    "stanbic": {
+      "swift": ["SBZBZWH"],
+      "ussd": {
+        "start": "*263#",
+        "balance": "*263*1#",
+        "transfer_to_same_bank": "*263*2*amount*account_number#"
+      }
+    },
+    "fbc": {
+      "swift": ["FBZBZWH"],
+      "ussd": {
+        "start": "*180#",
+        "balance": "*180*1#",
+        "transfer_to_same_bank": "*180*2*amount*account_number#"
+      }
+    },
+    "ecobank": {
+      "swift": ["ECOCZWHA"],
+      "ussd": {
+        "start": "*111#",
+        "balance": "*111*1#",
+        "transfer_to_same_bank": "*111*2*amount*account_number#"
+      }
+    },
+    "mbc": {
+      "swift": ["MBCZWH"],
+      "ussd": {
+        "start": "*212#",
+        "balance": "*212*1#",
+        "transfer_to_same_bank": "*212*2*amount*account_number#"
+      }
+    },
+    "zimbank": {
+      "swift": ["ZBBZWH"],
+      "ussd": {
+        "start": "*155#",
+        "balance": "*155*1#",
+        "transfer_to_same_bank": "*155*2*amount*account_number#"
+      }
+    },
+    "firstcapital": {
+      "swift": ["FCBZWHA"],
+      "ussd": {
+        "start": "*165#",
+        "balance": "*165*1#",
+        "transfer_to_same_bank": "*165*2*amount*account_number#"
+      }
+    },
+    "cabs": {
+      "swift": ["CABZWH"],
+      "ussd": {
+        "start": "*123#",
+        "balance": "*123*1#",
+        "transfer_to_same_bank": "*123*2*amount*account_number#"
+      }
+    },
+    "nmb": {
+      "swift": ["NMBZWH"],
+      "ussd": {
+        "start": "*222#",
+        "balance": "*222*1#",
+        "transfer_to_same_bank": "*222*2*amount*account_number#"
+      }
+    },
+    "zimbabwe": {
+      "swift": ["ZIBZWH"],
+      "ussd": {
+        "start": "*311#",
+        "balance": "*311*1#",
+        "transfer_to_same_bank": "*311*2*amount*account_number#"
+      }
+    }
+  }
+  

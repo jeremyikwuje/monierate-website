@@ -1,0 +1,83 @@
+{
+    "dashenbank": {
+      "name": "Dashen Bank",
+      "link": "https://www.dashenbanksc.com",
+      "icon": "dashenbank.svg",
+      "address": "Bole Medhanealem, Addis Ababa",
+      "city": "Addis Ababa",
+      "branch": "Main Branch"
+    },
+    "wegagenbank": {
+      "name": "Wegagen Bank",
+      "link": "https://www.wegagenbanksc.com",
+      "icon": "wegagenbank.svg",
+      "address": "Avenue Meskel, Addis Ababa",
+      "city": "Addis Ababa",
+      "branch": "Main Branch"
+    },
+    "bunnaintbank": {
+      "name": "Bunna International Bank",
+      "link": "https://www.bunnaintbank.com",
+      "icon": "bunbank.svg",
+      "address": "Arada Sub-City, Addis Ababa",
+      "city": "Addis Ababa",
+      "branch": "Main Branch"
+    },
+    "commercialbank": {
+      "name": "Commercial Bank of Ethiopia",
+      "link": "https://www.cbe.com.et",
+      "icon": "commercialbank.svg",
+      "address": "P.O. Box 1009, Addis Ababa",
+      "city": "Addis Ababa",
+      "branch": "Main Branch"
+    },
+    "hibretbank": {
+      "name": "Hibret Bank",
+      "link": "https://www.hibretbank.com",
+      "icon": "hibretbank.svg",
+      "address": "Meskel Square, Addis Ababa",
+      "city": "Addis Ababa",
+      "branch": "Main Branch"
+    },
+    "abcbank": {
+      "name": "ABC Bank",
+      "link": "https://www.abcbank.com.et",
+      "icon": "abcbank.svg",
+      "address": "Kazanchis, Addis Ababa",
+      "city": "Addis Ababa",
+      "branch": "Main Branch"
+    },
+    "wogagenbank": {
+      "name": "Wogagen Bank",
+      "link": "https://www.wogagenbank.com",
+      "icon": "wogagenbank.svg",
+      "address": "Bole Road, Addis Ababa",
+      "city": "Addis Ababa",
+      "branch": "Main Branch"
+    },
+    "semerbank": {
+      "name": "Semer Bank",
+      "link": "https://www.semerbank.com",
+      "icon": "semerbank.svg",
+      "address": "Arada, Addis Ababa",
+      "city": "Addis Ababa",
+      "branch": "Main Branch"
+    },
+    "cooperativebank": {
+      "name": "Cooperative Bank of Oromia",
+      "link": "https://www.cooperativebank.com",
+      "icon": "cooperativebank.svg",
+      "address": "Addis Ababa, Oromia Region",
+      "city": "Addis Ababa",
+      "branch": "Main Branch"
+    },
+    "diredawa": {
+      "name": "Diredawa City Bank",
+      "link": "https://www.diredawabank.com",
+      "icon": "diredawa.svg",
+      "address": "Diredawa City",
+      "city": "Diredawa",
+      "branch": "Main Branch"
+    }
+  }
+  

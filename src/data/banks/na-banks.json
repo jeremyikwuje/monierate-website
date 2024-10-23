@@ -1,0 +1,83 @@
+{
+    "fnb": {
+      "name": "FNB Namibia",
+      "link": "https://www.fnbnamibia.com.na",
+      "icon": "fnb.png",
+      "address": "Corner of Tal Street and Dr. Kenneth Kaunda Ave, Windhoek",
+      "city": "Windhoek",
+      "branch": "Main Branch"
+    },
+    "bankwindhoek": {
+      "name": "Bank Windhoek",
+      "link": "https://www.bankwindhoek.com.na",
+      "icon": "bankwindhoek.png",
+      "address": "Cnr of Gustav Voigts and Baines Street, Windhoek",
+      "city": "Windhoek",
+      "branch": "Head Office"
+    },
+    "nedbank": {
+      "name": "Nedbank Namibia",
+      "link": "https://www.nedbank.com.na",
+      "icon": "nedbank.png",
+      "address": "Avenue Franz Koenig, Windhoek",
+      "city": "Windhoek",
+      "branch": "Main Branch"
+    },
+    "standard": {
+      "name": "Standard Bank Namibia",
+      "link": "https://www.standardbank.com.na",
+      "icon": "standard.png",
+      "address": "Corner of Independence Avenue and 5th Street, Windhoek",
+      "city": "Windhoek",
+      "branch": "Main Branch"
+    },
+    "habib": {
+      "name": "Habib Overseas Bank",
+      "link": "https://www.habibbank.co.za",
+      "icon": "habib.png",
+      "address": "No 4, 1st Street, Windhoek",
+      "city": "Windhoek",
+      "branch": "Main Branch"
+    },
+    "capricorn": {
+      "name": "Capricorn Group",
+      "link": "https://www.capricorn.com.na",
+      "icon": "capricorn.png",
+      "address": "Corner of Thorer Street and Robert Mugabe Ave, Windhoek",
+      "city": "Windhoek",
+      "branch": "Main Branch"
+    },
+    "bankofnamibia": {
+      "name": "Bank of Namibia",
+      "link": "https://www.bon.com.na",
+      "icon": "bankofnamibia.png",
+      "address": "Bank of Namibia Building, Windhoek",
+      "city": "Windhoek",
+      "branch": "Head Office"
+    },
+    "namibia": {
+      "name": "Namibia Financial Institutions Supervisory Authority",
+      "link": "https://www.nbfisa.com.na",
+      "icon": "namibia.png",
+      "address": "Corner of Government and John Meinert Streets, Windhoek",
+      "city": "Windhoek",
+      "branch": "Main Office"
+    },
+    "pmb": {
+      "name": "Postbank Namibia",
+      "link": "https://www.postbank.co.na",
+      "icon": "pmb.png",
+      "address": "Post Office Building, Windhoek",
+      "city": "Windhoek",
+      "branch": "Main Branch"
+    },
+    "bankofafrica": {
+      "name": "Bank of Africa Namibia",
+      "link": "https://www.banqofafrica.com.na",
+      "icon": "bankofafrica.png",
+      "address": "Cnr of 6th Road and Independence Avenue, Windhoek",
+      "city": "Windhoek",
+      "branch": "Main Branch"
+    }
+  }
+  

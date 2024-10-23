@@ -1,0 +1,83 @@
+{
+    "nationalbankofmalawi": {
+      "name": "National Bank of Malawi",
+      "link": "https://www.natbank.co.mw",
+      "icon": "nbm.png",
+      "address": "7 Henderson Street",
+      "city": "Blantyre",
+      "branch": "Head Office"
+    },
+    "fdhbank": {
+      "name": "FDH Bank",
+      "link": "https://www.fdh.co.mw",
+      "icon": "fdhbank.png",
+      "address": "FDH House, Blantyre",
+      "city": "Blantyre",
+      "branch": "Head Office"
+    },
+    "standardbankmalawi": {
+      "name": "Standard Bank Malawi",
+      "link": "https://www.standardbank.co.mw",
+      "icon": "standardbank.png",
+      "address": "Standard Bank Centre, City Centre",
+      "city": "Lilongwe",
+      "branch": "City Centre Branch"
+    },
+    "firstcapitalbank": {
+      "name": "First Capital Bank",
+      "link": "https://www.firstcapitalbank.co.mw",
+      "icon": "firstcapital.png",
+      "address": "Glyn Jones Road",
+      "city": "Blantyre",
+      "branch": "Main Branch"
+    },
+    "mybucksmalawi": {
+      "name": "MyBucks Malawi",
+      "link": "https://www.mybucksbanking.mw",
+      "icon": "mybucks.png",
+      "address": "Eagle Building, Blantyre",
+      "city": "Blantyre",
+      "branch": "Blantyre Branch"
+    },
+    "ecobankmalawi": {
+      "name": "Ecobank Malawi",
+      "link": "https://www.ecobank.com",
+      "icon": "ecobank.png",
+      "address": "CIL House, Blantyre",
+      "city": "Blantyre",
+      "branch": "CIL House Branch"
+    },
+    "nbsbank": {
+      "name": "NBS Bank",
+      "link": "https://www.nbs.mw",
+      "icon": "nbsbank.png",
+      "address": "Livingstone Towers, Glyn Jones Road",
+      "city": "Blantyre",
+      "branch": "Head Office"
+    },
+    "indebank": {
+      "name": "IndeBank",
+      "link": "https://www.indebank.mw",
+      "icon": "indebank.png",
+      "address": "Chipembere Highway",
+      "city": "Blantyre",
+      "branch": "Blantyre Branch"
+    },
+    "opportunitybank": {
+      "name": "Opportunity Bank Malawi",
+      "link": "https://www.oib.mw",
+      "icon": "opportunity.png",
+      "address": "City Centre, Lilongwe",
+      "city": "Lilongwe",
+      "branch": "City Centre Branch"
+    },
+    "newfinancebank": {
+      "name": "New Finance Bank",
+      "link": "https://www.nfb.mw",
+      "icon": "newfinancebank.png",
+      "address": "Ginnery Corner",
+      "city": "Blantyre",
+      "branch": "Main Branch"
+    }
+  }
+  

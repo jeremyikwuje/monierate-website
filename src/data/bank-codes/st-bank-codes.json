@@ -1,0 +1,83 @@
+{
+    "bcstp": {
+      "swift": ["BCSTPST"],
+      "ussd": {
+        "start": "*111#",
+        "balance": "*111*1#",
+        "transfer_to_same_bank": "*111*amount*account_number#"
+      }
+    },
+    "bancoest": {
+      "swift": ["BESSTPST"],
+      "ussd": {
+        "start": "*222#",
+        "balance": "*222*1#",
+        "transfer_to_same_bank": "*222*amount*account_number#"
+      }
+    },
+    "bancointernacional": {
+      "swift": ["BISPSTP"],
+      "ussd": {
+        "start": "*333#",
+        "balance": "*333*1#",
+        "transfer_to_same_bank": "*333*amount*account_number#"
+      }
+    },
+    "bancotrade": {
+      "swift": ["BTTSTPST"],
+      "ussd": {
+        "start": "*444#",
+        "balance": "*444*1#",
+        "transfer_to_same_bank": "*444*amount*account_number#"
+      }
+    },
+    "banqueabidjan": {
+      "swift": ["BAPOSTP"],
+      "ussd": {
+        "start": "*555#",
+        "balance": "*555*1#",
+        "transfer_to_same_bank": "*555*amount*account_number#"
+      }
+    },
+    "bancoangola": {
+      "swift": ["BAISTP"],
+      "ussd": {
+        "start": "*666#",
+        "balance": "*666*1#",
+        "transfer_to_same_bank": "*666*amount*account_number#"
+      }
+    },
+    "bcai": {
+      "swift": ["BCAISTP"],
+      "ussd": {
+        "start": "*777#",
+        "balance": "*777*1#",
+        "transfer_to_same_bank": "*777*amount*account_number#"
+      }
+    },
+    "bancotributario": {
+      "swift": ["BTRSTP"],
+      "ussd": {
+        "start": "*888#",
+        "balance": "*888*1#",
+        "transfer_to_same_bank": "*888*amount*account_number#"
+      }
+    },
+    "bancocentrol": {
+      "swift": ["BCOAAST"],
+      "ussd": {
+        "start": "*999#",
+        "balance": "*999*1#",
+        "transfer_to_same_bank": "*999*amount*account_number#"
+      }
+    },
+    "bancodereforma": {
+      "swift": ["BDRSTP"],
+      "ussd": {
+        "start": "*1000#",
+        "balance": "*1000*1#",
+        "transfer_to_same_bank": "*1000*amount*account_number#"
+      }
+    }
+  }
+  

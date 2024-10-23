@@ -1,0 +1,156 @@
+{
+    "banque_nationale_du_burundi": {
+      "swift": [
+        "BNBUBRUB"
+      ],
+      "ussd": {
+        "start": "*188#",
+        "transfer_to_same_bank": "*188*amount*account_number#",
+        "transfer_other_banks": "*188*amount*account_number*bank_code#",
+        "airtime_self": "*188*amount#",
+        "airtime_others": "*188*amount*phone_number#",
+        "balance": "*188*1#",
+        "bvn": null,
+        "update_bvn_details": null,
+        "stop_debit_transactions": null,
+        "activate_code": null
+      }
+    },
+    "eco_bank": {
+      "swift": [
+        "ECOCBRUB"
+      ],
+      "ussd": {
+        "start": "*152#",
+        "transfer_to_same_bank": "*152*amount*account_number#",
+        "transfer_other_banks": "*152*amount*account_number*bank_code#",
+        "airtime_self": "*152*amount#",
+        "airtime_others": "*152*amount*phone_number#",
+        "balance": "*152*1#",
+        "bvn": null,
+        "update_bvn_details": null,
+        "stop_debit_transactions": null,
+        "activate_code": null
+      }
+    },
+    "banque_de_l_union": {
+      "swift": [
+        "BULUBRUB"
+      ],
+      "ussd": {
+        "start": "*202#",
+        "transfer_to_same_bank": "*202*amount*account_number#",
+        "transfer_other_banks": "*202*amount*account_number*bank_code#",
+        "airtime_self": "*202*amount#",
+        "airtime_others": "*202*amount*phone_number#",
+        "balance": "*202*1#",
+        "bvn": null,
+        "update_bvn_details": null,
+        "stop_debit_transactions": null,
+        "activate_code": null
+      }
+    },
+    "bancobu": {
+      "swift": [
+        "BNCUBRUB"
+      ],
+      "ussd": {
+        "start": "*222#",
+        "transfer_to_same_bank": "*222*amount*account_number#",
+        "transfer_other_banks": "*222*amount*account_number*bank_code#",
+        "airtime_self": "*222*amount#",
+        "airtime_others": "*222*amount*phone_number#",
+        "balance": "*222*1#",
+        "bvn": null,
+        "update_bvn_details": null,
+        "stop_debit_transactions": null,
+        "activate_code": null
+      }
+    },
+    "banque_bujumbura": {
+      "swift": [
+        "BBURBRUB"
+      ],
+      "ussd": {
+        "start": "*300#",
+        "transfer_to_same_bank": "*300*amount*account_number#",
+        "transfer_other_banks": "*300*amount*account_number*bank_code#",
+        "airtime_self": "*300*amount#",
+        "airtime_others": "*300*amount*phone_number#",
+        "balance": "*300*1#",
+        "bvn": null,
+        "update_bvn_details": null,
+        "stop_debit_transactions": null,
+        "activate_code": null
+      }
+    },
+    "banque_de_credit": {
+      "swift": [
+        "BCCBBRUB"
+      ],
+      "ussd": {
+        "start": "*400#",
+        "transfer_to_same_bank": "*400*amount*account_number#",
+        "transfer_other_banks": "*400*amount*account_number*bank_code#",
+        "airtime_self": "*400*amount#",
+        "airtime_others": "*400*amount*phone_number#",
+        "balance": "*400*1#",
+        "bvn": null,
+        "update_bvn_details": null,
+        "stop_debit_transactions": null,
+        "activate_code": null
+      }
+    },
+    "banque_populaire_du_burundi": {
+      "swift": [
+        "BPBUBRUB"
+      ],
+      "ussd": {
+        "start": "*500#",
+        "transfer_to_same_bank": "*500*amount*account_number#",
+        "transfer_other_banks": "*500*amount*account_number*bank_code#",
+        "airtime_self": "*500*amount#",
+        "airtime_others": "*500*amount*phone_number#",
+        "balance": "*500*1#",
+        "bvn": null,
+        "update_bvn_details": null,
+        "stop_debit_transactions": null,
+        "activate_code": null
+      }
+    },
+    "financiere_du_burundi": {
+      "swift": [
+        "FIBUBRUB"
+      ],
+      "ussd": {
+        "start": "*600#",
+        "transfer_to_same_bank": "*600*amount*account_number#",
+        "transfer_other_banks": "*600*amount*account_number*bank_code#",
+        "airtime_self": "*600*amount#",
+        "airtime_others": "*600*amount*phone_number#",
+        "balance": "*600*1#",
+        "bvn": null,
+        "update_bvn_details": null,
+        "stop_debit_transactions": null,
+        "activate_code": null
+      }
+    },
+    "banque_zenith": {
+      "swift": [
+        "BZENBRUB"
+      ],
+      "ussd": {
+        "start": "*700#",
+        "transfer_to_same_bank": "*700*amount*account_number#",
+        "transfer_other_banks": "*700*amount*account_number*bank_code#",
+        "airtime_self": "*700*amount#",
+        "airtime_others": "*700*amount*phone_number#",
+        "balance": "*700*1#",
+        "bvn": null,
+        "update_bvn_details": null,
+        "stop_debit_transactions": null,
+        "activate_code": null
+      }
+    }
+  }
+  

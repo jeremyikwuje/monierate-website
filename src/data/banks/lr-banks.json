@@ -1,0 +1,83 @@
+{
+    "ecobank": {
+      "name": "Ecobank Liberia",
+      "link": "https://www.ecobank.com",
+      "icon": "ecobank.png",
+      "address": "Ashmun Street",
+      "city": "Monrovia",
+      "branch": "Ashmun Street Branch"
+    },
+    "gtbank": {
+      "name": "Guaranty Trust Bank Liberia",
+      "link": "https://www.gtbank.com.lr",
+      "icon": "gtbank.png",
+      "address": "13th Street, Sinkor",
+      "city": "Monrovia",
+      "branch": "13th Street Branch"
+    },
+    "uba": {
+      "name": "United Bank for Africa (UBA) Liberia",
+      "link": "https://www.ubagroup.com",
+      "icon": "uba.png",
+      "address": "Broad Street",
+      "city": "Monrovia",
+      "branch": "Broad Street Branch"
+    },
+    "lbdibank": {
+      "name": "Liberian Bank for Development and Investment (LBDI)",
+      "link": "https://www.lbdi.net",
+      "icon": "lbdi.png",
+      "address": "9th Street, Sinkor",
+      "city": "Monrovia",
+      "branch": "Head Office"
+    },
+    "africanbank": {
+      "name": "African Bank Liberia",
+      "link": "https://www.africanbankliberia.com",
+      "icon": "africanbank.png",
+      "address": "Tubman Boulevard, Sinkor",
+      "city": "Monrovia",
+      "branch": "Tubman Boulevard Branch"
+    },
+    "internationalbank": {
+      "name": "International Bank (IB) Liberia",
+      "link": "https://www.iblbank.com",
+      "icon": "ib.png",
+      "address": "Broad Street",
+      "city": "Monrovia",
+      "branch": "Main Branch"
+    },
+    "globalbank": {
+      "name": "Global Bank Liberia",
+      "link": "https://www.globalbanklr.com",
+      "icon": "globalbank.png",
+      "address": "Broad Street",
+      "city": "Monrovia",
+      "branch": "Broad Street Branch"
+    },
+    "fidelitybank": {
+      "name": "Fidelity Bank Liberia",
+      "link": "https://www.fidelitybank.com.lr",
+      "icon": "fidelitybank.png",
+      "address": "9th Street, Sinkor",
+      "city": "Monrovia",
+      "branch": "Head Office"
+    },
+    "firstbank": {
+      "name": "First International Bank Liberia",
+      "link": "https://www.firstbank.com.lr",
+      "icon": "firstbank.png",
+      "address": "Broad Street",
+      "city": "Monrovia",
+      "branch": "Main Branch"
+    },
+    "wellsfargo": {
+      "name": "Wells Fargo Liberia",
+      "link": "https://www.wellsfargo.com",
+      "icon": "wellsfargo.png",
+      "address": "Tubman Boulevard",
+      "city": "Monrovia",
+      "branch": "Tubman Boulevard Branch"
+    }
+  }
+  

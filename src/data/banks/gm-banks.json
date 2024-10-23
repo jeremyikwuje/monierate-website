@@ -1,0 +1,75 @@
+{
+    "gbc": {
+      "name": "Gambia Bank Corporation",
+      "link": "http://www.gbc.gm",
+      "icon": "gbc.svg",
+      "address": "Kairaba Avenue, Banjul",
+      "city": "Banjul",
+      "branch": "Main Branch"
+    },
+    "gtbank": {
+      "name": "Guaranty Trust Bank",
+      "link": "http://www.gtbankgambia.com",
+      "icon": "gtbank.svg",
+      "address": "Banjul, Kairaba Avenue",
+      "city": "Banjul",
+      "branch": "Main Branch"
+    },
+    "eco": {
+      "name": "Ecobank",
+      "link": "http://www.ecobank.com",
+      "icon": "eco.svg",
+      "address": "Kairaba Avenue, Banjul",
+      "city": "Banjul",
+      "branch": "Main Branch"
+    },
+    "gmb": {
+      "name": "Gambia Monetary Bank",
+      "link": "http://www.gmb.gm",
+      "icon": "gmb.svg",
+      "address": "Kairaba Avenue, Banjul",
+      "city": "Banjul",
+      "branch": "Main Branch"
+    },
+    "guaranty": {
+      "name": "Guaranty Bank",
+      "link": "http://www.guarantybk.gm",
+      "icon": "guaranty.svg",
+      "address": "Kairaba Avenue, Banjul",
+      "city": "Banjul",
+      "branch": "Main Branch"
+    },
+    "fbm": {
+      "name": "First Bank of The Gambia",
+      "link": "http://www.fbm.gm",
+      "icon": "fbm.svg",
+      "address": "Banjul, Kairaba Avenue",
+      "city": "Banjul",
+      "branch": "Main Branch"
+    },
+    "ecobank": {
+      "name": "Ecobank Gambia",
+      "link": "http://www.ecobank.com/gambia",
+      "icon": "ecobank.svg",
+      "address": "Kairaba Avenue, Banjul",
+      "city": "Banjul",
+      "branch": "Main Branch"
+    },
+    "gambia_community": {
+      "name": "Gambia Community Bank",
+      "link": "http://www.gambia.com",
+      "icon": "gambia_community.svg",
+      "address": "Kairaba Avenue, Banjul",
+      "city": "Banjul",
+      "branch": "Main Branch"
+    },
+    "gtbankgambia": {
+      "name": "Guaranty Trust Bank Gambia",
+      "link": "http://www.gtbankgambia.com",
+      "icon": "gtbankgambia.svg",
+      "address": "Banjul, Kairaba Avenue",
+      "city": "Banjul",
+      "branch": "Main Branch"
+    }
+  }
+  

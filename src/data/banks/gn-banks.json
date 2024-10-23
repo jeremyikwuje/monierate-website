@@ -1,0 +1,83 @@
+{
+    "bcrg": {
+      "name": "Banque Centrale de la République de Guinée",
+      "link": "http://www.bcrg-guinee.org",
+      "icon": "bcrg.svg",
+      "address": "1 Avenue de la République, Conakry",
+      "city": "Conakry",
+      "branch": "Main Branch"
+    },
+    "ecobank": {
+      "name": "Ecobank Guinea",
+      "link": "http://www.ecobank.com/guinea",
+      "icon": "ecobank.svg",
+      "address": "Rue KA 011, Almamya, Kaloum, Conakry",
+      "city": "Conakry",
+      "branch": "Main Branch"
+    },
+    "orabank": {
+      "name": "Orabank Guinea",
+      "link": "http://www.orabank.net",
+      "icon": "orabank.svg",
+      "address": "Kaloum, Conakry",
+      "city": "Conakry",
+      "branch": "Main Branch"
+    },
+    "banque_populaire": {
+      "name": "Banque Populaire de Guinée",
+      "link": "http://www.bpg-guinee.com",
+      "icon": "banque_populaire.svg",
+      "address": "Corniche Sud, Conakry",
+      "city": "Conakry",
+      "branch": "Main Branch"
+    },
+    "bsic": {
+      "name": "Banque Sahélo-Saharienne pour l'Investissement et le Commerce",
+      "link": "http://www.bsic-guinee.com",
+      "icon": "bsic.svg",
+      "address": "Boulevard de la République, Conakry",
+      "city": "Conakry",
+      "branch": "Main Branch"
+    },
+    "sgbci": {
+      "name": "Société Générale Guinée",
+      "link": "http://www.societegenerale.com/guinee",
+      "icon": "sgbci.svg",
+      "address": "Kaloum, Conakry",
+      "city": "Conakry",
+      "branch": "Main Branch"
+    },
+    "uba": {
+      "name": "United Bank for Africa Guinea",
+      "link": "http://www.ubagroup.com/guinea",
+      "icon": "uba.svg",
+      "address": "Kaloum, Conakry",
+      "city": "Conakry",
+      "branch": "Main Branch"
+    },
+    "bicigui": {
+      "name": "Banque Internationale pour le Commerce et l'Industrie de Guinée",
+      "link": "http://www.bicigui.com",
+      "icon": "bicigui.svg",
+      "address": "Conakry, Guinea",
+      "city": "Conakry",
+      "branch": "Main Branch"
+    },
+    "biciab": {
+      "name": "Banque Internationale pour le Commerce et l'Industrie en Afrique",
+      "link": "http://www.biciab.com",
+      "icon": "biciab.svg",
+      "address": "Kaloum, Conakry",
+      "city": "Conakry",
+      "branch": "Main Branch"
+    },
+    "bci": {
+      "name": "Banque Commerciale Internationale",
+      "link": "http://www.bcigroupe.com",
+      "icon": "bci.svg",
+      "address": "Conakry, Guinea",
+      "city": "Conakry",
+      "branch": "Main Branch"
+    }
+  }
+  

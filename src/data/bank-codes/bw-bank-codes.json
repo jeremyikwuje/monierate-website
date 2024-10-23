@@ -1,0 +1,156 @@
+{
+    "first_nat_bk": {
+      "swift": [
+        "FBTBBWBW"
+      ],
+      "ussd": {
+        "start": "*121#",
+        "transfer_to_same_bank": "*121*1*amount*account_number#",
+        "transfer_other_banks": "*121*2*amount*account_number*bank_code#",
+        "airtime_self": "*121*3*amount#",
+        "airtime_others": "*121*4*amount*phone_number#",
+        "balance": "*121*5#",
+        "bvn": null,
+        "update_bvn_details": null,
+        "stop_debit_transactions": null,
+        "activate_code": null
+      }
+    },
+    "stanbic_bk": {
+      "swift": [
+        "SBICBWBW"
+      ],
+      "ussd": {
+        "start": "*120#",
+        "transfer_to_same_bank": "*120*1*amount*account_number#",
+        "transfer_other_banks": "*120*2*amount*account_number*bank_code#",
+        "airtime_self": "*120*3*amount#",
+        "airtime_others": "*120*4*amount*phone_number#",
+        "balance": "*120*5#",
+        "bvn": null,
+        "update_bvn_details": null,
+        "stop_debit_transactions": null,
+        "activate_code": null
+      }
+    },
+    "absa_botswana": {
+      "swift": [
+        "ABSABWBW"
+      ],
+      "ussd": {
+        "start": "*235#",
+        "transfer_to_same_bank": "*235*1*amount*account_number#",
+        "transfer_other_banks": "*235*2*amount*account_number*bank_code#",
+        "airtime_self": "*235*3*amount#",
+        "airtime_others": "*235*4*amount*phone_number#",
+        "balance": "*235*5#",
+        "bvn": null,
+        "update_bvn_details": null,
+        "stop_debit_transactions": null,
+        "activate_code": null
+      }
+    },
+    "fnb_botswana": {
+      "swift": [
+        "FNBABWBW"
+      ],
+      "ussd": {
+        "start": "*130#",
+        "transfer_to_same_bank": "*130*1*amount*account_number#",
+        "transfer_other_banks": "*130*2*amount*account_number*bank_code#",
+        "airtime_self": "*130*3*amount#",
+        "airtime_others": "*130*4*amount*phone_number#",
+        "balance": "*130*5#",
+        "bvn": null,
+        "update_bvn_details": null,
+        "stop_debit_transactions": null,
+        "activate_code": null
+      }
+    },
+    "bank_of_botswana": {
+      "swift": [
+        "BOBWBWBW"
+      ],
+      "ussd": {
+        "start": "*140#",
+        "transfer_to_same_bank": "*140*1*amount*account_number#",
+        "transfer_other_banks": "*140*2*amount*account_number*bank_code#",
+        "airtime_self": "*140*3*amount#",
+        "airtime_others": "*140*4*amount*phone_number#",
+        "balance": "*140*5#",
+        "bvn": null,
+        "update_bvn_details": null,
+        "stop_debit_transactions": null,
+        "activate_code": null
+      }
+    },
+    "dfc_botswana": {
+      "swift": [
+        "DFCBBWBW"
+      ],
+      "ussd": {
+        "start": "*150#",
+        "transfer_to_same_bank": "*150*1*amount*account_number#",
+        "transfer_other_banks": "*150*2*amount*account_number*bank_code#",
+        "airtime_self": "*150*3*amount#",
+        "airtime_others": "*150*4*amount*phone_number#",
+        "balance": "*150*5#",
+        "bvn": null,
+        "update_bvn_details": null,
+        "stop_debit_transactions": null,
+        "activate_code": null
+      }
+    },
+    "bank_gaborone": {
+      "swift": [
+        "BGBBWBW"
+      ],
+      "ussd": {
+        "start": "*160#",
+        "transfer_to_same_bank": "*160*1*amount*account_number#",
+        "transfer_other_banks": "*160*2*amount*account_number*bank_code#",
+        "airtime_self": "*160*3*amount#",
+        "airtime_others": "*160*4*amount*phone_number#",
+        "balance": "*160*5#",
+        "bvn": null,
+        "update_bvn_details": null,
+        "stop_debit_transactions": null,
+        "activate_code": null
+      }
+    },
+    "first_pacific_bank": {
+      "swift": [
+        "FPBWBWBW"
+      ],
+      "ussd": {
+        "start": "*170#",
+        "transfer_to_same_bank": "*170*1*amount*account_number#",
+        "transfer_other_banks": "*170*2*amount*account_number*bank_code#",
+        "airtime_self": "*170*3*amount#",
+        "airtime_others": "*170*4*amount*phone_number#",
+        "balance": "*170*5#",
+        "bvn": null,
+        "update_bvn_details": null,
+        "stop_debit_transactions": null,
+        "activate_code": null
+      }
+    },
+    "bank_of_achievement": {
+      "swift": [
+        "BOABBWBW"
+      ],
+      "ussd": {
+        "start": "*180#",
+        "transfer_to_same_bank": "*180*1*amount*account_number#",
+        "transfer_other_banks": "*180*2*amount*account_number*bank_code#",
+        "airtime_self": "*180*3*amount#",
+        "airtime_others": "*180*4*amount*phone_number#",
+        "balance": "*180*5#",
+        "bvn": null,
+        "update_bvn_details": null,
+        "stop_debit_transactions": null,
+        "activate_code": null
+      }
+    }
+  }
+  

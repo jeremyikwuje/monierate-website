@@ -1,0 +1,83 @@
+{
+    "nationalbankofmalawi": {
+      "swift": ["NBMAMWMW"],
+      "ussd": {
+        "start": "*626#",
+        "balance": "*626*1#",
+        "transfer_to_same_bank": "*626*amount*account_number#"
+      }
+    },
+    "fdhbank": {
+      "swift": ["FDHAMWMW"],
+      "ussd": {
+        "start": "*525#",
+        "balance": "*525*1#",
+        "transfer_to_same_bank": "*525*amount*account_number#"
+      }
+    },
+    "standardbankmalawi": {
+      "swift": ["SBICMWMX"],
+      "ussd": {
+        "start": "*247#",
+        "balance": "*247*1#",
+        "transfer_to_same_bank": "*247*amount*account_number#"
+      }
+    },
+    "firstcapitalbank": {
+      "swift": ["FCBMZMWX"],
+      "ussd": {
+        "start": "*130#",
+        "balance": "*130*1#",
+        "transfer_to_same_bank": "*130*amount*account_number#"
+      }
+    },
+    "mybucksmalawi": {
+      "swift": ["MYBKMWMW"],
+      "ussd": {
+        "start": "*269#",
+        "balance": "*269*1#",
+        "transfer_to_same_bank": "*269*amount*account_number#"
+      }
+    },
+    "ecobankmalawi": {
+      "swift": ["ECOCMWMX"],
+      "ussd": {
+        "start": "*326#",
+        "balance": "*326*1#",
+        "transfer_to_same_bank": "*326*amount*account_number#"
+      }
+    },
+    "nbsbank": {
+      "swift": ["NBSTMWMW"],
+      "ussd": {
+        "start": "*322#",
+        "balance": "*322*1#",
+        "transfer_to_same_bank": "*322*amount*account_number#"
+      }
+    },
+    "indebank": {
+      "swift": ["INDEMWMW"],
+      "ussd": {
+        "start": "*202#",
+        "balance": "*202*1#",
+        "transfer_to_same_bank": "*202*amount*account_number#"
+      }
+    },
+    "opportunitybank": {
+      "swift": ["OIBMZMWX"],
+      "ussd": {
+        "start": "*415#",
+        "balance": "*415*1#",
+        "transfer_to_same_bank": "*415*amount*account_number#"
+      }
+    },
+    "newfinancebank": {
+      "swift": ["NFNBMWMW"],
+      "ussd": {
+        "start": "*211#",
+        "balance": "*211*1#",
+        "transfer_to_same_bank": "*211*amount*account_number#"
+      }
+    }
+  }
+  

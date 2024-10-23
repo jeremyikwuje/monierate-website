@@ -1,0 +1,75 @@
+{
+    "banque_tchadienne_de_developpement": {
+      "name": "Banque Tchadienne de Développement",
+      "link": "https://www.btd.ch",
+      "icon": "banque_tchadienne_de_developpement.svg",
+      "address": "Avenue Charles de Gaulle, N'Djamena",
+      "city": "N'Djamena",
+      "branch": "N'Djamena Branch"
+    },
+    "banque_chadienne_de_la_construction": {
+      "name": "Banque Chadienne de la Construction",
+      "link": "https://www.bcc.ch",
+      "icon": "banque_chadienne_de_la_construction.svg",
+      "address": "Rue de la Révolution, N'Djamena",
+      "city": "N'Djamena",
+      "branch": "N'Djamena Branch"
+    },
+    "banque_de_lhabitat_du_tchad": {
+      "name": "Banque de l'Habitat du Tchad",
+      "link": "https://www.bht.ch",
+      "icon": "banque_de_lhabitat_du_tchad.svg",
+      "address": "Avenue de l'Indépendance, N'Djamena",
+      "city": "N'Djamena",
+      "branch": "N'Djamena Branch"
+    },
+    "banque_islamique_du_tchad": {
+      "name": "Banque Islamique du Tchad",
+      "link": "https://www.bit.ch",
+      "icon": "banque_islamique_du_tchad.svg",
+      "address": "Avenue Felix Eboué, N'Djamena",
+      "city": "N'Djamena",
+      "branch": "N'Djamena Branch"
+    },
+    "banque_tchadienne_de_developpement_et_de_credits": {
+      "name": "Banque Tchadienne de Développement et de Crédits",
+      "link": "https://www.btcdc.ch",
+      "icon": "banque_tchadienne_de_developpement_et_de_credits.svg",
+      "address": "Avenue des Martyrs, N'Djamena",
+      "city": "N'Djamena",
+      "branch": "N'Djamena Branch"
+    },
+    "banque_heritage_du_tchad": {
+      "name": "Banque Heritage du Tchad",
+      "link": "https://www.bht.ch",
+      "icon": "banque_heritage_du_tchad.svg",
+      "address": "Avenue de la Liberté, N'Djamena",
+      "city": "N'Djamena",
+      "branch": "N'Djamena Branch"
+    },
+    "banque_de_lindustrialisation_du_tchad": {
+      "name": "Banque de l'Industrialisation du Tchad",
+      "link": "https://www.bict.ch",
+      "icon": "banque_de_lindustrialisation_du_tchad.svg",
+      "address": "Avenue du 1er Décembre, N'Djamena",
+      "city": "N'Djamena",
+      "branch": "N'Djamena Branch"
+    },
+    "banque_concorde": {
+      "name": "Banque Concorde",
+      "link": "https://www.bconcorde.ch",
+      "icon": "banque_concorde.svg",
+      "address": "Rue des Fleurs, N'Djamena",
+      "city": "N'Djamena",
+      "branch": "N'Djamena Branch"
+    },
+    "banque_abc": {
+      "name": "Banque ABC",
+      "link": "https://www.abc.ch",
+      "icon": "banque_abc.svg",
+      "address": "Avenue de la République, N'Djamena",
+      "city": "N'Djamena",
+      "branch": "N'Djamena Branch"
+    }
+  }
+  

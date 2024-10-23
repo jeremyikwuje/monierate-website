@@ -1,0 +1,83 @@
+{
+    "mcb": {
+      "name": "MCB (Mauritius Commercial Bank)",
+      "link": "https://www.mcb.mu",
+      "icon": "mcb.png",
+      "address": "Sir William Newton Street, Port Louis",
+      "city": "Port Louis",
+      "branch": "Head Office"
+    },
+    "sbm": {
+      "name": "SBM (State Bank of Mauritius)",
+      "link": "https://www.sbmgroup.mu",
+      "icon": "sbm.png",
+      "address": "1, Sir William Newton Street, Port Louis",
+      "city": "Port Louis",
+      "branch": "Main Branch"
+    },
+    "abc": {
+      "name": "ABC (AfrAsia Bank)",
+      "link": "https://www.afrasiabank.com",
+      "icon": "abc.png",
+      "address": "10th Floor, Bank of Africa Tower, 23, Avenue de la Liberté, Port Louis",
+      "city": "Port Louis",
+      "branch": "Head Office"
+    },
+    "hsbc": {
+      "name": "HSBC Mauritius",
+      "link": "https://www.hsbc.mu",
+      "icon": "hsbc.png",
+      "address": "68, 7th Floor, HSBC Building, Avenue de la Liberté, Port Louis",
+      "city": "Port Louis",
+      "branch": "Main Branch"
+    },
+    "boi": {
+      "name": "BOI (Bank of India)",
+      "link": "https://www.bankofindia.com",
+      "icon": "boi.png",
+      "address": "6th Floor, Eclosia Building, 10, Avenue des Martyrs, Port Louis",
+      "city": "Port Louis",
+      "branch": "Main Branch"
+    },
+    "ncb": {
+      "name": "NCB (National Commercial Bank)",
+      "link": "https://www.ncb.mu",
+      "icon": "ncb.png",
+      "address": "Royal Road, Quatre Bornes",
+      "city": "Quatre Bornes",
+      "branch": "Main Branch"
+    },
+    "bof": {
+      "name": "BOF (Bank of Africa)",
+      "link": "https://www.boa.mu",
+      "icon": "bof.png",
+      "address": "1st Floor, Rue Pasteur, Port Louis",
+      "city": "Port Louis",
+      "branch": "Main Branch"
+    },
+    "smb": {
+      "name": "SMB (Société Mauricienne de Banque)",
+      "link": "https://www.smb.mu",
+      "icon": "smb.png",
+      "address": "14, Sir William Newton Street, Port Louis",
+      "city": "Port Louis",
+      "branch": "Main Branch"
+    },
+    "mib": {
+      "name": "MIB (Mauritius Investment Bank)",
+      "link": "https://www.mib.mu",
+      "icon": "mib.png",
+      "address": "Rue de la Cité, Port Louis",
+      "city": "Port Louis",
+      "branch": "Main Branch"
+    },
+    "fnb": {
+      "name": "FNB (First National Bank)",
+      "link": "https://www.fnb.co.za",
+      "icon": "fnb.png",
+      "address": "1st Floor, Raffles Tower, 19, Avenue de la Liberté, Port Louis",
+      "city": "Port Louis",
+      "branch": "Main Branch"
+    }
+  }
+  

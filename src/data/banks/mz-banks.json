@@ -1,0 +1,75 @@
+{
+    "millennium": {
+      "name": "Millennium BIM",
+      "link": "https://www.millenniumbim.co.mz",
+      "icon": "millennium.png",
+      "address": "Avenida 25 de Setembro, 1475, Maputo",
+      "city": "Maputo",
+      "branch": "Head Office"
+    },
+    "bci": {
+      "name": "BCI (Banco Comercial de Investimento)",
+      "link": "https://www.bci.co.mz",
+      "icon": "bci.png",
+      "address": "Avenida Julius Nyerere, Maputo",
+      "city": "Maputo",
+      "branch": "Main Branch"
+    },
+    "standard": {
+      "name": "Standard Bank Mozambique",
+      "link": "https://www.standardbank.co.mz",
+      "icon": "standard.png",
+      "address": "Avenida 24 de Julho, 1168, Maputo",
+      "city": "Maputo",
+      "branch": "Main Branch"
+    },
+    "bancoom": {
+      "name": "Banco Omozambique",
+      "link": "https://www.banco-omozambique.co.mz",
+      "icon": "bancoom.png",
+      "address": "Avenida de Moçambique, Maputo",
+      "city": "Maputo",
+      "branch": "Main Branch"
+    },
+    "abc": {
+      "name": "ABC (Banco de Comércio e Indústria)",
+      "link": "https://www.abcmocambique.co.mz",
+      "icon": "abc.png",
+      "address": "Avenida 25 de Setembro, Maputo",
+      "city": "Maputo",
+      "branch": "Main Branch"
+    },
+    "bancoint": {
+      "name": "Banco Internacional de Moçambique",
+      "link": "https://www.bancoint.co.mz",
+      "icon": "bancoint.png",
+      "address": "Avenida 24 de Julho, 100, Maputo",
+      "city": "Maputo",
+      "branch": "Main Branch"
+    },
+    "bm": {
+      "name": "BM (Banco de Moçambique)",
+      "link": "https://www.bancomoc.mz",
+      "icon": "bm.png",
+      "address": "Avenida 24 de Julho, Maputo",
+      "city": "Maputo",
+      "branch": "Main Branch"
+    },
+    "mocambique": {
+      "name": "Banco de Moçambique",
+      "link": "https://www.bancomoc.mz",
+      "icon": "mocambique.png",
+      "address": "Avenida Julius Nyerere, Maputo",
+      "city": "Maputo",
+      "branch": "Head Office"
+    },
+    "boc": {
+      "name": "BOC (Banco de Comércio)",
+      "link": "https://www.boc.co.mz",
+      "icon": "boc.png",
+      "address": "Avenida 25 de Setembro, Maputo",
+      "city": "Maputo",
+      "branch": "Main Branch"
+    }
+  }
+  

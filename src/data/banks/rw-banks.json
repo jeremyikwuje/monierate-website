@@ -1,0 +1,83 @@
+{
+    "bankofrwanda": {
+      "name": "Bank of Kigali",
+      "link": "https://www.bk.rw",
+      "icon": "bk.png",
+      "address": "P.O. Box 175 Kigali, KN 4 Ave",
+      "city": "Kigali",
+      "branch": "Head Office"
+    },
+    "eco": {
+      "name": "Ecobank Rwanda",
+      "link": "https://www.ecobank.com",
+      "icon": "ecobank.png",
+      "address": "KN 14 Ave, Kigali",
+      "city": "Kigali",
+      "branch": "Main Branch"
+    },
+    "brd": {
+      "name": "Banque Rwandaise de Développement (BRD)",
+      "link": "https://www.brd.rw",
+      "icon": "brd.png",
+      "address": "P.O. Box 134 Kigali, KN 3 Ave",
+      "city": "Kigali",
+      "branch": "Head Office"
+    },
+    "kcb": {
+      "name": "KCB Bank Rwanda",
+      "link": "https://www.kcbgroup.com",
+      "icon": "kcb.png",
+      "address": "KN 4 Ave, Kigali",
+      "city": "Kigali",
+      "branch": "Main Branch"
+    },
+    "gtbank": {
+      "name": "Guaranty Trust Bank Rwanda",
+      "link": "https://www.gtbank.com",
+      "icon": "gtbank.png",
+      "address": "KN 3 Ave, Kigali",
+      "city": "Kigali",
+      "branch": "Main Branch"
+    },
+    "bpr": {
+      "name": "BPR Atlas Mara",
+      "link": "https://www.bpr.rw",
+      "icon": "bpr.png",
+      "address": "KN 6 Ave, Kigali",
+      "city": "Kigali",
+      "branch": "Head Office"
+    },
+    "brc": {
+      "name": "Rwanda Commercial Bank (BRC)",
+      "link": "https://www.brc.rw",
+      "icon": "brc.png",
+      "address": "KN 1 Ave, Kigali",
+      "city": "Kigali",
+      "branch": "Main Branch"
+    },
+    "bankofafrica": {
+      "name": "Bank of Africa Rwanda",
+      "link": "https://www.bank-of-africa.net",
+      "icon": "boa.png",
+      "address": "KN 4 Ave, Kigali",
+      "city": "Kigali",
+      "branch": "Head Office"
+    },
+    "imb": {
+      "name": "I&M Bank Rwanda",
+      "link": "https://www.imb.rw",
+      "icon": "imb.png",
+      "address": "KN 3 Ave, Kigali",
+      "city": "Kigali",
+      "branch": "Main Branch"
+    },
+    "cogebanque": {
+      "name": "Cogebanque",
+      "link": "https://www.cogebanque.com",
+      "icon": "cogebanque.png",
+      "address": "KN 5 Ave, Kigali",
+      "city": "Kigali",
+      "branch": "Main Branch"
+    }
+  }
+  

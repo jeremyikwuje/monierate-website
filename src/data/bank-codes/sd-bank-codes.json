@@ -1,0 +1,83 @@
+{
+    "bankofsudan": {
+      "swift": ["BOSDSD"],
+      "ussd": {
+        "start": "*123#",
+        "balance": "*123*1#",
+        "transfer_to_same_bank": "*123*amount*account_number#"
+      }
+    },
+    "sudapet": {
+      "swift": ["SUDAPETSD"],
+      "ussd": {
+        "start": "*234#",
+        "balance": "*234*1#",
+        "transfer_to_same_bank": "*234*amount*account_number#"
+      }
+    },
+    "exportimport": {
+      "swift": ["EIBSD"],
+      "ussd": {
+        "start": "*345#",
+        "balance": "*345*1#",
+        "transfer_to_same_bank": "*345*amount*account_number#"
+      }
+    },
+    "albaraka": {
+      "swift": ["ALBKSD"],
+      "ussd": {
+        "start": "*456#",
+        "balance": "*456*1#",
+        "transfer_to_same_bank": "*456*amount*account_number#"
+      }
+    },
+    "sudanese": {
+      "swift": ["SUDFRBS"],
+      "ussd": {
+        "start": "*567#",
+        "balance": "*567*1#",
+        "transfer_to_same_bank": "*567*amount*account_number#"
+      }
+    },
+    "farmers": {
+      "swift": ["FARMERSD"],
+      "ussd": {
+        "start": "*678#",
+        "balance": "*678*1#",
+        "transfer_to_same_bank": "*678*amount*account_number#"
+      }
+    },
+    "national": {
+      "swift": ["NBSDSD"],
+      "ussd": {
+        "start": "*789#",
+        "balance": "*789*1#",
+        "transfer_to_same_bank": "*789*amount*account_number#"
+      }
+    },
+    "khartoum": {
+      "swift": ["KHARTOUMSD"],
+      "ussd": {
+        "start": "*890#",
+        "balance": "*890*1#",
+        "transfer_to_same_bank": "*890*amount*account_number#"
+      }
+    },
+    "alshamal": {
+      "swift": ["ASHAMALSD"],
+      "ussd": {
+        "start": "*901#",
+        "balance": "*901*1#",
+        "transfer_to_same_bank": "*901*amount*account_number#"
+      }
+    },
+    "sudana": {
+      "swift": ["SUDANBS"],
+      "ussd": {
+        "start": "*012#",
+        "balance": "*012*1#",
+        "transfer_to_same_bank": "*012*amount*account_number#"
+      }
+    }
+  }
+  

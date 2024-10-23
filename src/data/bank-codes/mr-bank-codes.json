@@ -1,0 +1,83 @@
+{
+    "bmci": {
+      "swift": ["BMCI MR"],
+      "ussd": {
+        "start": "*222#",
+        "balance": "*222*1#",
+        "transfer_to_same_bank": "*222*amount*account_number#"
+      }
+    },
+    "mauribank": {
+      "swift": ["MAURI MR"],
+      "ussd": {
+        "start": "*333#",
+        "balance": "*333*1#",
+        "transfer_to_same_bank": "*333*amount*account_number#"
+      }
+    },
+    "bnm": {
+      "swift": ["BNM MR"],
+      "ussd": {
+        "start": "*444#",
+        "balance": "*444*1#",
+        "transfer_to_same_bank": "*444*amount*account_number#"
+      }
+    },
+    "sociétégenerale": {
+      "swift": ["SGBM MR"],
+      "ussd": {
+        "start": "*555#",
+        "balance": "*555*1#",
+        "transfer_to_same_bank": "*555*amount*account_number#"
+      }
+    },
+    "eco": {
+      "swift": ["ECO MR"],
+      "ussd": {
+        "start": "*666#",
+        "balance": "*666*1#",
+        "transfer_to_same_bank": "*666*amount*account_number#"
+      }
+    },
+    "ibank": {
+      "swift": ["IBANK MR"],
+      "ussd": {
+        "start": "*777#",
+        "balance": "*777*1#",
+        "transfer_to_same_bank": "*777*amount*account_number#"
+      }
+    },
+    "cmf": {
+      "swift": ["CMF MR"],
+      "ussd": {
+        "start": "*888#",
+        "balance": "*888*1#",
+        "transfer_to_same_bank": "*888*amount*account_number#"
+      }
+    },
+    "mauritanieleasing": {
+      "swift": ["ML MR"],
+      "ussd": {
+        "start": "*999#",
+        "balance": "*999*1#",
+        "transfer_to_same_bank": "*999*amount*account_number#"
+      }
+    },
+    "bankalgerie": {
+      "swift": ["BA MR"],
+      "ussd": {
+        "start": "*1000#",
+        "balance": "*1000*1#",
+        "transfer_to_same_bank": "*1000*amount*account_number#"
+      }
+    },
+    "bims": {
+      "swift": ["BIMS MR"],
+      "ussd": {
+        "start": "*1100#",
+        "balance": "*1100*1#",
+        "transfer_to_same_bank": "*1100*amount*account_number#"
+      }
+    }
+  }
+  

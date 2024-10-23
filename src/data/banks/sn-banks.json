@@ -1,0 +1,83 @@
+{
+    "bndes": {
+      "name": "Banque Nationale pour le Développement Économique (BNDE)",
+      "link": "https://www.bnde.sn",
+      "icon": "bnde.png",
+      "address": "Route de l'Aéroport, Dakar",
+      "city": "Dakar",
+      "branch": "Head Office"
+    },
+    "bhs": {
+      "name": "Banque de l'Habitat du Sénégal (BHS)",
+      "link": "https://www.bhs.sn",
+      "icon": "bhs.png",
+      "address": "Avenue Moussa Tavele, Dakar",
+      "city": "Dakar",
+      "branch": "Main Branch"
+    },
+    "bsic": {
+      "name": "Banque Sahélo-Saharienne pour l'Investissement et le Commerce (BSIC)",
+      "link": "https://www.bsic.sn",
+      "icon": "bsic.png",
+      "address": "Avenue Cheikh Anta Diop, Dakar",
+      "city": "Dakar",
+      "branch": "Head Office"
+    },
+    "bnp": {
+      "name": "Banque Nationale de Paris (BNP Paribas)",
+      "link": "https://www.bnpparibas.sn",
+      "icon": "bnp.png",
+      "address": "Avenue du Sénégal, Dakar",
+      "city": "Dakar",
+      "branch": "Main Branch"
+    },
+    "cba": {
+      "name": "Crédit Agricole du Sénégal (CAS)",
+      "link": "https://www.cas.sn",
+      "icon": "cba.png",
+      "address": "Route de Ngor, Dakar",
+      "city": "Dakar",
+      "branch": "Head Office"
+    },
+    "sgbs": {
+      "name": "Société Générale de Banques au Sénégal (SGBS)",
+      "link": "https://www.sgb.sn",
+      "icon": "sgbs.png",
+      "address": "Avenue Faidherbe, Dakar",
+      "city": "Dakar",
+      "branch": "Main Branch"
+    },
+    "ecobank": {
+      "name": "Ecobank Senegal",
+      "link": "https://www.ecobank.com",
+      "icon": "ecobank.png",
+      "address": "Avenue Cheikh Anta Diop, Dakar",
+      "city": "Dakar",
+      "branch": "Head Office"
+    },
+    "waemu": {
+      "name": "Banque Ouest Africaine de Développement (BOAD)",
+      "link": "https://www.waemu.org",
+      "icon": "waemu.png",
+      "address": "Avenue Moussa Tavele, Dakar",
+      "city": "Dakar",
+      "branch": "Main Branch"
+    },
+    "cns": {
+      "name": "Caisse Nationale de Sécurité Sociale (CNSS)",
+      "link": "https://www.cnss.sn",
+      "icon": "cns.png",
+      "address": "Avenue Lamine Gueye, Dakar",
+      "city": "Dakar",
+      "branch": "Head Office"
+    },
+    "unior": {
+      "name": "Union Nationale des Mutuelles de Crédit (UNMC)",
+      "link": "https://www.unmc.sn",
+      "icon": "unior.png",
+      "address": "Avenue Moussa Tavele, Dakar",
+      "city": "Dakar",
+      "branch": "Main Branch"
+    }
+  }
+  

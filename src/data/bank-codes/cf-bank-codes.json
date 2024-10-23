@@ -1,0 +1,156 @@
+{
+    "banco_central_africano": {
+      "swift": [
+        "BCAFCFCA"
+      ],
+      "ussd": {
+        "start": "*202#",
+        "transfer_to_same_bank": "*202*1*amount*account_number#",
+        "transfer_other_banks": "*202*2*amount*account_number*bank_code#",
+        "airtime_self": "*202*3*amount#",
+        "airtime_others": "*202*4*amount*phone_number#",
+        "balance": "*202*5#",
+        "bvn": null,
+        "update_bvn_details": null,
+        "stop_debit_transactions": null,
+        "activate_code": null
+      }
+    },
+    "credit_du_sangha": {
+      "swift": [
+        "CDSGCFCA"
+      ],
+      "ussd": {
+        "start": "*203#",
+        "transfer_to_same_bank": "*203*1*amount*account_number#",
+        "transfer_other_banks": "*203*2*amount*account_number*bank_code#",
+        "airtime_self": "*203*3*amount#",
+        "airtime_others": "*203*4*amount*phone_number#",
+        "balance": "*203*5#",
+        "bvn": null,
+        "update_bvn_details": null,
+        "stop_debit_transactions": null,
+        "activate_code": null
+      }
+    },
+    "banco_iberico": {
+      "swift": [
+        "BICFCA"
+      ],
+      "ussd": {
+        "start": "*204#",
+        "transfer_to_same_bank": "*204*1*amount*account_number#",
+        "transfer_other_banks": "*204*2*amount*account_number*bank_code#",
+        "airtime_self": "*204*3*amount#",
+        "airtime_others": "*204*4*amount*phone_number#",
+        "balance": "*204*5#",
+        "bvn": null,
+        "update_bvn_details": null,
+        "stop_debit_transactions": null,
+        "activate_code": null
+      }
+    },
+    "union_bancaire_centrale": {
+      "swift": [
+        "UBCCFCA"
+      ],
+      "ussd": {
+        "start": "*205#",
+        "transfer_to_same_bank": "*205*1*amount*account_number#",
+        "transfer_other_banks": "*205*2*amount*account_number*bank_code#",
+        "airtime_self": "*205*3*amount#",
+        "airtime_others": "*205*4*amount*phone_number#",
+        "balance": "*205*5#",
+        "bvn": null,
+        "update_bvn_details": null,
+        "stop_debit_transactions": null,
+        "activate_code": null
+      }
+    },
+    "bank_of_central_africa": {
+      "swift": [
+        "BCAFCFCA"
+      ],
+      "ussd": {
+        "start": "*206#",
+        "transfer_to_same_bank": "*206*1*amount*account_number#",
+        "transfer_other_banks": "*206*2*amount*account_number*bank_code#",
+        "airtime_self": "*206*3*amount#",
+        "airtime_others": "*206*4*amount*phone_number#",
+        "balance": "*206*5#",
+        "bvn": null,
+        "update_bvn_details": null,
+        "stop_debit_transactions": null,
+        "activate_code": null
+      }
+    },
+    "banque_centrafrique": {
+      "swift": [
+        "BCCFCA"
+      ],
+      "ussd": {
+        "start": "*207#",
+        "transfer_to_same_bank": "*207*1*amount*account_number#",
+        "transfer_other_banks": "*207*2*amount*account_number*bank_code#",
+        "airtime_self": "*207*3*amount#",
+        "airtime_others": "*207*4*amount*phone_number#",
+        "balance": "*207*5#",
+        "bvn": null,
+        "update_bvn_details": null,
+        "stop_debit_transactions": null,
+        "activate_code": null
+      }
+    },
+    "financiere_et_developpement": {
+      "swift": [
+        "FDCFCA"
+      ],
+      "ussd": {
+        "start": "*208#",
+        "transfer_to_same_bank": "*208*1*amount*account_number#",
+        "transfer_other_banks": "*208*2*amount*account_number*bank_code#",
+        "airtime_self": "*208*3*amount#",
+        "airtime_others": "*208*4*amount*phone_number#",
+        "balance": "*208*5#",
+        "bvn": null,
+        "update_bvn_details": null,
+        "stop_debit_transactions": null,
+        "activate_code": null
+      }
+    },
+    "banco_exploration": {
+      "swift": [
+        "BECFCA"
+      ],
+      "ussd": {
+        "start": "*209#",
+        "transfer_to_same_bank": "*209*1*amount*account_number#",
+        "transfer_other_banks": "*209*2*amount*account_number*bank_code#",
+        "airtime_self": "*209*3*amount#",
+        "airtime_others": "*209*4*amount*phone_number#",
+        "balance": "*209*5#",
+        "bvn": null,
+        "update_bvn_details": null,
+        "stop_debit_transactions": null,
+        "activate_code": null
+      }
+    },
+    "banco_rural": {
+      "swift": [
+        "BRUCFA"
+      ],
+      "ussd": {
+        "start": "*210#",
+        "transfer_to_same_bank": "*210*1*amount*account_number#",
+        "transfer_other_banks": "*210*2*amount*account_number*bank_code#",
+        "airtime_self": "*210*3*amount#",
+        "airtime_others": "*210*4*amount*phone_number#",
+        "balance": "*210*5#",
+        "bvn": null,
+        "update_bvn_details": null,
+        "stop_debit_transactions": null,
+        "activate_code": null
+      }
+    }
+  }
+  

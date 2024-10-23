@@ -1,0 +1,83 @@
+{
+    "standardbank": {
+      "name": "Standard Lesotho Bank",
+      "link": "https://www.standardlesothobank.co.ls",
+      "icon": "standardbank.png",
+      "address": "Maseru Mall, Kingsway Road",
+      "city": "Maseru",
+      "branch": "Maseru Main Branch"
+    },
+    "nedbank": {
+      "name": "Nedbank Lesotho",
+      "link": "https://www.nedbank.co.ls",
+      "icon": "nedbank.png",
+      "address": "Kingsway Road, Maseru",
+      "city": "Maseru",
+      "branch": "Head Office"
+    },
+    "fnb": {
+      "name": "First National Bank (FNB) Lesotho",
+      "link": "https://www.fnblesotho.co.ls",
+      "icon": "fnb.png",
+      "address": "Maseru Mall, Pioneer Road",
+      "city": "Maseru",
+      "branch": "Maseru Branch"
+    },
+    "lesothopostbank": {
+      "name": "Lesotho PostBank",
+      "link": "https://www.lpb.co.ls",
+      "icon": "lesothopostbank.png",
+      "address": "LNDC Centre, Kingsway Road",
+      "city": "Maseru",
+      "branch": "LNDC Branch"
+    },
+    "bancabc": {
+      "name": "BancABC Lesotho",
+      "link": "https://www.bancabc.com",
+      "icon": "bancabc.png",
+      "address": "Kingsway Road, Maseru",
+      "city": "Maseru",
+      "branch": "Maseru Branch"
+    },
+    "absa": {
+      "name": "Absa Bank Lesotho",
+      "link": "https://www.absa.co.ls",
+      "icon": "absa.png",
+      "address": "Maseru Mall, Kingsway Road",
+      "city": "Maseru",
+      "branch": "Main Branch"
+    },
+    "equity": {
+      "name": "Equity Bank Lesotho",
+      "link": "https://equitybank.co.ls",
+      "icon": "equity.png",
+      "address": "Pioneer Mall, Maseru",
+      "city": "Maseru",
+      "branch": "Maseru Branch"
+    },
+    "letshego": {
+      "name": "Letshego Lesotho",
+      "link": "https://www.letshego.com",
+      "icon": "letshego.png",
+      "address": "Maseru Mall, Kingsway Road",
+      "city": "Maseru",
+      "branch": "Main Branch"
+    },
+    "postbank": {
+      "name": "Lesotho PostBank",
+      "link": "https://www.lpb.co.ls",
+      "icon": "postbank.png",
+      "address": "Pioneer Road, Maseru",
+      "city": "Maseru",
+      "branch": "Head Office"
+    },
+    "vodacash": {
+      "name": "Vodacom M-Pesa",
+      "link": "https://www.vodacom.co.ls",
+      "icon": "vodacash.png",
+      "address": "Kingsway Road, Maseru",
+      "city": "Maseru",
+      "branch": "Vodacom Office"
+    }
+  }
+  

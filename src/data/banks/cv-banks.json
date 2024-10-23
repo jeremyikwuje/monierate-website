@@ -1,0 +1,75 @@
+{
+    "bcv": {
+      "name": "Banco de Cabo Verde (BCV)",
+      "link": "https://www.bcv.cv",
+      "icon": "bcv.svg",
+      "address": "Avenida 5 de Julho, Praia",
+      "city": "Praia",
+      "branch": "Praia Branch"
+    },
+    "civ": {
+      "name": "Caixa Económica de Cabo Verde (CECV)",
+      "link": "https://www.civ.cv",
+      "icon": "civ.svg",
+      "address": "Avenida Amílcar Cabral, Praia",
+      "city": "Praia",
+      "branch": "Praia Branch"
+    },
+    "bca": {
+      "name": "Banco Comercial do Atlântico (BCA)",
+      "link": "https://www.bca.cv",
+      "icon": "bca.svg",
+      "address": "Rua 5 de Julho, Praia",
+      "city": "Praia",
+      "branch": "Praia Branch"
+    },
+    "sc": {
+      "name": "Société Générale de Banques au Cabo Verde (SGB)",
+      "link": "https://www.sgb.cv",
+      "icon": "sc.svg",
+      "address": "Avenida João Paulo II, Praia",
+      "city": "Praia",
+      "branch": "Praia Branch"
+    },
+    "ecv": {
+      "name": "EcoBank Cape Verde",
+      "link": "https://www.ecobank.com",
+      "icon": "ecv.svg",
+      "address": "Avenida Amílcar Cabral, Praia",
+      "city": "Praia",
+      "branch": "Praia Branch"
+    },
+    "bni": {
+      "name": "Banco Nacional de Investimento (BNI)",
+      "link": "https://www.bni.cv",
+      "icon": "bni.svg",
+      "address": "Avenida 5 de Julho, Praia",
+      "city": "Praia",
+      "branch": "Praia Branch"
+    },
+    "sbcv": {
+      "name": "Banco da Praia (BP)",
+      "link": "https://www.bancodapraia.cv",
+      "icon": "sbcv.svg",
+      "address": "Avenida 5 de Julho, Praia",
+      "city": "Praia",
+      "branch": "Praia Branch"
+    },
+    "mcb": {
+      "name": "Mauritius Commercial Bank (MCB)",
+      "link": "https://www.mcb.mu",
+      "icon": "mcb.svg",
+      "address": "Avenida 5 de Julho, Praia",
+      "city": "Praia",
+      "branch": "Praia Branch"
+    },
+    "bic": {
+      "name": "Banco Internacional de Cabo Verde (BIC)",
+      "link": "https://www.bic.cv",
+      "icon": "bic.svg",
+      "address": "Avenida 5 de Julho, Praia",
+      "city": "Praia",
+      "branch": "Praia Branch"
+    }
+  }
+  

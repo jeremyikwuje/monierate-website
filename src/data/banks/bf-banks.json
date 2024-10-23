@@ -1,0 +1,75 @@
+{
+    "banco_nationale": {
+      "name": "Banque Nationale",
+      "link": "https://www.banque-nationale.bf",
+      "icon": "banco_nationale.svg",
+      "address": "Av. Moussa Tavele",
+      "city": "Ouagadougou",
+      "branch": "Ouagadougou Branch"
+    },
+    "ecobank": {
+      "name": "Ecobank Burkina Faso",
+      "link": "https://www.ecobank.com",
+      "icon": "ecobank.svg",
+      "address": "Avenue Kadiogo",
+      "city": "Ouagadougou",
+      "branch": "Ouagadougou Branch"
+    },
+    "bank_of_africa": {
+      "name": "Bank of Africa Burkina Faso",
+      "link": "https://www.banque-of-africa.bf",
+      "icon": "bank_of_africa.svg",
+      "address": "Avenue de l'Indépendance",
+      "city": "Ouagadougou",
+      "branch": "Ouagadougou Branch"
+    },
+    "caisse_burkinabe": {
+      "name": "Caisse Burkinabé",
+      "link": "https://www.caisse-burkinabe.bf",
+      "icon": "caisse_burkinabe.svg",
+      "address": "Route de l'Aéroport",
+      "city": "Ouagadougou",
+      "branch": "Ouagadougou Branch"
+    },
+    "société_generale": {
+      "name": "Société Générale Burkina Faso",
+      "link": "https://www.societe-generale.bf",
+      "icon": "societe_generale.svg",
+      "address": "Avenue Charles de Gaulle",
+      "city": "Ouagadougou",
+      "branch": "Ouagadougou Branch"
+    },
+    "bci_burkina": {
+      "name": "BCI Burkina Faso",
+      "link": "https://www.bci.bf",
+      "icon": "bci_burkina.svg",
+      "address": "Avenue des Champs Élysées",
+      "city": "Ouagadougou",
+      "branch": "Ouagadougou Branch"
+    },
+    "la_poste": {
+      "name": "La Poste Burkina Faso",
+      "link": "https://www.laposte.bf",
+      "icon": "la_poste.svg",
+      "address": "Rue 5.45",
+      "city": "Ouagadougou",
+      "branch": "Ouagadougou Branch"
+    },
+    "orabank": {
+      "name": "Orabank Burkina Faso",
+      "link": "https://www.orabank.net",
+      "icon": "orabank.svg",
+      "address": "Avenue Moussa Tavele",
+      "city": "Ouagadougou",
+      "branch": "Ouagadougou Branch"
+    },
+    "bcb": {
+      "name": "Banque Commerciale du Burkina",
+      "link": "https://www.bcb.bf",
+      "icon": "bcb.svg",
+      "address": "Rue de la Révolution",
+      "city": "Ouagadougou",
+      "branch": "Ouagadougou Branch"
+    }
+  }
+  

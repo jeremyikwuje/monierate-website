@@ -1,0 +1,156 @@
+{
+    "banque_postale_du_congo": {
+      "swift": [
+        "BPCOCGCG"
+      ],
+      "ussd": {
+        "start": "*400#",
+        "transfer_to_same_bank": "*400*1*amount*account_number#",
+        "transfer_other_banks": "*400*2*amount*account_number*bank_code#",
+        "airtime_self": "*400*3*amount#",
+        "airtime_others": "*400*4*amount*phone_number#",
+        "balance": "*400*5#",
+        "bvn": null,
+        "update_bvn_details": null,
+        "stop_debit_transactions": null,
+        "activate_code": null
+      }
+    },
+    "banque_internationale_pour_lafrique": {
+      "swift": [
+        "BIAFCGCG"
+      ],
+      "ussd": {
+        "start": "*401#",
+        "transfer_to_same_bank": "*401*1*amount*account_number#",
+        "transfer_other_banks": "*401*2*amount*account_number*bank_code#",
+        "airtime_self": "*401*3*amount#",
+        "airtime_others": "*401*4*amount*phone_number#",
+        "balance": "*401*5#",
+        "bvn": null,
+        "update_bvn_details": null,
+        "stop_debit_transactions": null,
+        "activate_code": null
+      }
+    },
+    "banque_de_lhabitat_du_congo": {
+      "swift": [
+        "BHCNCGCG"
+      ],
+      "ussd": {
+        "start": "*402#",
+        "transfer_to_same_bank": "*402*1*amount*account_number#",
+        "transfer_other_banks": "*402*2*amount*account_number*bank_code#",
+        "airtime_self": "*402*3*amount#",
+        "airtime_others": "*402*4*amount*phone_number#",
+        "balance": "*402*5#",
+        "bvn": null,
+        "update_bvn_details": null,
+        "stop_debit_transactions": null,
+        "activate_code": null
+      }
+    },
+    "banque_commerciale_du_congo": {
+      "swift": [
+        "BCCOCGCG"
+      ],
+      "ussd": {
+        "start": "*403#",
+        "transfer_to_same_bank": "*403*1*amount*account_number#",
+        "transfer_other_banks": "*403*2*amount*account_number*bank_code#",
+        "airtime_self": "*403*3*amount#",
+        "airtime_others": "*403*4*amount*phone_number#",
+        "balance": "*403*5#",
+        "bvn": null,
+        "update_bvn_details": null,
+        "stop_debit_transactions": null,
+        "activate_code": null
+      }
+    },
+    "banque_de_developpement_de_congo": {
+      "swift": [
+        "BDCNCGCG"
+      ],
+      "ussd": {
+        "start": "*404#",
+        "transfer_to_same_bank": "*404*1*amount*account_number#",
+        "transfer_other_banks": "*404*2*amount*account_number*bank_code#",
+        "airtime_self": "*404*3*amount#",
+        "airtime_others": "*404*4*amount*phone_number#",
+        "balance": "*404*5#",
+        "bvn": null,
+        "update_bvn_details": null,
+        "stop_debit_transactions": null,
+        "activate_code": null
+      }
+    },
+    "banque_regionale_de_developpement": {
+      "swift": [
+        "BRDNCGCG"
+      ],
+      "ussd": {
+        "start": "*405#",
+        "transfer_to_same_bank": "*405*1*amount*account_number#",
+        "transfer_other_banks": "*405*2*amount*account_number*bank_code#",
+        "airtime_self": "*405*3*amount#",
+        "airtime_others": "*405*4*amount*phone_number#",
+        "balance": "*405*5#",
+        "bvn": null,
+        "update_bvn_details": null,
+        "stop_debit_transactions": null,
+        "activate_code": null
+      }
+    },
+    "société_générale_de_banque_du_congo": {
+      "swift": [
+        "SGBCGCG"
+      ],
+      "ussd": {
+        "start": "*406#",
+        "transfer_to_same_bank": "*406*1*amount*account_number#",
+        "transfer_other_banks": "*406*2*amount*account_number*bank_code#",
+        "airtime_self": "*406*3*amount#",
+        "airtime_others": "*406*4*amount*phone_number#",
+        "balance": "*406*5#",
+        "bvn": null,
+        "update_bvn_details": null,
+        "stop_debit_transactions": null,
+        "activate_code": null
+      }
+    },
+    "banque_de_lunion": {
+      "swift": [
+        "BUCNCGCG"
+      ],
+      "ussd": {
+        "start": "*407#",
+        "transfer_to_same_bank": "*407*1*amount*account_number#",
+        "transfer_other_banks": "*407*2*amount*account_number*bank_code#",
+        "airtime_self": "*407*3*amount#",
+        "airtime_others": "*407*4*amount*phone_number#",
+        "balance": "*407*5#",
+        "bvn": null,
+        "update_bvn_details": null,
+        "stop_debit_transactions": null,
+        "activate_code": null
+      }
+    },
+    "banque_intercontinentale": {
+      "swift": [
+        "BICNCGCG"
+      ],
+      "ussd": {
+        "start": "*408#",
+        "transfer_to_same_bank": "*408*1*amount*account_number#",
+        "transfer_other_banks": "*408*2*amount*account_number*bank_code#",
+        "airtime_self": "*408*3*amount#",
+        "airtime_others": "*408*4*amount*phone_number#",
+        "balance": "*408*5#",
+        "bvn": null,
+        "update_bvn_details": null,
+        "stop_debit_transactions": null,
+        "activate_code": null
+      }
+    }
+  }
+  

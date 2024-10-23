@@ -1,0 +1,83 @@
+{
+    "slb": {
+      "swift": ["SLBSLCLX"],
+      "ussd": {
+        "start": "*123#",
+        "balance": "*123*1#",
+        "transfer_to_same_bank": "*123*amount*account_number#"
+      }
+    },
+    "afrb": {
+      "swift": ["AFRBCLX"],
+      "ussd": {
+        "start": "*234#",
+        "balance": "*234*1#",
+        "transfer_to_same_bank": "*234*amount*account_number#"
+      }
+    },
+    "skgb": {
+      "swift": ["SKGBCLX"],
+      "ussd": {
+        "start": "*345#",
+        "balance": "*345*1#",
+        "transfer_to_same_bank": "*345*amount*account_number#"
+      }
+    },
+    "ecobank": {
+      "swift": ["ECOBCLX"],
+      "ussd": {
+        "start": "*456#",
+        "balance": "*456*1#",
+        "transfer_to_same_bank": "*456*amount*account_number#"
+      }
+    },
+    "frb": {
+      "swift": ["FRBCLX"],
+      "ussd": {
+        "start": "*567#",
+        "balance": "*567*1#",
+        "transfer_to_same_bank": "*567*amount*account_number#"
+      }
+    },
+    "zenith": {
+      "swift": ["ZENITHSL"],
+      "ussd": {
+        "start": "*678#",
+        "balance": "*678*1#",
+        "transfer_to_same_bank": "*678*amount*account_number#"
+      }
+    },
+    "bsl": {
+      "swift": ["BSLSLCLX"],
+      "ussd": {
+        "start": "*789#",
+        "balance": "*789*1#",
+        "transfer_to_same_bank": "*789*amount*account_number#"
+      }
+    },
+    "mcb": {
+      "swift": ["MCBCLX"],
+      "ussd": {
+        "start": "*890#",
+        "balance": "*890*1#",
+        "transfer_to_same_bank": "*890*amount*account_number#"
+      }
+    },
+    "sldb": {
+      "swift": ["SLDBCLX"],
+      "ussd": {
+        "start": "*901#",
+        "balance": "*901*1#",
+        "transfer_to_same_bank": "*901*amount*account_number#"
+      }
+    },
+    "ssl": {
+      "swift": ["SCBSLCLX"],
+      "ussd": {
+        "start": "*012#",
+        "balance": "*012*1#",
+        "transfer_to_same_bank": "*012*amount*account_number#"
+      }
+    }
+  }
+  

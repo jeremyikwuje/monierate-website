@@ -1,0 +1,83 @@
+{
+    "bfvsg": {
+      "name": "BFV-Société Générale Madagascar",
+      "link": "https://www.societegenerale.mg",
+      "icon": "bfvsg.png",
+      "address": "Rue Ravoninahitriniarivo, Antaninarenina",
+      "city": "Antananarivo",
+      "branch": "Head Office"
+    },
+    "bni": {
+      "name": "BNI Madagascar",
+      "link": "https://www.bni.mg",
+      "icon": "bni.png",
+      "address": "2 Rue Andrianary Ratianarivo, Analakely",
+      "city": "Antananarivo",
+      "branch": "Analakely Branch"
+    },
+    "bankofafrica": {
+      "name": "Bank of Africa Madagascar",
+      "link": "https://www.boam.bmcegroup.com",
+      "icon": "bankofafrica.png",
+      "address": "Rue Andrianampoinimerina, Antaninarenina",
+      "city": "Antananarivo",
+      "branch": "Antaninarenina Branch"
+    },
+    "accebank": {
+      "name": "AccèsBanque Madagascar",
+      "link": "https://www.accesbanque.mg",
+      "icon": "accesbanque.png",
+      "address": "Immeuble FJKM, Isoraka",
+      "city": "Antananarivo",
+      "branch": "Head Office"
+    },
+    "mbi": {
+      "name": "Madagascar Banque d’Investissement",
+      "link": "https://www.mbi.mg",
+      "icon": "mbi.png",
+      "address": "Ankorondrano",
+      "city": "Antananarivo",
+      "branch": "Ankorondrano Branch"
+    },
+    "bgfi": {
+      "name": "BGFI Bank Madagascar",
+      "link": "https://www.bgfi.mg",
+      "icon": "bgfi.png",
+      "address": "Anosy",
+      "city": "Antananarivo",
+      "branch": "Anosy Branch"
+    },
+    "bmoim": {
+      "name": "BMOI Madagascar",
+      "link": "https://www.bmoi.mg",
+      "icon": "bmoim.png",
+      "address": "Antsahavola",
+      "city": "Antananarivo",
+      "branch": "Main Branch"
+    },
+    "microcred": {
+      "name": "Microcred Banque Madagascar",
+      "link": "https://www.microcred.mg",
+      "icon": "microcred.png",
+      "address": "Rue Razanakombana, Antaninarenina",
+      "city": "Antananarivo",
+      "branch": "Antaninarenina Branch"
+    },
+    "acep": {
+      "name": "ACEP Madagascar",
+      "link": "https://www.acep.mg",
+      "icon": "acep.png",
+      "address": "Ambatobe",
+      "city": "Antananarivo",
+      "branch": "Ambatobe Branch"
+    },
+    "sbm": {
+      "name": "State Bank of Mauritius (SBM) Madagascar",
+      "link": "https://www.sbmgroup.mu",
+      "icon": "sbm.png",
+      "address": "Rue Rainizanabololona, Antaninarenina",
+      "city": "Antananarivo",
+      "branch": "Main Branch"
+    }
+  }
+  

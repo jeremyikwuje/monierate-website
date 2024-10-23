@@ -1,0 +1,75 @@
+{
+    "banco_bai": {
+      "name": "Banco BAI",
+      "link": "https://www.bancobai.ao",
+      "icon": "banco_bai.png",
+      "address": "Rua de Lisboa, nº 17",
+      "city": "Luanda",
+      "branch": "Luanda Branch"
+    },
+    "banco_angola": {
+      "name": "Banco de Angola",
+      "link": "https://www.bna.ao",
+      "icon": "banco_angola.png",
+      "address": "Rua 1° de Maio",
+      "city": "Luanda",
+      "branch": "Head Office"
+    },
+    "banco_de_fomento": {
+      "name": "Banco de Fomento",
+      "link": "https://www.bfa.ao",
+      "icon": "banco_de_fomento.png",
+      "address": "Av. de Portugal, nº 56",
+      "city": "Luanda",
+      "branch": "Luanda Branch"
+    },
+    "banco_bic": {
+      "name": "Banco BIC",
+      "link": "https://www.bancobic.ao",
+      "icon": "banco_bic.png",
+      "address": "Rua da Missão, nº 15",
+      "city": "Luanda",
+      "branch": "Luanda Branch"
+    },
+    "banco_millennium": {
+      "name": "Banco Millennium Atlântico",
+      "link": "https://www.millennium.ao",
+      "icon": "banco_millennium.png",
+      "address": "Av. de Portugal, nº 44",
+      "city": "Luanda",
+      "branch": "Luanda Branch"
+    },
+    "banco_sol": {
+      "name": "Banco Sol",
+      "link": "https://www.bancosol.ao",
+      "icon": "banco_sol.png",
+      "address": "Av. 21 de Janeiro",
+      "city": "Luanda",
+      "branch": "Luanda Branch"
+    },
+    "banco_primero": {
+      "name": "Banco Primeiro de Agosto",
+      "link": "https://www.bpa.ao",
+      "icon": "banco_primero.png",
+      "address": "Rua da Liberdade, nº 12",
+      "city": "Luanda",
+      "branch": "Luanda Branch"
+    },
+    "banco_de_comercio": {
+      "name": "Banco de Comércio",
+      "link": "https://www.banco-comercio.ao",
+      "icon": "banco_de_comercio.png",
+      "address": "Av. da República",
+      "city": "Luanda",
+      "branch": "Luanda Branch"
+    },
+    "banco_de_reconstrucao": {
+      "name": "Banco de Reconstrução",
+      "link": "https://www.brd.ao",
+      "icon": "banco_de_reconstrucao.png",
+      "address": "Rua da Rosa, nº 8",
+      "city": "Luanda",
+      "branch": "Luanda Branch"
+    }
+  }
+  

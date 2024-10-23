@@ -1,0 +1,83 @@
+{
+    "bna": {
+      "name": "Banque Nationale Agricole (BNA)",
+      "link": "https://www.bna.tn",
+      "icon": "bna.png",
+      "address": "4 Avenue de la République, Tunis",
+      "city": "Tunis",
+      "branch": "Main Branch"
+    },
+    "bhti": {
+      "name": "Banque de l'Habitat de Tunisie (BHT)",
+      "link": "https://www.bhti.tn",
+      "icon": "bhti.png",
+      "address": "7 Avenue Hédi Nouira, Tunis",
+      "city": "Tunis",
+      "branch": "Main Branch"
+    },
+    "bt": {
+      "name": "Banque Tunisienne",
+      "link": "https://www.bancotunisienne.com",
+      "icon": "bt.png",
+      "address": "Avenue Habib Bourguiba, Tunis",
+      "city": "Tunis",
+      "branch": "Main Branch"
+    },
+    "biat": {
+      "name": "Banque Internationale Arabe de Tunisie (BIAT)",
+      "link": "https://www.biat.com.tn",
+      "icon": "biat.png",
+      "address": "2 Avenue Hédi Nouira, Tunis",
+      "city": "Tunis",
+      "branch": "Main Branch"
+    },
+    "sbt": {
+      "name": "Société Bancaire Tuniso-Libyenne (SBT)",
+      "link": "https://www.sbt.tn",
+      "icon": "sbt.png",
+      "address": "2 Rue du Lac de Tunis, Tunis",
+      "city": "Tunis",
+      "branch": "Main Branch"
+    },
+    "attijari": {
+      "name": "Attijari Bank",
+      "link": "https://www.attijaribank.com.tn",
+      "icon": "attijari.png",
+      "address": "Avenue Habib Bourguiba, Tunis",
+      "city": "Tunis",
+      "branch": "Main Branch"
+    },
+    "bts": {
+      "name": "Banque Tuniso-Soudanaise (BTS)",
+      "link": "https://www.bts.tn",
+      "icon": "bts.png",
+      "address": "Avenue Mohamed Bouazizi, Tunis",
+      "city": "Tunis",
+      "branch": "Main Branch"
+    },
+    "socgen": {
+      "name": "Société Générale Tunisie",
+      "link": "https://www.societegenerale.tn",
+      "icon": "socgen.png",
+      "address": "Rue de la République, Tunis",
+      "city": "Tunis",
+      "branch": "Main Branch"
+    },
+    "utb": {
+      "name": "Union Tunisienne de Banque (UTB)",
+      "link": "https://www.utb.tn",
+      "icon": "utb.png",
+      "address": "Avenue de la Liberté, Tunis",
+      "city": "Tunis",
+      "branch": "Main Branch"
+    },
+    "cpat": {
+      "name": "Caisse Professionnelle d'Assurances et de Réassurances",
+      "link": "https://www.cpat.tn",
+      "icon": "cpat.png",
+      "address": "Avenue de la République, Tunis",
+      "city": "Tunis",
+      "branch": "Main Branch"
+    }
+  }
+  

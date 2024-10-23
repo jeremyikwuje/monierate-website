@@ -1,0 +1,83 @@
+{
+    "kcb": {
+      "name": "Kenya Commercial Bank (KCB)",
+      "link": "https://ke.kcbgroup.com",
+      "icon": "kcb.png",
+      "address": "Kencom House, Moi Avenue",
+      "city": "Nairobi",
+      "branch": "Kencom Branch"
+    },
+    "equity": {
+      "name": "Equity Bank Kenya",
+      "link": "https://equitygroupholdings.com/ke",
+      "icon": "equity.png",
+      "address": "Equity Centre, Upper Hill",
+      "city": "Nairobi",
+      "branch": "Upper Hill Branch"
+    },
+    "absa": {
+      "name": "Absa Bank Kenya",
+      "link": "https://www.absabank.co.ke",
+      "icon": "absa.png",
+      "address": "Waiyaki Way, Westlands",
+      "city": "Nairobi",
+      "branch": "Westlands Branch"
+    },
+    "coop": {
+      "name": "Co-operative Bank of Kenya",
+      "link": "https://www.co-opbank.co.ke",
+      "icon": "coop.png",
+      "address": "Haile Selassie Avenue",
+      "city": "Nairobi",
+      "branch": "Main Branch"
+    },
+    "stanbic": {
+      "name": "Stanbic Bank Kenya",
+      "link": "https://www.stanbicbank.co.ke",
+      "icon": "stanbic.png",
+      "address": "Stanbic Centre, Chiromo Road",
+      "city": "Nairobi",
+      "branch": "Chiromo Branch"
+    },
+    "dtb": {
+      "name": "Diamond Trust Bank (DTB)",
+      "link": "https://www.dtbafrica.com",
+      "icon": "dtb.png",
+      "address": "DTB Centre, Mombasa Road",
+      "city": "Nairobi",
+      "branch": "Mombasa Road Branch"
+    },
+    "nbk": {
+      "name": "National Bank of Kenya",
+      "link": "https://www.nationalbank.co.ke",
+      "icon": "nbk.png",
+      "address": "Harambee Avenue",
+      "city": "Nairobi",
+      "branch": "Head Office"
+    },
+    "sbm": {
+      "name": "SBM Bank Kenya",
+      "link": "https://www.sbmbank.co.ke",
+      "icon": "sbm.png",
+      "address": "IPS Building, Kimathi Street",
+      "city": "Nairobi",
+      "branch": "IPS Branch"
+    },
+    "familybank": {
+      "name": "Family Bank",
+      "link": "https://www.familybank.co.ke",
+      "icon": "familybank.png",
+      "address": "Family Bank Towers, Muindi Mbingu Street",
+      "city": "Nairobi",
+      "branch": "Head Office"
+    },
+    "guarantytrust": {
+      "name": "Guaranty Trust Bank Kenya",
+      "link": "https://www.gtbank.co.ke",
+      "icon": "gtbank.png",
+      "address": "GTBank House, Kenyatta Avenue",
+      "city": "Nairobi",
+      "branch": "Nairobi Branch"
+    }
+  }
+  

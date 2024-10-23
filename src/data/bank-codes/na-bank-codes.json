@@ -1,0 +1,83 @@
+{
+    "fnb": {
+      "swift": ["FirnNam"],
+      "ussd": {
+        "start": "*140*1987#",
+        "balance": "*140*1987*1#",
+        "transfer_to_same_bank": "*140*1987*amount*account_number#"
+      }
+    },
+    "bankwindhoek": {
+      "swift": ["BWIHNA"],
+      "ussd": {
+        "start": "*220#",
+        "balance": "*220*1#",
+        "transfer_to_same_bank": "*220*amount*account_number#"
+      }
+    },
+    "nedbank": {
+      "swift": ["NEDBNAM"],
+      "ussd": {
+        "start": "*123#",
+        "balance": "*123*1#",
+        "transfer_to_same_bank": "*123*amount*account_number#"
+      }
+    },
+    "standard": {
+      "swift": ["STANNA"],
+      "ussd": {
+        "start": "*456#",
+        "balance": "*456*1#",
+        "transfer_to_same_bank": "*456*amount*account_number#"
+      }
+    },
+    "habib": {
+      "swift": ["HABIBNA"],
+      "ussd": {
+        "start": "*789#",
+        "balance": "*789*1#",
+        "transfer_to_same_bank": "*789*amount*account_number#"
+      }
+    },
+    "capricorn": {
+      "swift": ["CAPRINA"],
+      "ussd": {
+        "start": "*1010#",
+        "balance": "*1010*1#",
+        "transfer_to_same_bank": "*1010*amount*account_number#"
+      }
+    },
+    "bankofnamibia": {
+      "swift": ["BONAM"],
+      "ussd": {
+        "start": "*1111#",
+        "balance": "*1111*1#",
+        "transfer_to_same_bank": "*1111*amount*account_number#"
+      }
+    },
+    "namibia": {
+      "swift": ["NBFISA"],
+      "ussd": {
+        "start": "*1212#",
+        "balance": "*1212*1#",
+        "transfer_to_same_bank": "*1212*amount*account_number#"
+      }
+    },
+    "pmb": {
+      "swift": ["PMBNAM"],
+      "ussd": {
+        "start": "*1313#",
+        "balance": "*1313*1#",
+        "transfer_to_same_bank": "*1313*amount*account_number#"
+      }
+    },
+    "bankofafrica": {
+      "swift": ["BOANAM"],
+      "ussd": {
+        "start": "*1414#",
+        "balance": "*1414*1#",
+        "transfer_to_same_bank": "*1414*amount*account_number#"
+      }
+    }
+  }
+  

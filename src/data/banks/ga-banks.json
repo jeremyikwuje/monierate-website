@@ -1,0 +1,83 @@
+{
+    "bgfi": {
+      "name": "BGFI Bank",
+      "link": "http://www.bgfi.gq",
+      "icon": "bgfi.svg",
+      "address": "Avenue de la République, Libreville",
+      "city": "Libreville",
+      "branch": "Main Branch"
+    },
+    "cgs": {
+      "name": "Caisse Générale de Sécurité Sociale",
+      "link": "http://www.cgs.gq",
+      "icon": "cgs.svg",
+      "address": "Boulevard du Bord de Mer, Libreville",
+      "city": "Libreville",
+      "branch": "Main Branch"
+    },
+    "uba": {
+      "name": "United Bank for Africa",
+      "link": "https://www.ubagabon.com",
+      "icon": "uba.png",
+      "address": "Avenue du Général de Gaulle, Libreville",
+      "city": "Libreville",
+      "branch": "Main Branch"
+    },
+    "bci": {
+      "name": "Banque Commerciale Internationale",
+      "link": "http://www.bci.gq",
+      "icon": "bci.svg",
+      "address": "Avenue de la Liberté, Libreville",
+      "city": "Libreville",
+      "branch": "Main Branch"
+    },
+    "bmo": {
+      "name": "Banque de l'Ordre",
+      "link": "http://www.bmo.gq",
+      "icon": "bmo.svg",
+      "address": "Avenue de l'Indépendance, Libreville",
+      "city": "Libreville",
+      "branch": "Main Branch"
+    },
+    "société_generale": {
+      "name": "Société Générale",
+      "link": "http://www.societegenerale.gq",
+      "icon": "société_generale.svg",
+      "address": "Avenue du Maréchal de Lattre de Tassigny, Libreville",
+      "city": "Libreville",
+      "branch": "Main Branch"
+    },
+    "cce": {
+      "name": "Caisse Centrale d'Epargne",
+      "link": "http://www.cce.gq",
+      "icon": "cce.svg",
+      "address": "Rue de l'Assemblée Nationale, Libreville",
+      "city": "Libreville",
+      "branch": "Main Branch"
+    },
+    "bcg": {
+      "name": "Banque de Crédit du Gabon",
+      "link": "http://www.bcg.gq",
+      "icon": "bcg.svg",
+      "address": "Avenue du Président André Mba Obame, Libreville",
+      "city": "Libreville",
+      "branch": "Main Branch"
+    },
+    "groupe_vie": {
+      "name": "Groupe Vie",
+      "link": "http://www.groupevie.gq",
+      "icon": "groupe_vie.svg",
+      "address": "Avenue de la République, Libreville",
+      "city": "Libreville",
+      "branch": "Main Branch"
+    },
+    "economie": {
+      "name": "Banque d'Economie et de Développement",
+      "link": "http://www.economie.gq",
+      "icon": "economie.svg",
+      "address": "Avenue de la République, Libreville",
+      "city": "Libreville",
+      "branch": "Main Branch"
+    }
+  }
+  

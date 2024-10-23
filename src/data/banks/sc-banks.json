@@ -1,0 +1,83 @@
+{
+    "sbc": {
+      "name": "Seychelles Banking Corporation (SBC)",
+      "link": "https://www.sbc.sc",
+      "icon": "sbc.png",
+      "address": "Les Canelles, Mahe",
+      "city": "Victoria",
+      "branch": "Head Office"
+    },
+    "nbs": {
+      "name": "National Bank of Seychelles (NBS)",
+      "link": "https://www.nbs.sc",
+      "icon": "nbs.png",
+      "address": "Hitchins Place, Victoria",
+      "city": "Victoria",
+      "branch": "Main Branch"
+    },
+    "scb": {
+      "name": "Seychelles Commercial Bank (SCB)",
+      "link": "https://www.scb.sc",
+      "icon": "scb.png",
+      "address": "Bank House, Victoria",
+      "city": "Victoria",
+      "branch": "Head Office"
+    },
+    "cbs": {
+      "name": "Central Bank of Seychelles (CBS)",
+      "link": "https://www.cbs.sc",
+      "icon": "cbs.png",
+      "address": "La Rosière, Victoria",
+      "city": "Victoria",
+      "branch": "Main Office"
+    },
+    "mahe": {
+      "name": "Mahe Bank",
+      "link": "https://www.mahebank.sc",
+      "icon": "mahe.png",
+      "address": "Avenue Michel, Victoria",
+      "city": "Victoria",
+      "branch": "Main Branch"
+    },
+    "banco": {
+      "name": "Banco Nacional Ultramarino (BNU)",
+      "link": "https://www.bnu.sc",
+      "icon": "banco.png",
+      "address": "Avenue de France, Victoria",
+      "city": "Victoria",
+      "branch": "Head Office"
+    },
+    "sbs": {
+      "name": "Seychelles Building Society (SBS)",
+      "link": "https://www.sbs.sc",
+      "icon": "sbs.png",
+      "address": "Kempinski Road, Victoria",
+      "city": "Victoria",
+      "branch": "Main Branch"
+    },
+    "ncb": {
+      "name": "New Commercial Bank (NCB)",
+      "link": "https://www.ncb.sc",
+      "icon": "ncb.png",
+      "address": "Rue de la Republique, Victoria",
+      "city": "Victoria",
+      "branch": "Head Office"
+    },
+    "cbsaf": {
+      "name": "Commercial Bank of Seychelles and Africa (CBSAF)",
+      "link": "https://www.cbsaf.sc",
+      "icon": "cbsaf.png",
+      "address": "Independence Avenue, Victoria",
+      "city": "Victoria",
+      "branch": "Main Branch"
+    },
+    "pnl": {
+      "name": "Pioneer National Limited (PNL)",
+      "link": "https://www.pnl.sc",
+      "icon": "pnl.png",
+      "address": "Avenue des Palais, Victoria",
+      "city": "Victoria",
+      "branch": "Head Office"
+    }
+  }
+  
