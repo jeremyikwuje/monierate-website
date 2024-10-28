@@ -1,83 +1,82 @@
 {
-    "znbc": {
-      "name": "Zambia National Commercial Bank (ZANACO)",
+  "zanaco": {
+      "name": "Zambia National Commercial Bank Plc",
       "link": "https://www.zanaco.co.zm",
       "icon": "zanaco.png",
-      "address": "ZANACO House, 7th Avenue, Lusaka",
+      "address": "Zanaco House, Cairo Road",
       "city": "Lusaka",
-      "branch": "Main Branch"
-    },
-    "stanbic": {
-      "name": "Stanbic Bank Zambia",
+      "branch": "Head Office"
+  },
+  "stanbic": {
+      "name": "Stanbic Bank Zambia Limited",
       "link": "https://www.stanbicbank.co.zm",
       "icon": "stanbic.png",
-      "address": "Stanbic Bank Building, 6th Floor, Cairo Road, Lusaka",
+      "address": "Stanbic House, Plot 2375, Addis Ababa Drive",
       "city": "Lusaka",
-      "branch": "Main Branch"
-    },
-    "fnb": {
-      "name": "FNB Zambia",
+      "branch": "Head Office"
+  },
+  "fnb": {
+      "name": "First National Bank Zambia Limited",
       "link": "https://www.fnbzambia.co.zm",
       "icon": "fnb.png",
-      "address": "FNB House, 11th Avenue, Lusaka",
+      "address": "FNB House, Cairo Road, Plot No. 13/14",
       "city": "Lusaka",
-      "branch": "Main Branch"
-    },
-    "absa": {
-      "name": "Absa Bank Zambia",
+      "branch": "Head Office"
+  },
+  "absa": {
+      "name": "Absa Bank Zambia Plc",
       "link": "https://www.absa.co.zm",
       "icon": "absa.png",
-      "address": "Absa House, 5th Floor, Cairo Road, Lusaka",
+      "address": "Absa House, Cairo Road",
       "city": "Lusaka",
-      "branch": "Main Branch"
-    },
-    "heritage": {
-      "name": "Heritage Bank",
-      "link": "https://www.heritagebank.co.zm",
-      "icon": "heritage.png",
-      "address": "Heritage House, Nasser Road, Lusaka",
+      "branch": "Head Office"
+  },
+  "atlasmara": {
+      "name": "Atlas Mara Bank Zambia Limited",
+      "link": "https://www.atlasmara.zm",
+      "icon": "atlasmara.png",
+      "address": "Atlas Mara House, Ground Floor, Corner of Church/Nasser Road",
       "city": "Lusaka",
-      "branch": "Main Branch"
-    },
-    "ecobank": {
-      "name": "Ecobank Zambia",
-      "link": "https://www.ecobank.com",
+      "branch": "Head Office"
+  },
+  "ecobank": {
+      "name": "Ecobank Zambia Limited",
+      "link": "https://www.ecobank.com/zm",
       "icon": "ecobank.png",
-      "address": "Ecobank House, 2nd Floor, Independence Avenue, Lusaka",
+      "address": "22768 Thabo Mbeki Road",
       "city": "Lusaka",
-      "branch": "Main Branch"
-    },
-    "indebank": {
-      "name": "Indebank Zambia",
-      "link": "https://www.indebank.co.zm",
-      "icon": "indebank.png",
-      "address": "Indebank House, 8th Avenue, Lusaka",
-      "city": "Lusaka",
-      "branch": "Main Branch"
-    },
-    "investrust": {
-      "name": "Investrust Bank",
-      "link": "https://www.investrustbank.com",
+      "branch": "Head Office"
+  },
+  "investrust": {
+      "name": "Investrust Bank Plc",
+      "link": "https://www.investrust.co.zm",
       "icon": "investrust.png",
-      "address": "Investrust House, Nasser Road, Lusaka",
+      "address": "Investrust Building, Plot 4604 Tito Road",
       "city": "Lusaka",
-      "branch": "Main Branch"
-    },
-    "zambia": {
-      "name": "Zambia Cooperative Bank",
-      "link": "https://www.zcb.co.zm",
-      "icon": "zcb.png",
-      "address": "ZCB House, 3rd Floor, Church Road, Lusaka",
+      "branch": "Head Office"
+  },
+  "accessbank": {
+      "name": "Access Bank Zambia Limited",
+      "link": "https://www.accessbankplc.com/zm",
+      "icon": "accessbank.png",
+      "address": "Plot 682, Cairo Road",
       "city": "Lusaka",
-      "branch": "Main Branch"
-    },
-    "bankofzambia": {
+      "branch": "Head Office"
+  },
+  "indo": {
+      "name": "Indo-Zambia Bank Limited",
+      "link": "https://www.izb.co.zm",
+      "icon": "izb.png",
+      "address": "IZB House, Cairo Road",
+      "city": "Lusaka",
+      "branch": "Head Office"
+  },
+  "boz": {
       "name": "Bank of Zambia",
       "link": "https://www.boz.zm",
       "icon": "boz.png",
-      "address": "Bank of Zambia, 1st Floor, Cairo Road, Lusaka",
+      "address": "Bank of Zambia, Bank Square, Cairo Road",
       "city": "Lusaka",
-      "branch": "Main Branch"
-    }
+      "branch": "Head Office"
   }
-  
+}

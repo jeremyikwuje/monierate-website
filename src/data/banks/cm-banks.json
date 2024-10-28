@@ -1,75 +1,74 @@
 {
-    "bicec": {
-      "name": "Banque Internationale du Cameroun pour l'Épargne et le Crédit (BICEC)",
-      "link": "https://www.bicec.com",
-      "icon": "bicec.svg",
-      "address": "Avenue de la République, Douala",
-      "city": "Douala",
-      "branch": "Douala Branch"
-    },
-    "société_generale": {
-      "name": "Société Générale Cameroon",
-      "link": "https://www.societegenerale.cm",
-      "icon": "societe_generale.svg",
-      "address": "Avenue des Nations Unies, Yaoundé",
-      "city": "Yaoundé",
-      "branch": "Yaoundé Branch"
-    },
-    "ecobank": {
-      "name": "Ecobank Cameroon",
-      "link": "https://www.ecobank.com",
-      "icon": "ecobank.svg",
-      "address": "Avenue des Forces Armées, Douala",
-      "city": "Douala",
-      "branch": "Douala Branch"
-    },
-    "attijariwafa": {
-      "name": "Attijariwafa Bank",
-      "link": "https://www.attijariwafa.com",
-      "icon": "attijariwafa.svg",
-      "address": "Avenue des Découvertes, Yaoundé",
-      "city": "Yaoundé",
-      "branch": "Yaoundé Branch"
-    },
-    "uob": {
-      "name": "United Overseas Bank (UOB)",
-      "link": "https://www.uobgroup.com",
-      "icon": "uob.svg",
-      "address": "Avenue du Général de Gaulle, Yaoundé",
-      "city": "Yaoundé",
-      "branch": "Yaoundé Branch"
-    },
-    "cameroon_development_bank": {
-      "name": "Cameroon Development Bank",
-      "link": "https://www.cdb.cm",
-      "icon": "cdb.svg",
-      "address": "Avenue de l'Économie, Yaoundé",
-      "city": "Yaoundé",
-      "branch": "Yaoundé Branch"
-    },
-    "banque_atlantique": {
-      "name": "Banque Atlantique Cameroon",
-      "link": "https://www.banqueatlantique.cm",
-      "icon": "banque_atlantique.svg",
-      "address": "Avenue des Banques, Douala",
-      "city": "Douala",
-      "branch": "Douala Branch"
-    },
-    "caisse_d_epargne": {
-      "name": "Caisse d'Épargne Cameroon",
-      "link": "https://www.caisse-epargne.cm",
-      "icon": "caisse_epargne.svg",
-      "address": "Avenue de la Réserve, Yaoundé",
-      "city": "Yaoundé",
-      "branch": "Yaoundé Branch"
-    },
-    "banque_postale": {
-      "name": "Banque Postale du Cameroun",
-      "link": "https://www.banquepostale.cm",
-      "icon": "banque_postale.svg",
-      "address": "Avenue de l'Innovation, Douala",
-      "city": "Douala",
-      "branch": "Douala Branch"
-    }
+  "bicec": {
+    "name": "Banque Internationale du Cameroun pour l'Épargne et le Crédit (BICEC)",
+    "link": "https://www.bicec.cm",
+    "icon": "bicec.jpeg",
+    "address": "Avenue du Général de Gaulle, BP 1925",
+    "city": "Douala",
+    "branch": "Siège Social"
+  },
+  "societe_generale": {
+    "name": "Société Générale Cameroun",
+    "link": "https://societegenerale.cm",
+    "icon": "societe.png",
+    "address": "78 Rue Joss, BP 4042",
+    "city": "Douala",
+    "branch": "Siège Social"
+  },
+  "ecobank": {
+    "name": "Ecobank Cameroun",
+    "link": "https://ecobank.com/cm/personal-banking",
+    "icon": "ecobank.png",
+    "address": "Rue Prince de Galles, BP 582",
+    "city": "Douala",
+    "branch": "Siège Social"
+  },
+  "afriland": {
+    "name": "Afriland First Bank",
+    "link": "https://www.afrilandfirstbank.com",
+    "icon": "afriland.png",
+    "address": "Place de l'Indépendance, BP 11834",
+    "city": "Yaoundé",
+    "branch": "Siège Social"
+  },
+  "cbc": {
+    "name": "Commercial Bank of Cameroon (CBC)",
+    "link": "https://www.cbc-bank.com",
+    "icon": "cbc.jpg",
+    "address": "Avenue Charles de Gaulle, BP 4004",
+    "city": "Douala",
+    "branch": "Siège Social"
+  },
+  "bgfi": {
+    "name": "BGFI Bank Cameroun",
+    "link": "https://cameroun.groupebgfibank.com",
+    "icon": "bgfi.jpeg",
+    "address": "Avenue de Gaulle, BP 660",
+    "city": "Douala",
+    "branch": "Siège Social"
+  },
+  "ubc": {
+    "name": "Union Bank of Cameroon (UBC)",
+    "link": "https://www.unionbankcameroon.com",
+    "icon": "ubc.png",
+    "address": "Commercial Avenue, BP 3573",
+    "city": "Douala",
+    "branch": "Siège Social"
+  },
+  "nfc": {
+    "name": "National Financial Credit Bank (NFC)",
+    "link": "https://www.nfcbank.cm",
+    "icon": "nfc.png",
+    "address": "Boulevard de la Liberté, BP 6578",
+    "city": "Douala",
+    "branch": "Siège Social"
+  },
+  "cca": {
+    "name": "Crédit Communautaire d'Afrique (CCA)",
+    "link": "https://www.ccabank.cm",
+    "icon": "cca.jpeg",
+    "address": "Rue Castelnau, BP 16228",
+    "city": "Yaoundé",
+    "branch": "Siège Social"
   }
-  
+}

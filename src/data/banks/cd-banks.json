@@ -1,75 +1,66 @@
 {
-    "banque_congolaise": {
-      "name": "Banque Congolaise",
-      "link": "https://www.banquecongolaise.cd",
-      "icon": "banque_congolaise.svg",
-      "address": "Avenue des Trois Martyrs, Kinshasa",
-      "city": "Kinshasa",
-      "branch": "Kinshasa Branch"
-    },
-    "banque_internationale_pour_lafrique": {
-      "name": "Banque Internationale pour l'Afrique",
-      "link": "https://www.biap.com",
-      "icon": "banque_internationale_pour_lafrique.svg",
-      "address": "Avenue de la République, Kinshasa",
-      "city": "Kinshasa",
-      "branch": "Kinshasa Branch"
-    },
-    "société_générale_de_banque_en_roumanie": {
-      "name": "Société Générale de Banque en Roumanie",
-      "link": "https://www.sgb.ro",
-      "icon": "societe_generale_de_banque_en_roumanie.svg",
-      "address": "Avenue Colonel Mondjiba, Kinshasa",
-      "city": "Kinshasa",
-      "branch": "Kinshasa Branch"
-    },
-    "banque_federale_des_entreprises": {
-      "name": "Banque Fédérale des Entreprises",
-      "link": "https://www.bfede.cd",
-      "icon": "banque_federale_des_entreprises.svg",
-      "address": "Avenue de la Liberté, Kinshasa",
-      "city": "Kinshasa",
-      "branch": "Kinshasa Branch"
-    },
-    "banque_de_développement_de_la_rdc": {
-      "name": "Banque de Développement de la RDC",
-      "link": "https://www.bdr.cd",
-      "icon": "banque_de_developpement_de_la_rdc.svg",
-      "address": "Avenue de l'Indépendance, Kinshasa",
-      "city": "Kinshasa",
-      "branch": "Kinshasa Branch"
-    },
-    "banque_de_lhabitat": {
-      "name": "Banque de l'Habitat",
-      "link": "https://www.bhc.cd",
-      "icon": "banque_de_lhabitat.svg",
-      "address": "Avenue des Aigles, Kinshasa",
-      "city": "Kinshasa",
-      "branch": "Kinshasa Branch"
-    },
-    "société_générale_de_banque_en_rdc": {
-      "name": "Société Générale de Banque en RDC",
-      "link": "https://www.sgb.cd",
-      "icon": "societe_generale_de_banque_en_rdc.svg",
-      "address": "Avenue du 30 Juin, Kinshasa",
-      "city": "Kinshasa",
-      "branch": "Kinshasa Branch"
-    },
-    "banque_intercontinentale": {
-      "name": "Banque Intercontinentale",
-      "link": "https://www.bic.cd",
-      "icon": "banque_intercontinentale.svg",
-      "address": "Avenue de la paix, Kinshasa",
-      "city": "Kinshasa",
-      "branch": "Kinshasa Branch"
-    },
-    "banque_de_la_construction": {
-      "name": "Banque de la Construction",
-      "link": "https://www.bdc.cd",
-      "icon": "banque_de_la_construction.svg",
-      "address": "Avenue du commerce, Kinshasa",
-      "city": "Kinshasa",
-      "branch": "Kinshasa Branch"
-    }
+  "banque_congolaise": {
+    "name": "Banque Commerciale du Congo",
+    "link": "https://www.bcdc.cd",
+    "icon": "bcdc.jpg",
+    "address": "Avenue des Trois Martyrs",
+    "city": "Kinshasa",
+    "branch": "Siège Social"
+  },
+  "banque_internationale_pour_lafrique": {
+    "name": "Banque Internationale pour l'Afrique au Congo",
+    "link": "https://www.biac.cd",
+    "icon": "biac.png",
+    "address": "Avenue de la République",
+    "city": "Kinshasa",
+    "branch": "Direction Générale"
+  },
+  "societe_generale_congo": {
+    "name": "Société Générale Congo",
+    "link": "https://www.societegenerale.cd",
+    "icon": "societe.png",
+    "address": "Avenue Colonel Mondjiba",
+    "city": "Kinshasa",
+    "branch": "Agence Principale"
+  },
+  "banque_de_developpement_rdc": {
+    "name": "Banque de Développement du Congo",
+    "link": "https://www.bdc.cd",
+    "icon": "bdc.jpeg",
+    "address": "Avenue de l'Indépendance",
+    "city": "Kinshasa",
+    "branch": "Direction Centrale"
+  },
+  "banque_de_lhabitat": {
+    "name": "Banque de l'Habitat du Congo",
+    "link": "https://www.bhc.cd",
+    "icon": "bhc.png",
+    "address": "Avenue des Aigles",
+    "city": "Kinshasa",
+    "branch": "Agence Centrale"
+  },
+  "rawbank": {
+    "name": "Rawbank",
+    "link": "https://www.rawbank.cd",
+    "icon": "rawbank.png",
+    "address": "Avenue du 30 Juin",
+    "city": "Kinshasa",
+    "branch": "Siège Principal"
+  },
+  "tmb": {
+    "name": "Trust Merchant Bank",
+    "link": "https://www.tmb.cd",
+    "icon": "tmb.png",
+    "address": "Avenue de la Paix",
+    "city": "Kinshasa",
+    "branch": "Direction Générale"
+  },
+  "equity_bcdc": {
+    "name": "Equity BCDC",
+    "link": "https://www.equitygroupholdings.com/cd",
+    "icon": "equity_bcdc.png",
+    "address": "Avenue du Commerce",
+    "city": "Kinshasa",
+    "branch": "Siège Principal"
   }
-  
+}

@@ -1,156 +1,122 @@
 {
-    "banque_congolaise": {
-      "swift": [
-        "BANCODKX"
-      ],
-      "ussd": {
-        "start": "*800#",
-        "transfer_to_same_bank": "*800*1*amount*account_number#",
-        "transfer_other_banks": "*800*2*amount*account_number*bank_code#",
-        "airtime_self": "*800*3*amount#",
-        "airtime_others": "*800*4*amount*phone_number#",
-        "balance": "*800*5#",
-        "bvn": null,
-        "update_bvn_details": null,
-        "stop_debit_transactions": null,
-        "activate_code": null
-      }
-    },
-    "banque_internationale_pour_lafrique": {
-      "swift": [
-        "BIAFCDKX"
-      ],
-      "ussd": {
-        "start": "*801#",
-        "transfer_to_same_bank": "*801*1*amount*account_number#",
-        "transfer_other_banks": "*801*2*amount*account_number*bank_code#",
-        "airtime_self": "*801*3*amount#",
-        "airtime_others": "*801*4*amount*phone_number#",
-        "balance": "*801*5#",
-        "bvn": null,
-        "update_bvn_details": null,
-        "stop_debit_transactions": null,
-        "activate_code": null
-      }
-    },
-    "société_générale_de_banque_en_roumanie": {
-      "swift": [
-        "SGBRCDKX"
-      ],
-      "ussd": {
-        "start": "*802#",
-        "transfer_to_same_bank": "*802*1*amount*account_number#",
-        "transfer_other_banks": "*802*2*amount*account_number*bank_code#",
-        "airtime_self": "*802*3*amount#",
-        "airtime_others": "*802*4*amount*phone_number#",
-        "balance": "*802*5#",
-        "bvn": null,
-        "update_bvn_details": null,
-        "stop_debit_transactions": null,
-        "activate_code": null
-      }
-    },
-    "banque_federale_des_entreprises": {
-      "swift": [
-        "BFEDCDKX"
-      ],
-      "ussd": {
-        "start": "*803#",
-        "transfer_to_same_bank": "*803*1*amount*account_number#",
-        "transfer_other_banks": "*803*2*amount*account_number*bank_code#",
-        "airtime_self": "*803*3*amount#",
-        "airtime_others": "*803*4*amount*phone_number#",
-        "balance": "*803*5#",
-        "bvn": null,
-        "update_bvn_details": null,
-        "stop_debit_transactions": null,
-        "activate_code": null
-      }
-    },
-    "banque_de_développement_de_la_rdc": {
-      "swift": [
-        "BDRCDKX"
-      ],
-      "ussd": {
-        "start": "*804#",
-        "transfer_to_same_bank": "*804*1*amount*account_number#",
-        "transfer_other_banks": "*804*2*amount*account_number*bank_code#",
-        "airtime_self": "*804*3*amount#",
-        "airtime_others": "*804*4*amount*phone_number#",
-        "balance": "*804*5#",
-        "bvn": null,
-        "update_bvn_details": null,
-        "stop_debit_transactions": null,
-        "activate_code": null
-      }
-    },
-    "banque_de_lhabitat": {
-      "swift": [
-        "BHCODKX"
-      ],
-      "ussd": {
-        "start": "*805#",
-        "transfer_to_same_bank": "*805*1*amount*account_number#",
-        "transfer_other_banks": "*805*2*amount*account_number*bank_code#",
-        "airtime_self": "*805*3*amount#",
-        "airtime_others": "*805*4*amount*phone_number#",
-        "balance": "*805*5#",
-        "bvn": null,
-        "update_bvn_details": null,
-        "stop_debit_transactions": null,
-        "activate_code": null
-      }
-    },
-    "société_générale_de_banque_en_rdc": {
-      "swift": [
-        "SGBRDCKX"
-      ],
-      "ussd": {
-        "start": "*806#",
-        "transfer_to_same_bank": "*806*1*amount*account_number#",
-        "transfer_other_banks": "*806*2*amount*account_number*bank_code#",
-        "airtime_self": "*806*3*amount#",
-        "airtime_others": "*806*4*amount*phone_number#",
-        "balance": "*806*5#",
-        "bvn": null,
-        "update_bvn_details": null,
-        "stop_debit_transactions": null,
-        "activate_code": null
-      }
-    },
-    "banque_intercontinentale": {
-      "swift": [
-        "BICDCDKX"
-      ],
-      "ussd": {
-        "start": "*807#",
-        "transfer_to_same_bank": "*807*1*amount*account_number#",
-        "transfer_other_banks": "*807*2*amount*account_number*bank_code#",
-        "airtime_self": "*807*3*amount#",
-        "airtime_others": "*807*4*amount*phone_number#",
-        "balance": "*807*5#",
-        "bvn": null,
-        "update_bvn_details": null,
-        "stop_debit_transactions": null,
-        "activate_code": null
-      }
-    },
-    "banque_de_la_construction": {
-      "swift": [
-        "BCCKCDKX"
-      ],
-      "ussd": {
-        "start": "*808#",
-        "transfer_to_same_bank": "*808*1*amount*account_number#",
-        "transfer_other_banks": "*808*2*amount*account_number*bank_code#",
-        "airtime_self": "*808*3*amount#",
-        "airtime_others": "*808*4*amount*phone_number#",
-        "balance": "*808*5#",
-        "bvn": null,
-        "update_bvn_details": null,
-        "stop_debit_transactions": null,
-        "activate_code": null
-      }
+  "banque_congolaise": {
+    "swift": ["BCDCCDKK"],
+    "ussd": {
+      "start": "*800#",
+      "transfer_to_same_bank": "*800*1*montant*numero_compte#",
+      "transfer_other_banks": "*800*2*montant*numero_compte*code_banque#",
+      "airtime_self": "*800*3*montant#",
+      "airtime_others": "*800*4*montant*numero_telephone#",
+      "balance": "*800*5#",
+      "mini_releve": "*800*6#",
+      "change_pin": "*800*7*ancien_pin*nouveau_pin#",
+      "stop_debit_transactions": "*800*8#",
+      "active_services": "*800*9#"
+    }
+  },
+  "banque_internationale_pour_lafrique": {
+    "swift": ["BIACCDKK"],
+    "ussd": {
+      "start": "*801#",
+      "transfer_to_same_bank": "*801*1*montant*numero_compte#",
+      "transfer_other_banks": "*801*2*montant*numero_compte*code_banque#",
+      "airtime_self": "*801*3*montant#",
+      "airtime_others": "*801*4*montant*numero_telephone#",
+      "balance": "*801*5#",
+      "mini_releve": "*801*6#",
+      "change_pin": "*801*7*ancien_pin*nouveau_pin#",
+      "stop_debit_transactions": "*801*8#",
+      "active_services": "*801*9#"
+    }
+  },
+  "societe_generale_congo": {
+    "swift": ["SGCOCDKK"],
+    "ussd": {
+      "start": "*802#",
+      "transfer_to_same_bank": "*802*1*montant*numero_compte#",
+      "transfer_other_banks": "*802*2*montant*numero_compte*code_banque#",
+      "airtime_self": "*802*3*montant#",
+      "airtime_others": "*802*4*montant*numero_telephone#",
+      "balance": "*802*5#",
+      "mini_releve": "*802*6#",
+      "change_pin": "*802*7*ancien_pin*nouveau_pin#",
+      "stop_debit_transactions": "*802*8#",
+      "active_services": "*802*9#"
+    }
+  },
+  "banque_de_developpement_rdc": {
+    "swift": ["BDCOCDKK"],
+    "ussd": {
+      "start": "*804#",
+      "transfer_to_same_bank": "*804*1*montant*numero_compte#",
+      "transfer_other_banks": "*804*2*montant*numero_compte*code_banque#",
+      "airtime_self": "*804*3*montant#",
+      "airtime_others": "*804*4*montant*numero_telephone#",
+      "balance": "*804*5#",
+      "mini_releve": "*804*6#",
+      "change_pin": "*804*7*ancien_pin*nouveau_pin#",
+      "stop_debit_transactions": "*804*8#",
+      "active_services": "*804*9#"
+    }
+  },
+  "banque_de_lhabitat": {
+    "swift": ["BHCOCDKK"],
+    "ussd": {
+      "start": "*805#",
+      "transfer_to_same_bank": "*805*1*montant*numero_compte#",
+      "transfer_other_banks": "*805*2*montant*numero_compte*code_banque#",
+      "airtime_self": "*805*3*montant#",
+      "airtime_others": "*805*4*montant*numero_telephone#",
+      "balance": "*805*5#",
+      "mini_releve": "*805*6#",
+      "change_pin": "*805*7*ancien_pin*nouveau_pin#",
+      "stop_debit_transactions": "*805*8#",
+      "active_services": "*805*9#"
+    }
+  },
+  "rawbank": {
+    "swift": ["RAWBCDKK"],
+    "ussd": {
+      "start": "*806#",
+      "transfer_to_same_bank": "*806*1*montant*numero_compte#",
+      "transfer_other_banks": "*806*2*montant*numero_compte*code_banque#",
+      "airtime_self": "*806*3*montant#",
+      "airtime_others": "*806*4*montant*numero_telephone#",
+      "balance": "*806*5#",
+      "mini_releve": "*806*6#",
+      "change_pin": "*806*7*ancien_pin*nouveau_pin#",
+      "stop_debit_transactions": "*806*8#",
+      "active_services": "*806*9#"
+    }
+  },
+  "tmb": {
+    "swift": ["TRMSCDKK"],
+    "ussd": {
+      "start": "*807#",
+      "transfer_to_same_bank": "*807*1*montant*numero_compte#",
+      "transfer_other_banks": "*807*2*montant*numero_compte*code_banque#",
+      "airtime_self": "*807*3*montant#",
+      "airtime_others": "*807*4*montant*numero_telephone#",
+      "balance": "*807*5#",
+      "mini_releve": "*807*6#",
+      "change_pin": "*807*7*ancien_pin*nouveau_pin#",
+      "stop_debit_transactions": "*807*8#",
+      "active_services": "*807*9#"
+    }
+  },
+  "equity_bcdc": {
+    "swift": ["EQBLCDKK"],
+    "ussd": {
+      "start": "*808#",
+      "transfer_to_same_bank": "*808*1*montant*numero_compte#",
+      "transfer_other_banks": "*808*2*montant*numero_compte*code_banque#",
+      "airtime_self": "*808*3*montant#",
+      "airtime_others": "*808*4*montant*numero_telephone#",
+      "balance": "*808*5#",
+      "mini_releve": "*808*6#",
+      "change_pin": "*808*7*ancien_pin*nouveau_pin#",
+      "stop_debit_transactions": "*808*8#",
+      "active_services": "*808*9#"
     }
   }
-  
+}

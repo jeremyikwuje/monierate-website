@@ -1,83 +1,66 @@
 {
-    "togobank": {
-      "swift": ["TOGOBK"],
-      "ussd": {
-        "start": "*123#",
-        "balance": "*123*1#",
-        "transfer_to_same_bank": "*123*2*amount*account_number#"
-      }
-    },
-    "ecobank": {
-      "swift": ["ECOCTG"],
-      "ussd": {
-        "start": "*100#",
-        "balance": "*100*1#",
-        "transfer_to_same_bank": "*100*2*amount*account_number#"
-      }
-    },
-    "banqueatlantique": {
-      "swift": ["BATG"],
-      "ussd": {
-        "start": "*200#",
-        "balance": "*200*1#",
-        "transfer_to_same_bank": "*200*2*amount*account_number#"
-      }
-    },
-    "bni": {
-      "swift": ["BNITG"],
-      "ussd": {
-        "start": "*300#",
-        "balance": "*300*1#",
-        "transfer_to_same_bank": "*300*2*amount*account_number#"
-      }
-    },
-    "utb": {
-      "swift": ["UTBTG"],
-      "ussd": {
-        "start": "*400#",
-        "balance": "*400*1#",
-        "transfer_to_same_bank": "*400*2*amount*account_number#"
-      }
-    },
-    "bicec": {
-      "swift": ["BICETG"],
-      "ussd": {
-        "start": "*500#",
-        "balance": "*500*1#",
-        "transfer_to_same_bank": "*500*2*amount*account_number#"
-      }
-    },
-    "bmci": {
-      "swift": ["BMCTG"],
-      "ussd": {
-        "start": "*600#",
-        "balance": "*600*1#",
-        "transfer_to_same_bank": "*600*2*amount*account_number#"
-      }
-    },
-    "sociétégenerale": {
-      "swift": ["SGTGTG"],
-      "ussd": {
-        "start": "*700#",
-        "balance": "*700*1#",
-        "transfer_to_same_bank": "*700*2*amount*account_number#"
-      }
-    },
-    "banquesocred": {
-      "swift": ["BSCTG"],
-      "ussd": {
-        "start": "*800#",
-        "balance": "*800*1#",
-        "transfer_to_same_bank": "*800*2*amount*account_number#"
-      }
-    },
-    "banquefrihet": {
-      "swift": ["BFTG"],
-      "ussd": {
-        "start": "*900#",
-        "balance": "*900*1#",
-        "transfer_to_same_bank": "*900*2*amount*account_number#"
-      }
+  "btd": {
+    "swift": ["BTDGTG22"],
+    "ussd": {
+      "start": "*155#",
+      "balance": "*155*1#",
+      "transfer_to_same_bank": "*155*2*amount*account_number#"
+    }
+  },
+  "ecobank": {
+    "swift": ["ECOCTGTG"],
+    "ussd": {
+      "start": "*844#",
+      "balance": "*844*1#",
+      "transfer_to_same_bank": "*844*2*amount*account_number#"
+    }
+  },
+  "banque_atlantique": {
+    "swift": ["ATTOGTG2"],
+    "ussd": {
+      "start": "*955#",
+      "balance": "*955*1#",
+      "transfer_to_same_bank": "*955*2*amount*account_number#"
+    }
+  },
+  "orabank": {
+    "swift": ["ORBKTGTG"],
+    "ussd": {
+      "start": "*910#",
+      "balance": "*910*1#",
+      "transfer_to_same_bank": "*910*2*amount*account_number#"
+    }
+  },
+  "utb": {
+    "swift": ["UTBTTGTG"],
+    "ussd": {
+      "start": "*133#",
+      "balance": "*133*1#",
+      "transfer_to_same_bank": "*133*2*amount*account_number#"
+    }
+  },
+  "coris_bank": {
+    "swift": ["CORISTGT"],
+    "ussd": {
+      "start": "*747#",
+      "balance": "*747*1#",
+      "transfer_to_same_bank": "*747*2*amount*account_number#"
+    }
+  },
+  "societe_generale": {
+    "swift": ["SGTGTGTG"],
+    "ussd": {
+      "start": "*738#",
+      "balance": "*738*1#",
+      "transfer_to_same_bank": "*738*2*amount*account_number#"
+    }
+  },
+  "nsia_banque": {
+    "swift": ["NSIATGTG"],
+    "ussd": {
+      "start": "*700#",
+      "balance": "*700*1#",
+      "transfer_to_same_bank": "*700*2*amount*account_number#"
     }
   }
-  
+}

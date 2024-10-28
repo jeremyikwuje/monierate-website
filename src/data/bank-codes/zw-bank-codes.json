@@ -1,83 +1,92 @@
 {
-    "cbz": {
-      "swift": ["CBZBZWHA"],
-      "ussd": {
-        "start": "*266#",
-        "balance": "*266*1#",
-        "transfer_to_same_bank": "*266*2*amount*account_number#"
-      }
-    },
-    "stanbic": {
-      "swift": ["SBZBZWH"],
-      "ussd": {
-        "start": "*263#",
-        "balance": "*263*1#",
-        "transfer_to_same_bank": "*263*2*amount*account_number#"
-      }
-    },
-    "fbc": {
-      "swift": ["FBZBZWH"],
-      "ussd": {
-        "start": "*180#",
-        "balance": "*180*1#",
-        "transfer_to_same_bank": "*180*2*amount*account_number#"
-      }
-    },
-    "ecobank": {
-      "swift": ["ECOCZWHA"],
-      "ussd": {
-        "start": "*111#",
-        "balance": "*111*1#",
-        "transfer_to_same_bank": "*111*2*amount*account_number#"
-      }
-    },
-    "mbc": {
-      "swift": ["MBCZWH"],
-      "ussd": {
-        "start": "*212#",
-        "balance": "*212*1#",
-        "transfer_to_same_bank": "*212*2*amount*account_number#"
-      }
-    },
-    "zimbank": {
-      "swift": ["ZBBZWH"],
-      "ussd": {
-        "start": "*155#",
-        "balance": "*155*1#",
-        "transfer_to_same_bank": "*155*2*amount*account_number#"
-      }
-    },
-    "firstcapital": {
-      "swift": ["FCBZWHA"],
-      "ussd": {
-        "start": "*165#",
-        "balance": "*165*1#",
-        "transfer_to_same_bank": "*165*2*amount*account_number#"
-      }
-    },
-    "cabs": {
-      "swift": ["CABZWH"],
-      "ussd": {
-        "start": "*123#",
-        "balance": "*123*1#",
-        "transfer_to_same_bank": "*123*2*amount*account_number#"
-      }
-    },
-    "nmb": {
-      "swift": ["NMBZWH"],
-      "ussd": {
-        "start": "*222#",
-        "balance": "*222*1#",
-        "transfer_to_same_bank": "*222*2*amount*account_number#"
-      }
-    },
-    "zimbabwe": {
-      "swift": ["ZIBZWH"],
-      "ussd": {
-        "start": "*311#",
-        "balance": "*311*1#",
-        "transfer_to_same_bank": "*311*2*amount*account_number#"
-      }
+  "cbz": {
+    "swift": ["CBZWZWHA"],
+    "ussd": {
+      "start": "*230#",
+      "balance": "*230*1#",
+      "transfer_to_same_bank": "*230*2*recipient*amount#",
+      "airtime": "*230*3*number*amount#"
+    }
+  },
+  "stanbic": {
+    "swift": ["SBICZWHA"],
+    "ussd": {
+      "start": "*247#",
+      "balance": "*247*1#",
+      "transfer_to_same_bank": "*247*2*recipient*amount#",
+      "airtime": "*247*3*number*amount#"
+    }
+  },
+  "fbc": {
+    "swift": ["FBCPZWHA"],
+    "ussd": {
+      "start": "*220#",
+      "balance": "*220*1#",
+      "transfer_to_same_bank": "*220*2*recipient*amount#",
+      "airtime": "*220*3*number*amount#"
+    }
+  },
+  "ecobank": {
+    "swift": ["ECOCZWHA"],
+    "ussd": {
+      "start": "*245#",
+      "balance": "*245*1#",
+      "transfer_to_same_bank": "*245*2*recipient*amount#",
+      "airtime": "*245*3*number*amount#"
+    }
+  },
+  "metbank": {
+    "swift": ["MBCAZWHA"],
+    "ussd": {
+      "start": "*242#",
+      "balance": "*242*1#",
+      "transfer_to_same_bank": "*242*2*recipient*amount#",
+      "airtime": "*242*3*number*amount#"
+    }
+  },
+  "zbbank": {
+    "swift": ["ZBCOZWHA"],
+    "ussd": {
+      "start": "*225#",
+      "balance": "*225*1#",
+      "transfer_to_same_bank": "*225*2*recipient*amount#",
+      "airtime": "*225*3*number*amount#"
+    }
+  },
+  "firstcapital": {
+    "swift": ["BARCZWHA"],
+    "ussd": {
+      "start": "*229#",
+      "balance": "*229*1#",
+      "transfer_to_same_bank": "*229*2*recipient*amount#",
+      "airtime": "*229*3*number*amount#"
+    }
+  },
+  "cabs": {
+    "swift": ["CABSZWHA"],
+    "ussd": {
+      "start": "*227#",
+      "balance": "*227*1#",
+      "transfer_to_same_bank": "*227*2*recipient*amount#",
+      "airtime": "*227*3*number*amount#"
+    }
+  },
+  "nmb": {
+    "swift": ["NMBLZWHA"],
+    "ussd": {
+      "start": "*241#",
+      "balance": "*241*1#",
+      "transfer_to_same_bank": "*241*2*recipient*amount#",
+      "airtime": "*241*3*number*amount#"
+    }
+  },
+  "nedbank": {
+    "swift": ["NBZWZWHA"],
+    "ussd": {
+      "start": "*244#",
+      "balance": "*244*1#",
+      "transfer_to_same_bank": "*244*2*recipient*amount#",
+      "airtime": "*244*3*number*amount#"
     }
   }
-  
+}

@@ -1,83 +1,58 @@
 {
-    "ecobankgb": {
+  "ecobankgb": {
       "name": "Ecobank Guinea-Bissau",
-      "link": "http://www.ecobank.com/guinea-bissau",
+      "link": "https://www.ecobank.com/gw/personal-banking/countries",
       "icon": "ecobank.svg",
-      "address": "Avenida Amilcar Cabral, Bissau",
+      "address": "Avenida Amílcar Cabral, Bissau",
       "city": "Bissau",
       "branch": "Main Branch"
-    },
-    "orabankgb": {
+  },
+  "orabankgb": {
       "name": "Orabank Guinea-Bissau",
-      "link": "http://www.orabank.net",
+      "link": "https://www.orabank.net/en/filiale/guinea-bissau",
       "icon": "orabank.svg",
       "address": "Avenida Domingos Ramos, Bissau",
       "city": "Bissau",
       "branch": "Main Branch"
-    },
-    "bdugb": {
-      "name": "Banco da União",
-      "link": "http://www.bduguinebissau.com",
-      "icon": "bdu.svg",
-      "address": "Avenida Amilcar Cabral, Bissau",
-      "city": "Bissau",
-      "branch": "Main Branch"
-    },
-    "bicigb": {
-      "name": "Banco Internacional de Comércio",
-      "link": "http://www.bici.com.gw",
-      "icon": "bici.svg",
-      "address": "Praça dos Heróis Nacionais, Bissau",
-      "city": "Bissau",
-      "branch": "Main Branch"
-    },
-    "baogb": {
+  },
+  "baogb": {
       "name": "Banco da África Ocidental",
-      "link": "http://www.bao.com",
+      "link": "https://www.bao.gw",
       "icon": "bao.svg",
-      "address": "Avenida Amilcar Cabral, Bissau",
+      "address": "Avenida Amílcar Cabral, Bissau",
       "city": "Bissau",
       "branch": "Main Branch"
-    },
-    "bcdgb": {
-      "name": "Banco de Crédito da Guiné-Bissau",
-      "link": "http://www.bcd.com.gw",
-      "icon": "bcd.svg",
-      "address": "Avenida Domingos Ramos, Bissau",
-      "city": "Bissau",
-      "branch": "Main Branch"
-    },
-    "atlantiquebankgb": {
+  },
+  "atlantiquebankgb": {
       "name": "Banque Atlantique Guinée-Bissau",
-      "link": "http://www.banqueatlantique.com",
+      "link": "https://www.atlantique.net/gb",
       "icon": "banque_atlantique.svg",
-      "address": "Avenida Amilcar Cabral, Bissau",
+      "address": "Avenida Amílcar Cabral, Bissau",
       "city": "Bissau",
       "branch": "Main Branch"
-    },
-    "bankofafricagb": {
+  },
+  "bankofafricagb": {
       "name": "Bank of Africa Guinea-Bissau",
-      "link": "http://www.bank-of-africa.net",
+      "link": "https://www.boaguinebissau.com",
       "icon": "boa.svg",
       "address": "Avenida Domingos Ramos, Bissau",
       "city": "Bissau",
       "branch": "Main Branch"
-    },
-    "bgfigb": {
-      "name": "Banque Gabonaise et Française Internationale",
-      "link": "http://www.bgfi.com.gw",
+  },
+  "bgfigb": {
+      "name": "BGFIBank Guinea-Bissau",
+      "link": "https://guinebissau.groupebgfibank.com",
       "icon": "bgfi.svg",
-      "address": "Avenida Amilcar Cabral, Bissau",
+      "address": "Avenida Amílcar Cabral, Bissau",
       "city": "Bissau",
       "branch": "Main Branch"
-    },
-    "uba_gb": {
+  },
+  "uba_gb": {
       "name": "United Bank for Africa Guinea-Bissau",
-      "link": "http://www.ubagroup.com/guinea-bissau",
+      "link": "https://www.ubagroup.com/gw-en/",
       "icon": "uba.svg",
       "address": "Praça dos Heróis Nacionais, Bissau",
       "city": "Bissau",
       "branch": "Main Branch"
-    }
   }
-  
+}

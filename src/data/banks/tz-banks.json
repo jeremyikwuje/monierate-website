@@ -1,83 +1,82 @@
 {
-    "nmb": {
-      "name": "NMB Bank",
-      "link": "https://www.nmbbank.co.tz",
-      "icon": "nmb.png",
-      "address": "NMB House, Ohio Street, Dar es Salaam",
-      "city": "Dar es Salaam",
-      "branch": "Main Branch"
-    },
-    "crdb": {
-      "name": "CRDB Bank",
-      "link": "https://www.crdbbank.co.tz",
-      "icon": "crdb.png",
-      "address": "CRDB House, Ohio Street, Dar es Salaam",
-      "city": "Dar es Salaam",
-      "branch": "Main Branch"
-    },
-    "stanbic": {
-      "name": "Stanbic Bank",
-      "link": "https://www.stanbicbank.co.tz",
-      "icon": "stanbic.png",
-      "address": "Stanbic House, Kijitonyama, Dar es Salaam",
-      "city": "Dar es Salaam",
-      "branch": "Main Branch"
-    },
-    "mbinga": {
-      "name": "Mbinga Community Bank",
-      "link": "https://www.mbinga.co.tz",
-      "icon": "mbinga.png",
-      "address": "Mbinga, Ruvuma Region",
-      "city": "Mbinga",
-      "branch": "Main Branch"
-    },
-    "bankofafrica": {
-      "name": "Bank of Africa Tanzania",
-      "link": "https://www.boatanzania.com",
-      "icon": "bankofafrica.png",
-      "address": "Bank of Africa House, Ali Hassan Mwinyi Road, Dar es Salaam",
-      "city": "Dar es Salaam",
-      "branch": "Main Branch"
-    },
-    "ttb": {
-      "name": "Tanzania Investment Bank (TIB)",
-      "link": "https://www.tib.co.tz",
-      "icon": "ttb.png",
-      "address": "TIB House, Samora Avenue, Dar es Salaam",
-      "city": "Dar es Salaam",
-      "branch": "Head Office"
-    },
-    "yetu": {
-      "name": "Yetu Microfinance Bank",
-      "link": "https://www.yetubank.co.tz",
-      "icon": "yetu.png",
-      "address": "Yetu House, Dar es Salaam",
-      "city": "Dar es Salaam",
-      "branch": "Main Branch"
-    },
-    "exim": {
-      "name": "Exim Bank",
-      "link": "https://www.eximbank.co.tz",
-      "icon": "exim.png",
-      "address": "Exim House, Samora Avenue, Dar es Salaam",
-      "city": "Dar es Salaam",
-      "branch": "Main Branch"
-    },
-    "tanzania": {
-      "name": "Tanzania Commercial Bank (TCB)",
-      "link": "https://www.tcb.co.tz",
-      "icon": "tanzania.png",
-      "address": "TCB House, Dar es Salaam",
-      "city": "Dar es Salaam",
-      "branch": "Main Branch"
-    },
-    "rural": {
-      "name": "Rural and Urban Development Bank",
-      "link": "https://www.rudb.co.tz",
-      "icon": "rural.png",
-      "address": "Rudb House, Dar es Salaam",
-      "city": "Dar es Salaam",
-      "branch": "Main Branch"
-    }
+  "nmb": {
+    "name": "NMB Bank Plc",
+    "link": "https://www.nmbbank.co.tz",
+    "icon": "nmb.jpg",
+    "address": "NMB House, Corner of Ali Hassan Mwinyi/Azikiwe Road, Dar es Salaam",
+    "city": "Dar es Salaam",
+    "branch": "Main Branch"
+  },
+  "crdb": {
+    "name": "CRDB Bank Plc",
+    "link": "https://www.crdb.co.tz",
+    "icon": "crdb.png",
+    "address": "CRDB Centre, Kinondoni Road, Dar es Salaam",
+    "city": "Dar es Salaam",
+    "branch": "Main Branch"
+  },
+  "stanbic": {
+    "name": "Stanbic Bank Tanzania Limited",
+    "link": "https://www.stanbicbank.co.tz",
+    "icon": "stanbic.jpeg",
+    "address": "Stanbic Centre, Corner of Ali Hassan Mwinyi/Garden Road, Dar es Salaam",
+    "city": "Dar es Salaam",
+    "branch": "Main Branch"
+  },
+  "mbinga": {
+    "name": "Mbinga Community Bank Limited",
+    "link": "https://www.mbingabank.co.tz",
+    "icon": "mbinga.png",
+    "address": "Sokoine Road, Plot No. 6 Block A, Mbinga",
+    "city": "Mbinga",
+    "branch": "Main Branch"
+  },
+  "bankofafrica": {
+    "name": "Bank of Africa Tanzania Limited",
+    "link": "https://boatanzania.co.tz",
+    "icon": "bankofafrica.png",
+    "address": "NDC Development House, Ohio Street/Garden Avenue, Dar es Salaam",
+    "city": "Dar es Salaam",
+    "branch": "Main Branch"
+  },
+  "ttb": {
+    "name": "Tanzania Commercial Bank (formerly TPB & TIB)",
+    "link": "https://www.tcb.co.tz",
+    "icon": "tanzania.jpeg",
+    "address": "TCB Tower, Samora Avenue/Bridge Street, Dar es Salaam",
+    "city": "Dar es Salaam",
+    "branch": "Main Branch"
+  },
+  "yetu": {
+    "name": "Yetu Microfinance Bank Plc",
+    "link": "https://www.yetumfbank.co.tz",
+    "icon": "yetu.jpeg",
+    "address": "Plot No. 3/4 Block D, Majengo Area, Dodoma Road, Iringa",
+    "city": "Iringa",
+    "branch": "Main Branch"
+  },
+  "exim": {
+    "name": "Exim Bank (Tanzania) Limited",
+    "link": "https://www.eximbank.co.tz",
+    "icon": "exim.jpg",
+    "address": "Exim Tower, 1404/45 Ghana Avenue, Dar es Salaam",
+    "city": "Dar es Salaam",
+    "branch": "Main Branch"
+  },
+  "tanzania": {
+    "name": "Tanzania Commercial Bank Limited",
+    "link": "https://www.tcb.co.tz",
+    "icon": "tanzania.jpeg",
+    "address": "TCB Tower, Samora Avenue/Bridge Street, Dar es Salaam",
+    "city": "Dar es Salaam",
+    "branch": "Main Branch"
+  },
+  "rural": {
+    "name": "Tanzania Agricultural Development Bank (TADB)",
+    "link": "https://www.tadb.co.tz",
+    "icon": "rural.png",
+    "address": "TADB House, Plot 936, Mtendeni Street, Dar es Salaam",
+    "city": "Dar es Salaam",
+    "branch": "Main Branch"
   }
-  
+}

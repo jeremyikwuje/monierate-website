@@ -10,6 +10,13 @@
 	export let data: PageData;
 
 	let { countryName, countryCode, banksData } = data;
+
+	function handleImageError(event: Event) {
+		const img = event.currentTarget as HTMLImageElement;
+		if (img.src !== '/icons/default.png') {
+			img.src = '/icons/default.png'; // Apply fallback only if it's not already set
+		}
+	}
 </script>
 
 <svelte:head>
@@ -76,6 +83,7 @@
 												src="/icons/{data.icon}"
 												class="rounded-full"
 												alt="{data.name} icon"
+												on:error={handleImageError}
 											/>
 										</span>
 										<span class="bank-title ml-2">{data.name}</span>
@@ -87,7 +95,11 @@
 										class="text-decoration underline bank-code"
 										title=""
 									>
-										{data.swift.codes ? data.swift.codes.join(', ') : ''}
+									    {#if Array.isArray(data.swift.codes)}
+										    {data.swift.codes ? data.swift.codes.join(', ') : ''}
+										{:else}
+										    {data.swift.codes ? data.swift.codes : ''}
+										{/if}
 									</a>
 								</td>
 								<td class="text-right w-[20%] break-words py-3 pr-8">

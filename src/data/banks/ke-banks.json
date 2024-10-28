@@ -1,83 +1,82 @@
 {
-    "kcb": {
-      "name": "Kenya Commercial Bank (KCB)",
+  "kcb": {
+      "name": "KCB Bank Kenya Limited",
       "link": "https://ke.kcbgroup.com",
       "icon": "kcb.png",
       "address": "Kencom House, Moi Avenue",
       "city": "Nairobi",
-      "branch": "Kencom Branch"
-    },
-    "equity": {
-      "name": "Equity Bank Kenya",
+      "branch": "Kencom House Branch"
+  },
+  "equity": {
+      "name": "Equity Bank Kenya Limited",
       "link": "https://equitygroupholdings.com/ke",
       "icon": "equity.png",
-      "address": "Equity Centre, Upper Hill",
+      "address": "Equity Centre, Hospital Road, Upper Hill",
       "city": "Nairobi",
-      "branch": "Upper Hill Branch"
-    },
-    "absa": {
-      "name": "Absa Bank Kenya",
+      "branch": "Head Office"
+  },
+  "absa": {
+      "name": "Absa Bank Kenya PLC",
       "link": "https://www.absabank.co.ke",
       "icon": "absa.png",
-      "address": "Waiyaki Way, Westlands",
+      "address": "Absa Towers, Loita Street",
       "city": "Nairobi",
-      "branch": "Westlands Branch"
-    },
-    "coop": {
-      "name": "Co-operative Bank of Kenya",
+      "branch": "Head Office"
+  },
+  "coop": {
+      "name": "Co-operative Bank of Kenya Limited",
       "link": "https://www.co-opbank.co.ke",
       "icon": "coop.png",
-      "address": "Haile Selassie Avenue",
+      "address": "Co-operative Bank House, Haile Selassie Avenue",
       "city": "Nairobi",
-      "branch": "Main Branch"
-    },
-    "stanbic": {
-      "name": "Stanbic Bank Kenya",
+      "branch": "Head Office"
+  },
+  "stanbic": {
+      "name": "Stanbic Bank Kenya Limited",
       "link": "https://www.stanbicbank.co.ke",
       "icon": "stanbic.png",
-      "address": "Stanbic Centre, Chiromo Road",
+      "address": "Stanbic Centre, Westlands Road",
       "city": "Nairobi",
-      "branch": "Chiromo Branch"
-    },
-    "dtb": {
-      "name": "Diamond Trust Bank (DTB)",
-      "link": "https://www.dtbafrica.com",
+      "branch": "Head Office"
+  },
+  "dtb": {
+      "name": "Diamond Trust Bank Kenya Limited",
+      "link": "https://www.dtbk.dtbafrica.com",
       "icon": "dtb.png",
       "address": "DTB Centre, Mombasa Road",
       "city": "Nairobi",
-      "branch": "Mombasa Road Branch"
-    },
-    "nbk": {
-      "name": "National Bank of Kenya",
-      "link": "https://www.nationalbank.co.ke",
-      "icon": "nbk.png",
-      "address": "Harambee Avenue",
+      "branch": "Head Office"
+  },
+  "standard_chartered": {
+      "name": "Standard Chartered Bank Kenya Limited",
+      "link": "https://www.sc.com/ke",
+      "icon": "scb.png",
+      "address": "Standard Chartered Bank House, Westlands",
       "city": "Nairobi",
       "branch": "Head Office"
-    },
-    "sbm": {
-      "name": "SBM Bank Kenya",
-      "link": "https://www.sbmbank.co.ke",
-      "icon": "sbm.png",
-      "address": "IPS Building, Kimathi Street",
+  },
+  "i_and_m": {
+      "name": "I&M Bank Limited",
+      "link": "https://www.imbank.com",
+      "icon": "imbank.png",
+      "address": "I&M Bank Tower, Kenyatta Avenue",
       "city": "Nairobi",
-      "branch": "IPS Branch"
-    },
-    "familybank": {
-      "name": "Family Bank",
-      "link": "https://www.familybank.co.ke",
-      "icon": "familybank.png",
+      "branch": "Head Office"
+  },
+  "ncba": {
+      "name": "NCBA Bank Kenya PLC",
+      "link": "https://www.ncbagroup.com",
+      "icon": "ncba.png",
+      "address": "NCBA Centre, Mara Road, Upper Hill",
+      "city": "Nairobi",
+      "branch": "Head Office"
+  },
+  "family": {
+      "name": "Family Bank Limited",
+      "link": "https://familybank.co.ke",
+      "icon": "family.png",
       "address": "Family Bank Towers, Muindi Mbingu Street",
       "city": "Nairobi",
       "branch": "Head Office"
-    },
-    "guarantytrust": {
-      "name": "Guaranty Trust Bank Kenya",
-      "link": "https://www.gtbank.co.ke",
-      "icon": "gtbank.png",
-      "address": "GTBank House, Kenyatta Avenue",
-      "city": "Nairobi",
-      "branch": "Nairobi Branch"
-    }
   }
-  
+}

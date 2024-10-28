@@ -1,75 +1,74 @@
 {
-    "banque_nationale_du_burundi": {
-      "name": "Banque Nationale du Burundi",
-      "link": "https://www.bnb.bi",
-      "icon": "banque_nationale_du_burundi.svg",
-      "address": "Avenue du Large",
-      "city": "Bujumbura",
-      "branch": "Bujumbura Branch"
-    },
-    "eco_bank": {
-      "name": "Eco Bank Burundi",
-      "link": "https://www.ecobank.com",
-      "icon": "eco_bank.svg",
-      "address": "Avenue du Commerce",
-      "city": "Bujumbura",
-      "branch": "Bujumbura Branch"
-    },
-    "banque_de_l_union": {
-      "name": "Banque de l'Union",
-      "link": "https://www.banqueunion.bi",
-      "icon": "banque_de_l_union.svg",
-      "address": "Avenue des États-Unis",
-      "city": "Bujumbura",
-      "branch": "Bujumbura Branch"
-    },
-    "bancobu": {
-      "name": "Bancobu",
-      "link": "https://www.bancobu.bi",
-      "icon": "bancobu.svg",
-      "address": "Avenue de la République",
-      "city": "Bujumbura",
-      "branch": "Bujumbura Branch"
-    },
-    "banque_bujumbura": {
-      "name": "Banque Bujumbura",
-      "link": "https://www.banque-bujumbura.bi",
-      "icon": "banque_bujumbura.svg",
-      "address": "Rue des Moulins",
-      "city": "Bujumbura",
-      "branch": "Bujumbura Branch"
-    },
-    "banque_de_credit": {
-      "name": "Banque de Crédit",
-      "link": "https://www.banque-credit.bi",
-      "icon": "banque_de_credit.svg",
-      "address": "Avenue de la République",
-      "city": "Bujumbura",
-      "branch": "Bujumbura Branch"
-    },
-    "banque_populaire_du_burundi": {
-      "name": "Banque Populaire du Burundi",
-      "link": "https://www.bpb.bi",
-      "icon": "banque_populaire_du_burundi.svg",
-      "address": "Avenue des Cocotiers",
-      "city": "Bujumbura",
-      "branch": "Bujumbura Branch"
-    },
-    "financiere_du_burundi": {
-      "name": "Financière du Burundi",
-      "link": "https://www.financiere.bi",
-      "icon": "financiere_du_burundi.svg",
-      "address": "Avenue du Commerce",
-      "city": "Bujumbura",
-      "branch": "Bujumbura Branch"
-    },
-    "banque_zenith": {
-      "name": "Banque Zenith",
-      "link": "https://www.banquezenith.bi",
-      "icon": "banque_zenith.svg",
-      "address": "Avenue des Nation Unies",
-      "city": "Bujumbura",
-      "branch": "Bujumbura Branch"
-    }
+  "banque_de_la_republique_du_burundi": {
+    "name": "Banque de la République du Burundi (BRB)",
+    "link": "https://www.brb.bi",
+    "icon": "banque_de_la_republique_du_burundi.png",
+    "address": "Avenue du 28 Novembre, BP 705",
+    "city": "Bujumbura",
+    "branch": "Siège"
+  },
+  "bgf": {
+    "name": "Banque de Gestion et de Financement (BGF)",
+    "link": "https://www.bgf.bi",
+    "icon": "bgf.png",
+    "address": "Boulevard de la Liberté 13",
+    "city": "Bujumbura",
+    "branch": "Siège"
+  },
+  "bancobu": {
+    "name": "Banque Commerciale du Burundi (BANCOBU)",
+    "link": "https://www.bancobu.com",
+    "icon": "bancobu.jpg",
+    "address": "Avenue de l'Industrie, BP 990",
+    "city": "Bujumbura",
+    "branch": "Siège"
+  },
+  "ecobank_burundi": {
+    "name": "Ecobank Burundi",
+    "link": "https://www.ecobank.com/bi",
+    "icon": "ecobank.png",
+    "address": "Avenue de la JRR, BP 270",
+    "city": "Bujumbura",
+    "branch": "Siège"
+  },
+  "finbank": {
+    "name": "FINBANK Burundi",
+    "link": "https://www.finbank.bi",
+    "icon": "finbank.jpg",
+    "address": "Boulevard Patrice Lumumba",
+    "city": "Bujumbura",
+    "branch": "Siège"
+  },
+  "interbank_burundi": {
+    "name": "Interbank Burundi (IBB)",
+    "link": "https://www.interbankbdi.com",
+    "icon": "interbank_burundi.png",
+    "address": "Boulevard de l'Indépendance",
+    "city": "Bujumbura",
+    "branch": "Siège"
+  },
+  "kcb_bank": {
+    "name": "KCB Bank Burundi",
+    "link": "https://bi.kcbgroup.com",
+    "icon": "kcb_bank.png",
+    "address": "Avenue du Peuple Murundi",
+    "city": "Bujumbura",
+    "branch": "Siège"
+  },
+  "crdb_bank": {
+    "name": "CRDB Bank Burundi",
+    "link": "https://www.crdbbank.co.bi",
+    "icon": "crdb.png",
+    "address": "Boulevard du 28 Novembre",
+    "city": "Bujumbura",
+    "branch": "Siège"
+  },
+  "dtb_burundi": {
+    "name": "Diamond Trust Bank Burundi (DTB)",
+    "link": "https://www.dtbafrica.com/bi",
+    "icon": "dtb.png",
+    "address": "Avenue de l'Uprona",
+    "city": "Bujumbura",
+    "branch": "Siège"
   }
-  
+}

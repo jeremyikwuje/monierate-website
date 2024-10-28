@@ -1,83 +1,82 @@
 {
-    "nmb": {
-      "swift": ["NMBTZTZ"],
-      "ussd": {
-        "start": "*150*00#",
-        "balance": "*150*01#",
-        "transfer_to_same_bank": "*150*02#"
-      }
-    },
-    "crdb": {
-      "swift": ["CRDBTZTZ"],
-      "ussd": {
-        "start": "*150*01#",
-        "balance": "*150*02#",
-        "transfer_to_same_bank": "*150*03#"
-      }
-    },
-    "stanbic": {
-      "swift": ["SBICZTZ"],
-      "ussd": {
-        "start": "*150*02#",
-        "balance": "*150*03#",
-        "transfer_to_same_bank": "*150*04#"
-      }
-    },
-    "mbinga": {
-      "swift": ["MBIGTZTZ"],
-      "ussd": {
-        "start": "*150*03#",
-        "balance": "*150*04#",
-        "transfer_to_same_bank": "*150*05#"
-      }
-    },
-    "bankofafrica": {
-      "swift": ["BOATZTZ"],
-      "ussd": {
-        "start": "*150*04#",
-        "balance": "*150*05#",
-        "transfer_to_same_bank": "*150*06#"
-      }
-    },
-    "ttb": {
-      "swift": ["TIBTZTZ"],
-      "ussd": {
-        "start": "*150*05#",
-        "balance": "*150*06#",
-        "transfer_to_same_bank": "*150*07#"
-      }
-    },
-    "yetu": {
-      "swift": ["YETUTZTZ"],
-      "ussd": {
-        "start": "*150*06#",
-        "balance": "*150*07#",
-        "transfer_to_same_bank": "*150*08#"
-      }
-    },
-    "exim": {
-      "swift": ["EXIMTZTZ"],
-      "ussd": {
-        "start": "*150*07#",
-        "balance": "*150*08#",
-        "transfer_to_same_bank": "*150*09#"
-      }
-    },
-    "tanzania": {
-      "swift": ["TCBTZTZ"],
-      "ussd": {
-        "start": "*150*08#",
-        "balance": "*150*09#",
-        "transfer_to_same_bank": "*150*10#"
-      }
-    },
-    "rural": {
-      "swift": ["RUDTZTZ"],
-      "ussd": {
-        "start": "*150*09#",
-        "balance": "*150*10#",
-        "transfer_to_same_bank": "*150*11#"
-      }
+  "nmb": {
+    "swift": ["NMBATZTX"],
+    "ussd": {
+      "start": "*154#",
+      "balance": "*154*00#",
+      "transfer_to_same_bank": "*154*02#"
+    }
+  },
+  "crdb": {
+    "swift": ["CORUTZTZ"],
+    "ussd": {
+      "start": "*150*03#",
+      "balance": "*150*03*1#",
+      "transfer_to_same_bank": "*150*03*2#"
+    }
+  },
+  "stanbic": {
+    "swift": ["SBICTZTX"],
+    "ussd": {
+      "start": "*165#",
+      "balance": "*165*1#",
+      "transfer_to_same_bank": "*165*2#"
+    }
+  },
+  "mbinga": {
+    "swift": ["MBIGTZTZ"],
+    "ussd": {
+      "start": "*150*27#",
+      "balance": "*150*27*1#",
+      "transfer_to_same_bank": "*150*27*2#"
+    }
+  },
+  "bankofafrica": {
+    "swift": ["EUAFTZTZ"],
+    "ussd": {
+      "start": "*150*32#",
+      "balance": "*150*32*1#",
+      "transfer_to_same_bank": "*150*32*2#"
+    }
+  },
+  "ttb": {
+    "swift": ["TANZTZTX"],
+    "ussd": {
+      "start": "*150*71#",
+      "balance": "*150*71*1#",
+      "transfer_to_same_bank": "*150*71*2#"
+    }
+  },
+  "yetu": {
+    "swift": ["YETUTZTZ"],
+    "ussd": {
+      "start": "*150*95#",
+      "balance": "*150*95*1#",
+      "transfer_to_same_bank": "*150*95*2#"
+    }
+  },
+  "exim": {
+    "swift": ["EXTNTZTZ"],
+    "ussd": {
+      "start": "*150*73#",
+      "balance": "*150*73*1#",
+      "transfer_to_same_bank": "*150*73*2#"
+    }
+  },
+  "tanzania": {
+    "swift": ["TCBLTZTZ"],
+    "ussd": {
+      "start": "*150*71#",
+      "balance": "*150*71*1#",
+      "transfer_to_same_bank": "*150*71*2#"
+    }
+  },
+  "rural": {
+    "swift": ["TARDTZTZ"],
+    "ussd": {
+      "start": "*150*27#",
+      "balance": "*150*27*1#",
+      "transfer_to_same_bank": "*150*27*2#"
     }
   }
-  
+}

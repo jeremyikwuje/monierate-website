@@ -1,83 +1,82 @@
 {
-    "dahabshiil": {
-      "swift": ["DHSCSOM"],
-      "ussd": {
-        "start": "*123#",
-        "balance": "*123*1#",
-        "transfer_to_same_bank": "*123*amount*account_number#"
-      }
-    },
-    "amal": {
-      "swift": ["AMALSO"],
-      "ussd": {
-        "start": "*234#",
-        "balance": "*234*1#",
-        "transfer_to_same_bank": "*234*amount*account_number#"
-      }
-    },
-    "sahal": {
-      "swift": ["SAHALSO"],
-      "ussd": {
-        "start": "*345#",
-        "balance": "*345*1#",
-        "transfer_to_same_bank": "*345*amount*account_number#"
-      }
-    },
-    "ubbank": {
-      "swift": ["UBBANKSO"],
-      "ussd": {
-        "start": "*456#",
-        "balance": "*456*1#",
-        "transfer_to_same_bank": "*456*amount*account_number#"
-      }
-    },
-    "harar": {
-      "swift": ["HARARSO"],
-      "ussd": {
-        "start": "*567#",
-        "balance": "*567*1#",
-        "transfer_to_same_bank": "*567*amount*account_number#"
-      }
-    },
-    "waaxid": {
-      "swift": ["WAAXIDSO"],
-      "ussd": {
-        "start": "*678#",
-        "balance": "*678*1#",
-        "transfer_to_same_bank": "*678*amount*account_number#"
-      }
-    },
-    "ocean": {
-      "swift": ["OCEANSO"],
-      "ussd": {
-        "start": "*789#",
-        "balance": "*789*1#",
-        "transfer_to_same_bank": "*789*amount*account_number#"
-      }
-    },
-    "somali": {
-      "swift": ["SOMALISO"],
-      "ussd": {
-        "start": "*890#",
-        "balance": "*890*1#",
-        "transfer_to_same_bank": "*890*amount*account_number#"
-      }
-    },
-    "eastafrican": {
-      "swift": ["EASTAFS"],
-      "ussd": {
-        "start": "*901#",
-        "balance": "*901*1#",
-        "transfer_to_same_bank": "*901*amount*account_number#"
-      }
-    },
-    "hormuud": {
-      "swift": ["HORMUUDSO"],
-      "ussd": {
-        "start": "*012#",
-        "balance": "*012*1#",
-        "transfer_to_same_bank": "*012*amount*account_number#"
-      }
+  "dahabshiil": {
+    "swift": ["DHABSOM1"],
+    "ussd": {
+      "start": "*770#",
+      "balance": "*770*1#",
+      "transfer_to_same_bank": "*770*2*amount*account_number#"
+    }
+  },
+  "amal": {
+    "swift": ["AMLSOM21"], 
+    "ussd": {
+      "start": "*200#", 
+      "balance": "*200*1#",
+      "transfer_to_same_bank": "*200*2*amount*account_number#"
+    }
+  },
+  "premier": {  
+    "swift": ["PRMRSOM1"], 
+    "ussd": {
+      "start": "*222#",
+      "balance": "*222*1#",
+      "transfer_to_same_bank": "*222*2*amount*account_number#"
+    }
+  },
+  "ifb": {  
+    "swift": ["IFBKSOM1"],
+    "ussd": {
+      "start": "*555#",
+      "balance": "*555*1#",
+      "transfer_to_same_bank": "*555*2*amount*account_number#"
+    }
+  },
+  "salaam": {  
+    "swift": ["SLBKSOM1"],
+    "ussd": {
+      "start": "*777#",
+      "balance": "*777*1#",
+      "transfer_to_same_bank": "*777*2*amount*account_number#"
+    }
+  },
+  "amana": { 
+    "swift": ["AMNBSOM1"],
+    "ussd": {
+      "start": "*444#",
+      "balance": "*444*1#",
+      "transfer_to_same_bank": "*444*2*amount*account_number#"
+    }
+  },
+  "mybank": {
+    "swift": ["MYBKSOM1"],
+    "ussd": {
+      "start": "*202#",
+      "balance": "*202*1#",
+      "transfer_to_same_bank": "*202*2*amount*account_number#"
+    }
+  },
+  "cbs": {    
+    "swift": ["CBSOSOM1"],
+    "ussd": {
+      "start": "*111#",
+      "balance": "*111*1#",
+      "transfer_to_same_bank": "*111*2*amount*account_number#"
+    }
+  },
+  "idb": {      
+    "swift": ["IDBKSOM1"],
+    "ussd": {
+      "start": "*333#",
+      "balance": "*333*1#",
+      "transfer_to_same_bank": "*333*2*amount*account_number#"
+    }
+  },
+  "hormuud": {
+    "swift": ["HRMTSOM1"],
+    "ussd": {
+      "start": "*220#", 
+      "balance": "*220*1#",
+      "transfer_to_same_bank": "*220*2*amount*account_number#"
     }
   }
-  
+}

@@ -1,173 +1,111 @@
 {
-    "dashenbank": {
-      "swift": [
-        "DBEHEEAA"
-      ],
-      "ussd": {
-        "start": "*890#",
-        "transfer_to_same_bank": "*890*amount*account_number#",
-        "transfer_other_banks": "*890*amount*account_number*bank_code#",
-        "airtime_self": "*890*amount#",
-        "airtime_others": "*890*amount*phone_number#",
-        "balance": "*890*00#",
-        "bvn": "*890*BVN#",
-        "update_bvn_details": "*890*BVN*details#",
-        "stop_debit_transactions": "*890*911#",
-        "activate_code": "*890*activate#"
-      }
-    },
-    "wegagenbank": {
-      "swift": [
-        "WGBKEEAA"
-      ],
-      "ussd": {
-        "start": "*888#",
-        "transfer_to_same_bank": "*888*amount*account_number#",
-        "transfer_other_banks": "*888*amount*account_number*bank_code#",
-        "airtime_self": "*888*amount#",
-        "airtime_others": "*888*amount*phone_number#",
-        "balance": "*888*00#",
-        "bvn": "*888*BVN#",
-        "update_bvn_details": "*888*BVN*details#",
-        "stop_debit_transactions": "*888*911#",
-        "activate_code": "*888*activate#"
-      }
-    },
-    "bunnaintbank": {
-      "swift": [
-        "BUNNEEAA"
-      ],
-      "ussd": {
-        "start": "*825#",
-        "transfer_to_same_bank": "*825*amount*account_number#",
-        "transfer_other_banks": "*825*amount*account_number*bank_code#",
-        "airtime_self": "*825*amount#",
-        "airtime_others": "*825*amount*phone_number#",
-        "balance": "*825*00#",
-        "bvn": "*825*BVN#",
-        "update_bvn_details": "*825*BVN*details#",
-        "stop_debit_transactions": "*825*911#",
-        "activate_code": "*825*activate#"
-      }
-    },
-    "commercialbank": {
-      "swift": [
-        "CBEHEEAA"
-      ],
-      "ussd": {
-        "start": "*200#",
-        "transfer_to_same_bank": "*200*amount*account_number#",
-        "transfer_other_banks": "*200*amount*account_number*bank_code#",
-        "airtime_self": "*200*amount#",
-        "airtime_others": "*200*amount*phone_number#",
-        "balance": "*200*00#",
-        "bvn": "*200*BVN#",
-        "update_bvn_details": "*200*BVN*details#",
-        "stop_debit_transactions": "*200*911#",
-        "activate_code": "*200*activate#"
-      }
-    },
-    "hibretbank": {
-      "swift": [
-        "HIBREHAA"
-      ],
-      "ussd": {
-        "start": "*999#",
-        "transfer_to_same_bank": "*999*amount*account_number#",
-        "transfer_other_banks": "*999*amount*account_number*bank_code#",
-        "airtime_self": "*999*amount#",
-        "airtime_others": "*999*amount*phone_number#",
-        "balance": "*999*00#",
-        "bvn": "*999*BVN#",
-        "update_bvn_details": "*999*BVN*details#",
-        "stop_debit_transactions": "*999*911#",
-        "activate_code": "*999*activate#"
-      }
-    },
-    "abcbank": {
-      "swift": [
-        "ABCHEEAA"
-      ],
-      "ussd": {
-        "start": "*677#",
-        "transfer_to_same_bank": "*677*amount*account_number#",
-        "transfer_other_banks": "*677*amount*account_number*bank_code#",
-        "airtime_self": "*677*amount#",
-        "airtime_others": "*677*amount*phone_number#",
-        "balance": "*677*00#",
-        "bvn": "*677*BVN#",
-        "update_bvn_details": "*677*BVN*details#",
-        "stop_debit_transactions": "*677*911#",
-        "activate_code": "*677*activate#"
-      }
-    },
-    "wogagenbank": {
-      "swift": [
-        "WGBKEEAA"
-      ],
-      "ussd": {
-        "start": "*778#",
-        "transfer_to_same_bank": "*778*amount*account_number#",
-        "transfer_other_banks": "*778*amount*account_number*bank_code#",
-        "airtime_self": "*778*amount#",
-        "airtime_others": "*778*amount*phone_number#",
-        "balance": "*778*00#",
-        "bvn": "*778*BVN#",
-        "update_bvn_details": "*778*BVN*details#",
-        "stop_debit_transactions": "*778*911#",
-        "activate_code": "*778*activate#"
-      }
-    },
-    "semerbank": {
-      "swift": [
-        "SEMREEAA"
-      ],
-      "ussd": {
-        "start": "*700#",
-        "transfer_to_same_bank": "*700*amount*account_number#",
-        "transfer_other_banks": "*700*amount*account_number*bank_code#",
-        "airtime_self": "*700*amount#",
-        "airtime_others": "*700*amount*phone_number#",
-        "balance": "*700*00#",
-        "bvn": "*700*BVN#",
-        "update_bvn_details": "*700*BVN*details#",
-        "stop_debit_transactions": "*700*911#",
-        "activate_code": "*700*activate#"
-      }
-    },
-    "cooperativebank": {
-      "swift": [
-        "CBEEHEEAA"
-      ],
-      "ussd": {
-        "start": "*600#",
-        "transfer_to_same_bank": "*600*amount*account_number#",
-        "transfer_other_banks": "*600*amount*account_number*bank_code#",
-        "airtime_self": "*600*amount#",
-        "airtime_others": "*600*amount*phone_number#",
-        "balance": "*600*00#",
-        "bvn": "*600*BVN#",
-        "update_bvn_details": "*600*BVN*details#",
-        "stop_debit_transactions": "*600*911#",
-        "activate_code": "*600*activate#"
-      }
-    },
-    "diredawa": {
-      "swift": [
-        "DIREHEEAA"
-      ],
-      "ussd": {
-        "start": "*555#",
-        "transfer_to_same_bank": "*555*amount*account_number#",
-        "transfer_other_banks": "*555*amount*account_number*bank_code#",
-        "airtime_self": "*555*amount#",
-        "airtime_others": "*555*amount*phone_number#",
-        "balance": "*555*00#",
-        "bvn": "*555*BVN#",
-        "update_bvn_details": "*555*BVN*details#",
-        "stop_debit_transactions": "*555*911#",
-        "activate_code": "*555*activate#"
-      }
+  "dashenbank": {
+    "swift": ["DASHETAA"],
+    "ussd": {
+      "start": "*721#",
+      "transfer_to_same_bank": "*721*1*account_number*amount#",
+      "transfer_other_banks": "*721*2*account_number*bank_code*amount#",
+      "airtime_self": "*721*3*1*amount#",
+      "airtime_others": "*721*3*2*phone_number*amount#",
+      "balance": "*721*4#",
+      "mini_statement": "*721*5#",
+      "change_pin": "*721*8*old_pin*new_pin#"
+    }
+  },
+  "wegagenbank": {
+    "swift": ["WEGAETAA"],
+    "ussd": {
+      "start": "*889#",
+      "transfer_to_same_bank": "*889*1*account_number*amount#",
+      "transfer_other_banks": "*889*2*account_number*bank_code*amount#",
+      "airtime_self": "*889*3*amount#",
+      "airtime_others": "*889*4*phone_number*amount#",
+      "balance": "*889*5#",
+      "mini_statement": "*889*6#"
+    }
+  },
+  "bunnabank": {
+    "swift": ["BUNNETAA"],
+    "ussd": {
+      "start": "*252#",
+      "transfer_to_same_bank": "*252*1*account_number*amount#",
+      "transfer_other_banks": "*252*2*account_number*bank_code*amount#",
+      "airtime_self": "*252*3*amount#",
+      "airtime_others": "*252*4*phone_number*amount#",
+      "balance": "*252*5#"
+    }
+  },
+  "cbe": {
+    "swift": ["CBETETAA"],
+    "ussd": {
+      "start": "*847#",
+      "transfer_to_same_bank": "*847*1*account_number*amount#",
+      "transfer_other_banks": "*847*2*account_number*bank_code*amount#",
+      "airtime_self": "*847*3*amount#",
+      "airtime_others": "*847*4*phone_number*amount#",
+      "balance": "*847*5#",
+      "mini_statement": "*847*6#",
+      "change_pin": "*847*7*old_pin*new_pin#"
+    }
+  },
+  "awash": {
+    "swift": ["AWINETAA"],
+    "ussd": {
+      "start": "*901#",
+      "transfer_to_same_bank": "*901*1*account_number*amount#",
+      "transfer_other_banks": "*901*2*account_number*bank_code*amount#",
+      "airtime_self": "*901*3*amount#",
+      "airtime_others": "*901*4*phone_number*amount#",
+      "balance": "*901*5#",
+      "mini_statement": "*901*6#"
+    }
+  },
+  "abyssinia": {
+    "swift": ["ABYSETAA"],
+    "ussd": {
+      "start": "*999#",
+      "transfer_to_same_bank": "*999*1*account_number*amount#",
+      "transfer_other_banks": "*999*2*account_number*bank_code*amount#",
+      "airtime_self": "*999*3*amount#",
+      "airtime_others": "*999*4*phone_number*amount#",
+      "balance": "*999*5#",
+      "mini_statement": "*999*6#"
+    }
+  },
+  "coopbank": {
+    "swift": ["COBKETAA"],
+    "ussd": {
+      "start": "*896#",
+      "transfer_to_same_bank": "*896*1*account_number*amount#",
+      "transfer_other_banks": "*896*2*account_number*bank_code*amount#",
+      "airtime_self": "*896*3*amount#",
+      "airtime_others": "*896*4*phone_number*amount#",
+      "balance": "*896*5#",
+      "mini_statement": "*896*6#"
+    }
+  },
+  "nib": {
+    "swift": ["NIBTETAA"],
+    "ussd": {
+      "start": "*968#",
+      "transfer_to_same_bank": "*968*1*account_number*amount#",
+      "transfer_other_banks": "*968*2*account_number*bank_code*amount#",
+      "airtime_self": "*968*3*amount#",
+      "airtime_others": "*968*4*phone_number*amount#",
+      "balance": "*968*5#",
+      "mini_statement": "*968*6#"
+    }
+  },
+  "zemen": {
+    "swift": ["ZEMEETAA"],
+    "ussd": {
+      "start": "*710#",
+      "transfer_to_same_bank": "*710*1*account_number*amount#",
+      "transfer_other_banks": "*710*2*account_number*bank_code*amount#",
+      "airtime_self": "*710*3*amount#",
+      "airtime_others": "*710*4*phone_number*amount#",
+      "balance": "*710*5#",
+      "mini_statement": "*710*6#"
     }
   }
-  
+}

@@ -1,83 +1,42 @@
 {
-    "standardbank": {
-      "name": "Standard Bank Eswatini",
-      "link": "https://www.standardbank.co.sz",
-      "icon": "standardbank.png",
-      "address": "Central Bank Building, Mbabane",
-      "city": "Mbabane",
-      "branch": "Main Branch"
-    },
-    "swazilandpost": {
-      "name": "Swaziland Post and Telecommunications Corporation",
-      "link": "https://www.sptc.co.sz",
-      "icon": "swazilandpost.png",
-      "address": "Mbabane, Eswatini",
-      "city": "Mbabane",
-      "branch": "Head Office"
-    },
-    "fnb": {
-      "name": "FNB Eswatini",
-      "link": "https://www.fnb.co.sz",
-      "icon": "fnb.png",
-      "address": "FNB House, Mbabane",
-      "city": "Mbabane",
-      "branch": "Main Branch"
-    },
-    "eswatini": {
-      "name": "Eswatini Bank",
-      "link": "https://www.eswatini.co.sz",
-      "icon": "eswatini.png",
-      "address": "Mbabane, Eswatini",
-      "city": "Mbabane",
-      "branch": "Main Branch"
-    },
-    "absa": {
-      "name": "Absa Bank Eswatini",
-      "link": "https://www.absa.co.sz",
-      "icon": "absa.png",
-      "address": "Absa House, Mbabane",
-      "city": "Mbabane",
-      "branch": "Main Branch"
-    },
-    "swazilanddevelopment": {
-      "name": "Swaziland Development and Savings Bank",
-      "link": "https://www.sdsb.co.sz",
-      "icon": "swazilanddevelopment.png",
-      "address": "Mbabane, Eswatini",
-      "city": "Mbabane",
-      "branch": "Head Office"
-    },
-    "firstnational": {
-      "name": "First National Bank of Eswatini",
-      "link": "https://www.fnb.co.sz",
-      "icon": "firstnational.png",
-      "address": "Mbabane, Eswatini",
-      "city": "Mbabane",
-      "branch": "Main Branch"
-    },
-    "eurobank": {
-      "name": "Euro Bank Eswatini",
-      "link": "https://www.eurobank.co.sz",
-      "icon": "eurobank.png",
-      "address": "Mbabane, Eswatini",
-      "city": "Mbabane",
-      "branch": "Head Office"
-    },
-    "nationaldevelopment": {
-      "name": "National Development Bank",
-      "link": "https://www.ndb.co.sz",
-      "icon": "nationaldevelopment.png",
-      "address": "Mbabane, Eswatini",
-      "city": "Mbabane",
-      "branch": "Main Branch"
-    },
-    "swazilandinvest": {
-      "name": "Swaziland Investment Bank",
-      "link": "https://www.sib.co.sz",
-      "icon": "swazilandinvest.png",
-      "address": "Mbabane, Eswatini",
-      "city": "Mbabane",
-      "branch": "Head Office"
-    }
+  "standard_bank": {
+    "name": "Standard Bank Eswatini",
+    "link": "https://www.standardbank.co.sz",
+    "icon": "standard-bank.png",
+    "address": "Standard House, Corner Swazi Plaza, Dr Sishayi Road, Mbabane",
+    "city": "Mbabane",
+    "branch": "Head Office"
+  },
+  "fnb": {
+    "name": "First National Bank Eswatini",
+    "link": "https://www.fnb.co.sz",
+    "icon": "fnb.png",
+    "address": "FNB House, 2nd Street, Mbabane",
+    "city": "Mbabane",
+    "branch": "Head Office"
+  },
+  "nedbank": {
+    "name": "Nedbank Eswatini",
+    "link": "https://www.nedbank.co.sz",
+    "icon": "nedbank.png",
+    "address": "Nedbank Centre, Corner of Swazi Plaza, Mbabane",
+    "city": "Mbabane",
+    "branch": "Head Office"
+  },
+  "eswatini_bank": {
+    "name": "Eswatini Bank",
+    "link": "https://www.eswazibank.co.sz",
+    "icon": "eswatini-bank.png",
+    "address": "Eswatini Bank Building, Gwamile Street, Mbabane",
+    "city": "Mbabane",
+    "branch": "Head Office"
+  },
+  "absa": {
+    "name": "Absa Bank Eswatini",
+    "link": "https://www.absa.co.sz",
+    "icon": "absa.png",
+    "address": "Absa House, Gwamile Street, Mbabane",
+    "city": "Mbabane",
+    "branch": "Head Office"
   }
-  
+}

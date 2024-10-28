@@ -1,83 +1,82 @@
 {
-    "dfcu": {
-      "name": "DFCU Bank",
-      "link": "https://www.dfcu.co.ug",
-      "icon": "dfcu.png",
-      "address": "DFCU House, 1-3 Kimathi Avenue, Kampala",
-      "city": "Kampala",
-      "branch": "Main Branch"
-    },
-    "stanbic": {
-      "name": "Stanbic Bank Uganda",
-      "link": "https://www.stanbicbank.co.ug",
-      "icon": "stanbic.png",
-      "address": "Stanbic Bank Building, Plot 17, Hannington Road, Kampala",
-      "city": "Kampala",
-      "branch": "Main Branch"
-    },
-    "barclays": {
-      "name": "Absa Bank Uganda (formerly Barclays Bank)",
-      "link": "https://www.absa.co.ug",
-      "icon": "absa.png",
-      "address": "Absa House, 2nd Floor, Plot 5, Kafumbe Mukasa Road, Kampala",
-      "city": "Kampala",
-      "branch": "Main Branch"
-    },
-    "centenary": {
-      "name": "Centenary Bank",
-      "link": "https://www.centenarybank.co.ug",
-      "icon": "centenary.png",
-      "address": "P.O. Box 1892, Kampala",
-      "city": "Kampala",
-      "branch": "Main Branch"
-    },
-    "icb": {
-      "name": "International Commercial Bank (ICB)",
-      "link": "https://www.icb.co.ug",
-      "icon": "icb.png",
-      "address": "Plot 41, Kampala Road, Kampala",
-      "city": "Kampala",
-      "branch": "Main Branch"
-    },
-    "orient": {
-      "name": "Orient Bank",
-      "link": "https://www.orientbank.co.ug",
-      "icon": "orient.png",
-      "address": "Plot 6, Nasser Road, Kampala",
-      "city": "Kampala",
-      "branch": "Main Branch"
-    },
-    "kcb": {
-      "name": "KCB Bank Uganda",
-      "link": "https://www.kcbbankgroup.com/ug",
-      "icon": "kcb.png",
-      "address": "Plot 7, Hannington Road, Kampala",
-      "city": "Kampala",
-      "branch": "Main Branch"
-    },
-    "equity": {
-      "name": "Equity Bank Uganda",
-      "link": "https://www.equitybank.ug",
-      "icon": "equity.png",
-      "address": "Plot 17, 2nd Floor, Jinja Road, Kampala",
-      "city": "Kampala",
-      "branch": "Main Branch"
-    },
-    "bankofafrica": {
-      "name": "Bank of Africa Uganda",
-      "link": "https://www.bankofafrica.ug",
-      "icon": "bankofafrica.png",
-      "address": "Plot 8, Victoria Crescent, Kampala",
-      "city": "Kampala",
-      "branch": "Main Branch"
-    },
-    "postbank": {
-      "name": "PostBank Uganda",
-      "link": "https://www.postbank.co.ug",
-      "icon": "postbank.png",
-      "address": "P.O. Box 720, Kampala",
-      "city": "Kampala",
-      "branch": "Main Branch"
-    }
+  "dfcu": {
+    "name": "DFCU Bank",
+    "link": "https://www.dfcu.co.ug",
+    "icon": "dfcu.jpg",
+    "address": "Plot 26 Kyadondo Road, Nakasero, Kampala",
+    "city": "Kampala",
+    "branch": "Main Branch"
+  },
+  "stanbic": {
+    "name": "Stanbic Bank Uganda",
+    "link": "https://www.stanbicbank.co.ug",
+    "icon": "stanbic.jpeg",
+    "address": "Crested Towers, Plot 17 Hannington Road, Kampala", 
+    "city": "Kampala",
+    "branch": "Main Branch"
+  },
+  "absa": {
+    "name": "Absa Bank Uganda (formerly Barclays Bank)",
+    "link": "https://www.absa.co.ug",
+    "icon": "absa.webp",
+    "address": "Plot 2 Hannington Road, Kampala",
+    "city": "Kampala",
+    "branch": "Main Branch"
+  },
+  "centenary": {
+    "name": "Centenary Bank",
+    "link": "https://www.centenarybank.co.ug",
+    "icon": "centenary.png",
+    "address": "Mapeera House, Plot 44-46 Kampala Road, Kampala",
+    "city": "Kampala",
+    "branch": "Main Branch"
+  },
+  "icb": {
+    "name": "I&M Bank Uganda (formerly ICB)", 
+    "link": "https://www.imbank.com/uganda",
+    "icon": "icb.png",
+    "address": "Plot 41, Kampala Road, Kampala",
+    "city": "Kampala",
+    "branch": "Main Branch"
+  },
+  "orient": {
+    "name": "I&M Bank Uganda (formerly Orient Bank)", 
+    "link": "https://www.imbank.com/uganda", 
+    "icon": "orient.jpg",
+    "address": "Plot 6/6A, Nasser Road, Kampala", 
+    "city": "Kampala",
+    "branch": "Main Branch"
+  },
+  "kcb": {
+    "name": "KCB Bank Uganda",
+    "link": "https://ug.kcbgroup.com", 
+    "icon": "kcb.jpeg",
+    "address": "Commercial Plaza, Plot 7 Kampala Road, Kampala",
+    "city": "Kampala",
+    "branch": "Main Branch"
+  },
+  "equity": {
+    "name": "Equity Bank Uganda",
+    "link": "https://equitybanking.co.ug", 
+    "icon": "equity.png",
+    "address": "Church House, Plot 34 Kampala Road, Kampala",
+    "city": "Kampala",
+    "branch": "Main Branch"
+  },
+  "bankofafrica": {
+    "name": "Bank of Africa Uganda",
+    "link": "https://www.boauganda.com",
+    "icon": "bankofafrica.png",
+    "address": "Plot 45 Jinja Road, Kampala", 
+    "city": "Kampala",
+    "branch": "Main Branch"
+  },
+  "postbank": {
+    "name": "PostBank Uganda",
+    "link": "https://www.postbank.co.ug",
+    "icon": "postbank.jpg",
+    "address": "Plot 4/6 Nkrumah Road, Kampala",
+    "city": "Kampala",
+    "branch": "Main Branch"
   }
-  
+}

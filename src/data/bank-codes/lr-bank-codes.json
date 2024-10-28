@@ -1,89 +1,64 @@
 {
-    "ecobank": {
+  "ecobank": {
       "swift": ["ECOCLRLM"],
       "ussd": {
-        "start": "*326#",
-        "transfer_to_same_bank": "*326*amount*account_number#",
-        "airtime_self": "*326*amount#",
-        "balance": "*326*0#"
+          "start": "*326#",
+          "transfer_to_same_bank": "*326*2*1*account_number*amount#",
+          "airtime_self": "*326*1*1*amount#",
+          "balance": "*326*0#",
+          "mini_statement": "*326*5#"
       }
-    },
-    "gtbank": {
+  },
+  "gtbank": {
       "swift": ["GTBILRLM"],
       "ussd": {
-        "start": "*737#",
-        "transfer_to_same_bank": "*737*1*amount*account_number#",
-        "airtime_self": "*737*amount#",
-        "balance": "*737*6*1#"
+          "start": "*170#",
+          "transfer_to_same_bank": "*170*1*account_number*amount#",
+          "airtime_self": "*170*2*amount#",
+          "balance": "*170*4#"
       }
-    },
-    "uba": {
+  },
+  "uba": {
       "swift": ["UNAFLRLM"],
       "ussd": {
-        "start": "*919#",
-        "transfer_to_same_bank": "*919*amount*account_number#",
-        "airtime_self": "*919*amount#",
-        "balance": "*919*00#"
+          "start": "*919#",
+          "transfer_to_same_bank": "*919*3*account_number*amount#",
+          "airtime_self": "*919*amount#",
+          "balance": "*919*0#"
       }
-    },
-    "lbdibank": {
+  },
+  "lbdi": {
       "swift": ["LBDILRLM"],
       "ussd": {
-        "start": "*553#",
-        "transfer_to_same_bank": "*553*amount*account_number#",
-        "balance": "*553*1#"
+          "start": "*553#",
+          "transfer_to_same_bank": "*553*1*account_number*amount#",
+          "balance": "*553*0#"
       }
-    },
-    "africanbank": {
-      "swift": ["AFBKLRLM"],
+  },
+  "iblliberia": {
+      "swift": ["IBLLRLM"],
       "ussd": {
-        "start": "*150#",
-        "transfer_to_same_bank": "*150*amount*account_number#",
-        "balance": "*150*1#"
+          "start": "*545#",
+          "transfer_to_same_bank": "*545*1*account_number*amount#",
+          "airtime_self": "*545*2*amount#",
+          "balance": "*545*0#"
       }
-    },
-    "internationalbank": {
-      "swift": ["INBKLRLM"],
+  },
+  "gblliberia": {
+      "swift": ["GBLLLRLM"],
       "ussd": {
-        "start": "*120#",
-        "transfer_to_same_bank": "*120*amount*account_number#",
-        "airtime_self": "*120*amount#",
-        "balance": "*120*1#"
+          "start": "*601#",
+          "transfer_to_same_bank": "*601*1*account_number*amount#",
+          "balance": "*601*0#"
       }
-    },
-    "globalbank": {
-      "swift": ["GBLKLRLM"],
+  },
+  "accessbank": {
+      "swift": ["ABLLRLM"],
       "ussd": {
-        "start": "*601#",
-        "transfer_to_same_bank": "*601*amount*account_number#",
-        "balance": "*601*1#"
+          "start": "*901#",
+          "transfer_to_same_bank": "*901*1*account_number*amount#",
+          "airtime_self": "*901*2*amount#",
+          "balance": "*901*0#"
       }
-    },
-    "fidelitybank": {
-      "swift": ["FIDBLRLM"],
-      "ussd": {
-        "start": "*707#",
-        "transfer_to_same_bank": "*707*amount*account_number#",
-        "balance": "*707*0#"
-      }
-    },
-    "firstbank": {
-      "swift": ["FIBKLRLM"],
-      "ussd": {
-        "start": "*894#",
-        "transfer_to_same_bank": "*894*amount*account_number#",
-        "airtime_self": "*894*amount#",
-        "balance": "*894*0#"
-      }
-    },
-    "wellsfargo": {
-      "swift": ["WFGRLRLM"],
-      "ussd": {
-        "start": "*144#",
-        "transfer_to_same_bank": "*144*amount*account_number#",
-        "airtime_self": "*144*amount#",
-        "balance": "*144*1#"
-      }
-    }
   }
-  
+}

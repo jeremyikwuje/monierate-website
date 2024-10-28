@@ -1,83 +1,82 @@
 {
-    "bici": {
-      "name": "Banque Internationale pour le Commerce et l'Industrie",
-      "link": "https://www.bici.ci",
-      "icon": "bici.svg",
-      "address": "Avenue Houdaille, Abidjan Plateau",
-      "city": "Abidjan",
-      "branch": "Plateau Branch"
-    },
-    "ecobank": {
-      "name": "Ecobank Côte d'Ivoire",
-      "link": "https://www.ecobank.com",
-      "icon": "ecobank.png",
-      "address": "Avenue Lamblin, Abidjan Plateau",
-      "city": "Abidjan",
-      "branch": "Plateau Branch"
-    },
-    "sgci": {
-      "name": "Société Générale Côte d'Ivoire",
-      "link": "https://www.societegenerale.ci",
-      "icon": "sgci.png",
-      "address": "Avenue Joseph Anoma, Abidjan Plateau",
-      "city": "Abidjan",
-      "branch": "Anoma Branch"
-    },
-    "bni": {
-      "name": "Banque Nationale d'Investissement",
-      "link": "https://www.bni.ci",
-      "icon": "bni.png",
-      "address": "Boulevard de la République, Abidjan Plateau",
-      "city": "Abidjan",
-      "branch": "Main Branch"
-    },
-    "corisbank": {
-      "name": "Coris Bank International",
-      "link": "https://www.corisbank.com",
-      "icon": "corisbank.svg",
-      "address": "Boulevard Valéry Giscard d’Estaing, Marcory",
-      "city": "Abidjan",
-      "branch": "Marcory Branch"
-    },
-    "uba": {
-      "name": "United Bank for Africa (UBA)",
-      "link": "https://www.ubagroup.com",
-      "icon": "uba.png",
-      "address": "Boulevard de la République, Abidjan Plateau",
-      "city": "Abidjan",
-      "branch": "Plateau Branch"
-    },
-    "nsia": {
-      "name": "NSIA Banque",
-      "link": "https://www.nsiabanque.ci",
-      "icon": "nsia.svg",
-      "address": "Boulevard Roume, Abidjan Plateau",
-      "city": "Abidjan",
-      "branch": "Main Branch"
-    },
-    "bridgebank": {
-      "name": "Bridge Bank Group Côte d'Ivoire",
-      "link": "https://www.bridgebankgroup.com",
-      "icon": "bridgebank.svg",
-      "address": "Rue du Commerce, Abidjan Plateau",
-      "city": "Abidjan",
-      "branch": "Plateau Branch"
-    },
-    "oragroup": {
-      "name": "Orabank Côte d'Ivoire",
-      "link": "https://www.orabank.net",
-      "icon": "orabank.png",
-      "address": "Boulevard Lagunaire, Abidjan Plateau",
-      "city": "Abidjan",
-      "branch": "Plateau Branch"
-    },
-    "afribank": {
-      "name": "Afriland First Bank Côte d'Ivoire",
-      "link": "https://www.afrilandfirstbank.com",
-      "icon": "afriland.png",
-      "address": "Rue des Banques, Abidjan Plateau",
-      "city": "Abidjan",
-      "branch": "Main Branch"
-    }
+  "bici": {
+    "name": "Banque Internationale pour le Commerce et l'Industrie de Côte d'Ivoire",
+    "link": "https://www.bicici.com",
+    "icon": "bicici.svg",
+    "address": "Avenue Houdaille, Abidjan Plateau",
+    "city": "Abidjan",
+    "branch": "Plateau Branch"
+  },
+  "ecobank": {
+    "name": "Ecobank Côte d'Ivoire",
+    "link": "https://www.ecobank.com/ci/personal-banking",
+    "icon": "ecobank.svg",
+    "address": "Rue du Commerce, Abidjan Plateau",
+    "city": "Abidjan",
+    "branch": "Plateau Branch"
+  },
+  "sgci": {
+    "name": "Société Générale Côte d'Ivoire",
+    "link": "https://societegenerale.ci",
+    "icon": "sgci.svg",
+    "address": "5-7 Avenue Joseph Anoma, Abidjan Plateau",
+    "city": "Abidjan",
+    "branch": "Plateau Branch"
+  },
+  "bni": {
+    "name": "Banque Nationale d'Investissement",
+    "link": "https://www.bni.ci",
+    "icon": "bni.svg",
+    "address": "8-10 Avenue Joseph Anoma, Abidjan Plateau",
+    "city": "Abidjan",
+    "branch": "Siège Principal"
+  },
+  "corisbank": {
+    "name": "Coris Bank International Côte d'Ivoire",
+    "link": "https://www.corisbank.ci",
+    "icon": "corisbank.svg",
+    "address": "Boulevard VGE, Marcory",
+    "city": "Abidjan",
+    "branch": "Marcory Branch"
+  },
+  "uba": {
+    "name": "United Bank for Africa Côte d'Ivoire",
+    "link": "https://www.ubacotedivoire.com",
+    "icon": "uba.svg",
+    "address": "Boulevard de la République, Abidjan Plateau",
+    "city": "Abidjan",
+    "branch": "Plateau Branch"
+  },
+  "nsia": {
+    "name": "NSIA Banque Côte d'Ivoire",
+    "link": "https://www.nsiabanque.ci",
+    "icon": "nsia.svg",
+    "address": "8-10 Avenue Joseph Anoma, Abidjan Plateau",
+    "city": "Abidjan",
+    "branch": "Siège"
+  },
+  "bridge": {
+    "name": "Bridge Bank Group Côte d'Ivoire",
+    "link": "https://www.bridgebank.ci",
+    "icon": "bridgebank.svg",
+    "address": "Rue du Commerce, Abidjan Plateau",
+    "city": "Abidjan",
+    "branch": "Plateau Branch"
+  },
+  "orabank": {
+    "name": "Orabank Côte d'Ivoire",
+    "link": "https://www.orabank.net/fr/filiale/cote-divoire",
+    "icon": "orabank.svg",
+    "address": "Avenue Terrasson de Fougères, Abidjan Plateau",
+    "city": "Abidjan",
+    "branch": "Siège"
+  },
+  "afriland": {
+    "name": "Afriland First Bank Côte d'Ivoire",
+    "link": "https://www.afrilandfirstbank.com/index.php/en/cote-d-ivoire",
+    "icon": "afriland.svg",
+    "address": "Avenue Noguès, Abidjan Plateau",
+    "city": "Abidjan",
+    "branch": "Siège Principal"
   }
-  
+}

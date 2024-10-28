@@ -1,75 +1,61 @@
 {
-    "bcv": {
-      "name": "Banco de Cabo Verde (BCV)",
+  "bcv": {
+      "name": "Banco de Cabo Verde",
       "link": "https://www.bcv.cv",
-      "icon": "bcv.svg",
-      "address": "Avenida 5 de Julho, Praia",
+      "icon": "bcv.jpeg",
+      "address": "Avenida Amílcar Cabral nº 27",
       "city": "Praia",
-      "branch": "Praia Branch"
-    },
-    "civ": {
-      "name": "Caixa Económica de Cabo Verde (CECV)",
-      "link": "https://www.civ.cv",
-      "icon": "civ.svg",
-      "address": "Avenida Amílcar Cabral, Praia",
-      "city": "Praia",
-      "branch": "Praia Branch"
-    },
-    "bca": {
-      "name": "Banco Comercial do Atlântico (BCA)",
+      "branch": "Sede",
+      "postal_code": "CP 101"
+  },
+  "bca": {
+      "name": "Banco Comercial do Atlântico",
       "link": "https://www.bca.cv",
-      "icon": "bca.svg",
-      "address": "Rua 5 de Julho, Praia",
+      "icon": "bca.jpeg",
+      "address": "Avenida Amílcar Cabral 97",
       "city": "Praia",
-      "branch": "Praia Branch"
-    },
-    "sc": {
-      "name": "Société Générale de Banques au Cabo Verde (SGB)",
-      "link": "https://www.sgb.cv",
-      "icon": "sc.svg",
-      "address": "Avenida João Paulo II, Praia",
+      "branch": "Sede",
+      "postal_code": "CP 474"
+  },
+  "cecv": {
+      "name": "Caixa Económica de Cabo Verde",
+      "link": "https://www.caixa.cv",
+      "icon": "cecv.png",
+      "address": "Avenida Cidade de Lisboa, CP 199",
       "city": "Praia",
-      "branch": "Praia Branch"
-    },
-    "ecv": {
-      "name": "EcoBank Cape Verde",
-      "link": "https://www.ecobank.com",
-      "icon": "ecv.svg",
-      "address": "Avenida Amílcar Cabral, Praia",
+      "branch": "Sede"
+  },
+  "bi": {
+      "name": "Banco Interatlântico",
+      "link": "https://www.bi.cv",
+      "icon": "bi.jpeg",
+      "address": "Avenida Cidade de Lisboa",
       "city": "Praia",
-      "branch": "Praia Branch"
-    },
-    "bni": {
-      "name": "Banco Nacional de Investimento (BNI)",
-      "link": "https://www.bni.cv",
-      "icon": "bni.svg",
-      "address": "Avenida 5 de Julho, Praia",
+      "branch": "Sede",
+      "postal_code": "CP 131-A"
+  },
+  "bai": {
+      "name": "Banco Angolano de Investimentos Cabo Verde",
+      "link": "https://www.bancobai.cv",
+      "icon": "bai.png",
+      "address": "Avenida Cidade de Lisboa, Edifício BAI Center",
       "city": "Praia",
-      "branch": "Praia Branch"
-    },
-    "sbcv": {
-      "name": "Banco da Praia (BP)",
-      "link": "https://www.bancodapraia.cv",
-      "icon": "sbcv.svg",
-      "address": "Avenida 5 de Julho, Praia",
+      "branch": "Sede"
+  },
+  "ecobank": {
+      "name": "Ecobank Cabo Verde",
+      "link": "https://www.ecobank.com/cv/personal-banking",
+      "icon": "ecobank.png",
+      "address": "Avenida Cidade de Lisboa, 28",
       "city": "Praia",
-      "branch": "Praia Branch"
-    },
-    "mcb": {
-      "name": "Mauritius Commercial Bank (MCB)",
-      "link": "https://www.mcb.mu",
-      "icon": "mcb.svg",
-      "address": "Avenida 5 de Julho, Praia",
+      "branch": "Sede"
+  },
+  "international_investment_bank": {
+      "name": "International Investment Bank",
+      "link": "https://www.iib.cv",
+      "icon": "iib.png",
+      "address": "Rua Dr. Júlio Abreu 2",
       "city": "Praia",
-      "branch": "Praia Branch"
-    },
-    "bic": {
-      "name": "Banco Internacional de Cabo Verde (BIC)",
-      "link": "https://www.bic.cv",
-      "icon": "bic.svg",
-      "address": "Avenida 5 de Julho, Praia",
-      "city": "Praia",
-      "branch": "Praia Branch"
-    }
+      "branch": "Sede"
   }
-  
+}

@@ -1,83 +1,74 @@
 {
-    "dfcu": {
-      "swift": ["DFCUUGK"],
-      "ussd": {
-        "start": "*150*20#",
-        "balance": "*150*1#",
-        "transfer_to_same_bank": "*150*2*amount*account_number#"
-      }
-    },
-    "stanbic": {
-      "swift": ["SBUGUGK"],
-      "ussd": {
-        "start": "*234#",
-        "balance": "*234*1#",
-        "transfer_to_same_bank": "*234*2*amount*account_number#"
-      }
-    },
-    "barclays": {
-      "swift": ["BARCUGK"],
-      "ussd": {
-        "start": "*500#",
-        "balance": "*500*1#",
-        "transfer_to_same_bank": "*500*2*amount*account_number#"
-      }
-    },
-    "centenary": {
-      "swift": ["CENTUGK"],
-      "ussd": {
-        "start": "*220#",
-        "balance": "*220*1#",
-        "transfer_to_same_bank": "*220*2*amount*account_number#"
-      }
-    },
-    "icb": {
-      "swift": ["ICBUGK"],
-      "ussd": {
-        "start": "*100#",
-        "balance": "*100*1#",
-        "transfer_to_same_bank": "*100*2*amount*account_number#"
-      }
-    },
-    "orient": {
-      "swift": ["ORITUGK"],
-      "ussd": {
-        "start": "*150#",
-        "balance": "*150*1#",
-        "transfer_to_same_bank": "*150*2*amount*account_number#"
-      }
-    },
-    "kcb": {
-      "swift": ["KCBUGK"],
-      "ussd": {
-        "start": "*233#",
-        "balance": "*233*1#",
-        "transfer_to_same_bank": "*233*2*amount*account_number#"
-      }
-    },
-    "equity": {
-      "swift": ["EQUITYUG"],
-      "ussd": {
-        "start": "*260#",
-        "balance": "*260*1#",
-        "transfer_to_same_bank": "*260*2*amount*account_number#"
-      }
-    },
-    "bankofafrica": {
-      "swift": ["BOAUGK"],
-      "ussd": {
-        "start": "*240#",
-        "balance": "*240*1#",
-        "transfer_to_same_bank": "*240*2*amount*account_number#"
-      }
-    },
-    "postbank": {
-      "swift": ["POSTUGK"],
-      "ussd": {
-        "start": "*199#",
-        "balance": "*199*1#",
-        "transfer_to_same_bank": "*199*2*amount*account_number#"
-      }
+  "dfcu": {
+    "swift": ["DFCUUGKA"], 
+    "ussd": {
+      "start": "*240#", 
+      "balance": "*240*1#",
+      "transfer_to_same_bank": "*240*2*amount*account_number#" 
+    }
+  },
+  "stanbic": {
+    "swift": ["SBICUGKA"],
+    "ussd": {
+      "start": "*290#",   
+      "balance": "*290*1#",
+      "transfer_to_same_bank": "*290*2*amount*account_number#"
+    }
+  },
+  "absa": {                
+    "swift": ["BARCUGKA"],
+    "ussd": {
+      "start": "*277#",   
+      "balance": "*277*1#",
+      "transfer_to_same_bank": "*277*2*amount*account_number#"
+    }
+  },
+  "centenary": {
+    "swift": ["CECEUGKA"],
+    "ussd": {
+      "start": "*211#",  
+      "balance": "*211*1#",
+      "transfer_to_same_bank": "*211*2*amount*account_number#"
+    }
+  },
+  "orient": {
+    "swift": ["ORIBUGKA"],
+    "ussd": {
+      "start": "*241#",  
+      "balance": "*241*1#",
+      "transfer_to_same_bank": "*241*2*amount*account_number#"
+    }
+  },
+  "kcb": {
+    "swift": ["KCBLUGKA"],
+    "ussd": {
+      "start": "*233#",
+      "balance": "*233*1#",
+      "transfer_to_same_bank": "*233*2*amount*account_number#"
+    }
+  },
+  "equity": {
+    "swift": ["EQBLUGKA"], 
+    "ussd": {
+      "start": "*247#",   
+      "balance": "*247*1#",
+      "transfer_to_same_bank": "*247*2*amount*account_number#"
+    }
+  },
+  "bankofafrica": {
+    "swift": ["AFRIUGKA"],
+    "ussd": {
+      "start": "*200#",   
+      "balance": "*200*1#",
+      "transfer_to_same_bank": "*200*2*amount*account_number#"
+    }
+  },
+  "postbank": {
+    "swift": ["UGPBUGKA"], 
+    "ussd": {
+      "start": "*263#",    
+      "balance": "*263*1#",
+      "transfer_to_same_bank": "*263*2*amount*account_number#"
     }
   }
-  
+}

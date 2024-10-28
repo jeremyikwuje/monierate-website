@@ -52,28 +52,33 @@ export const load: PageLoad = async ({ params }) => {
 			if (banks[bank]) {
 				const swiftCodesData = swiftCodes[bank].swift;
 
-				result[bank] = {
-					id: bank,
-					...banks[bank],
-					swift: {
-						codes: swiftCodesData,
-						details: parseSwiftCode(swiftCodesData[0]),
-					},
-				};
+				if(swiftCodesData) {
+					result[bank] = {
+						id: bank,
+						...banks[bank],
+						swift: {
+							codes: swiftCodesData,
+							details: parseSwiftCode(swiftCodesData[0]),
+						},
+					};
+				}
 			} else {
 				// If a bank is present only in SwiftCodes dataset, handle gracefully
-				result[bank] = {
-					id: bank,
-					name: 'Unknown Bank',
-					icon: '',
-					city: '',
-					address: '',
-					branch: '',
-					swift: {
-						codes: swiftCodes[bank].swift,
-						details: parseSwiftCode(swiftCodes[bank].swift[0]),
-					},
-				};
+				const swiftCodesData = swiftCodes[bank].swift;
+				if(swiftCodesData) {
+					result[bank] = {
+						id: bank,
+						name: 'Unknown Bank',
+						icon: '',
+						city: '',
+						address: '',
+						branch: '',
+						swift: {
+							codes: swiftCodes[bank].swift,
+							details: parseSwiftCode(swiftCodes[bank].swift[0]),
+						},
+					};
+				}
 			}
 			return result;
 		}, {} as Record<string, BankData>);

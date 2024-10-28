@@ -1,83 +1,82 @@
 {
-    "bankofcommerce": {
-      "name": "Bank of Commerce & Development",
-      "link": "https://www.bankofcommerce.ly",
-      "icon": "bankofcommerce.png",
-      "address": "Jamahiriya Street",
-      "city": "Benghazi",
-      "branch": "Head Office"
-    },
-    "gumhouria": {
-      "name": "Gumhouria Bank",
-      "link": "https://www.gumhouria.com.ly",
-      "icon": "gumhouria.png",
-      "address": "Martyrs' Square",
-      "city": "Tripoli",
-      "branch": "Main Branch"
-    },
-    "nationalcommercial": {
-      "name": "National Commercial Bank",
-      "link": "https://www.ncb.ly",
-      "icon": "ncb.png",
-      "address": "Dahra Street",
-      "city": "Tripoli",
-      "branch": "Dahra Branch"
-    },
-    "wahdabank": {
-      "name": "Wahda Bank",
-      "link": "https://www.wahdabank.ly",
-      "icon": "wahda.png",
-      "address": "7th October Street",
-      "city": "Benghazi",
-      "branch": "Head Office"
-    },
-    "libyanforeignbank": {
-      "name": "Libyan Foreign Bank",
-      "link": "https://www.lfb.ly",
-      "icon": "libyanforeignbank.png",
-      "address": "Jamahiriya Street",
-      "city": "Tripoli",
-      "branch": "Main Branch"
-    },
-    "sahara": {
-      "name": "Sahara Bank",
-      "link": "https://www.saharabank.ly",
-      "icon": "sahara.png",
-      "address": "Gargaresh Road",
-      "city": "Tripoli",
-      "branch": "Main Branch"
-    },
-    "alwaha": {
-      "name": "Al-Waha Bank",
-      "link": "https://www.alwahabank.ly",
-      "icon": "alwaha.png",
-      "address": "Al-Nasr Street",
-      "city": "Tripoli",
-      "branch": "Al-Nasr Branch"
-    },
-    "bankofnorthafrica": {
-      "name": "Bank of North Africa",
-      "link": "https://www.bna.ly",
-      "icon": "bna.png",
-      "address": "Dahra Street",
-      "city": "Tripoli",
-      "branch": "Dahra Branch"
-    },
-    "alsaraya": {
-      "name": "Al-Saraya Bank",
-      "link": "https://www.sarayabank.ly",
-      "icon": "sarayabank.png",
-      "address": "Martyrs' Square",
-      "city": "Tripoli",
-      "branch": "Main Branch"
-    },
-    "alaminbank": {
-      "name": "Al-Amin Bank",
-      "link": "https://www.alaminbank.ly",
-      "icon": "alaminbank.png",
-      "address": "Gargaresh Road",
-      "city": "Tripoli",
-      "branch": "Main Branch"
-    }
+  "bankofcommerce": {
+    "name": "Bank of Commerce & Development",
+    "link": "https://www.bcd.ly",
+    "icon": "bankofcommerce.png",
+    "address": "Al Fowahat District",
+    "city": "Benghazi",
+    "branch": "Head Office"
+  },
+  "gumhouria": {
+    "name": "Gumhouria Bank",
+    "link": "https://www.gumhouria-bank.com.ly",
+    "icon": "gumhouria.png",
+    "address": "Omar Al Mukhtar Street",
+    "city": "Tripoli",
+    "branch": "Main Branch"
+  },
+  "nationalcommercial": {
+    "name": "National Commercial Bank",
+    "link": "https://www.ncb.ly",
+    "icon": "ncb.png",
+    "address": "Al Shat Road",
+    "city": "Tripoli",
+    "branch": "Head Office"
+  },
+  "wahdabank": {
+    "name": "Wahda Bank",
+    "link": "https://www.wahdabank.com.ly",
+    "icon": "wahda.png",
+    "address": "Omar Al Mukhtar Street",
+    "city": "Benghazi",
+    "branch": "Head Office"
+  },
+  "libyanforeignbank": {
+    "name": "Libyan Foreign Bank",
+    "link": "https://www.lfbank.ly",
+    "icon": "libyanforeignbank.png",
+    "address": "Ghadames Street",
+    "city": "Tripoli",
+    "branch": "Head Office"
+  },
+  "sahara": {
+    "name": "Sahara Bank",
+    "link": "https://www.saharabank.com.ly",
+    "icon": "sahara.png",
+    "address": "First of September Street",
+    "city": "Tripoli",
+    "branch": "Head Office"
+  },
+  "northafrica": {
+    "name": "North Africa Bank",
+    "link": "https://www.nab.ly",
+    "icon": "nab.png",
+    "address": "Al Shat Road",
+    "city": "Tripoli",
+    "branch": "Head Office"
+  },
+  "alwaha": {
+    "name": "Al Waha Bank",
+    "link": "https://www.alwahabank.ly",
+    "icon": "alwaha.png",
+    "address": "Algeria Square",
+    "city": "Tripoli",
+    "branch": "Main Branch"
+  },
+  "unitedbank": {
+    "name": "United Bank",
+    "link": "https://www.unitedbank.ly",
+    "icon": "unitedbank.png",
+    "address": "Mizran Street",
+    "city": "Tripoli",
+    "branch": "Head Office"
+  },
+  "alyaqeen": {
+    "name": "Al Yaqeen Bank",
+    "link": "https://www.alyaqeen.ly",
+    "icon": "alyaqeen.png",
+    "address": "Ben Ashour",
+    "city": "Tripoli",
+    "branch": "Main Branch"
   }
-  
+}

@@ -1,75 +1,26 @@
 {
-    "eritreanbank": {
-      "name": "Eritrean Bank",
-      "link": "http://www.eritreanbank.com",
-      "icon": "eritreanbank.svg",
-      "address": "Avenue Independence, Asmara",
+  "commercialbankeritrea": {
+      "name": "Commercial Bank of Eritrea",
+      "link": "https://www.cberitrea.com",
+      "icon": "cberitrea.png",
+      "address": "Harnet Avenue, P.O. Box 219",
+      "city": "Asmara",
+      "branch": "Head Office"
+  },
+  "housingbank": {
+      "name": "Housing and Commerce Bank of Eritrea",
+      "link": "https://www.hcberitrea.com",
+      "icon": "hcberitrea.png",
+      "address": "Sematat Avenue",
+      "city": "Asmara",
+      "branch": "Head Office"
+  },
+  "eritreadevbank": {
+      "name": "Eritrean Development and Investment Bank",
+      "link": "https://www.ediberitrea.com",
+      "icon": "ediberitrea.jpeg",
+      "address": "Liberation Avenue",
       "city": "Asmara",
       "branch": "Main Branch"
-    },
-    "nilebank": {
-      "name": "Nile Bank",
-      "link": "http://www.nilebank.er",
-      "icon": "nilebank.svg",
-      "address": "Avenue Harnet, Asmara",
-      "city": "Asmara",
-      "branch": "Main Branch"
-    },
-    "gashbank": {
-      "name": "Gash Bank",
-      "link": "http://www.gashbank.er",
-      "icon": "gashbank.svg",
-      "address": "Calle 25, Asmara",
-      "city": "Asmara",
-      "branch": "Main Branch"
-    },
-    "bankofasmara": {
-      "name": "Bank of Asmara",
-      "link": "http://www.bankofasmara.er",
-      "icon": "bankofasmara.svg",
-      "address": "Avenue 4, Asmara",
-      "city": "Asmara",
-      "branch": "Main Branch"
-    },
-    "zemenbank": {
-      "name": "Zemen Bank",
-      "link": "http://www.zemenbank.er",
-      "icon": "zemenbank.svg",
-      "address": "Avenue 3, Asmara",
-      "city": "Asmara",
-      "branch": "Main Branch"
-    },
-    "berhanbank": {
-      "name": "Berhan Bank",
-      "link": "http://www.berhanbank.er",
-      "icon": "berhanbank.svg",
-      "address": "Avenue 5, Asmara",
-      "city": "Asmara",
-      "branch": "Main Branch"
-    },
-    "amargabank": {
-      "name": "Amarga Bank",
-      "link": "http://www.amargabank.er",
-      "icon": "amargabank.svg",
-      "address": "Avenue 7, Asmara",
-      "city": "Asmara",
-      "branch": "Main Branch"
-    },
-    "kerenbank": {
-      "name": "Keren Bank",
-      "link": "http://www.kerenbank.er",
-      "icon": "kerenbank.svg",
-      "address": "Avenue 9, Keren",
-      "city": "Keren",
-      "branch": "Main Branch"
-    },
-    "redsea": {
-      "name": "Red Sea Bank",
-      "link": "http://www.redseabank.er",
-      "icon": "redsea.svg",
-      "address": "Avenue 11, Asmara",
-      "city": "Asmara",
-      "branch": "Main Branch"
-    }
   }
-  
+}

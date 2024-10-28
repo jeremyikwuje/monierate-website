@@ -1,83 +1,66 @@
 {
-    "bni": {
-      "swift": ["BNINNE"],
-      "ussd": {
-        "start": "*111#",
-        "balance": "*111*1#",
-        "transfer_to_same_bank": "*111*amount*account_number#"
-      }
-    },
-    "bnpc": {
-      "swift": ["BNPCNE"],
-      "ussd": {
-        "start": "*222#",
-        "balance": "*222*1#",
-        "transfer_to_same_bank": "*222*amount*account_number#"
-      }
-    },
-    "bniim": {
-      "swift": ["BNIIMNE"],
-      "ussd": {
-        "start": "*333#",
-        "balance": "*333*1#",
-        "transfer_to_same_bank": "*333*amount*account_number#"
-      }
-    },
-    "sonibank": {
-      "swift": ["SONINE"],
-      "ussd": {
-        "start": "*444#",
-        "balance": "*444*1#",
-        "transfer_to_same_bank": "*444*amount*account_number#"
-      }
-    },
-    "ecobank": {
-      "swift": ["ECOCNE"],
-      "ussd": {
-        "start": "*555#",
-        "balance": "*555*1#",
-        "transfer_to_same_bank": "*555*amount*account_number#"
-      }
-    },
-    "bmc": {
-      "swift": ["BMCNE"],
-      "ussd": {
-        "start": "*666#",
-        "balance": "*666*1#",
-        "transfer_to_same_bank": "*666*amount*account_number#"
-      }
-    },
-    "cni": {
-      "swift": ["CNIINE"],
-      "ussd": {
-        "start": "*777#",
-        "balance": "*777*1#",
-        "transfer_to_same_bank": "*777*amount*account_number#"
-      }
-    },
-    "sogeb": {
-      "swift": ["SOGEBNE"],
-      "ussd": {
-        "start": "*888#",
-        "balance": "*888*1#",
-        "transfer_to_same_bank": "*888*amount*account_number#"
-      }
-    },
-    "nigerbank": {
-      "swift": ["NIGERNE"],
-      "ussd": {
-        "start": "*999#",
-        "balance": "*999*1#",
-        "transfer_to_same_bank": "*999*amount*account_number#"
-      }
-    },
-    "tbank": {
-      "swift": ["TBNKNE"],
-      "ussd": {
-        "start": "*1010#",
-        "balance": "*1010*1#",
-        "transfer_to_same_bank": "*1010*amount*account_number#"
-      }
+  "boa": {
+    "swift": ["AFNINE"],
+    "ussd": {
+      "start": "*555#",
+      "balance": "*555*1#",
+      "transfer_to_same_bank": "*555*2*amount*account_number#"
+    }
+  },
+  "sonibank": {
+    "swift": ["SNBKNE"],
+    "ussd": {
+      "start": "*628#",
+      "balance": "*628*1#",
+      "transfer_to_same_bank": "*628*2*amount*account_number#"
+    }
+  },
+  "ecobank": {
+    "swift": ["ECOCNENI"],
+    "ussd": {
+      "start": "*326#",
+      "balance": "*326*1#",
+      "transfer_to_same_bank": "*326*2*amount*account_number#"
+    }
+  },
+  "banque_atlantique": {
+    "swift": ["ATNINENI"],
+    "ussd": {
+      "start": "*955#",
+      "balance": "*955*1#",
+      "transfer_to_same_bank": "*955*2*amount*account_number#"
+    }
+  },
+  "bcn": {
+    "swift": ["BCNINE"],
+    "ussd": {
+      "start": "*700#",
+      "balance": "*700*1#",
+      "transfer_to_same_bank": "*700*2*amount*account_number#"
+    }
+  },
+  "bsic": {
+    "swift": ["BSICNENI"],
+    "ussd": {
+      "start": "*422#",
+      "balance": "*422*1#",
+      "transfer_to_same_bank": "*422*2*amount*account_number#"
+    }
+  },
+  "bagri": {
+    "swift": ["BAGRNENI"],
+    "ussd": {
+      "start": "*744#",
+      "balance": "*744*1#",
+      "transfer_to_same_bank": "*744*2*amount*account_number#"
+    }
+  },
+  "coris": {
+    "swift": ["CORINENI"],
+    "ussd": {
+      "start": "*312#",
+      "balance": "*312*1#",
+      "transfer_to_same_bank": "*312*2*amount*account_number#"
     }
   }
-  
+}

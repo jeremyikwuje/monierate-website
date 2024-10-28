@@ -1,83 +1,82 @@
 {
-    "cbz": {
+  "cbz": {
       "name": "CBZ Bank Limited",
       "link": "https://www.cbz.co.zw",
       "icon": "cbz.png",
-      "address": "CBZ House, 2nd Floor, 57 G. Silundika Street, Harare",
+      "address": "Union House, 60 Kwame Nkrumah Avenue",
       "city": "Harare",
-      "branch": "Main Branch"
-    },
-    "stanbic": {
-      "name": "Stanbic Bank Zimbabwe",
+      "branch": "Head Office"
+  },
+  "stanbic": {
+      "name": "Stanbic Bank Zimbabwe Limited",
       "link": "https://www.stanbicbank.co.zw",
       "icon": "stanbic.png",
-      "address": "Stanbic Bank Centre, 1st Floor, 79 Jason Moyo Avenue, Harare",
-      "city": "Harare",
-      "branch": "Main Branch"
-    },
-    "fbc": {
-      "name": "FBC Bank",
+      "address": "59 Samora Machel Avenue",
+      "city": "Harare", 
+      "branch": "Head Office"
+  },
+  "fbc": {
+      "name": "FBC Bank Limited",
       "link": "https://www.fbc.co.zw",
       "icon": "fbc.png",
-      "address": "FBC House, 100, Borrowdale Road, Harare",
+      "address": "45 Nelson Mandela Avenue",
       "city": "Harare",
-      "branch": "Main Branch"
-    },
-    "ecobank": {
-      "name": "Ecobank Zimbabwe",
-      "link": "https://www.ecobank.com",
+      "branch": "Head Office"
+  },
+  "ecobank": {
+      "name": "Ecobank Zimbabwe Limited",
+      "link": "https://www.ecobank.com/zw",
       "icon": "ecobank.png",
-      "address": "Ecobank Building, 18th Floor, 45-47 Kaguvi Street, Harare",
+      "address": "Block A, Sam Levy's Office Park, 2 Piers Road, Borrowdale",
       "city": "Harare",
-      "branch": "Main Branch"
-    },
-    "mbc": {
-      "name": "MBC Holdings Limited",
-      "link": "https://www.mbc.co.zw",
-      "icon": "mbc.png",
-      "address": "MBC House, 14 Tredgold Avenue, Harare",
+      "branch": "Head Office"
+  },
+  "metbank": {
+      "name": "Metbank Limited",
+      "link": "https://www.metbank.co.zw",
+      "icon": "metbank.png",
+      "address": "12 Natal Road, Belgravia",
       "city": "Harare",
-      "branch": "Main Branch"
-    },
-    "zimbank": {
-      "name": "ZB Bank",
+      "branch": "Head Office"
+  },
+  "zbbank": {
+      "name": "ZB Bank Limited",
       "link": "https://www.zbbank.co.zw",
       "icon": "zbbank.png",
-      "address": "ZB Centre, 22 Baines Avenue, Harare",
+      "address": "21 Natal Road, Avondale",
       "city": "Harare",
-      "branch": "Main Branch"
-    },
-    "firstcapital": {
-      "name": "First Capital Bank",
+      "branch": "Head Office"
+  },
+  "firstcapital": {
+      "name": "First Capital Bank Limited",
       "link": "https://www.firstcapitalbank.co.zw",
       "icon": "firstcapital.png",
-      "address": "First Capital House, 13th Avenue, Harare",
+      "address": "Barclays House, Corner First Street/Jason Moyo Avenue",
       "city": "Harare",
-      "branch": "Main Branch"
-    },
-    "cabs": {
-      "name": "CABS (Central Africa Building Society)",
+      "branch": "Head Office"
+  },
+  "cabs": {
+      "name": "CABS",
       "link": "https://www.cabs.co.zw",
       "icon": "cabs.png",
-      "address": "CABS House, 51-53 Kwame Nkrumah Avenue, Harare",
+      "address": "Old Mutual Centre, Third Street/Jason Moyo Avenue",
       "city": "Harare",
-      "branch": "Main Branch"
-    },
-    "nmb": {
-      "name": "NMB Bank",
+      "branch": "Head Office"
+  },
+  "nmb": {
+      "name": "NMB Bank Limited",
       "link": "https://www.nmbz.co.zw",
       "icon": "nmb.png",
-      "address": "NMB House, 13th Avenue, Harare",
+      "address": "Unity Court, Corner First Street/Kwame Nkrumah Avenue",
       "city": "Harare",
-      "branch": "Main Branch"
-    },
-    "zimbabwe": {
-      "name": "Zimbabwe Investment Bank",
-      "link": "https://www.zib.co.zw",
-      "icon": "zib.png",
-      "address": "Zimbabwe Investment Bank Building, 21st Floor, Harare",
+      "branch": "Head Office"
+  },
+  "nedbank": {
+      "name": "Nedbank Zimbabwe Limited",
+      "link": "https://www.nedbank.co.zw",
+      "icon": "nedbank.png",
+      "address": "14 Central Avenue",
       "city": "Harare",
-      "branch": "Main Branch"
-    }
+      "branch": "Head Office"
   }
-  
+}

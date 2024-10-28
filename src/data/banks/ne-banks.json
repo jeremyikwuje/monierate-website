@@ -1,83 +1,66 @@
 {
-    "bni": {
-      "name": "Banque Nigérienne pour le Commerce et l'Industrie (BNI)",
-      "link": "https://www.bni.ne",
-      "icon": "bni.png",
-      "address": "Avenue Moussa Tavele, Niamey",
-      "city": "Niamey",
-      "branch": "Main Branch"
-    },
-    "bnpc": {
-      "name": "Banque Populaire du Niger (BPN)",
-      "link": "https://www.bnpc.ne",
-      "icon": "bnpc.png",
-      "address": "Avenue de l'Indépendance, Niamey",
-      "city": "Niamey",
-      "branch": "Head Office"
-    },
-    "bniim": {
-      "name": "Banque Internationale pour l'Industrie et le Commerce (BIIC)",
-      "link": "https://www.bniim.ne",
-      "icon": "bniim.png",
-      "address": "Rue des Banques, Niamey",
-      "city": "Niamey",
-      "branch": "Main Branch"
-    },
-    "sonibank": {
-      "name": "Société Nigérienne de Banque (SONIBANK)",
-      "link": "https://www.sonibank.ne",
-      "icon": "sonibank.png",
-      "address": "Avenue de la République, Niamey",
-      "city": "Niamey",
-      "branch": "Head Office"
-    },
-    "ecobank": {
-      "name": "Ecobank Niger",
-      "link": "https://www.ecobank.com",
-      "icon": "ecobank.png",
-      "address": "Avenue Moussa Tavele, Niamey",
-      "city": "Niamey",
-      "branch": "Main Branch"
-    },
-    "bmc": {
-      "name": "Banque de Mauritanie et du Commerce (BMC)",
-      "link": "https://www.bmc.ne",
-      "icon": "bmc.png",
-      "address": "Avenue de la Révolution, Niamey",
-      "city": "Niamey",
-      "branch": "Main Branch"
-    },
-    "cni": {
-      "name": "Caisse Nationale d'Investissement (CNI)",
-      "link": "https://www.cni.ne",
-      "icon": "cni.png",
-      "address": "Avenue de la Gare, Niamey",
-      "city": "Niamey",
-      "branch": "Head Office"
-    },
-    "sogeb": {
-      "name": "Société Générale de Banques au Niger (SOGEB)",
-      "link": "https://www.sogeb.ne",
-      "icon": "sogeb.png",
-      "address": "Avenue des Martyrs, Niamey",
-      "city": "Niamey",
-      "branch": "Main Branch"
-    },
-    "nigerbank": {
-      "name": "Niger Bank",
-      "link": "https://www.nigerbank.ne",
-      "icon": "nigerbank.png",
-      "address": "Avenue Moussa Tavele, Niamey",
-      "city": "Niamey",
-      "branch": "Head Office"
-    },
-    "tbank": {
-      "name": "Trust Bank Niger",
-      "link": "https://www.trustbank.ne",
-      "icon": "tbank.png",
-      "address": "Avenue de la Liberté, Niamey",
-      "city": "Niamey",
-      "branch": "Main Branch"
-    }
+  "boa": {
+    "name": "Bank Of Africa Niger",
+    "link": "https://www.boaniger.com",
+    "icon": "boa.png",
+    "address": "Rue du Gaweye, Niamey",
+    "city": "Niamey",
+    "branch": "Siège Social"
+  },
+  "sonibank": {
+    "name": "Société Nigérienne de Banque (SONIBANK)",
+    "link": "https://www.sonibank.ne",
+    "icon": "sonibank.png",
+    "address": "Rue de Gaweye, BP 891, Niamey",
+    "city": "Niamey",
+    "branch": "Siège"
+  },
+  "ecobank": {
+    "name": "Ecobank Niger",
+    "link": "https://www.ecobank.com/ne/personal-banking",
+    "icon": "ecobank.png",
+    "address": "Rue du Gaweye, BP 13804, Niamey",
+    "city": "Niamey",
+    "branch": "Agence Principale"
+  },
+  "banque_atlantique": {
+    "name": "Banque Atlantique Niger",
+    "link": "https://www.banqueatlantique.net/ne",
+    "icon": "batl.png",
+    "address": "Rue du Commerce, BP 375, Niamey",
+    "city": "Niamey",
+    "branch": "Siège"
+  },
+  "bcn": {
+    "name": "Banque Commerciale du Niger (BCN)",
+    "link": "https://www.bcn.ne",
+    "icon": "bcn.png",
+    "address": "Avenue de l'Indépendance, Niamey",
+    "city": "Niamey",
+    "branch": "Siège Social"
+  },
+  "bsic": {
+    "name": "Banque Sahélo-Saharienne pour l'Investissement et le Commerce (BSIC)",
+    "link": "https://www.bsic.ne",
+    "icon": "bsic.png",
+    "address": "Rue Heinrich Lubke, BP 382, Niamey",
+    "city": "Niamey",
+    "branch": "Siège"
+  },
+  "bagri": {
+    "name": "Banque Agricole du Niger (BAGRI)",
+    "link": "https://www.bagri-niger.ne",
+    "icon": "bagri.png",
+    "address": "Avenue de l'Indépendance, Niamey",
+    "city": "Niamey",
+    "branch": "Siège Social"
+  },
+  "coris": {
+    "name": "Coris Bank International Niger",
+    "link": "https://www.corisbank.ne",
+    "icon": "coris.png",
+    "address": "Boulevard Mali Béro, Niamey",
+    "city": "Niamey",
+    "branch": "Siège"
   }
-  
+}

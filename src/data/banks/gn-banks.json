@@ -1,83 +1,82 @@
 {
-    "bcrg": {
+  "bcrg": {
       "name": "Banque Centrale de la République de Guinée",
-      "link": "http://www.bcrg-guinee.org",
+      "link": "https://www.bcrg.gn",
       "icon": "bcrg.svg",
-      "address": "1 Avenue de la République, Conakry",
+      "address": "6ème Avenue, Boulevard du Commerce, Kaloum",
       "city": "Conakry",
-      "branch": "Main Branch"
-    },
-    "ecobank": {
-      "name": "Ecobank Guinea",
-      "link": "http://www.ecobank.com/guinea",
+      "branch": "Siège"
+  },
+  "ecobank": {
+      "name": "Ecobank Guinée",
+      "link": "https://www.ecobank.com/gn/personal-banking",
       "icon": "ecobank.svg",
-      "address": "Rue KA 011, Almamya, Kaloum, Conakry",
+      "address": "Immeuble Al Iman, Avenue de la République, Kaloum",
       "city": "Conakry",
-      "branch": "Main Branch"
-    },
-    "orabank": {
-      "name": "Orabank Guinea",
-      "link": "http://www.orabank.net",
+      "branch": "Siège"
+  },
+  "orabank": {
+      "name": "Orabank Guinée",
+      "link": "https://www.orabank.net/fr/filiale/guinee",
       "icon": "orabank.svg",
-      "address": "Kaloum, Conakry",
+      "address": "Immeuble Wonda, Avenue de la République, Kaloum",
       "city": "Conakry",
-      "branch": "Main Branch"
-    },
-    "banque_populaire": {
-      "name": "Banque Populaire de Guinée",
-      "link": "http://www.bpg-guinee.com",
+      "branch": "Siège"
+  },
+  "banque_populaire": {
+      "name": "Banque Populaire Maroco-Guinéenne",
+      "link": "https://www.bpmg.net",
       "icon": "banque_populaire.svg",
-      "address": "Corniche Sud, Conakry",
+      "address": "Immeuble Yara, Avenue de la République, Kaloum",
       "city": "Conakry",
-      "branch": "Main Branch"
-    },
-    "bsic": {
+      "branch": "Siège"
+  },
+  "bsic": {
       "name": "Banque Sahélo-Saharienne pour l'Investissement et le Commerce",
-      "link": "http://www.bsic-guinee.com",
+      "link": "https://www.bsicbank.com/guinea",
       "icon": "bsic.svg",
-      "address": "Boulevard de la République, Conakry",
+      "address": "Immeuble BSIC, Avenue de la République, Kaloum",
       "city": "Conakry",
-      "branch": "Main Branch"
-    },
-    "sgbci": {
+      "branch": "Siège"
+  },
+  "sgbg": {
       "name": "Société Générale Guinée",
-      "link": "http://www.societegenerale.com/guinee",
-      "icon": "sgbci.svg",
-      "address": "Kaloum, Conakry",
+      "link": "https://www.societegenerale.gn",
+      "icon": "sgbg.svg",
+      "address": "Avenue de la République, Kaloum",
       "city": "Conakry",
-      "branch": "Main Branch"
-    },
-    "uba": {
-      "name": "United Bank for Africa Guinea",
-      "link": "http://www.ubagroup.com/guinea",
+      "branch": "Siège"
+  },
+  "uba": {
+      "name": "United Bank for Africa Guinée",
+      "link": "https://www.ubagroup.com/guinea",
       "icon": "uba.svg",
-      "address": "Kaloum, Conakry",
+      "address": "Immeuble UBA, Avenue de la République, Kaloum",
       "city": "Conakry",
-      "branch": "Main Branch"
-    },
-    "bicigui": {
+      "branch": "Siège"
+  },
+  "bicigui": {
       "name": "Banque Internationale pour le Commerce et l'Industrie de Guinée",
-      "link": "http://www.bicigui.com",
+      "link": "https://www.bicigui.org",
       "icon": "bicigui.svg",
-      "address": "Conakry, Guinea",
+      "address": "Avenue de la République, Kaloum",
       "city": "Conakry",
-      "branch": "Main Branch"
-    },
-    "biciab": {
-      "name": "Banque Internationale pour le Commerce et l'Industrie en Afrique",
-      "link": "http://www.biciab.com",
-      "icon": "biciab.svg",
-      "address": "Kaloum, Conakry",
+      "branch": "Siège"
+  },
+  "vista": {
+      "name": "Vista Bank Guinée",
+      "link": "https://www.vistabank.com/guinea",
+      "icon": "vista.svg",
+      "address": "Immeuble Vista, Avenue de la République, Kaloum",
       "city": "Conakry",
-      "branch": "Main Branch"
-    },
-    "bci": {
-      "name": "Banque Commerciale Internationale",
-      "link": "http://www.bcigroupe.com",
-      "icon": "bci.svg",
-      "address": "Conakry, Guinea",
+      "branch": "Siège"
+  },
+  "afriland": {
+      "name": "Afriland First Bank Guinée",
+      "link": "https://www.afrilandfirstbank.com/index.php/en/guinea",
+      "icon": "afriland.svg",
+      "address": "Immeuble Afriland, Avenue de la République, Kaloum",
       "city": "Conakry",
-      "branch": "Main Branch"
-    }
+      "branch": "Siège"
   }
-  
+}

@@ -1,156 +1,60 @@
 {
-    "banco_bai": {
-      "swift": [
-        "BAICAOAX"
-      ],
+  "banco_bai": {
+      "swift": ["BAIPAOLU"],
       "ussd": {
-        "start": "*100#",
-        "transfer_to_same_bank": "*100*amount*account_number#",
-        "transfer_other_banks": "*100*amount*account_number*bank_code#",
-        "airtime_self": "*100*amount#",
-        "airtime_others": "*100*amount*phone_number#",
-        "balance": "*100*1#",
-        "bvn": null,
-        "update_bvn_details": null,
-        "stop_debit_transactions": null,
-        "activate_code": null
+          "start": "*402#",
+          "transfer_to_same_bank": null,
+          "transfer_other_banks": null,
+          "airtime_self": null,
+          "airtime_others": null,
+          "balance": null,
+          "bvn": null,
+          "update_bvn_details": null,
+          "stop_debit_transactions": null,
+          "activate_code": null
       }
-    },
-    "banco_angola": {
-      "swift": [
-        "BAINGAOX"
-      ],
+  },
+  "banco_nacional": {
+      "swift": ["BNARAOLU"],
+      "ussd": null
+  },
+  "banco_bfa": {
+      "swift": ["BFMXAOLU"],
+      "ussd": null
+  },
+  "banco_bic": {
+      "swift": ["BICKAOAU"],
+      "ussd": null
+  },
+  "banco_atlantico": {
+      "swift": ["ATLOAOLU"],
       "ussd": {
-        "start": "*200#",
-        "transfer_to_same_bank": "*200*amount*account_number#",
-        "transfer_other_banks": "*200*amount*account_number*bank_code#",
-        "airtime_self": "*200*amount#",
-        "airtime_others": "*200*amount*phone_number#",
-        "balance": "*200*1#",
-        "bvn": null,
-        "update_bvn_details": null,
-        "stop_debit_transactions": null,
-        "activate_code": null
+          "start": "*400#",
+          "transfer_to_same_bank": null,
+          "transfer_other_banks": null,
+          "airtime_self": null,
+          "airtime_others": null,
+          "balance": null,
+          "bvn": null,
+          "update_bvn_details": null,
+          "stop_debit_transactions": null,
+          "activate_code": null
       }
-    },
-    "banco_de_fomento": {
-      "swift": [
-        "BFOMAOAX"
-      ],
-      "ussd": {
-        "start": "*300#",
-        "transfer_to_same_bank": "*300*amount*account_number#",
-        "transfer_other_banks": "*300*amount*account_number*bank_code#",
-        "airtime_self": "*300*amount#",
-        "airtime_others": "*300*amount*phone_number#",
-        "balance": "*300*1#",
-        "bvn": null,
-        "update_bvn_details": null,
-        "stop_debit_transactions": null,
-        "activate_code": null
-      }
-    },
-    "banco_bic": {
-      "swift": [
-        "BICAAOAX"
-      ],
-      "ussd": {
-        "start": "*400#",
-        "transfer_to_same_bank": "*400*amount*account_number#",
-        "transfer_other_banks": "*400*amount*account_number*bank_code#",
-        "airtime_self": "*400*amount#",
-        "airtime_others": "*400*amount*phone_number#",
-        "balance": "*400*1#",
-        "bvn": null,
-        "update_bvn_details": null,
-        "stop_debit_transactions": null,
-        "activate_code": null
-      }
-    },
-    "banco_millennium": {
-      "swift": [
-        "BMILAOAX"
-      ],
-      "ussd": {
-        "start": "*500#",
-        "transfer_to_same_bank": "*500*amount*account_number#",
-        "transfer_other_banks": "*500*amount*account_number*bank_code#",
-        "airtime_self": "*500*amount#",
-        "airtime_others": "*500*amount*phone_number#",
-        "balance": "*500*1#",
-        "bvn": null,
-        "update_bvn_details": null,
-        "stop_debit_transactions": null,
-        "activate_code": null
-      }
-    },
-    "banco_sol": {
-      "swift": [
-        "BSOLAOAX"
-      ],
-      "ussd": {
-        "start": "*600#",
-        "transfer_to_same_bank": "*600*amount*account_number#",
-        "transfer_other_banks": "*600*amount*account_number*bank_code#",
-        "airtime_self": "*600*amount#",
-        "airtime_others": "*600*amount*phone_number#",
-        "balance": "*600*1#",
-        "bvn": null,
-        "update_bvn_details": null,
-        "stop_debit_transactions": null,
-        "activate_code": null
-      }
-    },
-    "banco_primero": {
-      "swift": [
-        "BPRIAOAX"
-      ],
-      "ussd": {
-        "start": "*700#",
-        "transfer_to_same_bank": "*700*amount*account_number#",
-        "transfer_other_banks": "*700*amount*account_number*bank_code#",
-        "airtime_self": "*700*amount#",
-        "airtime_others": "*700*amount*phone_number#",
-        "balance": "*700*1#",
-        "bvn": null,
-        "update_bvn_details": null,
-        "stop_debit_transactions": null,
-        "activate_code": null
-      }
-    },
-    "banco_de_comercio": {
-      "swift": [
-        "BCCAAOAX"
-      ],
-      "ussd": {
-        "start": "*800#",
-        "transfer_to_same_bank": "*800*amount*account_number#",
-        "transfer_other_banks": "*800*amount*account_number*bank_code#",
-        "airtime_self": "*800*amount#",
-        "airtime_others": "*800*amount*phone_number#",
-        "balance": "*800*1#",
-        "bvn": null,
-        "update_bvn_details": null,
-        "stop_debit_transactions": null,
-        "activate_code": null
-      }
-    },
-    "banco_de_reconstrucao": {
-      "swift": [
-        "BRCOAOAX"
-      ],
-      "ussd": {
-        "start": "*900#",
-        "transfer_to_same_bank": "*900*amount*account_number#",
-        "transfer_other_banks": "*900*amount*account_number*bank_code#",
-        "airtime_self": "*900*amount#",
-        "airtime_others": "*900*amount*phone_number#",
-        "balance": "*900*1#",
-        "bvn": null,
-        "update_bvn_details": null,
-        "stop_debit_transactions": null,
-        "activate_code": null
-      }
-    }
+  },
+  "banco_sol": {
+      "swift": ["SOLAOLUL"],
+      "ussd": null
+  },
+  "banco_bpc": {
+      "swift": ["BPCLAOLU"],
+      "ussd": null
+  },
+  "banco_bda": {
+      "swift": ["BDALAOLU"],
+      "ussd": null
+  },
+  "banco_sba": {
+      "swift": ["SBICAOLU"],
+      "ussd": null
   }
-  
+}

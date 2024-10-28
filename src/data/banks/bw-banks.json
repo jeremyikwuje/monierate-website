@@ -1,75 +1,50 @@
 {
-    "first_nat_bk": {
-      "name": "First National Bank Botswana",
-      "link": "https://www.fnbbotswana.co.bw",
-      "icon": "first_nat_bk.svg",
-      "address": "Plot 506, Khama Crescent, Gaborone",
-      "city": "Gaborone",
-      "branch": "Gaborone Branch"
-    },
-    "stanbic_bk": {
-      "name": "Stanbic Bank Botswana",
-      "link": "https://www.stanbicbank.co.bw",
-      "icon": "stanbic_bk.svg",
-      "address": "Plot 501, Khama Crescent, Gaborone",
-      "city": "Gaborone",
-      "branch": "Gaborone Branch"
-    },
-    "absa_botswana": {
-      "name": "Absa Botswana",
-      "link": "https://www.absa.co.bw",
-      "icon": "absa_botswana.svg",
-      "address": "Plot 510, Khama Crescent, Gaborone",
-      "city": "Gaborone",
-      "branch": "Gaborone Branch"
-    },
-    "fnb_botswana": {
-      "name": "FNB Botswana",
-      "link": "https://www.fnbbotswana.co.bw",
-      "icon": "fnb_botswana.svg",
-      "address": "Plot 505, Khama Crescent, Gaborone",
-      "city": "Gaborone",
-      "branch": "Gaborone Branch"
-    },
-    "bank_of_botswana": {
-      "name": "Bank of Botswana",
-      "link": "https://www.bankofbotswana.bw",
-      "icon": "bank_of_botswana.svg",
-      "address": "Plot 507, Khama Crescent, Gaborone",
-      "city": "Gaborone",
-      "branch": "Gaborone Branch"
-    },
-    "dfc_botswana": {
-      "name": "DFC Botswana",
-      "link": "https://www.dfc.co.bw",
-      "icon": "dfc_botswana.svg",
-      "address": "Plot 508, Khama Crescent, Gaborone",
-      "city": "Gaborone",
-      "branch": "Gaborone Branch"
-    },
-    "bank_gaborone": {
-      "name": "Bank Gaborone",
-      "link": "https://www.bankgaborone.bw",
-      "icon": "bank_gaborone.svg",
-      "address": "Plot 509, Khama Crescent, Gaborone",
-      "city": "Gaborone",
-      "branch": "Gaborone Branch"
-    },
-    "first_pacific_bank": {
-      "name": "First Pacific Bank",
-      "link": "https://www.firstpacific.bw",
-      "icon": "first_pacific_bank.svg",
-      "address": "Plot 511, Khama Crescent, Gaborone",
-      "city": "Gaborone",
-      "branch": "Gaborone Branch"
-    },
-    "bank_of_achievement": {
-      "name": "Bank of Achievement",
-      "link": "https://www.bankofachievement.bw",
-      "icon": "bank_of_achievement.svg",
-      "address": "Plot 512, Khama Crescent, Gaborone",
-      "city": "Gaborone",
-      "branch": "Gaborone Branch"
-    }
+  "fnb_botswana": {
+    "name": "First National Bank Botswana",
+    "link": "https://www.fnbbotswana.co.bw",
+    "icon": "fnb.webp",
+    "address": "Plot 54368, First Place, CBD, Gaborone",
+    "city": "Gaborone",
+    "branch": "Main Branch"
+  },
+  "stanbic_bk": {
+    "name": "Stanbic Bank Botswana",
+    "link": "https://www.stanbicbank.co.bw",
+    "icon": "stanbic.jpeg",
+    "address": "Plot 50672, Stanbic House, Industrial, Gaborone",
+    "city": "Gaborone",
+    "branch": "Head Office"
+  },
+  "absa_botswana": {
+    "name": "Absa Bank Botswana",
+    "link": "https://www.absa.co.bw",
+    "icon": "absa.webp",
+    "address": "5th Floor, Building 4, Prime Plaza, Plot 74358, CBD, Gaborone",
+    "city": "Gaborone",
+    "branch": "Main Branch"
+  },
+  "bank_of_botswana": {
+    "name": "Bank of Botswana",
+    "link": "https://www.bankofbotswana.bw",
+    "icon": "bank_of_botswana.png",
+    "address": "Plot 17938, Khama Crescent, Main Mall, Gaborone",
+    "city": "Gaborone",
+    "branch": "Head Office"
+  },
+  "bank_gaborone": {
+    "name": "Bank Gaborone",
+    "link": "https://www.bankgaborone.co.bw",
+    "icon": "bank_gaborone.png",
+    "address": "Plot 5129, Queens Road, Main Mall, Gaborone",
+    "city": "Gaborone",
+    "branch": "Main Branch"
+  },
+  "access_bank": {
+    "name": "Access Bank Botswana",
+    "link": "https://www.accessbankplc.com/bw",
+    "icon": "accessbank.svg",
+    "address": "Plot 54358, CBD, Gaborone",
+    "city": "Gaborone",
+    "branch": "Main Branch"
   }
-  
+}

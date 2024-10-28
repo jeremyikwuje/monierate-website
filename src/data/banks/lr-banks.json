@@ -1,83 +1,58 @@
 {
-    "ecobank": {
-      "name": "Ecobank Liberia",
-      "link": "https://www.ecobank.com",
+  "ecobank": {
+      "name": "Ecobank Liberia Limited",
+      "link": "https://ecobank.com/lr/personal-banking",
       "icon": "ecobank.png",
-      "address": "Ashmun Street",
+      "address": "Ashmun & Randall Streets",
       "city": "Monrovia",
-      "branch": "Ashmun Street Branch"
-    },
-    "gtbank": {
-      "name": "Guaranty Trust Bank Liberia",
-      "link": "https://www.gtbank.com.lr",
+      "branch": "Head Office"
+  },
+  "gtbank": {
+      "name": "Guaranty Trust Bank Liberia Ltd",
+      "link": "https://www.gtbank.com/liberia",
       "icon": "gtbank.png",
       "address": "13th Street, Sinkor",
       "city": "Monrovia",
       "branch": "13th Street Branch"
-    },
-    "uba": {
-      "name": "United Bank for Africa (UBA) Liberia",
-      "link": "https://www.ubagroup.com",
+  },
+  "uba": {
+      "name": "United Bank for Africa Liberia Limited",
+      "link": "https://www.ubagroup.com/lr/",
       "icon": "uba.png",
-      "address": "Broad Street",
+      "address": "Broad & Nelson Streets",
       "city": "Monrovia",
-      "branch": "Broad Street Branch"
-    },
-    "lbdibank": {
-      "name": "Liberian Bank for Development and Investment (LBDI)",
+      "branch": "Head Office"
+  },
+  "lbdi": {
+      "name": "Liberian Bank for Development & Investment",
       "link": "https://www.lbdi.net",
       "icon": "lbdi.png",
       "address": "9th Street, Sinkor",
       "city": "Monrovia",
       "branch": "Head Office"
-    },
-    "africanbank": {
-      "name": "African Bank Liberia",
-      "link": "https://www.africanbankliberia.com",
-      "icon": "africanbank.png",
-      "address": "Tubman Boulevard, Sinkor",
-      "city": "Monrovia",
-      "branch": "Tubman Boulevard Branch"
-    },
-    "internationalbank": {
-      "name": "International Bank (IB) Liberia",
-      "link": "https://www.iblbank.com",
-      "icon": "ib.png",
+  },
+  "iblliberia": {
+      "name": "International Bank Liberia Limited",
+      "link": "https://www.ibliberia.com",
+      "icon": "ibl.png",
       "address": "Broad Street",
-      "city": "Monrovia",
-      "branch": "Main Branch"
-    },
-    "globalbank": {
-      "name": "Global Bank Liberia",
-      "link": "https://www.globalbanklr.com",
-      "icon": "globalbank.png",
-      "address": "Broad Street",
-      "city": "Monrovia",
-      "branch": "Broad Street Branch"
-    },
-    "fidelitybank": {
-      "name": "Fidelity Bank Liberia",
-      "link": "https://www.fidelitybank.com.lr",
-      "icon": "fidelitybank.png",
-      "address": "9th Street, Sinkor",
       "city": "Monrovia",
       "branch": "Head Office"
-    },
-    "firstbank": {
-      "name": "First International Bank Liberia",
-      "link": "https://www.firstbank.com.lr",
-      "icon": "firstbank.png",
-      "address": "Broad Street",
+  },
+  "gblliberia": {
+      "name": "Global Bank Liberia Limited",
+      "link": "https://www.globalbanklib.com",
+      "icon": "gbl.png",
+      "address": "5th Street, Sinkor",
       "city": "Monrovia",
-      "branch": "Main Branch"
-    },
-    "wellsfargo": {
-      "name": "Wells Fargo Liberia",
-      "link": "https://www.wellsfargo.com",
-      "icon": "wellsfargo.png",
-      "address": "Tubman Boulevard",
+      "branch": "Head Office"
+  },
+  "accessbank": {
+      "name": "Access Bank Liberia Limited",
+      "link": "https://www.accessbank.com.lr",
+      "icon": "accessbank.png",
+      "address": "20th Street, Sinkor",
       "city": "Monrovia",
-      "branch": "Tubman Boulevard Branch"
-    }
+      "branch": "Head Office"
   }
-  
+}

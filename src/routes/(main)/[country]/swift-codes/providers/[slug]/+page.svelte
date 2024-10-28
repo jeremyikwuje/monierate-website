@@ -4,6 +4,13 @@
 	let bankInfo = data.bankInfo;
 	let countryName = data.countryName;
 	let countryCode = data.countryCode;
+
+	function handleImageError(event: Event) {
+		const img = event.currentTarget as HTMLImageElement;
+		if (img.src !== '/icons/default.png') {
+			img.src = '/icons/default.png'; // Apply fallback only if it's not already set
+		}
+	}
 </script>
 
 <svelte:head>
@@ -28,6 +35,7 @@
 					src="/icons/{bankInfo.icon}"
 					class="rounded-full"
 					alt="{bankInfo.name} icon"
+					on:error={handleImageError}
 				/>
 			</span>
 			<h1 class="text-2xl md:text-4xl py-5">

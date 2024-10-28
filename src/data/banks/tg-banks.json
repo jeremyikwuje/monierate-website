@@ -1,83 +1,66 @@
 {
-    "togobank": {
-      "name": "Togo Bank",
-      "link": "https://www.togobank.tg",
-      "icon": "togobank.png",
-      "address": "Centre d'Affaires, Avenue de la République, Lomé",
-      "city": "Lomé",
-      "branch": "Main Branch"
-    },
-    "ecobank": {
-      "name": "Ecobank Togo",
-      "link": "https://www.ecobank.com",
-      "icon": "ecobank.png",
-      "address": "Avenue Moussa Tavele, Lomé",
-      "city": "Lomé",
-      "branch": "Main Branch"
-    },
-    "banqueatlantique": {
-      "name": "Banque Atlantique Togo",
-      "link": "https://www.banqueatlantique.tg",
-      "icon": "banqueatlantique.png",
-      "address": "Rue de la Libération, Lomé",
-      "city": "Lomé",
-      "branch": "Main Branch"
-    },
-    "bni": {
-      "name": "Banque Nationale d'Investissement (BNI)",
-      "link": "https://www.bni.tg",
-      "icon": "bni.png",
-      "address": "Avenue de la République, Lomé",
-      "city": "Lomé",
-      "branch": "Main Branch"
-    },
-    "utb": {
-      "name": "Union Togolaise de Banque (UTB)",
-      "link": "https://www.utb.tg",
-      "icon": "utb.png",
-      "address": "Rue du 24 Janvier, Lomé",
-      "city": "Lomé",
-      "branch": "Main Branch"
-    },
-    "bicec": {
-      "name": "BICEC Togo",
-      "link": "https://www.bicec.tg",
-      "icon": "bicec.png",
-      "address": "Avenue Jean-Paul II, Lomé",
-      "city": "Lomé",
-      "branch": "Main Branch"
-    },
-    "bmci": {
-      "name": "Banque de la Méditerranée et des Caraïbes (BMCI)",
-      "link": "https://www.bmci.tg",
-      "icon": "bmci.png",
-      "address": "Avenue de la Réunification, Lomé",
-      "city": "Lomé",
-      "branch": "Main Branch"
-    },
-    "sociétégenerale": {
-      "name": "Société Générale Togo",
-      "link": "https://www.societegenerale.tg",
-      "icon": "sociétégenerale.png",
-      "address": "Avenue de la Réunification, Lomé",
-      "city": "Lomé",
-      "branch": "Main Branch"
-    },
-    "banquesocred": {
-      "name": "Banque Socred",
-      "link": "https://www.banquesocred.tg",
-      "icon": "banquesocred.png",
-      "address": "Avenue de la République, Lomé",
-      "city": "Lomé",
-      "branch": "Main Branch"
-    },
-    "banquefrihet": {
-      "name": "Banque Frihet",
-      "link": "https://www.banquefrihet.tg",
-      "icon": "banquefrihet.png",
-      "address": "Avenue du Togo, Lomé",
-      "city": "Lomé",
-      "branch": "Main Branch"
-    }
+  "btd": {
+    "name": "Banque Togolaise de Développement (BTD)",
+    "link": "https://www.btd.tg",
+    "icon": "btd.png",
+    "address": "Avenue de la Libération, Lomé",
+    "city": "Lomé",
+    "branch": "Siège"
+  },
+  "ecobank": {
+    "name": "Ecobank Togo",
+    "link": "https://www.ecobanktogo.com",
+    "icon": "ecobank.png",
+    "address": "20 Avenue Sylvanus Olympio, Lomé",
+    "city": "Lomé",
+    "branch": "Siège"
+  },
+  "banque_atlantique": {
+    "name": "Banque Atlantique Togo",
+    "link": "https://www.atlantique.net/tg",
+    "icon": "banque-atlantique.png",
+    "address": "13 Avenue Sylvanus Olympio, Lomé",
+    "city": "Lomé",
+    "branch": "Siège"
+  },
+  "orabank": {
+    "name": "Orabank Togo",
+    "link": "https://www.orabank.net/tg",
+    "icon": "orabank.png",
+    "address": "2983 Avenue de la Libération, Lomé",
+    "city": "Lomé",
+    "branch": "Siège"
+  },
+  "utb": {
+    "name": "Union Togolaise de Banque (UTB)",
+    "link": "https://www.utb.tg",
+    "icon": "utb.png",
+    "address": "69 Rue du Commerce, Lomé",
+    "city": "Lomé",
+    "branch": "Siège"
+  },
+  "coris_bank": {
+    "name": "Coris Bank International Togo",
+    "link": "https://www.corisbank.tg",
+    "icon": "coris-bank.png",
+    "address": "Boulevard du 13 Janvier, Lomé",
+    "city": "Lomé",
+    "branch": "Siège"
+  },
+  "societe_generale": {
+    "name": "Société Générale Togo",
+    "link": "https://www.societegenerale.tg",
+    "icon": "societe-generale.png",
+    "address": "2983 Avenue de la Libération, Lomé",
+    "city": "Lomé",
+    "branch": "Siège"
+  },
+  "nsia_banque": {
+    "name": "NSIA Banque Togo",
+    "link": "https://www.nsiabanque.tg",
+    "icon": "nsia-banque.png",
+    "address": "Boulevard du Mono, Lomé",
+    "city": "Lomé",
+    "branch": "Siège"
   }
-  
+}

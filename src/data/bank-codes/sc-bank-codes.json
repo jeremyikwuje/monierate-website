@@ -1,83 +1,54 @@
 {
-    "sbc": {
-      "swift": ["SBCSCSZ"],
+  "cbs": {
+      "swift": ["CBSESCSC"],
+      "ussd": null
+  },
+  "nbs": {
+      "swift": ["NOVHSCSC"],
       "ussd": {
-        "start": "*123#",
-        "balance": "*123*1#",
-        "transfer_to_same_bank": "*123*amount*account_number#"
+          "start": "*167#",
+          "balance": "*167*1#",
+          "transfer_to_same_bank": "*167*2*account_number*amount#"
       }
-    },
-    "nbs": {
-      "swift": ["NBSSCSZ"],
+  },
+  "mcb": {
+      "swift": ["MCBLSCSC"],
       "ussd": {
-        "start": "*234#",
-        "balance": "*234*1#",
-        "transfer_to_same_bank": "*234*amount*account_number#"
+          "start": "*222#",
+          "balance": "*222*1#",
+          "transfer_to_same_bank": "*222*2*account_number*amount#"
       }
-    },
-    "scb": {
-      "swift": ["SCBSCSZ"],
+  },
+  "barclays": {
+      "swift": ["BARCSCSC"],
       "ussd": {
-        "start": "*345#",
-        "balance": "*345*1#",
-        "transfer_to_same_bank": "*345*amount*account_number#"
+          "start": "*247#",
+          "balance": "*247*1#",
+          "transfer_to_same_bank": "*247*2*account_number*amount#"
       }
-    },
-    "cbs": {
-      "swift": ["CBSSCSZ"],
+  },
+  "bmi": {
+      "swift": ["BMIHSCSC"],
+      "ussd": null
+  },
+  "scb": {
+      "swift": ["SYCBSCSC"],
       "ussd": {
-        "start": "*456#",
-        "balance": "*456*1#",
-        "transfer_to_same_bank": "*456*amount*account_number#"
+          "start": "*322#",
+          "balance": "*322*1#",
+          "transfer_to_same_bank": "*322*2*account_number*amount#"
       }
-    },
-    "mahe": {
-      "swift": ["MAHESCSZ"],
+  },
+  "al_salam": {
+      "swift": ["ASSBSCSC"],
       "ussd": {
-        "start": "*567#",
-        "balance": "*567*1#",
-        "transfer_to_same_bank": "*567*amount*account_number#"
+          "start": "*786#",
+          "balance": "*786*1#",
+          "transfer_to_same_bank": "*786*2*account_number*amount#"
       }
-    },
-    "banco": {
-      "swift": ["BNUCXSZ"],
-      "ussd": {
-        "start": "*678#",
-        "balance": "*678*1#",
-        "transfer_to_same_bank": "*678*amount*account_number#"
-      }
-    },
-    "sbs": {
-      "swift": ["SBSSCSZ"],
-      "ussd": {
-        "start": "*789#",
-        "balance": "*789*1#",
-        "transfer_to_same_bank": "*789*amount*account_number#"
-      }
-    },
-    "ncb": {
-      "swift": ["NCBSCXZ"],
-      "ussd": {
-        "start": "*890#",
-        "balance": "*890*1#",
-        "transfer_to_same_bank": "*890*amount*account_number#"
-      }
-    },
-    "cbsaf": {
-      "swift": ["CBSAFCSZ"],
-      "ussd": {
-        "start": "*901#",
-        "balance": "*901*1#",
-        "transfer_to_same_bank": "*901*amount*account_number#"
-      }
-    },
-    "pnl": {
-      "swift": ["PNLCSZ"],
-      "ussd": {
-        "start": "*012#",
-        "balance": "*012*1#",
-        "transfer_to_same_bank": "*012*amount*account_number#"
-      }
-    }
+  },
+  "sbs": {
+      "swift": ["SBSLSCSC"],
+      "ussd": null
   }
-  
+}

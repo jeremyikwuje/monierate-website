@@ -1,83 +1,82 @@
 {
-    "slb": {
-      "name": "Sierra Leone Bank",
-      "link": "https://www.slb.sl",
-      "icon": "slb.png",
-      "address": "68, Charlotte Street, Freetown",
-      "city": "Freetown",
-      "branch": "Head Office"
-    },
-    "afrb": {
-      "name": "African Renaissance Bank",
-      "link": "https://www.afrb.sl",
-      "icon": "afrb.png",
-      "address": "7, Kissy Road, Freetown",
-      "city": "Freetown",
-      "branch": "Main Branch"
-    },
-    "skgb": {
+  "slcb": {
       "name": "Sierra Leone Commercial Bank",
       "link": "https://www.slcb.com",
-      "icon": "skgb.png",
-      "address": "47, Campbell Street, Freetown",
+      "icon": "slcb.png",
+      "address": "25-27 Siaka Stevens Street, Freetown",
       "city": "Freetown",
-      "branch": "Main Branch"
-    },
-    "ecobank": {
+      "branch": "Head Office"
+  },
+  "rokel": {
+      "name": "Rokel Commercial Bank",
+      "link": "https://www.rokelbank.sl",
+      "icon": "rokel.png",
+      "address": "25/27 Siaka Stevens Street, Freetown",
+      "city": "Freetown",
+      "branch": "Head Office"
+  },
+  "accessbank": {
+      "name": "Access Bank Sierra Leone",
+      "link": "https://www.accessbank.com/sl",
+      "icon": "accessbank.png",
+      "address": "30 Siaka Stevens Street, Freetown",
+      "city": "Freetown",
+      "branch": "Head Office"
+  },
+  "ecobank": {
       "name": "Ecobank Sierra Leone",
-      "link": "https://www.ecobank.com",
+      "link": "https://www.ecobank.com/sl",
       "icon": "ecobank.png",
-      "address": "90, Campbell Street, Freetown",
+      "address": "7 Lightfoot Boston Street, Freetown",
       "city": "Freetown",
       "branch": "Head Office"
-    },
-    "frb": {
+  },
+  "fib": {
       "name": "First International Bank",
-      "link": "https://www.firstinternationalbank.sl",
-      "icon": "frb.png",
-      "address": "57, Main Motor Road, Freetown",
-      "city": "Freetown",
-      "branch": "Main Branch"
-    },
-    "zenith": {
-      "name": "Zenith Bank Sierra Leone",
-      "link": "https://www.zenithbank.com/sl",
-      "icon": "zenith.png",
-      "address": "Broadway, Freetown",
+      "link": "https://www.fibsl.com",
+      "icon": "fib.png",
+      "address": "31A Siaka Stevens Street, Freetown",
       "city": "Freetown",
       "branch": "Head Office"
-    },
-    "bsl": {
+  },
+  "zenith": {
+      "name": "Zenith Bank Sierra Leone",
+      "link": "https://www.zenithbank.com.sl",
+      "icon": "zenith.png",
+      "address": "14/15 Charlotte Street, Freetown",
+      "city": "Freetown",
+      "branch": "Head Office"
+  },
+  "bsl": {
       "name": "Bank of Sierra Leone",
       "link": "https://www.bsl.gov.sl",
       "icon": "bsl.png",
-      "address": "11, BSL Building, Freetown",
-      "city": "Freetown",
-      "branch": "Main Branch"
-    },
-    "mcb": {
-      "name": "Microfinance Bank",
-      "link": "https://www.mcb.sl",
-      "icon": "mcb.png",
-      "address": "10, Main Street, Freetown",
+      "address": "30 Siaka Stevens Street, Freetown",
       "city": "Freetown",
       "branch": "Head Office"
-    },
-    "sldb": {
+  },
+  "union": {
+      "name": "Union Trust Bank",
+      "link": "https://www.utbsl.com",
+      "icon": "utb.png",
+      "address": "14 Charlotte Street, Freetown",
+      "city": "Freetown",
+      "branch": "Head Office"
+  },
+  "sldb": {
       "name": "Sierra Leone Development Bank",
       "link": "https://www.sldb.sl",
       "icon": "sldb.png",
-      "address": "4, Siaka Stevens Street, Freetown",
-      "city": "Freetown",
-      "branch": "Main Branch"
-    },
-    "ssl": {
-      "name": "Standard Chartered Bank Sierra Leone",
-      "link": "https://www.sc.com/sl",
-      "icon": "ssl.png",
-      "address": "40, Walpole Street, Freetown",
+      "address": "27 Siaka Stevens Street, Freetown",
       "city": "Freetown",
       "branch": "Head Office"
-    }
+  },
+  "scb": {
+      "name": "Standard Chartered Bank Sierra Leone",
+      "link": "https://www.sc.com/sl",
+      "icon": "scb.png",
+      "address": "9 & 11 Lightfoot Boston Street, Freetown",
+      "city": "Freetown",
+      "branch": "Head Office"
   }
-  
+}

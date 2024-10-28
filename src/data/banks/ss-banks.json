@@ -1,83 +1,50 @@
 {
-    "dbs": {
-      "name": "Darfur Bank South Sudan",
-      "link": "https://www.darfurbank.com",
-      "icon": "dbs.png",
-      "address": "Juba, South Sudan",
-      "city": "Juba",
-      "branch": "Head Office"
-    },
-    "equity": {
-      "name": "Equity Bank South Sudan",
-      "link": "https://www.equitybankgroup.com",
-      "icon": "equity.png",
-      "address": "Juba, South Sudan",
-      "city": "Juba",
-      "branch": "Main Branch"
-    },
-    "nile": {
-      "name": "Nile Bank",
-      "link": "https://www.nilebank.com",
-      "icon": "nile.png",
-      "address": "Juba, South Sudan",
-      "city": "Juba",
-      "branch": "Main Branch"
-    },
-    "sbb": {
-      "name": "South Sudan Bank",
-      "link": "https://www.southsudanbank.com",
-      "icon": "sbb.png",
-      "address": "Juba, South Sudan",
-      "city": "Juba",
-      "branch": "Head Office"
-    },
-    "cocobank": {
-      "name": "Coco Bank",
-      "link": "https://www.cocobank.com",
-      "icon": "cocobank.png",
-      "address": "Juba, South Sudan",
-      "city": "Juba",
-      "branch": "Main Branch"
-    },
-    "first": {
-      "name": "First Bank South Sudan",
-      "link": "https://www.firstbank.com",
-      "icon": "first.png",
-      "address": "Juba, South Sudan",
-      "city": "Juba",
-      "branch": "Main Branch"
-    },
-    "bankofsouthsudan": {
-      "name": "Bank of South Sudan",
-      "link": "https://www.boss.gov.ss",
-      "icon": "bankofsouthsudan.png",
-      "address": "Juba, South Sudan",
-      "city": "Juba",
-      "branch": "Head Office"
-    },
-    "southsudancommercial": {
-      "name": "South Sudan Commercial Bank",
-      "link": "https://www.sscbank.com",
-      "icon": "southsudancommercial.png",
-      "address": "Juba, South Sudan",
-      "city": "Juba",
-      "branch": "Main Branch"
-    },
-    "deutsch": {
-      "name": "Deutsche Bank South Sudan",
-      "link": "https://www.db.com",
-      "icon": "deutsch.png",
-      "address": "Juba, South Sudan",
-      "city": "Juba",
-      "branch": "Head Office"
-    },
-    "umb": {
-      "name": "United Money Bank",
-      "link": "https://www.unitedmoneybank.com",
-      "icon": "umb.png",
-      "address": "Juba, South Sudan",
-      "city": "Juba",
-      "branch": "Main Branch"
-    }
+  "boss": {
+    "name": "Bank of South Sudan",
+    "link": "https://boss.gov.ss",
+    "icon": "boss.png",
+    "address": "BOSS Building, Ministries Road",
+    "city": "Juba",
+    "branch": "Head Office"
+  },
+  "equity": {
+    "name": "Equity Bank South Sudan Limited",
+    "link": "https://southsudan.equitybankgroup.com",
+    "icon": "equity.png",
+    "address": "UAP Building, Ministry Road",
+    "city": "Juba",
+    "branch": "Head Office"
+  },
+  "kc": {
+    "name": "Kenya Commercial Bank South Sudan Ltd",
+    "link": "https://ss.kcbgroup.com",
+    "icon": "kcb.png",
+    "address": "KCB Plaza, Ministry Road",
+    "city": "Juba",
+    "branch": "Head Office"
+  },
+  "cooperative": {
+    "name": "Co-operative Bank of South Sudan",
+    "link": "https://www.co-opbank.ss",
+    "icon": "cooperative.png",
+    "address": "Cooperative House, Unity Avenue",
+    "city": "Juba",
+    "branch": "Main Branch"
+  },
+  "ecobank": {
+    "name": "Ecobank South Sudan",
+    "link": "https://ecobank.com/ss",
+    "icon": "ecobank.png",
+    "address": "Koita Complex Building",
+    "city": "Juba",
+    "branch": "Head Office"
+  },
+  "afriland": {
+    "name": "Afriland First Bank",
+    "link": "https://www.afrilandfirstbank.com/ss",
+    "icon": "afriland.png",
+    "address": "Juba Town",
+    "city": "Juba",
+    "branch": "Main Branch"
   }
-  
+}

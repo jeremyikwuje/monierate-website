@@ -1,83 +1,82 @@
 {
-    "dahabshiil": {
-      "name": "Dahabshiil Bank",
-      "link": "https://www.dahabshiil.com",
-      "icon": "dahabshiil.png",
-      "address": "Hargeisa, Somaliland",
-      "city": "Hargeisa",
-      "branch": "Head Office"
-    },
-    "amal": {
-      "name": "Amal Bank",
-      "link": "https://www.amalbank.so",
-      "icon": "amal.png",
-      "address": "Mogadishu, Somalia",
-      "city": "Mogadishu",
-      "branch": "Main Branch"
-    },
-    "sahal": {
-      "name": "Sahal Bank",
-      "link": "https://www.sahalbank.so",
-      "icon": "sahal.png",
-      "address": "Mogadishu, Somalia",
-      "city": "Mogadishu",
-      "branch": "Main Branch"
-    },
-    "ubbank": {
-      "name": "United Bank",
-      "link": "https://www.ubbank.so",
-      "icon": "ubbank.png",
-      "address": "Mogadishu, Somalia",
-      "city": "Mogadishu",
-      "branch": "Head Office"
-    },
-    "harar": {
-      "name": "Harar Bank",
-      "link": "https://www.hararbank.so",
-      "icon": "harar.png",
-      "address": "Hargeisa, Somaliland",
-      "city": "Hargeisa",
-      "branch": "Main Branch"
-    },
-    "waaxid": {
-      "name": "Waaxid Bank",
-      "link": "https://www.waaxidbank.so",
-      "icon": "waaxid.png",
-      "address": "Mogadishu, Somalia",
-      "city": "Mogadishu",
-      "branch": "Main Branch"
-    },
-    "ocean": {
-      "name": "Ocean Bank",
-      "link": "https://www.oceanbank.so",
-      "icon": "ocean.png",
-      "address": "Mogadishu, Somalia",
-      "city": "Mogadishu",
-      "branch": "Head Office"
-    },
-    "somali": {
-      "name": "Somali Bank",
-      "link": "https://www.somalibank.so",
-      "icon": "somali.png",
-      "address": "Mogadishu, Somalia",
-      "city": "Mogadishu",
-      "branch": "Main Branch"
-    },
-    "eastafrican": {
-      "name": "East African Bank",
-      "link": "https://www.eastafricanbank.so",
-      "icon": "eastafrican.png",
-      "address": "Mogadishu, Somalia",
-      "city": "Mogadishu",
-      "branch": "Head Office"
-    },
-    "hormuud": {
-      "name": "Hormuud Bank",
-      "link": "https://www.hormuudbank.so",
-      "icon": "hormuud.png",
-      "address": "Mogadishu, Somalia",
-      "city": "Mogadishu",
-      "branch": "Main Branch"
-    }
+  "dahabshiil": {
+    "name": "Dahabshiil Money Transfer", 
+    "link": "https://dahabshiil.com",    
+    "icon": "dahabshiil.svg",          
+    "address": "Hargeisa, Somaliland",
+    "city": "Hargeisa",
+    "branch": "Global Headquarters"     
+  },
+  "amal": {
+    "name": "Amal Express",             
+    "link": "https://amalexpress.com",  
+    "icon": "amal.svg",
+    "address": "Bakara Market, Mogadishu, Somalia", 
+    "city": "Mogadishu",
+    "branch": "Main Branch"
+  },
+  "premier": {        
+    "name": "Premier Bank",
+    "link": "https://premierbank.so",
+    "icon": "premier.svg",
+    "address": "KM4, Mogadishu, Somalia",
+    "city": "Mogadishu",
+    "branch": "Headquarters"
+  },
+  "ifb": {         
+    "name": "International Finance Bank",
+    "link": "https://ifbsomalia.so",
+    "icon": "ifb.svg",
+    "address": "Maka Al-Mukarama Road, Mogadishu",
+    "city": "Mogadishu",
+    "branch": "Head Office"
+  },
+  "salaam": {           
+    "name": "Salaam Somali Bank",
+    "link": "https://salaambank.so",
+    "icon": "salaam.svg",
+    "address": "Makka Al Mukarama Road, Mogadishu",
+    "city": "Mogadishu",
+    "branch": "Head Office"
+  },
+  "amana": {     
+    "name": "Amana Bank",
+    "link": "https://amanabank.so",
+    "icon": "amana.svg",
+    "address": "Maka Al-Mukarama Road, Mogadishu",
+    "city": "Mogadishu",
+    "branch": "Main Branch"
+  },
+  "mybank": {   
+    "name": "MyBank Somalia",
+    "link": "https://mybankso.com",
+    "icon": "mybank.svg",
+    "address": "Maka Al-Mukarama Road, Mogadishu",
+    "city": "Mogadishu",
+    "branch": "Head Office"
+  },
+  "cbs": {   
+    "name": "Central Bank of Somalia",
+    "link": "https://centralbank.gov.so",
+    "icon": "cbs.svg",
+    "address": "Corso Somalia Street, Mogadishu",
+    "city": "Mogadishu",
+    "branch": "Main Branch"
+  },
+  "idb": {    
+    "name": "International Development Bank",
+    "link": "https://idbsomalia.so",
+    "icon": "idb.svg",
+    "address": "Maka Al-Mukarama Road, Mogadishu",
+    "city": "Mogadishu",
+    "branch": "Head Office"
+  },
+  "hormuud": {
+    "name": "Hormuud Telecom",   
+    "link": "https://hormuud.com",
+    "icon": "hormuud.svg",
+    "address": "KM4 Junction, Mogadishu",
+    "city": "Mogadishu",
+    "branch": "Headquarters"
   }
-  
+}

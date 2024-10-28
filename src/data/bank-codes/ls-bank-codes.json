@@ -1,83 +1,50 @@
 {
-    "standardbank": {
-      "swift": ["SBICLSMX"],
-      "ussd": {
-        "start": "*140#",
-        "balance": "*140*1#",
-        "transfer_to_same_bank": "*140*amount*account_number#"
-      }
-    },
-    "nedbank": {
-      "swift": ["NEDBLSMX"],
-      "ussd": {
-        "start": "*120*002#",
-        "balance": "*120*002*1#",
-        "transfer_to_same_bank": "*120*002*amount*account_number#"
-      }
-    },
-    "fnb": {
-      "swift": ["FNBLLSMX"],
-      "ussd": {
-        "start": "*111#",
-        "balance": "*111*1#",
-        "transfer_to_same_bank": "*111*amount*account_number#"
-      }
-    },
-    "lesothopostbank": {
-      "swift": ["LESPLSMX"],
-      "ussd": {
-        "start": "*126#",
-        "balance": "*126*1#",
-        "transfer_to_same_bank": "*126*amount*account_number#"
-      }
-    },
-    "bancabc": {
-      "swift": ["ABCLLSMX"],
-      "ussd": {
-        "start": "*123#",
-        "balance": "*123*1#",
-        "transfer_to_same_bank": "*123*amount*account_number#"
-      }
-    },
-    "absa": {
-      "swift": ["ABSAZMLX"],
-      "ussd": {
-        "start": "*148#",
-        "balance": "*148*1#",
-        "transfer_to_same_bank": "*148*amount*account_number#"
-      }
-    },
-    "equity": {
-      "swift": ["EQBMLSMX"],
-      "ussd": {
-        "start": "*247#",
-        "balance": "*247*1#",
-        "transfer_to_same_bank": "*247*amount*account_number#"
-      }
-    },
-    "letshego": {
-      "swift": ["LTSHLSMX"],
-      "ussd": {
-        "start": "*800#",
-        "balance": "*800*1#",
-        "transfer_to_same_bank": "*800*amount*account_number#"
-      }
-    },
-    "postbank": {
-      "swift": ["PSTBLSMX"],
-      "ussd": {
-        "start": "*200#",
-        "balance": "*200*1#",
-        "transfer_to_same_bank": "*200*amount*account_number#"
-      }
-    },
-    "vodacash": {
-      "swift": ["VMPZLSMX"],
-      "ussd": {
-        "start": "*135#",
-        "balance": "*135*1#",
-        "transfer_to_same_bank": "*135*amount*account_number#"
-      }
+  "standardbank": {
+    "swift": ["SBICLS22"],
+    "ussd": {
+      "start": "*120*2#",
+      "balance": "*120*2*1#",
+      "transfer_to_same_bank": "*120*2*2*amount*account_number#"
+    }
+  },
+  "nedbank": {
+    "swift": ["NEDLLS22"],
+    "ussd": {
+      "start": "*120*001#",
+      "balance": "*120*001*1#",
+      "transfer_to_same_bank": "*120*001*2*amount*account_number#"
+    }
+  },
+  "fnb": {
+    "swift": ["FIRNLS22"],
+    "ussd": {
+      "start": "*130#",
+      "balance": "*130*1#",
+      "transfer_to_same_bank": "*130*2*amount*account_number#"
+    }
+  },
+  "lpb": {
+    "swift": ["LPBKLS22"],
+    "ussd": {
+      "start": "*150#",
+      "balance": "*150*1#",
+      "transfer_to_same_bank": "*150*2*amount*account_number#"
+    }
+  },
+  "bancabc": {
+    "swift": ["ABCLLS22"],
+    "ussd": {
+      "start": "*168#",
+      "balance": "*168*1#",
+      "transfer_to_same_bank": "*168*2*amount*account_number#"
+    }
+  },
+  "mpesa": {
+    "swift": ["MPESLS22"],
+    "ussd": {
+      "start": "*100#",
+      "balance": "*100*1#",
+      "transfer_to_same_bank": "*100*2*phone_number#"
     }
   }
-  
+}

@@ -1,83 +1,82 @@
 {
-    "bankofsudan": {
-      "name": "Bank of Sudan",
+  "cbos": {
+      "name": "Central Bank of Sudan",
       "link": "https://www.cbos.gov.sd",
-      "icon": "bankofsudan.png",
-      "address": "Khartoum, Sudan",
+      "icon": "cbos.png",
+      "address": "Gamhoria Street, P.O. Box 313",
       "city": "Khartoum",
       "branch": "Head Office"
-    },
-    "sudapet": {
-      "name": "Sudapet Bank",
-      "link": "https://www.sudapet.com",
-      "icon": "sudapet.png",
-      "address": "Khartoum, Sudan",
-      "city": "Khartoum",
-      "branch": "Main Branch"
-    },
-    "exportimport": {
-      "name": "Export and Import Bank of Sudan",
-      "link": "https://www.eibsd.com",
-      "icon": "exportimport.png",
-      "address": "Khartoum, Sudan",
+  },
+  "bok": {
+      "name": "Bank of Khartoum",
+      "link": "https://www.bankofkhartoum.com",
+      "icon": "bok.png",
+      "address": "Bank of Khartoum Tower, Al Qasr Street",
       "city": "Khartoum",
       "branch": "Head Office"
-    },
-    "albaraka": {
-      "name": "Al Baraka Bank",
+  },
+  "fib": {
+      "name": "Faisal Islamic Bank",
+      "link": "https://www.fibsudan.com",
+      "icon": "fib.png",
+      "address": "P.O. Box 1139, Khartoum",
+      "city": "Khartoum",
+      "branch": "Head Office"
+  },
+  "albaraka": {
+      "name": "Al Baraka Bank Sudan",
       "link": "https://www.albaraka.com.sd",
       "icon": "albaraka.png",
-      "address": "Khartoum, Sudan",
-      "city": "Khartoum",
-      "branch": "Main Branch"
-    },
-    "sudanese": {
-      "name": "Sudanese French Bank",
-      "link": "https://www.sudfrbank.com",
-      "icon": "sudanese.png",
-      "address": "Khartoum, Sudan",
+      "address": "Al Baraka Tower, P.O. Box 3583",
       "city": "Khartoum",
       "branch": "Head Office"
-    },
-    "farmers": {
-      "name": "Farmers Bank of Sudan",
-      "link": "https://www.farmersbank.sd",
-      "icon": "farmers.png",
-      "address": "Khartoum, Sudan",
-      "city": "Khartoum",
-      "branch": "Main Branch"
-    },
-    "national": {
-      "name": "National Bank of Sudan",
-      "link": "https://www.nbsd.sd",
-      "icon": "national.png",
-      "address": "Khartoum, Sudan",
+  },
+  "omdurman": {
+      "name": "Omdurman National Bank",
+      "link": "https://www.onb.com.sd",
+      "icon": "onb.png",
+      "address": "P.O. Box 1991, Omdurman",
+      "city": "Omdurman",
+      "branch": "Head Office"
+  },
+  "animal": {
+      "name": "Animal Resources Bank",
+      "link": "https://www.arb.sd",
+      "icon": "arb.png",
+      "address": "Al Gamhuria Street",
       "city": "Khartoum",
       "branch": "Head Office"
-    },
-    "khartoum": {
-      "name": "Khartoum Bank",
-      "link": "https://www.khartoumbank.sd",
-      "icon": "khartoum.png",
-      "address": "Khartoum, Sudan",
+  },
+  "tadamon": {
+      "name": "Tadamon Islamic Bank",
+      "link": "https://www.tadamonbank.com",
+      "icon": "tadamon.png",
+      "address": "P.O. Box 6667",
       "city": "Khartoum",
-      "branch": "Main Branch"
-    },
-    "alshamal": {
+      "branch": "Head Office"
+  },
+  "savings": {
+      "name": "Savings & Social Development Bank",
+      "link": "https://www.ssdb.sd",
+      "icon": "ssdb.png",
+      "address": "Al Baladiya Street",
+      "city": "Khartoum",
+      "branch": "Head Office"
+  },
+  "alshamal": {
       "name": "Al Shamal Islamic Bank",
-      "link": "https://www.alshamalbank.sd",
+      "link": "https://www.shib.sd",
       "icon": "alshamal.png",
-      "address": "Khartoum, Sudan",
+      "address": "P.O. Box 10036",
       "city": "Khartoum",
       "branch": "Head Office"
-    },
-    "sudana": {
-      "name": "Sudan Bank",
-      "link": "https://www.sudanbank.sd",
-      "icon": "sudana.png",
-      "address": "Khartoum, Sudan",
+  },
+  "agricultural": {
+      "name": "Agricultural Bank of Sudan",
+      "link": "https://www.abs.sd",
+      "icon": "abs.png",
+      "address": "P.O. Box 1363",
       "city": "Khartoum",
-      "branch": "Main Branch"
-    }
+      "branch": "Head Office"
   }
-  
+}
