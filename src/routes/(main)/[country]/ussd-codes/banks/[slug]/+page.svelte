@@ -70,7 +70,7 @@
 								href="tel:{bankInfo.ussd.start}"
 							>
 								Dial
-				            </a>
+							</a>
 						{:else}
 							<button
 								class="bg-transparent text-gray-800 dark:text-gray-300 underline px-4 py-2 rounded-md font-medium focus:outline-none focus:ring-2 focus:ring-gray-700"
@@ -83,117 +83,124 @@
 				</div>
 			</div>
 			<p class="py-5">
-				Dial the code above to access {bankInfo.name} Mobile service 
-				{bankInfo.name.toLowerCase().includes(countryName.toLowerCase()) ? '' : `in ${countryName}`}.
+				Dial the code above to access {bankInfo.name} Mobile service
+				{bankInfo.name.toLowerCase().includes(countryName.toLowerCase())
+					? ''
+					: `in ${countryName}`}.
 			</p>
 		</div>
 	</div>
 
 	<div class="container px-0 md:px-4">
 		<div class="bg-white py-4 dark:bg-gray-900 dark:text-light dark:border-none overflow-x-auto">
-			<div class="p-4">
+			<div class="p-2 md:p-4">
 				<div class="flex flex-col md:flex-row md:space-x-8 justify-center items-start">
 					<div
-						class="flex-grow md:basis-1/2 p-6 bg-white border rounded-md shadow-t-md mb-8 md:mb-0 dark:bg-gray-900 dark:text-light dark:border-none"
+						class="flex-grow md:basis-1/2 md:p-6 bg-white border rounded-md shadow-t-md mb-8 md:mb-0 dark:bg-gray-900 dark:text-light dark:border-none"
 					>
 						<div class="overflow-x-auto">
-							<table class="table-auto w-full text-sm md:text-base text-left">
+							<table class="table-auto table-fixed w-full text-sm md:text-base text-left">
 								<thead class="whitespace-nowrap">
 									<tr class="text-gray-800 dark:text-gray-300">
-										<th scope="col" class="py-2 px-2 font-bold text-base md:text-xl">
+										<th scope="col" class="w-[50%] md:w-auto py-2 px-2 font-bold text-base md:text-xl">
 											Bank Code
 										</th>
-										<th scope="col" class="py-2 px-2 font-bold text-base md:text-xl text-right">
+										<th scope="col" class="py-2 px-2 font-bold text-base md:text-xl text-left md:text-right">
 											{bankInfo.ussd.start ? bankInfo.ussd.start : ''}
 										</th>
 									</tr>
 								</thead>
 								<tbody class="banks">
-									<tr class="border-t border-gray-100 dark:border-gray-800">
-										<td class="py-3 px-2 text-xs md:text-sm">Transfer Code</td>
-										<td
-											class="py-3 px-2 text-xs md:text-sm text-gray-800 dark:text-gray-400 text-right"
-											>{bankInfo.ussd.transfer ? bankInfo.ussd.transfer : ''}</td
-										>
-									</tr>
-									<tr class="border-t border-gray-100 dark:border-gray-800">
-										<td class="py-3 px-2 text-xs md:text-sm">Transfer to {bankInfo.name}</td>
-										<td
-											class="py-3 px-2 text-xs md:text-sm text-gray-800 dark:text-gray-400 text-right"
-											>{bankInfo.ussd.transfer_to_same_bank
-												? bankInfo.ussd.transfer_to_same_bank
-												: ''}</td
-										>
-									</tr>
-									<tr class="border-t border-gray-100 dark:border-gray-800">
-										<td class="py-3 px-2 text-xs md:text-sm">Transfer to other Banks</td>
-										<td
-											class="py-3 px-2 text-xs md:text-sm text-gray-800 dark:text-gray-400 text-right"
-											>{bankInfo.ussd.transfer_other_banks
-												? bankInfo.ussd.transfer_other_banks
-												: ''}</td
-										>
-									</tr>
-									<tr class="border-t border-gray-100 dark:border-gray-800">
-										<td class="py-3 px-2 text-xs md:text-sm">Airtime self</td>
-										<td
-											class="py-3 px-2 text-xs md:text-sm text-gray-800 dark:text-gray-400 text-right"
-											>{bankInfo.ussd.airtime_self ? bankInfo.ussd.airtime_self : ''}</td
-										>
-									</tr>
-									<tr class="border-t border-gray-100 dark:border-gray-800">
-										<td class="py-3 px-2 text-xs md:text-sm">Airtime others</td>
-										<td
-											class="py-3 px-2 text-xs md:text-sm text-gray-800 dark:text-gray-400 text-right"
-											>{bankInfo.ussd.airtime_others ? bankInfo.ussd.airtime_others : ''}</td
-										>
-									</tr>
-									<tr class="border-t border-gray-100 dark:border-gray-800">
-										<td class="py-3 px-2 text-xs md:text-sm">Balance</td>
-										<td
-											class="py-3 px-2 text-xs md:text-sm text-gray-800 dark:text-gray-400 text-right"
-											>{bankInfo.ussd.balance ? bankInfo.ussd.balance : ''}</td
-										>
-									</tr>
-									<tr class="border-t border-gray-100 dark:border-gray-800">
-										<td class="py-3 px-2 text-xs md:text-sm">BVN</td>
-										<td
-											class="py-3 px-2 text-xs md:text-sm text-gray-800 dark:text-gray-400 text-right"
-											>{bankInfo.ussd.bvn ? bankInfo.ussd.bvn : ''}</td
-										>
-									</tr>
-									<tr class="border-t border-gray-100 dark:border-gray-800">
-										<td class="py-3 px-2 text-xs md:text-sm">Update BVN details</td>
-										<td
-											class="py-3 px-2 text-xs md:text-sm text-gray-800 dark:text-gray-400 text-right"
-											>{bankInfo.ussd.update_bvn_details
-												? bankInfo.ussd.update_bvn_details
-												: ''}</td
-										>
-									</tr>
-									<tr class="border-t border-gray-100 dark:border-gray-800">
-										<td class="py-3 px-2 text-xs md:text-sm">Stop debit transactions</td>
-										<td
-											class="py-3 px-2 text-xs md:text-sm text-gray-800 dark:text-gray-400 text-right"
-											>{bankInfo.ussd.stop_debit_transactions
-												? bankInfo.ussd.stop_debit_transactions
-												: ''}</td
-										>
-									</tr>
-									<tr class="border-t border-gray-100 dark:border-gray-800">
-										<td class="py-3 px-2 text-xs md:text-sm">Activate code</td>
-										<td
-											class="py-3 px-2 text-xs md:text-sm text-gray-800 dark:text-gray-400 text-right"
-											>{bankInfo.ussd.activate_code ? bankInfo.ussd.activate_code : ''}</td
-										>
-									</tr>
-									<tr class="border-t border-gray-100 dark:border-gray-800">
-										<td class="py-3 px-2 text-xs md:text-sm">Country</td>
-										<td
-											class="py-3 px-2 text-xs md:text-sm text-gray-800 dark:text-gray-400 text-right"
-											>{countryName}</td
-										>
-									</tr>
+									{#if bankInfo.ussd.transfer_to_same_bank}
+										<tr class="border-t border-gray-100 dark:border-gray-800">
+											<td class="py-3 px-2 text-xs md:text-sm">Transfer to {bankInfo.name}</td>
+											<td
+												class="py-3 px-2 text-xs md:text-sm text-gray-800 dark:text-gray-400 text-left md:text-right"
+												>{bankInfo.ussd.transfer_to_same_bank}</td
+											>
+										</tr>
+									{/if}
+									{#if bankInfo.ussd.transfer_other_banks}
+										<tr class="border-t border-gray-100 dark:border-gray-800">
+											<td class="py-3 px-2 text-xs md:text-sm">Transfer to other Banks</td>
+											<td
+												class="py-3 px-2 text-xs md:text-sm text-gray-800 dark:text-gray-400 text-left md:text-right"
+												>{bankInfo.ussd.transfer_other_banks}</td
+											>
+										</tr>
+									{/if}
+									{#if bankInfo.ussd.airtime_self}
+										<tr class="border-t border-gray-100 dark:border-gray-800">
+											<td class="py-3 px-2 text-xs md:text-sm">Airtime self</td>
+											<td
+												class="py-3 px-2 text-xs md:text-sm text-gray-800 dark:text-gray-400 text-left md:text-right"
+												>{bankInfo.ussd.airtime_self}</td
+											>
+										</tr>
+									{/if}
+									{#if bankInfo.ussd.airtime_others}
+										<tr class="border-t border-gray-100 dark:border-gray-800">
+											<td class="py-3 px-2 text-xs md:text-sm">Airtime others</td>
+											<td
+												class="py-3 px-2 text-xs md:text-sm text-gray-800 dark:text-gray-400 text-left md:text-right"
+												>{bankInfo.ussd.airtime_others}</td
+											>
+										</tr>
+									{/if}
+									{#if bankInfo.ussd.balance}
+										<tr class="border-t border-gray-100 dark:border-gray-800">
+											<td class="py-3 px-2 text-xs md:text-sm">Balance</td>
+											<td
+												class="py-3 px-2 text-xs md:text-sm text-gray-800 dark:text-gray-400 text-left md:text-right"
+												>{bankInfo.ussd.balance}</td
+											>
+										</tr>
+									{/if}
+									{#if bankInfo.ussd.bvn}
+										<tr class="border-t border-gray-100 dark:border-gray-800">
+											<td class="py-3 px-2 text-xs md:text-sm">BVN</td>
+											<td
+												class="py-3 px-2 text-xs md:text-sm text-gray-800 dark:text-gray-400 text-left md:text-right"
+												>{bankInfo.ussd.bvn}</td
+											>
+										</tr>
+									{/if}
+									{#if bankInfo.ussd.update_bvn_details}
+										<tr class="border-t border-gray-100 dark:border-gray-800">
+											<td class="py-3 px-2 text-xs md:text-sm">Update BVN details</td>
+											<td
+												class="py-3 px-2 text-xs md:text-sm text-gray-800 dark:text-gray-400 text-left md:text-right"
+												>{bankInfo.ussd.update_bvn_details}</td
+											>
+										</tr>
+									{/if}
+									{#if bankInfo.ussd.stop_debit_transactions}
+										<tr class="border-t border-gray-100 dark:border-gray-800">
+											<td class="py-3 px-2 text-xs md:text-sm">Stop debit transactions</td>
+											<td
+												class="py-3 px-2 text-xs md:text-sm text-gray-800 dark:text-gray-400 text-left md:text-right"
+												>{bankInfo.ussd.stop_debit_transactions}</td
+											>
+										</tr>
+									{/if}
+									{#if bankInfo.ussd.activate_code}
+										<tr class="border-t border-gray-100 dark:border-gray-800">
+											<td class="py-3 px-2 text-xs md:text-sm">Activate code</td>
+											<td
+												class="py-3 px-2 text-xs md:text-sm text-gray-800 dark:text-gray-400 text-left md:text-right"
+												>{bankInfo.ussd.activate_code}</td
+											>
+										</tr>
+									{/if}
+									{#if countryName}
+										<tr class="border-t border-gray-100 dark:border-gray-800">
+											<td class="py-3 px-2 text-xs md:text-sm">Country</td>
+											<td
+												class="py-3 px-2 text-xs md:text-sm text-gray-800 dark:text-gray-400 text-left md:text-right"
+												>{countryName}</td
+											>
+										</tr>
+									{/if}
 								</tbody>
 							</table>
 						</div>
@@ -225,7 +232,7 @@
 					<p class="inline-block border border-gray-200 rounded-md dark:border-gray-700 p-5">
 						This is the USSD code for {bankInfo.name.toUpperCase()}
 						{#if !bankInfo.name.includes(countryName)}
-						in {countryName.toUpperCase()}
+							in {countryName.toUpperCase()}
 						{/if}
 					</p>
 				</div>

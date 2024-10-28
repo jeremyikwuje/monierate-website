@@ -52,7 +52,7 @@ function convertNow() {
             pair_rates = sortRates(pair.changers || {});
         }
         else {
-            pair_code = `${from}${to}`.toLowerCase();
+            pair_code = `${to}${from}`.toLowerCase();
             pair = pairs.find((p) => p.code === pair_code);
             if (pair) {
                 updated_at = pair.updatedAt; // get last update time

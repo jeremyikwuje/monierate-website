@@ -59,24 +59,24 @@
 	<title>USSD Codes in Africa: Find Your Bank's USSD Code | Monierate</title>
 	<meta
 		name="description"
-		content="Learn about USSD codes in Africa. Quickly find your bank's code for international money transfers. Ensure your funds reach the right destination account."
+		content="Find your favorite Bank code (USSD) in Africa. Quickly find your bank's code for transfers, top up, and other banking services."
 	/>
 	<meta property="og:type" content="website" />
-	<meta property="og:title" content="USSD Codes in Africa: Find Your Bank's USSD Code | Monierate" />
+	<meta property="og:title" content="Find Bank Codes (USSD) in Africa | Monierate" />
 	<meta
 		property="og:description"
-		content="Learn about USSD codes in Africa. Quickly find your bank's code for international money transfers. Ensure your funds reach the right destination account."
+		content="Find your favorite Bank code (USSD) in Africa. Quickly find your bank's code for transfers, top up, and other banking services."
 	/>
 	<meta property="og:url" content="monierate.com/{countryCode}/bank-codes" />
 	<meta property="og:image" content="https://monierate.com/uploads/monierate-ussd-code-og-image.png" />
 </svelte:head>
 
 <div class="container">
-	<h1 class="text-2xl md:text-4xl text-center mb-4 md:mb-8">USSD/BANK codes in Africa</h1>
+	<h1 class="text-2xl md:text-4xl text-center mb-4 md:mb-8">Bank Codes in Africa</h1>
 	
 	<div class="select-form section flex justify-center items-center mb-32">
 		<div class="w-full">
-			<span class="block text-xl md:text-2xl font-bold mb-4 text-center">Find a USSD code</span>
+			<span class="block text-xl md:text-2xl font-bold mb-4 text-center">Find a Bank Code (USSD) for Transfers and Others</span>
 			<p class="text-sm md:text-base text-gray-500 mb-8 md:mb-8 text-center">Just select the african country and bank below.</p>
 			<div class="block md:flex md:justify-between md:items-center">
 				<!-- Select Country -->
