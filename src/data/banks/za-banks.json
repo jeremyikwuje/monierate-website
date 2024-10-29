@@ -1,0 +1,82 @@
+{
+    "fnb": {
+        "name": "First National Bank",
+        "link": "https://www.fnb.co.za",
+        "icon": "fnb.png",
+        "address": "Bank City, 3 First Place",
+        "city": "Johannesburg",
+        "branch": "Bank City Head Office"
+    },
+    "standardbank": {
+        "name": "Standard Bank",
+        "link": "https://www.standardbank.co.za",
+        "icon": "standardbank.png",
+        "address": "5 Simmonds Street, Standard Bank Centre",
+        "city": "Johannesburg",
+        "branch": "Group Head Office"
+    },
+    "absa": {
+        "name": "ABSA Bank",
+        "link": "https://www.absa.co.za",
+        "icon": "absa.png",
+        "address": "7 Rosebank Road, Absa Towers West",
+        "city": "Johannesburg",
+        "branch": "Head Office"
+    },
+    "capitec": {
+        "name": "Capitec Bank",
+        "link": "https://www.capitecbank.co.za",
+        "icon": "capitec.png",
+        "address": "1 Quantum Street, Techno Park",
+        "city": "Stellenbosch",
+        "branch": "Head Office"
+    },
+    "nedbank": {
+        "name": "Nedbank",
+        "link": "https://www.nedbank.co.za",
+        "icon": "nedbank.png",
+        "address": "135 Rivonia Road, Nedbank Sandton",
+        "city": "Sandton",
+        "branch": "Head Office"
+    },
+    "tymebank": {
+        "name": "TymeBank",
+        "link": "https://www.tymebank.co.za",
+        "icon": "tymebank.png",
+        "address": "30 Jellicoe Avenue",
+        "city": "Rosebank",
+        "branch": "Head Office"
+    },
+    "africanbank": {
+        "name": "African Bank",
+        "link": "https://www.africanbank.co.za",
+        "icon": "africanbank.png",
+        "address": "59 16th Road, Halfway House",
+        "city": "Midrand",
+        "branch": "Head Office"
+    },
+    "discovery": {
+        "name": "Discovery Bank",
+        "link": "https://www.discovery.co.za/bank",
+        "icon": "discovery.png",
+        "address": "1 Discovery Place, Sandton",
+        "city": "Johannesburg",
+        "branch": "Head Office"
+    },
+    "investec": {
+        "name": "Investec Bank",
+        "link": "https://www.investec.com/en_za.html",
+        "icon": "investec.png",
+        "address": "100 Grayston Drive",
+        "city": "Sandton",
+        "branch": "Head Office"
+    },
+    "bankzero": {
+        "name": "Bank Zero",
+        "link": "https://www.bankzero.co.za",
+        "icon": "bankzero.png",
+        "address": "Melrose Arch",
+        "city": "Johannesburg",
+        "branch": "Head Office"
+    }
+}

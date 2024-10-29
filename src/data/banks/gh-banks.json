@@ -1,99 +1,98 @@
 {
-    "commercial_bank": {
-      "name": "Ghana Commercial Bank (GCB)",
-      "link": "https://www.gcbbank.com.gh",
-      "icon": "gcb.png",
-      "address": "Thorpe Road, Accra Central",
-      "city": "Accra",
-      "branch": "Accra Main Branch"
-    },
-    "ecobank": {
-      "name": "Ecobank",
-      "link": "https://www.ecobank.com/gh",
-      "icon": "ecobank.png",
-      "address": "2 Morocco Lane, Off Independence Avenue",
-      "city": "Accra",
-      "branch": "Head Office"
-    },
-    "absa": {
-      "name": "Absa Bank",
-      "link": "https://www.absa.com.gh",
-      "icon": "absa.webp",
-      "address": "Absa House, J.E. Atta Mills High Street",
-      "city": "Accra",
-      "branch": "Accra Main Branch"
-    },
-    "stanbic": {
-      "name": "Stanbic Bank",
-      "link": "https://www.stanbicbank.com.gh",
-      "icon": "stanbic.jpeg",
-      "address": "Stanbic Heights, 215 South Liberation Link",
-      "city": "Accra",
-      "branch": "Airport City Branch"
-    },
-    "fidelity_bank": {
-      "name": "Fidelity Bank",
-      "link": "https://www.fidelitybank.com.gh",
-      "icon": "fidelitybank.svg",
-      "address": "Ridge Towers, Accra Ridge",
-      "city": "Accra",
-      "branch": "Ridge Branch"
-    },
-    "zenith_bank": {
-      "name": "Zenith Bank",
-      "link": "https://www.zenithbank.com.gh",
-      "icon": "zenithbank.png",
-      "address": "Premier Towers, Liberia Road",
-      "city": "Accra",
-      "branch": "Accra Main Branch"
-    },
-    "uba": {
-      "name": "United Bank for Africa (UBA)",
-      "link": "https://www.ubagroup.com/gh",
-      "icon": "uba.png",
-      "address": "Heritage Tower, Ridge",
-      "city": "Accra",
-      "branch": "Head Office"
-    },
-    "calbank": {
-      "name": "CalBank",
-      "link": "https://www.calbank.net",
-      "icon": "calbank.jpeg",
-      "address": "23 Independence Avenue",
-      "city": "Accra",
-      "branch": "Accra Main Branch"
-    },
-    "gtbank": {
-      "name": "Guaranty Trust Bank (GTBank)",
-      "link": "https://www.gtbghana.com",
-      "icon": "gtbank.png",
-      "address": "25A Castle Road, Ambassadorial Enclave",
-      "city": "Accra",
-      "branch": "Head Office"
-    },
-    "access_bank": {
-      "name": "Access Bank",
-      "link": "https://www.ghana.accessbankplc.com",
-      "icon": "accessbank.svg",
-      "address": "Starlets 91 Road, Opposite Accra Sports Stadium",
-      "city": "Accra",
-      "branch": "Head Office"
-    },
-    "societe_generale": {
-      "name": "Société Générale",
-      "link": "https://www.societegenerale.com.gh",
-      "icon": "societe.png",
-      "address": "Ring Road Central, SG Ghana Head Office",
-      "city": "Accra",
-      "branch": "Accra Main Branch"
-    },
-    "republic_bank": {
-      "name": "Republic Bank",
-      "link": "https://www.republicghana.com",
-      "icon": "republic.png",
-      "address": "Ebankese, No. 35, Sixth Avenue, North Ridge",
-      "city": "Accra",
-      "branch": "Head Office"
-    }
+  "commercial_bank": {
+    "name": "Ghana Commercial Bank (GCB)",
+    "link": "https://www.gcbbank.com.gh",
+    "icon": "gcb.png",
+    "address": "Thorpe Road, Accra Central",
+    "city": "Accra", 
+    "branch": "Accra Main Branch"
+  },
+  "ecobank": {
+    "name": "Ecobank Ghana",
+    "link": "https://www.ecobank.com/gh",
+    "icon": "ecobank.png",
+    "address": "2 Morocco Lane, Off Independence Avenue",
+    "city": "Accra",
+    "branch": "Head Office"
+  },
+  "absa": {
+    "name": "Absa Bank Ghana",
+    "link": "https://www.absa.com.gh",
+    "icon": "absa.png",
+    "address": "Absa House, J.E. Atta Mills High Street",
+    "city": "Accra",
+    "branch": "Accra Main Branch"
+  },
+  "stanbic": {
+    "name": "Stanbic Bank Ghana",
+    "link": "https://www.stanbicbank.com.gh",
+    "icon": "stanbic.png",
+    "address": "Stanbic Heights, 215 South Liberation Link",
+    "city": "Accra",
+    "branch": "Airport City Branch"
+  },
+  "fidelity_bank": {
+    "name": "Fidelity Bank Ghana",
+    "link": "https://www.fidelitybank.com.gh",
+    "icon": "fidelity.png",
+    "address": "Ridge Towers, Accra Ridge",
+    "city": "Accra",
+    "branch": "Ridge Branch"
+  },
+  "zenith_bank": {
+    "name": "Zenith Bank Ghana",
+    "link": "https://www.zenithbank.com.gh",
+    "icon": "zenith.png",
+    "address": "Premier Towers, Liberia Road",
+    "city": "Accra",
+    "branch": "Accra Main Branch"
+  },
+  "uba": {
+    "name": "United Bank for Africa (UBA) Ghana",
+    "link": "https://www.ubagroup.com/gh",
+    "icon": "uba.png",
+    "address": "Heritage Tower, Ridge",
+    "city": "Accra",
+    "branch": "Head Office"
+  },
+  "calbank": {
+    "name": "CalBank Limited",
+    "link": "https://www.calbank.net",
+    "icon": "calbank.png",
+    "address": "23 Independence Avenue",
+    "city": "Accra",
+    "branch": "Accra Main Branch"
+  },
+  "gtbank": {
+    "name": "Guaranty Trust Bank Ghana",
+    "link": "https://www.gtbghana.com",
+    "icon": "gtbank.png",
+    "address": "25A Castle Road, Ambassadorial Enclave",
+    "city": "Accra",
+    "branch": "Head Office"
+  },
+  "access_bank": {
+    "name": "Access Bank Ghana",
+    "link": "https://www.ghana.accessbankplc.com",
+    "icon": "access.png",
+    "address": "Starlets 91 Road, Opposite Accra Sports Stadium",
+    "city": "Accra",
+    "branch": "Head Office"
+  },
+  "societe_generale": {
+    "name": "Société Générale Ghana",
+    "link": "https://www.societegenerale.com.gh",
+    "icon": "societe.png",
+    "address": "Ring Road Central, SG Ghana Head Office",
+    "city": "Accra",
+    "branch": "Accra Main Branch"
+  },
+  "republic_bank": {
+    "name": "Republic Bank Ghana",
+    "link": "https://www.republicghana.com",
+    "icon": "republic.png",
+    "address": "Ebankese, No. 35, Sixth Avenue, North Ridge",
+    "city": "Accra",
+    "branch": "Head Office"
   }
-  
+}

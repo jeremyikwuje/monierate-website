@@ -1,0 +1,66 @@
+{
+  "btd": {
+    "name": "Banque Togolaise de Développement (BTD)",
+    "link": "https://www.btd.tg",
+    "icon": "btd.png",
+    "address": "Avenue de la Libération, Lomé",
+    "city": "Lomé",
+    "branch": "Siège"
+  },
+  "ecobank": {
+    "name": "Ecobank Togo",
+    "link": "https://www.ecobanktogo.com",
+    "icon": "ecobank.png",
+    "address": "20 Avenue Sylvanus Olympio, Lomé",
+    "city": "Lomé",
+    "branch": "Siège"
+  },
+  "banque_atlantique": {
+    "name": "Banque Atlantique Togo",
+    "link": "https://www.atlantique.net/tg",
+    "icon": "banque-atlantique.png",
+    "address": "13 Avenue Sylvanus Olympio, Lomé",
+    "city": "Lomé",
+    "branch": "Siège"
+  },
+  "orabank": {
+    "name": "Orabank Togo",
+    "link": "https://www.orabank.net/tg",
+    "icon": "orabank.png",
+    "address": "2983 Avenue de la Libération, Lomé",
+    "city": "Lomé",
+    "branch": "Siège"
+  },
+  "utb": {
+    "name": "Union Togolaise de Banque (UTB)",
+    "link": "https://www.utb.tg",
+    "icon": "utb.png",
+    "address": "69 Rue du Commerce, Lomé",
+    "city": "Lomé",
+    "branch": "Siège"
+  },
+  "coris_bank": {
+    "name": "Coris Bank International Togo",
+    "link": "https://www.corisbank.tg",
+    "icon": "coris-bank.png",
+    "address": "Boulevard du 13 Janvier, Lomé",
+    "city": "Lomé",
+    "branch": "Siège"
+  },
+  "societe_generale": {
+    "name": "Société Générale Togo",
+    "link": "https://www.societegenerale.tg",
+    "icon": "societe-generale.png",
+    "address": "2983 Avenue de la Libération, Lomé",
+    "city": "Lomé",
+    "branch": "Siège"
+  },
+  "nsia_banque": {
+    "name": "NSIA Banque Togo",
+    "link": "https://www.nsiabanque.tg",
+    "icon": "nsia-banque.png",
+    "address": "Boulevard du Mono, Lomé",
+    "city": "Lomé",
+    "branch": "Siège"
+  }
+}

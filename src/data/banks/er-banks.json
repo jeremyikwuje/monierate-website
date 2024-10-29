@@ -1,0 +1,26 @@
+{
+  "commercialbankeritrea": {
+      "name": "Commercial Bank of Eritrea",
+      "link": "https://www.cberitrea.com",
+      "icon": "cberitrea.png",
+      "address": "Harnet Avenue, P.O. Box 219",
+      "city": "Asmara",
+      "branch": "Head Office"
+  },
+  "housingbank": {
+      "name": "Housing and Commerce Bank of Eritrea",
+      "link": "https://www.hcberitrea.com",
+      "icon": "hcberitrea.png",
+      "address": "Sematat Avenue",
+      "city": "Asmara",
+      "branch": "Head Office"
+  },
+  "eritreadevbank": {
+      "name": "Eritrean Development and Investment Bank",
+      "link": "https://www.ediberitrea.com",
+      "icon": "ediberitrea.jpeg",
+      "address": "Liberation Avenue",
+      "city": "Asmara",
+      "branch": "Main Branch"
+  }
+}

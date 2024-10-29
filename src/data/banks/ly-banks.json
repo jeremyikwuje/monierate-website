@@ -1,0 +1,82 @@
+{
+  "bankofcommerce": {
+    "name": "Bank of Commerce & Development",
+    "link": "https://www.bcd.ly",
+    "icon": "bankofcommerce.png",
+    "address": "Al Fowahat District",
+    "city": "Benghazi",
+    "branch": "Head Office"
+  },
+  "gumhouria": {
+    "name": "Gumhouria Bank",
+    "link": "https://www.gumhouria-bank.com.ly",
+    "icon": "gumhouria.png",
+    "address": "Omar Al Mukhtar Street",
+    "city": "Tripoli",
+    "branch": "Main Branch"
+  },
+  "nationalcommercial": {
+    "name": "National Commercial Bank",
+    "link": "https://www.ncb.ly",
+    "icon": "ncb.png",
+    "address": "Al Shat Road",
+    "city": "Tripoli",
+    "branch": "Head Office"
+  },
+  "wahdabank": {
+    "name": "Wahda Bank",
+    "link": "https://www.wahdabank.com.ly",
+    "icon": "wahda.png",
+    "address": "Omar Al Mukhtar Street",
+    "city": "Benghazi",
+    "branch": "Head Office"
+  },
+  "libyanforeignbank": {
+    "name": "Libyan Foreign Bank",
+    "link": "https://www.lfbank.ly",
+    "icon": "libyanforeignbank.png",
+    "address": "Ghadames Street",
+    "city": "Tripoli",
+    "branch": "Head Office"
+  },
+  "sahara": {
+    "name": "Sahara Bank",
+    "link": "https://www.saharabank.com.ly",
+    "icon": "sahara.png",
+    "address": "First of September Street",
+    "city": "Tripoli",
+    "branch": "Head Office"
+  },
+  "northafrica": {
+    "name": "North Africa Bank",
+    "link": "https://www.nab.ly",
+    "icon": "nab.png",
+    "address": "Al Shat Road",
+    "city": "Tripoli",
+    "branch": "Head Office"
+  },
+  "alwaha": {
+    "name": "Al Waha Bank",
+    "link": "https://www.alwahabank.ly",
+    "icon": "alwaha.png",
+    "address": "Algeria Square",
+    "city": "Tripoli",
+    "branch": "Main Branch"
+  },
+  "unitedbank": {
+    "name": "United Bank",
+    "link": "https://www.unitedbank.ly",
+    "icon": "unitedbank.png",
+    "address": "Mizran Street",
+    "city": "Tripoli",
+    "branch": "Head Office"
+  },
+  "alyaqeen": {
+    "name": "Al Yaqeen Bank",
+    "link": "https://www.alyaqeen.ly",
+    "icon": "alyaqeen.png",
+    "address": "Ben Ashour",
+    "city": "Tripoli",
+    "branch": "Main Branch"
+  }
+}

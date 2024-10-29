@@ -27,7 +27,7 @@ export const load: PageLoad = async ({ params }) => {
 		const Banks = await import(`../../../../../data/banks/${countryCode}-banks.json`);
 		const SwiftCodes = await import(`../../../../../data/bank-codes/${countryCode}-bank-codes.json`);
 		const Countries = await import(`../../../../../data/countries.json`);
-
+		
 		const banks: Record<string, Omit<BankData, 'id' | 'swift'>> = JSON.parse(JSON.stringify(Banks.default));
 		const swiftCodes: Record<string, { swift: string[] }> = JSON.parse(JSON.stringify(SwiftCodes.default));
 		const countries: Record<string, string> = JSON.parse(JSON.stringify(Countries.default));
@@ -52,28 +52,33 @@ export const load: PageLoad = async ({ params }) => {
 			if (banks[bank]) {
 				const swiftCodesData = swiftCodes[bank].swift;
 
-				result[bank] = {
-					id: bank,
-					...banks[bank],
-					swift: {
-						codes: swiftCodesData,
-						details: parseSwiftCode(swiftCodesData[0]),
-					},
-				};
+				if(swiftCodesData) {
+					result[bank] = {
+						id: bank,
+						...banks[bank],
+						swift: {
+							codes: swiftCodesData,
+							details: parseSwiftCode(swiftCodesData[0]),
+						},
+					};
+				}
 			} else {
 				// If a bank is present only in SwiftCodes dataset, handle gracefully
-				result[bank] = {
-					id: bank,
-					name: 'Unknown Bank',
-					icon: '',
-					city: '',
-					address: '',
-					branch: '',
-					swift: {
-						codes: swiftCodes[bank].swift,
-						details: parseSwiftCode(swiftCodes[bank].swift[0]),
-					},
-				};
+				const swiftCodesData = swiftCodes[bank].swift;
+				if(swiftCodesData) {
+					result[bank] = {
+						id: bank,
+						name: 'Unknown Bank',
+						icon: '',
+						city: '',
+						address: '',
+						branch: '',
+						swift: {
+							codes: swiftCodes[bank].swift,
+							details: parseSwiftCode(swiftCodes[bank].swift[0]),
+						},
+					};
+				}
 			}
 			return result;
 		}, {} as Record<string, BankData>);
