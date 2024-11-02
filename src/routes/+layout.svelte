@@ -230,7 +230,7 @@ function hidePromotionBar() {
         <div class="cedar-money">
             <a href="https://bit.ly/4gj4L2V" target="_blank">
                 <img 
-                    src="https://monierate.com/cedar-homepage-1.gif"
+                    src="https://monierate.com/cedar-homepage-1.avif"
                     alt="Cedar Money"
                     class="mx-auto max-w-full md:w-[800px] md:h-[114px]">
             </a>
@@ -281,7 +281,7 @@ function hidePromotionBar() {
             <span class="block mb-8">
                 <ul class="flex justify-left mt-5 space-x-5">
                     <li>
-                        <a href="https://x.com/monierate" class="text-gray-500 hover:text-gray-900 dark:hover:text-white dark:text-gray-400">
+                        <a href="https://x.com/monierate" title="x.com" class="text-gray-500 hover:text-gray-900 dark:hover:text-white dark:text-gray-400">
                             <!-- X -->
                             <span class="[&>svg]:h-5 [&>svg]:w-5">
                                 <svg
@@ -296,7 +296,7 @@ function hidePromotionBar() {
                     </li>
 
                     <li>
-                        <a href="https://www.tiktok.com/@monierate" class="text-gray-500 hover:text-gray-900 dark:hover:text-white dark:text-gray-400">
+                        <a href="https://www.tiktok.com/@monierate" title="tiktok.com" class="text-gray-500 hover:text-gray-900 dark:hover:text-white dark:text-gray-400">
                             <!-- X -->
                             <span class="[&>svg]:h-5 [&>svg]:w-5">
                                 <svg
@@ -311,7 +311,7 @@ function hidePromotionBar() {
                     </li>
 
                     <li>
-                        <a href="https://linkedin.com/company/monierate" class="text-gray-500 hover:text-gray-900 dark:hover:text-white dark:text-gray-400">
+                        <a href="https://linkedin.com/company/monierate" title="linkedin.com" class="text-gray-500 hover:text-gray-900 dark:hover:text-white dark:text-gray-400">
                             <!-- Linkedin -->
                             <span class="[&>svg]:h-5 [&>svg]:w-5">
                                 <svg
@@ -339,7 +339,7 @@ function hidePromotionBar() {
                 References made to third party names, logos and trademarks on this website are to identify corresponding goods and services that Monierate visitor can themselves exchange currencies. Unless otherwise specified, the trademark holders are not affiliated with Monierate, our products or website, and they do not sponsor or endorse Monierate services. Such references are included strictly as nominative fair use under applicable trademark law and remain fully the property of their respective trademark holders.
             </p>
             <p class="text-sm mb-4 text-gray-500 dark:text-gray-300">
-                If you subscribe for our exchange rate <a href="/alert">alert</a>, you understand and accept the <a href="/policy/data">Monierate data policy</a>.
+                If you subscribe for our exchange rate <a href="/alert" class="underline">alert</a>, you understand and accept the <a href="/policy/data" class="underline">Monierate data policy</a>.
             </p>
             <p class="text-sm">
                 Built and maintained by <a href="https://twitter.com/jeremyikwuje" class="text-gray-800 dark:text-gray-300">@jeremyikwuje ⚡</a> and <a href="https://twitter.com/onionsman" class="text-gray-800 dark:text-gray-300">@onionsman</a>
