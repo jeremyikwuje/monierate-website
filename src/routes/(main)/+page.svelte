@@ -43,7 +43,7 @@
         <div class="cedar-money">
             <a href="https://bit.ly/3MDsvBi" target="_blank">
                 <img 
-                    src="https://monierate.com/cedar-homepage-1.gif"
+                    src="https://monierate.com/cedar-homepage-1.avif"
                     alt="Cedar Money"
                     class="mx-auto max-w-full md:w-[800px] md:h-[114px]">
             </a>
@@ -168,7 +168,7 @@
 
         <div class="container dark:text-gray-300"> 
             <span class="block mb-4">
-                <h3>What is a Provider?</h3>
+                <h2>What is a Provider?</h2>
                 <p>    
                     A provider is an entity that helps facilitate the exchange of currencies. 
                     If you have 100 USDT and want to exchange it for naira, you will need an exchange provider to convert your USDT to naira. 
