@@ -48,7 +48,7 @@
                     <img 
                         src="https://monierate.com/cedar-homepage-1.avif"
                         alt="Cedar Money"
-                        class="mx-auto max-w-full md:w-[800px] md:h-[114px]">
+                        class="mx-auto max-w-full md:w-[800px] md:h-[114px]" width="100%">
                 </picture>
             </a>
         </div>
@@ -137,7 +137,7 @@
                                     <span class="changer-icon rounded-full overflow-hidden">
                                         <picture>
                                             <source srcset="/icons/png/{rate.changer_code}.png" type="image/png">
-                                            <source srcset="/icons/svg/{rate.changer_code}.svg" type="image/svg">        
+                                            <source srcset="/icons/svg/{rate.changer_code}.svg" type="image/svg+xml">        
                                             <img width="22px" height="22px" src="/icons/png/{rate.changer_code}.png" class="" alt="{providers[rate.changer_code].name} icon">
                                         </picture>
                                     </span>
