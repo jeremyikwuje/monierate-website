@@ -2,8 +2,8 @@
 layout: blog
 title: Track Your Account Balance If You Want to Be Rich
 description: Tracking balances is a crucial activity. It is a big part of portfolio management. Also, it is not only for investors, but for every single individual who values their money.
-createdAt: 2024-11-04T00:47:00
-updatedAt: 2024-10-10T00:47:00
+createdAt: 2024-10-27T02:41:00
+updatedAt: 2024-10-27T02:41:00
 tag: guide
 image: https://ik.imagekit.io/monierate/uploads/man-facing-computer-screen.jpg?updatedAt=1714510211682
 published: true

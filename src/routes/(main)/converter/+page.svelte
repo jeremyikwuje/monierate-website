@@ -2,7 +2,7 @@
 import type { PageData } from "./$types"
 import Money from "$lib/money";
 import { round, chain } from "mathjs"
-import { changeParam, friendlyDate } from "$lib/functions"
+import { changeParam } from "$lib/functions"
 	import ChangerRates from "$lib/components/ChangerRates.svelte";
 
 export let data: PageData;
