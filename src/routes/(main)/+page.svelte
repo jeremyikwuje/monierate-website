@@ -51,6 +51,7 @@
                         width="800px"
                         height="114px"
                         class="mx-auto max-w-full md:w-[800px] md:h-[114px]">
+                        
                 </picture>
             </a>
         </div>
