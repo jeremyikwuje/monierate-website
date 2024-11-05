@@ -19,7 +19,7 @@
         }
 
         alert('Valid account number');
-    }
+    } 
 </script>
 
 <svelte:head>
