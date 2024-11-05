@@ -174,7 +174,7 @@
 
         <div class="container dark:text-gray-300"> 
             <span class="block mb-4">
-                <h3>What is a Provider?</h3>
+                <h2>What is a Provider?</h2>
                 <p>    
                     A provider is an entity that helps facilitate the exchange of currencies. 
                     If you have 100 USDT and want to exchange it for naira, you will need an exchange provider to convert your USDT to naira. 
