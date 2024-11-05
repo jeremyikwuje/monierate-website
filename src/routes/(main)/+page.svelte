@@ -45,6 +45,8 @@
                 <img 
                     src="https://monierate.com/cedar-homepage-1.gif"
                     alt="Cedar Money"
+                    width="800px"
+                    height="114px"
                     class="mx-auto max-w-full md:w-[800px] md:h-[114px]">
             </a>
         </div>
@@ -131,7 +133,11 @@
                             <td>
                                 <a href="/converter/{rate.changer_code}?Amount=1&From=USD&To=NGN" class="flex items-center" title="{providers[rate.changer_code].name} dollar to naira rate.">
                                     <span class="changer-icon">
-                                        <img width="22px" height="22px" src="/icons/{providers[rate.changer_code].icon}" class="rounded-full" alt="{providers[rate.changer_code].name} icon">
+                                        <picture>
+                                            <source srcset="/icons/{rate.changer_code}.svg" type="image/webp">
+                                            <source srcset="/icons/{rate.changer_code}.png" type="image/webp">
+                                            <img width="22px" height="22px" src="/icons/{providers[rate.changer_code].code}.svg" class="rounded-full" alt="{providers[rate.changer_code].name} icon">
+                                        </picture>
                                     </span>
                                     <span class="changer-title">{providers[rate.changer_code].name}</span>
                                 </a>
