@@ -136,7 +136,7 @@
                                 <a href="/converter/{rate.changer_code}?Amount=1&From=USD&To=NGN" class="flex items-center" title="{providers[rate.changer_code].name} dollar to naira rate.">
                                     <span class="changer-icon rounded-full overflow-hidden">
                                         <picture>
-                                            <source srcset="/icons/svg/{rate.changer_code}.svg" type="image/svg+xml">       
+                                            <source srcset="/icons/svg/{rate.changer_code}.svg" type="image/svg+xml">    
                                             <source srcset="/icons/png/{rate.changer_code}.png" type="image/png">
                                             <img width="22px" height="22px" src="/icons/svg/{rate.changer_code}.svg" class="" alt="{providers[rate.changer_code].name} icon">
                                         </picture>
