@@ -135,7 +135,11 @@
                             <td>
                                 <a href="/converter/{rate.changer_code}?Amount=1&From=USD&To=NGN" class="flex items-center" title="{providers[rate.changer_code].name} dollar to naira rate.">
                                     <span class="changer-icon rounded-full overflow-hidden">
-                                        <img width="22px" height="22px" src="/icons/{providers[rate.changer_code].icon}" class="" alt="{providers[rate.changer_code].name} icon">
+                                        <picture>
+                                            <source srcset="/icons/png/{rate.changer_code}.png" type="image/png">
+                                            <source srcset="/icons/svg/{rate.changer_code}.svg" type="image/svg">        
+                                            <img width="22px" height="22px" src="/icons/png/{rate.changer_code}.png" class="" alt="{providers[rate.changer_code].name} icon">
+                                        </picture>
                                     </span>
                                     <span class="changer-title">{providers[rate.changer_code].name}</span>
                                 </a>
