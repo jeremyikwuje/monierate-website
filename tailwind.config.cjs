@@ -6,8 +6,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        bitter: ["Roboto", "serif"],
-        worksans: ["Roboto", "sans-serif"],
+        bitter: ["Arial", "serif"],
+        worksans: ["Arial", "sans-serif"],
       },
       typography: {
         DEFAULT: {
