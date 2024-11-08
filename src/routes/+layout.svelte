@@ -148,7 +148,7 @@ function hidePromotionBar() {
     <nav class="bg-white w-full z-20 top-0 left-0 border-b border-gray-200 dark:bg-gray-900 dark:border-none">
         <div class="w-[95%] md:max-w-[1200px] flex flex-wrap items-center justify-between mx-auto p-4">
             <a href="/" class="flex items-center">
-                <img alt="Monierate Logo" src="/monierate-logo.png" width="142px" height="24px" class="block dark:hidden h-[24px] w-[142px] md:h-[24px] h-8 mr-3" loading="lazy">
+                <img alt="Monierate Logo" src="/monierate.png" width="142px" height="24px" class="block dark:hidden h-[24px] w-[142px] md:h-[24px] h-8 mr-3" loading="lazy">
                 <img alt="Monierate Logo" src="/monierate-logo-white.png" width="142px" height="24px" class="hidden dark:block h-[24px] w-[142px] md:h-[24px]" loading="lazy">
             </a>
             <div class="flex md:order-2">
