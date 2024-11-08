@@ -11,10 +11,50 @@
 
 	let { countryName, countryCode, banksData } = data;
 
-	function handleImageError(event: Event) {
+// Type definitions
+interface ImageSources {
+		svg: string;
+		png: string;
+		webp?: string;
+	}
+
+	let fallbackStates = new Map<string, boolean>();
+
+	function generateSrcSet(baseUrl: string, sizes: number[]): string {
+		return sizes.map((size) => `${baseUrl} ${size}w`).join(', ');
+	}
+
+	function handleImageError(event: Event, id: string) {
 		const img = event.currentTarget as HTMLImageElement;
-		if (img.src !== '/icons/default.png') {
-			img.src = '/icons/default.png'; // Apply fallback only if it's not already set
+		if (!fallbackStates.get(id)) {
+			fallbackStates.set(id, true);
+
+			// Clear all srcset attributes from source elements
+			const picture = img.closest('picture');
+			if (picture) {
+				const sources = picture.getElementsByTagName('source');
+				Array.from(sources).forEach((source) => {
+					source.srcset = '';
+					source.removeAttribute('srcset');
+				});
+			}
+
+			// Clear the img srcset
+			img.srcset = '';
+			img.removeAttribute('srcset');
+
+			const fallbackSrc = '/icons/default.png';
+
+			// Create a new image to check if fallback exists
+			const testImage = new Image();
+			testImage.onerror = () => {
+				console.error('Fallback image not found:', fallbackSrc);
+			};
+			testImage.src = fallbackSrc;
+
+			img.src = fallbackSrc;
+			// Force a reload of the image
+			img.complete && (img.src = img.src);
 		}
 	}
 </script>
@@ -77,14 +117,37 @@
 										title=""
 									>
 										<span class="bank-icon">
-											<img
-												width="22px"
-												height="22px"
-												src="/icons/{data.icon}"
-												class="rounded-full"
-												alt="{data.name} icon"
-												on:error={handleImageError}
-											/>
+											<picture>
+												{#if !fallbackStates.get(data.id)}
+													<source
+														srcset={generateSrcSet(
+															`/icons/svg/${data.id}.svg`,
+															[400, 800, 1200]
+														)}
+														type="image/svg+xml"
+													/>
+													<source
+														srcset={generateSrcSet(
+															`/icons/png/${data.id}.png`,
+															[400, 800, 1200]
+														)}
+														type="image/png"
+													/>
+												{/if}
+												<img
+													width="800"
+													height="114"
+													src={`/icons/svg/${data.id}.svg`}
+													srcset={generateSrcSet(
+														`/icons/svg/${data.id}.svg`,
+														[400, 800, 1200]
+													)}
+													sizes="(max-width: 800px) 100vw, 800px"
+													class="rounded-full"
+													alt="{data.name} icon"
+													on:error={(e) => handleImageError(e, data.id)}
+												/>
+											</picture>
 										</span>
 										<span class="bank-title ml-2">{data.name}</span>
 									</a>

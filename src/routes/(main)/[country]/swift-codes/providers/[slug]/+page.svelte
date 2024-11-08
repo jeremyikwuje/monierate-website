@@ -5,10 +5,50 @@
 	let countryName = data.countryName;
 	let countryCode = data.countryCode;
 
-	function handleImageError(event: Event) {
+	// Type definitions
+	interface ImageSources {
+		svg: string;
+		png: string;
+		webp?: string;
+	}
+
+	let fallbackStates = new Map<string, boolean>();
+
+	function generateSrcSet(baseUrl: string, sizes: number[]): string {
+		return sizes.map((size) => `${baseUrl} ${size}w`).join(', ');
+	}
+
+	function handleImageError(event: Event, id: string) {
 		const img = event.currentTarget as HTMLImageElement;
-		if (img.src !== '/icons/default.png') {
-			img.src = '/icons/default.png'; // Apply fallback only if it's not already set
+		if (!fallbackStates.get(id)) {
+			fallbackStates.set(id, true);
+
+			// Clear all srcset attributes from source elements
+			const picture = img.closest('picture');
+			if (picture) {
+				const sources = picture.getElementsByTagName('source');
+				Array.from(sources).forEach((source) => {
+					source.srcset = '';
+					source.removeAttribute('srcset');
+				});
+			}
+
+			// Clear the img srcset
+			img.srcset = '';
+			img.removeAttribute('srcset');
+
+			const fallbackSrc = '/icons/default.png';
+
+			// Create a new image to check if fallback exists
+			const testImage = new Image();
+			testImage.onerror = () => {
+				console.error('Fallback image not found:', fallbackSrc);
+			};
+			testImage.src = fallbackSrc;
+
+			img.src = fallbackSrc;
+			// Force a reload of the image
+			img.complete && (img.src = img.src);
 		}
 	}
 </script>
@@ -29,14 +69,27 @@
 	<div class="w-[95%] md:w-[70%] px-8 py-4 mx-auto mb-4 md:mb-6 text-center">
 		<div class="flex flex-col items-center justify-center">
 			<span class="bank-icon mr-4">
-				<img
-					width="70px"
-					height="70px"
-					src="/icons/{bankInfo.icon}"
-					class="rounded-full"
-					alt="{bankInfo.name} icon"
-					on:error={handleImageError}
-				/>
+				<picture>
+					{#if !fallbackStates.get(bankInfo.id)}
+						<source
+							srcset={generateSrcSet(`/icons/svg/${bankInfo.id}.svg`, [400, 800, 1200])}
+							type="image/svg+xml"
+						/>
+						<source
+							srcset={generateSrcSet(`/icons/png/${bankInfo.id}.png`, [400, 800, 1200])}
+							type="image/png"
+						/>
+					{/if}
+					<img
+						width="70px"
+						height="70px"
+						class="rounded-full"
+						alt="{bankInfo.name} icon"
+						src={`/icons/svg/${bankInfo.id}.svg`}
+						srcset={generateSrcSet(`/icons/svg/${bankInfo.id}.svg`, [400, 800, 1200])}
+						on:error={(e) => handleImageError(e, bankInfo.id)}
+					/>
+				</picture>
 			</span>
 			<h1 class="text-2xl md:text-4xl py-5">
 				{bankInfo.name} SWIFT Code

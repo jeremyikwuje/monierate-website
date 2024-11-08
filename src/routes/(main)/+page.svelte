@@ -50,8 +50,8 @@
                     <img 
                         src="https://monierate.com/cedar-homepage-1_800x114.avif"
                         alt="Cedar Money"
-                        width="800"
-                        height="114"
+                        width="800px"
+                        height="114px"
                         class="mx-auto max-w-full md:w-[800px] md:h-[114px]">
 
                 </picture>

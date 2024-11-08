@@ -28,7 +28,7 @@
 						src="https://monierate.com/cedar-converter-1_800x114.avif"
 						alt="Cedar Money"
 						width="600"
-						height="114"
+						height="114px"
 						class="mx-auto max-w-full md:w-[800px] md:h-[114px]"
 					/>
 
