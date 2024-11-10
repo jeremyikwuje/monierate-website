@@ -2,7 +2,6 @@
   "bna": {
     "name": "Banque Nationale Agricole (BNA)",
     "link": "https://www.bna.com.tn",
-    "icon": "bna.png",
     "address": "Rue Hédi Nouira, 1001",
     "city": "Tunis",
     "branch": "Main Branch"
@@ -10,7 +9,6 @@
   "bhti": {
     "name": "Banque de l'Habitat (BH)",
     "link": "https://www.bh.com.tn",
-    "icon": "bhti.png",
     "address": "18 Avenue Mohamed V, 1023",
     "city": "Tunis",
     "branch": "Main Branch"
@@ -18,7 +16,6 @@
   "bt": {
     "name": "Banque de Tunisie (BT)",
     "link": "https://www.bt.com.tn",
-    "icon": "bt.png",
     "address": "2 Rue de Turquie, 1001",
     "city": "Tunis",
     "branch": "Main Branch"
@@ -26,7 +23,6 @@
   "biat": {
     "name": "Banque Internationale Arabe de Tunisie (BIAT)",
     "link": "https://www.biat.com.tn",
-    "icon": "biat.png",
     "address": "70-72 Avenue Habib Bourguiba, 1000",
     "city": "Tunis",
     "branch": "Main Branch"
@@ -34,7 +30,6 @@
   "sbt": {
     "name": "Société Tuniso-Libyenne de Banque (STB)",
     "link": "https://www.stb.com.tn",
-    "icon": "sbt.png",
     "address": "Rue Hédi Nouira, 1001",
     "city": "Tunis",
     "branch": "Main Branch"
@@ -42,7 +37,6 @@
   "attijari": {
     "name": "Attijari Bank",
     "link": "https://www.attijaribank.com.tn",
-    "icon": "attijari.png",
     "address": "95 Avenue de la Liberté, 1002",
     "city": "Tunis",
     "branch": "Main Branch"
@@ -50,7 +44,6 @@
   "bts": {
     "name": "Banque Tunisienne de Solidarité (BTS)",
     "link": "https://www.bts.com.tn",
-    "icon": "bts.png",
     "address": "56 Avenue Mohamed V, 1002",
     "city": "Tunis",
     "branch": "Main Branch"
@@ -58,7 +51,6 @@
   "socgen": {
     "name": "Union Internationale de Banques (UIB)",
     "link": "https://www.uib.com.tn",
-    "icon": "socgen.png",
     "address": "65 Avenue Habib Bourguiba, 1000",
     "city": "Tunis",
     "branch": "Main Branch"
@@ -66,7 +58,6 @@
   "utb": {
     "name": "Union Bancaire pour le Commerce et l'Industrie (UBCI)",
     "link": "https://www.ubci.tn",
-    "icon": "utb.png",
     "address": "139 Avenue de la Liberté, 1002",
     "city": "Tunis",
     "branch": "Main Branch"
@@ -74,7 +65,6 @@
   "cpat": {
     "name": "Compagnie d'Assurances et de Réassurances Tuniso-Européenne (CARTE)",
     "link": "https://www.carte.com.tn",
-    "icon": "cpat.png",
     "address": "Immeuble CARTE, Lot BC4, Centre Urbain Nord, 1082",
     "city": "Tunis",
     "branch": "Main Branch"

@@ -2,7 +2,6 @@
   "bnde": {
     "name": "Banque Nationale pour le Développement Économique",
     "link": "https://bnde.sn",
-    "icon": "bnde.svg",
     "address": "5, Place de l'Indépendance, Dakar",
     "city": "Dakar",
     "branch": "Siège Social"
@@ -10,7 +9,6 @@
   "bhs": {
     "name": "Banque de l'Habitat du Sénégal",
     "link": "https://bhs.sn",
-    "icon": "bhs.svg",
     "address": "Boulevard Général de Gaulle, Dakar",
     "city": "Dakar",
     "branch": "Siège"
@@ -18,63 +16,55 @@
   "bsic": {
     "name": "Banque Sahélo-Saharienne pour l'Investissement et le Commerce",
     "link": "https://bsicbank.com",
-    "icon": "bsic.svg",
     "address": "Route des Almadies, Zone 12, Lot D, Dakar",
     "city": "Dakar",
     "branch": "Direction Générale"
   },
-  "bicis": { 
+  "bicis": {
     "name": "Banque Internationale pour le Commerce et l'Industrie du Sénégal",
     "link": "https://bicis.sn",
-    "icon": "bicis.svg",
     "address": "2, Avenue Léopold Sédar Senghor, Dakar",
     "city": "Dakar",
     "branch": "Siège Social"
   },
-  "cncas": { 
+  "cncas": {
     "name": "Caisse Nationale de Crédit Agricole du Sénégal",
     "link": "https://cncas.sn",
-    "icon": "cncas.svg",
     "address": "31-33, Rue Amadou Assane Ndoye, Dakar",
     "city": "Dakar",
     "branch": "Siège"
   },
   "sgbs": {
-    "name": "Société Générale Sénégal", 
+    "name": "Société Générale Sénégal",
     "link": "https://societegenerale.sn",
-    "icon": "sgbs.svg",
     "address": "19, Avenue Léopold Sédar Senghor, Dakar",
     "city": "Dakar",
     "branch": "Siège"
   },
   "ecobank": {
     "name": "Ecobank Sénégal",
-    "link": "https://ecobank.com/sn", 
-    "icon": "ecobank.svg",
+    "link": "https://ecobank.com/sn",
     "address": "Km 5, Avenue Cheikh Anta Diop, Dakar",
     "city": "Dakar",
     "branch": "Siège Social"
   },
-  "boad": { 
+  "boad": {
     "name": "Banque Ouest Africaine de Développement",
     "link": "https://www.boad.org",
-    "icon": "boad.svg",
     "address": "68, Avenue de la Libération, Dakar",
     "city": "Dakar",
     "branch": "Bureau National"
   },
-  "bceao": { 
+  "bceao": {
     "name": "Banque Centrale des États de l'Afrique de l'Ouest",
     "link": "https://www.bceao.int",
-    "icon": "bceao.svg",
     "address": "Avenue Abdoulaye Fadiga, Dakar",
     "city": "Dakar",
     "branch": "Siège National"
   },
-  "orabank": { 
+  "orabank": {
     "name": "Orabank Sénégal",
     "link": "https://www.orabank.net/fr/senegal",
-    "icon": "orabank.svg",
     "address": "122, Avenue André Peytavin, Dakar",
     "city": "Dakar",
     "branch": "Siège Social"

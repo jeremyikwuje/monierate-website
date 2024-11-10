@@ -2,7 +2,6 @@
   "lpc": {
     "name": "La Congolaise de Banque",
     "link": "https://www.lcb-bank.com",
-    "icon": "lcb.svg",
     "address": "Avenue Amilcar Cabral, Centre-ville",
     "city": "Brazzaville",
     "branch": "Siège Social"
@@ -10,7 +9,6 @@
   "bgfi": {
     "name": "BGFIBank Congo",
     "link": "https://congo.bgfi.com",
-    "icon": "bgfi.svg",
     "address": "Boulevard Denis Sassou-Nguesso, Centre-ville",
     "city": "Brazzaville",
     "branch": "Siège"
@@ -18,7 +16,6 @@
   "bsca": {
     "name": "Banque Sino-Congolaise pour l'Afrique",
     "link": "https://www.bsca.cg",
-    "icon": "bsca.svg",
     "address": "Avenue Amilcar Cabral, Centre-ville",
     "city": "Brazzaville",
     "branch": "Siège Principal"
@@ -26,7 +23,6 @@
   "ecobank": {
     "name": "Ecobank Congo",
     "link": "https://www.ecobank.com/cg/personal-banking",
-    "icon": "ecobank.svg",
     "address": "Avenue du Camp, Centre-ville",
     "city": "Brazzaville",
     "branch": "Agence Principale"
@@ -34,7 +30,6 @@
   "bcdc": {
     "name": "Banque Commerciale Du Congo",
     "link": "https://www.bcdc.cg",
-    "icon": "bcdc.svg",
     "address": "Avenue William Guynet, Centre-ville",
     "city": "Brazzaville",
     "branch": "Direction Générale"
@@ -42,7 +37,6 @@
   "uba": {
     "name": "United Bank for Africa Congo",
     "link": "https://www.ubagroup.com/congo-brazzaville",
-    "icon": "uba.svg",
     "address": "Avenue du Port, Centre-ville",
     "city": "Brazzaville",
     "branch": "Siège"
@@ -50,7 +44,6 @@
   "postbank": {
     "name": "Banque Postale du Congo",
     "link": "https://www.banquepostale.cg",
-    "icon": "postbank.svg",
     "address": "Avenue du Camp, Centre-ville",
     "city": "Brazzaville",
     "branch": "Siège Central"
@@ -58,7 +51,6 @@
   "credit_du_congo": {
     "name": "Crédit du Congo",
     "link": "https://www.creditducongo.com",
-    "icon": "credit_du_congo.svg",
     "address": "Avenue Félix Eboué, Centre-ville",
     "city": "Brazzaville",
     "branch": "Agence Principale"

@@ -2,7 +2,6 @@
   "bgfi": {
     "name": "BGFIBank Gabon",
     "link": "https://gabon.groupebgfibank.com",
-    "icon": "bgfi.png",
     "address": "1295 Boulevard de l'Indépendance",
     "city": "Libreville",
     "branch": "Siège Social"
@@ -10,7 +9,6 @@
   "cgs": {
     "name": "Caisse Nationale de Sécurité Sociale",
     "link": "https://www.cnss.ga",
-    "icon": "cnss.png",
     "address": "Place de l'Indépendance, BP 134",
     "city": "Libreville",
     "branch": "Direction Générale"
@@ -18,7 +16,6 @@
   "uba": {
     "name": "United Bank for Africa Gabon",
     "link": "https://www.ubagabon.com",
-    "icon": "uba.png",
     "address": "Avenue du Colonel Parant, BP 12035",
     "city": "Libreville",
     "branch": "Siège"
@@ -26,7 +23,6 @@
   "bici": {
     "name": "BICIG - Groupe BNP Paribas",
     "link": "https://www.bicig.ga",
-    "icon": "bicig.png",
     "address": "Avenue du Colonel Parant, BP 2241",
     "city": "Libreville",
     "branch": "Agence Principale"
@@ -34,7 +30,6 @@
   "orabank": {
     "name": "Orabank Gabon",
     "link": "https://www.orabank.net/fr/filiale/gabon",
-    "icon": "orabank.png",
     "address": "1115 Boulevard de l'Indépendance, BP 20333",
     "city": "Libreville",
     "branch": "Siège"
@@ -42,7 +37,6 @@
   "societe_generale": {
     "name": "Société Générale Gabon",
     "link": "https://societegenerale.ga",
-    "icon": "societe-generale.png",
     "address": "Avenue du Colonel Parant, BP 1140",
     "city": "Libreville",
     "branch": "Agence Principale"
@@ -50,7 +44,6 @@
   "postbank": {
     "name": "La Poste Bank",
     "link": "https://lapostebank.ga",
-    "icon": "laposte-bank.png",
     "address": "Boulevard Triomphal Omar Bongo, BP 20000",
     "city": "Libreville",
     "branch": "Siège Social"
@@ -58,7 +51,6 @@
   "ecobank": {
     "name": "Ecobank Gabon",
     "link": "https://ecobank.com/ga/personal-banking",
-    "icon": "ecobank.png",
     "address": "Place de l'Indépendance, BP 12111",
     "city": "Libreville",
     "branch": "Agence Principale"
@@ -66,7 +58,6 @@
   "finatra": {
     "name": "Finatra",
     "link": "https://finatra.ga",
-    "icon": "finatra.png",
     "address": "Boulevard de l'Indépendance, BP 2200",
     "city": "Libreville",
     "branch": "Siège"
@@ -74,7 +65,6 @@
   "alios": {
     "name": "Alios Finance Gabon",
     "link": "https://alios-finance.com/filiale/gabon",
-    "icon": "alios.png",
     "address": "Boulevard de l'Indépendance, BP 2230",
     "city": "Libreville",
     "branch": "Siège Social"

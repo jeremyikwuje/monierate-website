@@ -2,7 +2,6 @@
   "banque_congolaise": {
     "name": "Banque Commerciale du Congo",
     "link": "https://www.bcdc.cd",
-    "icon": "bcdc.jpg",
     "address": "Avenue des Trois Martyrs",
     "city": "Kinshasa",
     "branch": "Siège Social"
@@ -10,7 +9,6 @@
   "banque_internationale_pour_lafrique": {
     "name": "Banque Internationale pour l'Afrique au Congo",
     "link": "https://www.biac.cd",
-    "icon": "biac.png",
     "address": "Avenue de la République",
     "city": "Kinshasa",
     "branch": "Direction Générale"
@@ -18,7 +16,6 @@
   "societe_generale_congo": {
     "name": "Société Générale Congo",
     "link": "https://www.societegenerale.cd",
-    "icon": "societe.png",
     "address": "Avenue Colonel Mondjiba",
     "city": "Kinshasa",
     "branch": "Agence Principale"
@@ -26,7 +23,6 @@
   "banque_de_developpement_rdc": {
     "name": "Banque de Développement du Congo",
     "link": "https://www.bdc.cd",
-    "icon": "bdc.jpeg",
     "address": "Avenue de l'Indépendance",
     "city": "Kinshasa",
     "branch": "Direction Centrale"
@@ -34,7 +30,6 @@
   "banque_de_lhabitat": {
     "name": "Banque de l'Habitat du Congo",
     "link": "https://www.bhc.cd",
-    "icon": "bhc.png",
     "address": "Avenue des Aigles",
     "city": "Kinshasa",
     "branch": "Agence Centrale"
@@ -42,7 +37,6 @@
   "rawbank": {
     "name": "Rawbank",
     "link": "https://www.rawbank.cd",
-    "icon": "rawbank.png",
     "address": "Avenue du 30 Juin",
     "city": "Kinshasa",
     "branch": "Siège Principal"
@@ -50,7 +44,6 @@
   "tmb": {
     "name": "Trust Merchant Bank",
     "link": "https://www.tmb.cd",
-    "icon": "tmb.png",
     "address": "Avenue de la Paix",
     "city": "Kinshasa",
     "branch": "Direction Générale"
@@ -58,7 +51,6 @@
   "equity_bcdc": {
     "name": "Equity BCDC",
     "link": "https://www.equitygroupholdings.com/cd",
-    "icon": "equity_bcdc.png",
     "address": "Avenue du Commerce",
     "city": "Kinshasa",
     "branch": "Siège Principal"

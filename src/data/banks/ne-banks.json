@@ -2,7 +2,6 @@
   "boa": {
     "name": "Bank Of Africa Niger",
     "link": "https://www.boaniger.com",
-    "icon": "boa.png",
     "address": "Rue du Gaweye, Niamey",
     "city": "Niamey",
     "branch": "Siège Social"
@@ -10,7 +9,6 @@
   "sonibank": {
     "name": "Société Nigérienne de Banque (SONIBANK)",
     "link": "https://www.sonibank.ne",
-    "icon": "sonibank.png",
     "address": "Rue de Gaweye, BP 891, Niamey",
     "city": "Niamey",
     "branch": "Siège"
@@ -18,7 +16,6 @@
   "ecobank": {
     "name": "Ecobank Niger",
     "link": "https://www.ecobank.com/ne/personal-banking",
-    "icon": "ecobank.png",
     "address": "Rue du Gaweye, BP 13804, Niamey",
     "city": "Niamey",
     "branch": "Agence Principale"
@@ -26,7 +23,6 @@
   "banque_atlantique": {
     "name": "Banque Atlantique Niger",
     "link": "https://www.banqueatlantique.net/ne",
-    "icon": "batl.png",
     "address": "Rue du Commerce, BP 375, Niamey",
     "city": "Niamey",
     "branch": "Siège"
@@ -34,7 +30,6 @@
   "bcn": {
     "name": "Banque Commerciale du Niger (BCN)",
     "link": "https://www.bcn.ne",
-    "icon": "bcn.png",
     "address": "Avenue de l'Indépendance, Niamey",
     "city": "Niamey",
     "branch": "Siège Social"
@@ -42,7 +37,6 @@
   "bsic": {
     "name": "Banque Sahélo-Saharienne pour l'Investissement et le Commerce (BSIC)",
     "link": "https://www.bsic.ne",
-    "icon": "bsic.png",
     "address": "Rue Heinrich Lubke, BP 382, Niamey",
     "city": "Niamey",
     "branch": "Siège"
@@ -50,7 +44,6 @@
   "bagri": {
     "name": "Banque Agricole du Niger (BAGRI)",
     "link": "https://www.bagri-niger.ne",
-    "icon": "bagri.png",
     "address": "Avenue de l'Indépendance, Niamey",
     "city": "Niamey",
     "branch": "Siège Social"
@@ -58,7 +51,6 @@
   "coris": {
     "name": "Coris Bank International Niger",
     "link": "https://www.corisbank.ne",
-    "icon": "coris.png",
     "address": "Boulevard Mali Béro, Niamey",
     "city": "Niamey",
     "branch": "Siège"
