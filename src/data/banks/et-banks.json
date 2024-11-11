@@ -2,7 +2,6 @@
   "dashenbank": {
     "name": "Dashen Bank S.C.",
     "link": "https://dashenbanksc.com",
-    "icon": "dashen-bank.jpeg",
     "address": "Dashen Bank Head Office Building, Africa Avenue (Bole Road)",
     "city": "Addis Ababa",
     "branch": "Head Office",
@@ -11,7 +10,6 @@
   "wegagenbank": {
     "name": "Wegagen Bank S.C.",
     "link": "https://www.wegagen.com",
-    "icon": "wegagen-bank.png",
     "address": "Wegagen Bank Head Office, Tefefi Mekonnin Road",
     "city": "Addis Ababa",
     "branch": "Head Office",
@@ -20,7 +18,6 @@
   "bunnabank": {
     "name": "Bunna Bank S.C.",
     "link": "https://www.bunnabank.com.et",
-    "icon": "bunna-bank.png",
     "address": "Bunna Bank Head Office, Beherawi Theatre Street",
     "city": "Addis Ababa",
     "branch": "Head Office",
@@ -29,7 +26,6 @@
   "cbe": {
     "name": "Commercial Bank of Ethiopia",
     "link": "https://www.combanketh.et",
-    "icon": "cberitrea.png",
     "address": "CBE Head Office Building, Churchill Road",
     "city": "Addis Ababa",
     "branch": "Head Office",
@@ -38,7 +34,6 @@
   "unionbank": {
     "name": "United Bank S.C.",
     "link": "https://www.unitedbank.com.et",
-    "icon": "united-bank.png",
     "address": "United Bank Head Office, Niger Street",
     "city": "Addis Ababa",
     "branch": "Head Office",
@@ -47,7 +42,6 @@
   "abyssinia": {
     "name": "Bank of Abyssinia S.C.",
     "link": "https://www.bankofabyssinia.com",
-    "icon": "bank-of-abyssinia.png",
     "address": "Bank of Abyssinia Head Office, Ras Mekonnen Avenue",
     "city": "Addis Ababa",
     "branch": "Head Office",
@@ -56,7 +50,6 @@
   "awash": {
     "name": "Awash Bank S.C.",
     "link": "https://www.awashbank.com",
-    "icon": "awash-bank.jpg",
     "address": "Awash Bank Head Office, Ras Abebe Aregay Street",
     "city": "Addis Ababa",
     "branch": "Head Office",
@@ -65,7 +58,6 @@
   "zemen": {
     "name": "Zemen Bank S.C.",
     "link": "https://www.zemenbank.com",
-    "icon": "zemen-bank.jpeg",
     "address": "Zemen Bank Head Office, Kazanchis",
     "city": "Addis Ababa",
     "branch": "Head Office",
@@ -74,7 +66,6 @@
   "coopbank": {
     "name": "Cooperative Bank of Oromia S.C.",
     "link": "https://www.coopbankoromia.com.et",
-    "icon": "cooperative-bank.png",
     "address": "Cooperative Bank of Oromia Head Office, Mexico Square",
     "city": "Addis Ababa",
     "branch": "Head Office",
@@ -83,7 +74,6 @@
   "nib": {
     "name": "Nib International Bank S.C.",
     "link": "https://www.nibbank.com",
-    "icon": "nib.png",
     "address": "Nib Bank Head Office, Dembel City Center",
     "city": "Addis Ababa",
     "branch": "Head Office",

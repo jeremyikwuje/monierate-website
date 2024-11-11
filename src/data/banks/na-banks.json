@@ -2,7 +2,6 @@
   "fnb": {
     "name": "First National Bank Namibia",
     "link": "https://www.fnbnamibia.com.na",
-    "icon": "fnb.png",
     "address": "Independence Avenue 130, Windhoek",
     "city": "Windhoek",
     "branch": "Head Office"
@@ -10,7 +9,6 @@
   "bankwindhoek": {
     "name": "Bank Windhoek",
     "link": "https://www.bankwindhoek.com.na",
-    "icon": "bankwindhoek.png",
     "address": "Independence Avenue 262, Windhoek",
     "city": "Windhoek",
     "branch": "Head Office"
@@ -18,7 +16,6 @@
   "nedbank": {
     "name": "Nedbank Namibia",
     "link": "https://www.nedbank.com.na",
-    "icon": "nedbank.png",
     "address": "Independence Avenue 55, Windhoek",
     "city": "Windhoek",
     "branch": "Head Office"
@@ -26,7 +23,6 @@
   "standardbank": {
     "name": "Standard Bank Namibia",
     "link": "https://www.standardbank.com.na",
-    "icon": "standardbank.png",
     "address": "Independence Avenue Corner, Windhoek",
     "city": "Windhoek",
     "branch": "Head Office"
@@ -34,7 +30,6 @@
   "letshego": {
     "name": "Letshego Bank Namibia",
     "link": "https://www.letshego.com/namibia",
-    "icon": "letshego.png",
     "address": "18 Schwerinsburg Street, Windhoek",
     "city": "Windhoek",
     "branch": "Head Office"
@@ -42,7 +37,6 @@
   "trustco": {
     "name": "Trustco Bank Namibia",
     "link": "https://www.tbn.na",
-    "icon": "trustco.png",
     "address": "Windhoek Office Tower, Windhoek",
     "city": "Windhoek",
     "branch": "Head Office"
@@ -50,7 +44,6 @@
   "bon": {
     "name": "Bank of Namibia",
     "link": "https://www.bon.com.na",
-    "icon": "bon.png",
     "address": "71 Robert Mugabe Avenue, Windhoek",
     "city": "Windhoek",
     "branch": "Head Office"
@@ -58,7 +51,6 @@
   "nampost": {
     "name": "NamPost Savings Bank",
     "link": "https://www.nampost.com.na",
-    "icon": "nampost.png",
     "address": "Post Office Building, Independence Avenue, Windhoek",
     "city": "Windhoek",
     "branch": "Head Office"

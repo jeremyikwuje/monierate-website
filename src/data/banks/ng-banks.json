@@ -2,7 +2,6 @@
   "accessbank": {
     "name": "Access Bank",
     "link": "https://www.accessbankplc.com",
-    "icon": "accessbank.svg",
     "address": "Plot 999c, Danmole Street, Victoria Island",
     "city": "Lagos",
     "branch": "Victoria Island Branch"
@@ -10,7 +9,6 @@
   "zenithbank": {
     "name": "Zenith Bank",
     "link": "https://www.zenithbank.com",
-    "icon": "zenithbank.png",
     "address": "87, Ajose Adeogun Street, Victoria Island",
     "city": "Lagos",
     "branch": "Victoria Island Branch"
@@ -18,7 +16,6 @@
   "uba": {
     "name": "United Bank for Africa",
     "link": "https://www.ubagroup.com",
-    "icon": "uba.png",
     "address": "57 Marina, Lagos Island",
     "city": "Lagos",
     "branch": "Marina Branch"
@@ -26,7 +23,6 @@
   "firstbank": {
     "name": "First Bank of Nigeria",
     "link": "https://www.firstbanknigeria.com",
-    "icon": "firstbank.svg",
     "address": "35 Marina, Lagos Island",
     "city": "Lagos",
     "branch": "Marina Branch"
@@ -34,7 +30,6 @@
   "gtbank": {
     "name": "Guaranty Trust Bank",
     "link": "https://www.gtbank.com",
-    "icon": "gtbank.png",
     "address": "635, Akin Adesola Street, Victoria Island",
     "city": "Lagos",
     "branch": "Victoria Island Branch"
@@ -42,7 +37,6 @@
   "fidelitybank": {
     "name": "Fidelity Bank",
     "link": "https://www.fidelitybank.ng",
-    "icon": "fidelitybank.svg",
     "address": "2, Kofo Abayomi Street, Victoria Island",
     "city": "Lagos",
     "branch": "Victoria Island Branch"
@@ -50,7 +44,6 @@
   "opay": {
     "name": "OPay Digital Services",
     "link": "https://www.opayweb.com",
-    "icon": "opay.png",
     "address": "1, Oju Olobun Close, Off Adetokunbo Ademola Street",
     "city": "Lagos",
     "branch": "Victoria Island Branch"
@@ -58,7 +51,6 @@
   "sterlingbank": {
     "name": "Sterling Bank",
     "link": "https://sterling.ng",
-    "icon": "sterlingbank.png",
     "address": "20, Marina, Lagos Island",
     "city": "Lagos",
     "branch": "Marina Branch"
@@ -66,7 +58,6 @@
   "wemabank": {
     "name": "Wema Bank",
     "link": "https://wemabank.com",
-    "icon": "wemabank.png",
     "address": "54, Marina, Lagos Island",
     "city": "Lagos",
     "branch": "Marina Branch"
@@ -74,7 +65,6 @@
   "keystonebank": {
     "name": "Keystone Bank",
     "link": "https://www.keystonebankng.com",
-    "icon": "keystonebank.png",
     "address": "27, Adeola Odeku Street, Victoria Island",
     "city": "Lagos",
     "branch": "Victoria Island Branch"
@@ -82,7 +72,6 @@
   "ecobank": {
     "name": "Ecobank Nigeria",
     "link": "https://ecobank.com/ng",
-    "icon": "ecobank.png",
     "address": "21, Ahmadu Bello Way, Victoria Island",
     "city": "Lagos",
     "branch": "Victoria Island Branch"
@@ -90,7 +79,6 @@
   "fcmb": {
     "name": "First City Monument Bank",
     "link": "https://www.fcmb.com",
-    "icon": "fcmb.svg",
     "address": "1, Ajose Adeogun Street, Victoria Island",
     "city": "Lagos",
     "branch": "Victoria Island Branch"
@@ -98,7 +86,6 @@
   "unionbank": {
     "name": "Union Bank of Nigeria",
     "link": "https://www.unionbankng.com",
-    "icon": "unionbank.png",
     "address": "36, Marina, Lagos Island",
     "city": "Lagos",
     "branch": "Marina Branch"
@@ -106,7 +93,6 @@
   "unitybank": {
     "name": "Unity Bank",
     "link": "https://www.unitybankng.com",
-    "icon": "unitybank.png",
     "address": "42, Ahmed Onibudo Street, Victoria Island",
     "city": "Lagos",
     "branch": "Victoria Island Branch"
@@ -114,7 +100,6 @@
   "standardchartered": {
     "name": "Standard Chartered Bank Nigeria",
     "link": "https://www.sc.com/ng",
-    "icon": "standardchartered.png",
     "address": "142, Ahmadu Bello Way, Victoria Island",
     "city": "Lagos",
     "branch": "Victoria Island Branch"
@@ -122,7 +107,6 @@
   "jaizbank": {
     "name": "Jaiz Bank",
     "link": "https://jaizbankplc.com",
-    "icon": "jaizbank.png",
     "address": "73, Ralph Shodeinde Street, Central Business District",
     "city": "Abuja",
     "branch": "CBD Branch"
@@ -130,7 +114,6 @@
   "polarisbank": {
     "name": "Polaris Bank",
     "link": "https://www.polarisbanklimited.com",
-    "icon": "polarisbank.png",
     "address": "3, Adeola Hopewell Street, Victoria Island",
     "city": "Lagos",
     "branch": "Victoria Island Branch"
@@ -138,7 +121,6 @@
   "heritagebank": {
     "name": "Heritage Banking Company",
     "link": "https://www.hbng.com",
-    "icon": "heritagebank.png",
     "address": "292B, Ajose Adeogun Street, Victoria Island",
     "city": "Lagos",
     "branch": "Victoria Island Branch"
@@ -146,7 +128,6 @@
   "lotusbank": {
     "name": "Lotus Bank",
     "link": "https://lotusbank.com.ng",
-    "icon": "lotusbank.png",
     "address": "42, Adetokunbo Ademola Street, Victoria Island",
     "city": "Lagos",
     "branch": "Victoria Island Branch"

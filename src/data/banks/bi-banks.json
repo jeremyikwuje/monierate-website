@@ -2,7 +2,6 @@
   "banque_de_la_republique_du_burundi": {
     "name": "Banque de la République du Burundi (BRB)",
     "link": "https://www.brb.bi",
-    "icon": "banque_de_la_republique_du_burundi.png",
     "address": "Avenue du 28 Novembre, BP 705",
     "city": "Bujumbura",
     "branch": "Siège"
@@ -10,7 +9,6 @@
   "bgf": {
     "name": "Banque de Gestion et de Financement (BGF)",
     "link": "https://www.bgf.bi",
-    "icon": "bgf.png",
     "address": "Boulevard de la Liberté 13",
     "city": "Bujumbura",
     "branch": "Siège"
@@ -18,7 +16,6 @@
   "bancobu": {
     "name": "Banque Commerciale du Burundi (BANCOBU)",
     "link": "https://www.bancobu.com",
-    "icon": "bancobu.jpg",
     "address": "Avenue de l'Industrie, BP 990",
     "city": "Bujumbura",
     "branch": "Siège"
@@ -26,7 +23,6 @@
   "ecobank_burundi": {
     "name": "Ecobank Burundi",
     "link": "https://www.ecobank.com/bi",
-    "icon": "ecobank.png",
     "address": "Avenue de la JRR, BP 270",
     "city": "Bujumbura",
     "branch": "Siège"
@@ -34,7 +30,6 @@
   "finbank": {
     "name": "FINBANK Burundi",
     "link": "https://www.finbank.bi",
-    "icon": "finbank.jpg",
     "address": "Boulevard Patrice Lumumba",
     "city": "Bujumbura",
     "branch": "Siège"
@@ -42,7 +37,6 @@
   "interbank_burundi": {
     "name": "Interbank Burundi (IBB)",
     "link": "https://www.interbankbdi.com",
-    "icon": "interbank_burundi.png",
     "address": "Boulevard de l'Indépendance",
     "city": "Bujumbura",
     "branch": "Siège"
@@ -50,7 +44,6 @@
   "kcb_bank": {
     "name": "KCB Bank Burundi",
     "link": "https://bi.kcbgroup.com",
-    "icon": "kcb_bank.png",
     "address": "Avenue du Peuple Murundi",
     "city": "Bujumbura",
     "branch": "Siège"
@@ -58,7 +51,6 @@
   "crdb_bank": {
     "name": "CRDB Bank Burundi",
     "link": "https://www.crdbbank.co.bi",
-    "icon": "crdb.png",
     "address": "Boulevard du 28 Novembre",
     "city": "Bujumbura",
     "branch": "Siège"
@@ -66,7 +58,6 @@
   "dtb_burundi": {
     "name": "Diamond Trust Bank Burundi (DTB)",
     "link": "https://www.dtbafrica.com/bi",
-    "icon": "dtb.png",
     "address": "Avenue de l'Uprona",
     "city": "Bujumbura",
     "branch": "Siège"

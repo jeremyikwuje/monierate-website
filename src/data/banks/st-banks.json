@@ -2,7 +2,6 @@
   "bcstp": {
     "name": "Banco Central de São Tomé e Príncipe (BCSTP)",
     "link": "https://www.bcstp.st",
-    "icon": "bcstp.png",
     "address": "Praça da Independência, CP 13",
     "city": "São Tomé",
     "branch": "Head Office"
@@ -10,7 +9,6 @@
   "banco_internacional": {
     "name": "Banco Internacional de São Tomé e Príncipe (BISTP)",
     "link": "https://www.bistp.st",
-    "icon": "banco-internacional.png",
     "address": "Praça da Independência, São Tomé",
     "city": "São Tomé",
     "branch": "Head Office"
@@ -18,7 +16,6 @@
   "afriland": {
     "name": "Afriland First Bank STP",
     "link": "https://www.afrilandfirstbank.st",
-    "icon": "afriland.png",
     "address": "Avenida da Independência, São Tomé",
     "city": "São Tomé",
     "branch": "Main Branch"
@@ -26,7 +23,6 @@
   "ecobank": {
     "name": "Ecobank São Tomé e Príncipe",
     "link": "https://www.ecobank.st",
-    "icon": "ecobank.png",
     "address": "Rua do Comércio, São Tomé",
     "city": "São Tomé",
     "branch": "Head Office"
@@ -34,7 +30,6 @@
   "bgfi": {
     "name": "BGFIBank São Tomé e Príncipe",
     "link": "https://stp.bgfi.com",
-    "icon": "bgfi.png",
     "address": "Avenida Marginal 12 de Julho, São Tomé",
     "city": "São Tomé",
     "branch": "Head Office"

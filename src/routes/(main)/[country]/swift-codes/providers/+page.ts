@@ -12,7 +12,6 @@ export const load: PageLoad = async ({ params }) => {
 	type BankData = {
 		id: string;
 		name: string;
-		icon: string;
 		city: string;
 		address: string;
 		branch: string;
@@ -69,7 +68,6 @@ export const load: PageLoad = async ({ params }) => {
 					result[bank] = {
 						id: bank,
 						name: 'Unknown Bank',
-						icon: '',
 						city: '',
 						address: '',
 						branch: '',

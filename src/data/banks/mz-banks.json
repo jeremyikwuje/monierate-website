@@ -2,7 +2,6 @@
   "millennium": {
     "name": "Millennium BIM",
     "link": "https://www.millenniumbim.co.mz",
-    "icon": "millennium.png",
     "address": "Avenida 25 de Setembro, 1475",
     "city": "Maputo",
     "branch": "Sede Principal"
@@ -10,7 +9,6 @@
   "bci": {
     "name": "Banco Comercial e de Investimentos",
     "link": "https://www.bci.co.mz",
-    "icon": "bci.png",
     "address": "Avenida 25 de Setembro, 4",
     "city": "Maputo",
     "branch": "Sede"
@@ -18,7 +16,6 @@
   "standard": {
     "name": "Standard Bank Moçambique",
     "link": "https://www.standardbank.co.mz",
-    "icon": "standard.png",
     "address": "Avenida 10 de Novembro, 420",
     "city": "Maputo",
     "branch": "Sede"
@@ -26,7 +23,6 @@
   "absa": {
     "name": "Absa Bank Moçambique",
     "link": "https://www.absa.co.mz",
-    "icon": "absa.png",
     "address": "Avenida 25 de Setembro, 1184",
     "city": "Maputo",
     "branch": "Sede"
@@ -34,7 +30,6 @@
   "fnb": {
     "name": "First National Bank Moçambique",
     "link": "https://www.fnb.co.mz",
-    "icon": "fnb.png",
     "address": "Avenida 25 de Setembro, 420",
     "city": "Maputo",
     "branch": "Sede"
@@ -42,7 +37,6 @@
   "banco_moc": {
     "name": "Banco de Moçambique",
     "link": "https://www.bancomoc.mz",
-    "icon": "bancomoc.png",
     "address": "Avenida 25 de Setembro, 1695",
     "city": "Maputo",
     "branch": "Sede"
@@ -50,7 +44,6 @@
   "uba": {
     "name": "United Bank for Africa Moçambique",
     "link": "https://www.ubagroup.com/mozambique",
-    "icon": "uba.png",
     "address": "Avenida 25 de Setembro, 270",
     "city": "Maputo",
     "branch": "Sede"
