@@ -63,7 +63,7 @@ function convertNow() {
         if (pair) {
             // get rates of a pair
             pair_rates = pair.changers;
-            let changer_rate = pair_rates.find( (p: any) => p.changer_code === changer.code );
+            changer_rate = pair_rates.find( (p: any) => p.changer_code === changer.code );
 
             console.log(changer_rate);
 
@@ -93,7 +93,7 @@ function convertNow() {
             if (pair) {
                 // get rates of a pair
                 pair_rates = pair.changers;
-                let changer_rate = pair_rates.find( (p: any) => p.changer_code === changer.code );
+                changer_rate = pair_rates.find( (p: any) => p.changer_code === changer.code );
 
                 // if rate is found for this changer
                 if (changer_rate) {
@@ -242,7 +242,7 @@ convertNow();
                         </span>
                     </span>
                     <span class="block text-sm md:w-[50%] p-4">
-                        {currencyFrom.name} to {currencyTo.name} conversion on {changer.name} — Last updated {new Date(changer_rate.updatedAt)}
+                        {currencyFrom.name} to {currencyTo.name} conversion on {changer.name} — Last updated {new Date(changer_rate.updated_at)}
                     </span>
                 </div>
                 
