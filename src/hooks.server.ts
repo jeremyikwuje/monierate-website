@@ -1,6 +1,10 @@
-
+import { browser } from '$app/environment';
 import type { Handle } from '@sveltejs/kit';
-import { setTimezone } from '$lib/server/store';
+let setTimezone: (timezone: string) => any;
+if (!browser) {
+    const module = await import('./lib/server/store');
+    setTimezone = module.getTimezone;
+}
 
 const securityHeaders = {
     //'Cross-Origin-Embedder-Policy': 'require-corp',
