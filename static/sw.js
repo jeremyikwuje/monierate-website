@@ -1,4 +1,4 @@
-const CACHE_VERSION = 'v1.01';
+const CACHE_VERSION = 'v1.02';
 const STATIC_CACHE_NAME = `static-${CACHE_VERSION}`;
 const CACHE_DELETION_TIMEOUT = 3000; // 3 seconds timeout for deletion
 
