@@ -5,6 +5,7 @@ import { onMount } from "svelte";
 import { getCookie, setCookie } from "$lib/functions";
 import { browser } from "$app/environment";
 import Money from "$lib/money";
+import { timezone } from '$lib/functions';
 
 export let data;
 const selected_partner_top = data.selected_partner_top;
@@ -34,6 +35,15 @@ $: if ($navigating) {
 
 // toggle navbar collapse menu on mobile
 onMount(() => {
+    if (browser) {
+        const getTimezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+        if (getCookie('timezone') !== getTimezone) {
+            setCookie('timezone', getTimezone, 1);
+        }
+        setCookie('timezone', getTimezone, 1);
+        timezone.set(getTimezone);
+    }
+    
     const collapse = () => {
         const triggerEl = document.getElementById('nav-collapse-trigger');
         const targetEl = document.getElementById('navbar-sticky');
