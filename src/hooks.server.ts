@@ -1,5 +1,6 @@
 
 import type { Handle } from '@sveltejs/kit';
+import { setTimezone } from '$lib/server/store';
 
 const securityHeaders = {
     //'Cross-Origin-Embedder-Policy': 'require-corp',
@@ -29,6 +30,17 @@ export const handle: Handle = async ({event, resolve}) => {
     removeHeaders.forEach( (name) => {
 		response.headers.delete(name)
 	})
+
+    const cookieHeader = event.request.headers.get('cookie');
+    let timezone = 'UTC'; // default value
+    if (cookieHeader) {
+        const cookies = cookieHeader.split(';').map(cookie => cookie.trim());
+        const timezoneCookie = cookies.find(cookie => cookie.startsWith('timezone='));
+        if (timezoneCookie) {
+            timezone = timezoneCookie.split('=')[1];
+        }
+    }
+    setTimezone(timezone);
 
     return response;
 }

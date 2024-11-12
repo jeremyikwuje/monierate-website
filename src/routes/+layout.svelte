@@ -34,6 +34,14 @@ $: if ($navigating) {
 
 // toggle navbar collapse menu on mobile
 onMount(() => {
+    if (browser) {
+        const timezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+        if (getCookie('timezone') !== timezone) {
+            setCookie('timezone', timezone, 1);
+        }
+        setCookie('timezone', timezone, 1);
+    }
+
     const collapse = () => {
         const triggerEl = document.getElementById('nav-collapse-trigger');
         const targetEl = document.getElementById('navbar-sticky');

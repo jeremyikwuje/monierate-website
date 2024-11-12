@@ -1,6 +1,12 @@
 import { browser } from '$app/environment';
 import { invalidate, invalidateAll } from '$app/navigation';
-import date from 'date-and-time'
+import date from 'date-and-time';
+let serverGetTimezone: () => string;
+
+if (!browser) {
+    const module = await import('./server/store');
+    serverGetTimezone = module.getTimezone;
+}
 
 export function bearer(method: string, bearer: string, body: object)
 {
@@ -105,14 +111,25 @@ export const format = (dt: any, d = "datetime") => {
 }
 
 export function friendlyDate(dt: any, d = "datetime") {
+    let timezone = getUserTimezone();
+    if(!browser) { 
+        timezone = serverGetTimezone();
+    }
+    //console.log(timezone)
+
     const dateString = format(dt, d);
     const date = new Date(dateString);
     const now = new Date();
-    const diffInSeconds = Math.floor((now.getTime() - date.getTime()) / 1000);
 
-    const isSameDay = date.getDate() === now.getDate() &&
-                      date.getMonth() === now.getMonth() &&
-                      date.getFullYear() === now.getFullYear();
+    // Convert dates to the user's timezone
+    const userDate = new Date(date.toLocaleString('en-US', { timeZone: timezone }));
+    const userNow = new Date(now.toLocaleString('en-US', { timeZone: timezone }));
+
+    const diffInSeconds = Math.floor((userNow.getTime() - userDate.getTime()) / 1000);
+
+    const isSameDay = userDate.getDate() === userNow.getDate() &&
+                      userDate.getMonth() === userNow.getMonth() &&
+                      userDate.getFullYear() === userNow.getFullYear();
 
     if (diffInSeconds < 900) {
         return 'Just now';
@@ -120,8 +137,11 @@ export function friendlyDate(dt: any, d = "datetime") {
         const minutes = Math.floor(diffInSeconds / 60);
         return `${minutes} minute${minutes > 1 ? 's' : ''} ago`;
     } else if (isSameDay) {
-        //const hours = Math.floor(diffInSeconds / 3600);
-        return `Today, ${date.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}`;
+        return `Today, ${userDate.toLocaleTimeString('en-US', { 
+            hour: '2-digit', 
+            minute: '2-digit',
+            timeZone: timezone 
+        })}`;
     } else if (diffInSeconds < 86400) {
         const hours = Math.floor(diffInSeconds / 3600);
         return `${hours} hour${hours > 1 ? 's' : ''} ago`;
@@ -139,6 +159,9 @@ export function friendlyDate(dt: any, d = "datetime") {
 
 // ✅ Or get a Date object with the specified Time zone
 function changeTimeZone(date: any, timeZone: string = "Africa/Lagos") {
+    if(getCookie('timezone') !== null) {
+        timeZone = getCookie('timezone') as string;
+    }
     if (typeof date === 'string') {
       return new Date(
         new Date(date).toLocaleString('en-US', {
