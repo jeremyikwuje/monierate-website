@@ -165,11 +165,11 @@ convertNow();
             <a href="https://bit.ly/3MDsvBi" target="_blank">
                 <picture>
     
-                    <source srcset="https://monierate.com/cedar-converter-1_800x114.avif" type="image/avif">    
-                    <source srcset="https://monierate.com/cedar-converter-1_800x114.gif" type="image/gif">
+                    <source srcset="/media/banners/cedar-converter.avif" type="image/avif">    
+                    <source srcset="/media/banners/cedar-converter.gif" type="image/gif">
     
                     <img 
-                        src="https://monierate.com/cedar-converter-1_800x114.avif"
+                        src="/media/banners/cedar-converter.avif"
                         alt="Cedar Money"
                         width="800px"
                         height="114px"
