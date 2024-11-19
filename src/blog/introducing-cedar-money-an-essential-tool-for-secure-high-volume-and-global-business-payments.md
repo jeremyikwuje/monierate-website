@@ -23,11 +23,9 @@ How? Through:
 
 Gone are the days of relying on complex and costly wire transfers that eat into your profit margin. With Cedar, you can effortlessly handle transactions of up to **$3,000,000,** paying your suppliers and merchants in over 130+ countries from Nigeria, Kenya and Ivory Coast— and businesses around the world can in turn send payments to you in these countries. By eliminating the hassle of cross-border transactions, Cedar introduces efficiency and makes the payment process smooth for both you and your suppliers. Essentially, “it would be good doing business with you.”
 
-
 ## Swift and Secure Payments
 
-One of the significant challenges businesses face when making international payments is being forced to make a daunting choice: prioritize speed and risk security or opt for security at the expense of efficiency. However, with Cedar, you get the best of both worlds. Coupled with Cedar’s fast transaction processing times (T + 1 settlements) which help your business maintain a healthy cash flow, it also employs[ state-of-the-art security measures](https://www.cedar.money/news-updates/cedars-formula-for-trust-fortifying-cross-border-payments-by-combining-old-and-new) to protect your funds and transactions.
-
+One of the significant challenges businesses face when making international payments is being forced to make a daunting choice: prioritize speed and risk security or opt for security at the expense of efficiency. However, with Cedar, you get the best of both worlds. Coupled with Cedar’s fast transaction processing times (T + 1 settlements) which help your business maintain a healthy cash flow, it also employs [state-of-the-art security measures](https://www.cedar.money/news-updates/cedars-formula-for-trust-fortifying-cross-border-payments-by-combining-old-and-new) to protect your funds and transactions.
 
 ## Instant Alerts on Favorable Exchange Rates
 
@@ -37,14 +35,12 @@ Just imagine, you're about to make a big-ticket purchase to an overseas supplier
 
 No more waiting around, no more second-guessing. With Rate Alerts, you're always one step ahead.
 
-
 ## Extra Earnings
 
 With the launch of [Cedar’s referral program](https://www.cedar.money/news-updates/refer-cedar-money-today-and-earn-up-to-180), you are not only benefiting from seamless cross-border payment solutions but also earning substantial rewards for introducing other businesses to the Cedar platform. When you successfully refer a business to cedar, you get $180 which you can redeem to reduce the cost of the transactions you initiate on Cedar.  It's a win-win situation, plain and simple. 
-
 
 ## It’s to Do Business Like You Mean Business
 
 For you to succeed in the global marketplace, you need solutions that mirror your ambition. Cedar is not just a payment platform; it’s a strategic partner designed to bring your goals into your attainable orbit and propel you toward success. By taking out the complexities that come with cross-border transactions, Cedar makes it easy for your business to grow and thrive globally.
 
-With [Cedar Money](http://www.cedar.money), you don’t just make payments; you make a statement. A statement of efficiency, security, and commitment to success. Are you ready to do business like you mean business?[ Get started today!](https://app.cedar.money/auth/register/)
+With [Cedar Money](http://www.cedar.money), you don’t just make payments; you make a statement. A statement of efficiency, security, and commitment to success. Are you ready to do business like you mean business? [Get started today!](https://app.cedar.money/auth/register/)
