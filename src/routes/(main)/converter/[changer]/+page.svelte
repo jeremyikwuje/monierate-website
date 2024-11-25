@@ -2,13 +2,13 @@
 	<title>
        {convertAmount} {convertFrom} to {convertTo} on {changer.name} - Convert {currencyFrom.name} to {currencyTo.name} using {changer.name} exchange rate 
     </title>
-    <meta name="description" content="Convert {currencyFrom.name} to {currencyTo.name} on {changer.name}. We use the exchange rate from {changer.name} for this conversion. This is for information purposes only.">
+    <meta name="description" content="Convert {currencyFrom.name} to {currencyTo.name} on {changer.name} via Monierate. Monierate use the exchange rate from {changer.name} for this conversion. This is for information purposes only.">
     <meta name="keywords" content="{changer.name} exchange rate, {changer.name} {currencyFrom.name} rate, {changer.name} {currencyTo.name} rate, {changer.name} currency converter.">
 
     <!-- OG -->
     <meta property="og:type" content="website" />
 	<meta property="og:title" content="{convertFrom} to {convertTo} on {changer.name} - Convert {currencyFrom.name} to {currencyTo.name} using {changer.name} exchange rate." />
-	<meta property="og:description" content="Convert {currencyFrom.name} to {currencyTo.name} on {changer.name}. Enter any amount in {convertFrom} to see the conversion in {convertTo}." />
+	<meta property="og:description" content="Convert {currencyFrom.name} to {currencyTo.name} on {changer.name} via Monierate. Enter any amount in {convertFrom} to see the conversion in {convertTo}." />
     <meta property="og:image" content="https://ik.imagekit.io/monierate/thumbnails/{changer.code}-og.png" />
 </svelte:head>
 
