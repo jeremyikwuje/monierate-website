@@ -1,4 +1,3 @@
-import { basicAuth, getEndpoint } from "$lib/helper";
 import { error } from "@sveltejs/kit";
 import type { PageServerLoad } from './$types'
 import { get_changers } from "$lib/server/changer.service";
