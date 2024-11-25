@@ -1,5 +1,6 @@
 <script>
 import "../app.css";
+import { partytownSnippet } from '@builder.io/partytown/integration';
 import { page, navigating } from "$app/stores";
 import { onMount } from "svelte";
 import { getCookie, setCookie } from "$lib/functions";
@@ -78,6 +79,22 @@ function hidePromotionBar() {
 </script>
 
 <svelte:head>
+    <script>
+		// Forward the necessary functions to the web worker layer
+		partytown = {
+		    forward: ['dataLayer.push', 'gtag']
+		};
+	</script>
+
+    {@html '<script>' + partytownSnippet() + '</script>'}
+
+    <script type="text/partytown" src="https://www.googletagmanager.com/gtag/js?id=G-59H6DBC82L"></script>
+	<script type="text/partytown">
+		window.dataLayer = window.dataLayer || [];
+		window.gtag = function(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+		gtag('config', 'G-59H6DBC82L');
+	</script>
 </svelte:head>
 
 <!-- <div id="top-banner" tabindex="-1" class="flex md:hidden fixed top-0 mb-8 start-0 z-50 justify-between w-full p-4 border-t border-gray-200 bg-gray-50 dark:bg-gray-700 dark:border-gray-600">
@@ -141,8 +158,8 @@ function hidePromotionBar() {
     <nav class="bg-white w-full z-20 top-0 left-0 border-b border-gray-200 dark:bg-gray-900 dark:border-none">
         <div class="w-[95%] md:max-w-[1200px] flex flex-wrap items-center justify-between mx-auto p-4">
             <a href="/" class="flex items-center">
-                <img src="/monierate_142x24.png" width="142px" height="24px" class="block dark:hidden h-[24px] w-[142px] md:h-[24px] h-8 mr-3" alt="Monierate Logo" loading="lazy">
-                <img alt="Monierate Logo" width="142px" height="24px" class="hidden dark:block h-[24px] w-[142px] md:h-[24px]" src="/monierate-logo-white_142x24.png" loading="lazy">
+                <img alt="Monierate Logo" src="/monierate.png" width="142px" height="24px" class="block dark:hidden h-[24px] w-[142px] md:h-[24px] h-8 mr-3" loading="lazy">
+                <img alt="Monierate Logo" src="/monierate-logo-white.png" width="142px" height="24px" class="hidden dark:block h-[24px] w-[142px] md:h-[24px]" loading="lazy">
             </a>
             <div class="flex md:order-2">
                 <a href="/alerts" type="button" class="button px-3 bg-gray-900 dark:bg-gray-200 font-semibold text-white dark:text-gray-900">

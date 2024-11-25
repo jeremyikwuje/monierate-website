@@ -1,6 +1,6 @@
 import { browser } from '$app/environment';
 import { invalidate, invalidateAll } from '$app/navigation';
-import date from 'date-and-time'
+import date from 'date-and-time';
 import { Timezone } from './stores/timezone';
 
 export const timezone = Timezone('UTC');
