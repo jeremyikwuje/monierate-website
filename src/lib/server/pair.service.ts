@@ -1,14 +1,11 @@
 import { getEndpoint } from "$lib/helper";
-import { i } from "mathjs";
 import { basicAuth } from "./utilities";
 
 export enum ChangerServiceCategory {
-  Remittance = 'remittance',
-  Savings = 'savings',
-  Crypto = 'crypto',
-  Bitcoin = 'bitcoin',
-  Card = 'card',
-  Account = 'account',
+  Remittance = 'remittance', // sending
+  Crypto = 'crypto', // buying & selling
+  Card = 'card', // virtual card
+  Account = 'account', // usd account
 }
 
 export const get_pairs = async (code: string | null = null) => {
@@ -30,7 +27,7 @@ export const get_pairs = async (code: string | null = null) => {
   return pair;
 }
 
-export const get_pairs_changer = async (
+export const get_pairs_changers = async (
   code: string,
   changer_service: string = 'all',
 ) => {

@@ -3,7 +3,7 @@ import type { PageData } from "./$types"
 import Money from "$lib/money";
 import { round, chain } from "mathjs"
 import { changeParam } from "$lib/functions"
-	import ChangerRates from "$lib/components/ChangerRates.svelte";
+import ChangerRates from "$lib/components/ChangerRates.svelte";
 
 export let data: PageData;
 let changers = data.changers;
@@ -120,7 +120,18 @@ function sortRates(rates: any) {
     return rates;
 }
 
-convertNow()
+async function getPairChangers(
+    pair_code: string,
+    changer_service: string
+) {
+    const response = await fetch(
+        `/api/pairs/changers?code=${pair_code}&changer_service=${changer_service}`
+    );
+    const changers = await response.json();
+    return changers;
+}
+
+convertNow();
 </script>
 
 <svelte:head>
