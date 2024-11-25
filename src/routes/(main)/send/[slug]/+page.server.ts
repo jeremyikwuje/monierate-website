@@ -5,6 +5,7 @@ import type { PageServerLoad } from './$types';
 import { error } from '@sveltejs/kit';
 import CountriesToCurrencies from '$data/countries-to-currencies.json';
 import Countries from '$data/countries.json';
+import { ChangerServiceCategory, get_pairs_changers } from '$lib/server/pair.service';
 
 interface CountriesMap { [key: string]: string }
 interface ConvertParams {
@@ -39,9 +40,11 @@ export const load: PageServerLoad = async ({ params, url }) => {
     };
 
     try {
-        const [changers, currencies] = await Promise.all([
+        const pair_code = `${convert.From}${convert.To}`.toUpperCase();
+        const [changers, currencies, pair_changers] = await Promise.all([
             get_changers(),
-            get_currencies()
+            get_currencies(),
+            get_pairs_changers(pair_code, ChangerServiceCategory.Remittance)
         ]);
 
         // Check for null or empty data
@@ -54,6 +57,7 @@ export const load: PageServerLoad = async ({ params, url }) => {
         return {
             changers: array_to_key_object(changers, 'code'),
             currencies,
+            pair_changers,
             convert,
             countryToCode,
             countryToName,

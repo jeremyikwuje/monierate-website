@@ -11,10 +11,9 @@
 		code: string;
 		name: string;
 		link: string;
-		pairs?: Record<string, PairRate>;
 	}
 
-	interface PairRate {
+	interface PairChanger {
 		changer_code: string;
 		price_buy: number;
 		price_sell: number;
@@ -47,6 +46,7 @@
 	let convertFromInput = 'USD';
 	let convertToInput = 'NG';
 	let changers: Record<string, Changer> = data.changers || {};
+	let pairChangers: PairChanger[] = data.pair_changers || {};
 	let pairs = data.pairs || [];
 	let currencies: Currency[] = data.currencies || [];
 	let convertAmount = 1;
@@ -75,37 +75,43 @@
 		platform_rates: []
 	};
 
+	async function getPairChangers(
+			pair_code: string,
+			changer_service: string
+	) {
+		const response = await fetch(
+				`/api/pairs/changers?pair_code=${pair_code}&changer_service=${changer_service}`
+		);
+		const changers = await response.json();
+
+		pairChangers = changers;
+
+		return changers;
+	}
+
 	function findSupportedPlatforms(): PlatformRate[] {
 		const from = convertFrom.toLowerCase();
 		const to = convertTo.toLowerCase();
-		const pair_code = `${from}${to}`;
 		let platform_rates: PlatformRate[] = [];
 
 		try {
-			Object.values(changers).forEach((changer) => {
-				if (!changer.pairs) return;
+			Object.values(pairChangers).forEach((changer_rate) => {
 
-				const pairKey = Object.keys(changer.pairs).find((key) => key.toLowerCase() === pair_code);
+				if (changer_rate.price_sell > 0) {
+					const rate = changer_rate.price_sell;
+					const conversion = round(chain(rate).multiply(convertAmount).done(), 2);
 
-				if (pairKey) {
-					const pairRate = changer.pairs[pairKey];
+					const fee_percentage = 0.02; // 2% fee
+					const fees = round(conversion * fee_percentage, 2);
+					const net_amount = round(conversion - fees, 2);
 
-					if (pairRate?.price_sell) {
-						const rate = pairRate.price_sell;
-						const conversion = round(chain(rate).multiply(convertAmount).done(), 2);
-
-						const fee_percentage = 0.02; // 2% fee
-						const fees = round(conversion * fee_percentage, 2);
-						const net_amount = round(conversion - fees, 2);
-
-						platform_rates.push({
-							platform: changer,
-							rate: rate,
-							will_receive: conversion,
-							fees: fees,
-							net_amount: net_amount
-						});
-					}
+					platform_rates.push({
+						platform: changers[changer_rate.changer_code],
+						rate: rate,
+						will_receive: conversion,
+						fees: fees,
+						net_amount: net_amount
+					});
 				}
 			});
 		} catch (error) {
@@ -152,7 +158,8 @@
 			}
 		} catch (error) {
 			console.error('Conversion calculation error:', error);
-		} finally {
+		}
+		finally {
 			// Only hide loading after we've determined if we have results
 			setTimeout(() => {
 				isLoading = false;
@@ -210,6 +217,11 @@
 		} catch (error) {
 			console.log('There was an error set initial input values:', error);
 		}
+
+		// referesh the pair changers rate every 10 minutes
+		setInterval(() => {
+			getPairChangers(`${convertFrom}${convertTo}`, 'remittance');
+		}, 60000 * 10);
 	});
 </script>
 
