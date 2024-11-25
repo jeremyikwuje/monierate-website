@@ -138,12 +138,12 @@ convertNow();
 	<title>
         {Money.format(convertAmount)} {convertFrom} to {convertTo} - Convert {currencyFrom.name} to {currencyTo.name} 
     </title>
-    <meta name="description" content="Convert {currencyFrom.name} to {currencyTo.name}. This is the average exchange rate price of {currencyFrom.name} to {currencyTo.name} in the market right now. It is for information purposes only.">
+    <meta name="description" content="Convert {currencyFrom.name} to {currencyTo.name} on Monierate. This is the average exchange rate price of {currencyFrom.name} to {currencyTo.name} in the market right now. It is for information purposes only.">
     <meta name="keywords" content="{currencyFrom.name} to {currencyTo.name}, {currencyFrom.name} to {currencyTo.name} exchange rate, {currencyFrom.name} to {currencyTo.name} black market, {currencyFrom.name} to {currencyTo.name} rate, {currencyFrom.name} to {currencyTo.name} converter.">
 
     <meta property="og:type" content="website" />
 	<meta property="og:title" content="{Money.format(convertAmount)} {convertFrom} to {convertTo} - Convert {currencyFrom.name} to {currencyTo.name}" />
-	<meta property="og:description" content="Convert {currencyFrom.name} to {currencyTo.name}. Enter any amount in {convertFrom} to see the conversion in {convertTo}." />
+	<meta property="og:description" content="Convert {currencyFrom.name} to {currencyTo.name} on Monierate. Enter any amount in {convertFrom} to see the conversion in {convertTo}." />
 </svelte:head>
 
 <div class="bg-white dark:bg-gray-800">
@@ -153,11 +153,11 @@ convertNow();
             <a href="https://bit.ly/3zfhZgz" target="_blank">
                 <picture>
         
-                    <source srcset="https://monierate.com/cedar-converter-1_800x114.avif" type="image/avif">    
-                    <source srcset="https://monierate.com/cedar-converter-1_800x114.gif" type="image/gif">
+                    <source srcset="/media/banners/cedar-converter.avif" type="image/avif">    
+                    <source srcset="/media/banners/cedar-converter.gif" type="image/gif">
 
                     <img 
-                        src="https://monierate.com/cedar-converter-1_800x114.avif"
+                        src="/media/banners/cedar-converter.avif"
                         alt="Cedar Money"
                         width="800px"
                         height="114px"
@@ -249,7 +249,7 @@ convertNow();
     </div>
 
     {#if pair_rates.length > 0}
-    <div class="container mt-16 border border-none bg-white py-[10px] dark:bg-gray-900 dark:text-light dark:border-none w-full overflow-x-scroll md:overflow-x-hidden overflow-y-scroll md:overflow-y-hidden">
+    <div class="container mt-16 border border-none py-[10px] dark:text-light dark:border-none w-full overflow-x-scroll md:overflow-x-hidden overflow-y-scroll md:overflow-y-hidden">
         <h2 class="mb-8 text-center text-2xl">Best {convertFrom} to {convertTo} rates</h2>
         <ChangerRates rates={pair_rates} changers={changers} from={convertFrom} to={convertTo} />
     </div>

@@ -6,11 +6,11 @@
                 
                 <picture>
 
-                    <source srcset="https://monierate.com/cedar-blog-1_800x114.avif" type="image/avif">    
-                    <source srcset="https://monierate.com/cedar-blog-1_800x114.gif" type="image/gif">
+                    <source srcset="/media/banners/cedar-blog.avif" type="image/avif">    
+                    <source srcset="/media/banners/cedar-blog.gif" type="image/gif">
 
                     <img 
-                        src="https://monierate.com/cedar-blog-1_800x114.avif"
+                        src="/media/banners/cedar-blog.avif"
                         alt="Cedar Money"
                         width="800px"
                         height="114px"

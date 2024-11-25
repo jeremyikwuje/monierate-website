@@ -29,7 +29,7 @@
 
 <svelte:head>
 	<title>Dollar to naira today black market | Monierate</title>
-	<meta name="description" content="Compare the naira exchange rates from over 16 exchanges in Nigeria. Track naira rates today. Convert dollar to naira using CBN and black market rate. Get price alert from your favourite crypto exchange such as Binance, Bybit, Quidax, etc.">
+	<meta name="description" content="Monierate offers reliable naira exchange rates from 40+ exchanges. Track rates, convert dollars, and get crypto price alerts from Binance, Bybit, etc.">
 	<meta property="og:type" content="website" />
 	<meta property="og:title" content="Naira exchange rates & converter | Monierate" />
 	<meta property="og:description" content="Compare the naira exchange rates from over 16 exchanges in Nigeria. Track naira rates today. Convert dollar to naira using CBN and black market rate. Get price alert from your favourite crypto exchange such as Binance, Bybit, Quidax, etc." />
@@ -44,11 +44,11 @@
             <a href="https://bit.ly/3MDsvBi" target="_blank">
                 <picture>
 
-                    <source srcset="https://monierate.com/cedar-homepage-1_800x114.avif" type="image/avif">    
-                    <source srcset="https://monierate.com/cedar-homepage-1_800x114.gif" type="image/gif">
+                    <source srcset="/media/banners/cedar-homepage.avif" type="image/avif">    
+                    <source srcset="/media/banners/cedar-homepage.gif" type="image/gif">
 
                     <img 
-                        src="https://monierate.com/cedar-homepage-1_800x114.avif"
+                        src="/media/banners/cedar-homepage.avif"
                         alt="Cedar Money"
                         width="800px"
                         height="114px"

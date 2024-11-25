@@ -264,11 +264,11 @@ function hidePromotionBar() {
 
                 <picture>
 
-                    <source srcset="https://monierate.com/cedar-homepage-1_800x114.avif" type="image/avif">    
-                    <source srcset="https://monierate.com/cedar-homepage-1_800x114.gif" type="image/gif">
+                    <source srcset="/media/banners/cedar-homepage.avif" type="image/avif">    
+                    <source srcset="/media/banners/cedar-homepage.gif" type="image/gif">
 
                     <img 
-                        src="https://monierate.com/cedar-homepage-1_800x114.avif"
+                        src="/media/banners/cedar-homepage.avif"
                         alt="Cedar Money"
                         width="800px"
                         height="114px"
