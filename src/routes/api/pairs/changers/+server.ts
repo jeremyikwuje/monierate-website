@@ -4,9 +4,10 @@ import { json } from "@sveltejs/kit";
 /** @type {import('./$types').RequestHandler} */
 export async function GET({ url }) {
   let urlParams = url.searchParams;
-  const currenypair = urlParams.get('pair') || '';
+  const pair_code = urlParams.get('pair_code') || '';
+  const changer_service = urlParams.get('changer_service') || '';
 
-  let changers = await get_pairs_changers(currenypair);
+  let changers = await get_pairs_changers(pair_code, changer_service);
 
   return json(changers);
 }
