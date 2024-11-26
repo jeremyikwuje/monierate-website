@@ -172,7 +172,7 @@
 		try {
 			isLoading = true;
 			changePath(
-				`/buy/${convertFromInput.toLowerCase()}-from-${convertToInput.toLowerCase()}-best-rate`
+				`/sell/${convertFromInput.toLowerCase()}-from-${convertToInput.toLowerCase()}-best-rate`
 			);
 		} catch (error) {
 			console.error('URL update error:', error);
@@ -208,7 +208,7 @@
 		try {
 			if (window) {
 				const [currencyFromCode, _, countryToCode] = window.location.pathname
-					.replace('/buy/', '')
+					.replace('/sell/', '')
 					.split('-');
 				convertFromInput = currencyFromCode.toUpperCase();
 				convertToInput = countryToCode.toUpperCase();
@@ -219,7 +219,7 @@
 
 		// referesh the pair changers rate every 10 minutes
 		setInterval(() => {
-			getPairChangers(`${convertFrom}${convertTo}`, 'ramp');
+			getPairChangers(`${convertFrom}${convertTo}`, 'card');
 		}, 60000 * 10);
 	});
 </script>
@@ -227,7 +227,7 @@
 <svelte:head>
 	<title>
 		{convertFrom} in {convertTo}
-		- Compare & Buy {currencyFrom?.name}
+		- Compare & Sell {currencyFrom?.name}
 	</title>
 	<meta
 		name="description"
@@ -274,7 +274,7 @@
 <div class="mb-24">
 	<div class="container mb-4 text-center">
 		<h1 class="text-2xl md:text-4xl">
-			Buy {convertFrom} | Compare the best rate to buy {currencyFrom?.name} in {countryToName}
+			Sell {convertFrom} | Compare the best rate to Sell {currencyFrom?.name} from {countryToName}
 		</h1>
 	</div>
 
@@ -283,7 +283,7 @@
 			<div class="w-full">
 				<div class="block md:flex md:justify-between md:items-center">
 					<span class="block md:w-[30%]">
-						<label class="label" for="field-convert-from">Buy</label>
+						<label class="label" for="field-convert-from">Sell</label>
 						<select
 							id="field-convert-from"
 							class="select"
@@ -298,7 +298,7 @@
 						</select>
 					</span>
 					<span class="block md:w-[30%]">
-						<label class="label" for="field-convert-to">In</label>
+						<label class="label" for="field-convert-to">From</label>
 						<select
 							id="field-convert-to"
 							class="select"
@@ -424,7 +424,7 @@
 									href={platformRate.platform.link}
 									class="block button w-full md:inline-block md:w-auto mr-4 mb-4 text-center"
 								>
-									Buy {convertFrom} now
+									Sell {convertFrom} now
 								</a>
 							</div>
 						</div>

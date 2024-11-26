@@ -6,6 +6,8 @@ export enum ChangerServiceCategory {
   Crypto = 'crypto', // buying & selling
   Card = 'card', // virtual card
   Account = 'account', // usd account
+  Ramp = 'ramp', // for buy and sell
+  VCard = 'card', // for fund virtual card
 }
 
 export const get_pairs = async (code: string | null = null) => {
