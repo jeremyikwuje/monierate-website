@@ -21,7 +21,6 @@ If you’re hearing of Grey Finance for the first time, read this guide on [ever
 
 Now that you have a general idea of what Grey.co’s product is all about, let’s take a quick look at how the company has evolved over time.
 
-
 ## Company Profile
 
 Here’s a closer look at the company:
@@ -29,7 +28,7 @@ Here’s a closer look at the company:
 |                      |                                                           |
 | -------------------- | --------------------------------------------------------- |
 | **Name**             | **Grey Finance**                                          |
-| Website              | https\://www\.grey.co/                                    |
+| Website              | www.grey.co                                  |
 | Founding date        | July 2021                                                 |
 | Founder(s)           | Idorenyin Obong and Femi Aghedo                           |
 | Employees            | Approximately 50                                          |
@@ -40,7 +39,6 @@ Here’s a closer look at the company:
 | Estimated Valuation  | $2 billion                                                |
 | Competitors          | Cleva, SendSprint, Geegpay                                |
 | Contact email        | <hello@grey.co>                                           |
-
 
 ## Grey’s Journey Since 2020
 
@@ -55,7 +53,6 @@ Grey’s diversification didn’t stop there. In early 2024, the company launche
 Today, Grey boasts a 4.7-star app rating and a team of over 50 employees in six countries. 
 
 ![Grey Business Model - Send money fast. Recieve even faster.](https://ik.imagekit.io/monierate/Blog/product/grey-finance.jpeg) 
-
 
 ## Possible business model for Grey.co
 
@@ -77,7 +74,6 @@ Small fees for deposits can also create a steady stream of revenue when it adds 
 
 Grey charges a $4 one-time fee for creating a virtual card. If a card is cancelled due to insufficient funds, users might have to pay again for a replacement, potentially generating recurring revenue.
 
-
 #### 2. Commission-based Model
 
 Grey also acts as a marketplace, connecting users with other companies for things like gift cards, airtime, and bill payments.
@@ -90,15 +86,11 @@ Grey partners with gift card providers, allowing users to buy gift cards from po
 
 Grey makes it easy for users to top up their airtime or pay bills through their platform. They probably earn a commission from the service providers for each transaction.
 
-
 ### Why it works:
 
 - **Accessibility:** Grey focuses on providing financial services to underserved communities, particularly in Africa, fostering customer loyalty and tapping into a growing market.   
-
 - **Diversification:** Grey's revenue model is diversified, with income generated from transaction fees, commissions, and potentially monthly fees for foreign currency accounts. This diversification helps mitigate risk and ensures multiple revenue streams.   
-
 - **Scalability:** The platform is designed to be scalable, allowing them to expand their services and user base efficiently. This scalability can lead to increased revenue and market share.   
-
 
 ## In conclusion
 
