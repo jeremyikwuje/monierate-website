@@ -278,54 +278,79 @@
 		</h1>
 	</div>
 
-	<div id="changer-rate-wrapper" class="section">
-		<div class="flex justify-center item-center">
+	<div id="changer-rate-wrapper" class="container">
+		<div class="flex justify-center item-center shadow-sm bg-gray-50 dark:bg-gray-900 rounded-lg px-8 py-6">
 			<div class="w-full">
 				<div class="block md:flex md:justify-between md:items-center">
 					<span class="block md:w-[30%]">
 						<label class="label" for="field-convert-from">Send</label>
-						<select
-							id="field-convert-from"
-							class="select"
-							bind:value={convertFromInput}
-							on:change={handleCurrencyChange}
-						>
-							{#each currencies as currency}
-								<option value={currency.code.toUpperCase()}>
-									{currency.code.toUpperCase()} - {currency.name}
-								</option>
-							{/each}
-						</select>
+						<span class="select">
+							<select
+								id="field-convert-from"
+								class="text-gray-700 text-lg font-medium focus:outline-none w-full"
+								bind:value={convertFromInput}
+								on:change={handleCurrencyChange}
+							>
+								{#each currencies as currency}
+									<option value={currency.code.toUpperCase()}>
+										{currency.code.toUpperCase()} - {currency.name}
+									</option>
+								{/each}
+							</select>
+						</span>
 					</span>
 					<span class="block md:w-[30%]">
 						<label class="label" for="field-convert-to">To</label>
-						<select
-							id="field-convert-to"
-							class="select"
-							bind:value={convertToInput}
-							on:change={handleCurrencyChange}
-						>
-							{#each Object.entries(countries) as [countryCode, country]}
-								<option value={countryCode.toUpperCase()}>
-									{country}
-								</option>
-							{/each}
-						</select>
+						<span class="select">
+							<select
+								id="field-convert-to"
+								class="text-gray-700 text-lg font-medium focus:outline-none w-full"
+								bind:value={convertToInput}
+								on:change={handleCurrencyChange}
+							>
+								{#each Object.entries(countries) as [countryCode, country]}
+									<option value={countryCode.toUpperCase()}>
+										{country}
+									</option>
+								{/each}
+							</select>
+						</span>
 					</span>
 					<span class="block md:w-[30%]">
-						<label class="label" for="field-convert-amount">Amount</label>
+						<!-- Label -->
+						<label for="amount" class="label">
+							Amount
+						</label>
+				
+						<!-- Input Field -->
+						<div class="flex items-center input">
+							<!-- Numeric Input -->
+							<input 
+								type="text" 
+								id="amount" 
+								value={convertAmount}
+								on:input={handleAmountChange}
+								class="flex-1 text-gray-700 text-lg font-medium focus:outline-none" 
+								placeholder="Enter amount"
+							/>
+							<!-- Currency Label -->
+							<span class="ml-2 text-gray-500 text-sm font-semibold">
+								{convertFrom}
+							</span>
+						</div>
+						<!-- <label class="label" for="field-convert-amount">Amount</label>
 						<span class="input">
 							<input
 								type="number"
 								id="field-convert-amount"
-								class="bg-transparent border-none focus:border-none focus:outline-none focus:ring-0"
+								class="bg-transparent border-none focus:border-none focus:outline-none focus:ring-0 w-[80%]"
 								value={convertAmount}
 								on:input={handleAmountChange}
 								step="0.01"
 								min="0.01"
 							/>
 							{convertFrom}
-						</span>
+						</span> -->
 					</span>
 				</div>
 			</div>
@@ -339,7 +364,7 @@
 
 {#if getInputValue > 0 && convertFrom !== convertTo}
 	<!-- Platforms Table -->
-	<div class="container p-0">
+	<div class="container">
 		{#if isLoading}
 			<div
 				class="bg-white dark:bg-gray-900 rounded-xl shadow-lg overflow-hidden border border-gray-200 dark:border-gray-700"
@@ -377,56 +402,56 @@
 			</div>
 		{:else}
 			{#each convertResult.platform_rates as platformRate}
-				<div class="container mx-auto p-4">
+				<div
+					class="flex flex-wrap gap-4 px-8 py-4 w-full bg-white dark:bg-gray-900 shadow-md rounded-lg mb-8"
+				>
+					<div class="flex-1 min-w-full md:min-w-[30%] md:flex md:items-center md:justify-start">
+						<div class="flex justify-start items-center">
+							<a href={platformRate.platform.link}>
+								<img
+									src="/icons/svg/{platformRate.platform.code}.svg"
+									alt="{platformRate.platform.name} icon"
+									class="h-12 mr-2 rounded-full"
+								/>
+							</a>
+							<a
+								href={platformRate.platform.link}
+								class="text-gray-600 dark:text-gray-300 hover:underline text-lg"
+							>
+								{platformRate.platform.name}
+							</a>
+						</div>
+					</div>
+
+					<div class="flex-1 min-w-full md:min-w-[30%]">
+						<div class="text-left">
+							<span class="block text-sm">{convertAmount} {convertFromInput.toUpperCase()} =</span
+							>
+							<span class="block text-4xl text-gray-800 dark:text-gray-200 py-3">
+								{Money.formatMoney(platformRate.will_receive)}
+								{currencyTo?.symbol || convertTo}
+							</span>
+							<span class="block text-sm">
+								<span class="pr-3">
+									Indicative Rate 
+								</span>
+								1 {convertFromInput.toUpperCase()} =
+								{Money.formatMoney(platformRate.rate, 2)}
+								{currencyTo?.symbol || convertTo}
+							</span>
+						</div>
+					</div>
+
 					<div
-						class="flex flex-wrap gap-4 px-8 py-4 w-full bg-white dark:bg-gray-900 shadow-lg rounded-lg"
+						class="flex-1 min-w-full md:min-w-[30%] md:text-right md:flex md:items-center md:justify-end"
 					>
-						<div class="flex-1 min-w-full md:min-w-[30%] md:flex md:items-center md:justify-start">
-							<div class="flex justify-start items-center">
-								<a href={platformRate.platform.link}>
-									<img
-										src="/icons/svg/{platformRate.platform.code}.svg"
-										alt="{platformRate.platform.name} icon"
-										class="h-12 mr-2 rounded-full"
-									/>
-								</a>
-								<a
-									href={platformRate.platform.link}
-									class="text-gray-600 dark:text-gray-300 hover:underline text-lg"
-								>
-									{platformRate.platform.name}
-								</a>
-							</div>
-						</div>
-						<div class="flex-1 min-w-full md:min-w-[30%]">
-							<div class="text-left">
-								<span class="block text-sm">{convertAmount} {convertFromInput.toUpperCase()} =</span
-								>
-								<span class="block text-4xl text-gray-800 dark:text-gray-200 py-3">
-									{Money.formatMoney(platformRate.will_receive)}
-									{currencyTo?.symbol || convertTo}
-								</span>
-								<span class="block text-sm">
-									<span class="pr-3">
-										Indicative Rate 
-									</span>
-									1 {convertFromInput.toUpperCase()} =
-									{Money.formatMoney(platformRate.rate, 2)}
-									{currencyTo?.symbol || convertTo}
-								</span>
-							</div>
-						</div>
-						<div
-							class="flex-1 min-w-full md:min-w-[30%] md:text-right md:flex md:items-center md:justify-end"
-						>
-							<div>
-								<a
-									href={platformRate.platform.link}
-									class="block button w-full md:inline-block md:w-auto mr-4 mb-4 text-center"
-								>
-									Send money now
-								</a>
-							</div>
+						<div>
+							<a
+								href={platformRate.platform.link}
+								class="block button w-full md:inline-block md:w-auto mr-4 mb-4 text-center"
+							>
+								Send money now
+							</a>
 						</div>
 					</div>
 				</div>
@@ -436,6 +461,10 @@
 {/if}
 
 <style>
+	.label {
+		@apply block text-sm font-semibold text-gray-800;
+	}
+
 	.loader {
 		width: 48px;
 		height: 48px;
@@ -452,9 +481,5 @@
 		100% {
 			transform: rotate(360deg);
 		}
-	}
-
-	.section {
-		@apply w-[95%] md:w-[70%] bg-white dark:bg-gray-900 shadow-lg rounded-lg px-8 py-6 mx-auto;
 	}
 </style>
