@@ -44,7 +44,7 @@ export const load: PageServerLoad = async ({ params, url }) => {
         const [changers, currencies, pair_changers] = await Promise.all([
             get_changers(),
             get_currencies(),
-            get_pairs_changers(pair_code, ChangerServiceCategory.Ramp)
+            get_pairs_changers(pair_code, ChangerServiceCategory.VCard)
         ]);
 
         // Check for null or empty data

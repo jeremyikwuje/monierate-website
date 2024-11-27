@@ -207,7 +207,6 @@
 	onMount(async () => {
 		try {
 			if (window) {
-				console.log(window.location.pathname);
 				const [currencyFromCode, _, countryToCode] = window.location.pathname
 					.replace('/send/', '')
 					.split('-');
@@ -338,7 +337,7 @@
 	<!------------------------------->
 </div>
 
-{#if getInputValue > 0}
+{#if getInputValue > 0 && convertFrom !== convertTo}
 	<!-- Platforms Table -->
 	<div class="container p-0">
 		{#if isLoading}
