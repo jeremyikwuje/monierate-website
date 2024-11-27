@@ -283,7 +283,7 @@
 			<div class="w-full">
 				<div class="block md:flex md:justify-between md:items-center">
 					<span class="block md:w-[30%]">
-						<label class="label" for="field-convert-from">Send</label>
+						<label class="label" for="field-convert-from">You Send</label>
 						<span class="select">
 							<select
 								id="field-convert-from"

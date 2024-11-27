@@ -283,7 +283,7 @@
 			<div class="w-full">
 				<div class="block md:flex md:justify-between md:items-center">
 					<span class="block md:w-[30%]">
-						<label class="label" for="field-convert-from">Sell</label>
+						<label class="label" for="field-convert-from">You Sell</label>
 						<select
 							id="field-convert-from"
 							class="select"
@@ -298,7 +298,7 @@
 						</select>
 					</span>
 					<span class="block md:w-[30%]">
-						<label class="label" for="field-convert-to">From</label>
+						<label class="label" for="field-convert-to">To Get</label>
 						<select
 							id="field-convert-to"
 							class="select"

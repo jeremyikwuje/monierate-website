@@ -16,11 +16,11 @@ interface ConvertParams {
 
 export const load: PageServerLoad = async ({ params, url }) => {
     const slug = params.slug;
-    const [currencyFromCode, _, currencyToCode] = slug.split('-');
+    const [currencyToBuyCode, _, currencyToPayCode] = slug.split('-');
 
     const convert: ConvertParams = {
-        From: currencyFromCode || 'USD',
-        To: currencyToCode || 'NGN',
+        From: currencyToBuyCode || 'USD',
+        To: currencyToPayCode || 'NGN',
         Amount: 1
     };
 
