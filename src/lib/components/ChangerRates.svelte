@@ -1,7 +1,4 @@
 <script>
-	import { friendlyDate } from "$lib/functions";
-    import { slide } from 'svelte/transition';
-
   export let rates;
   export let changers;
   export let from;
@@ -66,7 +63,7 @@
                 </table>
                 <div class="dark:border-gray-700 border-t text-center">
                     <a
-                        href="/converter/send" 
+                        href="/send" 
                         class="w-full mt-4 inline-block text-sm text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300"
                     >
                         See More
@@ -83,14 +80,14 @@
         </div>
 
         <div class="bg-white dark:bg-gray-900 rounded-xl shadow-lg overflow-hidden border border-gray-200 dark:border-gray-700">
-            <h2 class="text-xl font-semibold p-4 border-b bg-gray-50 dark:bg-gray-900 dark:border-gray-700">Buying</h2>
+            <h2 class="text-xl font-semibold p-4 border-b bg-gray-50 dark:bg-gray-900 dark:border-gray-700">Selling</h2>
             <div class="p-4 overflow-x-auto">
                <!--CONTENT AS ABOVE TABLE-->
             </div>
         </div>
 
         <div class="bg-white dark:bg-gray-900 rounded-xl shadow-lg overflow-hidden border border-gray-200 dark:border-gray-700">
-            <h2 class="text-xl font-semibold p-4 border-b bg-gray-50 dark:bg-gray-900 dark:border-gray-700">Buying</h2>
+            <h2 class="text-xl font-semibold p-4 border-b bg-gray-50 dark:bg-gray-900 dark:border-gray-700">Funding</h2>
             <div class="p-4 overflow-x-auto">
                <!--CONTENT AS ABOVE TABLE-->
             </div>
@@ -109,12 +106,6 @@
   table tr td:first-child, table thead th:first-child {
       @apply pl-0
   }
-  .changer {
-      @apply flex justify-between items-center py-2 border-b border-gray-200;
-  }
-  .changer:last-child {
-      @apply border-b-0
-  }
   .changer-icon {
       @apply bg-transparent border border-black rounded-full w-[24px] h-[24px] mr-2;
   }
@@ -123,8 +114,5 @@
   }
   .changer-rate-base {
       @apply text-gray-500 dark:text-gray-400;
-  }
-  .changer-rate {
-      @apply block font-semibold text-sm md:text-lg whitespace-nowrap text-gray-800 dark:text-light;
   }
   </style>

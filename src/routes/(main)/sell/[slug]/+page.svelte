@@ -1,6 +1,5 @@
 <script lang="ts">
 	import type { PageData } from './$types';
-	import { round, chain } from 'mathjs';
 	import { changePath, scrollToSection } from '$lib/functions';
 	import Money from '$lib/money';
 	import { onMount } from 'svelte';
@@ -11,6 +10,7 @@
 		code: string;
 		name: string;
 		link: string;
+		pairs: any;
 	}
 
 	interface PairChanger {
@@ -20,39 +20,26 @@
 		updated_at: string;
 	}
 
+	interface ChangerRate {
+		rate: PairChanger;
+		changer: Changer;
+	}
+
 	interface Currency {
 		code: string;
 		name: string;
 		symbol?: string;
 	}
 
-	interface ConversionResult {
-		rate: number;
-		rate_inverse: number;
-		conversion: number;
-		platform_rates: PlatformRate[];
-	}
-
-	interface PlatformRate {
-		platform: Changer;
-		rate: number;
-		will_receive: number;
-		fees: number;
-		net_amount: number;
-	}
-
 	let isLoading = true;
 	let hasResults = false;
-	let convertFromInput = 'USD';
-	let convertToInput = 'NG';
+	let currencyToSellInput = 'USD';
+	let currencyToGetInput = 'NGN';
 	let changers: Record<string, Changer> = data.changers || {};
 	let pairChangers: PairChanger[] = data.pair_changers || {};
-	let pairs = data.pairs || [];
 	let currencies: Currency[] = data.currencies || [];
 	let convertAmount = 1;
 	$: convert = data.convert || { From: 'USD', To: 'NGN', Amount: 1 };
-	$: countryToName = data.countryToName || 'Nigeria';
-	$: countries = data.countries;
 	$: convertFrom = convert.From?.toUpperCase().trim();
 	$: convertTo = convert.To?.toUpperCase().trim();
 
@@ -67,20 +54,11 @@
 		symbol: convertTo
 	};
 
-	// Conversion result with default values
-	let convertResult: ConversionResult = {
-		rate: 1,
-		rate_inverse: 1,
-		conversion: convertAmount,
-		platform_rates: []
-	};
+	let convertResult: ChangerRate[] = [];
 
-	async function getPairChangers(
-			pair_code: string,
-			changer_service: string
-	) {
+	async function getPairChangers(pair_code: string, changer_service: string) {
 		const response = await fetch(
-				`/api/pairs/changers?pair_code=${pair_code}&changer_service=${changer_service}`
+			`/api/pairs/changers?pair_code=${pair_code}&changer_service=${changer_service}`
 		);
 		const changers = await response.json();
 
@@ -89,36 +67,26 @@
 		return changers;
 	}
 
-	function findSupportedPlatforms(): PlatformRate[] {
-		const from = convertFrom.toLowerCase();
-		const to = convertTo.toLowerCase();
-		let platform_rates: PlatformRate[] = [];
+	function findSupportedPlatforms(): ChangerRate[] {
+		let platform_rates: ChangerRate[] = [];
 
 		try {
-			Object.values(pairChangers).forEach((changer_rate) => {
-
-				if (changer_rate.price_sell > 0) {
-					const rate = changer_rate.price_sell;
-					const conversion = round(chain(rate).multiply(convertAmount).done(), 2);
-
-					const fee_percentage = 0.02; // 2% fee
-					const fees = round(conversion * fee_percentage, 2);
-					const net_amount = round(conversion - fees, 2);
-
+			if (changers && pairChangers) {
+				pairChangers.map((changerRate) => {
+					const changer = changers[changerRate.changer_code];
 					platform_rates.push({
-						platform: changers[changer_rate.changer_code],
-						rate: rate,
-						will_receive: conversion,
-						fees: fees,
-						net_amount: net_amount
-					});
-				}
-			});
+					    rate: changerRate,
+						changer: changer
+					})
+				});
+			}
 		} catch (error) {
 			console.error('Error finding platforms:', error);
 		}
 
-		return platform_rates.sort((a, b) => b.net_amount - a.net_amount);
+		platform_rates.sort((a, b) => b.rate.price_sell - a.rate.price_sell);
+
+		return platform_rates;
 	}
 
 	$: {
@@ -126,40 +94,13 @@
 		hasResults = false;
 
 		try {
-			if (convertFrom && convertTo) {
-				let rate = 1;
-				let rate_inverse = 1;
-
-				if (convertFrom !== convertTo) {
-					const pair_code = `${convertFrom.toLowerCase()}${convertTo.toLowerCase()}`;
-					const inversePair_code = `${convertTo.toLowerCase()}${convertFrom.toLowerCase()}`;
-
-					let pair = pairs.find((p: any) => p?.code === pair_code);
-
-					if (pair) {
-						rate = pair.price?.current || 1;
-						rate_inverse = 1 / rate;
-					} else {
-						pair = pairs.find((p: any) => p?.code === inversePair_code);
-						if (pair) {
-							rate_inverse = pair.price?.current || 1;
-							rate = 1 / rate_inverse;
-						}
-					}
-				}
-
-				convertResult.rate = rate;
-				convertResult.rate_inverse = rate_inverse;
-				convertResult.conversion = round(chain(rate).multiply(convertAmount).done(), 8);
-
-				// Update platform rates
-				convertResult.platform_rates = findSupportedPlatforms();
-				hasResults = convertResult.platform_rates && convertResult.platform_rates.length > 0;
+			if (convertFrom && convertTo && convertAmount) {
+				convertResult = findSupportedPlatforms();
+				hasResults = convertResult.length > 0;
 			}
 		} catch (error) {
 			console.error('Conversion calculation error:', error);
-		}
-		finally {
+		} finally {
 			// Only hide loading after we've determined if we have results
 			setTimeout(() => {
 				isLoading = false;
@@ -171,8 +112,9 @@
 	async function updateUrlPath() {
 		try {
 			isLoading = true;
+			await getPairChangers(`${currencyToSellInput}${currencyToGetInput}`, 'ramp');
 			changePath(
-				`/sell/${convertFromInput.toLowerCase()}-from-${convertToInput.toLowerCase()}-best-rate`
+				`/sell/${currencyToSellInput.toLowerCase()}-get-${currencyToGetInput.toLowerCase()}-best-selling-rate`
 			);
 		} catch (error) {
 			console.error('URL update error:', error);
@@ -194,6 +136,7 @@
 			}
 
 			await updateUrlPath();
+			isLoading = false;
 		} catch (error) {
 			console.error('Amount change error:', error);
 		}
@@ -207,11 +150,11 @@
 	onMount(async () => {
 		try {
 			if (window) {
-				const [currencyFromCode, _, countryToCode] = window.location.pathname
+				const [currencyToBuyCode, _, currencyToPayCode] = window.location.pathname
 					.replace('/sell/', '')
 					.split('-');
-				convertFromInput = currencyFromCode.toUpperCase();
-				convertToInput = countryToCode.toUpperCase();
+				currencyToSellInput = currencyToBuyCode.toUpperCase();
+				currencyToGetInput = currencyToPayCode.toUpperCase();
 			}
 		} catch (error) {
 			console.log('There was an error set initial input values:', error);
@@ -219,15 +162,14 @@
 
 		// referesh the pair changers rate every 10 minutes
 		setInterval(() => {
-			getPairChangers(`${convertFrom}${convertTo}`, 'card');
+			getPairChangers(`${currencyToSellInput}${currencyToGetInput}`, 'ramp');
 		}, 60000 * 10);
 	});
 </script>
 
 <svelte:head>
 	<title>
-		{convertFrom} in {convertTo}
-		- Compare & Sell {currencyFrom?.name}
+		Sell {convertFrom} for {convertTo} - Compare the best {convertTo} rates
 	</title>
 	<meta
 		name="description"
@@ -241,7 +183,7 @@
 	<meta property="og:type" content="website" />
 	<meta
 		property="og:title"
-		content="{convertFrom} in {convertTo} - Compare & Send {currencyFrom?.name} to {currencyTo?.name}"
+		content="Sell {convertFrom} for {convertTo} - Compare the best {convertTo} rates"
 	/>
 	<meta
 		property="og:description"
@@ -274,58 +216,68 @@
 <div class="mb-24">
 	<div class="container mb-4 text-center">
 		<h1 class="text-2xl md:text-4xl">
-			Sell {convertFrom} | Compare the best rate to Sell {currencyFrom?.name} from {countryToName}
+			Sell {convertFrom} for {convertTo} - Compare the best {convertTo} rates
 		</h1>
 	</div>
 
-	<div id="changer-rate-wrapper" class="section">
-		<div class="flex justify-center item-center">
+	<div id="changer-rate-wrapper" class="container">
+		<div
+			class="flex justify-center item-center shadow-sm bg-gray-50 dark:bg-gray-900 rounded-lg px-8 py-6"
+		>
 			<div class="w-full">
 				<div class="block md:flex md:justify-between md:items-center">
 					<span class="block md:w-[30%]">
 						<label class="label" for="field-convert-from">You Sell</label>
-						<select
-							id="field-convert-from"
-							class="select"
-							bind:value={convertFromInput}
-							on:change={handleCurrencyChange}
-						>
-							{#each currencies as currency}
-								<option value={currency.code.toUpperCase()}>
-									{currency.code.toUpperCase()} - {currency.name}
-								</option>
-							{/each}
-						</select>
+						<span class="select">
+							<select
+								id="field-convert-from"
+								class="text-gray-700 dark:text-gray-500 text-lg font-medium bg-transparent border-none focus:border-none focus:outline-none w-full"
+								bind:value={currencyToSellInput}
+								on:change={handleCurrencyChange}
+							>
+								{#each currencies as currency}
+									<option value={currency.code.toUpperCase()}>
+										{currency.code.toUpperCase()} - {currency.name}
+									</option>
+								{/each}
+							</select>
+						</span>
 					</span>
 					<span class="block md:w-[30%]">
 						<label class="label" for="field-convert-to">To Get</label>
-						<select
-							id="field-convert-to"
-							class="select"
-							bind:value={convertToInput}
-							on:change={handleCurrencyChange}
-						>
-							{#each Object.entries(countries) as [countryCode, country]}
-								<option value={countryCode.toUpperCase()}>
-									{country}
-								</option>
-							{/each}
-						</select>
+						<span class="select">
+							<select
+								id="field-convert-to"
+								class="text-gray-700 dark:text-gray-500 text-lg font-medium bg-transparent border-none focus:border-none focus:outline-none w-full"
+								bind:value={currencyToGetInput}
+								on:change={handleCurrencyChange}
+							>
+								{#each currencies as currency}
+									<option value={currency.code.toUpperCase()}>
+										{currency.code.toUpperCase()} - {currency.name}
+									</option>
+								{/each}
+							</select>
+						</span>
 					</span>
 					<span class="block md:w-[30%]">
 						<label class="label" for="field-convert-amount">Amount</label>
-						<span class="input">
+						<div class="flex items-center input">
+							<!-- Numeric Input -->
 							<input
 								type="number"
 								id="field-convert-amount"
-								class="bg-transparent border-none focus:border-none focus:outline-none focus:ring-0"
+								class="flex-1 text-gray-700 dark:text-gray-500 text-lg bg-transparent border-none focus:border-none font-medium focus:outline-none"
 								value={convertAmount}
 								on:input={handleAmountChange}
 								step="0.01"
 								min="0.01"
 							/>
-							{convertFrom}
-						</span>
+							<!-- Currency Label -->
+							<span class="ml-2 text-gray-500 text-sm font-semibold">
+								{convertFrom}
+							</span>
+						</div>
 					</span>
 				</div>
 			</div>
@@ -337,9 +289,9 @@
 	<!------------------------------->
 </div>
 
-{#if getInputValue > 0 && convertFrom !== convertTo}
+{#if getInputValue > 0}
 	<!-- Platforms Table -->
-	<div class="container p-0">
+	<div class="container">
 		{#if isLoading}
 			<div
 				class="bg-white dark:bg-gray-900 rounded-xl shadow-lg overflow-hidden border border-gray-200 dark:border-gray-700"
@@ -371,47 +323,46 @@
 						No Data Available
 					</h3>
 					<p class="mt-1 text-sm text-gray-500 dark:text-gray-400">
-						No platform rates available for converting {convertFrom} to {convertTo}.
+						No platform for selling {convertFrom} for {convertTo}.
 					</p>
 				</div>
 			</div>
 		{:else}
-			{#each convertResult.platform_rates as platformRate}
-				<div class="container mx-auto p-4">
+			{#each convertResult as result}
+				{#if result.rate.price_sell > 0}
 					<div
-						class="flex flex-wrap gap-4 px-8 py-4 w-full bg-white dark:bg-gray-900 shadow-lg rounded-lg"
+						class="flex flex-wrap gap-4 px-8 py-4 w-full bg-white dark:bg-gray-900 shadow-md rounded-lg mb-8"
 					>
 						<div class="flex-1 min-w-full md:min-w-[30%] md:flex md:items-center md:justify-start">
 							<div class="flex justify-start items-center">
-								<a href={platformRate.platform.link}>
+								<a href={result.changer.link}>
 									<img
-										src="/icons/svg/{platformRate.platform.code}.svg"
-										alt="{platformRate.platform.name} icon"
+										src="/icons/svg/{result.changer.code}.svg"
+										alt="{result.changer.name} icon"
 										class="h-12 mr-2 rounded-full"
 									/>
 								</a>
 								<a
-									href={platformRate.platform.link}
+									href={result.changer.link}
 									class="text-gray-600 dark:text-gray-300 hover:underline text-lg"
 								>
-									{platformRate.platform.name}
+									{result.changer.name}
 								</a>
 							</div>
 						</div>
 						<div class="flex-1 min-w-full md:min-w-[30%]">
 							<div class="text-left">
-								<span class="block text-sm">{convertAmount} {convertFromInput.toUpperCase()} =</span
+								<span class="block text-sm"
+									>{convertAmount} {currencyToSellInput.toUpperCase()} =</span
 								>
 								<span class="block text-4xl text-gray-800 dark:text-gray-200 py-3">
-									{Money.formatMoney(platformRate.will_receive)}
+									{Money.formatMoney(result.rate.price_sell * convertAmount, 2)}
 									{currencyTo?.symbol || convertTo}
 								</span>
 								<span class="block text-sm">
-									<span class="pr-3">
-										Indicative Rate 
-									</span>
-									1 {convertFromInput.toUpperCase()} =
-									{Money.formatMoney(platformRate.rate, 2)}
+									<span class="pr-3"> Indicative Rate </span>
+									1 {currencyToSellInput.toUpperCase()} =
+									{Money.formatMoney(result.rate.price_sell, 2)}
 									{currencyTo?.symbol || convertTo}
 								</span>
 							</div>
@@ -421,7 +372,7 @@
 						>
 							<div>
 								<a
-									href={platformRate.platform.link}
+									href={result.changer.link}
 									class="block button w-full md:inline-block md:w-auto mr-4 mb-4 text-center"
 								>
 									Sell {convertFrom} now
@@ -429,7 +380,7 @@
 							</div>
 						</div>
 					</div>
-				</div>
+				{/if}
 			{/each}
 		{/if}
 	</div>
@@ -452,9 +403,5 @@
 		100% {
 			transform: rotate(360deg);
 		}
-	}
-
-	.section {
-		@apply w-[95%] md:w-[70%] bg-white dark:bg-gray-900 shadow-lg rounded-lg px-8 py-6 mx-auto;
 	}
 </style>

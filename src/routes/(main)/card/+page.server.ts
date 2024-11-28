@@ -1,5 +1,5 @@
 import { redirect } from '@sveltejs/kit';
 
 export const load = () => {
-    throw redirect(302, '/card/usd-from-ng-best-rate');
+    throw redirect(302, '/card/usd-ngn-best-funding-rate');
 };

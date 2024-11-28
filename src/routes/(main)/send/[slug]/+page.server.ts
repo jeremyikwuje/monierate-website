@@ -54,8 +54,10 @@ export const load: PageServerLoad = async ({ params, url }) => {
             throw error(500, 'One or more data sources returned null');
         }
 
+        const changerObject = array_to_key_object(changers, 'code');
+
         return {
-            changers: array_to_key_object(changers, 'code'),
+            changers: changerObject,
             currencies,
             pair_changers,
             convert,
