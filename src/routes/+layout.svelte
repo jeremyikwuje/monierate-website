@@ -1,10 +1,12 @@
 <script>
 import "../app.css";
+import { partytownSnippet } from '@builder.io/partytown/integration';
 import { page, navigating } from "$app/stores";
 import { onMount } from "svelte";
 import { getCookie, setCookie } from "$lib/functions";
 import { browser } from "$app/environment";
 import Money from "$lib/money";
+import { timezone } from '$lib/functions';
 
 export let data;
 const selected_partner_top = data.selected_partner_top;
@@ -34,6 +36,15 @@ $: if ($navigating) {
 
 // toggle navbar collapse menu on mobile
 onMount(() => {
+    if (browser) {
+        const getTimezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+        if (getCookie('timezone') !== getTimezone) {
+            setCookie('timezone', getTimezone, 1);
+        }
+        setCookie('timezone', getTimezone, 1);
+        timezone.set(getTimezone);
+    }
+    
     const collapse = () => {
         const triggerEl = document.getElementById('nav-collapse-trigger');
         const targetEl = document.getElementById('navbar-sticky');
@@ -68,6 +79,22 @@ function hidePromotionBar() {
 </script>
 
 <svelte:head>
+    <script>
+		// Forward the necessary functions to the web worker layer
+		partytown = {
+		    forward: ['dataLayer.push', 'gtag']
+		};
+	</script>
+
+    {@html '<script>' + partytownSnippet() + '</script>'}
+
+    <script type="text/partytown" src="https://www.googletagmanager.com/gtag/js?id=G-59H6DBC82L"></script>
+	<script type="text/partytown">
+		window.dataLayer = window.dataLayer || [];
+		window.gtag = function(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+		gtag('config', 'G-59H6DBC82L');
+	</script>
 </svelte:head>
 
 <!-- <div id="top-banner" tabindex="-1" class="flex md:hidden fixed top-0 mb-8 start-0 z-50 justify-between w-full p-4 border-t border-gray-200 bg-gray-50 dark:bg-gray-700 dark:border-gray-600">
