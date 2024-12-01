@@ -155,6 +155,11 @@
 					.split('-');
 				currencyToSellInput = currencyToBuyCode.toUpperCase();
 				currencyToGetInput = currencyToPayCode.toUpperCase();
+
+				if(sessionStorage && sessionStorage.getItem('convertAmount')) {
+					convertAmount = Number(sessionStorage.getItem('convertAmount'));
+					sessionStorage.removeItem('convertAmount');
+				}
 			}
 		} catch (error) {
 			console.log('There was an error set initial input values:', error);

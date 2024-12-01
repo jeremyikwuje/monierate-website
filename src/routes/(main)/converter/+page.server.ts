@@ -3,6 +3,10 @@ import { get_changers } from '$lib/server/changer.service';
 import { get_currencies } from '$lib/server/currency.service';
 import type { PageServerLoad } from './$types'
 import { error } from '@sveltejs/kit'
+import Countries from '$data/countries.json';
+import CountriesToCurrencies from '$data/countries-to-currencies.json';
+
+interface CountriesMap { [key: string]: string }
 
 export const load: PageServerLoad = async ({ fetch, params, url }) => {
     try {
@@ -15,6 +19,9 @@ export const load: PageServerLoad = async ({ fetch, params, url }) => {
 
         const changers = await get_changers();
         const currencies = await get_currencies();
+        const countries = Countries as CountriesMap;
+        const countriesToCurrencies = CountriesToCurrencies as CountriesMap;
+
 
         if (currencies.length == 0) {
             throw error(500, "Currencies data failed.")
@@ -23,7 +30,9 @@ export const load: PageServerLoad = async ({ fetch, params, url }) => {
         return {
             changers: array_to_key_object(changers, 'code'),
             currencies,
-            convert
+            convert,
+            countries,
+            countriesToCurrencies
         }
     }
     catch(e: any) {
