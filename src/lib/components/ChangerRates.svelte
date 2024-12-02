@@ -27,6 +27,8 @@
 		ramp: [],
 		card: []
 	};
+	export let from: any;
+	export let to: any;
 
 	let isLoading = true;
 	let hasResults = false;
@@ -115,299 +117,317 @@
 		}
 	}
 
-	onMount(async () => {
-		// Fetch sending (remittance) rates
-		rates.remittance = await getPairChangers('usdngn', 'remittance');
+	async function updatePairChangers() {
+		rates.remittance = await getPairChangers(`${from.code}${to.code}`, 'remittance');
 
 		// Fetch buying and selling (ramp) rates
-		rates.ramp = await getPairChangers('usdngn', 'ramp');
+		rates.ramp = await getPairChangers(`${from.code}${to.code}`, 'ramp');
 
 		// Fetch funding (card) rates
-		rates.card = await getPairChangers('usdngn', 'card');
-	});
+		rates.card = await getPairChangers(`${from.code}${to.code}`, 'card');
+	}
+
+	$: {
+		if (from.code && to.code) {
+			if (typeof window !== 'undefined') {
+				updatePairChangers();
+			}
+		}
+	}
+
+	// onMount(async () => {
+	// 	// Fetch sending (remittance) rates
+	// 	rates.remittance = await getPairChangers('usdngn', 'remittance');
+
+	// 	// Fetch buying and selling (ramp) rates
+	// 	rates.ramp = await getPairChangers('usdngn', 'ramp');
+
+	// 	// Fetch funding (card) rates
+	// 	rates.card = await getPairChangers('usdngn', 'card');
+	// });
 </script>
 
 <div class="max-w-[100%] md:max-w-7xl mx-auto md:p-6">
 	<div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
 		<!-- Sending Rates Section -->
-		<div
-			class="bg-white dark:bg-gray-900 rounded-xl shadow-lg overflow-hidden border border-gray-200 dark:border-gray-700"
-		>
-			<h2
-				class="text-xl font-semibold p-4 border-b bg-gray-50 dark:bg-gray-900 dark:border-gray-700"
+		{#if sendingResult.length > 0}
+			<div
+				class="bg-white dark:bg-gray-900 rounded-xl shadow-lg overflow-hidden border border-gray-200 dark:border-gray-700"
 			>
-				Sending
-			</h2>
-			<div class="p-4 overflow-x-auto">
-				{#if isLoading}
-					<div class="text-center text-gray-500">Loading...</div>
-				{:else if sendingResult.length === 0}
-					<div class="text-center text-gray-500">No results found</div>
-				{:else}
-					<table class="table-auto w-full text-sm text-left">
-						<tbody class="changers">
-							{#each sendingResult as { rate, changer }}
-								<tr class="py-32 mb-4 border-b border-gray-150 dark:border-gray-800">
-									<td>
-										<a
-											href={changer.link}
-											class="flex items-center"
-											title="{changer.name} dollar to naira rate."
-										>
-											<span class="changer-icon">
-												<picture>
-													<source
-														srcset="/icons/svg/{rate.changer_code}.svg"
-														type="image/svg+xml"
-													/>
-													<source srcset="/icons/png/{rate.changer_code}.png" type="image/png" />
-													<img
-														width="22px"
-														height="22px"
-														src="/icons/svg/{rate.changer_code}.svg"
-														class="rounded-full"
-														alt="{changer.name} icon"
-													/>
-												</picture>
+				<h2
+					class="text-xl font-semibold p-4 border-b bg-gray-50 dark:bg-gray-900 dark:border-gray-700"
+				>
+					Send {from.code.toUpperCase()}
+				</h2>
+				<div class="p-4 overflow-x-auto">
+					{#if isLoading}
+						<div class="text-center text-gray-500">Loading...</div>
+					{:else}
+						<table class="table-auto w-full text-sm text-left">
+							<tbody class="changers">
+								{#each sendingResult as { rate, changer }}
+									<tr class="py-32 mb-4 border-b border-gray-150 dark:border-gray-800">
+										<td>
+											<a
+												href={changer.link}
+												class="flex items-center"
+												title="{changer.name} dollar to naira rate."
+											>
+												<span class="changer-icon">
+													<picture>
+														<source
+															srcset="/icons/svg/{rate.changer_code}.svg"
+															type="image/svg+xml"
+														/>
+														<source srcset="/icons/png/{rate.changer_code}.png" type="image/png" />
+														<img
+															width="22px"
+															height="22px"
+															src="/icons/svg/{rate.changer_code}.svg"
+															class="rounded-full"
+															alt="{changer.name} icon"
+														/>
+													</picture>
+												</span>
+												<span class="changer-title ml-2">{changer.name}</span>
+											</a>
+										</td>
+										<td class="text-right pl-6 pr-6">
+											<span class="changer-rate">
+												{#if Math.round(rate.price_sell) === 0}
+													-
+												{:else}
+													{Math.round(rate.price_sell)} {to.code.toUpperCase()}
+												{/if}
 											</span>
-											<span class="changer-title ml-2">{changer.name}</span>
-										</a>
-									</td>
-									<td class="text-right pl-6 pr-6">
-										<span class="changer-rate">
-											{#if Math.round(rate.price_sell) === 0}
-												-
-											{:else}
-												₦{Math.round(rate.price_sell)}
-											{/if}
-										</span>
-										<small class="changer-rate-base ml-1">per $1</small>
-									</td>
-								</tr>
-							{/each}
-						</tbody>
-					</table>
-				{/if}
-				<div class="dark:border-gray-700 border-t text-center">
-					<a
-						href="/send"
-						class="w-full mt-4 inline-block text-sm text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300"
-					>
-						See More
-					</a>
+											<small class="changer-rate-base ml-1">per 1 {from.code.toUpperCase()}</small>
+										</td>
+									</tr>
+								{/each}
+							</tbody>
+						</table>
+					{/if}
+					<div class="dark:border-gray-700 border-t text-center">
+						<a
+							href="/send"
+							class="w-full mt-4 inline-block text-sm text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300"
+						>
+							See More
+						</a>
+					</div>
 				</div>
 			</div>
-		</div>
+		{/if}
 
 		<!-- Buying Rates Section -->
-		<div
-			class="bg-white dark:bg-gray-900 rounded-xl shadow-lg overflow-hidden border border-gray-200 dark:border-gray-700"
-		>
-			<h2
-				class="text-xl font-semibold p-4 border-b bg-gray-50 dark:bg-gray-900 dark:border-gray-700"
+		{#if buyingResult.length > 0}
+			<div
+				class="bg-white dark:bg-gray-900 rounded-xl shadow-lg overflow-hidden border border-gray-200 dark:border-gray-700"
 			>
-				Buying
-			</h2>
-			<div class="p-4 overflow-x-auto">
-				{#if isLoading}
-					<div class="text-center text-gray-500">Loading...</div>
-				{:else if buyingResult.length === 0}
-					<div class="text-center text-gray-500">No results found</div>
-				{:else}
-					<table class="table-auto w-full text-sm text-left">
-						<tbody class="changers">
-							{#each buyingResult as { rate, changer }}
-								<tr class="py-32 mb-4 border-b border-gray-150 dark:border-gray-800">
-									<td>
-										<a
-											href={changer.link}
-											class="flex items-center"
-											title="{changer.name} dollar to naira rate."
-										>
-											<span class="changer-icon">
-												<picture>
-													<source
-														srcset="/icons/svg/{rate.changer_code}.svg"
-														type="image/svg+xml"
-													/>
-													<source srcset="/icons/png/{rate.changer_code}.png" type="image/png" />
-													<img
-														width="22px"
-														height="22px"
-														src="/icons/svg/{rate.changer_code}.svg"
-														class="rounded-full"
-														alt="{changer.name} icon"
-													/>
-												</picture>
+				<h2
+					class="text-xl font-semibold p-4 border-b bg-gray-50 dark:bg-gray-900 dark:border-gray-700"
+				>
+					Buy {from.code.toUpperCase()}
+				</h2>
+				<div class="p-4 overflow-x-auto">
+					{#if isLoading}
+						<div class="text-center text-gray-500">Loading...</div>
+					{:else}
+						<table class="table-auto w-full text-sm text-left">
+							<tbody class="changers">
+								{#each buyingResult as { rate, changer }}
+									<tr class="py-32 mb-4 border-b border-gray-150 dark:border-gray-800">
+										<td>
+											<a
+												href={changer.link}
+												class="flex items-center"
+												title="{changer.name} dollar to naira rate."
+											>
+												<span class="changer-icon">
+													<picture>
+														<source
+															srcset="/icons/svg/{rate.changer_code}.svg"
+															type="image/svg+xml"
+														/>
+														<source srcset="/icons/png/{rate.changer_code}.png" type="image/png" />
+														<img
+															width="22px"
+															height="22px"
+															src="/icons/svg/{rate.changer_code}.svg"
+															class="rounded-full"
+															alt="{changer.name} icon"
+														/>
+													</picture>
+												</span>
+												<span class="changer-title ml-2">{changer.name}</span>
+											</a>
+										</td>
+										<td class="text-right pl-6 pr-6">
+											<span class="changer-rate">
+												{#if Math.round(rate.price_buy) === 0}
+													-
+												{:else}
+													{Math.round(rate.price_buy)} {to.code.toUpperCase()}
+												{/if}
 											</span>
-											<span class="changer-title ml-2">{changer.name}</span>
-										</a>
-									</td>
-									<td class="text-right pl-6 pr-6">
-										<span class="changer-rate">
-											{#if Math.round(rate.price_buy) === 0}
-												-
-											{:else}
-												₦{Math.round(rate.price_buy)}
-											{/if}
-										</span>
-										<small class="changer-rate-base ml-1">per $1</small>
-									</td>
-								</tr>
-							{/each}
-						</tbody>
-					</table>
-				{/if}
-				<div class="dark:border-gray-700 border-t text-center">
-					<a
-						href="/buy"
-						class="w-full mt-4 inline-block text-sm text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300"
-					>
-						See More
-					</a>
+											<small class="changer-rate-base ml-1">per 1 {from.code.toUpperCase()}</small>
+										</td>
+									</tr>
+								{/each}
+							</tbody>
+						</table>
+					{/if}
+					<div class="dark:border-gray-700 border-t text-center">
+						<a
+							href="/buy"
+							class="w-full mt-4 inline-block text-sm text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300"
+						>
+							See More
+						</a>
+					</div>
 				</div>
 			</div>
-		</div>
+		{/if}
 
 		<!-- Selling Rates Section -->
-		<div
-			class="bg-white dark:bg-gray-900 rounded-xl shadow-lg overflow-hidden border border-gray-200 dark:border-gray-700"
-		>
-			<h2
-				class="text-xl font-semibold p-4 border-b bg-gray-50 dark:bg-gray-900 dark:border-gray-700"
+		{#if sellingResult.length > 0}
+			<div
+				class="bg-white dark:bg-gray-900 rounded-xl shadow-lg overflow-hidden border border-gray-200 dark:border-gray-700"
 			>
-				Selling
-			</h2>
-			<div class="p-4 overflow-x-auto">
-				{#if isLoading}
-					<div class="text-center text-gray-500">Loading...</div>
-				{:else if sellingResult.length === 0}
-					<div class="text-center text-gray-500">No results found</div>
-				{:else}
-					<table class="table-auto w-full text-sm text-left">
-						<tbody class="changers">
-							{#each sellingResult as { rate, changer }}
-								<tr class="py-32 mb-4 border-b border-gray-150 dark:border-gray-800">
-									<td>
-										<a
-											href={changer.link}
-											class="flex items-center"
-											title="{changer.name} dollar to naira rate."
-										>
-											<span class="changer-icon">
-												<picture>
-													<source
-														srcset="/icons/svg/{rate.changer_code}.svg"
-														type="image/svg+xml"
-													/>
-													<source srcset="/icons/png/{rate.changer_code}.png" type="image/png" />
-													<img
-														width="22px"
-														height="22px"
-														src="/icons/svg/{rate.changer_code}.svg"
-														class="rounded-full"
-														alt="{changer.name} icon"
-													/>
-												</picture>
+				<h2
+					class="text-xl font-semibold p-4 border-b bg-gray-50 dark:bg-gray-900 dark:border-gray-700"
+				>
+					Sell {from.code.toUpperCase()}
+				</h2>
+				<div class="p-4 overflow-x-auto">
+					{#if isLoading}
+						<div class="text-center text-gray-500">Loading...</div>
+					{:else}
+						<table class="table-auto w-full text-sm text-left">
+							<tbody class="changers">
+								{#each sellingResult as { rate, changer }}
+									<tr class="py-32 mb-4 border-b border-gray-150 dark:border-gray-800">
+										<td>
+											<a
+												href={changer.link}
+												class="flex items-center"
+												title="{changer.name} dollar to naira rate."
+											>
+												<span class="changer-icon">
+													<picture>
+														<source
+															srcset="/icons/svg/{rate.changer_code}.svg"
+															type="image/svg+xml"
+														/>
+														<source srcset="/icons/png/{rate.changer_code}.png" type="image/png" />
+														<img
+															width="22px"
+															height="22px"
+															src="/icons/svg/{rate.changer_code}.svg"
+															class="rounded-full"
+															alt="{changer.name} icon"
+														/>
+													</picture>
+												</span>
+												<span class="changer-title ml-2">{changer.name}</span>
+											</a>
+										</td>
+										<td class="text-right pl-6 pr-6">
+											<span class="changer-rate">
+												{#if Math.round(rate.price_sell) === 0}
+													-
+												{:else}
+													{to.code.toUpperCase()} {Math.round(rate.price_sell)}
+												{/if}
 											</span>
-											<span class="changer-title ml-2">{changer.name}</span>
-										</a>
-									</td>
-									<td class="text-right pl-6 pr-6">
-										<span class="changer-rate">
-											{#if Math.round(rate.price_sell) === 0}
-												-
-											{:else}
-												₦{Math.round(rate.price_sell)}
-											{/if}
-										</span>
-										<small class="changer-rate-base ml-1">per $1</small>
-									</td>
-								</tr>
-							{/each}
-						</tbody>
-					</table>
-				{/if}
-				<div class="dark:border-gray-700 border-t text-center">
-					<a
-						href="/sell"
-						class="w-full mt-4 inline-block text-sm text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300"
-					>
-						See More
-					</a>
+											<small class="changer-rate-base ml-1">per 1 {from.code.toUpperCase()}</small>
+										</td>
+									</tr>
+								{/each}
+							</tbody>
+						</table>
+					{/if}
+					<div class="dark:border-gray-700 border-t text-center">
+						<a
+							href="/sell"
+							class="w-full mt-4 inline-block text-sm text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300"
+						>
+							See More
+						</a>
+					</div>
 				</div>
 			</div>
-		</div>
+		{/if}
 
 		<!-- Funding Rates Section -->
-		<div
-			class="bg-white dark:bg-gray-900 rounded-xl shadow-lg overflow-hidden border border-gray-200 dark:border-gray-700"
-		>
-			<h2
-				class="text-xl font-semibold p-4 border-b bg-gray-50 dark:bg-gray-900 dark:border-gray-700"
+		{#if fundingResult.length > 0}
+			<div
+				class="bg-white dark:bg-gray-900 rounded-xl shadow-lg overflow-hidden border border-gray-200 dark:border-gray-700"
 			>
-				Funding
-			</h2>
-			<div class="p-4 overflow-x-auto">
-				{#if isLoading}
-					<div class="text-center text-gray-500">Loading...</div>
-				{:else if fundingResult.length === 0}
-					<div class="text-center text-gray-500">No results found</div>
-				{:else}
-					<table class="table-auto w-full text-sm text-left">
-						<tbody class="changers">
-							{#each fundingResult as { rate, changer }}
-								<tr class="py-32 mb-4 border-b border-gray-150 dark:border-gray-800">
-									<td>
-										<a
-											href={changer.link}
-											class="flex items-center"
-											title="{changer.name} dollar to naira rate."
-										>
-											<span class="changer-icon">
-												<picture>
-													<source
-														srcset="/icons/svg/{rate.changer_code}.svg"
-														type="image/svg+xml"
-													/>
-													<source srcset="/icons/png/{rate.changer_code}.png" type="image/png" />
-													<img
-														width="22px"
-														height="22px"
-														src="/icons/svg/{rate.changer_code}.svg"
-														class="rounded-full"
-														alt="{changer.name} icon"
-													/>
-												</picture>
+				<h2
+					class="text-xl font-semibold p-4 border-b bg-gray-50 dark:bg-gray-900 dark:border-gray-700"
+				>
+					Fund {from.code.toUpperCase()} card
+				</h2>
+				<div class="p-4 overflow-x-auto">
+					{#if isLoading}
+						<div class="text-center text-gray-500">Loading...</div>
+					{:else}
+						<table class="table-auto w-full text-sm text-left">
+							<tbody class="changers">
+								{#each fundingResult as { rate, changer }}
+									<tr class="py-32 mb-4 border-b border-gray-150 dark:border-gray-800">
+										<td>
+											<a
+												href={changer.link}
+												class="flex items-center"
+												title="{changer.name} dollar to naira rate."
+											>
+												<span class="changer-icon">
+													<picture>
+														<source
+															srcset="/icons/svg/{rate.changer_code}.svg"
+															type="image/svg+xml"
+														/>
+														<source srcset="/icons/png/{rate.changer_code}.png" type="image/png" />
+														<img
+															width="22px"
+															height="22px"
+															src="/icons/svg/{rate.changer_code}.svg"
+															class="rounded-full"
+															alt="{changer.name} icon"
+														/>
+													</picture>
+												</span>
+												<span class="changer-title ml-2">{changer.name}</span>
+											</a>
+										</td>
+										<td class="text-right pl-6 pr-6">
+											<span class="changer-rate">
+												{#if Math.round(rate.price_buy) === 0}
+													-
+												{:else}
+													{Math.round(rate.price_buy)} {to.code.toUpperCase()}
+												{/if}
 											</span>
-											<span class="changer-title ml-2">{changer.name}</span>
-										</a>
-									</td>
-									<td class="text-right pl-6 pr-6">
-										<span class="changer-rate">
-											{#if Math.round(rate.price_buy) === 0}
-												-
-											{:else}
-												₦{Math.round(rate.price_buy)}
-											{/if}
-										</span>
-										<small class="changer-rate-base ml-1">per $1</small>
-									</td>
-								</tr>
-							{/each}
-						</tbody>
-					</table>
-				{/if}
-				<div class="dark:border-gray-700 border-t text-center">
-					<a
-						href="/card"
-						class="w-full mt-4 inline-block text-sm text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300"
-					>
-						See More
-					</a>
+											<small class="changer-rate-base ml-1">per 1 {from.code.toUpperCase()}</small>
+										</td>
+									</tr>
+								{/each}
+							</tbody>
+						</table>
+					{/if}
+					<div class="dark:border-gray-700 border-t text-center">
+						<a
+							href="/card"
+							class="w-full mt-4 inline-block text-sm text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300"
+						>
+							See More
+						</a>
+					</div>
 				</div>
 			</div>
-		</div>
+		{/if}
 	</div>
 </div>
 

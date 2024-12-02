@@ -517,7 +517,7 @@
 		</div>
 	</div>
 
-	{#if pair_rates.length > 0}
+	{#if currencyFrom.code !== currencyTo.code && pair_rates.length > 0}
 		<div
 			class="container mt-16 border border-none py-[10px] dark:text-light dark:border-none w-full overflow-x-scroll md:overflow-x-hidden overflow-y-scroll md:overflow-y-hidden"
 		>
@@ -526,7 +526,7 @@
 					? countriesToCurrencies[convertTo.toUpperCase()]
 					: convertTo} rates
 			</h2>
-			<ChangerRates rates={pair_rates} {changers} />
+			<ChangerRates rates={pair_rates} {changers} from={currencyFrom} to={currencyTo} />
 		</div>
 	{/if}
 
