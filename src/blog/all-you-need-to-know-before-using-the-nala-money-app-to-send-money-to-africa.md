@@ -1,6 +1,6 @@
 ---
 layout: blog
-title: All you need to know before using the Nala Money App to send money to Africa
+title: "Nala Money App: Before You Send, All You Need to Know"
 description: Available in 21 countries, Nala is a money transfer app built for those connections. Users in the UK, US, and EU can easily send funds to loved ones in Nigeria, Kenya, Ghana, and more. If you want to experience how the platform works in terms of convenience, affordability, security and more, learn more in our full review below.
 createdAt: 2024-12-03T14:46:00
 updatedAt: 2024-12-03T14:46:00
@@ -20,6 +20,7 @@ If you want to experience how the platform works in terms of convenience, afford
 Also, compare [Nala's rates](https://monierate.com/converter/nala/?Amount=1&From=USD&To=NGN) today with other platforms to find the best way to support your loved ones.
 
 ##### Here’s what’s great about Nala money:
+
 -   Send money home with personalized SMS updates.
 -   Offers payments for businesses.
 -   Expanded coverage.
@@ -54,7 +55,6 @@ NALA Money caters to:
 NALA provides a range of financial services tailored for individuals and businesses:
 
 -   **International Money Transfers**: Send money quickly and securely across borders.
-
 -   **Business Transfers**: Streamlined payments for businesses operating in or with Africa.
     
 -   **Mobile Money Transfers**: Transfer directly to mobile wallets.
@@ -114,15 +114,16 @@ Based on general insights, NALA's transfer limits typically depend on the countr
 
 ![https://ik.imagekit.io/monierate/Blog/product/nala-money-transfer-limit.png](https://ik.imagekit.io/monierate/Blog/product/nala-money-transfer-limit.png)
 
-
 ### NALA Wallet
 
 Whether you're planning regular remittances or hoping to save time on recurring payments, the built-in NALA Wallet is a practical tool. Here's what it provides:
 
 #### Main Wallet
+
 The Main Wallet lets you transfer funds from your bank account into your NALA account at your convenience. Available for £GBP and €EUR users, it supports transfers to various recipient countries, including Tanzania, Kenya, Nigeria, and more. It also lets you top up monthly, enabling controlled, incremental transfers directly from your wallet.
 
 #### Rewards Wallet
+
 The Rewards Wallet ties into NALA's Refer a Friend program. When you refer someone, and they complete a transaction, both of you receive a reward deposited into your Rewards Wallet. Available in €EUR, £GBP, and $USD, rewards can only be used for transactions to a recipient of your choice, adding extra value for loyal users.
 
 ### Payment Reminders
@@ -139,7 +140,6 @@ NALA is a regulated platform incorporated under UK law and it operates as an aut
 
 To protect transactions, NALA uses Face ID (iOS), Fingerprints or passcodes (Android) and requires basic Know Your Customer (KYC) details upon sign-up. Since its launch, NALA has maintained an impeccable security track record, offering users peace of mind.
 
-
 ## Nala Money Review: Support
 
 NALA offers a robust support system that users may seldom need due to the app’s intuitive design. The platform features an extensive help section where users can search for answers to common questions. For direct assistance, NALA provides email support via support@nala.money or mamanala@nala.money.
@@ -147,7 +147,6 @@ NALA offers a robust support system that users may seldom need due to the app’
 For additional queries or updates, NALA is active on social media platforms like Twitter, LinkedIn, YouTube, and Instagram, ensuring multiple channels for customer engagement.
 
 ![Nala Customer Support - In App Screen](https://ik.imagekit.io/monierate/Blog/product/nala-money-app-help.jpg)
-
 
 ## Alternatives to Nala Money
 
