@@ -344,7 +344,7 @@
 												{#if Math.round(rate.price_sell) === 0}
 													-
 												{:else}
-													{to.code.toUpperCase()} {Math.round(rate.price_sell)}
+													{Math.round(rate.price_sell)} {to.code.toUpperCase()}
 												{/if}
 											</span>
 											<small class="changer-rate-base ml-1">per 1 {from.code.toUpperCase()}</small>
