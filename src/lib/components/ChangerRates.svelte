@@ -29,6 +29,7 @@
 	};
 	export let from: any;
 	export let to: any;
+	export let amount: any;
 
 	let isLoading = true;
 	let hasResults = false;
@@ -175,7 +176,7 @@
 									<tr class="py-32 mb-4 border-b border-gray-150 dark:border-gray-800">
 										<td>
 											<a
-												href={changer.link}
+												href="/converter/{rate.changer_code}?Amount={amount}&From={from.code.toUpperCase()}&To={to.code.toUpperCase()}"
 												class="flex items-center"
 												title="{changer.name} dollar to naira rate."
 											>
@@ -245,7 +246,7 @@
 									<tr class="py-32 mb-4 border-b border-gray-150 dark:border-gray-800">
 										<td>
 											<a
-												href={changer.link}
+												href="/converter/{rate.changer_code}?Amount={amount}&From={from.code.toUpperCase()}&To={to.code.toUpperCase()}"
 												class="flex items-center"
 												title="{changer.name} dollar to naira rate."
 											>
@@ -315,7 +316,7 @@
 									<tr class="py-32 mb-4 border-b border-gray-150 dark:border-gray-800">
 										<td>
 											<a
-												href={changer.link}
+												href="/converter/{rate.changer_code}?Amount={amount}&From={from.code.toUpperCase()}&To={to.code.toUpperCase()}"
 												class="flex items-center"
 												title="{changer.name} dollar to naira rate."
 											>
@@ -385,7 +386,7 @@
 									<tr class="py-32 mb-4 border-b border-gray-150 dark:border-gray-800">
 										<td>
 											<a
-												href={changer.link}
+												href="/converter/{rate.changer_code}?Amount={amount}&From={from.code.toUpperCase()}&To={to.code.toUpperCase()}"
 												class="flex items-center"
 												title="{changer.name} dollar to naira rate."
 											>
