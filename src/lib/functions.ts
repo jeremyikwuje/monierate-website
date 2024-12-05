@@ -203,6 +203,13 @@ export function changeParam(param: string, value: number | string) {
     invalidateAll()
 }
 
+export function changePath(path: string) {
+    const url = new URL(window.location.toString());
+    url.pathname = path;
+    history.replaceState(history.state, '', url);
+    invalidateAll();
+}
+
 export function sortRates(rates: any) {
     // sort rates in decending order by price_buy;
     rates.sort((a: any, b: any) => a.price_buy - b.price_buy);
@@ -222,3 +229,29 @@ export async function fireInvalidateAll() {
         await invalidate
     }
 }
+
+export function scrollToSection(id: string, options = { 
+    duration: 500, 
+    offset: 0,  // Offset from the top in pixels
+    behavior: 'smooth' as ScrollBehavior 
+  }) {
+    const element = document.getElementById(id);
+    
+    if (element) {
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - options.offset;
+  
+      // Add a CSS class for animation
+      element.classList.add('highlight-section');
+  
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: options.behavior
+      });
+  
+      // Remove the animation class after it completes
+      setTimeout(() => {
+        element.classList.remove('highlight-section');
+      }, options.duration);
+    }
+  }

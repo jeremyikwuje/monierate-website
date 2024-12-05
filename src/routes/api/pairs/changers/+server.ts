@@ -8,6 +8,6 @@ export async function GET({ url }) {
   const changer_service = urlParams.get('changer_service') || '';
 
   let changers = await get_pairs_changers(pair_code, changer_service);
-
+  
   return json(changers);
 }

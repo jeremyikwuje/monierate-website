@@ -47,6 +47,18 @@ export default class Money {
 
         return formatter.format(amount)
     }
+    
+    static formatMoney(amount: string | number, decimal = 8, minDecimal = 2) {
+        amount = Number(`${amount}`)
+        // return currency(amount, { symbol: symbol, separator: ",", decimal: ".", precision: 8, }).format()
+
+        const formatter = new Intl.NumberFormat('en-US', {
+            minimumFractionDigits: minDecimal,
+            maximumFractionDigits: decimal
+        })
+
+        return formatter.format(amount)
+    }
 
     static getNumber(str: string | number): number {
         str = `${str}`
