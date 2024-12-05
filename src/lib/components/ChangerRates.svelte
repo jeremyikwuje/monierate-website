@@ -97,13 +97,19 @@
 			hasResults = false;
 
 			try {
-				sendingResult = findSupportedPlatforms(changers, rates.remittance, false, false).slice(
-					0,
-					5
-				);
-				buyingResult = findSupportedPlatforms(changers, rates.ramp, false, true).slice(0, 5);
-				sellingResult = findSupportedPlatforms(changers, rates.ramp, true, false).slice(0, 5);
-				fundingResult = findSupportedPlatforms(changers, rates.card, false, true).slice(0, 5);
+				if(rates.remittance.length > 0) {
+					sendingResult = findSupportedPlatforms(changers, rates.remittance, false, false).slice(
+						0,
+						5
+					);
+				}
+				if(rates.ramp.length > 0) {
+					buyingResult = findSupportedPlatforms(changers, rates.ramp, false, true).slice(0, 5);
+					sellingResult = findSupportedPlatforms(changers, rates.ramp, true, false).slice(0, 5);
+				}
+				if(rates.card.length > 0) {
+					fundingResult = findSupportedPlatforms(changers, rates.card, false, true).slice(0, 5);
+				}
 
 				hasResults = sendingResult.length > 0;
 				resultsLoaded = true;

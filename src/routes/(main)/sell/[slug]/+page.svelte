@@ -75,9 +75,9 @@
 				pairChangers.map((changerRate) => {
 					const changer = changers[changerRate.changer_code];
 					platform_rates.push({
-					    rate: changerRate,
+						rate: changerRate,
 						changer: changer
-					})
+					});
 				});
 			}
 		} catch (error) {
@@ -156,7 +156,7 @@
 				currencyToSellInput = currencyToBuyCode.toUpperCase();
 				currencyToGetInput = currencyToPayCode.toUpperCase();
 
-				if(sessionStorage && sessionStorage.getItem('convertAmount')) {
+				if (sessionStorage && sessionStorage.getItem('convertAmount')) {
 					convertAmount = Number(sessionStorage.getItem('convertAmount'));
 					sessionStorage.removeItem('convertAmount');
 				}
@@ -170,6 +170,11 @@
 			getPairChangers(`${currencyToSellInput}${currencyToGetInput}`, 'ramp');
 		}, 60000 * 10);
 	});
+
+	let openQuestion: any = null;
+	function toggleQuestion(index: any) {
+		openQuestion = openQuestion === index ? null : index;
+	}
 </script>
 
 <svelte:head>
@@ -333,10 +338,10 @@
 				</div>
 			</div>
 		{:else}
-			{#each convertResult as result}
+			{#each convertResult as result, i}
 				{#if result.rate.price_sell > 0}
 					<div
-						class="flex flex-wrap gap-4 px-8 py-4 w-full bg-white dark:bg-gray-900 shadow-md rounded-lg mb-8"
+						class="flex flex-wrap gap-4 px-8 py-4 w-full bg-white dark:bg-gray-900 shadow-md rounded-lg mb-8 relative overflow-hidden border {i === 0 ? 'border-gray-800 dark:border-light' : 'border-transparent'}"
 					>
 						<div class="flex-1 min-w-full md:min-w-[30%] md:flex md:items-center md:justify-start">
 							<div class="flex justify-start items-center">
@@ -382,6 +387,11 @@
 								>
 									Sell {convertFrom} now
 								</a>
+								{#if i === 0}
+								    <span class="absolute top-0 right-0 bg-gray-800 dark:bg-light text-white dark:text-dark text-xs px-2 py-1">
+									    Best rate
+								    </span>
+								{/if}
 							</div>
 						</div>
 					</div>

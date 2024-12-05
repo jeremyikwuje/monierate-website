@@ -37,8 +37,6 @@
 	let convertFromInput = 'USD';
 	let convertToInput = 'NG';
 	let changers: Record<string, Changer> = data.changers || {};
-		console.log('Changers: ', changers);
-
 	let pairChangers: PairChanger[] = data.pair_changers || {};
 	let currencies: Currency[] = data.currencies || [];
 	let countriesToCurrencies: any = data.countriesToCurrencies;
@@ -82,9 +80,9 @@
 				pairChangers.map((changerRate) => {
 					const changer = changers[changerRate.changer_code];
 					platform_rates.push({
-					    rate: changerRate,
+						rate: changerRate,
 						changer: changer
-					})
+					});
 				});
 			}
 		} catch (error) {
@@ -166,7 +164,7 @@
 				convertFromInput = currencyFromCode.toUpperCase();
 				convertToInput = countryToCode.toUpperCase();
 
-				if(sessionStorage && sessionStorage.getItem('convertAmount')) {
+				if (sessionStorage && sessionStorage.getItem('convertAmount')) {
 					convertAmount = Number(sessionStorage.getItem('convertAmount'));
 					sessionStorage.removeItem('convertAmount');
 				}
@@ -183,6 +181,11 @@
 			);
 		}, 60000 * 10);
 	});
+
+	let openQuestion: any = null;
+	function toggleQuestion(index: any) {
+		openQuestion = openQuestion === index ? null : index;
+	}
 </script>
 
 <svelte:head>
@@ -350,10 +353,10 @@
 				</div>
 			</div>
 		{:else}
-			{#each convertResult as result}
+			{#each convertResult as result, i}
 				{#if result.rate.price_sell > 0}
 					<div
-						class="flex flex-wrap gap-4 px-8 py-4 w-full bg-white dark:bg-gray-900 shadow-md rounded-lg mb-8"
+						class="flex flex-wrap gap-4 px-8 py-4 w-full bg-white dark:bg-gray-900 shadow-md rounded-lg mb-8 relative overflow-hidden border {i === 0 ? 'border-gray-800 dark:border-light' : 'border-transparent'}"
 					>
 						<div class="flex-1 min-w-full md:min-w-[30%] md:flex md:items-center md:justify-start">
 							<div class="flex justify-start items-center">
@@ -400,6 +403,11 @@
 								>
 									Send money now
 								</a>
+								{#if i === 0}
+								    <span class="absolute top-0 right-0 bg-gray-800 dark:bg-light text-white dark:text-dark text-xs px-2 py-1">
+									    Best rate
+								    </span>
+								{/if}
 							</div>
 						</div>
 					</div>
@@ -408,6 +416,248 @@
 		{/if}
 	</div>
 {/if}
+
+<div class="container dark:text-gray-300">
+	<span class="block mb-4">
+		<h2 class="text-2xl mb-4">
+			All you need to know about {currencyFrom.name} to {currencyTo.name} money transfers
+		</h2>
+		<p>
+			Easily compare money transfer providers in one place to send
+			{currencyFrom.name} to {countryToName}. Send money overseas to your loved ones by comparing {currencyFrom.name}
+			({currencyFrom.code.toUpperCase()}) to {currencyTo.name}
+			({currencyTo.code.toUpperCase()}) remittance exchange rates. Transfer online or send cash based on
+			services offered by these providers.
+		</p>
+
+		<p class="mt-4">
+			Monierate compared {Object.entries(pairChangers).length} money transfer operators to get you the
+			best FX rates to send {currencyFrom.name} to {countryToName}.
+		</p>
+
+		<p class="mt-4">
+			The best rate to send {currencyFrom.name} for your loved ones in {countryToName}
+			is currently offered by Western Union.
+		</p>
+	</span>
+</div>
+
+<div class="container mt-4">
+	<h3 class="text-2xl font-bold mb-4">
+		Step by step guide to send {currencyFrom.name} to {countryToName}
+	</h3>
+	<p class="mb-4">Follow the below easy steps to send {currencyFrom.name} to {countryToName}.</p>
+	<ul class="pl-2">
+		<li class="text-sm mb-4">
+			If you are sending money for the first time with a provider, register an account with them.
+			You will likely get a validation email, and optionally a validation text on your mobile as
+			well. This ensures that it is indeed you who is creating your account.
+		</li>
+		<li class="text-sm mb-4">
+			You will also need to provide your national ID with a photo, and proof of address. Providing
+			this information ensures the security of your account and helps in fraud prevention.
+		</li>
+		<li class="text-sm mb-4">
+			Add your payment method - this is how you pay for your transfer. Generally, you would want to
+			use your international bank account to fund your transaction.
+		</li>
+		<li class="text-sm mb-4">
+			Add your recipient - provide details about who will receive the funds (can also be your own
+			account in {countryToName}).
+		</li>
+		<li class="text-sm mb-4">
+			Specify delivery method - specify how the recipient will get the proceeds. Choosing a bank
+			account is usually the best, if one is available.
+		</li>
+		<li class="text-sm mb-4">Add the transfer amount and start the transaction.</li>
+	</ul>
+
+	<p class="mb-4">
+		The provider will then work on your {currencyFrom.code.toUpperCase()} to {currencyTo.code.toUpperCase()}
+		remittance, and you should not have any additional action to take. Keep an eye on your email inbox
+		as you should get notified about the progress of your transaction.
+	</p>
+	<p class="mb-4">
+		Whilst it's fairly straightforward to make an actual foreign exchange transaction online, the
+		harder part may be choosing the right company for your overseas bank transfer. This is where you
+		can rely on Monierate to find the best rate to send {currencyFrom.name} to {countryToName}.
+	</p>
+</div>
+
+<div class="container py-10 px-5">
+	<h3 class="text-2xl font-bold mb-4">Frequently asked question?</h3>
+
+	<div class="border-b border-gray-700">
+		<button
+			on:click={() => toggleQuestion(1)}
+			class="w-full text-left py-4 flex justify-between items-center"
+		>
+			<span class="text-xl font-medium"
+				>What's the best way to send {currencyFrom.name} to {countryToName}?</span
+			>
+
+			<svg
+				class={`w-6 h-6 transition-transform duration-300 ease-in-out ${
+					openQuestion === 1 ? 'rotate-180' : ''
+				}`}
+				xmlns="http://www.w3.org/2000/svg"
+				fill="none"
+				viewBox="0 0 24 24"
+				stroke="currentColor"
+			>
+				<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+			</svg>
+		</button>
+
+		<div
+			class={`overflow-hidden transition-all duration-500 ease-in-out ${
+				openQuestion === 1 ? 'max-h-screen py-4' : 'max-h-0'
+			}`}
+		>
+			<p class="px-4 text-gray-600 dark:text-gray-400">
+				There are many good choices when it comes to sending {currencyFrom.name} to {countryToName}.
+				The Monierate remittance comparison engine compares many different remittance service
+				providers to give you several options. You can easily compare these providers to get the
+				best remit rates on your {currencyFrom.name} ({currencyFrom.code.toUpperCase()}) to
+				{currencyTo.name} ({currencyTo.code.toUpperCase()}) money transfers.
+			</p>
+		</div>
+	</div>
+
+	<div class="border-b border-gray-700">
+		<button
+			on:click={() => toggleQuestion(2)}
+			class="w-full text-left py-4 flex justify-between items-center"
+		>
+			<span class="text-xl font-medium"
+				>How to get the best rate to transfer {currencyFrom.name} to {currencyTo.name}?</span
+			>
+
+			<svg
+				class={`w-6 h-6 transition-transform duration-300 ease-in-out ${
+					openQuestion === 2 ? 'rotate-180' : ''
+				}`}
+				xmlns="http://www.w3.org/2000/svg"
+				fill="none"
+				viewBox="0 0 24 24"
+				stroke="currentColor"
+			>
+				<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+			</svg>
+		</button>
+
+		<div
+			class={`overflow-hidden transition-all duration-500 ease-in-out ${
+				openQuestion === 2 ? 'max-h-screen py-4' : 'max-h-0'
+			}`}
+		>
+			<p class="px-4 text-gray-600 dark:text-gray-400">
+				When sending money overseas, there are a lot of options at your disposal these days. All of
+				them come with various caveats that may include exchange rates, fees, transaction processing
+				time, security and privacy, and so on. Monierate helps you to decide which foreign exchange
+				operator to pick for your {currencyFrom.code.toUpperCase()} to {currencyTo.code.toUpperCase()}
+				money transfer.
+			</p>
+		</div>
+	</div>
+
+	<div class="border-b border-gray-700">
+		<button
+			on:click={() => toggleQuestion(5)}
+			class="w-full text-left py-4 flex justify-between items-center"
+		>
+			<span class="text-xl font-medium"
+				>How to send {currencyFrom.code.toUpperCase()} to {countryToName} fast?</span
+			>
+
+			<svg
+				class={`w-6 h-6 transition-transform duration-300 ease-in-out ${
+					openQuestion === 5 ? 'rotate-180' : ''
+				}`}
+				xmlns="http://www.w3.org/2000/svg"
+				fill="none"
+				viewBox="0 0 24 24"
+				stroke="currentColor"
+			>
+				<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+			</svg>
+		</button>
+
+		<div
+			class={`overflow-hidden transition-all duration-500 ease-in-out ${
+				openQuestion === 5 ? 'max-h-screen py-4' : 'max-h-0'
+			}`}
+		>
+			<p class="px-4 text-gray-600 dark:text-gray-400 mb-4">
+				The speed of your {currencyFrom.name} to {currencyTo.name} funds transfer will depend on various
+				factors like which provider you use, how you pay for your transaction, how you choose for your
+				recipient to get the funds, etc. You will, therefore, want to compare various options to see
+				which one suits your needs best.
+			</p>
+			<p class="px-4 text-gray-600 dark:text-gray-400 mb-4">
+				One possible approach that will help you send money fast to {countryToName} is to rely on cash
+				as payment as well as delivery method. This would mean paying for your transfer with cash, most
+				likely by walking into your provider's office or agent location. Similarly, your recipient could
+				also pick up cash in {countryToName} if they have a pickup location nearby. Dealing with cash
+				on both sides will eliminate bank transfers in the middle which generally take longer as money
+				has to move between banks.
+			</p>
+			<p class="px-4 text-gray-600 dark:text-gray-400">
+				One drawback of cash transfers is the need to go to physical drop off and pickup locations,
+				and the inherent risk involved in carrying cash, especially for larger amounts. Another one
+				is that cash transfers generally involve lower exchange rates as compared to online
+				transfers. If you do not want to handle cash for the aforementioned reasons, the next
+				fastest transfers would be to payout {currencyTo.name} into a mobile wallet, or even do a mobile
+				airtime popup. These methods would be faster than international bank to {countryToName} bank
+				transfer.
+			</p>
+		</div>
+	</div>
+
+	<div class="border-b border-gray-700">
+		<button
+			on:click={() => toggleQuestion(6)}
+			class="w-full text-left py-4 flex justify-between items-center"
+		>
+			<span class="text-xl font-medium"
+				>Which are the best money transfer companies to transfer {currencyFrom.name} to {countryToName}?</span
+			>
+
+			<svg
+				class={`w-6 h-6 transition-transform duration-300 ease-in-out ${
+					openQuestion === 6 ? 'rotate-180' : ''
+				}`}
+				xmlns="http://www.w3.org/2000/svg"
+				fill="none"
+				viewBox="0 0 24 24"
+				stroke="currentColor"
+			>
+				<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+			</svg>
+		</button>
+
+		<div
+			class={`overflow-hidden transition-all duration-500 ease-in-out ${
+				openQuestion === 6 ? 'max-h-screen py-4' : 'max-h-0'
+			}`}
+		>
+			<p class="px-4 text-gray-600 dark:text-gray-400 mb-4">
+				Since the {currencyFrom.name} to {currencyTo.name} money transfer ecosystem has so many players
+				in it, selecting the right company might not be that simple. You have so many to choose from
+				- established organizations like Western Union and MoneyGram to multi currency bank accounts
+				to up and coming Fintech companies. Then, there is always your local bank that may also be able
+				to send money to {countryToName}. With all these possibilities staring at you, it can be
+				difficult to pick the company to give your business to.
+			</p>
+			<p class="px-4 text-gray-600 dark:text-gray-400">
+				The Monierate remittance engine will certainly help you to chart a path forward. Once you
+				have selected your source and destination countries, we compare numerous companies to
+				present you with an easy to digest comparison table. Here, you can easily see which
+				companies meet your unique needs.
+			</p>
+		</div>
+	</div>
+</div>
 
 <style>
 	.label {

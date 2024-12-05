@@ -5,6 +5,7 @@
 	import { changeParam } from '$lib/functions';
 	import ChangerRates from '$lib/components/ChangerRates.svelte';
 	import { goto } from '$app/navigation';
+	import { onMount } from 'svelte';
 
 	interface Currency {
 		code: string;
@@ -27,6 +28,7 @@
 	let currencies: Currency[] = data.currencies;
 	let countries = data.countries;
 	let countriesToCurrencies = data.countriesToCurrencies;
+	let countryCodeByCurrency = data.countryCodeByCurrency;
 
 	let convertFrom = convert.From.toUpperCase();
 	let convertTo = convert.To.toUpperCase();
@@ -148,7 +150,7 @@
 		return changers;
 	}
 
-	function changeTabView(event: Event) {
+	async function changeTabView(event: Event) {
 		let currentViewButton = event.currentTarget as HTMLButtonElement;
 		let viewTabs = document.getElementById('converter-tabs');
 		let buttons = viewTabs?.getElementsByTagName('button');
@@ -159,16 +161,9 @@
 			}
 			currentViewButton?.classList.add('active');
 			currentView = currentViewData;
-			if (currentView === CurrentView.SEND) {
-				convertTo = 'NG';
-				convertFrom = 'USD';
-				convertAmount = 1;
-			} else {
-				convertTo = 'NGN';
-				convertFrom = 'USD';
-				convertAmount = 1;
-			}
+			await setUserLocation();
 		}
+
 	}
 
 	function viewAction() {
@@ -198,7 +193,51 @@
 		convertNow();
 	}
 
-	convertNow();
+	async function getUserCountry() {
+		try {
+			const res = await fetch('https://ipapi.co/json/');
+			if (res.ok) {
+				const data = await res.json();
+				if (data.country) return data.country.toUpperCase();
+			}
+		} catch (error) {
+			console.error('Error fetching country:', error);
+		}
+		return false;
+	}
+
+	function findCurrencyByCountryCode(countryCode: string) {
+		for (const [currency, countries] of Object.entries(countryCodeByCurrency)) {
+			if (
+				countries === countryCode ||
+				(Array.isArray(countries) && countries.includes(countryCode))
+			) {
+				return currency;
+			}
+		}
+		return null;
+	}
+
+	async function setUserLocation() {
+		let userCountry = await getUserCountry();
+		if (userCountry) {
+			if (currentView === CurrentView.SEND) {
+				convertFrom = 'USD';
+				convertTo = userCountry ?? 'NG';
+			} else {
+				let countryCurrency = findCurrencyByCountryCode(userCountry.toUpperCase());
+				convertFrom = 'USD';
+				convertTo = countryCurrency ?? 'NGN';
+			}
+			convertNow();
+		}
+	}
+
+	onMount(async () => {
+		await setUserLocation();
+	});
+
+	//convertNow();
 </script>
 
 <svelte:head>
