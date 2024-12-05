@@ -563,7 +563,7 @@
 					? countriesToCurrencies[convertTo.toUpperCase()]
 					: convertTo} rates
 			</h2>
-			<ChangerRates rates={pair_rates} {changers} from={currencyFrom} to={currencyTo} />
+			<ChangerRates rates={pair_rates} {changers} from={currencyFrom} to={currencyTo} amount={convertAmount} />
 		</div>
 	{/if}
 
