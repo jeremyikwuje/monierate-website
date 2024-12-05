@@ -360,7 +360,7 @@
 					>
 						<div class="flex-1 min-w-full md:min-w-[30%] md:flex md:items-center md:justify-start">
 							<div class="flex justify-start items-center">
-								<a href={result.changer.link}>
+								<a href="/converter/{result.changer.code}?Amount={convertAmount}&From={currencyFrom.code.toUpperCase()}&To={currencyTo.code.toUpperCase()}">
 									<img
 										src="/icons/svg/{result.changer.code}.svg"
 										alt="{result.changer.name} icon"
@@ -368,7 +368,7 @@
 									/>
 								</a>
 								<a
-									href={result.changer.link}
+									href="/converter/{result.changer.code}?Amount={convertAmount}&From={currencyFrom.code.toUpperCase()}&To={currencyTo.code.toUpperCase()}"
 									class="text-gray-600 dark:text-gray-300 hover:underline text-lg"
 								>
 									{result.changer.name}
@@ -398,7 +398,7 @@
 						>
 							<div>
 								<a
-									href={result.changer.link}
+									href="/converter/{result.changer.code}?Amount={convertAmount}&From={currencyFrom.code.toUpperCase()}&To={currencyTo.code.toUpperCase()}"
 									class="block button w-full md:inline-block md:w-auto mr-4 mb-4 text-center"
 								>
 									Send money now
