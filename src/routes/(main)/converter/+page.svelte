@@ -222,12 +222,10 @@
 		let userCountry = await getUserCountry();
 		if (userCountry) {
 			if (currentView === CurrentView.SEND) {
-				convertFrom = 'USD';
-				convertTo = userCountry ?? 'NG';
+				convertTo = userCountry ?? convertTo;
 			} else {
 				let countryCurrency = findCurrencyByCountryCode(userCountry.toUpperCase());
-				convertFrom = 'USD';
-				convertTo = countryCurrency ?? 'NGN';
+				convertTo = countryCurrency ?? convertTo;
 			}
 			convertNow();
 		}
