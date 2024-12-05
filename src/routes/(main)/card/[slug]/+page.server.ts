@@ -3,11 +3,8 @@ import { get_changers } from '$lib/server/changer.service';
 import { get_currencies } from '$lib/server/currency.service';
 import type { PageServerLoad } from './$types';
 import { error } from '@sveltejs/kit';
-import CountriesToCurrencies from '$data/countries-to-currencies.json';
-import Countries from '$data/countries.json';
 import { ChangerServiceCategory, get_pairs_changers } from '$lib/server/pair.service';
 
-interface CountriesMap { [key: string]: string }
 interface ConvertParams {
     From: string;
     To: string;
@@ -16,11 +13,11 @@ interface ConvertParams {
 
 export const load: PageServerLoad = async ({ params, url }) => {
     const slug = params.slug;
-    const [currencyToFund, _, currencyToPay] = slug.split('-');
+    const [currencyToFundCode, currencyToPayCode] = slug.split('-');
 
     const convert: ConvertParams = {
-        From: currencyToFund || 'USD',
-        To: currencyToPay || 'NGN',
+        From: currencyToFundCode || 'USD',
+        To: currencyToPayCode || 'NGN',
         Amount: 1
     };
 
@@ -44,10 +41,10 @@ export const load: PageServerLoad = async ({ params, url }) => {
             convert,
         };
     }
-    catch(e: unknown) {
+    catch (e: unknown) {
         const errorMessage = e instanceof Error ? e.message : String(e);
         console.error('Data fetch error:', errorMessage);
-        
+
         throw error(500, 'Unable to fetch required data');
     }
 }

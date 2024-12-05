@@ -1,6 +1,5 @@
 <script lang="ts">
 	import type { PageData } from './$types';
-	import { round, chain } from 'mathjs';
 	import { changePath, scrollToSection } from '$lib/functions';
 	import Money from '$lib/money';
 	import { onMount } from 'svelte';
@@ -11,6 +10,7 @@
 		code: string;
 		name: string;
 		link: string;
+		pairs: any;
 	}
 
 	interface PairChanger {
@@ -20,41 +20,33 @@
 		updated_at: string;
 	}
 
+	interface ChangerRate {
+		rate: PairChanger;
+		changer: Changer;
+	}
+
 	interface Currency {
 		code: string;
 		name: string;
 		symbol?: string;
 	}
 
-	interface ConversionResult {
-		rate: number;
-		rate_inverse: number;
-		conversion: number;
-		platform_rates: PlatformRate[];
-	}
-
-	interface PlatformRate {
-		platform: Changer;
-		rate: number;
-		will_receive: number;
-		fees: number;
-		net_amount: number;
-	}
-
+	let supportedCountries: string[] = ['NG'];
 	let isLoading = true;
 	let hasResults = false;
 	let convertFromInput = 'USD';
 	let convertToInput = 'NG';
 	let changers: Record<string, Changer> = data.changers || {};
 	let pairChangers: PairChanger[] = data.pair_changers || {};
-	let pairs = data.pairs || [];
 	let currencies: Currency[] = data.currencies || [];
+	let countriesToCurrencies: any = data.countriesToCurrencies;
 	let convertAmount = 1;
 	$: convert = data.convert || { From: 'USD', To: 'NGN', Amount: 1 };
 	$: countryToName = data.countryToName || 'Nigeria';
 	$: countries = data.countries;
 	$: convertFrom = convert.From?.toUpperCase().trim();
 	$: convertTo = convert.To?.toUpperCase().trim();
+	$: currencyToCode = countriesToCurrencies[convertToInput.toUpperCase()];
 
 	$: currencyFrom = currencies.find((c) => c.code.toUpperCase() === convertFrom) || {
 		code: convertFrom,
@@ -67,20 +59,11 @@
 		symbol: convertTo
 	};
 
-	// Conversion result with default values
-	let convertResult: ConversionResult = {
-		rate: 1,
-		rate_inverse: 1,
-		conversion: convertAmount,
-		platform_rates: []
-	};
+	let convertResult: ChangerRate[] = [];
 
-	async function getPairChangers(
-			pair_code: string,
-			changer_service: string
-	) {
+	async function getPairChangers(pair_code: string, changer_service: string) {
 		const response = await fetch(
-				`/api/pairs/changers?pair_code=${pair_code}&changer_service=${changer_service}`
+			`/api/pairs/changers?pair_code=${pair_code}&changer_service=${changer_service}`
 		);
 		const changers = await response.json();
 
@@ -89,36 +72,26 @@
 		return changers;
 	}
 
-	function findSupportedPlatforms(): PlatformRate[] {
-		const from = convertFrom.toLowerCase();
-		const to = convertTo.toLowerCase();
-		let platform_rates: PlatformRate[] = [];
+	function findSupportedPlatforms(): ChangerRate[] {
+		let platform_rates: ChangerRate[] = [];
 
 		try {
-			Object.values(pairChangers).forEach((changer_rate) => {
-
-				if (changer_rate.price_sell > 0) {
-					const rate = changer_rate.price_sell;
-					const conversion = round(chain(rate).multiply(convertAmount).done(), 2);
-
-					const fee_percentage = 0.02; // 2% fee
-					const fees = round(conversion * fee_percentage, 2);
-					const net_amount = round(conversion - fees, 2);
-
+			if (changers && pairChangers) {
+				pairChangers.map((changerRate) => {
+					const changer = changers[changerRate.changer_code];
 					platform_rates.push({
-						platform: changers[changer_rate.changer_code],
-						rate: rate,
-						will_receive: conversion,
-						fees: fees,
-						net_amount: net_amount
+						rate: changerRate,
+						changer: changer
 					});
-				}
-			});
+				});
+			}
 		} catch (error) {
 			console.error('Error finding platforms:', error);
 		}
 
-		return platform_rates.sort((a, b) => b.net_amount - a.net_amount);
+		platform_rates.sort((a, b) => b.rate.price_sell - a.rate.price_sell);
+
+		return platform_rates;
 	}
 
 	$: {
@@ -126,40 +99,13 @@
 		hasResults = false;
 
 		try {
-			if (convertFrom && convertTo) {
-				let rate = 1;
-				let rate_inverse = 1;
-
-				if (convertFrom !== convertTo) {
-					const pair_code = `${convertFrom.toLowerCase()}${convertTo.toLowerCase()}`;
-					const inversePair_code = `${convertTo.toLowerCase()}${convertFrom.toLowerCase()}`;
-
-					let pair = pairs.find((p: any) => p?.code === pair_code);
-
-					if (pair) {
-						rate = pair.price?.current || 1;
-						rate_inverse = 1 / rate;
-					} else {
-						pair = pairs.find((p: any) => p?.code === inversePair_code);
-						if (pair) {
-							rate_inverse = pair.price?.current || 1;
-							rate = 1 / rate_inverse;
-						}
-					}
-				}
-
-				convertResult.rate = rate;
-				convertResult.rate_inverse = rate_inverse;
-				convertResult.conversion = round(chain(rate).multiply(convertAmount).done(), 8);
-
-				// Update platform rates
-				convertResult.platform_rates = findSupportedPlatforms();
-				hasResults = convertResult.platform_rates && convertResult.platform_rates.length > 0;
+			if (convertFrom && convertTo && convertAmount) {
+				convertResult = findSupportedPlatforms();
+				hasResults = convertResult.length > 0;
 			}
 		} catch (error) {
 			console.error('Conversion calculation error:', error);
-		}
-		finally {
+		} finally {
 			// Only hide loading after we've determined if we have results
 			setTimeout(() => {
 				isLoading = false;
@@ -171,6 +117,10 @@
 	async function updateUrlPath() {
 		try {
 			isLoading = true;
+			await getPairChangers(
+				`${convertFromInput.toLowerCase()}${currencyToCode.toLowerCase()}`,
+				'remittance'
+			);
 			changePath(
 				`/send/${convertFromInput.toLowerCase()}-to-${convertToInput.toLowerCase()}-best-rate`
 			);
@@ -194,6 +144,7 @@
 			}
 
 			await updateUrlPath();
+			isLoading = false;
 		} catch (error) {
 			console.error('Amount change error:', error);
 		}
@@ -212,22 +163,34 @@
 					.split('-');
 				convertFromInput = currencyFromCode.toUpperCase();
 				convertToInput = countryToCode.toUpperCase();
+
+				if (sessionStorage && sessionStorage.getItem('convertAmount')) {
+					convertAmount = Number(sessionStorage.getItem('convertAmount'));
+					sessionStorage.removeItem('convertAmount');
+				}
 			}
 		} catch (error) {
 			console.log('There was an error set initial input values:', error);
 		}
 
 		// referesh the pair changers rate every 10 minutes
-		setInterval(() => {
-			getPairChangers(`${convertFrom}${convertTo}`, 'remittance');
+		setInterval(async () => {
+			await getPairChangers(
+				`${convertFrom.toLowerCase()}${currencyToCode.toLowerCase()}`,
+				'remittance'
+			);
 		}, 60000 * 10);
 	});
+
+	let openQuestion: any = null;
+	function toggleQuestion(index: any) {
+		openQuestion = openQuestion === index ? null : index;
+	}
 </script>
 
 <svelte:head>
 	<title>
-		{convertFrom} to {convertTo}
-		- Compare & Send {currencyFrom?.name} to {currencyTo?.name}
+		Send {currencyFrom?.name} to {countryToName} - Compare the best {convertTo} rates
 	</title>
 	<meta
 		name="description"
@@ -241,7 +204,7 @@
 	<meta property="og:type" content="website" />
 	<meta
 		property="og:title"
-		content="{convertFrom} to {convertTo} - Compare & Send {currencyFrom?.name} to {currencyTo?.name}"
+		content="Send {currencyFrom?.name} to {countryToName} - Compare the best {convertTo} rates"
 	/>
 	<meta
 		property="og:description"
@@ -279,7 +242,9 @@
 	</div>
 
 	<div id="changer-rate-wrapper" class="container">
-		<div class="flex justify-center item-center shadow-sm bg-gray-50 dark:bg-gray-900 rounded-lg px-8 py-6">
+		<div
+			class="flex justify-center item-center shadow-sm bg-gray-50 dark:bg-gray-900 rounded-lg px-8 py-6"
+		>
 			<div class="w-full">
 				<div class="block md:flex md:justify-between md:items-center">
 					<span class="block md:w-[30%]">
@@ -287,7 +252,7 @@
 						<span class="select">
 							<select
 								id="field-convert-from"
-								class="text-gray-700 text-lg font-medium focus:outline-none w-full"
+								class="text-gray-700 dark:text-gray-500 text-lg font-medium bg-transparent border-none focus:border-none focus:outline-none w-full"
 								bind:value={convertFromInput}
 								on:change={handleCurrencyChange}
 							>
@@ -304,33 +269,33 @@
 						<span class="select">
 							<select
 								id="field-convert-to"
-								class="text-gray-700 text-lg font-medium focus:outline-none w-full"
+								class="text-gray-700 dark:text-gray-500 text-lg font-medium bg-transparent border-none focus:border-none focus:outline-none w-full"
 								bind:value={convertToInput}
 								on:change={handleCurrencyChange}
 							>
 								{#each Object.entries(countries) as [countryCode, country]}
-									<option value={countryCode.toUpperCase()}>
-										{country}
-									</option>
+									{#if supportedCountries.includes(countryCode.toUpperCase())}
+										<option value={countryCode.toUpperCase()}>
+											{country}
+										</option>
+									{/if}
 								{/each}
 							</select>
 						</span>
 					</span>
 					<span class="block md:w-[30%]">
 						<!-- Label -->
-						<label for="amount" class="label">
-							Amount
-						</label>
-				
+						<label for="amount" class="label"> Amount </label>
+
 						<!-- Input Field -->
 						<div class="flex items-center input">
 							<!-- Numeric Input -->
-							<input 
-								type="text" 
-								id="amount" 
+							<input
+								type="text"
+								id="amount"
 								value={convertAmount}
 								on:input={handleAmountChange}
-								class="flex-1 text-gray-700 text-lg font-medium focus:outline-none" 
+								class="flex-1 text-gray-700 dark:text-gray-500 text-lg bg-transparent border-none focus:border-none font-medium focus:outline-none"
 								placeholder="Enter amount"
 							/>
 							<!-- Currency Label -->
@@ -338,19 +303,6 @@
 								{convertFrom}
 							</span>
 						</div>
-						<!-- <label class="label" for="field-convert-amount">Amount</label>
-						<span class="input">
-							<input
-								type="number"
-								id="field-convert-amount"
-								class="bg-transparent border-none focus:border-none focus:outline-none focus:ring-0 w-[80%]"
-								value={convertAmount}
-								on:input={handleAmountChange}
-								step="0.01"
-								min="0.01"
-							/>
-							{convertFrom}
-						</span> -->
 					</span>
 				</div>
 			</div>
@@ -362,7 +314,7 @@
 	<!------------------------------->
 </div>
 
-{#if getInputValue > 0 && convertFrom !== convertTo}
+{#if getInputValue > 0}
 	<!-- Platforms Table -->
 	<div class="container">
 		{#if isLoading}
@@ -396,69 +348,316 @@
 						No Data Available
 					</h3>
 					<p class="mt-1 text-sm text-gray-500 dark:text-gray-400">
-						No platform rates available for converting {convertFrom} to {convertTo}.
+						No platform sending {convertFrom} to {convertTo}.
 					</p>
 				</div>
 			</div>
 		{:else}
-			{#each convertResult.platform_rates as platformRate}
-				<div
-					class="flex flex-wrap gap-4 px-8 py-4 w-full bg-white dark:bg-gray-900 shadow-md rounded-lg mb-8"
-				>
-					<div class="flex-1 min-w-full md:min-w-[30%] md:flex md:items-center md:justify-start">
-						<div class="flex justify-start items-center">
-							<a href={platformRate.platform.link}>
-								<img
-									src="/icons/svg/{platformRate.platform.code}.svg"
-									alt="{platformRate.platform.name} icon"
-									class="h-12 mr-2 rounded-full"
-								/>
-							</a>
-							<a
-								href={platformRate.platform.link}
-								class="text-gray-600 dark:text-gray-300 hover:underline text-lg"
-							>
-								{platformRate.platform.name}
-							</a>
-						</div>
-					</div>
-
-					<div class="flex-1 min-w-full md:min-w-[30%]">
-						<div class="text-left">
-							<span class="block text-sm">{convertAmount} {convertFromInput.toUpperCase()} =</span
-							>
-							<span class="block text-4xl text-gray-800 dark:text-gray-200 py-3">
-								{Money.formatMoney(platformRate.will_receive)}
-								{currencyTo?.symbol || convertTo}
-							</span>
-							<span class="block text-sm">
-								<span class="pr-3">
-									Indicative Rate 
-								</span>
-								1 {convertFromInput.toUpperCase()} =
-								{Money.formatMoney(platformRate.rate, 2)}
-								{currencyTo?.symbol || convertTo}
-							</span>
-						</div>
-					</div>
-
+			{#each convertResult as result, i}
+				{#if result.rate.price_sell > 0}
 					<div
-						class="flex-1 min-w-full md:min-w-[30%] md:text-right md:flex md:items-center md:justify-end"
+						class="flex flex-wrap gap-4 px-8 py-4 w-full bg-white dark:bg-gray-900 shadow-md rounded-lg mb-8 relative overflow-hidden border {i === 0 ? 'border-gray-800 dark:border-light' : 'border-transparent'}"
 					>
-						<div>
-							<a
-								href={platformRate.platform.link}
-								class="block button w-full md:inline-block md:w-auto mr-4 mb-4 text-center"
-							>
-								Send money now
-							</a>
+						<div class="flex-1 min-w-full md:min-w-[30%] md:flex md:items-center md:justify-start">
+							<div class="flex justify-start items-center">
+								<a href={result.changer.link}>
+									<img
+										src="/icons/svg/{result.changer.code}.svg"
+										alt="{result.changer.name} icon"
+										class="h-12 mr-2 rounded-full"
+									/>
+								</a>
+								<a
+									href={result.changer.link}
+									class="text-gray-600 dark:text-gray-300 hover:underline text-lg"
+								>
+									{result.changer.name}
+								</a>
+							</div>
+						</div>
+
+						<div class="flex-1 min-w-full md:min-w-[30%]">
+							<div class="text-left">
+								<span class="block text-sm">{convertAmount} {convertFromInput.toUpperCase()} =</span
+								>
+								<span class="block text-4xl text-gray-800 dark:text-gray-200 py-3">
+									{Money.formatMoney(result.rate.price_sell * convertAmount, 2)}
+									{currencyTo?.symbol || convertTo}
+								</span>
+								<span class="block text-sm">
+									<span class="pr-3"> Indicative Rate </span>
+									1 {convertFromInput.toUpperCase()} =
+									{Money.formatMoney(result.rate.price_sell, 2)}
+									{currencyTo?.symbol || convertTo}
+								</span>
+							</div>
+						</div>
+
+						<div
+							class="flex-1 min-w-full md:min-w-[30%] md:text-right md:flex md:items-center md:justify-end"
+						>
+							<div>
+								<a
+									href={result.changer.link}
+									class="block button w-full md:inline-block md:w-auto mr-4 mb-4 text-center"
+								>
+									Send money now
+								</a>
+								{#if i === 0}
+								    <span class="absolute top-0 right-0 bg-gray-800 dark:bg-light text-white dark:text-dark text-xs px-2 py-1">
+									    Best rate
+								    </span>
+								{/if}
+							</div>
 						</div>
 					</div>
-				</div>
+				{/if}
 			{/each}
 		{/if}
 	</div>
 {/if}
+
+<div class="container dark:text-gray-300">
+	<span class="block mb-4">
+		<h2 class="text-2xl mb-4">
+			All you need to know about {currencyFrom.name} to {currencyTo.name} money transfers
+		</h2>
+		<p>
+			Easily compare money transfer providers in one place to send
+			{currencyFrom.name} to {countryToName}. Send money overseas to your loved ones by comparing {currencyFrom.name}
+			({currencyFrom.code.toUpperCase()}) to {currencyTo.name}
+			({currencyTo.code.toUpperCase()}) remittance exchange rates. Transfer online or send cash based on
+			services offered by these providers.
+		</p>
+
+		<p class="mt-4">
+			Monierate compared {Object.entries(pairChangers).length} money transfer operators to get you the
+			best FX rates to send {currencyFrom.name} to {countryToName}.
+		</p>
+
+		<p class="mt-4">
+			The best rate to send {currencyFrom.name} for your loved ones in {countryToName}
+			is currently offered by Western Union.
+		</p>
+	</span>
+</div>
+
+<div class="container mt-4">
+	<h3 class="text-2xl font-bold mb-4">
+		Step by step guide to send {currencyFrom.name} to {countryToName}
+	</h3>
+	<p class="mb-4">Follow the below easy steps to send {currencyFrom.name} to {countryToName}.</p>
+	<ul class="pl-2">
+		<li class="text-sm mb-4">
+			If you are sending money for the first time with a provider, register an account with them.
+			You will likely get a validation email, and optionally a validation text on your mobile as
+			well. This ensures that it is indeed you who is creating your account.
+		</li>
+		<li class="text-sm mb-4">
+			You will also need to provide your national ID with a photo, and proof of address. Providing
+			this information ensures the security of your account and helps in fraud prevention.
+		</li>
+		<li class="text-sm mb-4">
+			Add your payment method - this is how you pay for your transfer. Generally, you would want to
+			use your international bank account to fund your transaction.
+		</li>
+		<li class="text-sm mb-4">
+			Add your recipient - provide details about who will receive the funds (can also be your own
+			account in {countryToName}).
+		</li>
+		<li class="text-sm mb-4">
+			Specify delivery method - specify how the recipient will get the proceeds. Choosing a bank
+			account is usually the best, if one is available.
+		</li>
+		<li class="text-sm mb-4">Add the transfer amount and start the transaction.</li>
+	</ul>
+
+	<p class="mb-4">
+		The provider will then work on your {currencyFrom.code.toUpperCase()} to {currencyTo.code.toUpperCase()}
+		remittance, and you should not have any additional action to take. Keep an eye on your email inbox
+		as you should get notified about the progress of your transaction.
+	</p>
+	<p class="mb-4">
+		Whilst it's fairly straightforward to make an actual foreign exchange transaction online, the
+		harder part may be choosing the right company for your overseas bank transfer. This is where you
+		can rely on Monierate to find the best rate to send {currencyFrom.name} to {countryToName}.
+	</p>
+</div>
+
+<div class="container py-10 px-5">
+	<h3 class="text-2xl font-bold mb-4">Frequently asked question?</h3>
+
+	<div class="border-b border-gray-700">
+		<button
+			on:click={() => toggleQuestion(1)}
+			class="w-full text-left py-4 flex justify-between items-center"
+		>
+			<span class="text-xl font-medium"
+				>What's the best way to send {currencyFrom.name} to {countryToName}?</span
+			>
+
+			<svg
+				class={`w-6 h-6 transition-transform duration-300 ease-in-out ${
+					openQuestion === 1 ? 'rotate-180' : ''
+				}`}
+				xmlns="http://www.w3.org/2000/svg"
+				fill="none"
+				viewBox="0 0 24 24"
+				stroke="currentColor"
+			>
+				<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+			</svg>
+		</button>
+
+		<div
+			class={`overflow-hidden transition-all duration-500 ease-in-out ${
+				openQuestion === 1 ? 'max-h-screen py-4' : 'max-h-0'
+			}`}
+		>
+			<p class="px-4 text-gray-600 dark:text-gray-400">
+				There are many good choices when it comes to sending {currencyFrom.name} to {countryToName}.
+				The Monierate remittance comparison engine compares many different remittance service
+				providers to give you several options. You can easily compare these providers to get the
+				best remit rates on your {currencyFrom.name} ({currencyFrom.code.toUpperCase()}) to
+				{currencyTo.name} ({currencyTo.code.toUpperCase()}) money transfers.
+			</p>
+		</div>
+	</div>
+
+	<div class="border-b border-gray-700">
+		<button
+			on:click={() => toggleQuestion(2)}
+			class="w-full text-left py-4 flex justify-between items-center"
+		>
+			<span class="text-xl font-medium"
+				>How to get the best rate to transfer {currencyFrom.name} to {currencyTo.name}?</span
+			>
+
+			<svg
+				class={`w-6 h-6 transition-transform duration-300 ease-in-out ${
+					openQuestion === 2 ? 'rotate-180' : ''
+				}`}
+				xmlns="http://www.w3.org/2000/svg"
+				fill="none"
+				viewBox="0 0 24 24"
+				stroke="currentColor"
+			>
+				<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+			</svg>
+		</button>
+
+		<div
+			class={`overflow-hidden transition-all duration-500 ease-in-out ${
+				openQuestion === 2 ? 'max-h-screen py-4' : 'max-h-0'
+			}`}
+		>
+			<p class="px-4 text-gray-600 dark:text-gray-400">
+				When sending money overseas, there are a lot of options at your disposal these days. All of
+				them come with various caveats that may include exchange rates, fees, transaction processing
+				time, security and privacy, and so on. Monierate helps you to decide which foreign exchange
+				operator to pick for your {currencyFrom.code.toUpperCase()} to {currencyTo.code.toUpperCase()}
+				money transfer.
+			</p>
+		</div>
+	</div>
+
+	<div class="border-b border-gray-700">
+		<button
+			on:click={() => toggleQuestion(5)}
+			class="w-full text-left py-4 flex justify-between items-center"
+		>
+			<span class="text-xl font-medium"
+				>How to send {currencyFrom.code.toUpperCase()} to {countryToName} fast?</span
+			>
+
+			<svg
+				class={`w-6 h-6 transition-transform duration-300 ease-in-out ${
+					openQuestion === 5 ? 'rotate-180' : ''
+				}`}
+				xmlns="http://www.w3.org/2000/svg"
+				fill="none"
+				viewBox="0 0 24 24"
+				stroke="currentColor"
+			>
+				<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+			</svg>
+		</button>
+
+		<div
+			class={`overflow-hidden transition-all duration-500 ease-in-out ${
+				openQuestion === 5 ? 'max-h-screen py-4' : 'max-h-0'
+			}`}
+		>
+			<p class="px-4 text-gray-600 dark:text-gray-400 mb-4">
+				The speed of your {currencyFrom.name} to {currencyTo.name} funds transfer will depend on various
+				factors like which provider you use, how you pay for your transaction, how you choose for your
+				recipient to get the funds, etc. You will, therefore, want to compare various options to see
+				which one suits your needs best.
+			</p>
+			<p class="px-4 text-gray-600 dark:text-gray-400 mb-4">
+				One possible approach that will help you send money fast to {countryToName} is to rely on cash
+				as payment as well as delivery method. This would mean paying for your transfer with cash, most
+				likely by walking into your provider's office or agent location. Similarly, your recipient could
+				also pick up cash in {countryToName} if they have a pickup location nearby. Dealing with cash
+				on both sides will eliminate bank transfers in the middle which generally take longer as money
+				has to move between banks.
+			</p>
+			<p class="px-4 text-gray-600 dark:text-gray-400">
+				One drawback of cash transfers is the need to go to physical drop off and pickup locations,
+				and the inherent risk involved in carrying cash, especially for larger amounts. Another one
+				is that cash transfers generally involve lower exchange rates as compared to online
+				transfers. If you do not want to handle cash for the aforementioned reasons, the next
+				fastest transfers would be to payout {currencyTo.name} into a mobile wallet, or even do a mobile
+				airtime popup. These methods would be faster than international bank to {countryToName} bank
+				transfer.
+			</p>
+		</div>
+	</div>
+
+	<div class="border-b border-gray-700">
+		<button
+			on:click={() => toggleQuestion(6)}
+			class="w-full text-left py-4 flex justify-between items-center"
+		>
+			<span class="text-xl font-medium"
+				>Which are the best money transfer companies to transfer {currencyFrom.name} to {countryToName}?</span
+			>
+
+			<svg
+				class={`w-6 h-6 transition-transform duration-300 ease-in-out ${
+					openQuestion === 6 ? 'rotate-180' : ''
+				}`}
+				xmlns="http://www.w3.org/2000/svg"
+				fill="none"
+				viewBox="0 0 24 24"
+				stroke="currentColor"
+			>
+				<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+			</svg>
+		</button>
+
+		<div
+			class={`overflow-hidden transition-all duration-500 ease-in-out ${
+				openQuestion === 6 ? 'max-h-screen py-4' : 'max-h-0'
+			}`}
+		>
+			<p class="px-4 text-gray-600 dark:text-gray-400 mb-4">
+				Since the {currencyFrom.name} to {currencyTo.name} money transfer ecosystem has so many players
+				in it, selecting the right company might not be that simple. You have so many to choose from
+				- established organizations like Western Union and MoneyGram to multi currency bank accounts
+				to up and coming Fintech companies. Then, there is always your local bank that may also be able
+				to send money to {countryToName}. With all these possibilities staring at you, it can be
+				difficult to pick the company to give your business to.
+			</p>
+			<p class="px-4 text-gray-600 dark:text-gray-400">
+				The Monierate remittance engine will certainly help you to chart a path forward. Once you
+				have selected your source and destination countries, we compare numerous companies to
+				present you with an easy to digest comparison table. Here, you can easily see which
+				companies meet your unique needs.
+			</p>
+		</div>
+	</div>
+</div>
 
 <style>
 	.label {
