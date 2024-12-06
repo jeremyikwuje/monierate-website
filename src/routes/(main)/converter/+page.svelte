@@ -44,6 +44,7 @@
 	var currencyTo: any = {};
 	var updated_at = '';
 	let currentView: string = CurrentView.CONVERT;
+	let userCountry: string = '';
 
 	var moreConversions: any = {
 		from: [],
@@ -52,7 +53,10 @@
 
 	function convertNow() {
 		const from = convertFrom.toLowerCase();
-		const to = convertTo.toLowerCase();
+		const to =
+			currentView === CurrentView.SEND
+				? countriesToCurrencies[convertTo.toUpperCase()].toLowerCase()
+				: convertTo.toLowerCase();
 
 		let rate = 1; // 1:1
 		let rate_inverse = 1;
@@ -93,10 +97,8 @@
 		convertResult.rate_inverse = rate_inverse;
 		convertResult.conversion = round(chain(rate).multiply(convertAmount).done(), 8);
 
-		let getTo =
-			currentView === CurrentView.SEND ? countriesToCurrencies[to.toUpperCase()].toLowerCase() : to;
 		currencyFrom = currencies.find((c) => c.code === from);
-		currencyTo = currencies.find((c) => c.code === getTo);
+		currencyTo = currencies.find((c) => c.code === to);
 
 		getMoreConversions();
 	}
@@ -163,7 +165,6 @@
 			currentView = currentViewData;
 			await setUserLocation();
 		}
-
 	}
 
 	function viewAction() {
@@ -219,7 +220,7 @@
 	}
 
 	async function setUserLocation() {
-		let userCountry = await getUserCountry();
+		userCountry = await getUserCountry();
 		if (userCountry) {
 			if (currentView === CurrentView.SEND) {
 				convertTo = userCountry ?? convertTo;
@@ -563,7 +564,14 @@
 					? countriesToCurrencies[convertTo.toUpperCase()]
 					: convertTo} rates
 			</h2>
-			<ChangerRates rates={pair_rates} {changers} from={currencyFrom} to={currencyTo} amount={convertAmount} />
+			<ChangerRates
+				rates={pair_rates}
+				{changers}
+				from={currencyFrom}
+				to={currencyTo}
+				amount={convertAmount}
+				{userCountry}
+			/>
 		</div>
 	{/if}
 
@@ -582,7 +590,11 @@
 						<thead>
 							<tr>
 								<th class="py-4">{convertFrom}</th>
-								<th class="py-4">{convertTo}</th>
+								<th class="py-4"
+									>{currentView === CurrentView.SEND
+										? countriesToCurrencies[convertTo.toUpperCase()]
+										: convertTo}</th
+								>
 							</tr>
 						</thead>
 						<tbody>
@@ -599,7 +611,9 @@
 									</td>
 									<td class="py-2.5">
 										{Money.format(convert.conversion)}
-										{convertTo}
+										{currentView === CurrentView.SEND
+											? countriesToCurrencies[convertTo.toUpperCase()]
+											: convertTo}
 									</td>
 								</tr>
 							{/each}
@@ -619,7 +633,11 @@
 					<table class="w-full text-center px-8">
 						<thead class="">
 							<tr>
-								<th class="py-4">{convertTo}</th>
+								<th class="py-4"
+									>{currentView === CurrentView.SEND
+										? countriesToCurrencies[convertTo.toUpperCase()]
+										: convertTo}</th
+								>
 								<th class="py-4">{convertFrom}</th>
 							</tr>
 						</thead>
@@ -632,7 +650,9 @@
 											href="/converter?Amount={convert.amount}&From={convertTo}&To={convertFrom}"
 										>
 											{Money.format(convert.amount)}
-											{convertTo}
+											{currentView === CurrentView.SEND
+												? countriesToCurrencies[convertTo.toUpperCase()]
+												: convertTo}
 										</a>
 									</td>
 									<td class="py-2.5">
@@ -658,7 +678,11 @@
 				</span>
 			</div>
 			<div class="shadow-lg md:w-[45%] p-8 bg-white dark:bg-gray-900">
-				<h2 class="text-2xl">{convertTo} - {currencyTo.name}</h2>
+				<h2 class="text-2xl">
+					{currentView === CurrentView.SEND
+						? countriesToCurrencies[convertTo.toUpperCase()]
+						: convertTo} - {currencyTo.name}
+				</h2>
 				<span class="block mt-6">
 					{currencyTo.description}
 				</span>

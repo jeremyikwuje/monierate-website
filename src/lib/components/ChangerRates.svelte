@@ -30,6 +30,7 @@
 	export let from: any;
 	export let to: any;
 	export let amount: any;
+	export let userCountry: string;
 
 	let isLoading = true;
 	let hasResults = false;
@@ -216,7 +217,7 @@
 					{/if}
 					<div class="dark:border-gray-700 border-t text-center">
 						<a
-							href="/send"
+							href="/send/{from.code}-to-{userCountry ? userCountry.toLowerCase() : 'ng'}-best-rate"
 							class="w-full mt-4 inline-block text-sm text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300"
 						>
 							See More
@@ -286,7 +287,7 @@
 					{/if}
 					<div class="dark:border-gray-700 border-t text-center">
 						<a
-							href="/buy"
+							href="/buy/{from.code}-with-{to.code}-best-buying-rate"
 							class="w-full mt-4 inline-block text-sm text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300"
 						>
 							See More
@@ -356,7 +357,7 @@
 					{/if}
 					<div class="dark:border-gray-700 border-t text-center">
 						<a
-							href="/sell"
+							href="/sell/{from.code}-get-{to.code}-best-selling-rate"
 							class="w-full mt-4 inline-block text-sm text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300"
 						>
 							See More
@@ -426,7 +427,7 @@
 					{/if}
 					<div class="dark:border-gray-700 border-t text-center">
 						<a
-							href="/card"
+							href="/card/{from.code}-{to.code}-best-funding-rate"
 							class="w-full mt-4 inline-block text-sm text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300"
 						>
 							See More
