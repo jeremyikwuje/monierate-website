@@ -376,7 +376,7 @@
 						>
 							<div>
 								<a
-									href="/converter/{result.changer.code}?Amount={convertAmount}&From={currencyFrom.code.toUpperCase()}&To={currencyTo.code.toUpperCase()}"
+									href="{result.changer.link}"
 									class="block button w-full md:inline-block md:w-auto mr-4 mb-4 text-center"
 								>
 									Fund {convertFrom} virtual card now
