@@ -22,7 +22,7 @@
 
 				<picture>
 
-                    <source srcset="/media/banners/cedar-converter" type="image/avif">    
+                    <source srcset="/media/banners/cedar-converter.avif" type="image/avif">    
                     <source srcset="/media/banners/cedar-converter.gif" type="image/gif">
 
 					<img
