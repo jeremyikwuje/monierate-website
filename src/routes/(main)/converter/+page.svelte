@@ -236,7 +236,7 @@
 		await setUserLocation();
 	});
 
-	//convertNow();
+	convertNow();
 </script>
 
 <svelte:head>
