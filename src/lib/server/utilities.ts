@@ -45,7 +45,7 @@ function toBase64(str: any): any {
 export function getEndpointV1(endpoint: string)
 {
   const server = env.SERVER
-  let apiUrl = env.API_URL_V1 || 'https://data.monierate.com';
+  let apiUrl = env.API_URL_V1 || 'https://monierate-api.onrender.com';
   if (server == 'LOCAL') {
     apiUrl = 'http://localhost:3000';
   }
