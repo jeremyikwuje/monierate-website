@@ -102,6 +102,7 @@
 				(rate) =>
 					rate.changer_code !== 'market' &&
 					rate.changer_code !== 'binance' &&
+					rate.changer_code !== 'paypal' &&
 					(rate.price_buy > 0 || rate.price_sell > 0)
 			)
 			.map((rate) => ({
@@ -133,7 +134,7 @@
 					sendingResult = findSupportedPlatforms(
 						providers,
 						groupRates.remittance,
-						false,
+						true,
 						false
 					).slice(0, 5);
 				}
