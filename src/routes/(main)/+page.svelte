@@ -295,7 +295,7 @@
 									class="flex items-center"
 									title="{changer.name} dollar to naira rate."
 								>
-									<span class="changer-icon">
+									<span class="changer-icon-sm">
 										<picture>
 											<source srcset="/icons/svg/{rate.changer_code}.svg" type="image/svg+xml" />
 											<source srcset="/icons/png/{rate.changer_code}.png" type="image/png" />
@@ -345,7 +345,7 @@
 									class="flex items-center"
 									title="{changer.name} dollar to naira rate."
 								>
-									<span class="changer-icon">
+									<span class="changer-icon-sm">
 										<picture>
 											<source srcset="/icons/svg/{rate.changer_code}.svg" type="image/svg+xml" />
 											<source srcset="/icons/png/{rate.changer_code}.png" type="image/png" />
@@ -396,7 +396,7 @@
 									class="flex items-center"
 									title="{changer.name} dollar to naira rate."
 								>
-									<span class="changer-icon">
+									<span class="changer-icon-sm">
 										<picture>
 											<source srcset="/icons/svg/{rate.changer_code}.svg" type="image/svg+xml" />
 											<source srcset="/icons/png/{rate.changer_code}.png" type="image/png" />
@@ -446,7 +446,7 @@
 									class="flex items-center"
 									title="{changer.name} dollar to naira rate."
 								>
-									<span class="changer-icon">
+									<span class="changer-icon-sm">
 										<picture>
 											<source srcset="/icons/svg/{rate.changer_code}.svg" type="image/svg+xml" />
 											<source srcset="/icons/png/{rate.changer_code}.png" type="image/png" />
@@ -721,6 +721,9 @@
 	}
 	.changer-icon {
 		@apply bg-transparent border border-black rounded-full w-[24px] h-[24px] mr-2;
+	}
+	.changer-icon-sm {
+		@apply bg-transparent border border-black rounded-full w-[16px] h-[16px] mr-2;
 	}
 	.changer-title {
 		@apply font-semibold text-sm md:text-lg whitespace-nowrap text-gray-800 dark:text-gray-300;
