@@ -283,7 +283,7 @@
 				>
 					<div class="flex justify-between items-center mb-4">
 						<span class="block text-[0.8em] md:text-[1em] font-semibold text-gray-800 dark:text-white">
-							🔥Best Buying Rate
+							🔥 Best Buying Rate
 						</span>
 						<a href="/buy/usd-with-ngn-best-buying-rate" class="text-sm">See more</a>
 					</div>
@@ -333,7 +333,7 @@
 				>
 					<div class="flex justify-between items-center mb-4">
 						<span class="block text-[0.8em] md:text-[1em] font-semibold text-gray-800 dark:text-white">
-							🔥Best Selling Rate
+							🔥 Best Selling Rate
 						</span>
 						<a href="/sell/usd-get-ngn-best-selling-rate" class="text-sm">See more</a>
 					</div>
@@ -383,7 +383,7 @@
 				>
 					<div class="flex justify-between items-center mb-4">
 						<span class="block text-[0.8em] md:text-[1em] font-semibold text-gray-800 dark:text-white">
-							🔥Best Sending Rate
+							🔥 Best Sending Rate
 						</span>
 						<a href="/send/usd-to-ng-best-rate" class="text-sm">See more</a>
 					</div>
@@ -434,7 +434,7 @@
 				>
 					<div class="flex justify-between items-center mb-4">
 						<span class="block text-[0.8em] md:text-[1em] font-semibold text-gray-800 dark:text-white">
-							🔥Best Card Rate
+							🔥 Best Card Rate
 						</span>
 						<a href="/card/usd-ngn-best-funding-rate" class="text-sm">See more</a>
 					</div>
