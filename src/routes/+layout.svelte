@@ -152,11 +152,8 @@ function hidePromotionBar() {
 
 
 <header class="mb-0 mt-16">
-    <!-- <div class="bg-top-banner w-full py-2 text-center text-white fixed z-20 top-0 left-0">
-       Best Dollar App <a href="https://tinyurl.com/beansAppTopBanner" class="underline font-extrabold text-white">Get Now</a>
-    </div> -->
     <nav class="bg-white w-full z-20 top-0 left-0 border-b border-gray-200 dark:bg-gray-900 dark:border-none">
-        <div class="w-[95%] md:max-w-[1200px] flex flex-wrap items-center justify-between mx-auto p-4">
+        <div class="w-[95%] md:max-w-[1500px] flex flex-wrap items-center justify-between mx-auto p-4">
             <a href="/" class="flex items-center">
                 <img src="/monierate.png" width="142px" height="24px" class="block dark:hidden h-auto w-[142px] mr-3" alt="Monierate Logo" loading="lazy">
                 <img alt="Monierate Logo" width="142px" height="24px" class="hidden dark:block h-auto w-[142px] mr-3" src="/monierate-logo-white.png" loading="lazy">
@@ -202,9 +199,9 @@ function hidePromotionBar() {
 </header>
 
 <div class="bg-white w-full py-2 whitespace-nowrap overflow-x-auto no-scrollbar dark:bg-gray-800 dark:border-gray-600 border-b border-gray-100">
-    <div class="container">
+    <div class="w-[95%] md:max-w-[1500px] mx-auto px-4">
         {#each Object.entries(top_pairs) as [code, value], i} 
-            <a data-sveltekit-reload href="/converter/?From={value.from}&To={value.to}&Amount=1" class="mr-2 text-gray-900 dark:text-gray-300 mr-6 text-[90%] md:text-base">
+            <a data-sveltekit-reload href="/converter/?From={value.from}&To={value.to}&Amount=1" class="text-gray-900 dark:text-gray-300 mr-6 text-[90%] md:text-base">
                 <span class="font-medium mr-[2px]">{value.name}</span>
                 <span class="font-thin mr-[2px]">{Money.format(value.price, 2)}</span>
                 <!-- display 24hr price change in green or red -->
@@ -225,7 +222,7 @@ function hidePromotionBar() {
                 {/if}
             </a>
         {/each}
-    </div>
+    </div> 
 </div>
 
 {#if path != ''}

@@ -22,6 +22,8 @@ export const load: PageServerLoad = async ({ fetch, params, url }) => {
             Amount: urlParams.get('Amount') || 1
         };
 
+        console.log(convert);
+
         const changers = await get_changers();
         const currencies = await get_currencies();
         const countries = Countries as CountriesMap;
