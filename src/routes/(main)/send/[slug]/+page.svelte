@@ -398,7 +398,7 @@
 						>
 							<div>
 								<a
-									href="{result.changer.link}"
+									href="{result.changer.link}?utm_source=monierate&utm_medium=website&utm_campaign=monierate"
 									class="block button w-full md:inline-block md:w-auto mr-4 mb-4 text-center"
 								>
 									Send money now
