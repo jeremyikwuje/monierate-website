@@ -43,7 +43,6 @@ Before we get into Nala’s journey so far, here's a snapshot of their core info
 | Competitors       | Afriex, SendSprint, LemFi, TransferGo                                                                         |
 | Contact email     | <mamanala@nala.com>                                                                                           |
 
-
 ## What has changed since 2018?
 
 In 2018, NALA launched as a personal finance app, helping users manage their money in Tanzania and Uganda. With over 250,000 users in just these two countries, it built a strong foundation among a community that understood and embraced the vision behind mobile money.
@@ -60,13 +59,11 @@ But NALA didn’t just stop at reaching more people. It introduced innovative fe
 
 In July 2024, [NALA raised $40 million in Series A funding](https://techcrunch.com/2024/07/09/nala-series-a/), bringing its total funding to over $50 million. This funding allowed the company to build new payment systems across Africa’s 54 countries to make sending money feel as seamless as transferring it within a single country.
 
-
 ## How does NALA make money?
 
 The Tanzanian fintech has gained attention for its fairer fee structure, which makes you wonder how it manages to generate enough revenue to sustain its services. Serving a diverse range of customers from diaspora communities, businesses, mobile money users, and everyday consumers, NALA’s revenue model must strike a balance between accessibility and sustainability. 
 
 So, to understand its revenue approach better, let’s break down a potential framework the business could be utilizing:
-
 
 ### 1. The "Freemium" model:
 
@@ -74,20 +71,17 @@ Nala attracts users by offering free peer-to-peer transfers within certain limit
 
 While there are no upfront transfer fees (or minimal ones for bank transfers), Nala makes money through the exchange rate. They add a markup to the mid-market rate, essentially embedding a fee within the conversion itself. 
 
-
 ### 2. Partnerships and Commissions:
 
 Nala partners with other mobile money companies and while the details are not explicitly stated, they likely earn commissions or referral fees through these partnerships.
 
 This partnership model could extend to other financial services, such as insurance, loans, or investment products, opening up further revenue streams in the future.
 
-
 ### 3. Business-focused services:
 
 They also offer dedicated services for businesses operating in or with Africa. These services likely come with transaction fees or subscription models, generating a significant revenue stream.
 
 Nala’s Rafiki API (Application Programming Interface) allows businesses to integrate Nala's payment solutions into their own platforms, which is another lucrative revenue source, similar to Chipper Cash's API strategy.
-
 
 ### 4. Value-added services:
 
@@ -102,11 +96,8 @@ Additionally, Nala has a limited edition merch store that offers exclusive brand
 While specific figures are not publicly available, we can estimate potential revenue based on transaction volumes and fee structures:
 
 - **Exchange Rate Markup:** If Nala processes $1 million in transfers daily with an average markup of 1.5%, that translates to $15,000 in revenue per day.
-
 - **Business Transfers:** Assuming a 1% fee on business transactions, processing $500,000 daily would generate $5,000 in revenue.
-
 - **Bill Payments and Goods Purchases:** Even small fees on these transactions can accumulate significantly with high volume.
-
 
 ## What’s next?
 
