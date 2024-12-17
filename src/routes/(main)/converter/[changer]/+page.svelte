@@ -165,11 +165,11 @@ convertNow();
             <a href="https://bit.ly/3MDsvBi" target="_blank">
                 <picture>
     
-                    <source srcset="/media/banners/cedar-converter.avif" type="image/avif">    
-                    <source srcset="/media/banners/cedar-converter.gif" type="image/gif">
+                    <source srcset="/media/banners/cedar-converter-1.avif" type="image/avif">    
+                    <source srcset="/media/banners/cedar-converter-1.gif" type="image/gif">
     
                     <img 
-                        src="/media/banners/cedar-converter.avif"
+                        src="/media/banners/cedar-converter-1.avif"
                         alt="Cedar Money"
                         width="800px"
                         height="114px"
