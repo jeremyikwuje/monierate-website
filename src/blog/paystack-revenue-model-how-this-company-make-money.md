@@ -30,8 +30,8 @@ To provide a comprehensive overview of Paystack, here are some key details about
 
 |                      |                                                                            |
 | -------------------- | -------------------------------------------------------------------------- |
-| **Name**             | **Grey Finance**                                                           |
-| Website              | https\://paystack.com                                                      |
+| **Name**             | **Paystack**                                                           |
+| Website              | https://paystack.com                                                      |
 | Founding date        | January 2015                                                               |
 | Founder(s)           | Shola Akinlade and Ezra Olubi                                              |
 | Employees            | Approximately 200                                                          |
@@ -40,7 +40,7 @@ To provide a comprehensive overview of Paystack, here are some key details about
 | Business Type        | Online and offline payments                                                |
 | Key Services         | Payment processing, fraud detection, payment gateway, API for developers   |
 | Competitors          | Flutterwave, Interswitch, Monnify, Squad                                   |
-| Contact email        | hello\@paystack.com                                                        |
+| Contact email        | hello@paystack.com                                                        |
 
 
 ## The journey since 2015
@@ -112,8 +112,6 @@ Here's a breakdown of how Paystack generates revenue:
 ### Hypothetical Revenue Breakdown
 
 We created a hypothetical breakdown of Paystack's estimated monthly revenue from local transactions. Local transactions refer to Naira payments processed by Paystack for merchants on its platform, regardless of the channel used.
-
-\
 
 
 |            |                       |         |                   |                    |                  |
