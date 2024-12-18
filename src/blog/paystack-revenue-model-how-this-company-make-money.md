@@ -39,7 +39,6 @@ To provide a comprehensive overview of Paystack, here are some key details about
 | Industry             | Finance Services                                                           |
 | Business Type        | Online and offline payments                                                |
 | Key Services         | Payment processing, fraud detection, payment gateway, API for developers   |
-| Estimated Valuation  | TBD                                                                        |
 | Competitors          | Flutterwave, Interswitch, Monnify, Squad                                   |
 | Contact email        | hello\@paystack.com                                                        |
 
