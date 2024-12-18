@@ -22,11 +22,11 @@
 
 				<picture>
 
-                    <source srcset="/media/banners/cedar-homepage-1.avif" type="image/avif">    
-                    <source srcset="/media/banners/cedar-homepage-1.gif" type="image/gif">
+                    <source srcset="/media/banners/cedar-homepage-2.avif" type="image/avif">    
+                    <source srcset="/media/banners/cedar-homepage-2.gif" type="image/gif">
 
 					<img
-						src="/media/banners/cedar-homepage-1.avif"
+						src="/media/banners/cedar-homepage-2.avif"
 						alt="Cedar Money"
 						width="800px"
 						height="114px"

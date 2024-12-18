@@ -21,11 +21,11 @@
 			<a href="https://bit.ly/3zfhZgz" target="_blank">
 				<picture>
 
-                    <source srcset="/media/banners/cedar-converter-1.avif" type="image/avif">    
-                    <source srcset="/media/banners/cedar-converter-1.gif" type="image/gif">
+                    <source srcset="/media/banners/cedar-converter-2.avif" type="image/avif">    
+                    <source srcset="/media/banners/cedar-converter-2.gif" type="image/gif">
 
 					<img
-						src="/media/banners/cedar-converter-1.avif"
+						src="/media/banners/cedar-converter-2.avif"
 						alt="Cedar Money"
 						width="600"
 						height="114px"
