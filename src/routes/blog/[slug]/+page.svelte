@@ -39,7 +39,7 @@
 	<div class="flex justify-between mx-auto max-w-screen-xl">
 		<article id="entry" class="mx-auto w-full max-w-2xl format text-gray-800 dark:text-gray-300 format-sm sm:format-base lg:format-lg format-primary dark:format-invert lg:w-[700px]">
 			<!-- Post -->
-			<div class="post-content">
+			<div class="post-content overflow-x-auto">
 				<svelte:component this={content} />
 			</div>
 		</article>

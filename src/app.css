@@ -91,6 +91,8 @@
     .notification {
         @apply block bg-white shadow border border-gray-800 p-3 shadow-lg text-black;
     }
+
+    .format tab
 }
 
 @layer utilities {
