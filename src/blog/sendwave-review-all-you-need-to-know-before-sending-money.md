@@ -17,28 +17,20 @@ But first, if you want to make the most of your transfer, [Monierate’s ](https
 
 For those ready to explore Sendwave, this guide breaks down everything you need to know; features, fees, and reviews, mostly answering common questions to help you get started.
 
-
 ##### Here’s what’s great about Sendwave:
 
 - Competitive exchange rates.
-
 - Faster transfer times.
-
 - No transfer fees.
-
 - Easy signup.
-
 
 ##### For the not-so-great:
 
 - No PayPal or credit options yet.
-
 - Only supports mobile transfers. 
-
 - Transfer limits may not be suitable for users sending larger amounts.
 
-![Sendwave Rates](https://ik.imagekit.io/monierate/Blog/product/sendwave-rates.jpg) 
-
+![Sendwave Rates](https://ik.imagekit.io/monierate/Blog/product/sendwave-rates.jpg)
 
 ## How does Sendwave work? 
 
@@ -49,37 +41,27 @@ The app ensures your transactions are processed fast and reliably, making it a c
 **Sendwave’s core services include:**
 
 1. **International payments:** Easily send and receive payments in multiple currencies with competitive conversion rates.
-
 2. **Bank transfers:** Direct transfers to bank accounts in supported countries.
-
 3. **Direct-to-card transfers:** Funds are sent directly to the recipient’s card.
-
 4. **E-wallet payments**: Transfers to mobile wallets like bKash, Wave Mobile Money, and GCash.
-
 5. **Cash pickup:** Arrange for recipients to receive cash in USD at designated locations using a voucher code and valid ID.
-
 
 #### Who uses Sendwave?
 
 Sendwave caters to:
 
 - Small business owners and entrepreneurs paying suppliers, employees, or partners in different countries.
-
 - Travellers transferring funds to their destination country.
-
 - Families sending financial assistance to loved ones abroad.
-
 - Non-profits supporting community development projects with donations.
 
  Now, let’s explore the countries Sendwave operates in.
-
 
 #### Eligible Countries and Currencies
 
 At this time, [Sendwave](https://www.sendwave.com/en) enables international remittances from regions like the United States, Canada, the UK, and several European countries, supporting transactions in British Pounds (GBP), Canadian Dollars (CAD), Euros (EUR), and US Dollars (USD).
 
 Recipients can receive funds in destinations across Asia, Africa, and Latin America, including Ghana, Nigeria, Kenya, the Philippines, Vietnam, and Peru. With over 250 sending and receiving combinations and 88 currency pairings, Sendwave offers extensive coverage for global money transfers. 
-
 
 #### Getting started on Sendwave
 
@@ -108,20 +90,16 @@ Whether you’re sending money to loved ones or funding your own account for tra
 This varies based on the delivery method available in the recipient's country. Here’s how it works:
 
 - **Cash Pickup:** The sender provides a unique voucher code and one-time password via SMS. Take these along with a valid ID to a designated cash pickup location, such as a partner bank or agent, to collect your funds. Currently, this service is available in Senegal.
-
 - **Mobile Money:** Transfers are sent directly to mobile wallets like M-Pesa, MTN, or Airtel, with an SMS notification confirming the deposit. This method is supported in countries such as Kenya, Uganda, Tanzania, Ghana, Senegal, and Liberia, offering instant access to funds.
-
 - **Bank Deposits:** Funds are transferred directly into a bank account, usually within 1-3 business days. This option is available for recipients in Kenya, Uganda, and Nigeria, with banks notifying customers once the money arrives.
 
 Delivery methods depend on the recipient’s location. Be sure to check which options are available in your country before initiating a transfer.
-
 
 ## Using Sendwave: Payment methods and Transfer speeds
 
 To send money with Sendwave, you’ll need to link your bank account through Trustly and confirm your ID with basic details like your name and address. Once that’s done, you’re good to go with these payment options:
 
 - **Bank Account**: Link your current account directly for transfers.
-
 - **Debit Card**: Use your Visa or Mastercard debit card.
 
 As for how fast your money gets there, it really depends on how you’re sending it:
@@ -132,7 +110,6 @@ It’s always a good idea to double-check the delivery times before sending, esp
 
 ![Sendwave Payment Method](https://ik.imagekit.io/monierate/Blog/product/sendsprint-payment-methods.jpg)
 
-
 ## Fees
 
 Sendwave keeps fees simple and transparent. In most markets, there are no fees—your recipient gets the full amount, with Sendwave earning a small margin from the exchange rate. 
@@ -141,13 +118,11 @@ For example, sending $1,000 from the U.S. to Ghana may result in a rate around 1
 
 Sendwave also applies a small spread on the mid-market exchange rate, which varies depending on your recipient’s currency. 
 
-
 #### Payment Limits
 
 When you start using Sendwave, you’ll encounter sending limits like:
 
 - A daily limit starting at $999 and a monthly cap of $2,999 for new users.
-
 - With ID verification, limits increase to $2,999 per day and $12,000 per month.
 
 For higher limits, users in the U.S., UK, or EU will have their limits automatically adjusted over time based on eligibility. Canadian users can even request an increase directly through the app, with the Sendwave team reviewing requests promptly.
@@ -155,7 +130,6 @@ For higher limits, users in the U.S., UK, or EU will have their limits automatic
 Keep in mind that some countries enforce their own transfer rules. For example, transfers to Thailand are capped at 50,000 THB per transaction due to local regulations.
 
 You can always check exact fees, exchange rates, and your sending limits within the app. This clarity ensures you know what your recipient will receive, allowing you to plan your transfers with confidence.
-
 
 ## Security and Support on Sendwave
 
@@ -168,7 +142,6 @@ If you ever spot anything suspicious or need assistance, Sendwave ensures help i
 Toll-free numbers are available in select regions for convenience. You can also reach them via email at help\@sendwave.com or use the in-app support features, including live chat and FAQs, directly from the Sendwave mobile app. 
 
 If you prefer, you can submit a detailed query via their web contact form or explore the comprehensive Help Center on their website for quick answers and guides.
-
 
 #### What users are saying?
 
@@ -186,52 +159,43 @@ _“Somebody help me with app I can use to receive money from overseas. Sendwave
 
 Overall, Sendwave enjoys a strong reputation with users, even as it continues to work on expanding its features.
 
-
 ## Our Verdict: Should you use Sendwave?
 
 Yes, Sendwave is a reliable choice for many people who need to send money internationally, especially to select countries in Africa, Asia, or Latin America. It’s known for being:
 
 - Simple and user-friendly
-
 - Low-cost and affordable for many
-
 - Fast, with quick transfer speeds
-
 - Offering cash pickup options when speed is essential
 
 However, if you need more payment options or prefer other interfaces, you might consider alternatives like:
 
 - TapTap
-
 - Cleva
-
 - Nala
-
 - Grey
 
 These platforms offer a wider network of options.
 
 In conclusion, Sendwave is a solid option for fast, low-cost transfers to supported countries, but it may not be the best fit for everyone. Be sure to consider all your options before making a committing.
 
-
 ### FAQs
 
-**Do I need a Sendwave account to receive money?**No, recipients don’t need a Sendwave account. Delivery methods like mobile wallets, bank deposits, or cash pickups do not require one.
+**Do I need a Sendwave account to receive money?** No, recipients don’t need a Sendwave account. Delivery methods like mobile wallets, bank deposits, or cash pickups do not require one.
 
-**How do I track my Sendwave transfer?**Sendwave updates you via SMS and the app. Once completed, you'll see “Funds Delivered” in the app.
+**How do I track my Sendwave transfer?** Sendwave updates you via SMS and the app. Once completed, you'll see “Funds Delivered” in the app.
 
-**What payments does Sendwave accept?**Sendwave only accepts debit cards to avoid extra fees. Credit cards and PayPal are not supported.
+**What payments does Sendwave accept?** Sendwave only accepts debit cards to avoid extra fees. Credit cards and PayPal are not supported.
 
 **Can I cancel a Sendwave transfer?**Yes, but only before the funds are delivered. Cancel through the app or contact support immediately, as transactions are usually fast.
 
-**Is Sendwave cheap for sending money overseas?**Yes, Sendwave is cost-effective, with no or low fees in most markets.
+**Is Sendwave cheap for sending money overseas?** Yes, Sendwave is cost-effective, with no or low fees in most markets.
 
-**How do I contact Sendwave support?**Use the Sendwave app to call or text their customer support.
+**How do I contact Sendwave support?** Use the Sendwave app to call or text their customer support.
 
-**Why can’t I use a credit card or PayPal with Sendwave?**Credit cards and PayPal incur processing fees. Debit cards help keep costs low for users.
+**Why can’t I use a credit card or PayPal with Sendwave?** Credit cards and PayPal incur processing fees. Debit cards help keep costs low for users.
 
-**Is Sendwave legit?**Yes, it’s a licensed and secure money transfer service with over 10 years of experience. Sendwave uses HTTPS encryption to protect your data.
-
+**Is Sendwave legit?** Yes, it’s a licensed and secure money transfer service with over 10 years of experience. Sendwave uses HTTPS encryption to protect your data.
 
 _To stay updated on the best daily exchange rates like in the image below, you can follow Monierate on_ [_X_](https://x.com/monierate)_._
 
