@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	import { page } from '$app/stores';
 	export let data;
 
@@ -7,9 +7,9 @@
 	$: countryName = data.countryName;
 
   let countryCode = data.countryCode;
-	let openQuestion = null;
+	let openQuestion: any = null;
 
-	function toggleQuestion(index) {
+	function toggleQuestion(index: any) {
 		openQuestion = openQuestion === index ? null : index;
 	}
 </script>
@@ -22,11 +22,11 @@
 
 				<picture>
 
-                    <source srcset="/media/banners/cedar-converter.avif" type="image/avif">    
-                    <source srcset="/media/banners/cedar-converter.gif" type="image/gif">
+                    <source srcset="/media/banners/cedar-homepage-2.avif?v=1" type="image/avif">    
+                    <source srcset="/media/banners/cedar-homepage-2.gif?v=1" type="image/gif">
 
 					<img
-						src="/media/banners/cedar-converter.avif"
+						src="/media/banners/cedar-homepage-2.avif?v=1"
 						alt="Cedar Money"
 						width="800px"
 						height="114px"

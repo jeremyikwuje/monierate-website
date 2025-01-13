@@ -155,8 +155,8 @@ function hidePromotionBar() {
     <nav class="bg-white w-full z-20 top-0 left-0 border-b border-gray-200 dark:bg-gray-900 dark:border-none">
         <div class="w-[95%] md:max-w-[1500px] flex flex-wrap items-center justify-between mx-auto p-4">
             <a href="/" class="flex items-center">
-                <img src="/monierate.png" width="142px" height="24px" class="block dark:hidden h-auto w-[142px] mr-3" alt="Monierate Logo" loading="lazy">
-                <img alt="Monierate Logo" width="142px" height="24px" class="hidden dark:block h-auto w-[142px] mr-3" src="/monierate-logo-white.png" loading="lazy">
+                <img src="/monierate-1.png" width="142px" height="24px" class="block dark:hidden h-auto w-[142px] mr-3" alt="Monierate Logo" loading="lazy">
+                <img alt="Monierate Logo" width="142px" height="24px" class="hidden dark:block h-auto w-[142px] mr-3" src="/monierate-logo-white-1.png" loading="lazy">
             </a>
             <div class="flex md:order-2">
                 <a href="/alerts" type="button" class="button px-3 bg-gray-900 dark:bg-gray-200 font-semibold text-white dark:text-gray-900">
@@ -186,11 +186,6 @@ function hidePromotionBar() {
                     </li>
                     <li>
                         <a data-sveltekit-reload href="/blog" class="{path == 'blog' ? 'active': ''}">Blog</a>
-                    </li>
-                    <li>
-                        <a rel="nofollow" href="https://tinyurl.com/monierate-cleva-top-link" title="Recieve USD Payments with Cleva">
-                            USD Account
-                        </a>
                     </li>
                 </ul>
             </div>
@@ -261,11 +256,11 @@ function hidePromotionBar() {
 
                 <picture>
 
-                    <source srcset="/media/banners/cedar-homepage.avif" type="image/avif">    
-                    <source srcset="/media/banners/cedar-homepage.gif" type="image/gif">
+                    <source srcset="/media/banners/cedar-homepage-2.avif?v=1" type="image/avif">    
+                    <source srcset="/media/banners/cedar-homepage-2.gif?v=1" type="image/gif">
 
                     <img 
-                        src="/media/banners/cedar-homepage.avif"
+                        src="/media/banners/cedar-homepage-2.avif?v=1"
                         alt="Cedar Money"
                         width="800px"
                         height="114px"
@@ -302,7 +297,6 @@ function hidePromotionBar() {
         <div class="w-full md:w-[30%]">
             <h3 class="font-bold">Tools</h3>
             <ul class="py-4 converter-list">
-                <li><a href="https://tinyurl.com/monierate-cleva-footer" title="Recieve USD Payments with Cleva">Open a USD Account</a></li>
                 <li><a href="https://tinyurl.com/cambridge-currencies-foot-link">Send Money to Europe</a></li>
                 <li><a href="https://bit.ly/3Xlo8jv">Pay your Importers</a></li>
                 <li><a href="/alerts">Price Alerts</a></li>

@@ -102,6 +102,7 @@
 				(rate) =>
 					rate.changer_code !== 'market' &&
 					rate.changer_code !== 'binance' &&
+					rate.changer_code !== 'paypal' &&
 					(rate.price_buy > 0 || rate.price_sell > 0)
 			)
 			.map((rate) => ({
@@ -133,7 +134,7 @@
 					sendingResult = findSupportedPlatforms(
 						providers,
 						groupRates.remittance,
-						false,
+						true,
 						false
 					).slice(0, 5);
 				}
@@ -230,11 +231,11 @@
 		<div class="cedar-money">
 			<a href="https://bit.ly/3MDsvBi" target="_blank">
 				<picture>
-					<source srcset="/media/banners/cedar-homepage.avif" type="image/avif" />
-					<source srcset="/media/banners/cedar-homepage.gif" type="image/gif" />
+					<source srcset="/media/banners/cedar-homepage-2.avif?v=1" type="image/avif" />
+					<source srcset="/media/banners/cedar-homepage-2.gif?v=1" type="image/gif" />
 
 					<img
-						src="/media/banners/cedar-homepage.avif"
+						src="/media/banners/cedar-homepage-2.avif?v=1"
 						alt="Cedar Money"
 						width="800px"
 						height="114px"
@@ -282,7 +283,7 @@
 				>
 					<div class="flex justify-between items-center mb-4">
 						<span class="block text-[0.8em] md:text-[1em] font-semibold text-gray-800 dark:text-white">
-							🔥Best Buying Rate
+							🔥 Best Buying Rate
 						</span>
 						<a href="/buy/usd-with-ngn-best-buying-rate" class="text-sm">See more</a>
 					</div>
@@ -294,7 +295,7 @@
 									class="flex items-center"
 									title="{changer.name} dollar to naira rate."
 								>
-									<span class="changer-icon">
+									<span class="changer-icon-sm">
 										<picture>
 											<source srcset="/icons/svg/{rate.changer_code}.svg" type="image/svg+xml" />
 											<source srcset="/icons/png/{rate.changer_code}.png" type="image/png" />
@@ -332,7 +333,7 @@
 				>
 					<div class="flex justify-between items-center mb-4">
 						<span class="block text-[0.8em] md:text-[1em] font-semibold text-gray-800 dark:text-white">
-							🔥Best Selling Rate
+							🔥 Best Selling Rate
 						</span>
 						<a href="/sell/usd-get-ngn-best-selling-rate" class="text-sm">See more</a>
 					</div>
@@ -344,7 +345,7 @@
 									class="flex items-center"
 									title="{changer.name} dollar to naira rate."
 								>
-									<span class="changer-icon">
+									<span class="changer-icon-sm">
 										<picture>
 											<source srcset="/icons/svg/{rate.changer_code}.svg" type="image/svg+xml" />
 											<source srcset="/icons/png/{rate.changer_code}.png" type="image/png" />
@@ -382,7 +383,7 @@
 				>
 					<div class="flex justify-between items-center mb-4">
 						<span class="block text-[0.8em] md:text-[1em] font-semibold text-gray-800 dark:text-white">
-							🔥Best Sending Rate
+							🔥 Best Sending Rate
 						</span>
 						<a href="/send/usd-to-ng-best-rate" class="text-sm">See more</a>
 					</div>
@@ -395,7 +396,7 @@
 									class="flex items-center"
 									title="{changer.name} dollar to naira rate."
 								>
-									<span class="changer-icon">
+									<span class="changer-icon-sm">
 										<picture>
 											<source srcset="/icons/svg/{rate.changer_code}.svg" type="image/svg+xml" />
 											<source srcset="/icons/png/{rate.changer_code}.png" type="image/png" />
@@ -433,7 +434,7 @@
 				>
 					<div class="flex justify-between items-center mb-4">
 						<span class="block text-[0.8em] md:text-[1em] font-semibold text-gray-800 dark:text-white">
-							🔥Best Card Rate
+							🔥 Best Card Rate
 						</span>
 						<a href="/card/usd-ngn-best-funding-rate" class="text-sm">See more</a>
 					</div>
@@ -445,7 +446,7 @@
 									class="flex items-center"
 									title="{changer.name} dollar to naira rate."
 								>
-									<span class="changer-icon">
+									<span class="changer-icon-sm">
 										<picture>
 											<source srcset="/icons/svg/{rate.changer_code}.svg" type="image/svg+xml" />
 											<source srcset="/icons/png/{rate.changer_code}.png" type="image/png" />
@@ -720,6 +721,9 @@
 	}
 	.changer-icon {
 		@apply bg-transparent border border-black rounded-full w-[24px] h-[24px] mr-2;
+	}
+	.changer-icon-sm {
+		@apply bg-transparent border border-black rounded-full w-[16px] h-[16px] mr-2;
 	}
 	.changer-title {
 		@apply font-semibold text-sm md:text-lg whitespace-nowrap text-gray-800 dark:text-gray-300;
