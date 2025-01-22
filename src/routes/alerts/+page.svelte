@@ -148,7 +148,7 @@
 
 <main class="container md:w-[768px] md:mx-auto">
 
-    <div class="cedar-money">
+    <div class="top-landscape mb-8">
         <a href="https://tinyurl.com/bitnob-monierate-click" target="_blank">
             <picture>
                 <source srcset="/media/banners/bitnob-landscape.jpg?v=1" type="image/jpg" />
