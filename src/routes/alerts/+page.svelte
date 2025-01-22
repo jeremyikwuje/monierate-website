@@ -147,6 +147,24 @@
 </svelte:head>
 
 <main class="container md:w-[768px] md:mx-auto">
+
+    <div class="cedar-money">
+        <a href="https://tinyurl.com/bitnob-monierate-click" target="_blank">
+            <picture>
+                <source srcset="/media/banners/bitnob-landscape.jpg?v=1" type="image/jpg" />
+                <source srcset="/media/banners/bitnob-landscape.webp?v=1" type="image/webp" />
+
+                <img
+                    src="/media/banners/bitnob-landscape.webp?v=1"
+                    alt="Bitnob Virtual Card API"
+                    width="800px"
+                    height="114px"
+                    class="mx-auto max-w-full md:w-[800px] md:h-[114px]"
+                />
+            </picture>
+        </a>
+    </div>
+
     <section class="w-full mx-auto pb-16 text-center">
         <h1 class="text-2xl md:text-5xl mb-2 dark:text-gray-100">
             Naira Rate Alerts
