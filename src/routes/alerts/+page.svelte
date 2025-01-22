@@ -158,8 +158,8 @@
                     src="/media/banners/bitnob-landscape.webp?v=1"
                     alt="Bitnob Virtual Card API"
                     width="800px"
-                    height="114px"
-                    class="mx-auto max-w-full md:w-[800px] md:h-[114px]"
+                    height="155px"
+                    class="mx-auto max-w-full md:w-[800px] md:h-[155px]"
                 />
             </picture>
         </a>
