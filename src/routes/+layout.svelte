@@ -188,7 +188,10 @@ function hidePromotionBar() {
                         <a data-sveltekit-reload href="/blog" class="{path == 'blog' ? 'active': ''}">Blog</a>
                     </li>
                     <li>
-                        <a href="https://tinyurl.com/bitnob-top-link">Bitnob Card API</a>
+                        <a href="https://tinyurl.com/bitnob-top-link" class="relative">
+                            Bitnob Card API
+                            <div class="absolute inline-flex items-center justify-center p-1 text-[11px] font-bold text-white bg-blue-500 border-2 border-white rounded-full -top-5 -end-14 dark:border-gray-900">Sponsored</div>
+                        </a>
                     </li>
                 </ul>
             </div>
