@@ -190,7 +190,9 @@ function hidePromotionBar() {
                     <li>
                         <a href="https://tinyurl.com/bitnob-top-link" class="relative">
                             Bitnob Card API
-                            <div class="absolute inline-flex items-center justify-center p-1 text-[11px] font-bold text-white bg-blue-500 border-2 border-white rounded-full -top-2 md:-top-5 end-18 md:-end-14 dark:border-gray-900">Sponsored</div>
+                            <!-- <div class="absolute inline-flex items-center justify-center p-1 text-[11px] font-bold text-white bg-blue-500 border-2 border-white rounded-full -top-2 md:-top-5 end-18 md:-end-14 dark:border-gray-900">Sponsored</div> -->
+                            <div class="absolute inline-flex items-center justify-center p-1 text-[10px] font-bold text-white bg-red-500 border-2 border-white rounded-full -top-2 md:-top-4 end-18 md:-end-10 dark:border-gray-900">Partner</div>
+                            <!-- <div class="absolute inline-flex items-center justify-center p-1 text-[11px] font-bold text-white bg-[#23E0A2] border-2 border-white rounded-full -top-2 md:-top-3 end-18 md:-end-7 dark:border-gray-900">Hot</div> -->
                         </a>
                     </li>
                 </ul>

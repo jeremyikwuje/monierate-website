@@ -29,13 +29,13 @@
 	let rates = pair.changers;
 	const providers: Record<string, Changer> = data.providers || {};
 	const total = Object.entries(rates).length;
-	const lastNRows = (arr:any, n:number) => arr.slice(-n);
-	const lastNRowsRates = lastNRows(rates, 5);
+	const firstFiveObject = Object.fromEntries(Object.entries(providers).slice(0, 5));
+	let newestProviders = firstFiveObject;
 	let groupRates: Record<string, PairChanger[]> = {
 		remittance: data.remittance,
 		ramp: data.ramp,
 		card: data.card,
-		newRates: lastNRowsRates,
+		allRates: data.allPairs,
 	};
 
 	// sort rates in decending order by price_buy;
@@ -78,6 +78,7 @@
 		useBuying = false
 	): ChangerRate[] {
 		const platformRates: ChangerRate[] = rates
+		    .filter(rate => changers[rate.changer_code])
 			.filter(
 				(rate) =>
 					rate.changer_code !== 'market' &&
@@ -107,10 +108,10 @@
 	if (total > 0) {
 
 		try {
-			if (groupRates.newRates.length > 0) {
+			if (groupRates.allRates && groupRates.allRates.length > 0) {
 				newResult = findSupportedPlatforms(
-					providers,
-					groupRates.newRates,
+					newestProviders,
+					groupRates.allRates,
 					true,
 					false
 				).slice(0, 5);

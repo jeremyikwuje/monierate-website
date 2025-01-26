@@ -9,6 +9,7 @@ export const load: PageServerLoad = async ({ fetch }) => {
         let remittance = await get_pairs_changers(`usdngn`, 'remittance');
         let ramp = await get_pairs_changers(`usdngn`, 'ramp');
         let card = await get_pairs_changers(`usdngn`, 'card');
+        let allPairs = await get_pairs_changers(`usdngn`);
 
         if (providers.length == 0) {
             throw error(500, {
@@ -28,7 +29,8 @@ export const load: PageServerLoad = async ({ fetch }) => {
             providers,
             remittance,
             ramp,
-            card
+            card,
+            allPairs
         }
     }
     catch(error: any) {
