@@ -29,13 +29,17 @@
 	let rates = pair.changers;
 	const providers: Record<string, Changer> = data.providers || {};
 	const total = Object.entries(rates).length;
-	const firstFiveObject = Object.fromEntries(Object.entries(providers).slice(0, 5));
-	let newestProviders = firstFiveObject;
+	let newestProviders = ['koyn', 'cleva', 'coinex', 'nala', 'vertofx'];
+	//const firstFiveObject = Object.fromEntries(Object.entries(providers).slice(0, 5));
+	let getNewestProviders:any = {};
+	newestProviders.map((code: string) => {
+		getNewestProviders[code] = providers[code];
+	});
 	let groupRates: Record<string, PairChanger[]> = {
 		remittance: data.remittance,
 		ramp: data.ramp,
 		card: data.card,
-		allRates: data.allPairs,
+		allRates: data.allPairs
 	};
 
 	// sort rates in decending order by price_buy;
@@ -74,11 +78,11 @@
 	function findSupportedPlatforms(
 		changers: Record<string, Changer>,
 		rates: PairChanger[],
-		sortDesc = false,
+		sortDesc: boolean | null,
 		useBuying = false
 	): ChangerRate[] {
 		const platformRates: ChangerRate[] = rates
-		    .filter(rate => changers[rate.changer_code])
+			.filter((rate) => changers[rate.changer_code])
 			.filter(
 				(rate) =>
 					rate.changer_code !== 'market' &&
@@ -94,6 +98,10 @@
 				item.changer && useBuying === true ? item.rate.price_buy > 0 : item.rate.price_sell > 0
 			);
 
+			
+		if(sortDesc === null) {
+			return platformRates
+		}
 		if (useBuying === true) {
 			return sortDesc
 				? platformRates.sort((a, b) => b.rate.price_buy - a.rate.price_buy)
@@ -106,42 +114,27 @@
 	}
 
 	if (total > 0) {
-
 		try {
 			if (groupRates.allRates && groupRates.allRates.length > 0) {
-				newResult = findSupportedPlatforms(
-					newestProviders,
-					groupRates.allRates,
-					true,
-					false
-				).slice(0, 5);
-			}
-			
-			if (groupRates.remittance && groupRates.remittance.length > 0) {
-				sendingResult = findSupportedPlatforms(
-					providers,
-					groupRates.remittance,
-					true,
-					false
-				).slice(0, 5);
-			}
-			if (groupRates.ramp && groupRates.ramp.length > 0) {
-				buyingResult = findSupportedPlatforms(providers, groupRates.ramp, false, true).slice(
-					0,
-					5
-				);
-				sellingResult = findSupportedPlatforms(providers, groupRates.ramp, true, false).slice(
-					0,
-					5
-				);
-			}
-			if (groupRates.card && groupRates.card.length > 0) {
-				fundingResult = findSupportedPlatforms(providers, groupRates.card, false, true).slice(
+				newResult = findSupportedPlatforms(getNewestProviders, groupRates.allRates, null, false).slice(
 					0,
 					5
 				);
 			}
 
+			if (groupRates.remittance && groupRates.remittance.length > 0) {
+				sendingResult = findSupportedPlatforms(providers, groupRates.remittance, true, false).slice(
+					0,
+					5
+				);
+			}
+			if (groupRates.ramp && groupRates.ramp.length > 0) {
+				buyingResult = findSupportedPlatforms(providers, groupRates.ramp, false, true).slice(0, 5);
+				sellingResult = findSupportedPlatforms(providers, groupRates.ramp, true, false).slice(0, 5);
+			}
+			if (groupRates.card && groupRates.card.length > 0) {
+				fundingResult = findSupportedPlatforms(providers, groupRates.card, false, true).slice(0, 5);
+			}
 		} catch (error) {
 			console.error('Results processing error:', error);
 		}
@@ -246,8 +239,10 @@
 					class="bg-white dark:bg-gray-900 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 p-4"
 				>
 					<div class="flex justify-between items-center mb-4">
-						<span class="block text-[0.8em] md:text-[1em] font-semibold text-gray-800 dark:text-white">
-							🔥 New Rate
+						<span
+							class="block text-[0.8em] md:text-[1em] font-semibold text-gray-800 dark:text-white"
+						>
+							🔥 New Listing
 						</span>
 					</div>
 					{#each newResult as { rate, changer }}
@@ -275,10 +270,12 @@
 								</a>
 								<div>
 									<span class="text-sm">
-										{#if Math.round(rate.price_buy) === 0}
-											-
-										{:else}
+										{#if Math.round(rate.price_buy) !== 0}
 											₦ {Math.round(rate.price_buy)}
+										{:else if Math.round(rate.price_sell) !== 0}
+											₦ {Math.round(rate.price_sell)}
+										{:else}
+											-
 										{/if}
 									</span>
 									<small class="changer-rate-base">per $1</small>
@@ -288,14 +285,16 @@
 					{/each}
 				</div>
 			{/if}
-			
+
 			<!--BUYING-->
 			{#if buyingResult.length > 0}
 				<div
 					class="bg-white dark:bg-gray-900 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 p-4"
 				>
 					<div class="flex justify-between items-center mb-4">
-						<span class="block text-[0.8em] md:text-[1em] font-semibold text-gray-800 dark:text-white">
+						<span
+							class="block text-[0.8em] md:text-[1em] font-semibold text-gray-800 dark:text-white"
+						>
 							🔥 Best Buying Rate
 						</span>
 						<a href="/buy/usd-with-ngn-best-buying-rate" class="text-sm">See more</a>
@@ -345,7 +344,9 @@
 					class="bg-white dark:bg-gray-900 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 p-4"
 				>
 					<div class="flex justify-between items-center mb-4">
-						<span class="block text-[0.8em] md:text-[1em] font-semibold text-gray-800 dark:text-white">
+						<span
+							class="block text-[0.8em] md:text-[1em] font-semibold text-gray-800 dark:text-white"
+						>
 							🔥 Best Selling Rate
 						</span>
 						<a href="/sell/usd-get-ngn-best-selling-rate" class="text-sm">See more</a>
@@ -395,7 +396,9 @@
 					class="bg-white dark:bg-gray-900 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 p-4"
 				>
 					<div class="flex justify-between items-center mb-4">
-						<span class="block text-[0.8em] md:text-[1em] font-semibold text-gray-800 dark:text-white">
+						<span
+							class="block text-[0.8em] md:text-[1em] font-semibold text-gray-800 dark:text-white"
+						>
 							🔥 Best Sending Rate
 						</span>
 						<a href="/send/usd-to-ng-best-rate" class="text-sm">See more</a>
@@ -446,7 +449,9 @@
 					class="bg-white dark:bg-gray-900 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 p-4 md:hidden"
 				>
 					<div class="flex justify-between items-center mb-4">
-						<span class="block text-[0.8em] md:text-[1em] font-semibold text-gray-800 dark:text-white">
+						<span
+							class="block text-[0.8em] md:text-[1em] font-semibold text-gray-800 dark:text-white"
+						>
 							🔥 Best Card Rate
 						</span>
 						<a href="/card/usd-ngn-best-funding-rate" class="text-sm">See more</a>
