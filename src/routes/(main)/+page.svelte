@@ -30,8 +30,7 @@
 	const providers: Record<string, Changer> = data.providers || {};
 	const total = Object.entries(rates).length;
 	let newestProviders = ['koyn', 'cleva', 'coinex', 'nala', 'vertofx'];
-	//const firstFiveObject = Object.fromEntries(Object.entries(providers).slice(0, 5));
-	let getNewestProviders:any = {};
+	let getNewestProviders: any = {};
 	newestProviders.map((code: string) => {
 		getNewestProviders[code] = providers[code];
 	});
@@ -81,45 +80,45 @@
 		sortDesc: boolean | null,
 		useBuying = false
 	): ChangerRate[] {
-		const platformRates: ChangerRate[] = rates
-			.filter((rate) => changers[rate.changer_code])
-			.filter(
-				(rate) =>
-					rate.changer_code !== 'market' &&
-					rate.changer_code !== 'binance' &&
-					rate.changer_code !== 'paypal' &&
-					(rate.price_buy > 0 || rate.price_sell > 0)
-			)
-			.map((rate) => ({
-				rate,
-				changer: changers[rate.changer_code]
-			}))
-			.filter((item) =>
-				item.changer && useBuying === true ? item.rate.price_buy > 0 : item.rate.price_sell > 0
-			);
+		let platformRates: ChangerRate[] = Object.entries(changers)
+			.map(([changer_code, changer]) => {
+				const rate = rates.find((rate) => rate.changer_code === changer_code);
+				const excludedPlatforms = ['market', 'binance', 'paypal'];
 
-			
-		if(sortDesc === null) {
-			return platformRates
+				if (
+					rate &&
+					!excludedPlatforms.includes(rate.changer_code) &&
+					(rate.price_buy > 0 || rate.price_sell > 0)
+				) {
+					return { rate, changer };
+				}
+				return null;
+			})
+			.filter((item): item is { rate: PairChanger; changer: Changer } => item !== null)
+			.filter((item) => (useBuying ? item.rate.price_buy > 0 : item.rate.price_sell > 0));
+
+		if (sortDesc === null) {
+			return platformRates;
 		}
-		if (useBuying === true) {
-			return sortDesc
-				? platformRates.sort((a, b) => b.rate.price_buy - a.rate.price_buy)
-				: platformRates.sort((a, b) => a.rate.price_buy - b.rate.price_buy);
-		} else {
-			return sortDesc
-				? platformRates.sort((a, b) => b.rate.price_sell - a.rate.price_sell)
-				: platformRates.sort((a, b) => a.rate.price_sell - b.rate.price_sell);
-		}
+
+		const priceCompare = (a: ChangerRate, b: ChangerRate) => {
+			const price1 = useBuying ? a.rate.price_buy : a.rate.price_sell;
+			const price2 = useBuying ? b.rate.price_buy : b.rate.price_sell;
+			return sortDesc ? price2 - price1 : price1 - price2;
+		};
+
+		return platformRates.sort(priceCompare);
 	}
 
 	if (total > 0) {
 		try {
 			if (groupRates.allRates && groupRates.allRates.length > 0) {
-				newResult = findSupportedPlatforms(getNewestProviders, groupRates.allRates, null, false).slice(
-					0,
-					5
-				);
+				newResult = findSupportedPlatforms(
+					getNewestProviders,
+					groupRates.allRates,
+					null,
+					false
+				).slice(0, 5);
 			}
 
 			if (groupRates.remittance && groupRates.remittance.length > 0) {
