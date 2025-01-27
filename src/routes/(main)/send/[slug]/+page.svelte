@@ -215,21 +215,21 @@
 <div class="bg-white dark:bg-gray-800">
 	<div class="container">
 		<!-- Landscape Top/Bottom -->
-		<div class="cedar-money">
-			<a href="https://bit.ly/3zfhZgz" target="_blank">
-				<picture>
-					<source srcset="/media/banners/cedar-converter-2.avif?v=1" type="image/avif" />
-					<source srcset="/media/banners/cedar-converter-2.gif?v=1" type="image/gif" />
+		<div class="top-landscape mb-8">
+				<a href="https://tinyurl.com/bitnob-monierate-click" target="_blank">
+						<picture>
+								<source srcset="/media/banners/bitnob-landscape.jpg?v=1" type="image/jpg" />
+								<source srcset="/media/banners/bitnob-landscape.webp?v=1" type="image/webp" />
 
-					<img
-						src="/media/banners/cedar-converter-2.avif?v=1"
-						alt="Cedar Money"
-						width="800px"
-						height="114px"
-						class="mx-auto max-w-full md:w-[800px] md:h-[114px]"
-					/>
-				</picture>
-			</a>
+								<img
+										src="/media/banners/bitnob-landscape.webp?v=1"
+										alt="Bitnob Virtual Card API"
+										width="800px"
+										height="155px"
+										class="mx-auto max-w-full md:w-[800px] md:h-[155px]"
+								/>
+						</picture>
+				</a>
 		</div>
 	</div>
 </div>

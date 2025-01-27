@@ -29,10 +29,17 @@
 	let rates = pair.changers;
 	const providers: Record<string, Changer> = data.providers || {};
 	const total = Object.entries(rates).length;
+	let newestProviders = ['koyn', 'cleva', 'coinex', 'nala', 'vertofx'];
+	//const firstFiveObject = Object.fromEntries(Object.entries(providers).slice(0, 5));
+	let getNewestProviders:any = {};
+	newestProviders.map((code: string) => {
+		getNewestProviders[code] = providers[code];
+	});
 	let groupRates: Record<string, PairChanger[]> = {
-		remittance: [],
-		ramp: [],
-		card: []
+		remittance: data.remittance,
+		ramp: data.ramp,
+		card: data.card,
+		allRates: data.allPairs
 	};
 
 	// sort rates in decending order by price_buy;
@@ -51,10 +58,7 @@
 		return providerName.toLowerCase().includes(searchTerm.toLowerCase());
 	});
 
-	let isLoading = true;
-	let hasResults = false;
-	let resultsLoaded = false;
-
+	let newResult: ChangerRate[] = [];
 	let sendingResult: ChangerRate[] = [];
 	let buyingResult: ChangerRate[] = [];
 	let sellingResult: ChangerRate[] = [];
@@ -71,33 +75,14 @@
 		window.addEventListener('resize', updateMobileStatus);
 	}
 
-	async function getPairChangers(
-		pair_code: string,
-		changer_service: string
-	): Promise<PairChanger[]> {
-		try {
-			const response = await fetch(
-				`/api/pairs/changers?pair_code=${pair_code}&changer_service=${changer_service}`
-			);
-
-			if (!response.ok) {
-				throw new Error(`HTTP error! status: ${response.status}`);
-			}
-
-			return await response.json();
-		} catch (error) {
-			console.error('Error fetching pair changers:', error);
-			return [];
-		}
-	}
-
 	function findSupportedPlatforms(
 		changers: Record<string, Changer>,
 		rates: PairChanger[],
-		sortDesc = false,
+		sortDesc: boolean | null,
 		useBuying = false
 	): ChangerRate[] {
 		const platformRates: ChangerRate[] = rates
+			.filter((rate) => changers[rate.changer_code])
 			.filter(
 				(rate) =>
 					rate.changer_code !== 'market' &&
@@ -113,6 +98,10 @@
 				item.changer && useBuying === true ? item.rate.price_buy > 0 : item.rate.price_sell > 0
 			);
 
+			
+		if(sortDesc === null) {
+			return platformRates
+		}
 		if (useBuying === true) {
 			return sortDesc
 				? platformRates.sort((a, b) => b.rate.price_buy - a.rate.price_buy)
@@ -124,62 +113,30 @@
 		}
 	}
 
-	$: {
-		if (groupRates.remittance && groupRates.ramp && groupRates.card && total > 0) {
-			isLoading = true;
-			hasResults = false;
-
-			try {
-				if (groupRates.remittance.length > 0) {
-					sendingResult = findSupportedPlatforms(
-						providers,
-						groupRates.remittance,
-						true,
-						false
-					).slice(0, 5);
-				}
-				if (groupRates.ramp.length > 0) {
-					buyingResult = findSupportedPlatforms(providers, groupRates.ramp, false, true).slice(
-						0,
-						5
-					);
-					sellingResult = findSupportedPlatforms(providers, groupRates.ramp, true, false).slice(
-						0,
-						5
-					);
-				}
-				if (groupRates.card.length > 0) {
-					fundingResult = findSupportedPlatforms(providers, groupRates.card, false, true).slice(
-						0,
-						5
-					);
-				}
-
-				hasResults = sendingResult.length > 0;
-				resultsLoaded = true;
-			} catch (error) {
-				console.error('Results processing error:', error);
-			} finally {
-				setTimeout(() => {
-					isLoading = false;
-				}, 300);
+	if (total > 0) {
+		try {
+			if (groupRates.allRates && groupRates.allRates.length > 0) {
+				newResult = findSupportedPlatforms(getNewestProviders, groupRates.allRates, null, false).slice(
+					0,
+					5
+				);
 			}
-		}
-	}
 
-	async function updatePairChangers() {
-		groupRates.remittance = await getPairChangers(`usdngn`, 'remittance');
-
-		// Fetch buying and selling (ramp) rates
-		groupRates.ramp = await getPairChangers(`usdngn`, 'ramp');
-
-		// Fetch funding (card) rates
-		groupRates.card = await getPairChangers(`usdngn`, 'card');
-	}
-
-	$: {
-		if (typeof window !== 'undefined') {
-			updatePairChangers();
+			if (groupRates.remittance && groupRates.remittance.length > 0) {
+				sendingResult = findSupportedPlatforms(providers, groupRates.remittance, true, false).slice(
+					0,
+					5
+				);
+			}
+			if (groupRates.ramp && groupRates.ramp.length > 0) {
+				buyingResult = findSupportedPlatforms(providers, groupRates.ramp, false, true).slice(0, 5);
+				sellingResult = findSupportedPlatforms(providers, groupRates.ramp, true, false).slice(0, 5);
+			}
+			if (groupRates.card && groupRates.card.length > 0) {
+				fundingResult = findSupportedPlatforms(providers, groupRates.card, false, true).slice(0, 5);
+			}
+		} catch (error) {
+			console.error('Results processing error:', error);
 		}
 	}
 
@@ -276,13 +233,68 @@
 
 	{#if showHighlights}
 		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+			<!--New-->
+			{#if newResult.length > 0}
+				<div
+					class="bg-white dark:bg-gray-900 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 p-4"
+				>
+					<div class="flex justify-between items-center mb-4">
+						<span
+							class="block text-[0.8em] md:text-[1em] font-semibold text-gray-800 dark:text-white"
+						>
+							🔥 New Listing
+						</span>
+					</div>
+					{#each newResult as { rate, changer }}
+						<ul>
+							<li class="flex justify-between text-sm text-gray-800 dark:text-gray-200 mb-2">
+								<a
+									href="/converter/{rate.changer_code}?Amount=1&From=usd&To=ngn"
+									class="flex items-center"
+									title="{changer.name} dollar to naira rate."
+								>
+									<span class="changer-icon-sm">
+										<picture>
+											<source srcset="/icons/svg/{rate.changer_code}.svg" type="image/svg+xml" />
+											<source srcset="/icons/png/{rate.changer_code}.png" type="image/png" />
+											<img
+												width="16px"
+												height="16px"
+												src="/icons/svg/{rate.changer_code}.svg"
+												class="rounded-full"
+												alt="{changer.name} icon"
+											/>
+										</picture>
+									</span>
+									<span class="text-gray-500 dark:text-gray-300 text-sm">{changer.name}</span>
+								</a>
+								<div>
+									<span class="text-sm">
+										{#if Math.round(rate.price_buy) !== 0}
+											₦ {Math.round(rate.price_buy)}
+										{:else if Math.round(rate.price_sell) !== 0}
+											₦ {Math.round(rate.price_sell)}
+										{:else}
+											-
+										{/if}
+									</span>
+									<small class="changer-rate-base">per $1</small>
+								</div>
+							</li>
+						</ul>
+					{/each}
+				</div>
+			{/if}
+
 			<!--BUYING-->
 			{#if buyingResult.length > 0}
 				<div
 					class="bg-white dark:bg-gray-900 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 p-4"
 				>
 					<div class="flex justify-between items-center mb-4">
-						<span class="block text-[0.8em] md:text-[1em] font-semibold text-gray-800 dark:text-white">
+						<span
+							class="block text-[0.8em] md:text-[1em] font-semibold text-gray-800 dark:text-white"
+						>
 							🔥 Best Buying Rate
 						</span>
 						<a href="/buy/usd-with-ngn-best-buying-rate" class="text-sm">See more</a>
@@ -332,7 +344,9 @@
 					class="bg-white dark:bg-gray-900 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 p-4"
 				>
 					<div class="flex justify-between items-center mb-4">
-						<span class="block text-[0.8em] md:text-[1em] font-semibold text-gray-800 dark:text-white">
+						<span
+							class="block text-[0.8em] md:text-[1em] font-semibold text-gray-800 dark:text-white"
+						>
 							🔥 Best Selling Rate
 						</span>
 						<a href="/sell/usd-get-ngn-best-selling-rate" class="text-sm">See more</a>
@@ -382,7 +396,9 @@
 					class="bg-white dark:bg-gray-900 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 p-4"
 				>
 					<div class="flex justify-between items-center mb-4">
-						<span class="block text-[0.8em] md:text-[1em] font-semibold text-gray-800 dark:text-white">
+						<span
+							class="block text-[0.8em] md:text-[1em] font-semibold text-gray-800 dark:text-white"
+						>
 							🔥 Best Sending Rate
 						</span>
 						<a href="/send/usd-to-ng-best-rate" class="text-sm">See more</a>
@@ -430,10 +446,12 @@
 			<!--FUNDING-->
 			{#if fundingResult.length > 0}
 				<div
-					class="bg-white dark:bg-gray-900 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 p-4"
+					class="bg-white dark:bg-gray-900 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 p-4 md:hidden"
 				>
 					<div class="flex justify-between items-center mb-4">
-						<span class="block text-[0.8em] md:text-[1em] font-semibold text-gray-800 dark:text-white">
+						<span
+							class="block text-[0.8em] md:text-[1em] font-semibold text-gray-800 dark:text-white"
+						>
 							🔥 Best Card Rate
 						</span>
 						<a href="/card/usd-ngn-best-funding-rate" class="text-sm">See more</a>
