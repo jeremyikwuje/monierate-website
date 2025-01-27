@@ -29,7 +29,7 @@
 	let rates = pair.changers;
 	const providers: Record<string, Changer> = data.providers || {};
 	const total = Object.entries(rates).length;
-	let newestProviders = ['koyn', 'cleva', 'coinex', 'nala', 'vertofx'];
+	let newestProviders = ['ridima', 'koyn', 'cleva', 'coinex', 'vertofx'];
 	let getNewestProviders: any = {};
 	newestProviders.map((code: string) => {
 		getNewestProviders[code] = providers[code];
