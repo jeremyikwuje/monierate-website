@@ -53,13 +53,13 @@ Getting started with the Bitnob API is a seamless process, designed to ensure bu
 
 ### Who Can Benefit from the Bitnob API?
 
--   Merchants: Enable cross-border payments and virtual card solutions to simplify global transactions for your users.
--   Business Owners: Provide cross-border payment services and facilitate BTC to USDT swaps.
--   Tech Companies: Build efficient financial applications by integrating the Bitnob API
+-   **Merchants**: Enable cross-border payments and virtual card solutions to simplify global transactions for your users.
+-   **Business Owners**: Provide cross-border payment services and facilitate BTC to USDT swaps.
+-   **Tech Companies**: Build efficient financial applications by integrating the Bitnob API.
     
 
 ### Why Choose Bitnob?
-As a leader in the fintech space, Bitnob has built a reputation for providing innovative solutions that cater to the unique needs of businesses. integrating the Bitnob API helps companies tap into a reliable and efficient payment ecosystem
+As a leader in the fintech space, Bitnob has built a reputation for providing innovative solutions that cater to the unique needs of businesses. integrating the Bitnob API helps companies to tap into a reliable and efficient payment ecosystem
 
 ### Start Now
 Supported by detailed documentation and a dedicated support team, businesses can quickly integrate Bitnob’s payment solutions and begin offering their customers secure, seamless payment experiences.
