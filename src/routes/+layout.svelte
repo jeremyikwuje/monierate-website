@@ -188,7 +188,7 @@ function hidePromotionBar() {
                         <a data-sveltekit-reload href="/blog" class="{path == 'blog' ? 'active': ''}">Blog</a>
                     </li>
                     <li>
-                        <a href="https://tinyurl.com/bitnob-top-link" class="relative">
+                        <a href="https://tinyurl.com/bitnob-top-link-2" class="relative">
                             Bitnob Card API
                             <!-- <div class="absolute inline-flex items-center justify-center p-1 text-[11px] font-bold text-white bg-blue-500 border-2 border-white rounded-full -top-2 md:-top-5 end-18 md:-end-14 dark:border-gray-900">Sponsored</div> -->
                             <div class="absolute inline-flex items-center justify-center p-1 text-[10px] font-bold text-white bg-red-500 border-2 border-white rounded-full -top-2 md:-top-4 end-18 md:-end-10 dark:border-gray-900">Partner</div>
@@ -307,7 +307,7 @@ function hidePromotionBar() {
             <ul class="py-4 converter-list">
                 <li><a href="https://tinyurl.com/cambridge-currencies-foot-link">Send Money to Europe</a></li>
                 <li><a href="https://bit.ly/3Xlo8jv">Pay your Importers</a></li>
-                <li><a href="https://tinyurl.com/bitnob-footer-link">Virtual Card API</a></li>
+                <li><a href="https://tinyurl.com/bitnob-footer-link-2">Virtual Card API</a></li>
                 <li><a href="/alerts">Price Alerts</a></li>
                 <li><a href="/converter">Currency Converter</a></li>
                 <li><a href="/ng/compare">Compare exchange rates</a></li>
