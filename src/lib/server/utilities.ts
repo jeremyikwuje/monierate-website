@@ -52,3 +52,9 @@ export function getEndpointV1(endpoint: string)
 
   return `${apiUrl}${endpoint}`;
 }
+
+export function getAccountEndpoint(endpoint: string) {
+    let apiUrl = "https://monierate-account-api.onrender.com/core";
+  
+    return `${apiUrl}${endpoint}`;
+}
