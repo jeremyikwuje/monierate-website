@@ -537,12 +537,12 @@
 				</div>
 
 				<span class="block mt-12 mb-4">
-                    <a href="https://tinyurl.com/cedar-app-native-buttons" class="block button buy font-bold w-full md:inline-block md:w-auto mr-4">
-                        Get the best rate on Cedar Money
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="inline-block w-4 h-4 ml-2">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25" />
-                        </svg> 
-                    </a>
+					<a href="https://tinyurl.com/koyn-native-button" class="block button buy font-bold w-full md:inline-block md:w-auto mr-4">
+						Sell Crypto on Koyn
+						<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="inline-block w-4 h-4 ml-2">
+								<path stroke-linecap="round" stroke-linejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25" />
+						</svg> 
+					</a>
 
 					{#if currentView === CurrentView.CONVERT}
 						<!-- <button class="button w-full md:max-w-[250px]" on:click={convertNow}> Convert </button> -->
@@ -557,7 +557,7 @@
 							{/if}
 						</button>
 					{/if}
-                 </span>
+        </span>
 			</div>
 		</div>
 	</div>
