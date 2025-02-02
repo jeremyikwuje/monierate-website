@@ -495,6 +495,24 @@
 			{/if}
 		</div>
 	{/if}
+
+	<!-- Landscape Top/Bottom -->
+	<div class="bitnob-div mt-4">
+		<a href="https://bit.ly/3MDsvBi" target="_blank">
+			<picture>
+				<source srcset="/media/banners/bitnob-landscape-small.avif?v=1" type="image/avif" />
+				<source srcset="/media/banners/bitnob-landscape-small.webp?v=1" type="image/webp" />
+
+				<img
+					src="/media/banners/bitnob-landscape-small.jpg?v=1"
+					alt="Bitnob Virtual Card API"
+					width="800px"
+					height="99px"
+					class="mx-auto max-w-full md:w-[800px] md:h-[99px]"
+				/>
+			</picture>
+		</a>
+	</div>
 </div>
 
 <div class="pt-4 mb-4">
