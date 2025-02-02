@@ -84,7 +84,7 @@ const getPairs = async () => {
 const sponsored_partners = [
     {
         image: 'https://bit.ly/3svJGhQ',
-        text: 'Sell your crypto for Naira',
+        text: 'Sell your crypto for higher Naira',
         link: 'https://tinyurl.com/koyn-top-sponsored-link',
         brand: 'Koyn',
         cta: 'Sell Crypto'
