@@ -504,7 +504,7 @@
 				<source srcset="/media/banners/bitnob-landscape-small.jpg?v=1" type="image/jpg" />
 
 				<img
-					src="/media/banners/bitnob-landscape-small.jpg?v=1"
+					src="/media/banners/bitnob-landscape-small.avif?v=1"
 					alt="Bitnob Virtual Card API"
 					width="800px"
 					height="99px"
