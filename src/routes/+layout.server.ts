@@ -87,7 +87,7 @@ const sponsored_partners = [
         text: 'Sell your crypto for Naira',
         link: 'https://tinyurl.com/koyn-top-sponsored-link',
         brand: 'Koyn',
-        cta: 'Sell Naira'
+        cta: 'Sell Crypto'
     },
     // {
     //     image: 'https://bit.ly/3svJGhQ',
