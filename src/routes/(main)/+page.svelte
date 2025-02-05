@@ -498,7 +498,7 @@
 
 	<!-- Landscape Top/Bottom -->
 	<div class="bitnob-div mt-4 pt-8">
-		<a href="https://tinyurl.com/bitnob-monierate-click" target="_blank">
+		<a href="https://tinyurl.com/bitnob-banner-link" target="_blank">
 			<picture>
 				<source srcset="/media/banners/bitnob-landscape-small.avif?v=1" type="image/avif" />
 				<source srcset="/media/banners/bitnob-landscape-small.jpg?v=1" type="image/jpg" />
