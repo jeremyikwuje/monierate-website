@@ -10,26 +10,56 @@
 
     let faqItems = [
         {
-            question: "What is the Monierate API?",
-            answer: "The Monierate API provides seamless access to our powerful services, allowing you to integrate our features into your applications."
+            question: "What services does Monierate API offer?",
+            answer: "We offer real-time and historical currency  data for premium FX data."
         },
         {
-            question: "How do I get API access?",
-            answer: "Sign up on our platform, generate an API key from your dashboard, and start making requests."
+            question: "Do you have a free plan?",
+            answer: "Yes, we offer a free plan for you. You will need to setup an account to access it."
         },
         {
-            question: "Is there a free plan?",
-            answer: "Yes! We offer a free tier with limited requests. Upgrade for higher limits and premium features."
+            question: "What currencies data type do you support?",
+            answer: "We support official, Midmarket and Black market rates data."
         },
         {
-            question: "What authentication method does the API use?",
-            answer: "We use API key authentication. Include your key in the request headers for secure access."
+            question: "How do I get started using the Monierate API?",
+            answer: "{link:{account:Setup an account}} on, and choose a plan that suit your need, then you can access the api documentation for integration."
         },
         {
-            question: "Where can I find API documentation?",
-            answer: "Visit our API Docs for detailed endpoints, request formats, and response examples."
+            question: "Does Monierate offer any support for API developers?",
+            answer: "Yes, we offer standard support for developers and startups."
+        },
+        {
+            question: "What data can I access through the Monierate API?",
+            answer: "You can access real-time currency and historical data through our API."
+        },
+        {
+            question: "How do I format my API requests and responses?",
+            answer: "Visit our {link:{docs:documentation guide}} on how to integrate and setup this."
+        },
+        {
+            question: "Are there any rate limits for using the Monierate API?",
+            answer: "Rate limiting is dependant on the plan you decide to opt into. See plans"
+        },
+        {
+            question: "How do I troubleshoot common API issues?",
+            answer: "Read {link:{docs:API documentation}} and if it persist, you can send us an email at {link:{contact:hello@monierate.com}} "
         },
     ]
+	let faqLinks = [
+		{
+			key: "docs",
+			url: "https://monierate.apidog.io"
+		},
+		{
+			key: "account",
+			url: "https://account.monierate.com"
+		},
+		{
+			key: "contact",
+			url: "mailto:hello@monierate.com"
+		},
+	];
 </script>
 
 <div class="bg-white dark:bg-gray-800">
@@ -169,7 +199,7 @@
 </div>
 
 
-<FAQ faqItems={faqItems} coverPage={false} />
+<FAQ faqItems={faqItems} links={faqLinks} coverPage={false} />
 
 <div class="bg-gray-50 dark:bg-gray-900/60 py-2 mt-16">
     <div class="container flex flex-col md:flex-row md:items-center justify-between">
