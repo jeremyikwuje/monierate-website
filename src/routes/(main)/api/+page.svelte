@@ -208,7 +208,7 @@
             <p class="text-gray-600 dark:text-gray-400">Read our API documentation</p>
         </div>
         <div>
-            <a href="https://docs.monierate.com" target="_blank" class="button bg-blue-500 hover:bg-blue-600 text-white font-medium py-3 px-4 rounded">Get API Documentation</a>
+            <a href="https://monierate.apidog.io" target="_blank" class="button bg-blue-500 hover:bg-blue-600 text-white font-medium py-3 px-4 rounded">Get API Documentation</a>
         </div>
     </div>
 </div>
