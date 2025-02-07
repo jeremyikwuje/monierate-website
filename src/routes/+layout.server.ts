@@ -84,18 +84,18 @@ const getPairs = async () => {
 const sponsored_partners = [
     {
         image: 'https://bit.ly/3svJGhQ',
-        text: 'Send Pounds & Euros to 55+ Countries, Including UK.',
-        link: 'https://tinyurl.com/cambridge-currences-top-banner',
-        brand: 'Cambridge Currencies',
-        cta: 'Send Money'
+        text: 'Sell your crypto for Naira',
+        link: 'https://tinyurl.com/koyn-top-sponsored-link',
+        brand: 'Koyn',
+        cta: 'Sell Crypto'
     },
-    {
-        image: 'https://bit.ly/3svJGhQ',
-        text: 'Send & Receive Cross-border Payments Globally.',
-        link: 'https://bit.ly/47lmfHX',
-        brand: 'Cedar App',
-        cta: 'Start Sending'
-    },
+    // {
+    //     image: 'https://bit.ly/3svJGhQ',
+    //     text: 'Send & Receive Cross-border Payments Globally.',
+    //     link: 'https://bit.ly/47lmfHX',
+    //     brand: 'Cedar App',
+    //     cta: 'Start Sending'
+    // },
     {
         image: 'https://bit.ly/3svJGhQ',
         text: 'Send & Receive Cross-border Payments Globally.',
