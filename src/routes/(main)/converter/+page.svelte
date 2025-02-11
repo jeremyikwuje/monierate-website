@@ -272,11 +272,11 @@
 		<div class="cedar-money">
 			<a href="https://bit.ly/3zfhZgz" target="_blank">
 				<picture>
-					<source srcset="/media/banners/cedar-converter-2.avif?v=1" type="image/avif" />
-					<source srcset="/media/banners/cedar-converter-2.gif?v=1" type="image/gif" />
+					<source srcset="/media/banners/cedar-converter.webp?v=1" type="image/avif" />
+					<source srcset="/media/banners/cedar-converter.jpg?v=1" type="image/gif" />
 
 					<img
-						src="/media/banners/cedar-converter-2.avif?v=1"
+						src="/media/banners/cedar-converter.webp?v=1"
 						alt="Cedar Money"
 						width="800px"
 						height="114px"
