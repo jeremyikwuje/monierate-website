@@ -4,8 +4,8 @@
         <div class="cedar-money">
             <a href="https://bit.ly/3zfhZgz" target="_blank">
                 <picture>
-                    <source srcset="/media/banners/cedar-blog-2.avif?v=1" type="image/avif">
-                    <source srcset="/media/banners/cedar-blog-2.gif?v=1" type="image/gif">
+                    <source srcset="/media/banners/cedar-blog.webp?v=1" type="image/avif">
+                    <source srcset="/media/banners/cedar-blog.png?v=1" type="image/gif">
                     <img 
                         src="/media/banners/cedar-blog-1.avif"
                         alt="Cedar Money"
