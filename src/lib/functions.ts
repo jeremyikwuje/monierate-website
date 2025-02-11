@@ -255,3 +255,55 @@ export function scrollToSection(id: string, options = {
       }, options.duration);
     }
   }
+
+  export function parseJSONSafe(data: any): object | null {
+    if (typeof data === "object" && data !== null) {
+      return data;
+    }
+    if (typeof data === "string") {
+      try {
+        return JSON.parse(data);
+      } catch (error) {
+        console.error("Invalid JSON string:", data);
+        return null;
+      }
+    }
+    console.error("Data is neither a valid JSON string nor an object:", data);
+    return null;
+  }
+
+  export function formatISODateTime(
+    isoDate: string,
+    includeTime = false,
+    includeTimezone = false,
+  ) {
+    const dateObj = new Date(isoDate);
+    const options: Intl.DateTimeFormatOptions = {
+      year: "numeric",
+      month: "long",
+      day: "numeric",
+      hour: "2-digit",
+      minute: "2-digit",
+      second: "2-digit",
+      timeZoneName: "short",
+    };
+    if (!includeTime) {
+      delete options.hour;
+      delete options.minute;
+      delete options.second;
+    }
+    if (!includeTimezone) {
+      delete options.timeZoneName;
+    }
+    const formattedDate = dateObj.toLocaleDateString("en-US", options);
+    return formattedDate;
+  }
+  
+  export function formatNumber(
+    value: number,
+    locales: string = "en-US",
+    options: Intl.NumberFormatOptions = {},
+  ): string {
+    const formatter = new Intl.NumberFormat(locales, options);
+    return formatter.format(value);
+  }
