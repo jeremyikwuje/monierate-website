@@ -60,6 +60,16 @@
 	];
 </script>
 
+<svelte:head>
+	<title>Monierate API</title>
+	<meta name="description" content="Monierate API provides reliable exchange rates for all your applications. Easy to integrate and use.">
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="Monierate API | Exchange Rates Made Easy" />
+	<meta property="og:description" content="Monierate API provides reliable exchange rates for all your applications. Easy to integrate and use." />	
+	<meta property="og:url" content="monierate.com/api" />
+    <meta property="og:image" content="https://monierate.com/monierate-og-image.png">
+</svelte:head>
+
 <div class="bg-white dark:bg-gray-800">
 	<div class="container">
 		<!-- Landscape Top/Bottom -->
