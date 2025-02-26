@@ -1,11 +1,11 @@
 import type { PageServerLoad } from './$types'
-import Currencies from '$data/currencies.json';
 import { get_changers } from "$lib/server/changer.service";
+import { get_currencies } from '$lib/server/currency.service';
 
 
 export const load: PageServerLoad = async ({ params }) => {
-    const currencies = Object.values(Currencies).reduce((acc, obj) => ({ ...acc, ...obj }), {});
-    let providers = await get_changers();
+    const providers = await get_changers();
+    const currencies = await get_currencies();
     
     return {
         slug: params.slug,

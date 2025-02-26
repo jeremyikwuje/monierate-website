@@ -5,6 +5,7 @@
 	export let className = '';
 	export let selected: any = '';
 	export let labelValues: boolean = false;
+	export let id = "";
 	let selectedIcon: string;
 	let searchQuery = '';
 	let filtered = options;
@@ -50,9 +51,9 @@
 	});
   </script>
   
-  <div class={`relative w-auto inline-block`} bind:this={dropdown}>
+  <div class={`relative w-auto inline-block`} bind:this={dropdown} id={id}>
 	<button
-	  class="w-full bg-gray-800 text-white px-4 py-2 rounded-md flex justify-between items-center border border-gray-600 hover:border-gray-400 w-64 {className}"
+	  class="w-full bg-gray-50 dark:bg-gray-800 text-dark dark:text-white px-4 py-2 rounded-md flex justify-between items-center border border-gray-300 dark:border-gray-600 hover:border-gray-400 w-64 {className}"
 	  on:click={toggleDropdown}
 	>
 	  <span class="inline-flex">
@@ -80,14 +81,14 @@
 	</button>
   
 	{#if isOpen}
-	  <div class="absolute z-10 mt-2 w-full bg-gray-800 text-white rounded-md shadow-lg border border-gray-600 min-w-64">
+	  <div class="absolute z-10 mt-2 w-full bg-gray-50 text-dark dark:bg-gray-800 dark:text-white rounded-md shadow-lg border border-gray-300 dark:border-gray-600 min-w-64">
 		{#if options.length > 5}
 		  <div class="p-4">
-			<div class="flex items-center px-2 border-b border-gray-600 bg-gray-700 rounded-md">
+			<div class="flex items-center px-2 border-b border-gray-300 dark:border-gray-600 bg-gray-50 dark:bg-gray-700 rounded-md">
 			  <i class="fa fa-search" />
 			  <input
 				type="text"
-				class="w-full px-4 py-2 text-white focus:outline-none bg-gray-700"
+				class="w-full px-4 py-2 text-dark dark:text-white focus:outline-none bg-gray-50 dark:bg-gray-700"
 				placeholder="Search..."
 				bind:value={searchQuery}
 			  />
@@ -97,7 +98,7 @@
 		<ul class="max-h-48 overflow-y-auto custom-scrollbar">
 		  {#each filtered as option}
 			<li
-			  class="flex items-center px-4 py-2 hover:bg-gray-700 cursor-pointer"
+			  class="flex items-center px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-700 cursor-pointer"
 			  on:click={() => selectOption(option)}
 			>
 			  {#if isImage(option.icon)}
