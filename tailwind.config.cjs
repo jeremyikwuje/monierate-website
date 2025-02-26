@@ -41,5 +41,5 @@ module.exports = {
       'top-banner': '#7449ee',
     },
   },
-  plugins: [require('flowbite-typography'),],
+  plugins: [require('flowbite-typography'), require('tailwind-scrollbar'),],
 }
