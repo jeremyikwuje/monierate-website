@@ -318,6 +318,7 @@ function hidePromotionBar() {
                 <li><a href="/ng/compare">Compare exchange rates</a></li>
                 <li><a href="/ng/ussd-codes">Bank USSD Codes</a></li>
                 <li><a href="/ng/swift-codes">SWIFT Codes</a></li>
+                <li><a href="/api">Currency API</a></li>
             </ul>
         </div>
         <div class="w-full md:w-[40%]">
