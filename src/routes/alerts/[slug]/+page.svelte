@@ -1,8 +1,9 @@
-<script class="alng">
+<script lang="ts">
     import Price from '$lib/components/alerts/Price.svelte';
     import Periodic from '$lib/components/alerts/Periodic.svelte';
     export let data;
     $: slug = data.slug;
+
 </script>
 
 <div class="container">

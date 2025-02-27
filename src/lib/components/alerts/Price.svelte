@@ -17,8 +17,10 @@
 	let pairs: any = data.pairs;
 	const currencies = data.currencies as Currencies;
 	const providers = data.providers;
+	const user = data.user;
 
 	let currentView: string = 'details' as 'details' | 'options';
+	let historyView: string = 'active-alerts' as 'active-alerts' | 'alert-history';
 	let alertType: string = 'Email';
 	let currencyType: string = 'USD';
 	let rangeType: string = 'above';
@@ -27,10 +29,12 @@
 	let provider: string = 'cedarmoney';
 	let cooldown: string = '5 minutes';
 
-	const currenciesForDropdown = Object.entries(currencies).map(([key, value]: [key:any, value:any]) => ({
-		label: value.name,
-		value: value.code.toUpperCase()
-	})) as DropdownOption[];
+	const currenciesForDropdown = Object.entries(currencies).map(
+		([key, value]: [key: any, value: any]) => ({
+			label: value.name,
+			value: value.code.toUpperCase()
+		})
+	) as DropdownOption[];
 
 	const providersForDropdown = Object.entries(providers).map(([_, value]) => {
 		const provider = value as Provider;
@@ -220,7 +224,7 @@
 						</span>
 					</span>
 				</div>
-				
+
 				<div class="flex gap-4 items-center">
 					<input
 						id="alert-spam"
@@ -228,9 +232,35 @@
 						style="transform: scale(1.5);"
 						placeholder="Optional"
 					/>
-					<label for="alert-spam">Disable this alert after  it triggers onces.</label>
+					<label for="alert-spam">Disable this alert after it triggers onces.</label>
 				</div>
 			</div>
 		{/if}
 	</div>
 </div>
+
+{#if user.isLogin}
+	<div class="w-full md:w-1/2 mx-auto mt-16">
+		<div class="flex justify-center items-center gap-16 text-lg mb-10">
+			<button
+				class={historyView === 'active-alerts' ? 'text-blue-500' : 'hover:text-gray-500'}
+				on:click={() => (historyView = 'active-alerts')}>Active alerts</button
+			>
+			<button
+				class={historyView === 'alert-history' ? 'text-blue-500' : 'hover:text-gray-500'}
+				on:click={() => (historyView = 'alert-history')}>Alert history</button
+			>
+		</div>
+
+		{#if historyView === 'active-alerts'}
+			<div class="mt-4 space-y-10 md:w-[90%] md:mx-auto">
+				<p class="text-center">You have no active price alerts.</p>
+			</div>
+		{/if}
+		{#if historyView === 'alert-history'}
+			<div class="mt-4 space-y-10 md:w-[90%] md:mx-auto">
+				<p class="text-center">You have no price alert history.</p>
+			</div>
+		{/if}
+	</div>
+{/if}

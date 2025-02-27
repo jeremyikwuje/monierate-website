@@ -17,8 +17,10 @@
 	let pairs: any = data.pairs;
 	const currencies = data.currencies as Currencies;
 	const providers = data.providers;
+	const user = data.user;
 
 	let currentView: string = 'details' as 'details' | 'options';
+	let historyView: string = 'active-alerts' as 'active-alerts' | 'alert-history';
 	let alertType: string = 'Email';
 	let currencyType: string = 'USD';
 	let priceType: string = 'NGN';
@@ -209,3 +211,29 @@
 		{/if}
 	</div>
 </div>
+
+{#if user.isLogin}
+	<div class="w-full md:w-1/2 mx-auto mt-16">
+		<div class="flex justify-center items-center gap-16 text-lg mb-10">
+			<button
+				class={historyView === 'active-alerts' ? 'text-blue-500' : 'hover:text-gray-500'}
+				on:click={() => (historyView = 'active-alerts')}>Active alerts</button
+			>
+			<button
+				class={historyView === 'alert-history' ? 'text-blue-500' : 'hover:text-gray-500'}
+				on:click={() => (historyView = 'alert-history')}>Alert history</button
+			>
+		</div>
+
+		{#if historyView === 'active-alerts'}
+			<div class="mt-4 space-y-10 md:w-[90%] md:mx-auto">
+				<p class="text-center">You have no active periodic alerts.</p>
+			</div>
+		{/if}
+		{#if historyView === 'alert-history'}
+			<div class="mt-4 space-y-10 md:w-[90%] md:mx-auto">
+				<p class="text-center">You have no periodic alert history.</p>
+			</div>
+		{/if}
+	</div>
+{/if}
