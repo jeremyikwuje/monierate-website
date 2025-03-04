@@ -508,10 +508,10 @@
 							<span class="flex justify-between items-center bg-accent-100 md:hidden border dark:border-gray-700 rounded-lg p-4 mb-8">
 								<span class="block text-gray-600 dark:text-gray-300 text-sm ">
 									99% of Bitcoin price predictions are wrong, signup on 
-									<a href="https://tinyurl.com/everybitcoin-text-link">Every Bitcoin</a> and get the 1% useful ones every Monday.
+									<a href="https://tinyurl.com/everybitcoin-text-link">Every Bitcoin Newsletter</a> and get the 1% useful ones every Monday.
 
 									<p class="mt-4">
-										<a href="https://tinyurl.com/everybitcoin-text-link" class="underline">Get Bitcoin Price Updates</a>
+										<a href="https://tinyurl.com/everybitcoin-text-link" class="underline text-semibold">Get Bitcoin Price Updates</a>
 									</p>
 								</span>
 							</span>
