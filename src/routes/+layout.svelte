@@ -297,7 +297,7 @@ function hidePromotionBar() {
                 <li><a data-sveltekit-reload href="/converter/coinprofile?Amount=1&From=USD&To=NGN">Convert USDT on Coinprofile</a></li>
                 <li><a data-sveltekit-reload href="/converter/eversend?Amount=1&From=USD&To=NGN">Convert USD on Eversend</a></li>
                 <li><a data-sveltekit-reload href="/converter/klasha?Amount=1&From=USD&To=NGN">Convert USD on Klasha</a></li>
-                <li><a data-sveltekit-reload href="/converter/paxful?Amount=1&From=USDT&To=NGN">Convert USDT on Paxful</a></li>
+                <li><a data-sveltekit-reload href="/converter/noones?Amount=1&From=USDT&To=NGN">Convert USDT on Noones</a></li>
                 <li><a data-sveltekit-reload href="/converter/remitano?Amount=1&From=USDT&To=NGN">Convert USDT on Remitano</a></li>
                 <li><a data-sveltekit-reload href="/converter/quidax?Amount=1&From=USDT&To=NGN">Convert USDT on Quidax</a></li>
                 <li><a data-sveltekit-reload href="/converter/yellowcard?Amount=1&From=USDT&To=NGN">Convert USDT on Yellow Card</a></li>
@@ -309,6 +309,7 @@ function hidePromotionBar() {
         <div class="w-full md:w-[30%]">
             <h3 class="font-bold">Tools</h3>
             <ul class="py-4 converter-list">
+                <li><a href="https://tinyurl.com/everybitcoin-footer-link">Bitcoin Price Reports</a></li>
                 <li><a href="https://tinyurl.com/cambridge-currencies-foot-link">Send Money to Europe</a></li>
                 <li><a href="https://bit.ly/3Xlo8jv">Pay your Importers</a></li>
                 <li><a href="https://tinyurl.com/bitnob-footer-link-2">Virtual Card API</a></li>
