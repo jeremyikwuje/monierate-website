@@ -307,3 +307,13 @@ export function scrollToSection(id: string, options = {
     const formatter = new Intl.NumberFormat(locales, options);
     return formatter.format(value);
   }
+
+  export function login_uri() {
+    if(browser) {
+      let url = "https://account.monierate.com/login";
+      let current_url = window.location.href;
+      url += "?callback_url=" + encodeURIComponent(current_url);
+      return url;
+    }
+    return null;
+  }

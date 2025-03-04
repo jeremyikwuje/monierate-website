@@ -6,11 +6,11 @@
                 
                 <picture>
 
-                    <source srcset="/media/banners/cedar-blog-2.avif?v=1" type="image/avif">    
-                    <source srcset="/media/banners/cedar-blog-2.gif?v=1" type="image/gif">
+                    <source srcset="/media/banners/cedar-blog.webp?v=1" type="image/avif">    
+                    <source srcset="/media/banners/cedar-blog.png?v=1" type="image/gif">
 
                     <img 
-                        src="/media/banners/cedar-blog-2.avif?v=1"
+                        src="/media/banners/cedar-blog.webp?v=1"
                         alt="Cedar Money"
                         width="800px"
                         height="114px"
