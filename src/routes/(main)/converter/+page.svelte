@@ -503,6 +503,18 @@
 							</span>
 						</div>
 						<div class="block md:flex md:justify-between md:items-center">
+
+							<span class="flex justify-between items-center bg-accent-100 md:hidden border dark:border-gray-700 rounded-lg p-4">
+								<span class="inline-block mr-2">
+									<svg width="90px" height="90px" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" fill="#000000">
+										<g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+										<g id="SVGRepo_iconCarrier"><defs><style>.a,.b{fill:none;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;}.a{stroke-width:0.87px;}</style></defs><path class="a" d="M27.13,24.84a5.33,5.33,0,0,1-2.76,10.29l-8.49-2.28,5.51-20.58,8.49,2.28a5.33,5.33,0,1,1-2.75,10.29Z"></path><line class="a" x1="27.13" y1="24.84" x2="18.64" y2="22.56"></line><line class="a" x1="21.39" y1="12.27" x2="18.38" y2="11.47"></line><line class="a" x1="15.88" y1="32.85" x2="12.86" y2="32.04"></line><line class="a" x1="24.01" y1="12.98" x2="24.99" y2="9.33"></line><line class="a" x1="28.21" y1="14.1" x2="29.19" y2="10.45"></line><line class="a" x1="17.52" y1="37.2" x2="18.5" y2="33.55"></line><line class="a" x1="21.72" y1="38.33" x2="22.7" y2="34.68"></line><path class="b" d="M40.5,5.5H7.5a2,2,0,0,0-2,2v33a2,2,0,0,0,2,2h33a2,2,0,0,0,2-2V7.5A2,2,0,0,0,40.5,5.5Z"></path></g></svg>
+								</span>
+								<span class="text-gray-600 dark:text-gray-300 text-sm">
+									99% of Bitcoin price predictions are wrong, signup on 
+									<a href="https://everybitcoin.substack.com/welcome">Every Bitcoin</a> and get the 1% useful ones every Monday.
+								</span>
+							</span>
 							<span
 								class="flex justify-between items-center bg-accent-100 md:w-[40%] border dark:border-gray-700 rounded-lg p-4 mb-8 md:mb-0"
 							>
