@@ -36,7 +36,7 @@
 					<p class="mt-2 text-5xl font-bold text-gray-900 dark:text-gray-100">
 						{currencySymbols[plan.currency]
 							? currencySymbols[plan.currency]
-							: plan.currency}{formatNumber(plan.price)}
+							: plan.currency}{formatNumber(plan.price)}<span class="text-lg text-gray-500 dark:text-gray-400">/yr</span>
 					</p>
 				</div>
 				<ul class="mt-6 space-y-4">
