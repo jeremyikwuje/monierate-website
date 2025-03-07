@@ -62,12 +62,18 @@
 
 <svelte:head>
 	<title>Monierate API</title>
-	<meta name="description" content="Monierate API provides reliable exchange rates for all your applications. Easy to integrate and use.">
+	<meta
+		name="description"
+		content="Monierate API provides reliable exchange rates for all your applications. Easy to integrate and use."
+	/>
 	<meta property="og:type" content="website" />
 	<meta property="og:title" content="Monierate API | Exchange Rates Made Easy" />
-	<meta property="og:description" content="Monierate API provides reliable exchange rates for all your applications. Easy to integrate and use." />	
+	<meta
+		property="og:description"
+		content="Monierate API provides reliable exchange rates for all your applications. Easy to integrate and use."
+	/>
 	<meta property="og:url" content="monierate.com/api" />
-    <meta property="og:image" content="https://monierate.com/monierate-og-image.png">
+	<meta property="og:image" content="https://monierate.com/monierate-og-image.png" />
 </svelte:head>
 
 <div class="bg-white dark:bg-gray-800">
@@ -104,6 +110,25 @@
 	</div>
 
 	<Pricing {data} />
+</div>
+
+<div class="py-2 mb-16">
+	<div class="container">
+		<div class="mb-5 md:mb-0">
+			<span class="block text-2xl font-bold mb-3">
+				Want a Free Trial?
+			</span>
+			<p class="text-gray-700 dark:text-gray-300">
+				Start for free with our
+				<a
+					href="https://account.monierate.com/subscription"
+					class="text-blue-600 dark:text-blue-400 font-medium hover:underline"
+				>
+					free plan
+				</a> today!
+			</p>
+		</div>
+	</div>
 </div>
 
 <div class="bg-gray-50 dark:bg-gray-900/60 py-2 mb-16">
