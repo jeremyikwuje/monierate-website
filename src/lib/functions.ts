@@ -317,3 +317,9 @@ export function scrollToSection(id: string, options = {
     }
     return null;
   }
+
+  export function capitalizeAndJoin(words: string[]): string {
+    return words
+      .map((word: string) => word.charAt(0).toUpperCase() + word.slice(1))
+      .join(', ');
+  }
