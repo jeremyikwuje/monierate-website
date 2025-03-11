@@ -121,7 +121,7 @@
 			<p class="text-gray-700 dark:text-gray-300">
 				Start for free with our
 				<a
-					href="https://account.monierate.com/subscription"
+					href="https://account.monierate.com/signup"
 					class="text-blue-600 dark:text-blue-400 font-medium hover:underline"
 				>
 					free plan
