@@ -151,7 +151,7 @@
     <div class="top-landscape mb-8">
         <a href="https://tinyurl.com/bitnob-monierate-click" target="_blank">
             <picture>
-                <source srcset="/media/banners/bitnob-landscape.jpg?v=1" type="image/jpg" />
+                <source srcset="/media/banners/bitnob-landscape.png?v=1" type="image/jpg" />
                 <source srcset="/media/banners/bitnob-landscape.webp?v=1" type="image/webp" />
 
                 <img
