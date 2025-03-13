@@ -216,7 +216,7 @@
 	<div class="container">
 		<!-- Landscape Top/Bottom -->
 		<div class="top-landscape mb-8">
-				<a href="https://tinyurl.com/bitnob-banner-link" target="_blank">
+				<a href="https://tinyurl.com/bitnob-stablecoin-lin" target="_blank">
 						<picture>
 							<source srcset="/media/banners/bitnob-landscape-small.webp?v=1" type="image/jpg" />
 							<source srcset="/media/banners/bitnob-landscape-small.png?v=2" type="image/webp" />
