@@ -498,7 +498,7 @@
 
 	<!-- Landscape Top/Bottom -->
 	<div class="bitnob-div mt-4 pt-8">
-		<a href="https://tinyurl.com/bitnob-banner-link" target="_blank">
+		<a href="https://tinyurl.com/bitnob-stablecoin-lin" target="_blank">
 			<picture>
 				<source srcset="/media/banners/bitnob-landscape-small.webp?v=1" type="image/avif" />
 				<source srcset="/media/banners/bitnob-landscape-small.png?v=2" type="image/gif" />
@@ -541,19 +541,6 @@
 		</div>
 	</div>
 </div>
-
-<!--<div class="bg-white dark:bg-gray-800">
-    <div class="container">
-        <div class="pst-net">
-            <a href="https://tinyurl.com/mpz2jv3t" target="_blank">
-                <img 
-                    src="https://ik.imagekit.io/monierate/partners/pst.gif"
-                    alt="PST NET Virtual Cards"
-                    class="mx-auto max-w-full md:w-[800px] md:h-[114px]">
-            </a>
-        </div>
-    </div>
-</div>-->
 
 <main>
 	<div class="w-full">
