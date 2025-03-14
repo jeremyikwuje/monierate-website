@@ -21,14 +21,14 @@
 				>
 					<a
 						class="button tab-button {currentView === CurrentView.THRESHOLD ? 'active' : ''} text-[0.8em] md:text-sm"
-						href="/alerts/price-alert/threshold"
+						href="/alert/price-alert/threshold"
 					>
 					<i class="fa fa-line-chart pr-2" />
 						Price
 					</a>
 					<a
 						class="button tab-button {currentView === CurrentView.PERIODIC ? 'active' : ''} text-[0.8em] md:text-sm"
-						href="/alerts/price-alert/periodic"
+						href="/alert/price-alert/periodic"
 					>
 						<i class="fa fa-clock pr-2" />
 						Periodic
