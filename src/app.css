@@ -56,6 +56,10 @@
         cursor: pointer;
     }
 
+    .button[disabled] {
+        @apply opacity-50 cursor-not-allowed;
+    }
+
     .select {
         @apply py-4;
     }
