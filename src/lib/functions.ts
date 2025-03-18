@@ -309,9 +309,14 @@ export function scrollToSection(id: string, options = {
   }
 
   export function login_uri() {
-    if(browser) {
+    if (browser) {
       let url = "https://account.monierate.com/login";
       let current_url = window.location.href;
+      
+      if (current_url.includes("localhost")) {
+        url = "http://localhost:5174/login";
+      }
+      
       url += "?callback_url=" + encodeURIComponent(current_url);
       return url;
     }

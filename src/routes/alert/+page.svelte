@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { login_uri } from '$lib/functions';
 	export let data;
 	const user: any = data.user;
 </script>
@@ -18,7 +19,7 @@
 	{:else}
 		<div class="text-center">
 			<p class="text-2xl mb-4">You need to login to view your alerts.</p>
-			<a href="https://account.monierate.com/login" class="text-blue-500 hover:underline">Login</a>
+			<a href={login_uri()} class="text-blue-500 hover:underline">Login</a>
 		</div>
 	{/if}
 </div>

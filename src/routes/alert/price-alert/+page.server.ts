@@ -1,5 +1,5 @@
 import { redirect } from '@sveltejs/kit';
 
 export const load = () => {
-    throw redirect(302, '/alert/price-alert/threshold');
+    throw redirect(302, '/alert/price-alert/periodic');
 };
