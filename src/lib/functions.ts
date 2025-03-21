@@ -345,7 +345,7 @@ export function getReadableFrequency(frequency: { type: string; value: number; t
       return `Every ${frequency.value} ${frequency.value === 1 ? "day" : "days"}`;
 
     case "weekly":
-      return `Every ${daysOfWeek[frequency.value % 7]}${timeSuffix}`;
+      return `Every ${daysOfWeek[frequency.value - 1]}${timeSuffix}`;
 
     case "monthly":
       const daySuffix = getDaySuffix(frequency.value);
