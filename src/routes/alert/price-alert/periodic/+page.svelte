@@ -228,10 +228,6 @@
 			alert.note = note;
 		}
 
-		if (selectedTimeframe === 'Monthly' || selectedTimeframe === 'Weekly') {
-			alert.frequency.time = selectedDayTimeValues;
-		}
-
 		try {
 			const update_alert_response = await update_alert(alert);
 
