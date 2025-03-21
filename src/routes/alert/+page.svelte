@@ -97,15 +97,16 @@
 		if (searchText === '') {
 			alerts = data.alerts;
 		} else {
-			alerts = alerts.filter(
+			alerts = data.alerts.filter(
 				(a) =>
 					a.base.toLowerCase().includes(searchText.toLowerCase()) ||
 					a.quote.toLowerCase().includes(searchText.toLowerCase()) ||
 					a.exchange.some((e) => e.toLowerCase().includes(searchText.toLowerCase())) ||
-					a.channel.some((c) => c.toLowerCase().includes(searchText.toLowerCase())) ||
+					Object.entries(a.channel).some((c) => c.toString().toLowerCase().includes(searchText.toLowerCase())) ||
 					(a.note && a.note.toLowerCase().includes(searchText.toLowerCase())) ||
 					friendlyDate(a.created_at).toLowerCase().includes(searchText.toLowerCase())
 			);
+			console.log(alerts)
 		}
 	}
 
