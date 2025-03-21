@@ -49,7 +49,7 @@
 	) as Alerts;
 
 	let showSearch: boolean = false;
-	let showConfirmAlertDeletion: boolean = false;
+	let showConfirmAlertDeletion = {} as { [key: string]: boolean };
 	let showConfirmAllAlertDeletion: boolean = false;
 	let showConfirmDisabledAlertDeletion: boolean = false;
 	let showConfirmEnabledAlertDeletion: boolean = false;
@@ -117,7 +117,7 @@
 		} else {
 			notify('There was an error deleting the alert');
 		}
-		showConfirmAlertDeletion = false;
+		showConfirmAlertDeletion[id] = false;
 	}
 
 	async function deleteAllAlert() {
@@ -347,18 +347,18 @@
 									<button
 										class="text-gray-400 hover:text-red-500"
 										aria-label="Delete"
-										on:click={() => (showConfirmAlertDeletion = true)}
+										on:click={() => (showConfirmAlertDeletion[alert._id] = true)}
 									>
 										<i class="fa fa-trash text-lg" />
 									</button>
-									<button class="md:hidden" on:click={() => (showConfirmAlertDeletion = true)}
+									<button class="md:hidden" on:click={() => (showConfirmAlertDeletion[alert._id] = true)}
 										>Delete this alert</button
 									>
 								</span>
 							</div>
 						</div>
 						<Dialog
-							bind:isOpen={showConfirmAlertDeletion}
+							bind:isOpen={showConfirmAlertDeletion[alert._id]}
 							title="Are you sure you want to delete this alert?"
 							actions={[
 								{
