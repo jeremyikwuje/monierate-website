@@ -13,6 +13,8 @@ export const load: LayoutServerLoad = async ({ url }) => {
 				label: value.code.toUpperCase() + ' - NGN',
 				value: value.code + 'ngn',
 				description: `The price of ${value.name} in Naira`,
+				quote: 'ngn',
+				base: value.code,
 			};
 		}
 		return null;

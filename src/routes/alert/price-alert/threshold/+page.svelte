@@ -384,32 +384,6 @@
 	</div>
 </div>
 
-{#if user.isLogin}
-	<div class="w-full md:w-1/2 mx-auto mt-16">
-		<div class="flex justify-center items-center gap-16 text-lg mb-10">
-			<button
-				class={historyView === 'active-alerts' ? 'text-blue-500' : 'hover:text-gray-500'}
-				on:click={() => (historyView = 'active-alerts')}>Active alerts</button
-			>
-			<button
-				class={historyView === 'alert-history' ? 'text-blue-500' : 'hover:text-gray-500'}
-				on:click={() => (historyView = 'alert-history')}>Alert history</button
-			>
-		</div>
-
-		{#if historyView === 'active-alerts'}
-			<div class="mt-4 space-y-10 md:w-[90%] md:mx-auto">
-				<p class="text-center">You have no active periodic alerts.</p>
-			</div>
-		{/if}
-		{#if historyView === 'alert-history'}
-			<div class="mt-4 space-y-10 md:w-[90%] md:mx-auto">
-				<p class="text-center">You have no periodic alert history.</p>
-			</div>
-		{/if}
-	</div>
-{/if}
-
 <style>
 	.c-buttom {
 		@apply w-full text-left bg-gray-100 dark:bg-gray-800 p-2 rounded-lg border border-gray-300 dark:border-gray-600 hover:border-gray-400 focus:border-gray-400 focus:outline-none focus:ring-0;

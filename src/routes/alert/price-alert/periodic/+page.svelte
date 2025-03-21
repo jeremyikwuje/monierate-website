@@ -1,6 +1,9 @@
 <script lang="ts">
 	import CustomSelectBox from '$lib/components/CustomSelectBox.svelte';
 	import { Timeframe } from './types';
+	import { create_alert, update_alert } from '$lib/price_alert/alert.service';
+	import { notify } from '$lib/notification';
+	import { goto } from '$app/navigation';
 
 	type Provider = { name: string; code: string; icon: string; pairs: any };
 	type DropdownOption = { label: string; value: string; icon: string };
@@ -16,31 +19,44 @@
 		WEBHOOK = 'webhook'
 	}
 
-	$: current_screen = CurrentScreen.FIRST_SCREEN;
+	let current_screen = CurrentScreen.FIRST_SCREEN;
 
 	const change_screen = (screen: CurrentScreen) => {
 		current_screen = screen;
 	};
 
 	export let data;
-	const providers: [Provider] = data.providers;
+	const providers: Provider[] = data.providers;
 	const pair_list: any = data.pair_list;
 	const user: any = data.user;
 
-	let currentView: string = 'details' as 'details' | 'options';
-	let historyView: string = 'active-alerts' as 'active-alerts' | 'alert-history';
+	let alertEdit: any = false;
+
+	if (data.alert && data.alert._id) {
+		alertEdit = data.alert;
+	}
+
+	let currentView: string = 'details';
+	let isLoading: boolean = false;
 
 	let selectedPair: string = 'usdngn';
 	let selectedProviders: string[] = [];
-	$: selectedChannels = [] as string[];
+	let selectedChannels: string[] = [];
 	let selectedChannelsValues = {} as { email: string; webhook: string };
 	let selectedTimeframe = Object.keys(Timeframe)[0] as string;
-	let selectedTimeframeInterval = 0 as number;
+	let selectedTimeframeInterval = 1;
+	let selectedDayTimeValues = 1;
 	let disableAfterTrigger: boolean = false;
 	let note: string = '';
 
-	if (user.isLogin) {
-		selectedChannelsValues = { email: user.email, webhook: '' };
+	$: selected_base = pair_list.find((pair: any) => pair.value === selectedPair)?.base;
+	$: selected_quote = pair_list.find((pair: any) => pair.value === selectedPair)?.quote;
+	$: getSelectedTimeframe = selectedTimeframe ? Timeframe[selectedTimeframe]?.frequency?.type : '';
+
+	let error: string = '';
+
+	if (user?.isLogin && !alertEdit) {
+		selectedChannelsValues.email = user.email;
 	}
 
 	let isSelectedProvidersDropdownOpen: boolean = false;
@@ -53,27 +69,34 @@
 		}
 	};
 
-	const timeframeOptions = Object.entries(Timeframe).map(([key, value]: [any, any]) => ({
+	const timeframeOptions = Object.entries(Timeframe).map(([key, value]) => ({
 		label: key,
 		value: key
 	}));
 
-	$: timeframeValues =
-		selectedTimeframe === ''
-			? []
-			: Object.entries(Timeframe[selectedTimeframe].frequency.values).map(
-					([key, value]: [any, any]) => ({
-						label: key,
-						value: value
-					})
-			  );
+	$: timeframeValues = !selectedTimeframe
+		? []
+		: Object.entries(Timeframe[selectedTimeframe]?.frequency?.values || {}).map(([key, value]) => ({
+				label: key,
+				value: value
+		  }));
+
+	$: dayTimeValues =
+		selectedTimeframe === 'Monthly' || selectedTimeframe === 'Weekly'
+			? Object.entries(Timeframe[selectedTimeframe]?.frequency?.time || {}).map(([key, value]) => ({
+					label: key,
+					value: value
+			  }))
+			: [];
 
 	let providersForDropdown: DropdownOption[] = [];
-	$: {
+
+	function updateProvidersForDropdown() {
 		providersForDropdown = Object.entries(providers)
 			.filter(([_, value]) => {
 				try {
-					return value.pairs[selectedPair.toLowerCase()] !== undefined;
+					const provider = value as Provider;
+					return provider.pairs && provider.pairs[selectedPair.toLowerCase()] !== undefined;
 				} catch (e) {
 					return false;
 				}
@@ -85,10 +108,198 @@
 					value: provider.code,
 					icon: '/icons/' + provider.icon
 				};
-			}) as DropdownOption[];
-
-		selectedProviders = [];
+			});
 	}
+
+	$: if (selectedPair) {
+		updateProvidersForDropdown();
+	}
+
+	async function create_alert_handler() {
+		if (selectedProviders.length === 0) {
+			error = 'Please select at least one provider';
+			return;
+		}
+
+		if (Object.entries(selectedChannelsValues).length === 0) {
+			error = 'Please select at least one notification channel';
+			return;
+		}
+
+		isLoading = true;
+		const alert: any = {
+			type: 'periodic',
+			quote: selected_quote,
+			base: selected_base,
+			frequency: {
+				type: getSelectedTimeframe,
+				value: selectedTimeframeInterval
+			},
+			exchange: selectedProviders,
+			channel: selectedChannelsValues,
+			disable_after_trigger: disableAfterTrigger
+		};
+
+		if (selectedTimeframe === 'Monthly' || selectedTimeframe === 'Weekly') {
+			alert.frequency.time = selectedDayTimeValues;
+		}
+
+		if (note !== '') {
+			alert.note = note;
+		}
+
+		try {
+			const create_alert_response = await create_alert(alert);
+
+			isLoading = false;
+			if (create_alert_response.error) {
+				notify(create_alert_response.error);
+			} else if (create_alert_response.status === 'error') {
+				error = create_alert_response.message;
+			} else {
+				notify(create_alert_response.message);
+				goto('/alert');
+			}
+		} catch (err) {
+			isLoading = false;
+			error = 'Failed to create alert. Please try again.';
+			console.error('Create alert error:', err);
+		}
+	}
+
+	async function update_alert_handler(alert_id: string) {
+		if (selectedProviders.length === 0) {
+			error = 'Please select at least one provider';
+			return;
+		}
+
+		if (Object.entries(selectedChannelsValues).length === 0) {
+			error = 'Please select at least one notification channel';
+			return;
+		}
+
+		isLoading = true;
+		const alert: any = {
+			id: alert_id,
+			type: 'periodic'
+		};
+
+		if (selected_quote !== alertEdit.quote) {
+			alert.quote = selected_quote;
+		}
+
+		if (selected_base !== alertEdit.base) {
+			alert.base = selected_base;
+		}
+
+		if (
+			getSelectedTimeframe !== alertEdit.frequency?.type ||
+			selectedTimeframeInterval !== alertEdit.frequency?.value
+		) {
+			alert.frequency = {
+				type: getSelectedTimeframe,
+				value: selectedTimeframeInterval
+			};
+		}
+
+		if (
+			(selectedTimeframe === 'Monthly' || selectedTimeframe === 'Weekly') &&
+			selectedDayTimeValues !== alertEdit.frequency?.time
+		) {
+			alert.frequency = {
+				...(alert.frequency || {}),
+				time: selectedDayTimeValues
+			};
+		}
+
+		if (JSON.stringify(selectedProviders) !== JSON.stringify(alertEdit.exchange)) {
+			alert.exchange = selectedProviders;
+		}
+
+		if (JSON.stringify(selectedChannelsValues) !== JSON.stringify(alertEdit.channel)) {
+			alert.channel = selectedChannelsValues;
+		}
+
+		if (disableAfterTrigger !== alertEdit.disable_after_trigger) {
+			alert.disable_after_trigger = disableAfterTrigger;
+		}
+
+		if (note !== alertEdit.note && note !== '') {
+			alert.note = note;
+		}
+
+		if (selectedTimeframe === 'Monthly' || selectedTimeframe === 'Weekly') {
+			alert.frequency.time = selectedDayTimeValues;
+		}
+
+		try {
+			const update_alert_response = await update_alert(alert);
+
+			isLoading = false;
+			if (update_alert_response.error) {
+				notify(update_alert_response.error);
+			} else if (update_alert_response.status === 'error') {
+				error = update_alert_response.message;
+			} else {
+				notify(update_alert_response.message);
+				goto('/alert');
+			}
+		} catch (err) {
+			isLoading = false;
+			error = 'Failed to update alert. Please try again.';
+			console.error('Update alert error:', err);
+		}
+	}
+
+	function initializeFromExistingAlert() {
+		if (!alertEdit) return;
+
+		console.log('Initializing from existing alert');
+
+		if (alertEdit.base && alertEdit.quote) {
+			selectedPair = `${alertEdit.base}${alertEdit.quote}`.toLowerCase();
+
+			updateProvidersForDropdown();
+		}
+
+		setTimeout(() => {
+			if (alertEdit.exchange && Array.isArray(alertEdit.exchange)) {
+				selectedProviders = [...alertEdit.exchange];
+			}
+		}, 100);
+
+		if (alertEdit.channel && Object.entries(alertEdit.channel)) {
+			selectedChannels = [...Object.keys(alertEdit.channel)];
+			selectedChannelsValues = { ...alertEdit.channel };
+		}
+
+		if (alertEdit.frequency) {
+			for (const [key, value] of Object.entries(Timeframe as [any, any])) {
+				if (value.frequency && value.frequency.type === alertEdit.frequency.type) {
+					selectedTimeframe = key;
+					break;
+				}
+			}
+
+			if (alertEdit.frequency.value !== undefined) {
+				selectedTimeframeInterval = alertEdit.frequency.value;
+			}
+
+			if (alertEdit.frequency.time !== undefined) {
+				selectedDayTimeValues = alertEdit.frequency.time;
+			}
+		}
+
+		if (alertEdit.disable_after_trigger !== undefined) {
+			disableAfterTrigger = alertEdit.disable_after_trigger;
+		}
+
+		if (alertEdit.note) {
+			note = alertEdit.note;
+		}
+	}
+
+	initializeFromExistingAlert();
 </script>
 
 <svelte:head>
@@ -98,14 +309,25 @@
 <div class="flex flex-col md:flex-row gap-4">
 	<div class="w-full md:w-1/2">
 		<div class="md:w-3/4 mx-auto px-2 md:px-10 pb-5 flex flex-col gap-5">
-			<div class="text-center mb-8">
-				<h2 class="text-2xl mb-2"><i class="fa fa-clock pr-4" /> Periodic Price Alerts</h2>
+			<div class="text-center mb-4">
+				<h2 class="text-2xl mb-2">
+					<i class="fa fa-clock pr-4" />
+					{alertEdit ? 'Update' : ''} Periodic Price Alerts
+				</h2>
 				<p class="text-gray-500">Get notified of the price of an asset at regular intervals.</p>
 			</div>
 
 			{#if current_screen === CurrentScreen.FIRST_SCREEN}
 				<div>
-					<p class="text-xl mb-4">Select a pair and providers to get started.</p>
+					{#if alertEdit}
+						<p class="text-xl mb-4">
+							Please review and apply the necessary updates to refresh this alert.
+						</p>
+					{:else}
+						<p class="text-xl mb-4">Select a pair and providers to get started.</p>
+					{/if}
+
+					<p class="text-red-500 mb-2">{error}</p>
 
 					<div class="mb-5">
 						<label for="pair" class="label">Select a pair</label>
@@ -264,7 +486,7 @@
 
 					<button
 						class="button w-full"
-						disabled={!(Object.entries(selectedChannelsValues).length > 0)}
+						disabled={!(selectedChannelsValues.email || selectedChannelsValues.webhook)}
 						on:click={() => change_screen(CurrentScreen.THIRD_SCREEN)}>Continue</button
 					>
 					<button
@@ -301,14 +523,50 @@
 								/>
 							</div>
 						{/if}
+
+						{#if selectedTimeframe === 'Monthly' || selectedTimeframe === 'Weekly'}
+							<div class="mb-4">
+								<label for="timexx" class="label">What time of the day</label>
+								<CustomSelectBox
+									options={dayTimeValues}
+									fullbox={true}
+									className="!w-full"
+									id="timexx"
+									bind:selected={selectedDayTimeValues}
+									placeholder="Select interval"
+								/>
+							</div>
+						{/if}
 					</div>
 
-					<button class="button w-full">Set alert</button>
+					{#if alertEdit}
+						<button
+							class="button w-full"
+							on:click={() => update_alert_handler(alertEdit._id)}
+							disabled={isLoading ||
+								(selectedTimeframe === 'Hourly' && selectedTimeframeInterval === 1)}
+							>Update alert</button
+						>
+					{:else}
+						<button
+							class="button w-full"
+							on:click={create_alert_handler}
+							disabled={isLoading ||
+								(selectedTimeframe === 'Hourly' && selectedTimeframeInterval === 1)}
+							>Set alert</button
+						>
+					{/if}
 					<button
 						class="border border-gray-300 dark:border-gray-600 hover:border-gray-400 w-full mt-4 p-2 rounded-lg text-center text-gray-500 dark:text-gray-400"
 						on:click={() => change_screen(CurrentScreen.SECOND_SCREEN)}>Go back</button
 					>
 				</div>
+			{/if}
+			{#if alertEdit}
+				<button
+					class="border border-gray-300 dark:border-gray-600 hover:border-gray-400 w-full mt-4 p-2 rounded-lg text-center text-gray-500 dark:text-gray-400"
+					on:click={() => goto('/alert', { replaceState: true })}>Cancel changes</button
+				>
 			{/if}
 		</div>
 	</div>
@@ -379,32 +637,6 @@
 		{/if}
 	</div>
 </div>
-
-{#if user.isLogin}
-	<div class="w-full md:w-1/2 mx-auto mt-16">
-		<div class="flex justify-center items-center gap-16 text-lg mb-10">
-			<button
-				class={historyView === 'active-alerts' ? 'text-blue-500' : 'hover:text-gray-500'}
-				on:click={() => (historyView = 'active-alerts')}>Active alerts</button
-			>
-			<button
-				class={historyView === 'alert-history' ? 'text-blue-500' : 'hover:text-gray-500'}
-				on:click={() => (historyView = 'alert-history')}>Alert history</button
-			>
-		</div>
-
-		{#if historyView === 'active-alerts'}
-			<div class="mt-4 space-y-10 md:w-[90%] md:mx-auto">
-				<p class="text-center">You have no active periodic alerts.</p>
-			</div>
-		{/if}
-		{#if historyView === 'alert-history'}
-			<div class="mt-4 space-y-10 md:w-[90%] md:mx-auto">
-				<p class="text-center">You have no periodic alert history.</p>
-			</div>
-		{/if}
-	</div>
-{/if}
 
 <style>
 	.c-buttom {
