@@ -10,9 +10,9 @@
 
 <div class="container">
 	<div
-		class="bg-white border border-gray-300 dark:border-none dark:bg-gray-900/50 dark:shadow-[0_4px_6px_rgba(0,0,0,0.1)] rounded-xl p-2 md:p-5 py-4"
+		class="bg-white border border-gray-300 dark:border-none dark:bg-gray-900/50 dark:shadow-[0_4px_6px_rgba(0,0,0,0.1)] rounded-xl p-2 md:p-6"
 	>
-		<div class="flex justify-center items-center mb-10">
+		<!-- <div class="flex justify-center items-center mb-10">
 			<div class="w-full md:w-1/2">
 				<div
 					class="flex justify-between bg-accent-100 border dark:border-gray-700 rounded-[30px] p-2 mb-4 text-sm text-gray-600"
@@ -27,7 +27,7 @@
 						<i class="fa fa-clock pr-2" />
 						Periodic
 					</a>
-					<!-- <a
+					<a
 						class="button tab-button {currentView === CurrentView.THRESHOLD
 							? 'active'
 							: ''} text-[0.8em] md:text-sm"
@@ -35,10 +35,10 @@
 					>
 						<i class="fa fa-line-chart pr-2" />
 						Price
-					</a> -->
+					</a>
 				</div>
 			</div>
-		</div>
+		</div> -->
 
 		<slot />
 	</div>

@@ -1,10 +1,5 @@
 <script lang="ts">
-	import {
-		login_uri,
-		capitalizeFirstLetter,
-		getReadableFrequency,
-		friendlyDate
-	} from '$lib/functions';
+	import { capitalizeFirstLetter, friendlyDate, getNextTriggerTime } from '$lib/functions';
 	import { notify } from '$lib/notification';
 	import {
 		get_all_alerts,
@@ -18,6 +13,8 @@
 	import Dialog from '$lib/components/Dialog.svelte';
 	import { goto } from '$app/navigation';
 	import CustomSelectBox from '$lib/components/CustomSelectBox.svelte';
+	import TipView from '$lib/components/TipView.svelte';
+	import { browser } from '$app/environment';
 
 	type Alert = {
 		_id: string;
@@ -38,6 +35,7 @@
 		disable_after_trigger: boolean;
 		status: string;
 		created_at: any;
+		last_triggered: any;
 	};
 
 	type Alerts = Alert[];
@@ -49,6 +47,15 @@
 	$: alerts = data.alerts?.sort(
 		(a: any, b: any) => new Date(b.created_at).getTime() - new Date(a.created_at).getTime()
 	) as Alerts;
+
+	$: {
+		if (
+			(browser && !user?.isLogin) ||
+			(user?.isLogin && data.alerts && !(data.alerts.length > 0))
+		) {
+			goto('/alert/price-alert/periodic', { replaceState: true });
+		}
+	}
 
 	let showSearch: boolean = false;
 	let showConfirmAlertDeletion = {} as { [key: string]: boolean };
@@ -191,6 +198,10 @@
 		goto(`/alert/price-alert/${alert_type}?edit_alert=${alert_id}`);
 	}
 
+	function getProvider(code: string) {
+		return providers.find((p: any) => p.code === code);
+	}
+
 	onMount(() => {
 		window.addEventListener('click', (e) => {
 			if (e.target instanceof HTMLElement && !e.target.closest('.all-alert-options')) {
@@ -205,10 +216,10 @@
 </svelte:head>
 
 <div class="container">
-	<h2 class="text-3xl mb-4">My alerts</h2>
-	<div class="mb-6">View and manage all your price alerts in one place.</div>
-
 	{#if user.isLogin}
+		<h2 class="text-3xl mb-4">My alerts</h2>
+		<div class="mb-6">View and manage all your price alerts in one place.</div>
+
 		{#if data.alerts && data.alerts.length > 0}
 			<div class="flex gap-2 items-center justify-end mb-4 md:hidden">
 				<a href="/alert/price-alert/" class="button">Create alert</a>
@@ -317,130 +328,172 @@
 					>
 				</div>
 
-				{#if searchText !== '' || selectedPairForFilter !== '' && alerts.length === 0}
+				{#if searchText !== '' || (selectedPairForFilter !== '' && alerts.length === 0)}
 					<p class="text-center text-gray-400 my-16">No results found.</p>
 				{:else}
-					{#each alerts as alert}
-						<div
-							class="flex items-center justify-between bg-white dark:bg-gray-800 p-4 rounded-lg mb-4 shadow-lg hover:shadow-xl transition-shadow duration-300"
-						>
-							<div class="flex flex-col gap-1 text-sm md:text-base">
-								<div class="flex items-center gap-2">
-									<span class="text-red-500 text-lg">
-										<i class="fa fa-bell" />
-									</span>
-									{#if alert.type === 'periodic'}
-										<span class="text-gray-600 dark:text-gray-300">
-											Receive price alert via <span class="text-green-400 font-semibold"
-												>{Object.keys(alert.channel)
-													.map((c) => capitalizeFirstLetter(c))
-													.join(', ')}</span
-											>,
-											<span class="text-blue-400 font-semibold"
-												>{getReadableFrequency(alert.frequency).toLowerCase()}</span
-											>
-											for
-											<span class="text-yellow-400 font-semibold">{alert.base.toUpperCase()}</span>
-											in
-											<span class="text-yellow-400 font-semibold">{alert.quote.toUpperCase()}</span>
-											on
-											<span class="text-blue-500 font-semibold">{alert.exchange.join(', ')}</span>.
-										</span>
-									{:else}
-										<p>Threshold alert</p>
-									{/if}
-								</div>
-								<div
-									class="text-sm text-gray-800 dark:text-gray-400 flex flex-col md:flex-row md:items-center gap-2 flex-wrap"
-								>
-									<span>
-										Created: <span class="text-gray-600 dark:text-gray-300"
-											>{friendlyDate(alert.created_at)}</span
+					<div class="mb-10 overflow-x-auto md:overflow-visible">
+						<div class="min-w-[700px] md:min-w-auto">
+							<table class="table-auto w-full border-separate border-spacing-y-4">
+								<thead>
+									<tr>
+										<th class="p-4 text-left">Pairs, Providers</th>
+										<th class="p-4 text-left">Channels</th>
+										<th class="p-4 text-left">Last Trigger</th>
+										<th class="p-4 text-left">Next Trigger</th>
+										<th class="p-4 text-left" />
+									</tr>
+								</thead>
+								<tbody>
+									{#each alerts as alert}
+										<tr
+											class="bg-white dark:bg-gray-800 shadow-lg hover:shadow-xl transition-shadow duration-300"
 										>
-									</span>
-									{#if alert.note}
-										<span class="text-gray-600 dark:text-gray-300 hidden md:inline-block"> | </span>
-										<span class="text-gray-500 dark:text-gray-400">Note: {alert.note}</span>
-									{/if}
-									{#if alert.disable_after_trigger}
-										<span class="text-gray-600 dark:text-gray-300 hidden md:inline-block"> | </span>
-										<span class="text-gray-500 dark:text-gray-400"
-											>Will be disabled after being sent.</span
-										>
-									{/if}
-								</div>
-							</div>
-							<div class="md:hidden ml-1 alert-options">
-								<button
-									class="text-gray-400 hover:text-red-500"
-									aria-label="Options"
-									on:click={() => showAlertOptions(alert._id)}
-								>
-									<i class="fa fa-gear text-lg" />
-								</button>
-							</div>
-							<div
-								class="hidden md:flex items-center gap-4 fixed md:static left-0 bottom-0 z-[60] bg-gray-100 dark:bg-gray-900 md:bg-transparent md:dark:bg-transparent p-5 md:p-0 w-full md:w-auto alert-options"
-								id="alert-option-{alert._id}"
-							>
-								<span class="flex items-center gap-4 w-full md:w-auto p-4 md:p-0">
-									<button
-										class="w-12 h-6 rounded-full relative focus:outline-none"
-										style="background-color: {alert.status === 'active' ? '#4CAF50' : '#c0c0c0'};"
-										on:click={() => toggleAlertStatus(alert._id)}
-									>
-										<span
-											class="absolute top-0.5 left-1 w-5 h-5 bg-white rounded-full transition-transform"
-											style="transform: translateX({alert.status === 'active' ? '24px' : '0px'});"
-										/>
-									</button>
-									<button class="md:hidden" on:click={() => toggleAlertStatus(alert._id)}
-										>Enable/Disable this alert</button
-									>
-								</span>
-								<span class="flex items-center gap-4 w-full md:w-auto p-4 md:p-0">
-									<button
-										class="text-gray-400 hover:text-gray-500"
-										aria-label="Edit"
-										on:click={() => editAlert(alert._id, alert.type)}
-									>
-										<i class="fa fa-edit text-lg" />
-									</button>
-									<button class="md:hidden" on:click={() => editAlert(alert._id, alert.type)}
-										>Edit this alert</button
-									>
-								</span>
-								<span class="flex items-center gap-4 w-full md:w-auto p-4 md:p-0">
-									<button
-										class="text-gray-400 hover:text-red-500"
-										aria-label="Delete"
-										on:click={() => (showConfirmAlertDeletion[alert._id] = true)}
-									>
-										<i class="fa fa-trash text-lg" />
-									</button>
-									<button
-										class="md:hidden"
-										on:click={() => (showConfirmAlertDeletion[alert._id] = true)}
-										>Delete this alert</button
-									>
-								</span>
-							</div>
+											<td class="px-4 py-2 text-left">
+												<span class="block mb-2">
+													{alert.base.toUpperCase()} in {alert.quote.toUpperCase()}
+												</span>
+												<span class="flex flex-wrap gap-2 items-center">
+													{#each alert.exchange as exchange, index}
+														{#if index <= 2}
+															<span
+																class="bg-gray-100 dark:bg-gray-800 text-sm px-2 py-1 rounded-full inline-flex items-center mb-2 border border-gray-300 dark:border-gray-700"
+															>
+																<img
+																	src="/icons/{getProvider(exchange).icon}"
+																	alt="icon"
+																	class="w-4 h-4 mr-2"
+																/>
+																{getProvider(exchange).name}
+															</span>
+														{/if}
+														{#if alert.exchange.length - 1 === index}
+															{#if index > 2 && alert.exchange.length - 3 > 0}
+																<span
+																	class="bg-gray-100 dark:bg-gray-800 text-sm px-2 py-1 rounded-full inline-flex items-center mb-2 border border-gray-300 dark:border-gray-700"
+																>
+																	+{alert.exchange.length -
+																		3 +
+																		(index > 2 && alert.exchange.length - 3 > 1
+																			? ' others'
+																			: ' other')}
+																</span>
+															{/if}
+														{/if}
+													{/each}
+												</span>
+											</td>
+											<td class="px-4 py-2 text-left">
+												<span class="flex flex-wrap gap-2 items-center">
+													{#each Object.entries(alert.channel) as [key, value]}
+														<span
+															class="border border-gray-300 dark:border-gray-700 rounded-lg px-2 py-1 text-sm"
+														>
+															<TipView
+																tip={{
+																	label: capitalizeFirstLetter(key),
+																	value: value
+																}}
+																trigger="click"
+															/>
+														</span>
+													{/each}
+												</span>
+											</td>
+											<td class="px-4 py-2 text-left">
+												{alert.last_triggered === alert.created_at
+													? '-'
+													: friendlyDate(alert.last_triggered)}
+											</td>
+											<td class="px-4 py-2 text-left">
+												{getNextTriggerTime(alert.frequency, alert.last_triggered)}
+											</td>
+											<td class="px-4 py-2 text-left">
+												<div>
+													<div class="md:hidden ml-1 alert-options">
+														<button
+															class="text-gray-400 hover:text-red-500"
+															aria-label="Options"
+															on:click={() => showAlertOptions(alert._id)}
+														>
+															<i class="fa fa-gear text-lg" />
+														</button>
+													</div>
+													<div
+														class="hidden md:flex items-center gap-4 fixed md:static left-0 bottom-0 z-[60] bg-gray-100 dark:bg-gray-900 md:bg-transparent md:dark:bg-transparent p-5 md:p-0 w-full md:w-auto alert-options"
+														id="alert-option-{alert._id}"
+													>
+														<span class="flex items-center gap-4 w-full md:w-auto p-4 md:p-0">
+															<button
+																class="w-12 h-6 rounded-full relative focus:outline-none"
+																style="background-color: {alert.status === 'active'
+																	? '#4CAF50'
+																	: '#c0c0c0'};"
+																on:click={() => toggleAlertStatus(alert._id)}
+															>
+																<span
+																	class="absolute top-0.5 left-1 w-5 h-5 bg-white rounded-full transition-transform"
+																	style="transform: translateX({alert.status === 'active'
+																		? '24px'
+																		: '0px'});"
+																/>
+															</button>
+															<button
+																class="md:hidden"
+																on:click={() => toggleAlertStatus(alert._id)}
+																>Enable/Disable this alert</button
+															>
+														</span>
+														<span class="flex items-center gap-4 w-full md:w-auto p-4 md:p-0">
+															<button
+																class="text-gray-400 hover:text-gray-500"
+																aria-label="Edit"
+																on:click={() => editAlert(alert._id, alert.type)}
+															>
+																<i class="fa fa-edit text-lg" />
+															</button>
+															<button
+																class="md:hidden"
+																on:click={() => editAlert(alert._id, alert.type)}
+																>Edit this alert</button
+															>
+														</span>
+														<span class="flex items-center gap-4 w-full md:w-auto p-4 md:p-0">
+															<button
+																class="text-gray-400 hover:text-red-500"
+																aria-label="Delete"
+																on:click={() => (showConfirmAlertDeletion[alert._id] = true)}
+															>
+																<i class="fa fa-trash text-lg" />
+															</button>
+															<button
+																class="md:hidden"
+																on:click={() => (showConfirmAlertDeletion[alert._id] = true)}
+																>Delete this alert</button
+															>
+														</span>
+													</div>
+													<Dialog
+														bind:isOpen={showConfirmAlertDeletion[alert._id]}
+														title="Are you sure you want to delete this alert?"
+														actions={[
+															{
+																label: 'Confirm',
+																callback: () => {
+																	deleteAlert(alert._id);
+																}
+															}
+														]}
+													>
+														<p class="mb-4">Please confirm alert deletion.</p>
+													</Dialog>
+												</div>
+											</td>
+										</tr>
+									{/each}
+								</tbody>
+							</table>
 						</div>
-						<Dialog
-							bind:isOpen={showConfirmAlertDeletion[alert._id]}
-							title="Are you sure you want to delete this alert?"
-							actions={[
-								{
-									label: 'Confirm',
-									callback: () => {
-										deleteAlert(alert._id);
-									}
-								}
-							]}
-						>
-							<p class="mb-4">Please confirm alert deletion.</p>
-						</Dialog>
-					{/each}
+					</div>
 				{/if}
 			</div>
 		{:else}
@@ -449,11 +502,6 @@
 				<a href="/alert/price-alert/" class="button">Create alert</a>
 			</div>
 		{/if}
-	{:else}
-		<div class="text-center">
-			<p class="text-2xl mb-4">You need to login to view your alerts.</p>
-			<a href={login_uri()} class="text-blue-500 hover:underline">Login</a>
-		</div>
 	{/if}
 </div>
 

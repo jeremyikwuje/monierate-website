@@ -4,6 +4,7 @@
 	import { create_alert, update_alert } from '$lib/price_alert/alert.service';
 	import { notify } from '$lib/notification';
 	import { goto } from '$app/navigation';
+	import { login_uri } from '$lib/functions';
 
 	type Provider = { name: string; code: string; icon: string; pairs: any };
 	type DropdownOption = { label: string; value: string; icon: string };
@@ -194,7 +195,8 @@
 
 		if (
 			getSelectedTimeframe !== alertEdit.frequency?.type ||
-			selectedTimeframeInterval !== alertEdit.frequency?.value
+			selectedTimeframeInterval !== alertEdit.frequency?.value ||
+			selectedDayTimeValues !== alertEdit.frequency?.time
 		) {
 			alert.frequency = {
 				type: getSelectedTimeframe,
@@ -393,11 +395,19 @@
 						</div>
 					</div>
 
-					<button
-						class="button w-full"
-						disabled={!selectedPair || selectedProviders.length === 0}
-						on:click={() => change_screen(CurrentScreen.SECOND_SCREEN)}>Continue</button
-					>
+					{#if !user.isLogin}
+						<a
+							href={login_uri('/alert')}
+							class="block button w-full text-center bg-blue-500 text-white font-semibold hover:bg-blue-600"
+							>Login to continue</a
+						>
+					{:else}
+						<button
+							class="button w-full"
+							disabled={!selectedPair || selectedProviders.length === 0}
+							on:click={() => change_screen(CurrentScreen.SECOND_SCREEN)}>Continue</button
+						>
+					{/if}
 				</div>
 			{:else if current_screen === CurrentScreen.SECOND_SCREEN}
 				<div>

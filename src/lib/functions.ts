@@ -303,17 +303,17 @@ export function formatNumber(
   return formatter.format(value);
 }
 
-export function login_uri() {
+export function login_uri(callbackPath: string | null = null) {
   if (browser) {
-    let url = "https://account.monierate.com/login";
-    let current_url = window.location.href;
+    let login_url = "https://account.monierate.com/login";
+    let current_origin = window.location.origin;
+    let callback_url = callbackPath ? `${current_origin}${callbackPath}` : window.location.href;
 
-    if (current_url.includes("localhost")) {
-      url = "http://localhost:5174/login";
+    if (window.location.hostname === "localhost") {
+      login_url = "http://localhost:5174/login";
     }
 
-    url += "?callback_url=" + encodeURIComponent(current_url);
-    return url;
+    return `${login_url}?callback_url=${encodeURIComponent(callback_url)}`;
   }
   return null;
 }
@@ -354,6 +354,78 @@ export function getReadableFrequency(frequency: { type: string; value: number; t
     default:
       return "Unknown frequency";
   }
+}
+
+export function getNextTriggerTime(
+  frequency: { type: string; value: number; time?: number },
+  lastTrigger: string | Date
+): string {
+  let parsedLastTrigger: Date;
+  
+  if (typeof lastTrigger === "string") {
+    parsedLastTrigger = new Date(Date.parse(lastTrigger));
+  } else {
+    parsedLastTrigger = new Date(lastTrigger);
+  }
+  
+  if (isNaN(parsedLastTrigger.getTime())) {
+    throw new Error("Invalid date format for lastTrigger");
+  }
+  
+  const nextTrigger = new Date(parsedLastTrigger);
+
+  switch (frequency.type) {
+    case "interval":
+      nextTrigger.setMinutes(nextTrigger.getMinutes() + frequency.value);
+      break;
+
+    case "hourly":
+      nextTrigger.setHours(nextTrigger.getHours() + frequency.value);
+      break;
+
+    case "daily":
+      nextTrigger.setDate(nextTrigger.getDate() + frequency.value);
+      if (frequency.time !== undefined) nextTrigger.setHours(frequency.time, 0, 0, 0);
+      break;
+
+    case "weekly":
+      const daysToAdd = (frequency.value - parsedLastTrigger.getDay() + 7) % 7 || 7;
+      nextTrigger.setDate(nextTrigger.getDate() + daysToAdd);
+      if (frequency.time !== undefined) nextTrigger.setHours(frequency.time, 0, 0, 0);
+      break;
+
+    case "monthly":
+      nextTrigger.setMonth(nextTrigger.getMonth() + 1);
+      nextTrigger.setDate(frequency.value);
+      if (frequency.time !== undefined) nextTrigger.setHours(frequency.time, 0, 0, 0);
+      break;
+
+    default:
+      throw new Error("Unknown frequency type");
+  }
+  
+  return formatFriendlyDate(nextTrigger);
+}
+
+function formatFriendlyDate(date: Date): string {
+  const now = new Date();
+  const diff = (date.getTime() - now.getTime()) / 1000;
+  const hours = Math.round(diff / 3600);
+  const days = Math.round(diff / 86400);
+
+  const timeString = date.toLocaleTimeString(undefined, {
+    hour: "numeric",
+    minute: "2-digit",
+    hour12: true,
+  });
+  
+  if (hours < 24) return `Today ${timeString}`;
+  if (days === 2) return `Tomorrow ${timeString}`;
+  
+  const options: Intl.DateTimeFormatOptions = { month: "long", day: "numeric" };
+  if (date.getFullYear() !== now.getFullYear()) options.year = "numeric";
+  
+  return date.toLocaleDateString(undefined, options);
 }
 
 export function getDaySuffix(day: number): string {
