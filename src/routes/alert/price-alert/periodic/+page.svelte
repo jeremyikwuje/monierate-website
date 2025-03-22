@@ -216,8 +216,15 @@
 			alert.exchange = selectedProviders;
 		}
 
-		if (JSON.stringify(selectedChannelsValues) !== JSON.stringify(alertEdit.channel)) {
-			alert.channel = selectedChannelsValues;
+		const filteredChannels = Object.fromEntries(
+			Object.entries(selectedChannelsValues).map(([key, value]) => [
+				key,
+				value === '' || !selectedChannels.includes(key) ? null : value
+			])
+		);
+
+		if (JSON.stringify(filteredChannels) !== JSON.stringify(alertEdit.channel)) {
+			alert.channel = filteredChannels;
 		}
 
 		if (disableAfterTrigger !== alertEdit.disable_after_trigger) {
