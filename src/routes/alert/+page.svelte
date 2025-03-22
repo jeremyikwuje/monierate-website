@@ -317,7 +317,7 @@
 					>
 				</div>
 
-				{#if searchText !== '' && alerts.length === 0}
+				{#if searchText !== '' || selectedPairForFilter !== '' && alerts.length === 0}
 					<p class="text-center text-gray-400 my-16">No results found.</p>
 				{:else}
 					{#each alerts as alert}
