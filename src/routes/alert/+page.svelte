@@ -17,6 +17,7 @@
 	import { onMount } from 'svelte';
 	import Dialog from '$lib/components/Dialog.svelte';
 	import { goto } from '$app/navigation';
+	import CustomSelectBox from '$lib/components/CustomSelectBox.svelte';
 
 	type Alert = {
 		_id: string;
@@ -44,6 +45,7 @@
 	export let data;
 	const user: any = data.user;
 	const providers = data.providers;
+	const pair_list = data.pair_list;
 	$: alerts = data.alerts?.sort(
 		(a: any, b: any) => new Date(b.created_at).getTime() - new Date(a.created_at).getTime()
 	) as Alerts;
@@ -102,11 +104,23 @@
 					a.base.toLowerCase().includes(searchText.toLowerCase()) ||
 					a.quote.toLowerCase().includes(searchText.toLowerCase()) ||
 					a.exchange.some((e: any) => e.toLowerCase().includes(searchText.toLowerCase())) ||
-					Object.entries(a.channel).some((c: any) => c.toString().toLowerCase().includes(searchText.toLowerCase())) ||
+					Object.entries(a.channel).some((c: any) =>
+						c.toString().toLowerCase().includes(searchText.toLowerCase())
+					) ||
 					(a.note && a.note.toLowerCase().includes(searchText.toLowerCase())) ||
 					friendlyDate(a.created_at).toLowerCase().includes(searchText.toLowerCase())
 			);
-			console.log(alerts)
+		}
+	}
+
+	let selectedPairForFilter: string = '';
+	function filterAlertsByPair() {
+		if (selectedPairForFilter === '') {
+			alerts = data.alerts;
+		} else {
+			alerts = data.alerts.filter(
+				(a: any) => `${a.base}${a.quote}`.toLowerCase() === selectedPairForFilter.toLowerCase()
+			);
 		}
 	}
 
@@ -199,14 +213,35 @@
 			<div class="flex gap-2 items-center justify-end mb-4 md:hidden">
 				<a href="/alert/price-alert/" class="button">Create alert</a>
 			</div>
-			<div class="bg-gray-50 dark:bg-gray-900/10 p-2 md:p-6 rounded-lg w-full text-gray-600 dark:text-gray-300">
+			<div
+				class="bg-gray-50 dark:bg-gray-900/10 p-2 md:p-6 rounded-lg w-full text-gray-600 dark:text-gray-300"
+			>
 				<div class="flex items-center justify-between mb-4 relative">
 					<div class="flex gap-2 items-center">
 						<span class="text-gray-800 dark:text-gray-400">Sort:</span>
-						<button class="bg-gray-200 text-gray-800 dark:bg-gray-700 dark:text-gray-200 px-3 py-1 rounded" on:click={toggleSort}>
+						<button
+							class="bg-gray-200 text-gray-800 dark:bg-gray-700 dark:text-gray-200 px-3 py-1 rounded"
+							on:click={toggleSort}
+						>
 							<i class="fa fa-{isRecent ? 'sort-amount-down' : 'sort-amount-up'}" />
 							{isRecent ? 'Most Recent' : 'Oldest'}
 						</button>
+						<span class="hidden md:inline">
+							<CustomSelectBox
+								options={pair_list}
+								className="!py-1"
+								on:select={filterAlertsByPair}
+								bind:selected={selectedPairForFilter}
+								placeholder="Filter by Pairs"
+							/>
+							<button
+								class="text-blue-500 mx-2 {selectedPairForFilter === '' ? 'hidden' : ''}"
+								on:click={() => {
+									selectedPairForFilter = '';
+									filterAlertsByPair();
+								}}>Clear filter</button
+							>
+						</span>
 						<span class="flex md:inline items-center justify-center md:justify-start">
 							<button
 								class="bg-transpareent p-2 md:hidden"
@@ -264,6 +299,24 @@
 					</div>
 				</div>
 
+				<div class="md:hidden mb-8">
+					<span class="text-gray-800 dark:text-gray-400">Filter:</span>
+					<CustomSelectBox
+						options={pair_list}
+						className="!py-1"
+						on:select={filterAlertsByPair}
+						bind:selected={selectedPairForFilter}
+						placeholder="Filter by Pairs"
+					/>
+					<button
+						class="text-blue-500 mx-2 {selectedPairForFilter === '' ? 'hidden' : ''}"
+						on:click={() => {
+							selectedPairForFilter = '';
+							filterAlertsByPair();
+						}}>Clear filter</button
+					>
+				</div>
+
 				{#if searchText !== '' && alerts.length === 0}
 					<p class="text-center text-gray-400 my-16">No results found.</p>
 				{:else}
@@ -279,7 +332,9 @@
 									{#if alert.type === 'periodic'}
 										<span class="text-gray-600 dark:text-gray-300">
 											Receive price alert via <span class="text-green-400 font-semibold"
-												>{Object.keys(alert.channel).map((c) => capitalizeFirstLetter(c)).join(', ')}</span
+												>{Object.keys(alert.channel)
+													.map((c) => capitalizeFirstLetter(c))
+													.join(', ')}</span
 											>,
 											<span class="text-blue-400 font-semibold"
 												>{getReadableFrequency(alert.frequency).toLowerCase()}</span
@@ -295,17 +350,23 @@
 										<p>Threshold alert</p>
 									{/if}
 								</div>
-								<div class="text-sm text-gray-800 dark:text-gray-400 flex flex-col md:flex-row md:items-center gap-2 flex-wrap">
+								<div
+									class="text-sm text-gray-800 dark:text-gray-400 flex flex-col md:flex-row md:items-center gap-2 flex-wrap"
+								>
 									<span>
-										Created: <span class="text-gray-600 dark:text-gray-300">{friendlyDate(alert.created_at)}</span>
+										Created: <span class="text-gray-600 dark:text-gray-300"
+											>{friendlyDate(alert.created_at)}</span
+										>
 									</span>
 									{#if alert.note}
-									<span class="text-gray-600 dark:text-gray-300 hidden md:inline-block"> | </span>
-									<span class="text-gray-500 dark:text-gray-400">Note: {alert.note}</span>
+										<span class="text-gray-600 dark:text-gray-300 hidden md:inline-block"> | </span>
+										<span class="text-gray-500 dark:text-gray-400">Note: {alert.note}</span>
 									{/if}
 									{#if alert.disable_after_trigger}
-									<span class="text-gray-600 dark:text-gray-300 hidden md:inline-block"> | </span>
-									<span class="text-gray-500 dark:text-gray-400">Will be disabled after being sent.</span>
+										<span class="text-gray-600 dark:text-gray-300 hidden md:inline-block"> | </span>
+										<span class="text-gray-500 dark:text-gray-400"
+											>Will be disabled after being sent.</span
+										>
 									{/if}
 								</div>
 							</div>
@@ -338,10 +399,16 @@
 									>
 								</span>
 								<span class="flex items-center gap-4 w-full md:w-auto p-4 md:p-0">
-									<button class="text-gray-400 hover:text-gray-500" aria-label="Edit" on:click={() => editAlert(alert._id, alert.type)}>
+									<button
+										class="text-gray-400 hover:text-gray-500"
+										aria-label="Edit"
+										on:click={() => editAlert(alert._id, alert.type)}
+									>
 										<i class="fa fa-edit text-lg" />
 									</button>
-									<button class="md:hidden" on:click={() => editAlert(alert._id, alert.type)}>Edit this alert</button>
+									<button class="md:hidden" on:click={() => editAlert(alert._id, alert.type)}
+										>Edit this alert</button
+									>
 								</span>
 								<span class="flex items-center gap-4 w-full md:w-auto p-4 md:p-0">
 									<button
@@ -351,7 +418,9 @@
 									>
 										<i class="fa fa-trash text-lg" />
 									</button>
-									<button class="md:hidden" on:click={() => (showConfirmAlertDeletion[alert._id] = true)}
+									<button
+										class="md:hidden"
+										on:click={() => (showConfirmAlertDeletion[alert._id] = true)}
 										>Delete this alert</button
 									>
 								</span>

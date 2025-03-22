@@ -1,4 +1,4 @@
-import type { LayoutServerLoad } from './$types'
+import type { LayoutServerLoad } from './$types';
 import { get_changers } from "$lib/server/changer.service";
 import { get_currencies } from '$lib/server/currency.service';
 
