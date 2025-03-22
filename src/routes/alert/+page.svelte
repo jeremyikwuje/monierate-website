@@ -325,7 +325,7 @@
 								<span class="flex items-center gap-4 w-full md:w-auto p-4 md:p-0">
 									<button
 										class="w-12 h-6 rounded-full relative focus:outline-none"
-										style="background-color: {alert.status === 'active' ? '#4CAF50' : '#F44336'};"
+										style="background-color: {alert.status === 'active' ? '#4CAF50' : '#c0c0c0'};"
 										on:click={() => toggleAlertStatus(alert._id)}
 									>
 										<span
