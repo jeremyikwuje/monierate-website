@@ -55,7 +55,7 @@ export function getEndpointV1(endpoint: string)
 
 export function getAccountEndpoint(endpoint: string) {
     const server = env.SERVER
-    let apiUrl = env.API_URL_V1 || "https://monierate-account-api.onrender.com/core";
+    let apiUrl = env.API_ACCOUNT_URL || "https://monierate-account-api.onrender.com/core";
     if (server == 'LOCAL') {
         apiUrl = 'http://localhost:4002/core';
     }
