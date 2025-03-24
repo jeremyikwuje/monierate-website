@@ -51,7 +51,7 @@
 	$: {
 		if (
 			(browser && !user?.isLogin) ||
-			(user?.isLogin && data.alerts && !(data.alerts.length > 0))
+			(browser && user?.isLogin && data.alerts && !(data.alerts.length > 0))
 		) {
 			goto('/alert/price-alert/periodic', { replaceState: true });
 		}

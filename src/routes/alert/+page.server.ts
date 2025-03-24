@@ -9,12 +9,14 @@ export const load: PageServerLoad = async ({ fetch, parent }) => {
         throw redirect(302, '/alert/price-alert/periodic');
     }
     try {
-
         let getAlerts = await get_all_alerts(fetch);
         alerts = getAlerts.data;
-
     } catch(error: any) {
         console.log(error.message)
+    }
+
+    if(alerts.length === 0) {
+        throw redirect(302, '/alert/price-alert/periodic');
     }
     
     return {
