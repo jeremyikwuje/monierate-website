@@ -153,10 +153,8 @@
 			const create_alert_response = await create_alert(alert);
 
 			isLoading = false;
-			if (create_alert_response.error) {
-				notify(create_alert_response.error);
-			} else if (create_alert_response.status === 'error') {
-				error = create_alert_response.message;
+			if (create_alert_response.status === 'error') {
+				error = create_alert_response.description || create_alert_response.message;
 			} else {
 				notify(create_alert_response.message);
 				goto('/alert');
@@ -322,6 +320,14 @@
 				<p class="text-gray-500">Get notified of the price of an asset at regular intervals.</p>
 			</div>
 
+			{#if error !== ''}
+				<div
+					class="text-sm text-red-900 mb-2 border border-red-300 p-3 rounded-lg bg-red-50 shadow"
+				>
+					<p>{error}</p>
+				</div>
+			{/if}
+
 			{#if current_screen === CurrentScreen.FIRST_SCREEN}
 				<div>
 					{#if alertEdit}
@@ -331,8 +337,6 @@
 					{:else}
 						<p class="text-xl mb-4">Select a pair and providers to get started.</p>
 					{/if}
-
-					<p class="text-red-500 mb-2">{error}</p>
 
 					<div class="mb-5">
 						<label for="pair" class="label">Select a pair</label>

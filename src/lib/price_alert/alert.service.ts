@@ -25,6 +25,7 @@ type Response = {
     message: string;
     error: string;
     data: any;
+    description: string;
 }
 
 export const create_alert = async (alert: Periodic_alert | Threshold_alert) => {
