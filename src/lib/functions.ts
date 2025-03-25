@@ -438,20 +438,9 @@ export function getDaySuffix(day: number): string {
     default: return "th";
   }
 }
-=======
-  export function login_uri() {
-    if(browser) {
-      let url = "https://account.monierate.com/login";
-      let current_url = window.location.href;
-      url += "?callback_url=" + encodeURIComponent(current_url);
-      return url;
-    }
-    return null;
-  }
 
-  export function capitalizeAndJoin(words: string[]): string {
-    return words
-      .map((word: string) => word.charAt(0).toUpperCase() + word.slice(1))
-      .join(', ');
-  }
->>>>>>> 5975db65f9be82d406c2f38d734135ea57ca1868
+export function capitalizeAndJoin(words: string[]): string {
+  return words
+    .map((word: string) => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(', ');
+}
