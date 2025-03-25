@@ -1,18 +1,18 @@
 export const Timeframe: any = {
-    Timely: {
-        frequency: {
-            type: "interval",
-            values: {
-                "1 minutes": 1,
-                "2 minutes": 2,
-                "3 minutes": 3,
-                "5 minutes": 5,
-                "10 minutes": 10,
-                "15 minutes": 15,
-                "30 minutes": 30,
-            }
-        }
-    },
+    // Timely: {
+    //     frequency: {
+    //         type: "interval",
+    //         values: {
+    //             "1 minutes": 1,
+    //             "2 minutes": 2,
+    //             "3 minutes": 3,
+    //             "5 minutes": 5,
+    //             "10 minutes": 10,
+    //             "15 minutes": 15,
+    //             "30 minutes": 30,
+    //         }
+    //     }
+    // },
     Hourly: {
         frequency: {
             type: "hourly",

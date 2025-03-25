@@ -70,10 +70,10 @@
 		}
 	};
 
-	const timeframeOptions = Object.entries(Timeframe).map(([key, value]) => ({
+	$: timeframeOptions = Object.entries(Timeframe).map(([key, value]) => ({
 		label: key,
 		value: key
-	}));
+	})).filter(({ label }) => !(label === 'Hourly' && selectedChannels.includes('email')));
 
 	$: timeframeValues = !selectedTimeframe
 		? []
