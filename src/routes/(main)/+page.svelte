@@ -187,11 +187,11 @@
 		<div class="cedar-money">
 			<a href="https://bit.ly/3MDsvBi" target="_blank">
 				<picture>
-					<source srcset="/media/banners/cedar-homepage.webp?v=1" type="image/avif" />
-					<source srcset="/media/banners/cedar-homepage.png?v=1" type="image/gif" />
+					<source srcset="/media/banners/cedar-homepage.webp?v=5" type="image/avif" />
+					<source srcset="/media/banners/cedar-homepage.png?v=5" type="image/gif" />
 
 					<img
-						src="/media/banners/cedar-homepage.webp?v=1"
+						src="/media/banners/cedar-homepage.webp?v=5"
 						alt="Cedar Money"
 						width="800px"
 						height="114px"
@@ -500,11 +500,11 @@
 	<div class="bitnob-div mt-4 pt-8">
 		<a href="https://tinyurl.com/bitnob-banner-link" target="_blank">
 			<picture>
-				<source srcset="/media/banners/bitnob-landscape-small.avif?v=1" type="image/avif" />
-				<source srcset="/media/banners/bitnob-landscape-small.gif?v=2" type="image/gif" />
+				<source srcset="/media/banners/bitnob-landscape-small.webp?v=1" type="image/avif" />
+				<source srcset="/media/banners/bitnob-landscape-small.png?v=2" type="image/gif" />
 
 				<img
-					src="/media/banners/bitnob-landscape-small.avif?v=2"
+					src="/media/banners/bitnob-landscape-small.webp?v=2"
 					alt="Bitnob Virtual Card API"
 					width="800px"
 					height="99px"

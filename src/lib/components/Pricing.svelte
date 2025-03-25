@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { formatNumber } from '$lib/functions';
+	import { formatNumber, capitalizeAndJoin } from '$lib/functions';
 
 	export let data: any;
 	let currencySymbols: any = data.currencySymbols;
@@ -36,7 +36,7 @@
 					<p class="mt-2 text-5xl font-bold text-gray-900 dark:text-gray-100">
 						{currencySymbols[plan.currency]
 							? currencySymbols[plan.currency]
-							: plan.currency}{formatNumber(plan.price)}
+							: plan.currency}{formatNumber(plan.price)}<span class="text-lg text-gray-500 dark:text-gray-400"> / yr</span>
 					</p>
 				</div>
 				<ul class="mt-6 space-y-4">
@@ -80,6 +80,15 @@
 						{:else}
 							<i class="fa-regular fa-times-circle text-red-500 ml-1 mr-3" />
 							<span class="font-medium"> No custom historical reports </span>
+						{/if}
+					</li>
+					<li class="flex items-center text-gray-800 dark:text-gray-400">
+						{#if plan.features.available_markets}
+							<i class="fa-regular fa-check-circle text-blue-500 mr-2 text-lg" />
+							<span class="font-medium"> Rate supported: {capitalizeAndJoin(plan.features.available_markets)}</span>
+						{:else}
+							<i class="fa-regular fa-times-circle text-red-500 ml-1 mr-3" />
+							<span class="font-medium"> No rate supported </span>
 						{/if}
 					</li>
 				</ul>
