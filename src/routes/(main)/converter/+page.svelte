@@ -503,6 +503,19 @@
 							</span>
 						</div>
 						<div class="block md:flex md:justify-between md:items-center">
+							<!-- only show this if the from currency or to currency is BTC -->
+							{#if convertFrom === 'BTC' || convertTo === 'BTC'}
+							<span class="flex justify-between items-center bg-accent-100 md:hidden border dark:border-gray-700 rounded-lg p-4 mb-8">
+								<span class="block text-gray-600 dark:text-gray-300 text-sm ">
+									99% of Bitcoin price predictions are wrong, signup on 
+									<a href="https://tinyurl.com/everybitcoin-text-link">Every Bitcoin Newsletter</a> and get the 1% useful ones every Monday.
+
+									<p class="mt-4">
+										<a href="https://tinyurl.com/everybitcoin-text-link" class="underline text-semibold">Get Bitcoin Price Updates</a>
+									</p>
+								</span>
+							</span>
+							{/if}
 							<span
 								class="flex justify-between items-center bg-accent-100 md:w-[40%] border dark:border-gray-700 rounded-lg p-4 mb-8 md:mb-0"
 							>
