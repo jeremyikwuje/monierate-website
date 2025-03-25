@@ -361,20 +361,19 @@ export function getNextTriggerTime(
   lastTrigger: string | Date
 ): string {
   let parsedLastTrigger: Date;
-  
+
   if (typeof lastTrigger === "string") {
     parsedLastTrigger = new Date(Date.parse(lastTrigger));
   } else {
     parsedLastTrigger = new Date(lastTrigger);
   }
-  
+
   if (isNaN(parsedLastTrigger.getTime())) {
     throw new Error("Invalid date format for lastTrigger");
   }
-  
+
   const nextTrigger = new Date(parsedLastTrigger);
 
-<<<<<<< HEAD
   switch (frequency.type) {
     case "interval":
       nextTrigger.setMinutes(nextTrigger.getMinutes() + frequency.value);
@@ -404,7 +403,7 @@ export function getNextTriggerTime(
     default:
       throw new Error("Unknown frequency type");
   }
-  
+
   return formatFriendlyDate(nextTrigger);
 }
 
@@ -419,13 +418,13 @@ function formatFriendlyDate(date: Date): string {
     minute: "2-digit",
     hour12: true,
   });
-  
+
   if (hours < 24) return `Today ${timeString}`;
   if (days === 2) return `Tomorrow ${timeString}`;
-  
+
   const options: Intl.DateTimeFormatOptions = { month: "long", day: "numeric" };
   if (date.getFullYear() !== now.getFullYear()) options.year = "numeric";
-  
+
   return date.toLocaleDateString(undefined, options);
 }
 
@@ -438,20 +437,9 @@ export function getDaySuffix(day: number): string {
     default: return "th";
   }
 }
-=======
-  export function login_uri() {
-    if(browser) {
-      let url = "https://account.monierate.com/login";
-      let current_url = window.location.href;
-      url += "?callback_url=" + encodeURIComponent(current_url);
-      return url;
-    }
-    return null;
-  }
 
-  export function capitalizeAndJoin(words: string[]): string {
-    return words
-      .map((word: string) => word.charAt(0).toUpperCase() + word.slice(1))
-      .join(', ');
-  }
->>>>>>> 5975db65f9be82d406c2f38d734135ea57ca1868
+export function capitalizeAndJoin(words: string[]): string {
+  return words
+    .map((word: string) => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(', ');
+}
