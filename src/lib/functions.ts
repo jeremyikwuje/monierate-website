@@ -374,7 +374,6 @@ export function getNextTriggerTime(
   
   const nextTrigger = new Date(parsedLastTrigger);
 
-<<<<<<< HEAD
   switch (frequency.type) {
     case "interval":
       nextTrigger.setMinutes(nextTrigger.getMinutes() + frequency.value);
