@@ -200,18 +200,18 @@
 	<div class="container">
 		<!-- Landscape Top/Bottom -->
 		<div class="top-landscape mb-8">
-				<a href="https://tinyurl.com/bitnob-banner-link" target="_blank">
+				<a href="https://tinyurl.com/bitnob-stablecoin-lin" target="_blank">
 						<picture>
-								<source srcset="/media/banners/bitnob-landscape.png?v=1" type="image/jpg" />
-								<source srcset="/media/banners/bitnob-landscape.webp?v=1" type="image/webp" />
+							<source srcset="/media/banners/bitnob-landscape-small.webp?v=1" type="image/jpg" />
+							<source srcset="/media/banners/bitnob-landscape-small.png?v=2" type="image/webp" />
 
-								<img
-										src="/media/banners/bitnob-landscape.webp?v=1"
-										alt="Bitnob Virtual Card API"
-										width="800px"
-										height="155px"
-										class="mx-auto max-w-full md:w-[800px] md:h-[155px]"
-								/>
+							<img
+									src="/media/banners/bitnob-landscape-small.webp?v=2"
+									alt="Bitnob Stable Coin API"
+									width="800px"
+									height="155px"
+									class="mx-auto max-w-full md:w-[800px] md:h-[155px]"
+							/>
 						</picture>
 				</a>
 		</div>
