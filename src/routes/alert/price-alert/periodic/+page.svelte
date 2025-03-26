@@ -561,6 +561,16 @@
 						{/if}
 					</div>
 
+					{#if user?.isLogin}
+						<div class="mb-4 text-sm">
+							<strong>Note:</strong>
+							<span>Your timezone is "{user.userData.data.timezone || 'UTC'}."</span>
+							<p>
+								To update it, visit your <a href="https://account.monierate.com/edit-account-details">Account Dashboard</a>.
+							</p>
+						</div>
+					{/if}
+
 					{#if alertEdit}
 						<button
 							class="button w-full"
