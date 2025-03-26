@@ -57,7 +57,7 @@
 	let error: string = '';
 
 	if (user?.isLogin && !alertEdit) {
-		selectedChannelsValues.email = user.email;
+		selectedChannelsValues.email = user.userData.data.email;
 	}
 
 	let isSelectedProvidersDropdownOpen: boolean = false;
