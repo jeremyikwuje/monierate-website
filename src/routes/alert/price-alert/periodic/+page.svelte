@@ -44,9 +44,9 @@
 	let selectedProviders: string[] = [];
 	let selectedChannels: string[] = [];
 	let selectedChannelsValues = {} as { email: string; webhook: string };
-	let selectedTimeframe = Object.keys(Timeframe)[0] as string;
-	let selectedTimeframeInterval = 1;
-	let selectedDayTimeValues = 1;
+	let selectedTimeframe = '' as string;
+	let selectedTimeframeInterval = 0;
+	let selectedDayTimeValues = 0;
 	let disableAfterTrigger: boolean = false;
 	let note: string = '';
 
@@ -70,10 +70,12 @@
 		}
 	};
 
-	$: timeframeOptions = Object.entries(Timeframe).map(([key, value]) => ({
-		label: key,
-		value: key
-	})).filter(({ label }) => !(label === 'Hourly' && selectedChannels.includes('email')));
+	$: timeframeOptions = Object.entries(Timeframe)
+		.map(([key, value]) => ({
+			label: key,
+			value: key
+		}))
+		.filter(({ label }) => !(label === 'Hourly' && selectedChannels.includes('email')));
 
 	$: timeframeValues = !selectedTimeframe
 		? []
@@ -503,7 +505,10 @@
 
 					<button
 						class="button w-full"
-						disabled={!(selectedChannelsValues.email || selectedChannelsValues.webhook)}
+						disabled={!(
+							(selectedChannelsValues.email && selectedChannels.includes('email')) ||
+							(selectedChannelsValues.webhook && selectedChannels.includes('webhook'))
+						)}
 						on:click={() => change_screen(CurrentScreen.THIRD_SCREEN)}>Continue</button
 					>
 					<button
@@ -561,16 +566,26 @@
 							class="button w-full"
 							on:click={() => update_alert_handler(alertEdit._id)}
 							disabled={isLoading ||
-								(selectedTimeframe === 'Hourly' && selectedTimeframeInterval === 1)}
-							>Update alert</button
+								!(
+									selectedTimeframe !== '' &&
+									selectedTimeframeInterval >= 1 &&
+									(['weekly', 'monthly'].includes(selectedTimeframe.toLowerCase())
+										? selectedDayTimeValues >= 1
+										: true)
+								)}>Update alert</button
 						>
 					{:else}
 						<button
 							class="button w-full"
 							on:click={create_alert_handler}
 							disabled={isLoading ||
-								(selectedTimeframe === 'Hourly' && selectedTimeframeInterval === 1)}
-							>Set alert</button
+								!(
+									selectedTimeframe !== '' &&
+									selectedTimeframeInterval >= 1 &&
+									(['weekly', 'monthly'].includes(selectedTimeframe.toLowerCase())
+										? selectedDayTimeValues >= 1
+										: true)
+								)}>Set alert</button
 						>
 					{/if}
 					<button
