@@ -357,48 +357,51 @@ export function getReadableFrequency(frequency: { type: string; value: number; t
 }
 
 export function getNextTriggerTime(
-  frequency: { type: string; value: number; time?: number },
-  lastTrigger: string | Date
+  frequency: { type: string; value: number; time?: number }, _:any
 ): string {
-  let parsedLastTrigger: Date;
-  
-  if (typeof lastTrigger === "string") {
-    parsedLastTrigger = new Date(Date.parse(lastTrigger));
-  } else {
-    parsedLastTrigger = new Date(lastTrigger);
-  }
-  
-  if (isNaN(parsedLastTrigger.getTime())) {
-    throw new Error("Invalid date format for lastTrigger");
-  }
-  
-  const nextTrigger = new Date(parsedLastTrigger);
+  const now = new Date();
+  const nextTrigger = new Date(now);
+  nextTrigger.setSeconds(0, 0); // Reset milliseconds
 
-<<<<<<< HEAD
   switch (frequency.type) {
     case "interval":
-      nextTrigger.setMinutes(nextTrigger.getMinutes() + frequency.value);
+      nextTrigger.setMinutes(now.getMinutes() + frequency.value);
       break;
 
     case "hourly":
-      nextTrigger.setHours(nextTrigger.getHours() + frequency.value);
+      nextTrigger.setHours(now.getHours() + frequency.value);
       break;
 
     case "daily":
-      nextTrigger.setDate(nextTrigger.getDate() + frequency.value);
-      if (frequency.time !== undefined) nextTrigger.setHours(frequency.time, 0, 0, 0);
+      nextTrigger.setDate(now.getDate() + 1);
+      nextTrigger.setHours(frequency.value, 0, 0, 0);
       break;
 
     case "weekly":
-      const daysToAdd = (frequency.value - parsedLastTrigger.getDay() + 7) % 7 || 7;
-      nextTrigger.setDate(nextTrigger.getDate() + daysToAdd);
-      if (frequency.time !== undefined) nextTrigger.setHours(frequency.time, 0, 0, 0);
+      const selectedWeekday = frequency.value - 1; // Day of the week (e.g., Tuesday = 2)
+      const selectedHour = frequency.time ?? 0; // Selected hour (24-hour format)
+      const currentWeekday = now.getDay();
+      const currentHour = now.getHours();
+
+      if (currentWeekday === selectedWeekday) {
+        if (currentHour < selectedHour) {
+          nextTrigger.setHours(selectedHour, 0, 0, 0);
+        } else {
+          nextTrigger.setDate(now.getDate() + 7);
+          nextTrigger.setHours(selectedHour, 0, 0, 0);
+        }
+      } else {
+        let daysToAdd = (selectedWeekday - currentWeekday + 7) % 7;
+        nextTrigger.setDate(now.getDate() + (daysToAdd === 0 ? 7 : daysToAdd));
+        nextTrigger.setHours(selectedHour, 0, 0, 0);
+      }
       break;
 
     case "monthly":
-      nextTrigger.setMonth(nextTrigger.getMonth() + 1);
-      nextTrigger.setDate(frequency.value);
-      if (frequency.time !== undefined) nextTrigger.setHours(frequency.time, 0, 0, 0);
+      nextTrigger.setMonth(now.getMonth() + 1);
+      const maxDays = new Date(nextTrigger.getFullYear(), nextTrigger.getMonth() + 1, 0).getDate();
+      nextTrigger.setDate(Math.min(frequency.value, maxDays));
+      nextTrigger.setHours(frequency.time ?? 0, 0, 0, 0);
       break;
 
     default:
@@ -412,20 +415,20 @@ function formatFriendlyDate(date: Date): string {
   const now = new Date();
   const diff = (date.getTime() - now.getTime()) / 1000;
   const hours = Math.round(diff / 3600);
-  const days = Math.round(diff / 86400);
+  // const days = Math.floor(diff / 86400);
 
   const timeString = date.toLocaleTimeString(undefined, {
     hour: "numeric",
     minute: "2-digit",
     hour12: true,
   });
-  
-  if (hours < 24) return `Today ${timeString}`;
-  if (days === 2) return `Tomorrow ${timeString}`;
-  
-  const options: Intl.DateTimeFormatOptions = { month: "long", day: "numeric" };
+
+  if (hours < 24 && (now.getDate() === date.getDate()) && (now.getMonth() === date.getMonth()) && (now.getFullYear() === date.getFullYear())) return `Today ${timeString}`;
+  if ((now.getDate() === date.getDate() - 1) && (now.getMonth() === date.getMonth()) && (now.getFullYear() === date.getFullYear())) return `Tomorrow ${timeString}`;
+
+  const options: Intl.DateTimeFormatOptions = { month: "long", day: "numeric", hour: "numeric", minute: "2-digit" };
   if (date.getFullYear() !== now.getFullYear()) options.year = "numeric";
-  
+
   return date.toLocaleDateString(undefined, options);
 }
 
@@ -438,20 +441,9 @@ export function getDaySuffix(day: number): string {
     default: return "th";
   }
 }
-=======
-  export function login_uri() {
-    if(browser) {
-      let url = "https://account.monierate.com/login";
-      let current_url = window.location.href;
-      url += "?callback_url=" + encodeURIComponent(current_url);
-      return url;
-    }
-    return null;
-  }
 
-  export function capitalizeAndJoin(words: string[]): string {
-    return words
-      .map((word: string) => word.charAt(0).toUpperCase() + word.slice(1))
-      .join(', ');
-  }
->>>>>>> 5975db65f9be82d406c2f38d734135ea57ca1868
+export function capitalizeAndJoin(words: string[]): string {
+  return words
+    .map((word: string) => word.charAt(0).toUpperCase() + word.slice(1))
+    .join(', ');
+}
