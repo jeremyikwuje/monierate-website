@@ -404,7 +404,7 @@
 												{alert.frequency.type}
 											</td>
 											<td class="px-4 py-2 text-left">
-												{alert.last_triggered === alert.created_at
+												{alert.last_triggered === null
 													? '-'
 													: friendlyDate(alert.last_triggered)}
 											</td>
