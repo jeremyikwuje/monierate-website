@@ -409,7 +409,7 @@
 													: friendlyDate(alert.last_triggered)}
 											</td>
 											<td class="px-4 py-2 text-left">
-												{getNextTriggerTime(alert.frequency, alert.last_triggered)}
+												{getNextTriggerTime(alert.frequency, user.userData.data.timezone || 'UTC')}
 											</td>
 											<td class="px-4 py-2 text-left">
 												<div>
