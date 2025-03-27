@@ -82,6 +82,14 @@ function hidePromotionBar() {
     }
 }
 
+try {
+    if(data.user?.isLogin) {
+        timezone.set(data.user.userData.data.timezone);
+    }
+} catch (error) {
+    console.log(error);
+}
+
 </script>
 
 <svelte:head>
