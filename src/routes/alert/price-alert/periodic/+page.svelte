@@ -566,7 +566,7 @@
 							<strong>Note:</strong>
 							<span>Your timezone is "{user.userData.data.timezone || 'UTC'}."</span>
 							<p>
-								To update it, visit your <a href="https://account.monierate.com/edit-account-details">Account Dashboard</a>.
+								To update it, visit your <a href="https://account.monierate.com/edit-account-details" target="_blank">Account Dashboard</a>.
 							</p>
 						</div>
 					{/if}

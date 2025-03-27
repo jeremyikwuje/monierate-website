@@ -357,9 +357,9 @@ export function getReadableFrequency(frequency: { type: string; value: number; t
 }
 
 export function getNextTriggerTime(
-  frequency: { type: string; value: number; time?: number }, _:any
+  frequency: { type: string; value: number; time?: number }, timezone: string = 'UTC'
 ): string {
-  const now = new Date();
+  const now = new Date(new Date().toLocaleString('en-US', { timeZone: timezone }));
   const nextTrigger = new Date(now);
   nextTrigger.setSeconds(0, 0); // Reset milliseconds
 
@@ -373,7 +373,7 @@ export function getNextTriggerTime(
       break;
 
     case "daily":
-      nextTrigger.setDate(now.getDate() + 1);
+      nextTrigger.setDate(now.getDate());
       nextTrigger.setHours(frequency.value, 0, 0, 0);
       break;
 
@@ -408,28 +408,48 @@ export function getNextTriggerTime(
       throw new Error("Unknown frequency type");
   }
   
-  return formatFriendlyDate(nextTrigger);
+  return formatFriendlyDate(nextTrigger, timezone, 'en-US', frequency.type.toLowerCase());
 }
 
-function formatFriendlyDate(date: Date): string {
-  const now = new Date();
-  const diff = (date.getTime() - now.getTime()) / 1000;
-  const hours = Math.round(diff / 3600);
-  // const days = Math.floor(diff / 86400);
+function formatFriendlyDate(date: Date, timezone: string = 'UTC', locale: string = 'en-US', interval: string = ''): string {
+  const now = new Date(new Date().toLocaleString(locale, { timeZone: timezone }));
+  const diffSeconds = (date.getTime() - now.getTime()) / 1000;
+  const diffDays = Math.floor(diffSeconds / 86400);
 
-  const timeString = date.toLocaleTimeString(undefined, {
+  const timeString = date.toLocaleTimeString(locale, {
     hour: "numeric",
     minute: "2-digit",
     hour12: true,
   });
 
-  if (hours < 24 && (now.getDate() === date.getDate()) && (now.getMonth() === date.getMonth()) && (now.getFullYear() === date.getFullYear())) return `Today ${timeString}`;
-  if ((now.getDate() === date.getDate() - 1) && (now.getMonth() === date.getMonth()) && (now.getFullYear() === date.getFullYear())) return `Tomorrow ${timeString}`;
+  if (diffDays === 0 && now.getDate() === date.getDate() && now.getMonth() === date.getMonth() && now.getFullYear() === date.getFullYear()) {
+    return `Today ${timeString}`;
+  }
 
-  const options: Intl.DateTimeFormatOptions = { month: "long", day: "numeric", hour: "numeric", minute: "2-digit" };
-  if (date.getFullYear() !== now.getFullYear()) options.year = "numeric";
+  if (diffDays <= 1 && now.getFullYear() === date.getFullYear()) {
+    return `Tomorrow ${timeString}`;
+  }
 
-  return date.toLocaleDateString(undefined, options);
+  let options: Intl.DateTimeFormatOptions = {
+    month: "long",
+    day: "numeric",
+    hour: "numeric",
+    minute: "2-digit",
+    year: date.getFullYear() !== now.getFullYear() ? "numeric" : undefined,
+  };
+
+  if(interval === 'weekly') {
+    options = {
+      weekday: "long",
+      month: "long",
+      day: "numeric",
+      hour: "numeric",
+      minute: "2-digit",
+      year: date.getFullYear() !== now.getFullYear() ? "numeric" : undefined,
+    };
+  }
+
+  return date.toLocaleDateString(locale, options);
 }
 
 export function getDaySuffix(day: number): string {
