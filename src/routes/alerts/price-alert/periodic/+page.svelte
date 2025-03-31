@@ -308,18 +308,18 @@
 </script>
 
 <svelte:head>
-	<title>Periodic Price Alerts</title>
+	<title>Naira Rate Alerts | Monierate</title>
 </svelte:head>
 
 <div class="flex flex-col md:flex-row gap-4">
 	<div class="w-full md:w-1/2">
 		<div class="md:w-3/4 mx-auto px-2 md:px-10 pb-5 flex flex-col gap-5">
 			<div class="text-center mb-4">
-				<h2 class="text-2xl mb-2">
+				<h1 class="text-2xl mb-2">
 					<i class="fa fa-clock pr-4" />
-					{alertEdit ? 'Update' : ''} Periodic Price Alerts
-				</h2>
-				<p class="text-gray-500">Get notified of the price of an asset at regular intervals.</p>
+					{alertEdit ? 'Update Your Alert' : 'Naira Rate Alerts'}
+				</h1>
+				<p class="text-gray-500">The NGN rate is disorganized and unstable. Stay ahead always.</p>
 			</div>
 
 			{#if error !== ''}
