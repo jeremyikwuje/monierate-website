@@ -159,7 +159,7 @@
 				error = create_alert_response.description || create_alert_response.message;
 			} else {
 				notify(create_alert_response.message);
-				goto('/alert');
+				goto('/alerts');
 			}
 		} catch (err) {
 			isLoading = false;
@@ -247,7 +247,7 @@
 				error = update_alert_response.message;
 			} else {
 				notify(update_alert_response.message);
-				goto('/alert');
+				goto('/alerts');
 			}
 		} catch (err) {
 			isLoading = false;
@@ -403,7 +403,7 @@
 
 					{#if !user.isLogin}
 						<a
-							href={login_uri('/alert')}
+							href={login_uri('/alerts')}
 							class="block button w-full text-center bg-blue-500 text-white font-semibold hover:bg-blue-600"
 							>Login to continue</a
 						>
@@ -607,7 +607,7 @@
 			{#if alertEdit}
 				<button
 					class="border border-gray-300 dark:border-gray-600 hover:border-gray-400 w-full mt-4 p-2 rounded-lg text-center text-gray-500 dark:text-gray-400"
-					on:click={() => goto('/alert', { replaceState: true })}>Cancel changes</button
+					on:click={() => goto('/alerts', { replaceState: true })}>Cancel changes</button
 				>
 			{/if}
 		</div>
