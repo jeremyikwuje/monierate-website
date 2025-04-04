@@ -44,9 +44,9 @@
 	let selectedProviders: string[] = [];
 	let selectedChannels: string[] = [];
 	let selectedChannelsValues = {} as { email: string; webhook: string };
-	let selectedTimeframe = Object.keys(Timeframe)[0] as string;
-	let selectedTimeframeInterval = 1;
-	let selectedDayTimeValues = 1;
+	let selectedTimeframe = '' as string;
+	let selectedTimeframeInterval = 0;
+	let selectedDayTimeValues = 0;
 	let disableAfterTrigger: boolean = false;
 	let note: string = '';
 
@@ -57,7 +57,7 @@
 	let error: string = '';
 
 	if (user?.isLogin && !alertEdit) {
-		selectedChannelsValues.email = user.email;
+		selectedChannelsValues.email = user.userData.data.email;
 	}
 
 	let isSelectedProvidersDropdownOpen: boolean = false;
@@ -70,10 +70,12 @@
 		}
 	};
 
-	$: timeframeOptions = Object.entries(Timeframe).map(([key, value]) => ({
-		label: key,
-		value: key
-	})).filter(({ label }) => !(label === 'Hourly' && selectedChannels.includes('email')));
+	$: timeframeOptions = Object.entries(Timeframe)
+		.map(([key, value]) => ({
+			label: key,
+			value: key
+		}))
+		.filter(({ label }) => !(label === 'Hourly' && selectedChannels.includes('email')));
 
 	$: timeframeValues = !selectedTimeframe
 		? []
@@ -157,7 +159,7 @@
 				error = create_alert_response.description || create_alert_response.message;
 			} else {
 				notify(create_alert_response.message);
-				goto('/alert');
+				goto('/alerts');
 			}
 		} catch (err) {
 			isLoading = false;
@@ -245,7 +247,7 @@
 				error = update_alert_response.message;
 			} else {
 				notify(update_alert_response.message);
-				goto('/alert');
+				goto('/alerts');
 			}
 		} catch (err) {
 			isLoading = false;
@@ -306,18 +308,18 @@
 </script>
 
 <svelte:head>
-	<title>Periodic Price Alerts</title>
+	<title>Naira Rate Alerts | Monierate</title>
 </svelte:head>
 
 <div class="flex flex-col md:flex-row gap-4">
 	<div class="w-full md:w-1/2">
 		<div class="md:w-3/4 mx-auto px-2 md:px-10 pb-5 flex flex-col gap-5">
 			<div class="text-center mb-4">
-				<h2 class="text-2xl mb-2">
+				<h1 class="text-2xl mb-2">
 					<i class="fa fa-clock pr-4" />
-					{alertEdit ? 'Update' : ''} Periodic Price Alerts
-				</h2>
-				<p class="text-gray-500">Get notified of the price of an asset at regular intervals.</p>
+					{alertEdit ? 'Update Your Alert' : 'Naira Rate Alerts'}
+				</h1>
+				<p class="text-gray-500">The NGN rate is disorganized and unstable. Stay ahead always.</p>
 			</div>
 
 			{#if error !== ''}
@@ -401,7 +403,7 @@
 
 					{#if !user.isLogin}
 						<a
-							href={login_uri('/alert')}
+							href={login_uri('/alerts')}
 							class="block button w-full text-center bg-blue-500 text-white font-semibold hover:bg-blue-600"
 							>Login to continue</a
 						>
@@ -503,7 +505,10 @@
 
 					<button
 						class="button w-full"
-						disabled={!(selectedChannelsValues.email || selectedChannelsValues.webhook)}
+						disabled={!(
+							(selectedChannelsValues.email && selectedChannels.includes('email')) ||
+							(selectedChannelsValues.webhook && selectedChannels.includes('webhook'))
+						)}
 						on:click={() => change_screen(CurrentScreen.THIRD_SCREEN)}>Continue</button
 					>
 					<button
@@ -556,21 +561,41 @@
 						{/if}
 					</div>
 
+					{#if user?.isLogin}
+						<div class="mb-4 text-sm">
+							<strong>Note:</strong>
+							<span>Your timezone is "{user.userData.data.timezone || 'UTC'}."</span>
+							<p>
+								To update it, visit your <a href="https://account.monierate.com/edit-account-details" target="_blank">Account Dashboard</a>.
+							</p>
+						</div>
+					{/if}
+
 					{#if alertEdit}
 						<button
 							class="button w-full"
 							on:click={() => update_alert_handler(alertEdit._id)}
 							disabled={isLoading ||
-								(selectedTimeframe === 'Hourly' && selectedTimeframeInterval === 1)}
-							>Update alert</button
+								!(
+									selectedTimeframe !== '' &&
+									selectedTimeframeInterval >= 1 &&
+									(['weekly', 'monthly'].includes(selectedTimeframe.toLowerCase())
+										? selectedDayTimeValues >= 1
+										: true)
+								)}>Update alert</button
 						>
 					{:else}
 						<button
 							class="button w-full"
 							on:click={create_alert_handler}
 							disabled={isLoading ||
-								(selectedTimeframe === 'Hourly' && selectedTimeframeInterval === 1)}
-							>Set alert</button
+								!(
+									selectedTimeframe !== '' &&
+									selectedTimeframeInterval >= 1 &&
+									(['weekly', 'monthly'].includes(selectedTimeframe.toLowerCase())
+										? selectedDayTimeValues >= 1
+										: true)
+								)}>Set alert</button
 						>
 					{/if}
 					<button
@@ -582,7 +607,7 @@
 			{#if alertEdit}
 				<button
 					class="border border-gray-300 dark:border-gray-600 hover:border-gray-400 w-full mt-4 p-2 rounded-lg text-center text-gray-500 dark:text-gray-400"
-					on:click={() => goto('/alert', { replaceState: true })}>Cancel changes</button
+					on:click={() => goto('/alerts', { replaceState: true })}>Cancel changes</button
 				>
 			{/if}
 		</div>
