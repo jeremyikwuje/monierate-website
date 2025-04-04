@@ -113,7 +113,7 @@ const sponsored_partners = [
         image: 'https://bit.ly/3svJGhQ',
         text: 'Send & Receive Cross-border Payments Globally.',
         link: 'https://tinyurl.com/cedar-get-alert-link',
-        brand: 'Cedar App',
+        brand: 'Cedar Money',
         cta: 'Start Sending'
     },
     {
