@@ -184,7 +184,7 @@
 <div class="bg-white dark:bg-gray-800">
 	<div class="container">
 		<!-- Landscape Top/Bottom -->
-		<div class="cedar-money">
+		<div class="bitnob-banner">
 			<a href="https://tinyurl.com/bitnob-stablecoin-lin" target="_blank">
 				<picture>
 					<source srcset="/media/banners/bitnob-landscape-small.webp?v=1" type="image/avif" />
@@ -497,7 +497,7 @@
 	{/if}
 
 	<!-- Landscape Top/Bottom -->
-	<div class="mt-4 pt-8">
+	<!-- <div class="mt-4 pt-8">
 		<a href="https://tinyurl.com/bitnob-stablecoin-lin" target="_blank">
 			<picture>
 				<source srcset="/media/banners/bitnob-landscape-small.webp?v=1" type="image/avif" />
@@ -512,7 +512,7 @@
 				/>
 			</picture>
 		</a>
-	</div>
+	</div> -->
 </div>
 
 <div class="pt-4 mb-4">
