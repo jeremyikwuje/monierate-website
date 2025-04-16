@@ -61,7 +61,7 @@ interface ImageSources {
 
 <svelte:head>
 	<title>SWIFT Codes in {countryName}: Find Your Bank's BIC Code</title>
-	<meta name="description" content="Learn about SWIFT/BIC codes in {countryName}. Quickly find your bank's code for international money transfers. Ensure your funds reach the right destination account." />
+	<meta name="description" content="Learn about SWIFT/BIC codes in {countryName} on Monierate. Quickly find your bank's code for international money transfers. Ensure your funds reach the right destination account." />
 	<meta property="og:type" content="website" />
 	<meta property="og:title" content="SWIFT Codes in {countryName}: Find Your Bank's BIC Code" />
 	<meta property="og:description" content="Learn about SWIFT/BIC codes in {countryName}. Quickly find your bank's code for international money transfers. Ensure your funds reach the right destination account." />

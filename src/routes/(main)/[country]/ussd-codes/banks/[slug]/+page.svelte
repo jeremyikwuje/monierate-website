@@ -68,7 +68,7 @@
 
 <svelte:head>
 	<title>{bankInfo.name} {countryName} USSD Codes</title>
-	<meta name="description" content="Get all {bankInfo.name} Bank USSD codes." />
+	<meta name="description" content="Get all {bankInfo.name} Bank USSD codes on Monierate." />
 	<meta property="og:type" content="website" />
 	<meta property="og:title" content="{bankInfo.name} USSD Codes {countryName}" />
 	<meta property="og:description" content="Get all {countryName} Bank USSD codes." />

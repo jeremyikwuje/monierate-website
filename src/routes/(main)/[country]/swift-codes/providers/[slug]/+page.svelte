@@ -55,7 +55,7 @@
 
 <svelte:head>
 	<title>{bankInfo.name} {countryName} SWIFT Codes</title>
-	<meta name="description" content="Get all {bankInfo.name} Bank SWIFT codes." />
+	<meta name="description" content="Get all {bankInfo.name} Bank SWIFT codes on Monierate." />
 	<meta property="og:type" content="website" />
 	<meta property="og:title" content="{bankInfo.name} SWIFT Codes {countryName}" />
 	<meta property="og:description" content="Get all {countryName} Bank SWIFT codes." />

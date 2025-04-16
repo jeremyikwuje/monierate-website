@@ -63,7 +63,7 @@
 	<title>USSD Codes in {countryName}: Find Your Bank's Transfer Code</title>
 	<meta
 		name="description"
-		content="Learn about USSD/Transfer codes in {countryName}. Quickly find your bank's code for international money transfers."
+		content="Learn about USSD/Transfer codes in {countryName} on Monierate. Quickly find your bank's code for international money transfers."
 	/>
 	<meta property="og:type" content="website" />
 	<meta property="og:title" content="USSD Codes in {countryName}: Find Your Bank's Transfer Code" />
