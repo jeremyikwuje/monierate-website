@@ -6,6 +6,7 @@
 	import ChangerRates from '$lib/components/ChangerRates.svelte';
 	import { goto } from '$app/navigation';
 	import { onMount } from 'svelte';
+	import AdBanner from '$lib/components/AdBanner.svelte';
 
 	interface Currency {
 		code: string;
@@ -267,23 +268,7 @@
 </svelte:head>
 
 <div class="bg-white dark:bg-gray-800">
-	<div class="container">
-		<!-- Landscape Top/Bottom -->
-		<a href="https://tinyurl.com/koyn-top-sponsored-link" target="_blank">
-			<picture>
-				<source srcset="/media/banners/koyn.webp?v=1" type="image/avif" />
-				<source srcset="/media/banners/koyn.png?v=2" type="image/gif" />
-
-				<img
-					src="/media/banners/koyn.webp?v=2"
-					alt="Bitnob Virtual Card API"
-					width="800px"
-					height="99px"
-					class="mx-auto max-w-full md:w-[800px] md:h-[99px]"
-				/>
-			</picture>
-		</a>
-	</div>
+	<AdBanner name="converter"/>
 </div>
 
 <div class="mb-24">
