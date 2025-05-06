@@ -15,7 +15,7 @@
 
 <svelte:head>
 	<title>{changer.name} exchange rates in Nigeria | Monierate</title>
-	<meta name="description" content="Compare {changer.name} exchange rates in a range of currencies.">
+	<meta name="description" content="Compare {changer.name} exchange rates in a range of currencies on Monierate.">
 	<meta property="og:type" content="website" />
 	<meta property="og:title" content="{changer.name} exchange rates in Nigeria | Monierate" />
 	<meta property="og:description" content="Compare {changer.name} exchange rates in a range of currencies." />

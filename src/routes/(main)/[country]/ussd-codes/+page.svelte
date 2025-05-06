@@ -59,7 +59,7 @@
 	<title>USSD Codes in Africa: Find Your Bank's USSD Code | Monierate</title>
 	<meta
 		name="description"
-		content="Find your favorite Bank code (USSD) in Africa. Quickly find your bank's code for transfers, top up, and other banking services."
+		content="Find your favorite Bank code (USSD) in Africa. Quickly find your bank's code for transfers, top up, and other banking services on Monierate."
 	/>
 	<meta property="og:type" content="website" />
 	<meta property="og:title" content="Find Bank Codes (USSD) in Africa | Monierate" />

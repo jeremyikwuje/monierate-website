@@ -6,7 +6,7 @@
 
 <svelte:head>
 	<title>Compare naira exchange rates | Monierate</title>
-	<meta name="description" content="Compare exchange rates by currencies or provider. Choose the currency or provider, and we'll compare the exchange rates across a range of provider and currencies.">
+	<meta name="description" content="Compare exchange rates by currencies or provider on Monierate. Choose the currency or provider, and we'll compare the exchange rates across a range of provider and currencies.">
 	<meta property="og:type" content="website" />
 	<meta property="og:title" content="Compare naira exchange rates | Monierate" />
 	<meta property="og:description" content="Compare exchange rates by currencies or provider. Choose the currency or provider, and we'll compare the exchange rates across a range of provider and currencies." />
