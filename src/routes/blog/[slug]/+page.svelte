@@ -37,12 +37,24 @@
 		}
 
 		headings?.forEach((h3, index) => {
-			const advert = advertsToDisplay[index];
+			const advert = advertsToDisplay[index] as {
+				label: string;
+				image: string;
+				url: string;
+				width?: string;
+				height?: string;
+			};
 
 			const img = document.createElement('img');
 			img.src = advert.image;
 			img.alt = advert.label || 'Banner';
 			img.className = 'block mx-auto max-w-full';
+			if(advert.width) {
+				img.style.width = advert.width;
+			}
+			if(advert.height) {
+				img.style.height = advert.height;
+			}
 
 			const link = document.createElement('a');
 			link.href = advert.url;
