@@ -1,16 +1,46 @@
 {
-    "footer": {
-        "name": "",
-        "url": "",
-        "image": "",
-        "label": "",
-        "only_mobile": false
-    },
-    "home": {
-        "name": "",
-        "url": "",
-        "image": "",
-        "label": "",
-        "only_mobile": false
-    }
+	"footer": [
+		{
+			"name": "",
+			"url": "https://tinyurl.com/cedar-monierate-banner",
+			"image": "/media/banners/cedar.avif",
+			"formats": ["avif", "gif"],
+			"label": "Ceder",
+			"mobile_only": false,
+			"disabled": false,
+			"width": "320px",
+			"height": "100px",
+			"_v": 1
+		},
+		{
+			"name": "",
+			"url": "https://tinyurl.com/koyn-top-sponsored-link",
+			"image": "/media/banners/koyn.webp",
+			"formats": ["webp", "png"],
+			"label": "Bitnob Virtual Card API",
+			"mobile_only": false,
+			"disabled": false,
+			"_v": 1
+		}
+	],
+	"home": {
+		"name": "",
+		"url": "https://tinyurl.com/koyn-top-sponsored-link",
+		"image": "/media/banners/koyn.webp",
+		"formats": ["webp", "png"],
+		"label": "Bitnob Virtual Card API",
+		"mobile_only": false,
+		"disabled": false,
+		"_v": 1
+	},
+	"converter": {
+		"name": "",
+		"url": "https://tinyurl.com/koyn-top-sponsored-link",
+		"image": "/media/banners/koyn.webp",
+		"formats": ["webp", "png"],
+		"label": "Bitnob Virtual Card API",
+		"mobile_only": false,
+		"disabled": false,
+		"_v": 1
+	}
 }

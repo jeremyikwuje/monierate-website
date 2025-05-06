@@ -280,8 +280,7 @@ try {
 <div class="w-full h-1 mt-16 dark:border-gray-900"></div>
 
 <div class="bg-white dark:bg-gray-800">
-    <div class="container">
-        <!-- Landscape Top/Bottom -->
+    <div class="top-landscape mb-8">
         <a href="https://tinyurl.com/cedar-monierate-banner" target="_blank">
             <picture>
                 <source srcset="/media/banners/cedar.avif?v=1" type="image/avif" />
