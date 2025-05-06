@@ -23,24 +23,16 @@
 			"_v": 1
 		}
 	],
-	"home": {
-		"name": "",
-		"url": "https://tinyurl.com/koyn-top-sponsored-link",
-		"image": "/media/banners/koyn.webp",
-		"formats": ["webp", "png"],
-		"label": "Bitnob Virtual Card API",
-		"mobile_only": false,
-		"disabled": false,
-		"_v": 1
-	},
-	"converter": {
-		"name": "",
-		"url": "https://tinyurl.com/koyn-top-sponsored-link",
-		"image": "/media/banners/koyn.webp",
-		"formats": ["webp", "png"],
-		"label": "Bitnob Virtual Card API",
-		"mobile_only": false,
-		"disabled": false,
-		"_v": 1
-	}
+	"blog": [
+		{
+			"url": "https://tinyurl.com/cedar-monierate-banner",
+			"image": "/media/banners/cedar.avif",
+			"label": "Ceder"
+		},
+		{
+			"url": "https://tinyurl.com/koyn-top-sponsored-link",
+			"image": "/media/banners/koyn.webp",
+			"label": "Bitnob Virtual Card API"
+		}
+	]
 }

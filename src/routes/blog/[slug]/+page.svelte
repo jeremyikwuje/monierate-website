@@ -1,10 +1,60 @@
 <script lang="ts">
-	import * as config from '$lib/blog/config'
+	import * as config from '$lib/blog/config';
 	import { formatDate } from '$lib/blog/utils.js';
+	import { onMount } from 'svelte';
 
-	export let data
-	let content = data.content
-	const metadata = data.metadata
+	export let data;
+	let content = data.content;
+	const metadata = data.metadata;
+	const adverts = data.adverts;
+
+	function shuffleArray(arr: any[]) {
+		for (let i = arr.length - 1; i > 0; i--) {
+			const j = Math.floor(Math.random() * (i + 1));
+			[arr[i], arr[j]] = [arr[j], arr[i]];
+		}
+	}
+
+	onMount(() => {
+		const articleElement = document.querySelector('article');
+		const headings = articleElement?.querySelectorAll('h3');
+
+		const advertArray = Array.isArray(adverts) ? adverts : [adverts];
+		const numberOfHeadings = headings?.length || 0;
+		const numberOfAdverts = advertArray.length;
+
+		let advertsToDisplay = [];
+
+		if (numberOfAdverts > numberOfHeadings) {
+			shuffleArray(advertArray);
+			for (let i = 0; i < numberOfHeadings; i++) {
+				advertsToDisplay.push(advertArray[i]);
+			}
+		} else {
+			for (let i = 0; i < numberOfHeadings; i++) {
+				advertsToDisplay.push(advertArray[i % numberOfAdverts]);
+			}
+		}
+
+		headings?.forEach((h3, index) => {
+			const advert = advertsToDisplay[index];
+
+			const img = document.createElement('img');
+			img.src = advert.image;
+			img.alt = advert.label || 'Banner';
+			img.style.display = 'block';
+			img.style.margin = '15px auto';
+			img.style.maxWidth = '100%';
+
+			const link = document.createElement('a');
+			link.href = advert.url;
+			link.target = '_blank';
+			link.rel = 'noopener noreferrer';
+			link.appendChild(img);
+
+			h3.parentNode?.insertBefore(link, h3);
+		});
+	});
 </script>
 
 <!-- SEO -->
@@ -15,29 +65,39 @@
 	<meta property="og:title" content={metadata.title} />
 	<meta property="og:description" content={metadata.description} />
 	<meta property="og:image" content={metadata.image} />
-	<meta property="og:url" content={config.url}/{metadata.tag}/{metadata.slug} />
+	<meta property="og:url" content="{config.url}/{metadata.tag}/{metadata.slug}" />
 </svelte:head>
-
 
 <main class="container pb-8 md:mb-8 min-h-[100vh]">
 	<header class="mb-4 md:mb-6 not-format text-left max-w-2xl mx-auto">
 		<!-- Tags -->
 		<div class="tags text-left">
-			<a href="/blog?tag={metadata.tag}" class="inline-block text-gray-600 dark:text-green-500 font-semibold text-xs mb-4 leading-none mr-2 last:mr-0">&num;{metadata.tag.toUpperCase()}</a>
+			<a
+				href="/blog?tag={metadata.tag}"
+				class="inline-block text-gray-600 dark:text-green-500 font-semibold text-xs mb-4 leading-none mr-2 last:mr-0"
+				>&num;{metadata.tag.toUpperCase()}</a
+			>
 		</div>
 		<!-- Title -->
-		<h1 class="mb-2 text-3xl font-extrabold leading-tight text-gray-900 lg:mb-2 lg:text-5xl dark:text-gray-300 dark:font-semibold leading-10 md:leading-10">{metadata.title}</h1>
+		<h1
+			class="mb-2 text-3xl font-extrabold leading-tight text-gray-900 lg:mb-2 lg:text-5xl dark:text-gray-300 dark:font-semibold leading-10 md:leading-10"
+		>
+			{metadata.title}
+		</h1>
 		<p class="text-gray-600 dark:text-gray-300 mt-4 text-sm">
-			{#if metadata.author }
+			{#if metadata.author}
 				<span class="mr-4">By <strong>{metadata.author}</strong></span>
 			{/if}
-			
+
 			Published {formatDate(metadata.createdAt)}
 		</p>
 	</header>
 
 	<div class="flex justify-between mx-auto max-w-screen-xl">
-		<article id="entry" class="mx-auto w-full max-w-2xl format text-gray-800 dark:text-gray-300 format-sm sm:format-base lg:format-lg format-primary dark:format-invert lg:w-[700px]">
+		<article
+			id="entry"
+			class="mx-auto w-full max-w-2xl format text-gray-800 dark:text-gray-300 format-sm sm:format-base lg:format-lg format-primary dark:format-invert lg:w-[700px]"
+		>
 			<!-- Post -->
 			<div class="post-content overflow-x-auto">
 				<svelte:component this={content} />
@@ -47,5 +107,4 @@
 </main>
 
 <style>
-	
 </style>
