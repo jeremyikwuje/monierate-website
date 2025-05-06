@@ -42,15 +42,24 @@
 			const img = document.createElement('img');
 			img.src = advert.image;
 			img.alt = advert.label || 'Banner';
-			img.style.display = 'block';
-			img.style.margin = '15px auto';
-			img.style.maxWidth = '100%';
+			img.className = 'block mx-auto max-w-full';
 
 			const link = document.createElement('a');
 			link.href = advert.url;
 			link.target = '_blank';
 			link.rel = 'noopener noreferrer';
-			link.appendChild(img);
+			link.className = 'flex justify-center text-black dark:text-white hover:text-black dark:hover:text-white my-4';
+
+			const container = document.createElement('div');
+			container.className = 'relative inline-block text-center bg-gray-50 dark:bg-gray-900/20 p-2 rounded-md';
+			container.appendChild(img);
+
+			const partnerText = document.createElement('div');
+			partnerText.textContent = 'Partner Display';
+			partnerText.className = 'absolute -top-3 left-1/2 transform -translate-x-1/2 bg-gray-50 dark:bg-gray-900/10  px-2 py-1 font-semibold text-xs rounded';
+			container.appendChild(partnerText);
+
+			link.appendChild(container);
 
 			h3.parentNode?.insertBefore(link, h3);
 		});
