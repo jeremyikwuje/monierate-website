@@ -70,9 +70,8 @@
    <meta property="og:image" content="https://monierate.com/monierate-og-image.png">
 </svelte:head>
 
-<div class="bg-white dark:bg-gray-800">
+<!-- <div class="bg-white dark:bg-gray-800">
 	<div class="container">
-		<!-- Landscape Top/Bottom -->
 		<div class="cedar-money">
 			<a href="https://bit.ly/3MDsvBi" target="_blank">
 				<picture>
@@ -90,7 +89,7 @@
 			</a>
 		</div>
 	</div>
-</div>
+</div> -->
 
 <div class="container mt-8">
 	<div class="mb-16 text-center">
@@ -135,9 +134,9 @@
 		</div>
 		<div>
 			<a
-				href="mailto:hello@monierate.com"
+				href="https://calendly.com/monierate/api-intros"
 				class="button bg-blue-500 hover:bg-blue-600 text-white font-medium py-3 px-4 rounded"
-				>Contact us</a
+				>Call Us</a
 			>
 		</div>
 	</div>
