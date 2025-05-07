@@ -27,7 +27,7 @@
 	};
 
 	export let data;
-	const providers: Provider[] = data.providers;
+	const providers: Provider[] = data.providers.sort((a: any, b: any) => a.name.localeCompare(b.name));
 	const pair_list: any = data.pair_list;
 	const user: any = data.user;
 
