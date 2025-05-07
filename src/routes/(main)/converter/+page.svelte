@@ -6,6 +6,7 @@
 	import ChangerRates from '$lib/components/ChangerRates.svelte';
 	import { goto } from '$app/navigation';
 	import { onMount } from 'svelte';
+	import AdBanner from '$lib/components/AdBanner.svelte';
 
 	interface Currency {
 		code: string;
@@ -267,25 +268,7 @@
 </svelte:head>
 
 <div class="bg-white dark:bg-gray-800">
-	<div class="container">
-		<!-- Landscape Top/Bottom -->
-		<div class="cedar-money">
-			<a href="https://bit.ly/3zfhZgz" target="_blank">
-				<picture>
-					<source srcset="/media/banners/cedar-converter.webp?v=1" type="image/avif" />
-					<source srcset="/media/banners/cedar-converter.jpg?v=1" type="image/gif" />
-
-					<img
-						src="/media/banners/cedar-converter.webp?v=1"
-						alt="Cedar Money"
-						width="800px"
-						height="114px"
-						class="mx-auto max-w-full md:w-[800px] md:h-[114px]"
-					/>
-				</picture>
-			</a>
-		</div>
-	</div>
+	<AdBanner name="converter"/>
 </div>
 
 <div class="mb-24">
@@ -575,6 +558,10 @@
 		</div>
 	</div>
 
+	<div class="mt-8 md:mt-0">
+		<AdBanner name="converter" mobileOnly={true}/>
+	</div>
+
 	{#if currencyFrom.code !== currencyTo.code && pair_rates.length > 0}
 		<div
 			class="container mt-16 border border-none py-[10px] dark:text-light dark:border-none w-full overflow-x-scroll md:overflow-x-hidden overflow-y-scroll md:overflow-y-hidden"
@@ -585,7 +572,7 @@
 					: convertTo} rates
 			</h2>
 			<ChangerRates
-				rates={pair_rates}
+				rates={{remittance: data.remittanceRates, ramp: data.rampRates, card: data.cardRates}}
 				{changers}
 				from={currencyFrom}
 				to={currencyTo}

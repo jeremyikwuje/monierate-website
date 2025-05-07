@@ -2,6 +2,7 @@
 	/** @type {import('./$types').PageData} */
 	import { friendlyDate } from '$lib/functions';
 	import { onMount } from 'svelte';
+	import AdBanner from '$lib/components/AdBanner.svelte';
 
 	interface Changer {
 		code: string;
@@ -29,7 +30,7 @@
 	let rates = pair.changers;
 	const providers: Record<string, Changer> = data.providers || {};
 	const total = Object.entries(rates).length;
-	let newestProviders = ['ridima', 'koyn', 'cleva', 'coinex', 'vertofx'];
+	let newestProviders = ['spenda', 'ridima', 'koyn', 'cleva', 'coinex'];
 	let getNewestProviders: any = {};
 	newestProviders.map((code: string) => {
 		getNewestProviders[code] = providers[code];
@@ -182,25 +183,7 @@
 </svelte:head>
 
 <div class="bg-white dark:bg-gray-800">
-	<div class="container">
-		<!-- Landscape Top/Bottom -->
-		<div class="cedar-money">
-			<a href="https://tinyurl.com/bitnob-stablecoin-lin" target="_blank">
-				<picture>
-					<source srcset="/media/banners/bitnob-landscape-small.webp?v=1" type="image/avif" />
-					<source srcset="/media/banners/bitnob-landscape-small.png?v=2" type="image/gif" />
-	
-					<img
-						src="/media/banners/bitnob-landscape-small.webp?v=2"
-						alt="Bitnob Virtual Card API"
-						width="800px"
-						height="99px"
-						class="mx-auto max-w-full md:w-[800px] md:h-[99px]"
-					/>
-				</picture>
-			</a>
-		</div>
-	</div>
+	<AdBanner name="home"/>
 </div>
 
 <div class="container px-0">
@@ -497,22 +480,22 @@
 	{/if}
 
 	<!-- Landscape Top/Bottom -->
-	<div class="mt-4 pt-8">
-		<a href="https://bit.ly/3MDsvBi" target="_blank">
-			<picture>
-				<source srcset="/media/banners/cedar-homepage.webp?v=5" type="image/avif" />
-				<source srcset="/media/banners/cedar-homepage.png?v=5" type="image/gif" />
+	<!-- <div class="mt-4 pt-8">
+		<a href="https://tinyurl.com/cedar-monierate-banner" target="_blank">
+            <picture>
+                <source srcset="/media/banners/cedar.avif?v=1" type="image/avif" />
+                <source srcset="/media/banners/cedar.gif?v=2" type="image/gif" />
 
-				<img
-					src="/media/banners/cedar-homepage.webp?v=5"
-					alt="Cedar Money"
-					width="800px"
-					height="114px"
-					class="mx-auto max-w-full md:w-[800px] md:h-[114px]"
-				/>
-			</picture>
-		</a>
-	</div>
+                <img
+                    src="/media/banners/cedar.gif?v=2"
+                    alt="Ceder"
+                    width="320px"
+                    height="100px"
+                    class="mx-auto max-w-full md:w-[320px] md:h-[100px] md:hidden"
+                />
+            </picture>
+        </a>
+	</div> -->
 </div>
 
 <div class="pt-4 mb-4">

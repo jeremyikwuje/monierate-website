@@ -8,6 +8,7 @@ import { browser } from "$app/environment";
 import Money from "$lib/money";
 import { timezone } from '$lib/functions';
 import { messageStore } from "$lib/notification";
+import AdBanner from "$lib/components/AdBanner.svelte";
 
 let message: string | null = null;
     messageStore.subscribe((value: any) => {
@@ -80,6 +81,14 @@ function hidePromotionBar() {
     
         setCookie('promotion_bar', 'hide', 7);
     }
+}
+
+try {
+    if(data.user?.isLogin) {
+        timezone.set(data.user.userData.data.timezone);
+    }
+} catch (error) {
+    console.log(error);
 }
 
 </script>
@@ -272,26 +281,8 @@ function hidePromotionBar() {
 <div class="w-full h-1 mt-16 dark:border-gray-900"></div>
 
 <div class="bg-white dark:bg-gray-800">
-    <div class="container">
-        <!-- Landscape Top/Bottom -->
-        <div class="cedar-money">
-            <a href="https://bit.ly/4gj4L2V" target="_blank">
-
-                <picture>
-
-                    <source srcset="/media/banners/cedar-homepage.webp?v=1" type="image/avif">    
-                    <source srcset="/media/banners/cedar-homepage.png?v=1" type="image/gif">
-
-                    <img 
-                        src="/media/banners/cedar-homepage.webp?v=1"
-                        alt="Cedar Money"
-                        width="800px"
-                        height="114px"
-                        class="mx-auto max-w-full md:w-[800px] md:h-[114px]">
-
-                </picture>
-            </a>
-        </div>
+    <div class="top-landscape mb-8">
+        <AdBanner name="home"/>
     </div>
 </div>
 
@@ -447,7 +438,7 @@ function hidePromotionBar() {
     <div
         class="
     fixed bottom-20 left-1/2 transform -translate-x-1/2 z-50
-    max-w-[90%] md:max-w-[400px] p-4
+    max-w-[90%] md:max-w-[400px] py-4 px-2 md:p-4
     bg-black/80 dark:bg-black/85 text-white rounded-lg shadow-lg text-center text-[0.9em]
     fade-notification show
     "
