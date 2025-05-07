@@ -44,7 +44,7 @@
     const replaceExt = (url: string, ext: string) => url.replace(/\.\w+$/, `.${ext}`);
 </script>
 
-<div class="{mobileOnly ? 'hidden' : ''}">
+<div class="{mobileOnly ? 'md:hidden' : ''}">
     {#if banners.length > 0}
         {#key current}
             <div class="container {banners[current].mobile_only ? 'md:hidden' : ''}">
