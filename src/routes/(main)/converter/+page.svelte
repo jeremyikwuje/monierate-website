@@ -572,7 +572,7 @@
 					: convertTo} rates
 			</h2>
 			<ChangerRates
-				rates={pair_rates}
+				rates={{remittance: data.remittanceRates, ramp: data.rampRates, card: data.cardRates}}
 				{changers}
 				from={currencyFrom}
 				to={currencyTo}
