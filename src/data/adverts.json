@@ -5,7 +5,7 @@
 			"url": "https://tinyurl.com/cedar-monierate-banner",
 			"image": "/media/banners/cedar.avif",
 			"formats": ["avif", "gif"],
-			"label": "Ceder",
+			"label": "Cedar",
 			"mobile_only": false,
 			"disabled": false,
 			"width": "320px",
@@ -27,19 +27,19 @@
 		{
 			"url": "https://tinyurl.com/cedar-monierate-banner",
 			"image": "/media/banners/cedar-blog-1.gif",
-			"label": "Ceder",
+			"label": "Cedar",
 			"width": "420px"
 		},
 		{
 			"url": "https://tinyurl.com/cedar-monierate-banner",
 			"image": "/media/banners/cedar-blog-2.gif",
-			"label": "Ceder",
+			"label": "Cedar",
 			"width": "420px"
 		},
 		{
 			"url": "https://tinyurl.com/cedar-monierate-banner",
 			"image": "/media/banners/cedar-blog-3.gif",
-			"label": "Ceder",
+			"label": "Cedar",
 			"width": "420px"
 		}
 	],
@@ -48,7 +48,7 @@
 		"url": "https://tinyurl.com/cedar-monierate-banner",
 		"image": "/media/banners/cedar-home.avif",
 		"formats": ["avif", "gif"],
-		"label": "Ceder",
+		"label": "Cedar",
 		"mobile_only": false,
 		"disabled": false,
 		"width": "600px",
@@ -60,7 +60,7 @@
 		"url": "https://tinyurl.com/cedar-monierate-banner",
 		"image": "/media/banners/cedar-converter.avif",
 		"formats": ["avif", "gif"],
-		"label": "Ceder",
+		"label": "Cedar",
 		"mobile_only": false,
 		"disabled": false,
 		"width": "600px",
