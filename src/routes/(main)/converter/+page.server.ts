@@ -11,9 +11,35 @@ interface CountriesMap { [key: string]: string }
 interface CountryCodeByCurrencyMap {
     [currencyCode: string]: string | string[];
 }
+interface PairChanger {
+    changer_code: string;
+    price_buy: number;
+    price_sell: number;
+    updated_at: string;
+}
 
 
 export const load: PageServerLoad = async ({ fetch, params, url }) => {
+    async function getPairChangers(
+		pair_code: string,
+		changer_service: string
+	): Promise<PairChanger[]> {
+		try {
+			const response = await fetch(
+				`/api/pairs/changers?pair_code=${pair_code}&changer_service=${changer_service}`
+			);
+
+			if (!response.ok) {
+				throw new Error(`HTTP error! status: ${response.status}`);
+			}
+
+			return await response.json();
+		} catch (error) {
+			console.error('Error fetching pair changers:', error);
+			return [];
+		}
+	}
+
     try {
         let urlParams = url.searchParams;
         const convert = {
@@ -21,8 +47,10 @@ export const load: PageServerLoad = async ({ fetch, params, url }) => {
             To: urlParams.get('To') || 'ngn',
             Amount: urlParams.get('Amount') || 1
         };
-
-        console.log(convert);
+        
+        let remittanceRates = await getPairChangers(`${convert.From}${convert.To}`, 'remittance');
+		let rampRates = await getPairChangers(`${convert.From}${convert.To}`, 'ramp');
+		let cardRates = await getPairChangers(`${convert.From}${convert.To}`, 'card');
 
         const changers = await get_changers();
         const currencies = await get_currencies();
@@ -41,7 +69,10 @@ export const load: PageServerLoad = async ({ fetch, params, url }) => {
             convert,
             countries,
             countriesToCurrencies,
-            countryCodeByCurrency
+            countryCodeByCurrency,
+            remittanceRates,
+            rampRates,
+            cardRates
         }
     }
     catch (e: any) {

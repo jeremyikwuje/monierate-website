@@ -79,7 +79,7 @@
 	<title>SWIFT Codes in Africa: Find Your Bank's BIC Code | Monierate</title>
 	<meta
 		name="description"
-		content="Learn about SWIFT/BIC codes in Africa. Quickly find your bank's code for international money transfers. Ensure your funds reach the right destination account."
+		content="Learn about SWIFT/BIC codes in Africa on Monierate. Quickly find your bank's code for international money transfers. Ensure your funds reach the right destination account."
 	/>
 	<meta property="og:type" content="website" />
 	<meta property="og:title" content="SWIFT Codes in Africa: Find Your Bank's BIC Code | Monierate" />

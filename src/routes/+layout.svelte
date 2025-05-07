@@ -8,6 +8,7 @@ import { browser } from "$app/environment";
 import Money from "$lib/money";
 import { timezone } from '$lib/functions';
 import { messageStore } from "$lib/notification";
+import AdBanner from "$lib/components/AdBanner.svelte";
 
 let message: string | null = null;
     messageStore.subscribe((value: any) => {
@@ -258,22 +259,8 @@ try {
 <div class="w-full h-1 mt-16 dark:border-gray-900"></div>
 
 <div class="bg-white dark:bg-gray-800">
-    <div class="container">
-        <!-- Landscape Top/Bottom -->
-        <a href="https://tinyurl.com/bitnob-stablecoin-lin" target="_blank">
-            <picture>
-                <source srcset="/media/banners/bitnob-landscape-small.webp?v=1" type="image/avif" />
-                <source srcset="/media/banners/bitnob-landscape-small.png?v=2" type="image/gif" />
-
-                <img
-                    src="/media/banners/bitnob-landscape-small.webp?v=2"
-                    alt="Bitnob Virtual Card API"
-                    width="800px"
-                    height="99px"
-                    class="mx-auto max-w-full md:w-[800px] md:h-[99px]"
-                />
-            </picture>
-        </a>
+    <div class="top-landscape mb-8">
+        <AdBanner name="home"/>
     </div>
 </div>
 

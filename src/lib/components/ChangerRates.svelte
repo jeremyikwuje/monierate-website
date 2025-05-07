@@ -1,6 +1,4 @@
 <script lang="ts">
-	import { onMount } from 'svelte';
-
 	interface Changer {
 		code: string;
 		name: string;
@@ -135,24 +133,17 @@
 		rates.card = await getPairChangers(`${from.code}${to.code}`, 'card');
 	}
 
+	let oldFromCode = from.code;
+	let oldToCode = to.code;
 	$: {
-		if (from.code && to.code) {
+		if (oldFromCode !== from.code || oldToCode !== to.code) {
 			if (typeof window !== 'undefined') {
+				oldFromCode = from.code;
+				oldToCode = to.code;
 				updatePairChangers();
 			}
 		}
 	}
-
-	// onMount(async () => {
-	// 	// Fetch sending (remittance) rates
-	// 	rates.remittance = await getPairChangers('usdngn', 'remittance');
-
-	// 	// Fetch buying and selling (ramp) rates
-	// 	rates.ramp = await getPairChangers('usdngn', 'ramp');
-
-	// 	// Fetch funding (card) rates
-	// 	rates.card = await getPairChangers('usdngn', 'card');
-	// });
 </script>
 
 <div class="max-w-[100%] md:max-w-7xl mx-auto md:p-6">
