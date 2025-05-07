@@ -63,7 +63,7 @@
 			link.className = 'flex justify-center text-black dark:text-white hover:text-black dark:hover:text-white my-4';
 
 			const container = document.createElement('div');
-			container.className = 'relative inline-block text-center bg-gray-50 dark:bg-gray-900/20 p-2 rounded-md';
+			container.className = 'relative inline-block text-center bg-gray-50 dark:bg-gray-900/20 p-2 px-8 rounded-md';
 			container.appendChild(img);
 
 			const partnerText = document.createElement('div');
