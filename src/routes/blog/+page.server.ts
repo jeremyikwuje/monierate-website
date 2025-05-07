@@ -1,5 +1,6 @@
 
 import type { Post } from '$lib/blog/types'
+import { im } from 'mathjs'
 import type { PageServerLoad } from './$types'
 
 export const load: PageServerLoad = async ({ fetch, url }) => {
@@ -13,3 +14,12 @@ export const load: PageServerLoad = async ({ fetch, url }) => {
         posts: posts
     }
 }
+
+export const blog_sponsored_banner = [
+    {
+        name: 'cedar',
+        url: 'https://www.google.com',
+        image: 'https://bit.ly/3svJGhQ',
+        text: 'Send & Receive Cross-border Payments Globally.'
+    }
+]
