@@ -182,6 +182,7 @@
 	<meta property="og:image" content="https://monierate.com/monierate-og-image.png" />
 </svelte:head>
 
+<!-- partner -->
 <div class="bg-white dark:bg-gray-800">
 	<AdBanner name="home"/>
 </div>
