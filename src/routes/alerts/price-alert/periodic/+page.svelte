@@ -56,7 +56,7 @@
 
 	let error: string = '';
 
-	if (user?.isLogin && !alertEdit) {
+	if (user?.isLoggedIn && !alertEdit) {
 		selectedChannelsValues.email = user.userData.data.email;
 	}
 
@@ -401,7 +401,7 @@
 						</div>
 					</div>
 
-					{#if !user.isLogin}
+					{#if !user.isLoggedIn}
 						<a
 							href={login_uri('/alerts')}
 							class="block button w-full text-center bg-blue-500 text-white font-semibold hover:bg-blue-600"
@@ -561,7 +561,7 @@
 						{/if}
 					</div>
 
-					{#if user?.isLogin}
+					{#if user?.isLoggedIn}
 						<div class="mb-4 text-sm">
 							<strong>Note:</strong>
 							<span>Your timezone is "{user.userData.data.timezone || 'UTC'}."</span>

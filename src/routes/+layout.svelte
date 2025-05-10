@@ -95,7 +95,7 @@
 	}
 
 	try {
-		if (data.user?.isLogin) {
+		if (data.user?.isLoggedIn) {
 			timezone.set(data.user.userData.data.timezone);
 		}
 	} catch (error) {
@@ -227,7 +227,7 @@
 				/>
 			</a>
 			<div class="flex items-center md:order-2">
-				{#if !user?.isLogin}
+				{#if !user?.isLoggedIn}
 					<a
 						href={login_uri()}
 						type="button"
@@ -326,7 +326,7 @@
 					<li>
 						<a href="/api" class={path == 'api' ? 'active' : ''}> API </a>
 					</li>
-					{#if !user?.isLogin}
+					{#if !user?.isLoggedIn}
 						<li class="md:hidden">
 							<a href={login_uri()}> Login </a>
 						</li>

@@ -50,8 +50,8 @@
 
 	$: {
 		if (
-			(browser && !user?.isLogin) ||
-			(browser && user?.isLogin && data.alerts && !(data.alerts.length > 0))
+			(browser && !user?.isLoggedIn) ||
+			(browser && user?.isLoggedIn && data.alerts && !(data.alerts.length > 0))
 		) {
 			goto('/alerts/price-alert/periodic', { replaceState: true });
 		}
@@ -216,7 +216,7 @@
 </svelte:head>
 
 <div class="container">
-	{#if user.isLogin}
+	{#if user.isLoggedIn}
 		<h2 class="text-3xl mb-4">My alerts</h2>
 		<div class="mb-6">View and manage all your price alerts in one place.</div>
 
