@@ -17,7 +17,10 @@
 
 	onMount(() => {
 		const articleElement = document.querySelector('article');
-		const headings = articleElement?.querySelectorAll('h3');
+		let headings = articleElement?.querySelectorAll('h2');
+		if(!headings || !(headings?.length > 0)) {
+			headings = articleElement?.querySelectorAll('h3');
+		}
 
 		const advertArray = Array.isArray(adverts) ? adverts : [adverts];
 		const numberOfHeadings = headings?.length || 0;
@@ -36,7 +39,7 @@
 			}
 		}
 
-		headings?.forEach((h3, index) => {
+		headings?.forEach((heading, index) => {
 			const advert = advertsToDisplay[index] as {
 				label: string;
 				image: string;
@@ -73,7 +76,7 @@
 
 			link.appendChild(container);
 
-			h3.parentNode?.insertBefore(link, h3);
+			heading.parentNode?.insertBefore(link, heading);
 		});
 	});
 </script>

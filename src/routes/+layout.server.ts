@@ -6,11 +6,11 @@ export const load: LayoutServerLoad = async ({ request, cookies, fetch }) => {
 
     const authToken = cookies.get('auth_token');
     const user = {
-        isLogin: false,
+        isLoggedIn: false,
         userToken: null,
         userData: null,
     } as {
-        isLogin: boolean,
+        isLoggedIn: boolean,
         userToken: string | null,
         userData: any,
     }
@@ -22,7 +22,7 @@ export const load: LayoutServerLoad = async ({ request, cookies, fetch }) => {
             userData = parseJSONSafe(userData);
 
             if (userData.status === 'success') {
-                user.isLogin = true;
+                user.isLoggedIn = true;
                 user.userToken = authToken;
                 user.userData = userData;
             }

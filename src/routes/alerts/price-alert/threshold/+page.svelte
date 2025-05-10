@@ -38,7 +38,7 @@
 	let selectedRange: string = 'above';
 	let selectedAmount: number;
 
-	if (user.isLogin) {
+	if (user.isLoggedIn) {
 		selectedChannelsValues = { email: user.email, webhook: '' };
 	}
 

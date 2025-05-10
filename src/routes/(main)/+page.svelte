@@ -30,7 +30,7 @@
 	let rates = pair.changers;
 	const providers: Record<string, Changer> = data.providers || {};
 	const total = Object.entries(rates).length;
-	let newestProviders = ['spenda', 'ridima', 'koyn', 'cleva', 'coinex'];
+	let newestProviders = ['busha', 'spenda', 'ridima', 'koyn', 'cleva'];
 	let getNewestProviders: any = {};
 	newestProviders.map((code: string) => {
 		getNewestProviders[code] = providers[code];
@@ -182,6 +182,7 @@
 	<meta property="og:image" content="https://monierate.com/monierate-og-image.png" />
 </svelte:head>
 
+<!-- partner -->
 <div class="bg-white dark:bg-gray-800">
 	<AdBanner name="home"/>
 </div>
