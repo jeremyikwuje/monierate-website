@@ -1,5 +1,6 @@
 
 import type { Post } from '$lib/blog/types'
+import { im } from 'mathjs'
 import type { PageServerLoad } from './$types'
 
 export const load: PageServerLoad = async ({ fetch, url }) => {
