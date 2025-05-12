@@ -227,7 +227,7 @@
 				/>
 			</a>
 			<div class="flex items-center md:order-2">
-				{#if !user?.isLoggedIn}
+				<!-- {#if !user?.isLoggedIn}
 					<a
 						href={login_uri()}
 						type="button"
@@ -273,7 +273,15 @@
 							</div>
 						{/if}
 					</div>
-				{/if}
+				{/if} -->
+
+					<a
+						href='/alerts'
+						type="button"
+						class="button px-3 bg-gray-900 dark:bg-gray-200 font-semibold text-white dark:text-gray-900"
+					>
+						Get alert
+					</a>
 
 				<button
 					id="nav-collapse-trigger"
@@ -326,7 +334,7 @@
 					<li>
 						<a href="/api" class={path == 'api' ? 'active' : ''}> API </a>
 					</li>
-					{#if !user?.isLoggedIn}
+					<!-- {#if !user?.isLoggedIn}
 						<li class="md:hidden">
 							<a href={login_uri()}> Login </a>
 						</li>
@@ -334,7 +342,7 @@
 						<li class="md:hidden">
 							<a href="https://account.monierate.com/"> Dashboard </a>
 						</li>
-					{/if}
+					{/if} -->
 				</ul>
 			</div>
 		</div>
