@@ -31,6 +31,12 @@
 			"width": "420px"
 		},
 		{
+			"url": "https://tinyurl.com/ipaybtc-banner",
+			"image": "/media/banners/ipaybtc.gif",
+			"label": "iPayBTC",
+			"width": "400px"
+		},
+		{
 			"url": "https://tinyurl.com/cedar-monierate-banner",
 			"image": "/media/banners/cedar-blog-2.gif",
 			"label": "Cedar",
@@ -65,6 +71,18 @@
 		"disabled": false,
 		"width": "600px",
 		"height": "150px",
+		"_v": 1
+	},
+	"converter_mobile_only": {
+		"name": "",
+		"url": "https://tinyurl.com/ipaybtc-banner",
+		"image": "/media/banners/ipaybtc.avif",
+		"formats": ["avif", "gif"],
+		"label": "iPayBTC",
+		"mobile_only": true,
+		"disabled": false,
+		"width": "350px",
+		"height": "390px",
 		"_v": 1
 	}
 }
