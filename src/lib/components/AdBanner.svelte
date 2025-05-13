@@ -1,17 +1,20 @@
 <script lang="ts">
-	import { onMount, onDestroy } from 'svelte';
+	import { onMount } from 'svelte';
+	import { page } from '$app/stores';
 	import Adverts from '$data/adverts.json';
+	import { bannerStore } from '$lib/stores/banner-store';
 
 	export let name: keyof typeof Adverts;
 	export let width: string | null = null;
 	export let height: string | null = null;
-	export let interval: number = 8000;
 	export let mobileOnly: boolean = false;
 	export let showLabel: boolean = false;
+	// Get server-provided banner index from data (if available)
+	export let bannerIndexes: any = {};
 
 	let banners: any[] = [];
 	let current = 0;
-	let timer: any;
+	let isFirstVisit = true;
 
 	const raw = Adverts[name];
 	const notFound = !(name in Adverts);
@@ -26,20 +29,26 @@
 		banners = [raw];
 	}
 
-	if (banners.length > 1) {
-		current = Math.floor(Math.random() * banners.length);
+	// Initialize with server data if available
+	if (bannerIndexes && name in bannerIndexes) {
+		current = bannerIndexes[name];
+		bannerStore.initIndex(name, current);
+		isFirstVisit = false;
 	}
 
-	const rotate = () => {
-		if (banners.length > 1) {
-			timer = setInterval(() => {
-				current = (current + 1) % banners.length;
-			}, interval);
-		}
-	};
+	onMount(() => {
+		current = bannerStore.getNextIndex(name, banners.length, isFirstVisit);
+		isFirstVisit = false;
 
-	onMount(rotate);
-	onDestroy(() => timer && clearInterval(timer));
+		// Set up page navigation tracking for subsequent page views
+		const unsubscribe = page.subscribe(() => {
+			current = bannerStore.getNextIndex(name, banners.length, false);
+		});
+
+		return () => {
+			unsubscribe();
+		};
+	});
 
 	const getExtension = (url: string) => url.split('.').pop() ?? 'png';
 	const replaceExt = (url: string, ext: string) => url.replace(/\.\w+$/, `.${ext}`);
@@ -107,8 +116,8 @@
 			</div>
 		{/key}
 	{:else if notFound}
-		<div class="text-center text-red-600 text-sm italic">Advert “{name}” not found.</div>
+		<div class="text-center text-red-600 text-sm italic">Advert "{name}" not found.</div>
 	{:else}
-		<div class="text-center text-yellow-500 text-sm italic">No valid adverts for “{name}”.</div>
+		<div class="text-center text-yellow-500 text-sm italic">No valid adverts for "{name}".</div>
 	{/if}
 </div>

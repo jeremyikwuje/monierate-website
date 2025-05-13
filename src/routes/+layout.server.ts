@@ -1,6 +1,7 @@
 import { basicAuth, getEndpoint } from "$lib/helper";
 import type { LayoutServerLoad } from "./$types";
 import { parseJSONSafe } from '$lib/functions';
+import { BANNER_COOKIE_PREFIX } from '$lib/stores/banner-store';
 
 export const load: LayoutServerLoad = async ({ request, cookies, fetch }) => {
 
@@ -36,12 +37,23 @@ export const load: LayoutServerLoad = async ({ request, cookies, fetch }) => {
 
     const market_avg_rate = top_pairs.usdngn.price;
 
+    // Extract banner cookies from the request
+    const bannerIndexes: Record<string, number> = {};
+    const allCookies = cookies.getAll();
+    for (const { name, value } of allCookies) {
+        if (name.startsWith(BANNER_COOKIE_PREFIX)) {
+            const bannerName = name.replace(BANNER_COOKIE_PREFIX, '');
+            bannerIndexes[bannerName] = parseInt(value, 10) || 0;
+        }
+    }
+
     return {
         pairs,
         top_pairs,
         market_avg_rate,
         selected_partner_top,
         user,
+        bannerIndexes,
     }
 
 };
