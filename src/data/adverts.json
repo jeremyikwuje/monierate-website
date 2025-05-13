@@ -1,28 +1,16 @@
 {
-	"footer": [
-		{
-			"name": "",
-			"url": "https://tinyurl.com/cedar-monierate-banner",
-			"image": "/media/banners/cedar.avif",
-			"formats": ["avif", "gif"],
-			"label": "Cedar",
-			"mobile_only": false,
-			"disabled": false,
-			"width": "320px",
-			"height": "100px",
-			"_v": 1
-		},
-		{
-			"name": "",
-			"url": "https://tinyurl.com/koyn-top-sponsored-link",
-			"image": "/media/banners/koyn.webp",
-			"formats": ["webp", "png"],
-			"label": "Bitnob Virtual Card API",
-			"mobile_only": false,
-			"disabled": false,
-			"_v": 1
-		}
-	],
+	"footer": {
+		"name": "",
+		"url": "https://tinyurl.com/cedar-monierate-banner",
+		"image": "/media/banners/cedar-home.avif",
+		"formats": ["avif", "gif"],
+		"label": "Cedar",
+		"mobile_only": false,
+		"disabled": false,
+		"width": "600px",
+		"height": "150px",
+		"_v": 1
+	},
 	"blog": [
 		{
 			"url": "https://tinyurl.com/cedar-monierate-banner",

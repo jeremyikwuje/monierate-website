@@ -446,7 +446,7 @@
 
 <div class="bg-white dark:bg-gray-800">
 	<div class="top-landscape mb-8">
-		<AdBanner name="home" />
+		<AdBanner name="footer" />
 	</div>
 </div>
 
