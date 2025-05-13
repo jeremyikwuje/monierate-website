@@ -559,7 +559,7 @@
 	</div>
 
 	<div class="mt-8 md:mt-0">
-		<AdBanner name="converter" mobileOnly={true} showLabel={true}/>
+		<AdBanner name="converter_mobile_only" mobileOnly={true} showLabel={true}/>
 	</div>
 
 	{#if currencyFrom.code !== currencyTo.code && pair_rates.length > 0}

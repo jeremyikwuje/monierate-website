@@ -184,7 +184,7 @@
 
 <!-- partner -->
 <div class="bg-white dark:bg-gray-800">
-	<AdBanner name="home"/>
+	<AdBanner name="home" bannerIndexes={data.bannerIndexes}/>
 </div>
 
 <div class="container px-0">
