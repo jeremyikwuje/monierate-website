@@ -585,6 +585,8 @@
 											class="fas fa-sort-down text-gray-500 dark:text-gray-400 relative top-[-1px]"
 										/>
 									{/if}
+								{:else}
+							        <i class="fas fa-sort-down text-gray-200 dark:text-gray-700 relative top-[-1px]" />
 								{/if}
 							</button>
 						</th>
@@ -598,6 +600,8 @@
 											class="fas fa-sort-down text-gray-500 dark:text-gray-400 relative top-[-2px]"
 										/>
 									{/if}
+									{:else}
+							        <i class="fas fa-sort-down text-gray-200 dark:text-gray-700 relative top-[-1px]" />
 								{/if}
 								<span>
 									Buy <span class="hidden md:inline">Price</span>
@@ -614,6 +618,8 @@
 											class="fas fa-sort-down text-gray-500 dark:text-gray-400 relative top-[-2px]"
 										/>
 									{/if}
+									{:else}
+							        <i class="fas fa-sort-down text-gray-200 dark:text-gray-700 relative top-[-1px]" />
 								{/if}
 								<span>
 									Sell <span class="hidden md:inline">Price</span>
