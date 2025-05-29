@@ -58,6 +58,45 @@
 		return providerName.toLowerCase().includes(searchTerm.toLowerCase());
 	});
 
+	let sortTableBy = 'none' as 'none' | 'buy' | 'sell' | 'name';
+	let sortDirection = 'asc' as 'asc' | 'desc';
+	const sortTable = (method: 'buy' | 'sell' | 'name') => {
+		if (sortTableBy === method) {
+			if (sortDirection === 'desc') {
+				sortDirection = 'asc';
+			} else if (sortDirection === 'asc') {
+				sortTableBy = 'none';
+				sortDirection = 'desc';
+			} else {
+				sortDirection = 'desc';
+			}
+		} else {
+			sortTableBy = method;
+			sortDirection = 'desc';
+		}
+
+		if (method === 'buy') {
+			filteredRates.sort((a: any, b: any) => {
+				return sortDirection === 'asc' ? a.price_buy - b.price_buy : b.price_buy - a.price_buy;
+			});
+		} else if (method === 'sell') {
+			filteredRates.sort((a: any, b: any) => {
+				return sortDirection === 'asc' ? a.price_sell - b.price_sell : b.price_sell - a.price_sell;
+			});
+		} else if (method === 'name') {
+			filteredRates.sort((a: any, b: any) => {
+				const nameA = providers[a.changer_code]?.name.toLowerCase() || '';
+				const nameB = providers[b.changer_code]?.name.toLowerCase() || '';
+				return sortDirection === 'asc' ? nameA.localeCompare(nameB) : nameB.localeCompare(nameA);
+			});
+		}
+		if (sortTableBy === 'none') {
+			rates = [...rates];
+		}
+
+		filteredRates = [...filteredRates];
+	};
+
 	let newResult: ChangerRate[] = [];
 	let sendingResult: ChangerRate[] = [];
 	let buyingResult: ChangerRate[] = [];
@@ -184,7 +223,7 @@
 
 <!-- partner -->
 <div class="bg-white dark:bg-gray-800">
-	<AdBanner name="home" bannerIndexes={data.bannerIndexes}/>
+	<AdBanner name="home" bannerIndexes={data.bannerIndexes} />
 </div>
 
 <div class="container px-0">
@@ -535,12 +574,57 @@
 				<thead>
 					<tr>
 						<th scope="col" class="pr-4 py-3 md:pl-4 font-bitter hidden md:inline-block"> # </th>
-						<th scope="col" class="py-3 pl-2 md:pl-6 md:pl-0 font-bold font-bitter"> Provider </th>
+						<th scope="col" class="py-3 pl-2 md:pl-6 md:pl-0 font-bold font-bitter">
+							<button on:click={() => sortTable('name')} class="flex items-center gap-1">
+								<span>Provider</span>
+								{#if sortTableBy === 'name'}
+									{#if sortDirection === 'asc'}
+										<i class="fas fa-sort-up text-gray-500 dark:text-gray-400 relative top-[4px]" />
+									{:else}
+										<i
+											class="fas fa-sort-down text-gray-500 dark:text-gray-400 relative top-[-1px]"
+										/>
+									{/if}
+								{:else}
+							        <i class="fas fa-sort-down text-gray-200 dark:text-gray-700 relative top-[-1px]" />
+								{/if}
+							</button>
+						</th>
 						<th scope="col" class="pl-16 md:pl-6 pr-6 py-3 font-bold font-bitter text-right">
-							Buy <span class="hidden md:inline">Price</span>
+							<button on:click={() => sortTable('buy')} class="inline-flex items-center gap-1">
+								{#if sortTableBy === 'buy'}
+									{#if sortDirection === 'asc'}
+										<i class="fas fa-sort-up text-gray-500 dark:text-gray-400 relative top-[4px]" />
+									{:else}
+										<i
+											class="fas fa-sort-down text-gray-500 dark:text-gray-400 relative top-[-2px]"
+										/>
+									{/if}
+									{:else}
+							        <i class="fas fa-sort-down text-gray-200 dark:text-gray-700 relative top-[-1px]" />
+								{/if}
+								<span>
+									Buy <span class="hidden md:inline">Price</span>
+								</span>
+							</button>
 						</th>
 						<th scope="col" class="pl-6 pr-6 py-3 font-bold font-bitter text-right">
-							Sell <span class="hidden md:inline">Price</span>
+							<button on:click={() => sortTable('sell')} class="inline-flex items-center gap-1">
+								{#if sortTableBy === 'sell'}
+									{#if sortDirection === 'asc'}
+										<i class="fas fa-sort-up text-gray-500 dark:text-gray-400 relative top-[4px]" />
+									{:else}
+										<i
+											class="fas fa-sort-down text-gray-500 dark:text-gray-400 relative top-[-2px]"
+										/>
+									{/if}
+									{:else}
+							        <i class="fas fa-sort-down text-gray-200 dark:text-gray-700 relative top-[-1px]" />
+								{/if}
+								<span>
+									Sell <span class="hidden md:inline">Price</span>
+								</span>
+							</button>
 						</th>
 						<th
 							scope="col"
