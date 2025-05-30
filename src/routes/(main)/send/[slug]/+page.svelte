@@ -143,7 +143,7 @@
 				getInputValue = 0;
 			}
 
-			await updateUrlPath();
+			// await updateUrlPath();
 			isLoading = false;
 		} catch (error) {
 			console.error('Amount change error:', error);
