@@ -9,16 +9,18 @@ interface ConvertParams {
     From: string;
     To: string;
     Amount: number;
+    Inverse: boolean;
 }
 
 export const load: PageServerLoad = async ({ params, url }) => {
     const slug = params.slug;
     const [currencyToBuyCode, _, currencyToPayCode] = slug.split('-');
 
-    const convert: ConvertParams = {
+    let convert: ConvertParams = {
         From: currencyToBuyCode || 'USD',
         To: currencyToPayCode || 'NGN',
-        Amount: 1
+        Amount: 1,
+        Inverse: false,
     };
 
     try {
@@ -34,10 +36,22 @@ export const load: PageServerLoad = async ({ params, url }) => {
             throw error(500, 'One or more data sources returned null');
         }
 
+        let final_pair_changers = pair_changers;
+
+        // If pair_changers is empty, perform inverse fetch
+        if (!pair_changers || !(pair_changers.length > 0)) {
+            convert = {
+                ...convert,
+                Inverse: true,
+            };
+            const inverse_pair_code = `${convert.To}${convert.From}`.toUpperCase();
+            final_pair_changers = await get_pairs_changers(inverse_pair_code, ChangerServiceCategory.Ramp);
+        }
+
         return {
             changers: array_to_key_object(changers, 'code'),
             currencies,
-            pair_changers,
+            pair_changers: final_pair_changers,
             convert,
         };
     }
