@@ -42,6 +42,7 @@
 	$: convert = data.convert || { From: 'USD', To: 'NGN', Amount: 1 };
 	$: convertFrom = convert.From?.toUpperCase().trim();
 	$: convertTo = convert.To?.toUpperCase().trim();
+	$: inverse = convert.Inverse;
 
 	$: currencyFrom = currencies.find((c) => c.code.toUpperCase() === convertFrom) || {
 		code: convertFrom,
@@ -71,7 +72,7 @@
 		let platform_rates: ChangerRate[] = [];
 
 		try {
-			if (changers && pairChangers) {
+			if (changers && pairChangers.length > 0) {
 				pairChangers.map((changerRate) => {
 					const changer = changers[changerRate.changer_code];
 					platform_rates.push({
@@ -84,6 +85,7 @@
 			console.error('Error finding platforms:', error);
 		}
 
+		platform_rates = platform_rates.filter((a) => a.rate.price_buy > 0);
 		platform_rates.sort((a, b) => a.rate.price_buy - b.rate.price_buy);
 
 		return platform_rates;
@@ -113,6 +115,12 @@
 		try {
 			isLoading = true;
 			await getPairChangers(`${currencyToBuyInput}${currencyToPayInput}`, 'ramp');
+			if (!(pairChangers?.length > 0)) {
+				await getPairChangers(`${currencyToPayInput}${currencyToBuyInput}`, 'ramp');
+				convert.Inverse = true;
+			} else {
+				convert.Inverse = false;
+			}
 			changePath(
 				`/buy/${currencyToBuyInput.toLowerCase()}-with-${currencyToPayInput.toLowerCase()}-best-buying-rate`
 			);
@@ -135,7 +143,7 @@
 				getInputValue = 0;
 			}
 
-			await updateUrlPath();
+			// await updateUrlPath();
 			isLoading = false;
 		} catch (error) {
 			console.error('Amount change error:', error);
@@ -175,6 +183,7 @@
 	function toggleQuestion(index: any) {
 		openQuestion = openQuestion === index ? null : index;
 	}
+	const fractionalLength = (number: number) => (number > 0.009 ? 2 : 6);
 </script>
 
 <svelte:head>
@@ -208,7 +217,7 @@
 				<picture>
 					<source srcset="/media/banners/cedar.avif?v=1" type="image/avif" />
 					<source srcset="/media/banners/cedar.gif?v=2" type="image/gif" />
-	
+
 					<img
 						src="/media/banners/cedar.gif?v=2"
 						alt="Ceder"
@@ -341,11 +350,17 @@
 			{#each convertResult as result, i}
 				{#if result.rate.price_buy > 0}
 					<div
-						class="flex flex-wrap gap-4 px-8 py-4 w-full bg-white dark:bg-gray-900 shadow-md rounded-lg mb-8 relative overflow-hidden border {i === 1 ? 'border-gray-800 dark:border-light' : 'border-transparent'}"
+						class="flex flex-wrap gap-4 px-8 py-4 w-full bg-white dark:bg-gray-900 shadow-md rounded-lg mb-8 relative overflow-hidden border {i ===
+						0
+							? 'border-gray-800 dark:border-light'
+							: 'border-transparent'}"
 					>
 						<div class="flex-1 min-w-full md:min-w-[30%] md:flex md:items-center md:justify-start">
 							<div class="flex justify-start items-center">
-								<a href="/converter/{result.changer.code}?Amount={convertAmount}&From={currencyFrom.code.toUpperCase()}&To={currencyTo.code.toUpperCase()}">
+								<a
+									href="/converter/{result.changer
+										.code}?Amount={convertAmount}&From={currencyFrom.code.toUpperCase()}&To={currencyTo.code.toUpperCase()}"
+								>
 									<img
 										src="/icons/svg/{result.changer.code}.svg"
 										alt="{result.changer.name} icon"
@@ -353,7 +368,8 @@
 									/>
 								</a>
 								<a
-									href="/converter/{result.changer.code}?Amount={convertAmount}&From={currencyFrom.code.toUpperCase()}&To={currencyTo.code.toUpperCase()}"
+									href="/converter/{result.changer
+										.code}?Amount={convertAmount}&From={currencyFrom.code.toUpperCase()}&To={currencyTo.code.toUpperCase()}"
 									class="text-gray-600 dark:text-gray-300 hover:underline text-lg"
 								>
 									{result.changer.name}
@@ -366,13 +382,27 @@
 									>{convertAmount} {currencyToBuyInput.toUpperCase()} =</span
 								>
 								<span class="block text-4xl text-gray-800 dark:text-gray-200 py-3">
-									{Money.formatMoney(result.rate.price_buy * convertAmount, 2)}
+									{#if inverse}
+										{Money.formatMoney(
+											convertAmount / result.rate.price_buy,
+											fractionalLength(convertAmount / result.rate.price_buy)
+										)}
+									{:else}
+										{Money.formatMoney(result.rate.price_buy * convertAmount, 2)}
+									{/if}
 									{currencyTo?.symbol || convertTo}
 								</span>
 								<span class="block text-sm">
 									<span class="pr-3"> Indicative Rate </span>
 									1 {currencyToBuyInput.toUpperCase()} =
-									{Money.formatMoney(result.rate.price_buy, 2)}
+									{#if inverse}
+										{Money.formatMoney(
+											1 / result.rate.price_buy,
+											fractionalLength(1 / result.rate.price_buy)
+										)}
+									{:else}
+										{Money.formatMoney(result.rate.price_buy, 2)}
+									{/if}
 									{currencyTo?.symbol || convertTo}
 								</span>
 							</div>
@@ -382,15 +412,18 @@
 						>
 							<div>
 								<a
-									href="{result.changer.link}?utm_source=monierate&utm_medium=website&utm_campaign=monierate"
+									href="{result.changer
+										.link}?utm_source=monierate&utm_medium=website&utm_campaign=monierate"
 									class="block button w-full md:inline-block md:w-auto mr-4 mb-4 text-center"
 								>
 									Buy {convertFrom} now
 								</a>
-								{#if i === 1}
-								    <span class="absolute top-0 right-0 bg-gray-800 dark:bg-light text-white dark:text-dark text-xs px-2 py-1">
-									    Best rate
-								    </span>
+								{#if i === 0}
+									<span
+										class="absolute top-0 right-0 bg-gray-800 dark:bg-light text-white dark:text-dark text-xs px-2 py-1"
+									>
+										Best rate
+									</span>
 								{/if}
 							</div>
 						</div>
@@ -400,8 +433,6 @@
 		{/if}
 	</div>
 {/if}
-
-
 
 <style>
 	.loader {
