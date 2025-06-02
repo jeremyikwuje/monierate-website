@@ -750,7 +750,7 @@
 		@apply mr-0;
 	}
 	.nav-link a.active {
-		@apply text-black md:dark:text-primary;
+		@apply text-black dark:text-primary;
 	}
 
 	footer .converter-list {
