@@ -8,6 +8,13 @@
 	const metadata = data.metadata;
 	const adverts = data.adverts;
 
+	const infolinksAd = () => {
+		const input = document.createElement('input');
+		input.type = 'hidden';
+		input.name = 'IL_IN_ARTICLE';
+		return input;
+	};
+
 	function shuffleArray(arr: any[]) {
 		for (let i = arr.length - 1; i > 0; i--) {
 			const j = Math.floor(Math.random() * (i + 1));
@@ -18,7 +25,7 @@
 	onMount(() => {
 		const articleElement = document.querySelector('article');
 		let headings = articleElement?.querySelectorAll('h2');
-		if(!headings || !(headings?.length > 0)) {
+		if (!headings || !(headings?.length > 0)) {
 			headings = articleElement?.querySelectorAll('h3');
 		}
 
@@ -26,57 +33,52 @@
 		const numberOfHeadings = headings?.length || 0;
 		const numberOfAdverts = advertArray.length;
 
-		let advertsToDisplay = [];
-
-		if (numberOfAdverts > numberOfHeadings) {
-			shuffleArray(advertArray);
-			for (let i = 0; i < numberOfHeadings; i++) {
-				advertsToDisplay.push(advertArray[i]);
-			}
-		} else {
-			for (let i = 0; i < numberOfHeadings; i++) {
-				advertsToDisplay.push(advertArray[i % numberOfAdverts]);
-			}
-		}
-
 		headings?.forEach((heading, index) => {
-			const advert = advertsToDisplay[index] as {
-				label: string;
-				image: string;
-				url: string;
-				width?: string;
-				height?: string;
-			};
+			if(index === 0) {
+				const infolinksElement = infolinksAd();
+				heading.parentNode?.insertBefore(infolinksElement, heading);
+			} else if (numberOfAdverts > 0 && index < numberOfAdverts + 1) {
+				const advert = advertArray[index] as {
+					label: string;
+					image: string;
+					url: string;
+					width?: string;
+					height?: string;
+				};
 
-			const img = document.createElement('img');
-			img.src = advert.image;
-			img.alt = advert.label || 'Banner';
-			img.className = 'block mx-auto max-w-full';
-			if(advert.width) {
-				img.style.width = advert.width;
+				const img = document.createElement('img');
+				img.src = advert.image;
+				img.alt = advert.label || 'Banner';
+				img.className = 'block mx-auto max-w-full';
+				if (advert.width) {
+					img.style.width = advert.width;
+				}
+				if (advert.height) {
+					img.style.height = advert.height;
+				}
+
+				const link = document.createElement('a');
+				link.href = advert.url;
+				link.target = '_blank';
+				link.rel = 'noopener noreferrer';
+				link.className = 'flex justify-center text-black dark:text-white hover:text-black dark:hover:text-white my-4';
+
+				const container = document.createElement('div');
+				container.className = 'relative inline-block text-center bg-gray-50 dark:bg-gray-900/20 p-2 px-8 rounded-md';
+				container.appendChild(img);
+
+				const partnerText = document.createElement('div');
+				partnerText.textContent = 'Partner Display';
+				partnerText.className = 'absolute -top-3 left-1/2 transform -translate-x-1/2 bg-gray-50 dark:bg-gray-900/10 px-2 py-1 font-semibold text-xs rounded';
+				container.appendChild(partnerText);
+
+				link.appendChild(container);
+
+				heading.parentNode?.insertBefore(link, heading);
+			} else {
+				const infolinksElement = infolinksAd();
+				heading.parentNode?.insertBefore(infolinksElement, heading);
 			}
-			if(advert.height) {
-				img.style.height = advert.height;
-			}
-
-			const link = document.createElement('a');
-			link.href = advert.url;
-			link.target = '_blank';
-			link.rel = 'noopener noreferrer';
-			link.className = 'flex justify-center text-black dark:text-white hover:text-black dark:hover:text-white my-4';
-
-			const container = document.createElement('div');
-			container.className = 'relative inline-block text-center bg-gray-50 dark:bg-gray-900/20 p-2 px-8 rounded-md';
-			container.appendChild(img);
-
-			const partnerText = document.createElement('div');
-			partnerText.textContent = 'Partner Display';
-			partnerText.className = 'absolute -top-3 left-1/2 transform -translate-x-1/2 bg-gray-50 dark:bg-gray-900/10  px-2 py-1 font-semibold text-xs rounded';
-			container.appendChild(partnerText);
-
-			link.appendChild(container);
-
-			heading.parentNode?.insertBefore(link, heading);
 		});
 	});
 </script>
