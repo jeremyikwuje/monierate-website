@@ -129,6 +129,12 @@
 		gtag('js', new Date());
 		gtag('config', 'G-59H6DBC82L');
 	</script>
+
+	<script type="text/javascript">
+		var infolinks_pid = 3436231;
+		var infolinks_wsid = 0;
+	</script>
+	<script type="text/javascript" src="//resources.infolinks.com/js/infolinks_main.js"></script>
 </svelte:head>
 
 <!-- <div id="top-banner" tabindex="-1" class="fixed top-0 mb-8 start-0 z-50 flex justify-between w-full p-4"> -->
@@ -275,13 +281,13 @@
 					</div>
 				{/if} -->
 
-					<a
-						href='/alerts'
-						type="button"
-						class="button px-3 bg-gray-900 dark:bg-gray-200 font-semibold text-white dark:text-gray-900"
-					>
-						Get alert
-					</a>
+				<a
+					href="/alerts"
+					type="button"
+					class="button px-3 bg-gray-900 dark:bg-gray-200 font-semibold text-white dark:text-gray-900"
+				>
+					Get alert
+				</a>
 
 				<button
 					id="nav-collapse-trigger"
@@ -690,13 +696,13 @@
 						<button
 							on:click={hidePromotionBar}
 							type="button"
-							class="-mr-1 flex rounded-md p-2 hover:bg-gray-500 focus:outline-none focus:ring-2 focus:ring-white dark:text-gray-200"
+							class="-mr-1 flex rounded-md p-2 hover:bg-gray-500 dark:hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-white dark:text-gray-200"
 							><span class="sr-only">Dismiss</span><svg
 								xmlns="http://www.w3.org/2000/svg"
 								viewBox="0 0 20 20"
 								fill="currentColor"
 								aria-hidden="true"
-								class="h-6 w-6 text-white"
+								class="h-6 w-6 text-white dark:text-black"
 								><path
 									fill-rule="evenodd"
 									d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
@@ -750,7 +756,7 @@
 		@apply mr-0;
 	}
 	.nav-link a.active {
-		@apply text-black md:dark:text-primary;
+		@apply text-black dark:text-primary;
 	}
 
 	footer .converter-list {
