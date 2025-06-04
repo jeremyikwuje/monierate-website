@@ -129,6 +129,12 @@
 		gtag('js', new Date());
 		gtag('config', 'G-59H6DBC82L');
 	</script>
+
+	<script type="text/javascript">
+		var infolinks_pid = 3436231;
+		var infolinks_wsid = 0;
+	</script>
+	<script type="text/javascript" src="//resources.infolinks.com/js/infolinks_main.js"></script>
 </svelte:head>
 
 <!-- <div id="top-banner" tabindex="-1" class="fixed top-0 mb-8 start-0 z-50 flex justify-between w-full p-4"> -->
@@ -275,13 +281,13 @@
 					</div>
 				{/if} -->
 
-					<a
-						href='/alerts'
-						type="button"
-						class="button px-3 bg-gray-900 dark:bg-gray-200 font-semibold text-white dark:text-gray-900"
-					>
-						Get alert
-					</a>
+				<a
+					href="/alerts"
+					type="button"
+					class="button px-3 bg-gray-900 dark:bg-gray-200 font-semibold text-white dark:text-gray-900"
+				>
+					Get alert
+				</a>
 
 				<button
 					id="nav-collapse-trigger"
