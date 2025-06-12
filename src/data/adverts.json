@@ -20,7 +20,7 @@
 		},
 		{
 			"url": "https://tinyurl.com/ipaybtc-banner",
-			"image": "/media/banners/ipaybtc.gif",
+			"image": "/media/banners/ipaybtc-2.gif",
 			"label": "iPayBTC",
 			"width": "400px"
 		},
@@ -40,12 +40,12 @@
 	"home": {
 		"name": "",
 		"url": "https://tinyurl.com/ipaybtc-banner",
-		"image": "/media/banners/ipaybtc-home.gif",
+		"image": "/media/banners/ipaybtc-home-2.gif",
 		"formats": ["gif", "avif"],
 		"label": "iPayBTC",
 		"mobile_only": false,
 		"disabled": false,
-		"_v": 1
+		"_v": 2
 	},
 	"converter": {
 		"name": "",
@@ -62,7 +62,7 @@
 	"converter_mobile_only": {
 		"name": "",
 		"url": "https://tinyurl.com/ipaybtc-banner",
-		"image": "/media/banners/ipaybtc.avif",
+		"image": "/media/banners/ipaybtc-2.avif",
 		"formats": ["avif", "gif"],
 		"label": "iPayBTC",
 		"mobile_only": true,
