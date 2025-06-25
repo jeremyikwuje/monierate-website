@@ -4,7 +4,7 @@
 
 <div class="bg-white dark:bg-gray-800">
     <div class="container">
-       <AdBanner name="footer" />
+       <AdBanner name="blog_home" />
     </div>
 </div>
 
