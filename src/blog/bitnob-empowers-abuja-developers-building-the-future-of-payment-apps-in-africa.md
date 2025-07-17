@@ -39,9 +39,9 @@ The room fell quiet, then erupted in discussion.
 
 Attendees pointed to poverty, scarce research funding, and cultural pressures as barriers. One developer summed it up: **“When you’re broke, building from scratch feels like chasing a dream you can’t afford.”**
 
-The main event of the day was a deep dive into Hash Cash, the cryptographic backbone of blockchain. Bernard flipped open a slide deck he’d originally prepped for 100-level university students, making it perfect for breaking down complex ideas.
+The main event of the day was a deep dive into Hash Functions, the cryptographic backbone of blockchain. Bernard flipped open a slide deck he’d originally prepped for 100-level university students, making it perfect for breaking down complex ideas.
 
-We played the Hash Cash game, a brilliant way to grasp one-way functions.
+We played the Hash Function game, a brilliant way to grasp one-way functions.
 
 **Picture this**: one person picks a word, tells others, then challenges someone to guess it. If the picker lies about the word, the group verifies the truth. It’s a simple analogy for how blockchains ensure trust without a middleman.
 
@@ -93,7 +93,7 @@ The event was a call to action. It exposed the harsh realities holding us back�
 
 But then, we were handed the tools to change the narrative.
 
-Hash Cash taught us the cryptographic heart of blockchain, while the Bitnob API with ChatGPT integration opened doors to building fintech apps that could redefine money in Africa.
+Hash Functions taught us the cryptographic heart of blockchain, while the Bitnob API with ChatGPT integration opened doors to building fintech apps that could redefine money in Africa.
 
 A new chat app called Xara’s is trending on social media right now simply because it lets you send naira easily, but we all know, payments in Africa would be solved by Bitcoin and stablecoins not naira.
 
