@@ -268,7 +268,7 @@
 </svelte:head>
 
 <div class="bg-white dark:bg-gray-800">
-	<AdBanner name="converter"/>
+	<AdBanner name="converter" />
 </div>
 
 <div class="mb-24">
@@ -396,19 +396,32 @@
 								From
 							{/if}
 						</label>
-						<select
-							id="field-convert-from"
-							class="w-full p-4 select"
-							bind:value={convertFrom}
-							on:change={convertNow}
-							on:change={() => changeParam('From', convertFrom)}
-						>
-							{#each Object.entries(currencies) as [index, currency]}
-								<option value={currency.code.toUpperCase()}
-									>{currency.code.toUpperCase()} - {currency.name}</option
-								>
-							{/each}
-						</select>
+						<div class="relative">
+							<select
+								id="field-convert-from"
+								class="w-full p-4 select"
+								bind:value={convertFrom}
+								on:change={convertNow}
+								on:change={() => changeParam('From', convertFrom)}
+							>
+								{#each Object.entries(currencies) as [index, currency]}
+									<option value={currency.code.toUpperCase()}
+										>{currency.code.toUpperCase()} - {currency.name}</option
+									>
+								{/each}
+							</select>
+							<div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2">
+								<!-- Arrow Icon -->
+								<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path
+										stroke-linecap="round"
+										stroke-linejoin="round"
+										stroke-width="2"
+										d="M19 9l-7 7-7-7"
+									/>
+								</svg>
+							</div>
+						</div>
 					</div>
 					{#if currentView !== CurrentView.SEND}
 						<div class="flex items-center">
@@ -443,25 +456,38 @@
 								To
 							{/if}
 						</label>
-						<select
-							id="field-convert-to"
-							class="w-full p-4 select"
-							bind:value={convertTo}
-							on:change={convertNow}
-							on:change={() => changeParam('To', convertTo)}
-						>
-							{#if currentView === CurrentView.SEND}
-								{#each Object.entries(countries) as [key, name]}
-									<option value={key.toUpperCase()}>{name}</option>
-								{/each}
-							{:else}
-								{#each Object.entries(currencies) as [index, currency]}
-									<option value={currency.code.toUpperCase()}
-										>{currency.code.toUpperCase()} - {currency.name}</option
-									>
-								{/each}
-							{/if}
-						</select>
+						<div class="relative">
+							<select
+								id="field-convert-to"
+								class="w-full p-4 select"
+								bind:value={convertTo}
+								on:change={convertNow}
+								on:change={() => changeParam('To', convertTo)}
+							>
+								{#if currentView === CurrentView.SEND}
+									{#each Object.entries(countries) as [key, name]}
+										<option value={key.toUpperCase()}>{name}</option>
+									{/each}
+								{:else}
+									{#each Object.entries(currencies) as [index, currency]}
+										<option value={currency.code.toUpperCase()}
+											>{currency.code.toUpperCase()} - {currency.name}</option
+										>
+									{/each}
+								{/if}
+							</select>
+							<div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2">
+								<!-- Arrow Icon -->
+								<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path
+										stroke-linecap="round"
+										stroke-linejoin="round"
+										stroke-width="2"
+										d="M19 9l-7 7-7-7"
+									/>
+								</svg>
+							</div>
+						</div>
 					</div>
 				</div>
 
@@ -488,16 +514,23 @@
 						<div class="block md:flex md:justify-between md:items-center">
 							<!-- only show this if the from currency or to currency is BTC -->
 							{#if convertFrom === 'BTC' || convertTo === 'BTC'}
-							<span class="flex justify-between items-center bg-accent-100 md:hidden border dark:border-gray-700 rounded-lg p-4 mb-8">
-								<span class="block text-gray-600 dark:text-gray-300 text-sm ">
-									99% of Bitcoin price predictions are wrong, signup on 
-									<a href="https://tinyurl.com/everybitcoin-text-link">Every Bitcoin Newsletter</a> and get the 1% useful ones every Monday.
+								<span
+									class="flex justify-between items-center bg-accent-100 md:hidden border dark:border-gray-700 rounded-lg p-4 mb-8"
+								>
+									<span class="block text-gray-600 dark:text-gray-300 text-sm">
+										99% of Bitcoin price predictions are wrong, signup on
+										<a href="https://tinyurl.com/everybitcoin-text-link">Every Bitcoin Newsletter</a
+										>
+										and get the 1% useful ones every Monday.
 
-									<p class="mt-4">
-										<a href="https://tinyurl.com/everybitcoin-text-link" class="underline text-semibold">Get Bitcoin Price Updates</a>
-									</p>
+										<p class="mt-4">
+											<a
+												href="https://tinyurl.com/everybitcoin-text-link"
+												class="underline text-semibold">Get Bitcoin Price Updates</a
+											>
+										</p>
+									</span>
 								</span>
-							</span>
 							{/if}
 							<span
 								class="flex justify-between items-center bg-accent-100 md:w-[40%] border dark:border-gray-700 rounded-lg p-4 mb-8 md:mb-0"
@@ -533,11 +566,25 @@
 				</div>
 
 				<span class="block mt-12 mb-4">
-					<a href="https://tinyurl.com/koyn-native-button-1" class="block button buy font-bold w-full md:inline-block md:w-auto mr-4">
+					<a
+						href="https://tinyurl.com/koyn-native-button-1"
+						class="block button buy font-bold w-full md:inline-block md:w-auto mr-4"
+					>
 						Sell Crypto on Koyn
-						<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="inline-block w-4 h-4 ml-2">
-								<path stroke-linecap="round" stroke-linejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25" />
-						</svg> 
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							fill="none"
+							viewBox="0 0 24 24"
+							stroke-width="1.5"
+							stroke="currentColor"
+							class="inline-block w-4 h-4 ml-2"
+						>
+							<path
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25"
+							/>
+						</svg>
 					</a>
 
 					{#if currentView === CurrentView.CONVERT}
@@ -553,13 +600,13 @@
 							{/if}
 						</button>
 					{/if}
-        </span>
+				</span>
 			</div>
 		</div>
 	</div>
 
 	<div class="mt-8 md:mt-0">
-		<AdBanner name="converter_mobile_only" mobileOnly={true} showLabel={true}/>
+		<AdBanner name="converter_mobile_only" mobileOnly={true} showLabel={true} />
 	</div>
 
 	{#if currencyFrom.code !== currencyTo.code && pair_rates.length > 0}
@@ -572,7 +619,7 @@
 					: convertTo} rates
 			</h2>
 			<ChangerRates
-				rates={{remittance: data.remittanceRates, ramp: data.rampRates, card: data.cardRates}}
+				rates={{ remittance: data.remittanceRates, ramp: data.rampRates, card: data.cardRates }}
 				{changers}
 				from={currencyFrom}
 				to={currencyTo}
