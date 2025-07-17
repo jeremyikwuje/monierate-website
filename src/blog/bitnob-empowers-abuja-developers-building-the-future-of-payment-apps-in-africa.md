@@ -7,7 +7,7 @@ updatedAt: 2025-07-17T10:24:00
 tag: technology
 image: https://ik.imagekit.io/monierate/Blog/bernard-parah-standing-before-an-audience.jpg?updatedAt=1752741508293
 published: true
-author: Jeremy I
+author: Jeremy Ikwuje
 ---
 Last Thursday, I stepped into a room buzzing with anticipation, my notebook in hand and my curiosity on overdrive.
 
@@ -78,7 +78,6 @@ You type “send 1000 SAT to jeremy@walletofsatoshi.com” on WhatsApp, hit send
 It was fantastic to see live.
 
 The session wasn’t just theory. Samuel shared code snippets and walked us through real-world use cases, like embedding lightning payments into messaging apps. For a room full of developers, this was like handing us the keys to a Ferrari. I could see the gears turning in everyone’s heads—ideas for the next killer app were being born right there.
-
 
 ## Beyond the Code: A Community Takes Root
 
