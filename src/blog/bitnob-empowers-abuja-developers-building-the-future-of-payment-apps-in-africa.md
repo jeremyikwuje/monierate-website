@@ -33,7 +33,7 @@ Then Bernard dropped a question that hit hard:
 
 **“Why hasn’t an African created a globally recognised programming language?”**
 
-He laid out a hard truth: Nigeria, and Africa at large, often consumes and integrates tech from the global south, rarely owning it. Despite our growing army of coders, we’re users, not creators, of innovation.
+He laid out a hard truth: Nigeria, and Africa at large, often consumes tech from the west, rarely owning it. Despite our growing army of coders, we’re users, not creators, of innovation.
 
 The room fell quiet, then erupted in discussion.
 
