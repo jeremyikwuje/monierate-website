@@ -18,29 +18,29 @@
 					: ''}"
 			>
 				<div class="mb-6 px-6">
-					<span
-						class="block text-2xl font-bold mb-2 text-blue-500"
-					>
+					<span class="block text-2xl font-bold mb-2 text-blue-500">
 						{plan.name}
 					</span>
 					{#if plan.description}
-					<span
-						class="block text-md"
-					>
-						{plan.description}
-					</span>
+						<span class="block text-md">
+							{plan.description}
+						</span>
 					{/if}
 				</div>
 				<div class="px-6 bg-blue-500/5 dark:bg-blue-500/10 py-4 mb-4">
 					<p class="mt-2 text-4xl font-bold text-gray-900 dark:text-gray-100 mb-5">
 						{currencySymbols[plan.currency]
 							? currencySymbols[plan.currency]
-							: plan.currency}{formatNumber(plan.price)}<span class="text-lg text-gray-500 dark:text-gray-400"> / yr</span>
+							: plan.currency}{formatNumber(plan.price)}<span
+							class="text-lg text-gray-500 dark:text-gray-400"
+						>
+							/ yr</span
+						>
 					</p>
 					<a
 						href="https://account.monierate.com/subscription/{plan._id}"
 						class="w-full button block text-center text-[17px] font-md bg-blue-500 hover:bg-blue-600 text-white py-3 px-4 rounded-md mb-2"
-						>Buy now</a
+						>Sign up now</a
 					>
 				</div>
 				<div class="px-6 py-4">
@@ -91,7 +91,9 @@
 						<li class="flex items-center text-gray-800 dark:text-gray-400">
 							{#if plan.features.available_markets}
 								<i class="fa fa-check-circle text-blue-500 mr-2 text-lg" />
-								<span class="font-medium"> Rate supported: {capitalizeAndJoin(plan.features.available_markets)}</span>
+								<span class="font-medium">
+									Rate supported: {capitalizeAndJoin(plan.features.available_markets)}</span
+								>
 							{:else}
 								<i class="fa fa-times-circle text-red-500 mr-3" />
 								<span class="font-medium"> No rate supported </span>
@@ -100,29 +102,19 @@
 					</ul>
 				</div>
 				<div class="px-6 py-4">
-					<p class="text-gray-700 dark:text-gray-300 font-bold text-md">Other:</p>
+					<p class="text-gray-700 dark:text-gray-300 font-bold text-md">Featured offerings:</p>
 					<ul class="mt-6 space-y-4">
 						<li class="flex items-center text-gray-800 dark:text-gray-400">
-							{#if plan.features.minute_updates}
 								<i class="fa fa-check-circle text-blue-500 mr-2 text-lg" />
-								<span class="font-medium">
-									Unlimited rate alert
-								</span>
-							{:else}
-								<i class="fa fa-times-circle text-red-500 mr-3" />
-								<span class="font-medium"> 1 rate alert </span>
-							{/if}
+								<span class="font-medium"> Instant Currency Swaps </span>
 						</li>
 						<li class="flex items-center text-gray-800 dark:text-gray-400">
-							{#if plan.features.minute_updates}
 								<i class="fa fa-check-circle text-blue-500 mr-2 text-lg" />
-								<span class="font-medium">
-								    Seamless Currency Swaps
-								</span>
-							{:else}
-								<i class="fa fa-times-circle text-red-500 mr-3" />
-								<span class="font-medium"> No instant swap </span>
-							{/if}
+								<span class="font-medium"> Platform rate listing (Discounted) </span>
+						</li>
+						<li class="flex items-center text-gray-800 dark:text-gray-400">
+								<i class="fa fa-check-circle text-blue-500 mr-2 text-lg" />
+								<span class="font-medium"> Unlimited rate alert </span>
 						</li>
 					</ul>
 				</div>
