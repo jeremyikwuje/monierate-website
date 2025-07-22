@@ -8,7 +8,7 @@
 		.slice(0, 3);
 </script>
 
-<div class="grid md:grid-cols-3 gap-4 mb-16">
+<div class="grid md:grid-cols-3 gap-4 mb-8">
 	{#if subscriptionPlans}
 		{#each subscriptionPlans as plan, i}
 			<div

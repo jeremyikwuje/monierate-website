@@ -106,9 +106,13 @@
 	<Pricing {data} />
 </div>
 
+<div class="mb-10 text-center">
+	<p><strong>Instant Swap Accounts:</strong> For Instant swap users, minimum deposit is $500 / N1 million. Deposit fee of 0.3% applies.</p>
+</div>
+
 <div class="py-2 mb-16">
 	<div class="container">
-		<div class="mb-10">
+		<div class="mb-8">
 			<span class="block text-2xl font-bold mb-3">
 				Want a Free Trial?
 			</span>
@@ -123,21 +127,6 @@
 			</p>
 		</div>
 		
-		<div class="mb-5 md:mb-0">
-			<span class="block text-2xl font-bold mb-3">
-				Instant Swap Accounts?
-			</span>
-			<p class="text-gray-700 dark:text-gray-300">
-				For
-				<a
-					href="https://account.monierate.com/wallet/swap"
-					class="text-blue-600 dark:text-blue-400 font-medium hover:underline"
-				>
-					Instant swap
-				</a>
-				users, minimum deposit is $500 / N1 million. Deposit fee of 0.3% applies.
-			</p>
-		</div>
 	</div>
 </div>
 
