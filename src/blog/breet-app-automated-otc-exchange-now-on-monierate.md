@@ -17,7 +17,7 @@ Launched in 2021, [Breet](https://breet.io) is an automated over-the-counter (OT
 
 At the time of this writing, 23 July 2025,
 
-The [USDT to Naira rate of Breet](https://monierate.com/converter/breet/?Amount=1&From=usd&To=ngn) as of this writing is N1510, which is relatively better than what you get out there without risking your USDT in the peer-to-peer market.
+The [USDT to Naira](https://monierate.com/converter/breet/?Amount=1&From=usdt&To=ngn)  rate of Breet as of this writing is N1515, which is relatively better than what you get out there without risking your USDT in the peer-to-peer market.
 
 I shouldn’t tell you the app is easy enough, because over 250,000 active users and 3 million crypto trades have been executed.
 
