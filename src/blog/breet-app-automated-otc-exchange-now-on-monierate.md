@@ -27,7 +27,7 @@ Both Nigerians and Ghanians love the app.
 
 | Attribute | Details |
 | --- | --- |
-| Website | https\\://breet.io |
+| Website | https://breet.io |
 | Established | 2021 |
 | Chief Operating Officer | Vivian Mbene |
 | Focus | Automated OTC cryptocurrency exchange for selling, swapping, and spending |
@@ -70,7 +70,7 @@ If you want to spend this money, convert your crypto to naira, or live a life ou
 
 Getting started with Breet is simple and takes less than a minute:
 
-1. **Register**: Sign up on[ breet.io](https://breet.io/),[ ](https://dashboard.breet.io/)or download the Breet app from[ Google Play](https://play.google.com/store/apps/details?id=com.app.breet) or[ App Store](https://apps.apple.com/us/app/breet-making-crypto-spendable/id1609711640).
+1. **Register**: Sign up on [ breet.io](https://breet.io/), or download the Breet app from [ Google Play](https://play.google.com/store/apps/details?id=com.app.breet) or [ App Store](https://apps.apple.com/us/app/breet-making-crypto-spendable/id1609711640).
 2. **Set Up Your Wallet**: Receive unique wallet addresses for supported cryptocurrencies upon registration.
 3. **Complete KYC (Optional)**: Verify identity for higher transaction limits; small transactions require no KYC.
 4. **Deposit Crypto**: Send crypto to your Breet wallet or generate an invoice for payments.
