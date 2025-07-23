@@ -1,6 +1,6 @@
 ---
 layout: blog
-title: "Grey Finance: Everything You Need to Know"
+title: 'Grey Finance: Everything You Need to Know'
 description: This guide covers everything you need to know about Grey before deciding whether or not to receive international payments with it in Nigeria. Grey is one of the [go-to international money transfer platforms](https://monierate.com/blog/9-best-international-money-transfer-apps-in-nigeria) in Nigeria that offer a more convenient and often cheaper alternative to traditional banks for international transactions.
 createdAt: 2024-10-17T18:24:00
 updatedAt: 2024-10-29T18:24:00
@@ -15,7 +15,7 @@ This guide covers everything you need to know about Grey before deciding whether
 
 ## Overview
 
-| Features | Grey Finance |
+| Features | Grey |
 | --- | --- |
 | Core Offering | International money transfers, currency exchange,  <br>virtual foreign accounts, bill payments, invoicing and  <br>expense management, gift cards. |
 | Target Audience | Freelancers, remote workers, digital nomads, businesses. |
@@ -26,17 +26,18 @@ This guide covers everything you need to know about Grey before deciding whether
 | Fees | Charges fees for deposits, withdrawals, currency conversion,  <br>card creation, and cross-border transactions |
 | Card Services | Yes |
 
-[Grey Finance](http://grey.co) is a for anyone in Africa who needs to manage money across borders. It's a platform that lets you open foreign currency accounts, send and receive international payments, and even get a virtual USD debit card.
+[Grey](http://grey.co) is a for anyone in Africa who needs to manage money across borders. It's a platform that lets you open foreign currency accounts, send and receive international payments, and even get a virtual USD debit card.
 
 This means you can easily get paid by clients overseas, shop on international websites, or manage your finances while traveling. It's especially helpful for freelancers, remote workers, and businesses dealing with different currencies.
 
 Grey is one of the [go-to international money transfer platforms](https://monierate.com/blog/9-best-international-money-transfer-apps-in-nigeria) in Nigeria that offer a more convenient and often cheaper alternative to traditional banks for international transactions. Plus, their virtual card can come in handy for online payments where other cards might not be accepted.
 
-Before you continue reading, one thing to note is, as of now, their virtual cards don't work with Apple related payments, so you might need to consider alternatives like [Chipper Cash](https://monierate.com/blog/chipper-cash-review-everything-you-need-to-know) if that's important to you.
+Before you continue reading, note that Grey's USD virtual cards work with Apple-related payments, but you must set your Apple region to the US, as the cards are issued there. This is a common limitation for USD virtual cards and not unique to Grey. Consider this when using the virtual USD cards for Apple services.
 
 #### Pros and Cons
 
 **Here's what's great about Grey:**
+
 - It's super convenient to use, with apps for both Apple and Android.
 - You can easily send money to friends and family, no matter where they are.
 - Getting paid by international clients is a breeze.
@@ -44,6 +45,7 @@ Before you continue reading, one thing to note is, as of now, their virtual card
 - You can even buy gift cards for your loved ones.
 
 **For the not-so-great:**
+
 - Their exchange rates could be better.
 - Sometimes, getting a response from customer support can be a bit slow.
 - Withrawals can take a bit longer than you might expect.
@@ -52,7 +54,7 @@ Before you continue reading, one thing to note is, as of now, their virtual card
 - And sometimes, the KYC verification process can be a bit frustrating.
 - For users trying to navigate domiciliary accounts, Grey allows you to hold and manage foreign currencies but withdrawing those funds to a Nigerian domiciliary account might involve some limitations or extra steps.
 
-## Grey Finance works with KYC verification
+## Grey works with KYC verification
 
 Grey.co uses a standard KYC (Know Your Customer) verification process to ensure the security of its platform and comply with regulations. While you can open an account without immediately completing KYC, you'll need to verify your identity before withdrawing any money.
 
@@ -70,16 +72,13 @@ Once your identity is verified, you can enjoy all the benefits of Grey, includin
 **Note:** USD accounts are relatively new and may occasionally be temporarily disabled. However, they can be reactivated upon request at no additional cost, provided no payments have been processed.
 
 ## Grey Fees
-Grey Finance, like most financial services charge for certain transactions. Here's a quick rundown:
+
+Grey, like most financial services charge for certain transactions. Here's a quick rundown:
 
 - **For Currency Conversion:** 1% of the amount you're exchanging (capped at $6). This applies whether you're buying a currency or receiving a refund in a currency other than USD.
-
 - **Cross-Border Fees:** 2% of the transaction amount plus $0.50 when using your virtual USD card on non-US websites.
-
 - **Deposits:** Fees vary by currency. For example, it's 1% for USD and EUR deposits, and 0.50% + ₦60 for NGN deposits via Mono direct debit.
-
 - **Withdrawals:** Fees also vary by currency. Check Grey's website for the latest fee schedule.
-
 - **USDC Network Fees:** Grey adds no extra withdrawal charges—just pay the standard network fee.
 
 ### Virtual Card fees
@@ -98,6 +97,7 @@ It's always a good idea to be aware of these fees and factor them into your fina
 ![What you need to know before using Grey.co in Nigeria](https://ik.imagekit.io/monierate/Blog/product/grey-conversion-fees.jpg)
 
 ## Grey Support
+
 For support, you can start with the Grey bot in the app, though it may not be ideal for complex issues. A better option is to email support@grey.co. Typically, the bot will confirm receipt of your query almost instantly, but it may take around 3-4 hours for a response from the team.
 
 Grey’s support is known for handling KYC issues efficiently, so it’s best to reach out immediately if you run into problems with verification or payments. If your card gets frozen, for example, they can help resolve it quickly once contacted.
@@ -108,7 +108,7 @@ They are also responsive on social media—find them on Twitter and Instagram un
 
 ![What you need to know before using Grey.co in Nigeria](https://ik.imagekit.io/monierate/Blog/product/grey-bot-support.png)
 
-## Does Grey Finance have a mobile app?
+## Does Grey have a mobile app?
 
 Yes, the platform is available on both the Google Play Store and the Apple App Store.
 
@@ -117,11 +117,12 @@ Grey also integrates with various payment apps, freelance platforms, and e-comme
 ![What you need to know before using Grey.co in Nigeria](https://ik.imagekit.io/monierate/Blog/product/grey-card.jpg)
 
 ## Is Grey Secure?
+
 Grey.co is legitimate and licensed by FINTRAC and FinCEN, regulatory bodies that protect users' interests. While there are no reports of data misuse, the app collects personal data during registration and installation, and there’s no guarantee it won’t be shared with partners.
 
-## What are users saying about Grey Finance?
+## What are users saying about Grey?
 
-Grey Finance receives both praise and criticism from users.
+Grey receives both praise and criticism from users.
 
 Samuel Ajala shared a positive experience:
 "I used Grey and I must say they are far more reliable than PayDay" [Source](https://x.com/ajalasamuelakin/status/1675297651812712449)
@@ -135,7 +136,7 @@ Bright Bassey highlighted the app’s ease of use in an article:
 However, like most digital payment platforms, Grey isn’t free from issues.
 
 Godswill Isikaku complained about delayed transactions:
-"I made payment to my NGN account (Wema) and haven’t received it for over 7 hours." [Source](https://x.com/godswillisikaku/status/1846304173765132443).
+"I made a payment to my NGN account (Wema) and haven’t received it for over 7 hours." [Source](https://x.com/godswillisikaku/status/1846304173765132443).
 
 Some users have voiced concerns over product transparency. One anonymous user reported:
 
@@ -144,6 +145,7 @@ Some users have voiced concerns over product transparency. One anonymous user re
 Mostly, Grey’s Dollar card and their other features will serve you well.
 
 ## Verdict: Is Grey the right choice for you?
+
 Grey is a solid choice for managing your money across borders, especially if you value convenience and need a versatile platform. It's great for currency exchange, international payments, and online spending with their virtual USD card.
 
 However, be aware that fees can be a bit high, and transactions might not always be instant.
@@ -151,7 +153,6 @@ However, be aware that fees can be a bit high, and transactions might not always
 Still, Grey’s services mark a positive step forward so, it’s up to you to decide if it’s the right fit.
 
 ![What you need to know before using Grey.co in Nigeria](https://ik.imagekit.io/monierate/Blog/product/grey-exchange-rates.jpg)
-
 
 ### FAQs on Grey payment app
 
