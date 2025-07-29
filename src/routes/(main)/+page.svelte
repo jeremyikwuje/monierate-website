@@ -1,6 +1,6 @@
 <script lang="ts">
 	/** @type {import('./$types').PageData} */
-	import { friendlyDate, formatNumber, setUrlParam } from '$lib/functions';
+	import { friendlyDate, formatNumber } from '$lib/functions';
 	import AdBanner from '$lib/components/AdBanner.svelte';
 	import ExchangeFilter from '$lib/components/ExchangeFilter.svelte';
 	import Table from '$lib/components/Table.svelte';
@@ -13,126 +13,58 @@
 		pairs: Record<string, unknown>;
 	}
 
-	interface PairChanger {
-		changer_code: string;
-		price_buy: number;
-		price_sell: number;
-		updated_at: string;
-	}
-
-	interface ChangerRate {
-		rate: PairChanger;
-		changer: Changer;
-	}
-
 	export let data;
+	const currencySymbols = data.currencySymbols as any;
 	const pairs = data.pairs || {};
-	const pair = pairs.find((pair: any) => pair.code === 'usdngn');
 	let page = data.page;
-	let currency = data.currency;
+	$: currency = data.currency;
 
-	let rates = pair.changers;
+	// Reactive pair based on currency
+	$: pair = pairs.find((pair: any) => pair.code === `${currency.toLowerCase()}ngn`);
+
+	// Reactive rates from selected pair
+	$: rates = pair?.changers || [];
+
+	// Reactive provider lookup
 	const providers: Record<string, Changer> = data.providers || {};
-	const total = Object.entries(rates).length;
-	let newestProviders = ['breet', 'busha', 'spenda', 'ridima', 'koyn'];
-	let getNewestProviders: any = {};
-	newestProviders.map((code: string) => {
-		getNewestProviders[code] = providers[code];
-	});
-	let groupRates: Record<string, PairChanger[]> = {
-		remittance: data.remittance,
-		ramp: data.ramp,
-		card: data.card,
-		allRates: data.allPairs
-	};
+	let total = 0;
+	$: if (rates) {
+		total = Object.entries(rates).length;
+	}
 
-	// sort rates in decending order by price_buy;
-	rates.sort((a: any, b: any) => a.price_buy - b.price_buy);
-	// filter out rate with price_buy as 0
-	const filtered_non_zero_rates = rates.filter((rate: any) => rate.price_buy > 0);
-	const filtered_zero_rates = rates.filter((rate: any) => rate.price_buy <= 0);
-	// soirt rates in descending order by price_buy
-	filtered_zero_rates.sort((a: any, b: any) => b.price_sell - a.price_sell);
-	// merge both rates
-	rates = filtered_non_zero_rates.concat(filtered_zero_rates);
+	// Sort and filter rates reactively
+	$: sortedFilteredRates = (() => {
+		if (!rates) return [];
 
+		// Separate non-zero and zero `price_buy` rates
+		const nonZeroRates = rates.filter((rate: any) => rate.price_buy > 0);
+		const zeroRates = rates.filter((rate: any) => rate.price_buy <= 0);
+
+		// Sort non-zero in ascending price_buy
+		nonZeroRates.sort((a: any, b: any) => a.price_buy - b.price_buy);
+
+		// Sort zero rates in descending price_sell
+		zeroRates.sort((a: any, b: any) => b.price_sell - a.price_sell);
+
+		// Combine both lists
+		return nonZeroRates.concat(zeroRates);
+	})();
+
+	// Search filtering
 	let searchTerm = '';
-	$: filteredRates = rates.filter((rate: any) => {
+	$: filteredRates = sortedFilteredRates.filter((rate: any) => {
 		const providerName = providers[rate.changer_code]?.name || '';
 		return providerName.toLowerCase().includes(searchTerm.toLowerCase());
 	});
 
-	let newResult: ChangerRate[] = [];
-	let sendingResult: ChangerRate[] = [];
-	let buyingResult: ChangerRate[] = [];
-	let sellingResult: ChangerRate[] = [];
-	let fundingResult: ChangerRate[] = [];
+	$: newResult = data.newResult;
+	$: buyingResult = data.buyingResult;
+	$: sellingResult = data.sellingResult;
+	$: sendingResult = data.sendingResult;
+	$: fundingResult = data.fundingResult;
+
+	// Highlighting
 	let showHighlights = data.isMobile ? false : true;
-
-	function findSupportedPlatforms(
-		changers: Record<string, Changer>,
-		rates: PairChanger[],
-		sortDesc: boolean | null,
-		useBuying = false
-	): ChangerRate[] {
-		let platformRates: ChangerRate[] = Object.entries(changers)
-			.map(([changer_code, changer]) => {
-				const rate = rates.find((rate) => rate.changer_code === changer_code);
-				const excludedPlatforms = ['market', 'binance', 'paypal'];
-
-				if (
-					rate &&
-					!excludedPlatforms.includes(rate.changer_code) &&
-					(rate.price_buy > 0 || rate.price_sell > 0)
-				) {
-					return { rate, changer };
-				}
-				return null;
-			})
-			.filter((item): item is { rate: PairChanger; changer: Changer } => item !== null)
-			.filter((item) => (useBuying ? item.rate.price_buy > 0 : item.rate.price_sell > 0));
-
-		if (sortDesc === null) {
-			return platformRates;
-		}
-
-		const priceCompare = (a: ChangerRate, b: ChangerRate) => {
-			const price1 = useBuying ? a.rate.price_buy : a.rate.price_sell;
-			const price2 = useBuying ? b.rate.price_buy : b.rate.price_sell;
-			return sortDesc ? price2 - price1 : price1 - price2;
-		};
-
-		return platformRates.sort(priceCompare);
-	}
-
-	if (total > 0) {
-		try {
-			if (groupRates.allRates && groupRates.allRates.length > 0) {
-				newResult = findSupportedPlatforms(
-					getNewestProviders,
-					groupRates.allRates,
-					null,
-					false
-				).slice(0, 5);
-			}
-
-			if (groupRates.remittance && groupRates.remittance.length > 0) {
-				sendingResult = findSupportedPlatforms(providers, groupRates.remittance, true, false).slice(
-					0,
-					5
-				);
-			}
-			if (groupRates.ramp && groupRates.ramp.length > 0) {
-				buyingResult = findSupportedPlatforms(providers, groupRates.ramp, false, true).slice(0, 5);
-				sellingResult = findSupportedPlatforms(providers, groupRates.ramp, true, false).slice(0, 5);
-			}
-			if (groupRates.card && groupRates.card.length > 0) {
-				fundingResult = findSupportedPlatforms(providers, groupRates.card, false, true).slice(0, 5);
-			}
-		} catch (error) {
-			console.error('Results processing error:', error);
-		}
-	}
 
 	function toggleHighlights(event: Event) {
 		let toggle = event.target as HTMLInputElement;
@@ -166,14 +98,14 @@
 									rate.price_buy > 0
 										? `₦${formatNumber(rate.price_buy, 'en-US', { maximumFractionDigits: 0 })}`
 										: '-',
-								sub: 'per $1'
+								sub: `per ${currencySymbols[currency] || currency + ' '}1`
 							},
 							Sell: {
 								label:
 									rate.price_sell > 0
 										? `₦${formatNumber(rate.price_sell, 'en-US', { maximumFractionDigits: 0 })}`
 										: '-',
-								sub: 'per $1'
+								sub: `per ${currencySymbols[currency] || currency + ' '}1`
 							},
 							'Last updated': friendlyDate(rate.updated_at)
 						};
@@ -213,24 +145,6 @@
 		});
 
 		filteredRates = filtered;
-	};
-
-	const handleFilterByCurrency = (currency: string) => {
-		page = 1;
-		setUrlParam('page', page.toString());
-		// Save original list only once
-		if (!originalFilteredRates) {
-			originalFilteredRates = [...filteredRates];
-		}
-
-		if (originalFilteredRates) {
-			const filtered = originalFilteredRates.filter((item: any) => {
-				const p = providers[item.changer_code];
-				return p && Object.keys(p.pairs).join(' ').includes(currency.toLowerCase());
-			});
-
-			filteredRates = filtered;
-		}
 	};
 </script>
 
@@ -332,8 +246,7 @@
 <div class="container px-0 mb-4">
 	<ExchangeFilter
 		onSearch={handleSearch}
-		onChangeCurrency={handleFilterByCurrency}
-		selectedCurrency={currency}
+		bind:selectedCurrency={currency}
 	/>
 </div>
 

@@ -1,9 +1,11 @@
 <script lang="ts">
 	import { setUrlParam } from '$lib/functions';
+	import { goto } from '$app/navigation';
 	export let search: string = '';
 	export let onSearch: (a: any) => void = () => {};
 	export let selectedCurrency = 'USD';
 	export let onChangeCurrency: (currency: any) => void = () => {};
+	export let useGotoForCurrencyChange: boolean = true;
 	export let selectedCategory = '/';
 
 	const currencies = ['USD', 'USDT', 'BTC', 'USDC', 'EUR', 'GBP', 'CAD'];
@@ -21,11 +23,14 @@
 							? 'bg-white dark:bg-gray-700 shadow font-medium'
 							: 'text-gray-500 hover:text-gray-800 dark:hover:text-gray-300'
 					}`}
-					on:click={() => (
-						(selectedCurrency = currency),
-						setUrlParam('currency', currency),
-						onChangeCurrency(currency)
-					)}
+					on:click={async () => {
+						if(useGotoForCurrencyChange) {
+							goto(`${selectedCategory}?currency=${currency}`);
+						} else {
+							(selectedCurrency = currency);
+							onChangeCurrency(currency);
+						}
+					}}
 				>
 					{currency}
 				</button>
