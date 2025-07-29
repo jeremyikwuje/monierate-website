@@ -83,11 +83,39 @@
 		};
 
 		if (typeof value === 'object' && value !== null && 'label' in value) {
-			const iconHtml = value.icon
-				? value.icon.startsWith('fa')
-					? `<i class="${value.icon} text-gray-500 mr-2"></i>`
-					: `<img src="${value.icon}" alt="icon" class="inline-block h-6 w-6 mr-2 align-middle rounded-full" />`
-				: '';
+			let iconHtml = '';
+
+			if (Array.isArray(value.icon)) {
+				// Handle icon array for <picture>
+				const sources = value.icon
+					.map((src) => {
+						const type = src.endsWith('.svg')
+							? 'image/svg+xml'
+							: src.endsWith('.png')
+							? 'image/png'
+							: '';
+						return `<source srcset="${src}" type="${type}" />`;
+					})
+					.join('');
+
+				iconHtml = `
+		        <picture class="inline-block h-6 w-6 mr-2 align-middle rounded-full">
+			    ${sources}
+			    <img src="${value.icon[0]}" alt="icon" class="h-6 w-6 rounded-full" />
+		        </picture>
+	            `;
+			} else if (typeof value.icon === 'string') {
+				if (value.icon.startsWith('fa')) {
+					// Handle font-awesome icons
+					iconHtml = `<i class="${value.icon} text-gray-500 mr-2"></i>`;
+				} else {
+					// Handle single image string
+					iconHtml = `<img src="${value.icon}" alt="icon" class="inline-block h-6 w-6 mr-2 align-middle rounded-full" />`;
+				}
+			} else {
+				iconHtml = '';
+			}
+
 			const labelHtml = parseValue(value.label, key);
 			const subHtml = value.sub ? `<div class="text-gray-400 text-xs mt-1">${value.sub}</div>` : '';
 			return link(`<div class="flex flex-col md:block">

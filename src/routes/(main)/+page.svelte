@@ -180,7 +180,7 @@
 						'#': index + 1,
 						Provider: {
 							label: providers[rate.changer_code].name,
-							icon: `/icons/svg/${rate.changer_code}.svg`,
+							icon: [`/icons/svg/${rate.changer_code}.svg`, `/icons/svg/${rate.changer_code}.png`],
 							link: `/converter/${rate.changer_code}?Amount=1&From=usd&To=ngn`
 						},
 						Buy: {
