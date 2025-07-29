@@ -43,7 +43,7 @@
 	export let pagination: boolean = false;
 
 	let currentPage = 1;
-	let rowsPerPage = "10";
+	let rowsPerPage = '10';
 
 	// Pagination
 	$: totalPages = Math.ceil(tableData.body.length / Number(rowsPerPage));
@@ -134,7 +134,7 @@
 			sortColumn = column;
 		}
 
-		tableData.body = [...tableData.body].sort((a, b) => {
+		paginatedRows = paginatedRows.sort((a, b) => {
 			const aVal = extractSortableValue(a[column]);
 			const bVal = extractSortableValue(b[column]);
 
@@ -148,8 +148,6 @@
 				? String(aVal).localeCompare(String(bVal))
 				: String(bVal).localeCompare(String(aVal));
 		});
-
-		currentPage = 1; // Reset to first page after sort
 	};
 
 	// Extracts the string or number value for sorting from various formats
@@ -180,7 +178,9 @@
 				<tr>
 					{#each tableData.head as column, i}
 						<th
-							class={`px-4 py-6 md:text-[15px] ${i < 2 ? 'text-left' : 'text-right'} whitespace-nowrap ${
+							class={`px-4 py-6 md:text-[15px] ${
+								i < 2 ? 'text-left' : 'text-right'
+							} whitespace-nowrap ${
 								shrinkFirstColumn && i < 1 ? 'w-10 hidden md:table-cell' : ''
 							} ${shrinkFirstColumn && i === 1 ? 'pr-36 md:pr-4' : ''}`}
 						>
