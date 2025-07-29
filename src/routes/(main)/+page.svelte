@@ -1,8 +1,11 @@
 <script lang="ts">
 	/** @type {import('./$types').PageData} */
-	import { friendlyDate } from '$lib/functions';
+	import { friendlyDate, formatNumber } from '$lib/functions';
 	import { onMount } from 'svelte';
 	import AdBanner from '$lib/components/AdBanner.svelte';
+	import ExchangeFilter from '$lib/components/ExchangeFilter.svelte';
+	import Table from '$lib/components/Table.svelte';
+	import HighlightCard from '$lib/components/HighlightCard.svelte';
 
 	interface Changer {
 		code: string;
@@ -26,6 +29,7 @@
 	export let data;
 	const pairs = data.pairs || {};
 	const pair = pairs.find((pair: any) => pair.code === 'usdngn');
+	const page = data.page;
 
 	let rates = pair.changers;
 	const providers: Record<string, Changer> = data.providers || {};
@@ -57,45 +61,6 @@
 		const providerName = providers[rate.changer_code]?.name || '';
 		return providerName.toLowerCase().includes(searchTerm.toLowerCase());
 	});
-
-	let sortTableBy = 'none' as 'none' | 'buy' | 'sell' | 'name';
-	let sortDirection = 'asc' as 'asc' | 'desc';
-	const sortTable = (method: 'buy' | 'sell' | 'name') => {
-		if (sortTableBy === method) {
-			if (sortDirection === 'desc') {
-				sortDirection = 'asc';
-			} else if (sortDirection === 'asc') {
-				sortTableBy = 'none';
-				sortDirection = 'desc';
-			} else {
-				sortDirection = 'desc';
-			}
-		} else {
-			sortTableBy = method;
-			sortDirection = 'desc';
-		}
-
-		if (method === 'buy') {
-			filteredRates.sort((a: any, b: any) => {
-				return sortDirection === 'asc' ? a.price_buy - b.price_buy : b.price_buy - a.price_buy;
-			});
-		} else if (method === 'sell') {
-			filteredRates.sort((a: any, b: any) => {
-				return sortDirection === 'asc' ? a.price_sell - b.price_sell : b.price_sell - a.price_sell;
-			});
-		} else if (method === 'name') {
-			filteredRates.sort((a: any, b: any) => {
-				const nameA = providers[a.changer_code]?.name.toLowerCase() || '';
-				const nameB = providers[b.changer_code]?.name.toLowerCase() || '';
-				return sortDirection === 'asc' ? nameA.localeCompare(nameB) : nameB.localeCompare(nameA);
-			});
-		}
-		if (sortTableBy === 'none') {
-			rates = [...rates];
-		}
-
-		filteredRates = [...filteredRates];
-	};
 
 	let newResult: ChangerRate[] = [];
 	let sendingResult: ChangerRate[] = [];
@@ -203,6 +168,46 @@
 			}
 		}
 	});
+
+	let tableData: any = null;
+	let excludedPlatforms = ['market', 'binance'];
+	$: if (filteredRates) {
+		let getFilteredRates = filteredRates
+			.filter((item: any) => !excludedPlatforms.includes(item.changer_code))
+			.map((rate: any, index: number) => {
+				if (providers[rate.changer_code]) {
+					return {
+						'#': index + 1,
+						Provider: {
+							label: providers[rate.changer_code].name,
+							icon: `/icons/svg/${rate.changer_code}.svg`,
+							link: `/converter/${rate.changer_code}?Amount=1&From=usd&To=ngn`
+						},
+						Buy: {
+							label:
+								rate.price_buy > 0
+									? `₦${formatNumber(rate.price_buy, 'en-US', { maximumFractionDigits: 0 })}`
+									: '-',
+							sub: 'per $1'
+						},
+						Sell: {
+							label:
+								rate.price_sell > 0
+									? `₦${formatNumber(rate.price_sell, 'en-US', { maximumFractionDigits: 0 })}`
+									: '-',
+							sub: 'per $1'
+						},
+						'Last updated': friendlyDate(rate.updated_at)
+					};
+				}
+			})
+			.filter((item: any) => item !== undefined && !excludedPlatforms.includes(item.changer_code));
+
+		tableData = {
+			head: ['#', 'Provider', 'Buy', 'Sell', 'Last updated'],
+			body: getFilteredRates
+		};
+	}
 </script>
 
 <svelte:head>
@@ -256,572 +261,156 @@
 	{#if showHighlights}
 		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
 			<!--New-->
-			{#if newResult.length > 0}
-				<div
-					class="bg-white dark:bg-gray-900 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 p-4"
-				>
-					<div class="flex justify-between items-center mb-4">
-						<span
-							class="block text-[0.8em] md:text-[1em] font-semibold text-gray-800 dark:text-white"
-						>
-							🔥 New Listing
-						</span>
-					</div>
-					{#each newResult as { rate, changer }}
-						<ul>
-							<li class="flex justify-between text-sm text-gray-800 dark:text-gray-200 mb-2">
-								<a
-									href="/converter/{rate.changer_code}?Amount=1&From=usd&To=ngn"
-									class="flex items-center"
-									title="{changer.name} dollar to naira rate."
-								>
-									<span class="changer-icon-sm">
-										<picture>
-											<source srcset="/icons/svg/{rate.changer_code}.svg" type="image/svg+xml" />
-											<source srcset="/icons/png/{rate.changer_code}.png" type="image/png" />
-											<img
-												width="16px"
-												height="16px"
-												src="/icons/svg/{rate.changer_code}.svg"
-												class="rounded-full"
-												alt="{changer.name} icon"
-											/>
-										</picture>
-									</span>
-									<span class="text-gray-500 dark:text-gray-300 text-sm">{changer.name}</span>
-								</a>
-								<div>
-									<span class="text-sm">
-										{#if Math.round(rate.price_buy) !== 0}
-											₦ {Math.round(rate.price_buy)}
-										{:else if Math.round(rate.price_sell) !== 0}
-											₦ {Math.round(rate.price_sell)}
-										{:else}
-											-
-										{/if}
-									</span>
-									<small class="changer-rate-base">per $1</small>
-								</div>
-							</li>
-						</ul>
-					{/each}
-				</div>
+			{#if newResult}
+				<HighlightCard highlightData={newResult} title="🔥 New Listing" />
 			{/if}
 
 			<!--BUYING-->
-			{#if buyingResult.length > 0}
-				<div
-					class="bg-white dark:bg-gray-900 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 p-4"
-				>
-					<div class="flex justify-between items-center mb-4">
-						<span
-							class="block text-[0.8em] md:text-[1em] font-semibold text-gray-800 dark:text-white"
-						>
-							🔥 Best Buying Rate
-						</span>
-						<a href="/buy/usd-with-ngn-best-buying-rate" class="text-sm">See more</a>
-					</div>
-					{#each buyingResult as { rate, changer }}
-						<ul>
-							<li class="flex justify-between text-sm text-gray-800 dark:text-gray-200 mb-2">
-								<a
-									href="/converter/{rate.changer_code}?Amount=1&From=usd&To=ngn"
-									class="flex items-center"
-									title="{changer.name} dollar to naira rate."
-								>
-									<span class="changer-icon-sm">
-										<picture>
-											<source srcset="/icons/svg/{rate.changer_code}.svg" type="image/svg+xml" />
-											<source srcset="/icons/png/{rate.changer_code}.png" type="image/png" />
-											<img
-												width="16px"
-												height="16px"
-												src="/icons/svg/{rate.changer_code}.svg"
-												class="rounded-full"
-												alt="{changer.name} icon"
-											/>
-										</picture>
-									</span>
-									<span class="text-gray-500 dark:text-gray-300 text-sm">{changer.name}</span>
-								</a>
-								<div>
-									<span class="text-sm">
-										{#if Math.round(rate.price_buy) === 0}
-											-
-										{:else}
-											₦ {Math.round(rate.price_buy)}
-										{/if}
-									</span>
-									<small class="changer-rate-base">per $1</small>
-								</div>
-							</li>
-						</ul>
-					{/each}
-				</div>
+			{#if buyingResult}
+				<HighlightCard
+					highlightData={buyingResult}
+					title="🔥 Best Buying Rate"
+					link="/buy/usd-with-ngn-best-buying-rate"
+				/>
 			{/if}
 
 			<!--SELLING-->
-			{#if sellingResult.length > 0}
-				<div
-					class="bg-white dark:bg-gray-900 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 p-4"
-				>
-					<div class="flex justify-between items-center mb-4">
-						<span
-							class="block text-[0.8em] md:text-[1em] font-semibold text-gray-800 dark:text-white"
-						>
-							🔥 Best Selling Rate
-						</span>
-						<a href="/sell/usd-get-ngn-best-selling-rate" class="text-sm">See more</a>
-					</div>
-					{#each sellingResult as { rate, changer }}
-						<ul>
-							<li class="flex justify-between text-sm text-gray-800 dark:text-gray-200 mb-2">
-								<a
-									href="/converter/{rate.changer_code}?Amount=1&From=usd&To=ngn"
-									class="flex items-center"
-									title="{changer.name} dollar to naira rate."
-								>
-									<span class="changer-icon-sm">
-										<picture>
-											<source srcset="/icons/svg/{rate.changer_code}.svg" type="image/svg+xml" />
-											<source srcset="/icons/png/{rate.changer_code}.png" type="image/png" />
-											<img
-												width="16px"
-												height="16px"
-												src="/icons/svg/{rate.changer_code}.svg"
-												class="rounded-full"
-												alt="{changer.name} icon"
-											/>
-										</picture>
-									</span>
-									<span class="text-gray-500 dark:text-gray-300 text-sm">{changer.name}</span>
-								</a>
-								<div>
-									<span class="text-sm">
-										{#if Math.round(rate.price_sell) === 0}
-											-
-										{:else}
-											₦ {Math.round(rate.price_sell)}
-										{/if}
-									</span>
-									<small class="changer-rate-base">per $1</small>
-								</div>
-							</li>
-						</ul>
-					{/each}
-				</div>
+			{#if sellingResult}
+				<HighlightCard
+					highlightData={sellingResult}
+					title="🔥 Best Selling Rate"
+					link="/sell/usd-get-ngn-best-selling-rate"
+				/>
 			{/if}
 
 			<!--SENDING-->
-			{#if sendingResult.length > 0}
-				<div
-					class="bg-white dark:bg-gray-900 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 p-4"
-				>
-					<div class="flex justify-between items-center mb-4">
-						<span
-							class="block text-[0.8em] md:text-[1em] font-semibold text-gray-800 dark:text-white"
-						>
-							🔥 Best Sending Rate
-						</span>
-						<a href="/send/usd-to-ng-best-rate" class="text-sm">See more</a>
-					</div>
-
-					{#each sendingResult as { rate, changer }}
-						<ul>
-							<li class="flex justify-between text-sm text-gray-800 dark:text-gray-200 mb-2">
-								<a
-									href="/converter/{rate.changer_code}?Amount=1&From=usd&To=ngn"
-									class="flex items-center"
-									title="{changer.name} dollar to naira rate."
-								>
-									<span class="changer-icon-sm">
-										<picture>
-											<source srcset="/icons/svg/{rate.changer_code}.svg" type="image/svg+xml" />
-											<source srcset="/icons/png/{rate.changer_code}.png" type="image/png" />
-											<img
-												width="16px"
-												height="16px"
-												src="/icons/svg/{rate.changer_code}.svg"
-												class="rounded-full"
-												alt="{changer.name} icon"
-											/>
-										</picture>
-									</span>
-									<span class="text-gray-500 dark:text-gray-300 text-sm">{changer.name}</span>
-								</a>
-								<div>
-									<span class="text-sm">
-										{#if Math.round(rate.price_sell) === 0}
-											-
-										{:else}
-											₦ {Math.round(rate.price_sell)}
-										{/if}
-									</span>
-									<small class="changer-rate-base">per $1</small>
-								</div>
-							</li>
-						</ul>
-					{/each}
-				</div>
+			{#if sendingResult}
+				<HighlightCard
+					highlightData={sendingResult}
+					title="🔥 Best Sending Rate"
+					link="/send/usd-to-ng-best-rate"
+				/>
 			{/if}
 
 			<!--FUNDING-->
-			{#if fundingResult.length > 0}
-				<div
-					class="bg-white dark:bg-gray-900 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700 p-4 md:hidden"
-				>
-					<div class="flex justify-between items-center mb-4">
-						<span
-							class="block text-[0.8em] md:text-[1em] font-semibold text-gray-800 dark:text-white"
-						>
-							🔥 Best Card Rate
-						</span>
-						<a href="/card/usd-ngn-best-funding-rate" class="text-sm">See more</a>
-					</div>
-					{#each fundingResult as { rate, changer }}
-						<ul>
-							<li class="flex justify-between text-sm text-gray-800 dark:text-gray-200 mb-2">
-								<a
-									href="/converter/{rate.changer_code}?Amount=1&From=usd&To=ngn"
-									class="flex items-center"
-									title="{changer.name} dollar to naira rate."
-								>
-									<span class="changer-icon-sm">
-										<picture>
-											<source srcset="/icons/svg/{rate.changer_code}.svg" type="image/svg+xml" />
-											<source srcset="/icons/png/{rate.changer_code}.png" type="image/png" />
-											<img
-												width="16px"
-												height="16px"
-												src="/icons/svg/{rate.changer_code}.svg"
-												class="rounded-full"
-												alt="{changer.name} icon"
-											/>
-										</picture>
-									</span>
-									<span class="text-gray-500 dark:text-gray-300 text-sm">{changer.name}</span>
-								</a>
-								<div>
-									<span class="text-sm">
-										{#if Math.round(rate.price_buy) === 0}
-											-
-										{:else}
-											₦ {Math.round(rate.price_buy)}
-										{/if}
-									</span>
-									<small class="changer-rate-base">per $1</small>
-								</div>
-							</li>
-						</ul>
-					{/each}
-				</div>
+			{#if fundingResult}
+				<HighlightCard
+					highlightData={fundingResult}
+					title="🔥 Best Card Rate"
+					link="/card/usd-ngn-best-funding-rate"
+					mobileOnly={true}
+				/>
 			{/if}
 		</div>
 	{/if}
-
-	<!-- Landscape Top/Bottom -->
-	<!-- <div class="mt-4 pt-8">
-		<a href="https://tinyurl.com/cedar-monierate-banner" target="_blank">
-            <picture>
-                <source srcset="/media/banners/cedar.avif?v=1" type="image/avif" />
-                <source srcset="/media/banners/cedar.gif?v=2" type="image/gif" />
-
-                <img
-                    src="/media/banners/cedar.gif?v=2"
-                    alt="Ceder"
-                    width="320px"
-                    height="100px"
-                    class="mx-auto max-w-full md:w-[320px] md:h-[100px] md:hidden"
-                />
-            </picture>
-        </a>
-	</div> -->
 </div>
 
-<div class="pt-4 mb-4">
-	<div class="container">
-		<div class="flex justify-between items-center dark:text-gray-300 mb-4">
-			<span />
-			<span class="text-right">
-				<span class="text-semibold">Sort by:</span>
-				<span class="font-semibold">Low to high</span>
-			</span>
-		</div>
-		<div class="md:flex justify-between items-center dark:text-gray-300">
-			<span />
-			<span class="text-right">
-				<label class="relative block">
-					<span class="sr-only">Search</span>
-					<input
-						bind:value={searchTerm}
-						class="placeholder:italic placeholder:text-slate-400 block bg-white dark:bg-gray-900 w-full border border-gray-200 dark:border-gray-500 rounded-lg py-2 pl-2 pr-3 shadow-sm focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm"
-						placeholder="Search providers..."
-						type="text"
-						name="search"
-					/>
-				</label>
-			</span>
-		</div>
-	</div>
+<div class="container px-0 mb-4">
+	<ExchangeFilter bind:search={tableData} />
 </div>
 
 <main>
-	<div class="w-full">
-		<div
-			class="container border border-none bg-white py-[10px] mb-16 dark:bg-gray-900 dark:text-light dark:border-none w-full overflow-x-scroll md:overflow-x-hidden overflow-y-scroll md:overflow-y-hidden"
-		>
-			<table class="table-auto overflow-x-scroll overflow-y-scroll w-full text-sm text-left">
-				<thead>
-					<tr>
-						<th scope="col" class="pr-4 py-3 md:pl-4 font-bitter hidden md:inline-block"> # </th>
-						<th scope="col" class="py-3 pl-2 md:pl-6 md:pl-0 font-bold font-bitter">
-							<button on:click={() => sortTable('name')} class="flex items-center gap-1">
-								<span>Provider</span>
-								{#if sortTableBy === 'name'}
-									{#if sortDirection === 'asc'}
-										<i class="fas fa-sort-up text-gray-500 dark:text-gray-400 relative top-[4px]" />
-									{:else}
-										<i
-											class="fas fa-sort-down text-gray-500 dark:text-gray-400 relative top-[-1px]"
-										/>
-									{/if}
-								{:else}
-							        <i class="fas fa-sort-down text-gray-200 dark:text-gray-700 relative top-[-1px]" />
-								{/if}
-							</button>
-						</th>
-						<th scope="col" class="pl-16 md:pl-6 pr-6 py-3 font-bold font-bitter text-right">
-							<button on:click={() => sortTable('buy')} class="inline-flex items-center gap-1">
-								{#if sortTableBy === 'buy'}
-									{#if sortDirection === 'asc'}
-										<i class="fas fa-sort-up text-gray-500 dark:text-gray-400 relative top-[4px]" />
-									{:else}
-										<i
-											class="fas fa-sort-down text-gray-500 dark:text-gray-400 relative top-[-2px]"
-										/>
-									{/if}
-									{:else}
-							        <i class="fas fa-sort-down text-gray-200 dark:text-gray-700 relative top-[-1px]" />
-								{/if}
-								<span>
-									Buy <span class="hidden md:inline">Price</span>
-								</span>
-							</button>
-						</th>
-						<th scope="col" class="pl-6 pr-6 py-3 font-bold font-bitter text-right">
-							<button on:click={() => sortTable('sell')} class="inline-flex items-center gap-1">
-								{#if sortTableBy === 'sell'}
-									{#if sortDirection === 'asc'}
-										<i class="fas fa-sort-up text-gray-500 dark:text-gray-400 relative top-[4px]" />
-									{:else}
-										<i
-											class="fas fa-sort-down text-gray-500 dark:text-gray-400 relative top-[-2px]"
-										/>
-									{/if}
-									{:else}
-							        <i class="fas fa-sort-down text-gray-200 dark:text-gray-700 relative top-[-1px]" />
-								{/if}
-								<span>
-									Sell <span class="hidden md:inline">Price</span>
-								</span>
-							</button>
-						</th>
-						<th
-							scope="col"
-							class="pl-6 py-3 font-bold font-bitter text-right pr-2 md:pr-4 whitespace-nowrap"
-						>
-							Last updated
-						</th>
-					</tr>
-				</thead>
-				<tbody class="changers">
-					{#each filteredRates as rate, i}
-						{#if rate.changer_code !== 'market' && rate.changer_code !== 'binance'}
-							<tr class="py-32 mb-4 border-t border-gray-150 dark:border-gray-800">
-								<th scope="row" class="text-gray-500 py-6 pl-4 hidden md:inline-block">
-									{i + 1}
-								</th>
-								<td>
-									<a
-										href="/converter/{rate.changer_code}?Amount=1&From=USD&To=NGN"
-										class="flex items-center"
-										title="{providers[rate.changer_code].name} dollar to naira rate."
-									>
-										<span class="changer-icon">
-											<picture>
-												<source srcset="/icons/svg/{rate.changer_code}.svg" type="image/svg+xml" />
-												<source srcset="/icons/png/{rate.changer_code}.png" type="image/png" />
-												<img
-													width="22px"
-													height="22px"
-													src="/icons/svg/{rate.changer_code}.svg"
-													class=""
-													alt="{providers[rate.changer_code].name} icon"
-												/>
-											</picture>
-										</span>
-										<span class="changer-title">{providers[rate.changer_code].name}</span>
-									</a>
-								</td>
-								<td class="text-right pl-6 pr-6">
-									<span class="changer-rate">
-										{#if Math.round(rate.price_buy) === 0}
-											-
-										{:else}
-											₦{Math.round(rate.price_buy)}
-										{/if}
-									</span>
-									<small class="changer-rate-base">per $1</small>
-								</td>
-								<td class="text-right pl-6 pr-6">
-									<span class="changer-rate">
-										{#if Math.round(rate.price_sell) === 0}
-											-
-										{:else}
-											₦{Math.round(rate.price_sell)}
-										{/if}
-									</span>
-									<small class="changer-rate-base">per $1</small>
-								</td>
-								<td class="text-right py-2 pr-2 md:pr-4 whitespace-nowrap">
-									{friendlyDate(new Date(rate.updated_at))}
-								</td>
-							</tr>
-						{/if}
-					{/each}
-				</tbody>
-			</table>
-		</div>
+	{#if tableData}
+		<Table
+			{tableData}
+			shrinkFirstColumn={true}
+			sortBy={['Provider', 'Buy', 'Sell']}
+			pagination={true}
+			currentPage={Number(page)}
+		/>
+	{/if}
 
-		<div class="container dark:text-gray-300">
-			<span class="block mb-4">
-				<h2>What is a Provider?</h2>
-				<p>
-					A provider is an entity that helps facilitate the exchange of currencies. If you have 100
-					USDT and want to exchange it for naira, you will need an exchange provider to convert your
-					USDT to naira. A provider can be an individual or entity. On Monierate, we only list
-					trusted entities for you to choose from, not individual traders.
-				</p>
-			</span>
-			<span class="block mb-4">
-				<h3>What is Buy Price?</h3>
-				<p>
-					The buy price is the rate at which you pay to convert naira to dollars. It represents how
-					much naira you're paying for every dollar obtained. For instance, if you have naira but
-					need USDT to pay a bill, you exchange your naira for USDT, and the provider credits USDT
-					to you at the buy price.
-				</p>
-			</span>
-			<span class="block mb-4">
-				<h3>What is Sell Price?</h3>
-				<p>
-					The sell price is the rate at which you pay to convert dollars to naira. It represents how
-					much naira you're getting for every dollar exchanged. For instance, if you have USDT but
-					need naira to pay a bill, you exchange your USDT for naira, and the provider credits naira
-					to you at the sell price.
-				</p>
-			</span>
-			<span class="block mb-4">
-				<h3>Why is the buy price usually higher than the sell price?</h3>
-				<p>
-					Exchange providers make money from the difference between the buying and selling prices of
-					the dollar. This is commonly known as arbitrage or trading profit—buying low and selling
-					high. If you have USDT but need naira, they buy the USDT from you at a lower naira price
-					and sell it at a higher naira price to someone else who needs USDT.
-				</p>
-			</span>
-			<span class="block">
-				<h3>How Monierate works</h3>
-				<p class="mb-2">
-					Monierate operates as a platform for comparing dollar prices across various providers in
-					Nigeria.
-				</p>
-				<p class="mb-2">Here&#39;s how it works:</p>
-				<ul class="list-inside ml-2">
-					<li class="mb-2">
-						<p>
-							<strong>Comparison Functionality:</strong>
-							Monierate gathers and displays the prices of the dollar from multiple providers in Nigeria.
-							You can compare these prices to find the best rates available in the market.
-						</p>
-					</li>
-					<li class="mb-2">
-						<p>
-							<strong>Exchange Rate Information:</strong>
-							You can use Monierate to obtain daily information on the exchange rate of the dollar to
-							naira.
-						</p>
-					</li>
-					<li class="mb-2">
-						<p>
-							<strong>Order Arrangement:</strong>
-							Prices are presented by default from the lowest to the highest, allowing You to easily
-							identify the most cost-effective rates.
-						</p>
-					</li>
-					<li class="mb-2">
-						<p>
-							<strong>Buy and Sell Options:</strong>
-							Monierate facilitates You in acquiring more dollars for naira or vice versa by presenting
-							both buy and sell options.
-						</p>
-					</li>
-					<li class="mb-2">
-						<p>
-							<strong>Customizable Sorting:</strong>
-							You have the flexibility to customize the order of the displayed rates, choosing between
-							low to high or sorting by buy or sell prices.
-						</p>
-					</li>
-					<li class="mb-2">
-						<p>
-							<strong>Provider Tracking:</strong>
-							Monierate actively tracks the 24-hour prices of the dollar across a diverse range of providers,
-							including platforms such as Binance, Luno, Remitano, Yellow Card, Quidax, and Payday.
-						</p>
-					</li>
-				</ul>
-				<p>
-					In essence, we simplifies the process of finding the most favorable dollar exchange rates
-					in Nigeria by providing a user-friendly platform for comparison and real-time rate
-					tracking.
-				</p>
-			</span>
-		</div>
+	<div class="container dark:text-gray-300 mt-16">
+		<span class="block mb-4">
+			<h2>What is a Provider?</h2>
+			<p>
+				A provider is an entity that helps facilitate the exchange of currencies. If you have 100
+				USDT and want to exchange it for naira, you will need an exchange provider to convert your
+				USDT to naira. A provider can be an individual or entity. On Monierate, we only list trusted
+				entities for you to choose from, not individual traders.
+			</p>
+		</span>
+		<span class="block mb-4">
+			<h3>What is Buy Price?</h3>
+			<p>
+				The buy price is the rate at which you pay to convert naira to dollars. It represents how
+				much naira you're paying for every dollar obtained. For instance, if you have naira but need
+				USDT to pay a bill, you exchange your naira for USDT, and the provider credits USDT to you
+				at the buy price.
+			</p>
+		</span>
+		<span class="block mb-4">
+			<h3>What is Sell Price?</h3>
+			<p>
+				The sell price is the rate at which you pay to convert dollars to naira. It represents how
+				much naira you're getting for every dollar exchanged. For instance, if you have USDT but
+				need naira to pay a bill, you exchange your USDT for naira, and the provider credits naira
+				to you at the sell price.
+			</p>
+		</span>
+		<span class="block mb-4">
+			<h3>Why is the buy price usually higher than the sell price?</h3>
+			<p>
+				Exchange providers make money from the difference between the buying and selling prices of
+				the dollar. This is commonly known as arbitrage or trading profit—buying low and selling
+				high. If you have USDT but need naira, they buy the USDT from you at a lower naira price and
+				sell it at a higher naira price to someone else who needs USDT.
+			</p>
+		</span>
+		<span class="block">
+			<h3>How Monierate works</h3>
+			<p class="mb-2">
+				Monierate operates as a platform for comparing dollar prices across various providers in
+				Nigeria.
+			</p>
+			<p class="mb-2">Here&#39;s how it works:</p>
+			<ul class="list-inside ml-2">
+				<li class="mb-2">
+					<p>
+						<strong>Comparison Functionality:</strong>
+						Monierate gathers and displays the prices of the dollar from multiple providers in Nigeria.
+						You can compare these prices to find the best rates available in the market.
+					</p>
+				</li>
+				<li class="mb-2">
+					<p>
+						<strong>Exchange Rate Information:</strong>
+						You can use Monierate to obtain daily information on the exchange rate of the dollar to naira.
+					</p>
+				</li>
+				<li class="mb-2">
+					<p>
+						<strong>Order Arrangement:</strong>
+						Prices are presented by default from the lowest to the highest, allowing You to easily identify
+						the most cost-effective rates.
+					</p>
+				</li>
+				<li class="mb-2">
+					<p>
+						<strong>Buy and Sell Options:</strong>
+						Monierate facilitates You in acquiring more dollars for naira or vice versa by presenting
+						both buy and sell options.
+					</p>
+				</li>
+				<li class="mb-2">
+					<p>
+						<strong>Customizable Sorting:</strong>
+						You have the flexibility to customize the order of the displayed rates, choosing between
+						low to high or sorting by buy or sell prices.
+					</p>
+				</li>
+				<li class="mb-2">
+					<p>
+						<strong>Provider Tracking:</strong>
+						Monierate actively tracks the 24-hour prices of the dollar across a diverse range of providers,
+						including platforms such as Binance, Luno, Remitano, Yellow Card, Quidax, and Payday.
+					</p>
+				</li>
+			</ul>
+			<p>
+				In essence, we simplifies the process of finding the most favorable dollar exchange rates in
+				Nigeria by providing a user-friendly platform for comparison and real-time rate tracking.
+			</p>
+		</span>
 	</div>
 </main>
-
-<style>
-	table thead th {
-		@apply dark:text-gray-300 text-black whitespace-nowrap;
-	}
-	table tbody tr td {
-		@apply py-2.5 whitespace-nowrap;
-	}
-	table tr td:first-child,
-	table thead th:first-child {
-		@apply pl-0;
-	}
-
-	.changer {
-		@apply flex justify-between items-center py-2 border-b border-gray-200;
-	}
-	.changer:last-child {
-		@apply border-b-0;
-	}
-	.changer-icon {
-		@apply bg-transparent border border-black rounded-full w-[24px] h-[24px] mr-2;
-	}
-	.changer-icon-sm {
-		@apply bg-transparent border border-black rounded-full w-[16px] h-[16px] mr-2;
-	}
-	.changer-title {
-		@apply font-semibold text-sm md:text-lg whitespace-nowrap text-gray-800 dark:text-gray-300;
-	}
-	.changer-rate-base {
-		@apply text-gray-500 dark:text-gray-400;
-	}
-	.changer-rate {
-		@apply block font-semibold text-sm md:text-lg whitespace-nowrap text-gray-800 dark:text-light;
-	}
-</style>

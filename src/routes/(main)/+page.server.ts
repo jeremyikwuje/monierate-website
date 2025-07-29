@@ -3,8 +3,11 @@ import type { PageServerLoad } from './$types'
 import { get_changers } from "$lib/server/changer.service";
 import { get_pairs_changers } from "$lib/server/pair.service";
 
-export const load: PageServerLoad = async ({ fetch }) => {
+export const load: PageServerLoad = async ({ fetch, url }) => {
     try {
+
+        const page = url.searchParams.get('page') || '1';
+
         let providers = await get_changers();
         let remittance = await get_pairs_changers(`usdngn`, 'remittance');
         let ramp = await get_pairs_changers(`usdngn`, 'ramp');
@@ -30,7 +33,8 @@ export const load: PageServerLoad = async ({ fetch }) => {
             remittance,
             ramp,
             card,
-            allPairs
+            allPairs,
+            page
         }
     }
     catch(error: any) {
