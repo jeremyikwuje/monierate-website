@@ -180,7 +180,7 @@
 				<tr>
 					{#each tableData.head as column, i}
 						<th
-							class={`p-4 ${i < 2 ? 'text-left' : 'text-right'} whitespace-nowrap ${
+							class={`px-4 py-6 md:text-[15px] ${i < 2 ? 'text-left' : 'text-right'} whitespace-nowrap ${
 								shrinkFirstColumn && i < 1 ? 'w-10 hidden md:table-cell' : ''
 							} ${shrinkFirstColumn && i === 1 ? 'pr-36 md:pr-4' : ''}`}
 						>
@@ -204,7 +204,7 @@
 					<tr class="border-t dark:border-gray-700">
 						{#each tableData.head as column, i}
 							<td
-								class={`px-4 py-2 ${i < 2 ? 'text-left' : 'text-right'} whitespace-nowrap ${
+								class={`px-4 py-3 ${i < 2 ? 'text-left' : 'text-right'} whitespace-nowrap ${
 									shrinkFirstColumn && i < 1 ? 'w-10 hidden md:table-cell' : ''
 								} dark:text-gray-200`}
 							>
