@@ -116,12 +116,12 @@
 		scrollbar-width: none;
 	}
 	.category-link {
-		@apply flex items-center gap-2 px-3 py-1 text-sm rounded whitespace-nowrap;
+		@apply flex items-center gap-2 px-3 py-1 text-sm rounded whitespace-nowrap font-bold;
 	}
 	.category-link.active {
 		@apply bg-blue-50 text-primary font-semibold;
 	}
 	.category-link.normal {
-		@apply text-gray-600 dark:text-gray-300 hover:text-primary;
+		@apply text-gray-500 dark:text-gray-300 hover:text-primary;
 	}
 </style>
