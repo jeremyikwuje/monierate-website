@@ -6,7 +6,7 @@ import { get_pairs_changers } from "$lib/server/pair.service";
 export const load: PageServerLoad = async ({ fetch, url }) => {
     try {
 
-        const page = url.searchParams.get('page') || '1';
+        const page = Number(url.searchParams.get('page') || '1');
         const currency = url.searchParams.get('currency') || 'USD';
 
         let providers = await get_changers();

@@ -1,6 +1,6 @@
 <script lang="ts">
 	/** @type {import('./$types').PageData} */
-	import { friendlyDate, formatNumber } from '$lib/functions';
+	import { friendlyDate, formatNumber, setUrlParam } from '$lib/functions';
 	import { onMount } from 'svelte';
 	import AdBanner from '$lib/components/AdBanner.svelte';
 	import ExchangeFilter from '$lib/components/ExchangeFilter.svelte';
@@ -29,8 +29,8 @@
 	export let data;
 	const pairs = data.pairs || {};
 	const pair = pairs.find((pair: any) => pair.code === 'usdngn');
-	const page = data.page;
-	const currency = data.currency;
+	let page = data.page;
+	let currency = data.currency;
 
 	let rates = pair.changers;
 	const providers: Record<string, Changer> = data.providers || {};
@@ -243,6 +243,8 @@
 	};
 
 	const handleFilterByCurrency = (currency: string) => {
+		page = 1;
+		setUrlParam('page', page.toString());
 		// Save original list only once
 		if (!originalFilteredRates) {
 			originalFilteredRates = [...filteredRates];
@@ -369,7 +371,7 @@
 			shrinkFirstColumn={true}
 			sortBy={['Provider', 'Buy', 'Sell']}
 			pagination={true}
-			currentPage={Number(page)}
+			bind:currentPage={page}
 		/>
 	{:else}
 		<div class="container text-center text-gray-600 dark:text-gray-300">
