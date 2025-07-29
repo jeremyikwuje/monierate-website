@@ -221,7 +221,7 @@
 	<!-- PAGINATION -->
 	{#if pagination}
 		<div
-			class="flex flex-wrap justify-center md:justify-between items-center px-4 py-3 pt-8 md:pt-6 border-t dark:border-gray-700 text-sm text-gray-600 bg-inherit dark:bg-gray-900/60"
+			class="flex flex-wrap justify-center md:justify-between items-center px-4 py-3 pt-8 md:pt-10 border-t dark:border-gray-700 text-sm text-gray-600 bg-inherit dark:bg-gray-900/60"
 		>
 			<!-- Count -->
 			<div class="hidden md:block">
@@ -249,7 +249,7 @@
 							class={`px-3 py-1 rounded ${
 								page === currentPage
 									? 'bg-blue-600 text-white border-blue-700'
-									: 'bg-gray-100 hover:bg-gray-200 border-gray-400'
+									: 'bg-gray-100 dark:bg-gray-900 hover:bg-gray-200 border-gray-400 dark:border-gray-700'
 							} border`}
 							on:click={() => (currentPage = page)}
 						>
