@@ -25,6 +25,7 @@
 
 <script lang="ts">
 	import { browser } from '$app/environment';
+	import { goto } from '$app/navigation';
 
 	type TableValue =
 		| string
@@ -43,8 +44,7 @@
 	export let shrinkFirstColumn: boolean = false;
 	export let sortBy: string[] | null = null;
 	export let pagination: boolean = false;
-
-	let currentPage = 1;
+	export let currentPage = 1;
 	let rowsPerPage = '10';
 	let content: HTMLElement;
 
@@ -173,6 +173,20 @@
 			window.scrollTo({ top, behavior: 'smooth' });
 		}
 	};
+
+	function setUrlParam(key: string, value: string | number) {
+		if (browser) {
+			const url = new URL(window.location.href);
+			url.searchParams.set(key, String(value));
+			window.history.pushState({}, '', url);
+		}
+	}
+
+	const gotoPage = (page: number) => {
+		currentPage = page;
+		setUrlParam('page', page);
+		scrollToContent();
+	};
 </script>
 
 <!-- TABLE -->
@@ -242,7 +256,7 @@
 				<!-- Prev -->
 				<button
 					class="px-3 py-1 rounded bg-gray-100 dark:bg-gray-900/60 hover:bg-gray-200 border-gray-200 dark:border-gray-700 border text-[11px]"
-					on:click={() => ((currentPage = Math.max(1, currentPage - 1)), scrollToContent())}
+					on:click={() => (gotoPage(Math.max(1, currentPage - 1)), scrollToContent())}
 					disabled={currentPage === 1}
 				>
 					<i class="fa fa-chevron-left" />
@@ -258,7 +272,7 @@
 									? 'bg-blue-600 text-white border-blue-700'
 									: 'bg-gray-100 dark:bg-gray-900 hover:bg-gray-200 border-gray-400 dark:border-gray-700'
 							} border`}
-							on:click={() => ((currentPage = page), scrollToContent())}
+							on:click={() => (gotoPage(page), scrollToContent())}
 						>
 							{page}
 						</button>
@@ -268,9 +282,7 @@
 				<!-- Next -->
 				<button
 					class="px-3 py-1 rounded bg-gray-100 dark:bg-gray-900/60 hover:bg-gray-200 border-gray-200 dark:border-gray-700 border text-[11px]"
-					on:click={() => (
-						(currentPage = Math.min(totalPages, currentPage + 1)), scrollToContent()
-					)}
+					on:click={() => (gotoPage(Math.min(totalPages, currentPage + 1)), scrollToContent())}
 					disabled={currentPage === totalPages}
 				>
 					<i class="fa fa-chevron-right" />
@@ -283,7 +295,7 @@
 				<select
 					class="border rounded px-2 py-1 text-sm dark:bg-gray-900/60 border-gray-200 dark:border-gray-700 dark:text-gray-200"
 					bind:value={rowsPerPage}
-					on:change={() => ((currentPage = 1), scrollToContent())}
+					on:change={() => (gotoPage(1), scrollToContent())}
 				>
 					<option value="10">10</option>
 					<option value="25">25</option>
