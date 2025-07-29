@@ -7,6 +7,7 @@ export const load: PageServerLoad = async ({ fetch, url }) => {
     try {
 
         const page = url.searchParams.get('page') || '1';
+        const currency = url.searchParams.get('currency') || 'USD';
 
         let providers = await get_changers();
         let remittance = await get_pairs_changers(`usdngn`, 'remittance');
@@ -34,7 +35,8 @@ export const load: PageServerLoad = async ({ fetch, url }) => {
             ramp,
             card,
             allPairs,
-            page
+            page,
+            currency
         }
     }
     catch(error: any) {

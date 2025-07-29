@@ -25,6 +25,7 @@
 
 <script lang="ts">
 	import { browser } from '$app/environment';
+	import { setUrlParam } from '$lib/functions';
 
 	type TableValue =
 		| string
@@ -200,14 +201,6 @@
 			window.scrollTo({ top, behavior: 'smooth' });
 		}
 	};
-
-	function setUrlParam(key: string, value: string | number) {
-		if (browser) {
-			const url = new URL(window.location.href);
-			url.searchParams.set(key, String(value));
-			window.history.pushState({}, '', url);
-		}
-	}
 
 	const gotoPage = (page: number) => {
 		currentPage = page;

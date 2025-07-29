@@ -1,45 +1,10 @@
 <script lang="ts">
-	export let searchData: any = [];
-	export let searchResult: any = [];
-	export let onSearch: (result: any) => void = () => {};
+	import { setUrlParam } from '$lib/functions';
+	export let search: string = '';
+	export let onSearch: (a: any) => void = () => {};
 	export let selectedCurrency = 'USD';
+	export let onChangeCurrency: (currency: any) => void = () => {};
 	export let selectedCategory = '/';
-
-	const original: any = searchData;
-
-	const handleSearch = (e: Event) => {
-		const input = (e.target as HTMLInputElement).value.toLowerCase().trim();
-
-		if (!input && original) {
-			searchResult = original; // Restore full list if input is cleared
-			onSearch(searchResult);
-			return;
-		}
-
-		if (searchData.body) {
-			let filtered = original.body.filter((item: any) => {
-				const values = flatten(item);
-				return values.some((val) => String(val).toLowerCase().includes(input));
-			});
-			searchResult = { ...searchData, body: filtered };
-			onSearch(searchResult);
-			return;
-		}
-	};
-
-	// Flatten any nested object/array
-	function flatten(input: any): any[] {
-		if (input == null) return [];
-
-		if (typeof input === 'object') {
-			if (Array.isArray(input)) {
-				return input.flatMap(flatten);
-			}
-			return Object.values(input).flatMap(flatten);
-		}
-
-		return [input];
-	}
 
 	const currencies = ['USD', 'USDT', 'BTC', 'USDC', 'EUR', 'GBP', 'CAD'];
 </script>
@@ -56,7 +21,11 @@
 							? 'bg-white dark:bg-gray-700 shadow font-medium'
 							: 'text-gray-500 hover:text-gray-800 dark:hover:text-gray-300'
 					}`}
-					on:click={() => (selectedCurrency = currency)}
+					on:click={() => (
+						(selectedCurrency = currency),
+						setUrlParam('currency', currency),
+						onChangeCurrency(currency)
+					)}
 				>
 					{currency}
 				</button>
@@ -73,7 +42,8 @@
 			type="text"
 			class="flex-1 outline-none text-sm text-gray-700 dark:text-gray-200 bg-transparent"
 			placeholder="Search providers..."
-			on:input={handleSearch}
+			on:input={onSearch}
+			bind:value={search}
 		/>
 	</div>
 </div>
@@ -127,7 +97,8 @@
 			type="text"
 			class="flex-1 outline-none text-sm dark:text-gray-200 bg-transparent"
 			placeholder="Search providers..."
-			on:input={handleSearch}
+			on:input={onSearch}
+			bind:value={search}
 		/>
 	</div>
 </div>

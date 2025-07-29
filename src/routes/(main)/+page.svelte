@@ -30,6 +30,7 @@
 	const pairs = data.pairs || {};
 	const pair = pairs.find((pair: any) => pair.code === 'usdngn');
 	const page = data.page;
+	const currency = data.currency;
 
 	let rates = pair.changers;
 	const providers: Record<string, Changer> = data.providers || {};
@@ -215,6 +216,47 @@
 			};
 		}
 	}
+
+	let originalFilteredRates: any[] | null = null;
+
+	const handleSearch = (e: Event) => {
+		const searchTerm = (e.target as HTMLInputElement).value.toLowerCase().trim();
+
+		// Backup the original list once
+		if (!originalFilteredRates) {
+			originalFilteredRates = [...filteredRates];
+		}
+
+		// If empty, restore full list
+		if (!searchTerm) {
+			filteredRates = originalFilteredRates;
+			return;
+		}
+
+		// Filter using provider name
+		const filtered = originalFilteredRates.filter((item: any) => {
+			const provider = providers[item.changer_code];
+			return provider?.name?.toLowerCase().includes(searchTerm);
+		});
+
+		filteredRates = filtered;
+	};
+
+	const handleFilterByCurrency = (currency: string) => {
+		// Save original list only once
+		if (!originalFilteredRates) {
+			originalFilteredRates = [...filteredRates];
+		}
+
+		if (originalFilteredRates) {
+			const filtered = originalFilteredRates.filter((item: any) => {
+				const p = providers[item.changer_code];
+				return p && Object.keys(p.pairs).join(' ').includes(currency.toLowerCase());
+			});
+
+			filteredRates = filtered;
+		}
+	};
 </script>
 
 <svelte:head>
@@ -313,7 +355,11 @@
 </div>
 
 <div class="container px-0 mb-4">
-	<ExchangeFilter searchData={tableData} onSearch={(result) => (tableData = result)} />
+	<ExchangeFilter
+		onSearch={handleSearch}
+		onChangeCurrency={handleFilterByCurrency}
+		selectedCurrency={currency}
+	/>
 </div>
 
 <main>
