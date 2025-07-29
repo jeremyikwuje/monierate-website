@@ -43,13 +43,13 @@
 	export let pagination: boolean = false;
 
 	let currentPage = 1;
-	let rowsPerPage = 10;
+	let rowsPerPage = "10";
 
 	// Pagination
-	$: totalPages = Math.ceil(tableData.body.length / rowsPerPage);
+	$: totalPages = Math.ceil(tableData.body.length / Number(rowsPerPage));
 	$: paginatedRows = tableData.body.slice(
-		(currentPage - 1) * rowsPerPage,
-		currentPage * rowsPerPage
+		(currentPage - 1) * Number(rowsPerPage),
+		currentPage * Number(rowsPerPage)
 	);
 
 	function getPageButtons(): (number | string)[] {
@@ -225,8 +225,8 @@
 		>
 			<!-- Count -->
 			<div class="hidden md:block">
-				Showing {(currentPage - 1) * rowsPerPage + 1}
-				to {Math.min(currentPage * rowsPerPage, tableData.body.length)}
+				Showing {(currentPage - 1) * Number(rowsPerPage) + 1}
+				to {Math.min(currentPage * Number(rowsPerPage), tableData.body.length)}
 				of {tableData.body.length} results
 			</div>
 
