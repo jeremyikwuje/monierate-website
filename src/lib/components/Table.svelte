@@ -52,22 +52,18 @@
 		currentPage * Number(rowsPerPage)
 	);
 
-	function getPageButtons(): (number | string)[] {
+	function getPageButtons(): number[] {
 		if (totalPages <= 5) {
 			return Array.from({ length: totalPages }, (_, i) => i + 1);
 		}
 
-		const buttons: (number | string)[] = [];
-
 		if (currentPage <= 3) {
-			buttons.push(1, 2, 3, '...', totalPages);
+			return [1, 2, 3, 4, 5];
 		} else if (currentPage >= totalPages - 2) {
-			buttons.push(1, '...', totalPages - 2, totalPages - 1, totalPages);
+			return [totalPages - 4, totalPages - 3, totalPages - 2, totalPages - 1, totalPages];
 		} else {
-			buttons.push(1, '...', currentPage, '...', totalPages);
+			return [currentPage - 2, currentPage - 1, currentPage, currentPage + 1, currentPage + 2];
 		}
-
-		return buttons;
 	}
 
 	function formatCell(value: TableValue, key: string): string {
