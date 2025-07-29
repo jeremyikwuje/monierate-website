@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { formatNumber } from '$lib/functions';
 	interface Rate {
 		changer_code: string;
 		price_buy: number;
@@ -62,9 +63,9 @@
 					<div class="text-right flex items-center gap-1">
 						<span class="text-sm">
 							{#if Math.round(rate.price_buy) !== 0}
-								₦ {Math.round(rate.price_buy)}
+								₦ {formatNumber(Math.round(rate.price_buy))}
 							{:else if Math.round(rate.price_sell) !== 0}
-								₦ {Math.round(rate.price_sell)}
+								₦ {formatNumber(Math.round(rate.price_sell))}
 							{:else}
 								-
 							{/if}
