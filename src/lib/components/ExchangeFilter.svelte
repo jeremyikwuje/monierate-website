@@ -1,23 +1,33 @@
 <script lang="ts">
-	export let search: any[] = [];
+	export let searchData: any = [];
+	export let searchResult: any = [];
 	export let selectedCurrency = 'USD';
 	export let selectedCategory = '/';
 
-	let original: any[] = [];
+	let original: any = [];
 
-	$: if (original.length === 0 && search.length > 0) {
-		original = [...search]; // Cache the original data once
+	$: if (original.length === 0 && searchData.length > 0) {
+		original = [...searchData]; // Cache the original data once
 	}
 
 	const handleSearch = (e: Event) => {
 		const input = (e.target as HTMLInputElement).value.toLowerCase().trim();
 
 		if (!input) {
-			search = [...original]; // Restore full list if input is cleared
+			searchResult = [...original]; // Restore full list if input is cleared
 			return;
 		}
 
-		search = original.filter((item) => {
+		if (searchData.body) {
+			let filtered = searchData.body.filter((item: any) => {
+				const values = flatten(item);
+				return values.some((val) => String(val).toLowerCase().includes(input));
+			});
+			searchResult = { ...searchData, body: filtered };
+			return;
+		}
+
+		searchResult = original.filter((item: any) => {
 			const values = flatten(item);
 			return values.some((val) => String(val).toLowerCase().includes(input));
 		});
