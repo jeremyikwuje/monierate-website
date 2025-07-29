@@ -28,7 +28,7 @@
 		| string
 		| number
 		| [string, string]
-		| { label: string; sub?: string; icon?: string };
+		| { label: string; sub?: string; icon?: string; link: string };
 
 	interface TableRow {
 		[key: string]: TableValue;
@@ -76,6 +76,13 @@
 			return `${parseValue(left, key)} ${parseValue(right, key)}`;
 		}
 
+		const link = (content: any) => {
+			if (typeof value === 'object' && value !== null && 'link' in value) {
+				return `<a href="${value.link}" class="text-gray-700 dark:text-gray-200">${content}</a>`;
+			}
+			return content;
+		};
+
 		if (typeof value === 'object' && value !== null && 'label' in value) {
 			const iconHtml = value.icon
 				? value.icon.startsWith('fa')
@@ -84,10 +91,10 @@
 				: '';
 			const labelHtml = parseValue(value.label, key);
 			const subHtml = value.sub ? `<div class="text-gray-400 text-xs mt-1">${value.sub}</div>` : '';
-			return `<div class="flex flex-col md:block">
+			return link(`<div class="flex flex-col md:block">
 			<span class="font-bold md:text-[17px] inline-flex items-center">${iconHtml}${labelHtml}</span>
 			${subHtml}
-		</div>`;
+		</div>`);
 		}
 
 		return parseValue(String(value), key);
