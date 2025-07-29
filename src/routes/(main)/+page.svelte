@@ -1,7 +1,6 @@
 <script lang="ts">
 	/** @type {import('./$types').PageData} */
 	import { friendlyDate, formatNumber, setUrlParam } from '$lib/functions';
-	import { onMount } from 'svelte';
 	import AdBanner from '$lib/components/AdBanner.svelte';
 	import ExchangeFilter from '$lib/components/ExchangeFilter.svelte';
 	import Table from '$lib/components/Table.svelte';
@@ -68,17 +67,7 @@
 	let buyingResult: ChangerRate[] = [];
 	let sellingResult: ChangerRate[] = [];
 	let fundingResult: ChangerRate[] = [];
-	let isMobile: boolean = false;
-	$: showHighlights = isMobile ? false : true;
-
-	if (typeof window !== 'undefined') {
-		const updateMobileStatus = () => {
-			isMobile = window.matchMedia('(max-width: 768px)').matches;
-		};
-
-		updateMobileStatus();
-		window.addEventListener('resize', updateMobileStatus);
-	}
+	let showHighlights = data.isMobile ? false : true;
 
 	function findSupportedPlatforms(
 		changers: Record<string, Changer>,
@@ -149,26 +138,10 @@
 		let toggle = event.target as HTMLInputElement;
 		if (toggle.checked) {
 			showHighlights = true;
-			if (!isMobile && localStorage) {
-				localStorage.setItem('showHighlights', 'true');
-			}
 		} else {
 			showHighlights = false;
-			if (!isMobile && localStorage) {
-				localStorage.setItem('showHighlights', 'false');
-			}
 		}
 	}
-
-	onMount(() => {
-		if (!isMobile && localStorage) {
-			if (localStorage.getItem('showHighlights') === 'true') {
-				showHighlights = true;
-			} else if (localStorage.getItem('showHighlights') === 'false') {
-				showHighlights = false;
-			}
-		}
-	});
 
 	let tableData: any = null;
 	let excludedPlatforms = ['market', 'binance'];

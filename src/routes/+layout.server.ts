@@ -5,6 +5,9 @@ import { BANNER_COOKIE_PREFIX } from '$lib/stores/banner-store';
 
 export const load: LayoutServerLoad = async ({ request, cookies, fetch }) => {
 
+    const userAgent = request.headers.get('user-agent') || '';
+	const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(userAgent);
+
     const authToken = cookies.get('auth_token');
     const user = {
         isLoggedIn: false,
@@ -54,6 +57,7 @@ export const load: LayoutServerLoad = async ({ request, cookies, fetch }) => {
         selected_partner_top,
         user,
         bannerIndexes,
+        isMobile,
     }
 
 };
