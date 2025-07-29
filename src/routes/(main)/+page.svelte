@@ -171,42 +171,49 @@
 
 	let tableData: any = null;
 	let excludedPlatforms = ['market', 'binance'];
-	$: if (filteredRates) {
-		let getFilteredRates = filteredRates
-			.filter((item: any) => !excludedPlatforms.includes(item.changer_code))
-			.map((rate: any, index: number) => {
-				if (providers[rate.changer_code]) {
-					return {
-						'#': index + 1,
-						Provider: {
-							label: providers[rate.changer_code].name,
-							icon: [`/icons/svg/${rate.changer_code}.svg`, `/icons/svg/${rate.changer_code}.png`],
-							link: `/converter/${rate.changer_code}?Amount=1&From=usd&To=ngn`
-						},
-						Buy: {
-							label:
-								rate.price_buy > 0
-									? `₦${formatNumber(rate.price_buy, 'en-US', { maximumFractionDigits: 0 })}`
-									: '-',
-							sub: 'per $1'
-						},
-						Sell: {
-							label:
-								rate.price_sell > 0
-									? `₦${formatNumber(rate.price_sell, 'en-US', { maximumFractionDigits: 0 })}`
-									: '-',
-							sub: 'per $1'
-						},
-						'Last updated': friendlyDate(rate.updated_at)
-					};
-				}
-			})
-			.filter((item: any) => item !== undefined && !excludedPlatforms.includes(item.changer_code));
+	$: {
+		if (filteredRates) {
+			let getFilteredRates = filteredRates
+				.filter((item: any) => !excludedPlatforms.includes(item.changer_code))
+				.map((rate: any, index: number) => {
+					if (providers[rate.changer_code]) {
+						return {
+							'#': index + 1,
+							Provider: {
+								label: providers[rate.changer_code].name,
+								icon: [
+									`/icons/svg/${rate.changer_code}.svg`,
+									`/icons/svg/${rate.changer_code}.png`
+								],
+								link: `/converter/${rate.changer_code}?Amount=1&From=usd&To=ngn`
+							},
+							Buy: {
+								label:
+									rate.price_buy > 0
+										? `₦${formatNumber(rate.price_buy, 'en-US', { maximumFractionDigits: 0 })}`
+										: '-',
+								sub: 'per $1'
+							},
+							Sell: {
+								label:
+									rate.price_sell > 0
+										? `₦${formatNumber(rate.price_sell, 'en-US', { maximumFractionDigits: 0 })}`
+										: '-',
+								sub: 'per $1'
+							},
+							'Last updated': friendlyDate(rate.updated_at)
+						};
+					}
+				})
+				.filter(
+					(item: any) => item !== undefined && !excludedPlatforms.includes(item.changer_code)
+				);
 
-		tableData = {
-			head: ['#', 'Provider', 'Buy', 'Sell', 'Last updated'],
-			body: getFilteredRates
-		};
+			tableData = {
+				head: ['#', 'Provider', 'Buy', 'Sell', 'Last updated'],
+				body: getFilteredRates
+			};
+		}
 	}
 </script>
 
@@ -306,11 +313,11 @@
 </div>
 
 <div class="container px-0 mb-4">
-	<ExchangeFilter bind:search={tableData} />
+	<ExchangeFilter searchData={tableData} onSearch={(result) => (tableData = result)} />
 </div>
 
 <main>
-	{#if tableData}
+	{#if tableData && tableData.body && tableData.body.length > 0}
 		<Table
 			{tableData}
 			shrinkFirstColumn={true}
@@ -318,6 +325,10 @@
 			pagination={true}
 			currentPage={Number(page)}
 		/>
+	{:else}
+		<div class="container text-center text-gray-600 dark:text-gray-300">
+			<p>No exchange providers found</p>
+		</div>
 	{/if}
 
 	<div class="container dark:text-gray-300 mt-16">

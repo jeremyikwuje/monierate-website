@@ -25,7 +25,6 @@
 
 <script lang="ts">
 	import { browser } from '$app/environment';
-	import { goto } from '$app/navigation';
 
 	type TableValue =
 		| string
@@ -49,7 +48,7 @@
 	let content: HTMLElement;
 
 	// Pagination
-	$: totalPages = Math.ceil(tableData.body.length / Number(rowsPerPage));
+	$: totalPages = Math.ceil((tableData.body.length || 0) / Number(rowsPerPage));
 	$: paginatedRows = tableData.body.slice(
 		(currentPage - 1) * Number(rowsPerPage),
 		currentPage * Number(rowsPerPage)
@@ -280,42 +279,44 @@
 			</div>
 
 			<!-- Buttons -->
-			<div class="flex items-center gap-1">
-				<!-- Prev -->
-				<button
-					class="px-3 py-1 rounded bg-gray-100 dark:bg-gray-900/60 hover:bg-gray-200 border-gray-200 dark:border-gray-700 border text-[11px]"
-					on:click={() => (gotoPage(Math.max(1, currentPage - 1)), scrollToContent())}
-					disabled={currentPage === 1}
-				>
-					<i class="fa fa-chevron-left" />
-				</button>
+			{#if tableData.body.length > 10}
+				<div class="flex items-center gap-1">
+					<!-- Prev -->
+					<button
+						class="px-3 py-1 rounded bg-gray-100 dark:bg-gray-900/60 hover:bg-gray-200 border-gray-200 dark:border-gray-700 border text-[11px]"
+						on:click={() => (gotoPage(Math.max(1, currentPage - 1)), scrollToContent())}
+						disabled={currentPage === 1}
+					>
+						<i class="fa fa-chevron-left" />
+					</button>
 
-				{#each getPageButtons() as page}
-					{#if typeof page === 'string'}
-						<span class="px-2 py-1 text-gray-400">…</span>
-					{:else}
-						<button
-							class={`px-3 py-1 rounded ${
-								page === currentPage
-									? 'bg-blue-600 text-white border-blue-700'
-									: 'bg-gray-100 dark:bg-gray-900 hover:bg-gray-200 border-gray-400 dark:border-gray-700'
-							} border`}
-							on:click={() => (gotoPage(page), scrollToContent())}
-						>
-							{page}
-						</button>
-					{/if}
-				{/each}
+					{#each getPageButtons() as page}
+						{#if typeof page === 'string'}
+							<span class="px-2 py-1 text-gray-400">…</span>
+						{:else}
+							<button
+								class={`px-3 py-1 rounded ${
+									page === currentPage
+										? 'bg-blue-600 text-white border-blue-700'
+										: 'bg-gray-100 dark:bg-gray-900 hover:bg-gray-200 border-gray-400 dark:border-gray-700'
+								} border`}
+								on:click={() => (gotoPage(page), scrollToContent())}
+							>
+								{page}
+							</button>
+						{/if}
+					{/each}
 
-				<!-- Next -->
-				<button
-					class="px-3 py-1 rounded bg-gray-100 dark:bg-gray-900/60 hover:bg-gray-200 border-gray-200 dark:border-gray-700 border text-[11px]"
-					on:click={() => (gotoPage(Math.min(totalPages, currentPage + 1)), scrollToContent())}
-					disabled={currentPage === totalPages}
-				>
-					<i class="fa fa-chevron-right" />
-				</button>
-			</div>
+					<!-- Next -->
+					<button
+						class="px-3 py-1 rounded bg-gray-100 dark:bg-gray-900/60 hover:bg-gray-200 border-gray-200 dark:border-gray-700 border text-[11px]"
+						on:click={() => (gotoPage(Math.min(totalPages, currentPage + 1)), scrollToContent())}
+						disabled={currentPage === totalPages}
+					>
+						<i class="fa fa-chevron-right" />
+					</button>
+				</div>
+			{/if}
 
 			<!-- Row count -->
 			<div class="flex items-center gap-2 hidden md:block">
