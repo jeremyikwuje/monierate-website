@@ -135,7 +135,7 @@
 				return null;
 			})
 			.filter((item): item is { rate: PairChanger; changer: Changer } => item !== null)
-			.filter((item) => (useBuying ? item.rate.price_buy > 0 : item.rate.price_sell > 0));
+			.filter((item) => (useBuying ? item.rate.price_buy > 0 : item.rate.price_sell >= 0));
 
 		if (sortDesc === null) {
 			return platformRates;
