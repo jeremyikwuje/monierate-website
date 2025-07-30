@@ -97,14 +97,18 @@
 							Buy: {
 								label:
 									rate.price_buy > 0
-										? `₦${formatNumber(rate.price_buy, 'en-US', { maximumFractionDigits: 0 })}`
+										? `₦${formatNumber(rate.price_buy, 'en-US', { maximumFractionDigits: 0 })} ${
+												rate.price_change_percent_24hr !== 0 ? rate.price_change_percent_24hr : ''
+										  }`
 										: '-',
 								sub: `per ${currencySymbols[currency] || currency + ' '}1`
 							},
 							Sell: {
 								label:
 									rate.price_sell > 0
-										? `₦${formatNumber(rate.price_sell, 'en-US', { maximumFractionDigits: 0 })}`
+										? `₦${formatNumber(rate.price_sell, 'en-US', { maximumFractionDigits: 0 })} ${
+												rate.price_change_percent_24hr !== 0 ? rate.price_change_percent_24hr : ''
+										  }`
 										: '-',
 								sub: `per ${currencySymbols[currency] || currency + ' '}1`
 							},
