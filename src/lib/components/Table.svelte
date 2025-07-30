@@ -140,9 +140,9 @@
 		if (percentMatch) {
 			const raw = percentMatch[0];
 			const colorClass = raw.includes('-')
-				? 'text-red-500 bg-red-50'
-				: 'text-green-500 bg-green-50';
-			const styled = `<span class="${colorClass} p-1 rounded-md ml-1">${raw}</span>`;
+				? 'text-red-500 bg-red-500/10'
+				: 'text-green-500 bg-green-500/10';
+			const styled = `<span class="${colorClass} p-1 rounded-md ml-1 text-sm">${raw}</span>`;
 			return stringVal.replace(raw, styled);
 		}
 
