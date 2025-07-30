@@ -7,6 +7,7 @@
 	export let onChangeCurrency: (currency: any) => void = () => {};
 	export let useGotoForCurrencyChange: boolean = true;
 	export let selectedCategory = '/';
+	export let disableSearch: boolean = false;
 
 	const currencies = ['USD', 'USDT', 'BTC', 'USDC', 'EUR', 'GBP', 'CAD'];
 </script>
@@ -24,10 +25,10 @@
 							: 'text-gray-500 hover:text-gray-800 dark:hover:text-gray-300'
 					}`}
 					on:click={async () => {
-						if(useGotoForCurrencyChange) {
+						if (useGotoForCurrencyChange) {
 							goto(`${selectedCategory}?currency=${currency}`);
 						} else {
-							(selectedCurrency = currency);
+							selectedCurrency = currency;
 							onChangeCurrency(currency);
 						}
 					}}
@@ -38,19 +39,21 @@
 		</div>
 	</div>
 
-	<!-- Search (desktop only) -->
-	<div
-		class="hidden md:flex relative items-center rounded-md shadow-sm bg-white dark:bg-gray-900 border dark:border-gray-700 px-3 py-2 w-full md:w-72"
-	>
-		<i class="fa-solid fa-search mr-2 text-gray-400" />
-		<input
-			type="text"
-			class="flex-1 outline-none text-sm text-gray-700 dark:text-gray-200 bg-transparent"
-			placeholder="Search providers..."
-			on:input={onSearch}
-			bind:value={search}
-		/>
-	</div>
+	{#if !disableSearch}
+		<!-- Search (desktop only) -->
+		<div
+			class="hidden md:flex relative items-center rounded-md shadow-sm bg-white dark:bg-gray-900 border dark:border-gray-700 px-3 py-2 w-full md:w-72"
+		>
+			<i class="fa-solid fa-search mr-2 text-gray-400" />
+			<input
+				type="text"
+				class="flex-1 outline-none text-sm text-gray-700 dark:text-gray-200 bg-transparent"
+				placeholder="Search providers..."
+				on:input={onSearch}
+				bind:value={search}
+			/>
+		</div>
+	{/if}
 </div>
 
 <!-- Category Tabs -->
@@ -92,21 +95,23 @@
 	</div>
 </div>
 
-<!-- Search (mobile only) -->
-<div class="md:hidden mt-4">
-	<div
-		class="relative flex items-center rounded-md shadow-sm bg-white dark:bg-gray-900 border dark:border-gray-700 px-3 py-2 w-full"
-	>
-		<i class="fa-solid fa-search mr-2 text-gray-400" />
-		<input
-			type="text"
-			class="flex-1 outline-none text-sm dark:text-gray-200 bg-transparent"
-			placeholder="Search providers..."
-			on:input={onSearch}
-			bind:value={search}
-		/>
+{#if !disableSearch}
+	<!-- Search (mobile only) -->
+	<div class="md:hidden mt-4">
+		<div
+			class="relative flex items-center rounded-md shadow-sm bg-white dark:bg-gray-900 border dark:border-gray-700 px-3 py-2 w-full"
+		>
+			<i class="fa-solid fa-search mr-2 text-gray-400" />
+			<input
+				type="text"
+				class="flex-1 outline-none text-sm dark:text-gray-200 bg-transparent"
+				placeholder="Search providers..."
+				on:input={onSearch}
+				bind:value={search}
+			/>
+		</div>
 	</div>
-</div>
+{/if}
 
 <style>
 	.no-scrollbar::-webkit-scrollbar {
