@@ -185,21 +185,27 @@
 			Compare the prices of dollar to naira from {total} exchange providers.
 		</p> -->
 		<p>
-			The average rate for 💵 {getCurrencySymbol}1 is ₦{formatNumber(
-				pair.price.current
-			)}, compared to {getCurrencySymbol}{formatNumber(pair.price_90d)} three
-			months ago.
+			The average rate for 💵 {getCurrencySymbol}1 is ₦{formatNumber(pair.price.current)}, compared
+			to {getCurrencySymbol}{formatNumber(pair.price_90d)} three months ago.
 			{#if !readMoreRateDetails}
-			<button class="text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-300 mt-2 cursor-pointer" on:click={()=> (readMoreRateDetails = true)}>Read More</button>
+				<button
+					class="text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-300 mt-2 cursor-pointer"
+					on:click={() => (readMoreRateDetails = true)}>Read More</button
+				>
 			{/if}
 		</p>
 		{#if readMoreRateDetails}
-		<p>
-			Rates provided are for indicative and guidance purposes only. You need ₦{formatNumber((pair.price.current || 0) * 100)} to get {getCurrencySymbol}100
-			now. Buying rate: Used for changing NGN to {currency.toUpperCase()}. Selling rate: Used for changing {currency.toUpperCase()} to NGN.
-			Tap on any company for more details.
-			<button class="text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-300 mt-2 cursor-pointer" on:click={() => (readMoreRateDetails = false)}>Read Less</button>
-		</p>
+			<p>
+				Rates provided are for indicative and guidance purposes only. You need ₦{formatNumber(
+					(pair.price.current || 0) * 100
+				)} to get {getCurrencySymbol}100 now. Buying rate: Used for changing NGN to {currency.toUpperCase()}.
+				Selling rate: Used for changing {currency.toUpperCase()} to NGN. Tap on any company for more
+				details.
+				<button
+					class="text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-300 mt-2 cursor-pointer"
+					on:click={() => (readMoreRateDetails = false)}>Read Less</button
+				>
+			</p>
 		{/if}
 	</div>
 
