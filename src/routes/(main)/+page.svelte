@@ -18,6 +18,7 @@
 	const pairs = data.pairs || {};
 	let page = data.page;
 	$: currency = data.currency;
+	$: getCurrencySymbol = currencySymbols[currency] || currency;
 
 	// Reactive pair based on currency
 	$: pair = pairs.find((pair: any) => pair.code === `${currency.toLowerCase()}ngn`);
@@ -200,7 +201,11 @@
 		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
 			<!--New-->
 			{#if newResult}
-				<HighlightCard highlightData={newResult} title="🔥 New Listing" />
+				<HighlightCard
+					highlightData={newResult}
+					title="🔥 New Listing"
+					currency={getCurrencySymbol}
+				/>
 			{/if}
 
 			<!--BUYING-->
@@ -209,6 +214,7 @@
 					highlightData={buyingResult}
 					title="🔥 Best Buying Rate"
 					link="/buy/usd-with-ngn-best-buying-rate"
+					currency={getCurrencySymbol}
 				/>
 			{/if}
 
@@ -218,6 +224,7 @@
 					highlightData={sellingResult}
 					title="🔥 Best Selling Rate"
 					link="/sell/usd-get-ngn-best-selling-rate"
+					currency={getCurrencySymbol}
 				/>
 			{/if}
 
@@ -227,6 +234,7 @@
 					highlightData={sendingResult}
 					title="🔥 Best Sending Rate"
 					link="/send/usd-to-ng-best-rate"
+					currency={getCurrencySymbol}
 				/>
 			{/if}
 
@@ -237,6 +245,7 @@
 					title="🔥 Best Card Rate"
 					link="/card/usd-ngn-best-funding-rate"
 					mobileOnly={true}
+					currency={getCurrencySymbol}
 				/>
 			{/if}
 		</div>
@@ -244,10 +253,7 @@
 </div>
 
 <div class="container px-0 mb-4">
-	<ExchangeFilter
-		onSearch={handleSearch}
-		bind:selectedCurrency={currency}
-	/>
+	<ExchangeFilter onSearch={handleSearch} bind:selectedCurrency={currency} />
 </div>
 
 <main>

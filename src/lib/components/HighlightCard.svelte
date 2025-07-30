@@ -17,6 +17,7 @@
 	}
 
 	export let highlightData: HighlightItem[] = [];
+	export let currency: string;
 	export let title: string = 'Highlight';
 	export let link: string = '';
 	export let mobileOnly: boolean = false;
@@ -70,7 +71,9 @@
 								-
 							{/if}
 						</span>
-						<small class="changer-rate-base block text-xs text-gray-500">per $1</small>
+						<small class="changer-rate-base block text-xs text-gray-500"
+							>per {currency || '$'}1</small
+						>
 					</div>
 				</li>
 			{/each}
