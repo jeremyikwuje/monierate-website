@@ -37,8 +37,6 @@ export const load: PageServerLoad = async ({ fetch, url }) => {
 			providers[provider.code] = provider;
 		}
 
-		console.log(highlights);
-
 		// Return everything to page
 		return {
 			providers,

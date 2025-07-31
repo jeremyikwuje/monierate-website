@@ -3,17 +3,44 @@
 	import AdBanner from '$lib/components/AdBanner.svelte';
 	import ExchangeFilter from '$lib/components/ExchangeFilter.svelte';
 	import HighlightCard from '$lib/components/HighlightCard.svelte';
+	import { slide } from 'svelte/transition';
 
 	export let data;
 	const currencySymbols = data.currencySymbols as any;
 	$: currency = data.currency;
 	$: getCurrencySymbol = currencySymbols[currency] || currency;
 
-	$: newResult = data.newResult;
-	$: buyingResult = data.buyingResult;
-	$: sellingResult = data.sellingResult;
-	$: sendingResult = data.sendingResult;
-	$: fundingResult = data.fundingResult;
+	const highlights = data.highlights;
+	let newResult = highlights.newResult;
+	let buyingResult = highlights.buyingResult;
+	let sellingResult = highlights.sellingResult;
+	let sendingResult = highlights.sendingResult;
+	let fundingResult = highlights.fundingResult;
+
+	let highlightsLoading: boolean = false;
+	const getHighlights = async (pair: string): Promise<any> => {
+		try {
+			highlightsLoading = true;
+			const res = await fetch('/api/highlights?max=10&pair=' + pair);
+			if (!res.ok) throw new Error(`Failed to fetch highlights: ${res.status}`);
+			return await res.json();
+		} catch (err) {
+			console.error('getHighlights error:', err);
+			return [];
+		} finally {
+			highlightsLoading = false;
+		}
+	};
+
+	const handleFilterByCurrency = async (currency_: string) => {
+		currency = currency_;
+		let highlights = await getHighlights(`${currency.toLowerCase()}ngn`);
+		newResult = highlights.newResult;
+		buyingResult = highlights.buyingResult;
+		sellingResult = highlights.sellingResult;
+		sendingResult = highlights.sendingResult;
+		fundingResult = highlights.fundingResult;
+	};
 </script>
 
 <svelte:head>
@@ -49,10 +76,21 @@
 
 	<div class="my-10">
 		<ExchangeFilter
-			bind:selectedCurrency={currency}
+			selectedCurrency={currency}
 			selectedCategory="/highlights"
 			disableSearch={true}
+			onChangeCurrency={handleFilterByCurrency}
 		/>
+	</div>
+
+	<div class="flex justify-end items-center mb-6 overflow-hidden">
+		{#if highlightsLoading}
+			<span in:slide={{ duration: 250 }} out:slide={{ duration: 250 }} class="flex">
+				<span
+					class="inline-block w-5 h-5 border-2 border-gray-300 border-t-gray-900 rounded-full animate-spin"
+				/>
+			</span>
+		{/if}
 	</div>
 
 	<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
