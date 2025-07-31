@@ -58,11 +58,12 @@
 		return providerName.toLowerCase().includes(searchTerm.toLowerCase());
 	});
 
-	$: newResult = data.newResult;
-	$: buyingResult = data.buyingResult;
-	$: sellingResult = data.sellingResult;
-	$: sendingResult = data.sendingResult;
-	$: fundingResult = data.fundingResult;
+	const highlights = data.highlights;
+	$: newResult = highlights.newResult;
+	$: buyingResult = highlights.buyingResult;
+	$: sellingResult = highlights.sellingResult;
+	$: sendingResult = highlights.sendingResult;
+	$: fundingResult = highlights.fundingResult;
 
 	// Highlighting
 	let showHighlights = data.isMobile ? false : true;
@@ -154,8 +155,29 @@
 
 	let readMoreRateDetails: boolean = false;
 
-	const handleFilterByCurrency = (currency_: string) => {
+	let highlightsLoading: boolean = false;
+	const getHighlights = async (pair: string): Promise<any> => {
+		try {
+			highlightsLoading = true;
+			const res = await fetch('/api/highlights?max=5&pair=' + pair);
+			if (!res.ok) throw new Error(`Failed to fetch highlights: ${res.status}`);
+			return await res.json();
+		} catch (err) {
+			console.error('getHighlights error:', err);
+			return [];
+		} finally {
+			highlightsLoading = false;
+		}
+	};
+
+	const handleFilterByCurrency = async (currency_: string) => {
 		currency = currency_;
+		let highlights = await getHighlights(`${currency.toLowerCase()}ngn`);
+		newResult = highlights.newResult;
+		buyingResult = highlights.buyingResult;
+		sellingResult = highlights.sellingResult;
+		sendingResult = highlights.sendingResult;
+		fundingResult = highlights.fundingResult;
 	};
 </script>
 
@@ -215,6 +237,13 @@
 
 	<!-- Highlight Toggle -->
 	<div class="flex justify-end items-center mb-6">
+		{#if highlightsLoading}
+			<span class="mr-2 -mb-1">
+				<span
+					class="inline-block w-5 h-5 border-2 border-gray-300 border-t-gray-900 rounded-full animate-spin"
+				/>
+			</span>
+		{/if}
 		<label class="inline-flex items-center cursor-pointer">
 			<span class="mr-2 text-sm text-gray-600 dark:text-gray-400">Highlight</span>
 			<input
@@ -286,7 +315,12 @@
 </div>
 
 <div class="container px-0 mb-4">
-	<ExchangeFilter onSearch={handleSearch} selectedCurrency={currency} useGotoForCurrencyChange={false} onChangeCurrency={handleFilterByCurrency}/>
+	<ExchangeFilter
+		onSearch={handleSearch}
+		selectedCurrency={currency}
+		useGotoForCurrencyChange={false}
+		onChangeCurrency={handleFilterByCurrency}
+	/>
 </div>
 
 <main>
