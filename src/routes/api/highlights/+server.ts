@@ -22,35 +22,49 @@ interface ChangerRate {
 }
 
 const EXCLUDED = new Set(['market', 'binance', 'paypal']);
-const NEWEST = ['breet', 'busha', 'spenda', 'ridima', 'koyn'];
+const NEWEST = ['oneremit', 'breet', 'busha', 'spenda', 'ridima'];
 
 const findPlatforms = (
 	changers: Record<string, Changer>,
 	rates: PairChanger[] = [],
 	sortDesc: boolean | null,
-	useBuy = false
+	tag: 'buy' | 'sell' | 'new' = 'sell'
 ): ChangerRate[] =>
 	rates
-		.filter(({ changer_code, price_buy, price_sell }) =>
-			changers[changer_code] &&
-			!EXCLUDED.has(changer_code) &&
-			(useBuy ? price_buy > 0 : price_sell > 0)
-		)
-		.map(rate => ({ rate, changer: changers[rate.changer_code] }))
+		.filter(({ changer_code, price_buy, price_sell }) => {
+			if (changers[changer_code] && !EXCLUDED.has(changer_code)) {
+				if (tag === 'new') {
+					if (price_buy > 0 || price_sell > 0) {
+						return true;
+					}
+				}
+				const price = tag === 'buy' ? price_buy : price_sell;
+				return price > 0;
+			}
+		})
+		.map((rate) => ({ rate, changer: changers[rate.changer_code] }))
 		.sort((a, b) => {
 			if (sortDesc === null) return 0;
-			const aPrice = useBuy ? a.rate.price_buy : a.rate.price_sell;
-			const bPrice = useBuy ? b.rate.price_buy : b.rate.price_sell;
-			return sortDesc ? bPrice - aPrice : aPrice - bPrice;
+			if (tag === 'buy') {
+				return sortDesc ? b.rate.price_buy - a.rate.price_buy : a.rate.price_buy - b.rate.price_buy;
+			} else if (tag === 'sell') {
+				return sortDesc
+					? b.rate.price_sell - a.rate.price_sell
+					: a.rate.price_sell - b.rate.price_sell;
+			} else if (tag === 'new') {
+				return NEWEST.indexOf(a.changer.code) - NEWEST.indexOf(b.changer.code);
+			} else {
+				return 0;
+			}
 		});
 
 export const GET = async ({ url }) => {
 	const pair = url.searchParams.get('pair')?.trim() || null;
-    const max = (url.searchParams.get('max')?.trim() || 10) as number;
+	const max = (url.searchParams.get('max')?.trim() || 10) as number;
 
-    if(!pair) {
-        throw error(400, 'Invalid pair');
-    }
+	if (!pair) {
+		throw error(400, 'Invalid pair');
+	}
 
 	const [rawChangers, remittance, ramp, card, all] = await Promise.all([
 		get_changers(),
@@ -65,16 +79,18 @@ export const GET = async ({ url }) => {
 	}
 
 	const changers = Object.fromEntries(rawChangers.map((p: any) => [p.code, p]));
-	const newest = Object.fromEntries(NEWEST.filter(c => changers[c]).map(c => [c, changers[c]]));
+	const newest = Object.fromEntries(NEWEST.filter((c) => changers[c]).map((c) => [c, changers[c]]));
 
 	const safe = (rates?: PairChanger[]) => Array.isArray(rates) && rates.length;
 
 	const res = {
-		newResult: safe(all) ? findPlatforms(newest, all, null).slice(0, max) : [],
-		sendingResult: safe(remittance) ? findPlatforms(changers, remittance, true).slice(0, max) : [],
-		buyingResult: safe(ramp) ? findPlatforms(changers, ramp, false, true).slice(0, max) : [],
-		sellingResult: safe(ramp) ? findPlatforms(changers, ramp, true, false).slice(0, max) : [],
-		fundingResult: safe(card) ? findPlatforms(changers, card, false, true).slice(0, max) : []
+		newResult: safe(all) ? findPlatforms(newest, all, false, 'new').slice(0, max) : [],
+		sendingResult: safe(remittance)
+			? findPlatforms(changers, remittance, true, 'sell').slice(0, max)
+			: [],
+		buyingResult: safe(ramp) ? findPlatforms(changers, ramp, false, 'buy').slice(0, max) : [],
+		sellingResult: safe(ramp) ? findPlatforms(changers, ramp, true, 'sell').slice(0, max) : [],
+		fundingResult: safe(card) ? findPlatforms(changers, card, false, 'buy').slice(0, max) : []
 	};
 
 	return json(res);
