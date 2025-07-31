@@ -318,7 +318,6 @@
 	<ExchangeFilter
 		onSearch={handleSearch}
 		selectedCurrency={currency}
-		useGotoForCurrencyChange={false}
 		onChangeCurrency={handleFilterByCurrency}
 	/>
 </div>

@@ -1,11 +1,9 @@
 <script lang="ts">
 	import { setUrlParam } from '$lib/functions';
-	import { goto } from '$app/navigation';
 	export let search: string = '';
 	export let onSearch: (a: any) => void = () => {};
 	export let selectedCurrency = 'USD';
 	export let onChangeCurrency: (currency: any) => void = () => {};
-	export let useGotoForCurrencyChange: boolean = true;
 	export let selectedCategory = '/';
 	export let disableSearch: boolean = false;
 
@@ -25,13 +23,9 @@
 							: 'text-gray-500 hover:text-gray-800 dark:hover:text-gray-300'
 					}`}
 					on:click={async () => {
-						if (useGotoForCurrencyChange) {
-							goto(`?currency=${currency}`);
-						} else {
-							selectedCurrency = currency;
-							onChangeCurrency(currency);
-							setUrlParam('currency', currency);
-						}
+						selectedCurrency = currency;
+						onChangeCurrency(currency);
+						setUrlParam('currency', currency);
 					}}
 				>
 					{currency}
@@ -60,7 +54,10 @@
 <!-- Category Tabs -->
 <div class="overflow-x-auto no-scrollbar mt-4 border-b border-gray-200 dark:border-gray-700 pb-2">
 	<div class="flex flex-nowrap gap-4 min-w-max px-1">
-		<a href="/?currency={selectedCurrency}" class={`category-link ${selectedCategory === '/' ? 'active' : 'normal'}`}>
+		<a
+			href="/?currency={selectedCurrency}"
+			class={`category-link ${selectedCategory === '/' ? 'active' : 'normal'}`}
+		>
 			<i class="fa-solid fa-grip" />
 			All
 		</a>
