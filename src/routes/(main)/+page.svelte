@@ -118,7 +118,7 @@
 		changers: Record<string, Changer>,
 		rates: PairChanger[],
 		sortDesc: boolean | null,
-		useBuying = false
+		tag: 'buy' | 'sell' | 'new'
 	): ChangerRate[] {
 		let platformRates: ChangerRate[] = Object.entries(changers)
 			.map(([changer_code, changer]) => {
@@ -135,16 +135,34 @@
 				return null;
 			})
 			.filter((item): item is { rate: PairChanger; changer: Changer } => item !== null)
-			.filter((item) => (useBuying ? item.rate.price_buy > 0 : item.rate.price_sell > 0));
+			.filter((item) => {
+				if (tag === 'new') {
+					return newestProviders.includes(item.changer.code);
+				} else if (tag === 'buy') {
+					return item.rate.price_buy > 0;
+				} else if (tag === 'sell') {
+					return item.rate.price_sell > 0;
+				} else {
+					return false;
+				}
+			});
 
 		if (sortDesc === null) {
 			return platformRates;
 		}
 
 		const priceCompare = (a: ChangerRate, b: ChangerRate) => {
-			const price1 = useBuying ? a.rate.price_buy : a.rate.price_sell;
-			const price2 = useBuying ? b.rate.price_buy : b.rate.price_sell;
-			return sortDesc ? price2 - price1 : price1 - price2;
+			if (tag === 'buy') {
+				return sortDesc ? b.rate.price_buy - a.rate.price_buy : a.rate.price_buy - b.rate.price_buy;
+			} else if (tag === 'sell') {
+				return sortDesc
+					? b.rate.price_sell - a.rate.price_sell
+					: a.rate.price_sell - b.rate.price_sell;
+			} else {
+				return sortDesc
+					? b.rate.price_sell - a.rate.price_sell
+					: a.rate.price_sell - b.rate.price_sell;
+			}
 		};
 
 		return platformRates.sort(priceCompare);
@@ -157,22 +175,30 @@
 					getNewestProviders,
 					groupRates.allRates,
 					null,
-					false
+					'new'
 				).slice(0, 5);
 			}
 
 			if (groupRates.remittance && groupRates.remittance.length > 0) {
-				sendingResult = findSupportedPlatforms(providers, groupRates.remittance, true, false).slice(
+				sendingResult = findSupportedPlatforms(
+					providers,
+					groupRates.remittance,
+					true,
+					'sell'
+				).slice(0, 5);
+			}
+			if (groupRates.ramp && groupRates.ramp.length > 0) {
+				buyingResult = findSupportedPlatforms(providers, groupRates.ramp, false, 'buy').slice(0, 5);
+				sellingResult = findSupportedPlatforms(providers, groupRates.ramp, true, 'sell').slice(
 					0,
 					5
 				);
 			}
-			if (groupRates.ramp && groupRates.ramp.length > 0) {
-				buyingResult = findSupportedPlatforms(providers, groupRates.ramp, false, true).slice(0, 5);
-				sellingResult = findSupportedPlatforms(providers, groupRates.ramp, true, false).slice(0, 5);
-			}
 			if (groupRates.card && groupRates.card.length > 0) {
-				fundingResult = findSupportedPlatforms(providers, groupRates.card, false, true).slice(0, 5);
+				fundingResult = findSupportedPlatforms(providers, groupRates.card, false, 'buy').slice(
+					0,
+					5
+				);
 			}
 		} catch (error) {
 			console.error('Results processing error:', error);
@@ -586,7 +612,9 @@
 										/>
 									{/if}
 								{:else}
-							        <i class="fas fa-sort-down text-gray-200 dark:text-gray-700 relative top-[-1px]" />
+									<i
+										class="fas fa-sort-down text-gray-200 dark:text-gray-700 relative top-[-1px]"
+									/>
 								{/if}
 							</button>
 						</th>
@@ -600,8 +628,10 @@
 											class="fas fa-sort-down text-gray-500 dark:text-gray-400 relative top-[-2px]"
 										/>
 									{/if}
-									{:else}
-							        <i class="fas fa-sort-down text-gray-200 dark:text-gray-700 relative top-[-1px]" />
+								{:else}
+									<i
+										class="fas fa-sort-down text-gray-200 dark:text-gray-700 relative top-[-1px]"
+									/>
 								{/if}
 								<span>
 									Buy <span class="hidden md:inline">Price</span>
@@ -618,8 +648,10 @@
 											class="fas fa-sort-down text-gray-500 dark:text-gray-400 relative top-[-2px]"
 										/>
 									{/if}
-									{:else}
-							        <i class="fas fa-sort-down text-gray-200 dark:text-gray-700 relative top-[-1px]" />
+								{:else}
+									<i
+										class="fas fa-sort-down text-gray-200 dark:text-gray-700 relative top-[-1px]"
+									/>
 								{/if}
 								<span>
 									Sell <span class="hidden md:inline">Price</span>
