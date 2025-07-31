@@ -60,13 +60,13 @@
 <!-- Category Tabs -->
 <div class="overflow-x-auto no-scrollbar mt-4 border-b border-gray-200 dark:border-gray-700 pb-2">
 	<div class="flex flex-nowrap gap-4 min-w-max px-1">
-		<a href="/" class={`category-link ${selectedCategory === '/' ? 'active' : 'normal'}`}>
+		<a href="/?currency={selectedCurrency}" class={`category-link ${selectedCategory === '/' ? 'active' : 'normal'}`}>
 			<i class="fa-solid fa-grip" />
 			All
 		</a>
 
 		<a
-			href="/highlights"
+			href="/highlights?currency={selectedCurrency}"
 			class={`category-link ${selectedCategory === '/highlights' ? 'active' : 'normal'}`}
 		>
 			<i class="fa-solid fa-star" />
