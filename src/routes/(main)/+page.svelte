@@ -146,13 +146,17 @@
 		// Filter using provider name
 		const filtered = originalFilteredRates.filter((item: any) => {
 			const provider = providers[item.changer_code];
-			return provider?.name?.toLowerCase().includes(searchTerm);
+			return provider && provider.name && provider.name.toLowerCase().includes(searchTerm);
 		});
 
 		filteredRates = filtered;
 	};
 
 	let readMoreRateDetails: boolean = false;
+
+	const handleFilterByCurrency = (currency_: string) => {
+		currency = currency_;
+	};
 </script>
 
 <svelte:head>
@@ -189,7 +193,7 @@
 			to {getCurrencySymbol}{formatNumber(pair.price_90d)} three months ago.
 			{#if !readMoreRateDetails}
 				<button
-					class="text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-300 mt-2 cursor-pointer"
+					class="text-gray-400 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-300 mt-2 cursor-pointer"
 					on:click={() => (readMoreRateDetails = true)}>Read More</button
 				>
 			{/if}
@@ -202,7 +206,7 @@
 				Selling rate: Used for changing {currency.toUpperCase()} to NGN. Tap on any company for more
 				details.
 				<button
-					class="text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-300 mt-2 cursor-pointer"
+					class="text-gray-400 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-300 mt-2 cursor-pointer"
 					on:click={() => (readMoreRateDetails = false)}>Read Less</button
 				>
 			</p>
@@ -282,7 +286,7 @@
 </div>
 
 <div class="container px-0 mb-4">
-	<ExchangeFilter onSearch={handleSearch} bind:selectedCurrency={currency} />
+	<ExchangeFilter onSearch={handleSearch} selectedCurrency={currency} useGotoForCurrencyChange={false} onChangeCurrency={handleFilterByCurrency}/>
 </div>
 
 <main>

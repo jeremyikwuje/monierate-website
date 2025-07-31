@@ -26,10 +26,11 @@
 					}`}
 					on:click={async () => {
 						if (useGotoForCurrencyChange) {
-							goto(`${selectedCategory}?currency=${currency}`);
+							goto(`?currency=${currency}`);
 						} else {
 							selectedCurrency = currency;
 							onChangeCurrency(currency);
+							setUrlParam('currency', currency);
 						}
 					}}
 				>
