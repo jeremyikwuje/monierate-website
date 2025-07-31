@@ -83,13 +83,13 @@
 			Money Transfer
 		</a>
 
-		<a
+		<!-- <a
 			href="/crypto"
 			class={`category-link ${selectedCategory === '/crypto' ? 'active' : 'normal'}`}
 		>
 			<i class="fa-brands fa-bitcoin" />
 			Crypto
-		</a>
+		</a> -->
 	</div>
 </div>
 
