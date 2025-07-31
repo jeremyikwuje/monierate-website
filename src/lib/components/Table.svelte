@@ -44,15 +44,15 @@
 	export let shrinkFirstColumn: boolean = false;
 	export let sortBy: string[] | null = null;
 	export let pagination: boolean = false;
-	export let currentPage = 1;
-	let rowsPerPage = '10';
+	export let currentPage: number = 1;
+	export let rowsPerPage: number = 100;
 	let content: HTMLElement;
 
 	// Pagination
-	$: totalPages = Math.ceil((tableData.body.length || 0) / Number(rowsPerPage));
+	$: totalPages = Math.ceil((tableData.body.length || 0) / rowsPerPage);
 	$: paginatedRows = tableData.body.slice(
-		(currentPage - 1) * Number(rowsPerPage),
-		currentPage * Number(rowsPerPage)
+		(currentPage - 1) * rowsPerPage,
+		currentPage * rowsPerPage
 	);
 
 	function getPageButtons(): number[] {
@@ -266,8 +266,8 @@
 		>
 			<!-- Count -->
 			<div class="hidden md:block">
-				Showing {(currentPage - 1) * Number(rowsPerPage) + 1}
-				to {Math.min(currentPage * Number(rowsPerPage), tableData.body.length)}
+				Showing {(currentPage - 1) * rowsPerPage + 1}
+				to {Math.min(currentPage * rowsPerPage, tableData.body.length)}
 				of {tableData.body.length} results
 			</div>
 
