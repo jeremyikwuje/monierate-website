@@ -59,11 +59,11 @@
 	});
 
 	const highlights = data.highlights;
-	$: newResult = highlights.newResult;
-	$: buyingResult = highlights.buyingResult;
-	$: sellingResult = highlights.sellingResult;
-	$: sendingResult = highlights.sendingResult;
-	$: fundingResult = highlights.fundingResult;
+	let newResult = highlights.newResult;
+	let buyingResult = highlights.buyingResult;
+	let sellingResult = highlights.sellingResult;
+	let sendingResult = highlights.sendingResult;
+	let fundingResult = highlights.fundingResult;
 
 	// Highlighting
 	let showHighlights = data.isMobile ? false : true;
