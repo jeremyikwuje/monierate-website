@@ -144,18 +144,26 @@
 </script>
 
 <svelte:head>
-	<title>{currencies[currency] || currency} to naira today bank | Monierate</title>
+	<title>{currencies[currency] || currency} to Naira Today - Bank Rates | Monierate</title>
+	
 	<meta
 		name="description"
-		content="Monierate offers reliable naira exchange rates from 40+ exchanges. Track rates, convert dollars, and get crypto price alerts from Binance, Bybit, etc."
+		content="Check the latest {currencies[currency] || currency} to Naira exchange rates from top Nigerian banks. Compare rates, convert currencies, and track updates in real time with Monierate."
 	/>
+
 	<meta property="og:type" content="website" />
-	<meta property="og:title" content="Naira exchange rates & converter | Monierate" />
+	
+	<meta
+		property="og:title"
+		content="{currencies[currency] || currency} to Naira - Live Bank Rates | Monierate"
+	/>
+
 	<meta
 		property="og:description"
-		content="Compare the naira exchange rates from over 16 exchanges in Nigeria. Track naira rates today. Convert dollar to naira using CBN and black market rate. Get price alert from your favourite crypto exchange such as Binance, Bybit, Quidax, etc."
+		content="Get real-time {currencies[currency] || currency} to Naira exchange rates from Nigerian banks. Monitor bank and black market rates, convert dollars, and track crypto rates from Binance, Bybit, and more."
 	/>
-	<meta property="og:url" content="monierate.com" />
+	
+	<meta property="og:url" content="https://monierate.com" />
 	<meta property="og:image" content="https://monierate.com/monierate-og-image.png" />
 </svelte:head>
 
