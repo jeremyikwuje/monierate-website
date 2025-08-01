@@ -8,6 +8,8 @@
 	export let disableSearch: boolean = false;
 
 	const currencies = ['USD', 'USDT', 'BTC', 'USDC', 'EUR', 'GBP', 'CAD'];
+
+	const parseCurrencyInUrl = (selectedCurrency && selectedCurrency !== "USD") ? `?currency=${selectedCurrency}` : '';
 </script>
 
 <!-- Top Section: Currency Tabs + Search on desktop -->
@@ -55,7 +57,7 @@
 <div class="overflow-x-auto no-scrollbar mt-4 border-b border-gray-200 dark:border-gray-700 pb-2">
 	<div class="flex flex-nowrap gap-4 min-w-max px-1">
 		<a
-			href="/?currency={selectedCurrency}"
+			href="/{parseCurrencyInUrl}"
 			class={`category-link ${selectedCategory === '/' ? 'active' : 'normal'}`}
 		>
 			<i class="fa-solid fa-grip" />
@@ -63,21 +65,21 @@
 		</a>
 
 		<a
-			href="/highlights?currency={selectedCurrency}"
+			href="/highlights{parseCurrencyInUrl}"
 			class={`category-link ${selectedCategory === '/highlights' ? 'active' : 'normal'}`}
 		>
 			<i class="fa-solid fa-star" />
 			Highlights
 		</a>
 
-		<a href="/banks" class={`category-link ${selectedCategory === '/banks' ? 'active' : 'normal'}`}>
+		<a href="/banks{parseCurrencyInUrl}" class={`category-link ${selectedCategory === '/banks' ? 'active' : 'normal'}`}>
 			<i class="fa-solid fa-landmark" />
 			Banks
 		</a>
 
 		<a
-			href="/transafer"
-			class={`category-link ${selectedCategory === '/transfer' ? 'active' : 'normal'}`}
+			href="/money-transfer{parseCurrencyInUrl}"
+			class={`category-link ${selectedCategory === '/money-transfer' ? 'active' : 'normal'}`}
 		>
 			<i class="fa-solid fa-dollar-sign" />
 			Money Transfer
