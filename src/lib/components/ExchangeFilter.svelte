@@ -72,7 +72,7 @@
 			Highlights
 		</a>
 
-		<a href="/banks{parseCurrencyInUrl}" class={`category-link ${selectedCategory === '/banks' ? 'active' : 'normal'}`}>
+		<a href="/bank-rates{parseCurrencyInUrl}" class={`category-link ${selectedCategory === '/bank-rates' ? 'active' : 'normal'}`}>
 			<i class="fa-solid fa-landmark" />
 			Banks
 		</a>

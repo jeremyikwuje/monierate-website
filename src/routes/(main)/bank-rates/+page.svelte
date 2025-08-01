@@ -216,7 +216,7 @@
 		onSearch={handleSearch}
 		selectedCurrency={currency}
 		onChangeCurrency={handleFilterByCurrency}
-		selectedCategory="/banks"
+		selectedCategory="/bank-rates"
 	/>
 </div>
 
