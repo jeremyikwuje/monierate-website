@@ -232,6 +232,7 @@
 									on:click={() => {
 										sortTable(column);
 									}}
+									aria-label="Sort table"
 								>
 									<i class="fa fa-sort" />
 								</button>
@@ -279,6 +280,7 @@
 						class="px-3 py-1 rounded bg-gray-100 dark:bg-gray-900/60 hover:bg-gray-200 border-gray-200 dark:border-gray-700 border text-[11px]"
 						on:click={() => (gotoPage(Math.max(1, currentPage - 1)), scrollToContent())}
 						disabled={currentPage === 1}
+						aria-label="Previous page"
 					>
 						<i class="fa fa-chevron-left" />
 					</button>
@@ -294,6 +296,7 @@
 										: 'bg-gray-100 dark:bg-gray-900 hover:bg-gray-200 border-gray-400 dark:border-gray-700'
 								} border`}
 								on:click={() => (gotoPage(page), scrollToContent())}
+								aria-label="Page ${page}"
 							>
 								{page}
 							</button>
@@ -305,6 +308,7 @@
 						class="px-3 py-1 rounded bg-gray-100 dark:bg-gray-900/60 hover:bg-gray-200 border-gray-200 dark:border-gray-700 border text-[11px]"
 						on:click={() => (gotoPage(Math.min(totalPages, currentPage + 1)), scrollToContent())}
 						disabled={currentPage === totalPages}
+						aria-label="Next page"
 					>
 						<i class="fa fa-chevron-right" />
 					</button>
