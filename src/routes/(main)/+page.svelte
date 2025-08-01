@@ -222,7 +222,7 @@
 			{/if}
 		</p>
 		{#if readMoreRateDetails}
-			<p>
+			<p in:slide={{ duration: 250 }} out:slide={{ duration: 250 }}>
 				Rates provided are for indicative and guidance purposes only. You need ₦{formatNumber(
 					(pair.price.current || 0) * 100
 				)} to get {getCurrencySymbol}100 now. Buying rate: Used for changing NGN to {currency.toUpperCase()}.
@@ -261,7 +261,11 @@
 	</div>
 
 	{#if showHighlights}
-		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-8" in:slide={{ duration: 250 }} out:slide={{ duration: 250 }}>
+		<div
+			class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-8"
+			in:slide={{ duration: 250 }}
+			out:slide={{ duration: 250 }}
+		>
 			<!--New-->
 			{#if newResult}
 				<HighlightCard
