@@ -5,6 +5,7 @@
 	import ExchangeFilter from '$lib/components/ExchangeFilter.svelte';
 	import Table from '$lib/components/Table.svelte';
 	import HighlightCard from '$lib/components/HighlightCard.svelte';
+	import { slide } from 'svelte/transition';
 
 	interface Changer {
 		code: string;
@@ -260,7 +261,7 @@
 	</div>
 
 	{#if showHighlights}
-		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
+		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-8" in:slide={{ duration: 250 }} out:slide={{ duration: 250 }}>
 			<!--New-->
 			{#if newResult}
 				<HighlightCard
