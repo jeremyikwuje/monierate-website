@@ -9,7 +9,7 @@
 
 	const currencies = ['USD', 'USDT', 'BTC', 'USDC', 'EUR', 'GBP', 'CAD'];
 
-	const parseCurrencyInUrl = (selectedCurrency && selectedCurrency !== "USD") ? `?currency=${selectedCurrency}` : '';
+	$: parseCurrencyInUrl = (selectedCurrency && selectedCurrency !== "USD") ? `?currency=${selectedCurrency}` : '';
 </script>
 
 <!-- Top Section: Currency Tabs + Search on desktop -->
