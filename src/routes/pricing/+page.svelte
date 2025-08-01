@@ -94,20 +94,25 @@
 <div class="container mt-8">
 	<div class="mb-16 text-center">
 		<h2 class="text-3xl font-bold mb-6">Pricing</h2>
+		<p class="mb-6">Our popular <a href="https://account.monierate.com/signup">Free Plan</a> provides up to 100 API requests/month and 10-minute exchange rates update.</p>
 		<div>
-			For custom pricing, please contact the team: <a
-				href="mailto:hello@monierate.com"
-				class="underline text-blue-500 hover:text-blue-700">hello@monierate.com</a
-			>
+			For enquiry or custom pricing, please <a
+				href="https://cal.com/monierate/activation-call"
+				class="underline text-blue-500 hover:text-blue-700">speak to an expert</a
+			>.
 		</div>
 	</div>
 
 	<Pricing {data} />
 </div>
 
+<div class="mb-10 text-center">
+	<p><strong>Instant Swap Accounts:</strong> For Instant swap users, minimum deposit is $500 / N1 million. Deposit fee of 0.3% applies.</p>
+</div>
+
 <div class="py-2 mb-16">
 	<div class="container">
-		<div class="mb-5 md:mb-0">
+		<div class="mb-8">
 			<span class="block text-2xl font-bold mb-3">
 				Want a Free Trial?
 			</span>
@@ -121,6 +126,7 @@
 				</a> today!
 			</p>
 		</div>
+		
 	</div>
 </div>
 
