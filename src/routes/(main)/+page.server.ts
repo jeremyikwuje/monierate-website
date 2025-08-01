@@ -13,11 +13,17 @@ const getHighlights = async (fetch: typeof globalThis.fetch, pair: string): Prom
 	}
 };
 
+const VALID_CURRENCIES = ['USD', 'EUR', 'GBP', 'NGN'] as const;
+type Currency = (typeof VALID_CURRENCIES)[number];
+
 export const load: PageServerLoad = async ({ fetch, url }) => {
 	try {
 		const page = Number(url.searchParams.get('page') || '1');
-		const currency = url.searchParams.get('currency') || 'USD';
+		const rawCurrency = (url.searchParams.get('currency') ?? 'USD').toUpperCase();
+		const isValidCurrency = (VALID_CURRENCIES as readonly string[]).includes(rawCurrency);
+        const currency = isValidCurrency ? (rawCurrency as Currency | string) : 'USD';
 		const pair = `${currency}NGN`.toLowerCase();
+
 
 		// Fetch changers and rate data in parallel
 		const [rawProviders, highlights] = await Promise.all([
@@ -43,6 +49,7 @@ export const load: PageServerLoad = async ({ fetch, url }) => {
 			page,
 			currency,
 			currencySymbols,
+			isValidCurrency,
 			highlights
 		};
 	} catch (err: any) {

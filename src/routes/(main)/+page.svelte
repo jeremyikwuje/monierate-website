@@ -6,6 +6,7 @@
 	import Table from '$lib/components/Table.svelte';
 	import HighlightCard from '$lib/components/HighlightCard.svelte';
 	import { slide } from 'svelte/transition';
+	import Notice from '$lib/components/Notice.svelte';
 
 	interface Changer {
 		code: string;
@@ -204,6 +205,12 @@
 </div>
 
 <div class="container px-0">
+	{#if !data.isValidCurrency}
+		<Notice
+			>Looks like the currency you entered isn't valid. Don't worry — we've reset it to {currency.toUpperCase()}.</Notice
+		>
+	{/if}
+	
 	<h1 class="text-2xl md:text-4xl mb-2 dark:text-gray-100">
 		Today's dollar to naira rates on exchanges
 	</h1>
