@@ -4,6 +4,7 @@
 	import ExchangeFilter from '$lib/components/ExchangeFilter.svelte';
 	import HighlightCard from '$lib/components/HighlightCard.svelte';
 	import { slide } from 'svelte/transition';
+	import Notice from '$lib/components/Notice.svelte';
 
 	export let data;
 	const currencySymbols = data.currencySymbols as any;
@@ -65,6 +66,12 @@
 </div>
 
 <div class="container px-0">
+	{#if !data.isValidCurrency}
+		<Notice
+			>Looks like the currency you entered isn't valid. Don't worry — we've reset it to {currency.toUpperCase()}.</Notice
+		>
+	{/if}
+
 	<h1 class="text-2xl md:text-4xl mb-2 dark:text-gray-100">Rate Highlights</h1>
 	<div class="text-gray-600 font-normal dark:text-gray-300">
 		<p>

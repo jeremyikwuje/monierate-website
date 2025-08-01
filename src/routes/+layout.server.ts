@@ -58,6 +58,7 @@ export const load: LayoutServerLoad = async ({ request, cookies, fetch }) => {
         user,
         bannerIndexes,
         isMobile,
+        VALID_CURRENCIES,
     }
 
 };
@@ -152,3 +153,5 @@ const selectTopPartnerBanner = () => {
     const random_index = Math.floor(Math.random() * sponsored_partners.length);
     return sponsored_partners[random_index];
 }
+
+const VALID_CURRENCIES = ['USD', 'EUR', 'GBP', 'NGN'] as const;

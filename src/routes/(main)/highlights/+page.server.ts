@@ -13,9 +13,12 @@ const getHighlights = async (fetch: typeof globalThis.fetch, pair: string): Prom
 	}
 };
 
-export const load: PageServerLoad = async ({ fetch, url }) => {
+export const load: PageServerLoad = async ({ fetch, url, parent }) => {
 	try {
-		const currency = url.searchParams.get('currency') || 'USD';
+		const { VALID_CURRENCIES } = await parent();
+		const rawCurrency = (url.searchParams.get('currency') ?? 'USD').toUpperCase();
+		const isValidCurrency = (VALID_CURRENCIES as readonly string[]).includes(rawCurrency);
+		const currency = isValidCurrency ? (rawCurrency as string) : 'USD';
 		const pair = `${currency}NGN`.toLowerCase();
 
 		const highlights = await getHighlights(fetch, pair);
@@ -23,7 +26,8 @@ export const load: PageServerLoad = async ({ fetch, url }) => {
 		return {
 			currency,
 			currencySymbols,
-			highlights
+			highlights,
+			isValidCurrency
 		};
 	} catch (err: any) {
 		console.error('Page load error:', err);
