@@ -48,6 +48,7 @@
 				placeholder="Search providers..."
 				on:input={onSearch}
 				bind:value={search}
+				id="search"
 			/>
 		</div>
 	{/if}
@@ -108,6 +109,7 @@
 				placeholder="Search providers..."
 				on:input={onSearch}
 				bind:value={search}
+				id="search-mobile"
 			/>
 		</div>
 	</div>

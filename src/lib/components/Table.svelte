@@ -318,6 +318,7 @@
 					class="border rounded px-2 py-1 text-sm dark:bg-gray-900/60 border-gray-200 dark:border-gray-700 dark:text-gray-200"
 					bind:value={rowsPerPage}
 					on:change={() => (gotoPage(1), scrollToContent())}
+					id="rowsPerPage"
 				>
 					<option value="10">10</option>
 					<option value="25">25</option>
