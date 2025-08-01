@@ -2,6 +2,10 @@ import { error } from '@sveltejs/kit';
 import type { PageServerLoad } from './$types';
 import { get_changers } from '$lib/server/changer.service';
 import currencySymbols from '$data/currency-symbols.json';
+import currencies from '$data/currencies.json';
+
+type CurrencyMap = Record<string, string>;
+
 const getHighlights = async (fetch: typeof globalThis.fetch, pair: string): Promise<any> => {
 	try {
 		const res = await fetch('/api/highlights?max=5&pair=' + pair);
@@ -40,6 +44,11 @@ export const load: PageServerLoad = async ({ fetch, url, parent }) => {
 			providers[provider.code] = provider;
 		}
 
+		const mergedCurrencies: CurrencyMap = {
+			...currencies.coins,
+			...currencies.fiat
+		};
+
 		// Return everything to page
 		return {
 			providers,
@@ -47,7 +56,8 @@ export const load: PageServerLoad = async ({ fetch, url, parent }) => {
 			currency,
 			currencySymbols,
 			isValidCurrency,
-			highlights
+			highlights,
+			mergedCurrencies
 		};
 	} catch (err: any) {
 		console.error('Page load error:', err);

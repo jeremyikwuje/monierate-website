@@ -17,6 +17,7 @@
 
 	export let data;
 	const currencySymbols = data.currencySymbols as any;
+	const currencies = data.mergedCurrencies as any;
 	const pairs = data.pairs || {};
 	let page = data.page;
 	$: currency = data.currency;
@@ -210,7 +211,7 @@
 			>Looks like the currency you entered isn't valid. Don't worry — we've reset it to {currency.toUpperCase()}.</Notice
 		>
 	{/if}
-	
+
 	<h1 class="text-2xl md:text-4xl mb-2 dark:text-gray-100">
 		Today's dollar to naira rates on exchanges
 	</h1>
@@ -232,9 +233,10 @@
 			<p in:slide={{ duration: 250 }} out:slide={{ duration: 250 }}>
 				Rates provided are for indicative and guidance purposes only. You need ₦{formatNumber(
 					(pair.price.current || 0) * 100
-				)} to get {getCurrencySymbol}100 now. Buying rate: Used for changing NGN to {currency.toUpperCase()}.
-				Selling rate: Used for changing {currency.toUpperCase()} to NGN. Tap on any company for more
-				details.
+				)} to get {getCurrencySymbol}100 now. Buying rate: Used for changing {currencies['NGN'] ||
+					'NGN'} to {currencies[currency] || currency}. Selling rate: Used for changing {currencies[
+					currency
+				] || currency} to {currencies['NGN'] || 'NGN'}. Tap on any company for more details.
 				<button
 					class="text-gray-400 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-300 mt-2 cursor-pointer"
 					on:click={() => (readMoreRateDetails = false)}>Read Less</button
