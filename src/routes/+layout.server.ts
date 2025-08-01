@@ -154,4 +154,4 @@ const selectTopPartnerBanner = () => {
     return sponsored_partners[random_index];
 }
 
-const VALID_CURRENCIES = ['USD', 'EUR', 'GBP', 'NGN'] as const;
+const VALID_CURRENCIES = ['USD', 'EUR', 'GBP', 'CAD', 'BTC', 'USDT', 'USDC'] as const;
