@@ -38,11 +38,25 @@ export const load: PageServerLoad = async ({ fetch, url, parent }) => {
 			});
 		}
 
+		const availablePairs: any[] = [];
+
 		// Transform providers into key-value pair for easy lookup
 		const providers: Record<string, (typeof rawProviders)[0]> = {};
 		for (const provider of rawProviders) {
 			providers[provider.code] = provider;
+			try {
+				Object.keys(provider.pairs).forEach((pair) => {
+					if (!availablePairs.includes(pair)) {
+						availablePairs.push(pair);
+					}
+				});
+			} catch (err) {
+				console.error(err);
+			}
 		}
+		const AVAILABLE_CURRENCIES = VALID_CURRENCIES.filter((currency) =>
+			availablePairs.includes(`${currency}NGN`.toLowerCase())
+		);
 
 		const mergedCurrencies: CurrencyMap = {
 			...currencies.coins,
@@ -57,7 +71,8 @@ export const load: PageServerLoad = async ({ fetch, url, parent }) => {
 			currencySymbols,
 			isValidCurrency,
 			highlights,
-			mergedCurrencies
+			mergedCurrencies,
+			AVAILABLE_CURRENCIES
 		};
 	} catch (err: any) {
 		console.error('Page load error:', err);
