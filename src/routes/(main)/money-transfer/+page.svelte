@@ -216,6 +216,7 @@
 		selectedCurrency={currency}
 		onChangeCurrency={handleFilterByCurrency}
 		selectedCategory="/money-transfer"
+		filteredCurrencies={data.AVAILABLE_CURRENCIES}
 	/>
 </div>
 

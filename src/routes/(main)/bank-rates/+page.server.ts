@@ -46,7 +46,6 @@ export const load: PageServerLoad = async ({ fetch, url, parent }) => {
 		const AVAILABLE_CURRENCIES = VALID_CURRENCIES.filter((currency) =>
 			availablePairs.includes(`${currency}NGN`.toLowerCase())
 		);
-		console.log(AVAILABLE_CURRENCIES)
 
 		const mergedCurrencies: CurrencyMap = {
 			...currencies.coins,
