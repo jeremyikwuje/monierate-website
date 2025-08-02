@@ -4,12 +4,17 @@
 	export let onSearch: (a: any) => void = () => {};
 	export let selectedCurrency = 'USD';
 	export let onChangeCurrency: (currency: any) => void = () => {};
+	export let filteredCurrencies: any[] = [];
 	export let selectedCategory = '/';
 	export let disableSearch: boolean = false;
 
-	const currencies = ['USD', 'USDT', 'BTC', 'USDC', 'EUR', 'GBP', 'CAD'];
+	let currencies = ['USD', 'USDT', 'BTC', 'USDC', 'EUR', 'GBP', 'CAD'];
+	if (filteredCurrencies.length > 0) {
+		currencies = filteredCurrencies;
+	}
 
-	$: parseCurrencyInUrl = (selectedCurrency && selectedCurrency !== "USD") ? `?currency=${selectedCurrency}` : '';
+	$: parseCurrencyInUrl =
+		selectedCurrency && selectedCurrency !== 'USD' ? `?currency=${selectedCurrency}` : '';
 </script>
 
 <!-- Top Section: Currency Tabs + Search on desktop -->
@@ -73,7 +78,10 @@
 			Highlights
 		</a>
 
-		<a href="/bank-rates{parseCurrencyInUrl}" class={`category-link ${selectedCategory === '/bank-rates' ? 'active' : 'normal'}`}>
+		<a
+			href="/bank-rates{parseCurrencyInUrl}"
+			class={`category-link ${selectedCategory === '/bank-rates' ? 'active' : 'normal'}`}
+		>
 			<i class="fa-solid fa-landmark" />
 			Banks
 		</a>
