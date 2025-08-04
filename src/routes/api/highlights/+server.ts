@@ -24,39 +24,59 @@ interface ChangerRate {
 const EXCLUDED = new Set(['market', 'binance', 'paypal']);
 const NEWEST = ['oneremit', 'breet', 'busha', 'spenda', 'ridima'];
 
-const findPlatforms = (
+const findBuyPlatforms = (
 	changers: Record<string, Changer>,
-	rates: PairChanger[] = [],
-	sortDesc: boolean | null,
-	tag: 'buy' | 'sell' | 'new' = 'sell'
-): ChangerRate[] =>
-	rates
-		.filter(({ changer_code, price_buy, price_sell }) => {
-			if (changers[changer_code] && !EXCLUDED.has(changer_code)) {
-				if (tag === 'new') {
-					if (price_buy > 0 || price_sell > 0) {
-						return true;
-					}
-				}
-				const price = tag === 'buy' ? price_buy : price_sell;
-				return price > 0;
-			}
-		})
-		.map((rate) => ({ rate, changer: changers[rate.changer_code] }))
-		.sort((a, b) => {
-			if (sortDesc === null) return 0;
-			if (tag === 'buy') {
-				return sortDesc ? b.rate.price_buy - a.rate.price_buy : a.rate.price_buy - b.rate.price_buy;
-			} else if (tag === 'sell') {
-				return sortDesc
-					? b.rate.price_sell - a.rate.price_sell
-					: a.rate.price_sell - b.rate.price_sell;
-			} else if (tag === 'new') {
-				return NEWEST.indexOf(a.changer.code) - NEWEST.indexOf(b.changer.code);
-			} else {
-				return 0;
-			}
-		});
+	rates: PairChanger[] = []
+): ChangerRate[] => {
+	try {
+		return rates
+			.filter((r) => changers[r.changer_code] && !EXCLUDED.has(r.changer_code) && r.price_buy > 0)
+			.map((r) => ({ rate: r, changer: changers[r.changer_code] }))
+			.sort((a, b) => a.rate.price_buy - b.rate.price_buy); // lower prices first
+	} catch (err) {
+		console.error('Error in findBuyPlatforms:', err);
+		return [];
+	}
+};
+
+const findSellPlatforms = (
+	changers: Record<string, Changer>,
+	rates: PairChanger[] = []
+): ChangerRate[] => {
+	try {
+		return rates
+			.filter((r) => changers[r.changer_code] && !EXCLUDED.has(r.changer_code) && r.price_sell > 0)
+			.map((r) => ({ rate: r, changer: changers[r.changer_code] }))
+			.sort((a, b) => b.rate.price_sell - a.rate.price_sell); // higher prices first
+	} catch (err) {
+		console.error('Error in findSellPlatforms:', err);
+		return [];
+	}
+};
+
+const findNewPlatforms = (
+	changers: Record<string, Changer>,
+	rates: PairChanger[] = []
+): ChangerRate[] => {
+	try {
+		return rates
+			.filter(
+				(r) =>
+					changers[r.changer_code] &&
+					!EXCLUDED.has(r.changer_code) &&
+					(r.price_buy > 0 || r.price_sell > 0)
+			)
+			.map((r) => ({ rate: r, changer: changers[r.changer_code] }))
+			.sort((a, b) => {
+				const priceA = a.rate.price_buy > 0 ? a.rate.price_buy : a.rate.price_sell;
+				const priceB = b.rate.price_buy > 0 ? b.rate.price_buy : b.rate.price_sell;
+				return priceB - priceA; // highest first
+			});
+	} catch (err) {
+		console.error('Error in findNewPlatforms:', err);
+		return [];
+	}
+};
 
 export const GET = async ({ url }) => {
 	const pair = url.searchParams.get('pair')?.trim() || null;
@@ -84,13 +104,11 @@ export const GET = async ({ url }) => {
 	const safe = (rates?: PairChanger[]) => Array.isArray(rates) && rates.length;
 
 	const res = {
-		newResult: safe(all) ? findPlatforms(newest, all, false, 'new').slice(0, max) : [],
-		sendingResult: safe(remittance)
-			? findPlatforms(changers, remittance, true, 'sell').slice(0, max)
-			: [],
-		buyingResult: safe(ramp) ? findPlatforms(changers, ramp, false, 'buy').slice(0, max) : [],
-		sellingResult: safe(ramp) ? findPlatforms(changers, ramp, true, 'sell').slice(0, max) : [],
-		fundingResult: safe(card) ? findPlatforms(changers, card, false, 'buy').slice(0, max) : []
+		newResult: safe(all) ? findNewPlatforms(newest, all).slice(0, max) : [],
+		sendingResult: safe(remittance) ? findSellPlatforms(changers, remittance).slice(0, max) : [],
+		buyingResult: safe(ramp) ? findBuyPlatforms(changers, ramp).slice(0, max) : [],
+		sellingResult: safe(ramp) ? findSellPlatforms(changers, ramp).slice(0, max) : [],
+		fundingResult: safe(card) ? findBuyPlatforms(changers, ramp).slice(0, max) : []
 	};
 
 	return json(res);

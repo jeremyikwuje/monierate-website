@@ -17,6 +17,7 @@
 	}
 
 	export let highlightData: HighlightItem[] = [];
+	export let highlightType: 'buy' | 'sell' | 'auto' = 'auto';
 	export let currency: string;
 	export let title: string = 'Highlight';
 	export let link: string = '';
@@ -63,7 +64,19 @@
 					</a>
 					<div class="text-right flex items-center gap-1">
 						<span class="text-sm">
-							{#if Math.round(rate.price_buy) !== 0}
+							{#if highlightType === 'buy'}
+								{#if Math.round(rate.price_buy) !== 0}
+									₦ {formatNumber(Math.round(rate.price_buy))}
+								{:else}
+									-
+								{/if}
+							{:else if highlightType === 'sell'}
+								{#if Math.round(rate.price_sell) !== 0}
+									₦ {formatNumber(Math.round(rate.price_sell))}
+								{:else}
+									-
+								{/if}
+							{:else if Math.round(rate.price_buy) !== 0}
 								₦ {formatNumber(Math.round(rate.price_buy))}
 							{:else if Math.round(rate.price_sell) !== 0}
 								₦ {formatNumber(Math.round(rate.price_sell))}

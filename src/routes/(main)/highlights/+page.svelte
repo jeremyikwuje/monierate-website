@@ -104,6 +104,7 @@
 		{#if newResult}
 			<HighlightCard
 				highlightData={newResult}
+				highlightType="auto"
 				title="🔥 New Listing"
 				currency={getCurrencySymbol}
 			/>
@@ -113,6 +114,7 @@
 		{#if buyingResult}
 			<HighlightCard
 				highlightData={buyingResult}
+				highlightType="buy"
 				title="🔥 Best Buy Rate"
 				link="/buy/usd-with-ngn-best-buying-rate"
 				currency={getCurrencySymbol}
@@ -123,6 +125,7 @@
 		{#if sellingResult}
 			<HighlightCard
 				highlightData={sellingResult}
+				highlightType="sell"
 				title="🔥 Best Sell Rate"
 				link="/sell/usd-get-ngn-best-selling-rate"
 				currency={getCurrencySymbol}
@@ -133,6 +136,7 @@
 		{#if sendingResult}
 			<HighlightCard
 				highlightData={sendingResult}
+				highlightType="sell"
 				title="🔥 Best Sending Rate"
 				link="/send/usd-to-ng-best-rate"
 				currency={getCurrencySymbol}
@@ -143,6 +147,7 @@
 		{#if fundingResult}
 			<HighlightCard
 				highlightData={fundingResult}
+				highlightType="buy"
 				title="🔥 Best Card Rate"
 				link="/card/usd-ngn-best-funding-rate"
 				currency={getCurrencySymbol}
