@@ -8,9 +8,9 @@
 	export let selectedCategory = '/';
 	export let disableSearch: boolean = false;
 
-	let currencies = ['USD', 'USDT', 'BTC', 'USDC', 'EUR', 'GBP', 'CAD'];
+	let currencies = ['USD', 'USDT', 'BTC', 'EUR', 'GBP', 'CAD', 'USDC'];
 	if (filteredCurrencies.length > 0) {
-		currencies = filteredCurrencies;
+		currencies = filteredCurrencies.sort((a, b) => currencies.indexOf(a) - currencies.indexOf(b));
 	}
 
 	$: parseCurrencyInUrl =
