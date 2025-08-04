@@ -149,19 +149,29 @@
 		return stringVal;
 	}
 
-	let sortDirection: 'asc' | 'desc' = 'asc';
+	let sortDirection: 'asc' | 'desc' | 'default' = 'asc';
 	let sortColumn: string | null = null;
+	let originalRows: any = null;
 
 	const sortTable = (column: string) => {
-		// Toggle direction if sorting the same column again
+		if (!originalRows) originalRows = [...paginatedRows];
+		
+		// Toggle sort direction
 		if (sortColumn === column) {
-			sortDirection = sortDirection === 'asc' ? 'desc' : 'asc';
+			if (sortDirection === 'asc') sortDirection = 'desc';
+			else if (sortDirection === 'desc') sortDirection = 'default';
+			else sortDirection = 'asc';
 		} else {
 			sortDirection = 'asc';
 			sortColumn = column;
 		}
 
-		paginatedRows = paginatedRows.sort((a, b) => {
+		if (sortDirection === 'default') {
+			paginatedRows = [...originalRows];
+			return;
+		}
+
+		paginatedRows = [...paginatedRows].sort((a, b) => {
 			const aVal = extractSortableValue(a[column]);
 			const bVal = extractSortableValue(b[column]);
 
