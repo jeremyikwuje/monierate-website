@@ -1,6 +1,6 @@
 <script lang="ts">
 	/** @type {import('./$types').PageData} */
-	import { friendlyDate, formatNumber } from '$lib/functions';
+	import { friendlyDate, formatNumber, setCookie } from '$lib/functions';
 	import AdBanner from '$lib/components/AdBanner.svelte';
 	import ExchangeFilter from '$lib/components/ExchangeFilter.svelte';
 	import Table from '$lib/components/Table.svelte';
@@ -70,14 +70,20 @@
 	let fundingResult = highlights.fundingResult;
 
 	// Highlighting
-	let showHighlights = data.isMobile ? false : true;
+	let showHighlights = data.isMobile ? false : data.showHighlights;
 
 	function toggleHighlights(event: Event) {
 		let toggle = event.target as HTMLInputElement;
 		if (toggle.checked) {
 			showHighlights = true;
+			if (!data.isMobile) {
+				setCookie("showHighlights", "true", 30);
+			}
 		} else {
 			showHighlights = false;
+			if (!data.isMobile) {
+				setCookie("showHighlights", "false", 30);
+			}
 		}
 	}
 

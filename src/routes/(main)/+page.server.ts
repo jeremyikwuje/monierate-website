@@ -17,7 +17,7 @@ const getHighlights = async (fetch: typeof globalThis.fetch, pair: string): Prom
 	}
 };
 
-export const load: PageServerLoad = async ({ fetch, url, parent }) => {
+export const load: PageServerLoad = async ({ fetch, url, parent, cookies }) => {
 	try {
 		const { VALID_CURRENCIES } = await parent();
 		const page = Number(url.searchParams.get('page') || '1');
@@ -25,6 +25,10 @@ export const load: PageServerLoad = async ({ fetch, url, parent }) => {
 		const isValidCurrency = (VALID_CURRENCIES as readonly string[]).includes(rawCurrency);
 		const currency = isValidCurrency ? (rawCurrency as string) : 'USD';
 		const pair = `${currency}NGN`.toLowerCase();
+		let showHighlights: boolean = true;
+		if (cookies.get('showHighlights')) {
+			showHighlights = cookies.get('showHighlights') === 'true';
+		}
 
 		// Fetch changers and rate data in parallel
 		const [rawProviders, highlights] = await Promise.all([
@@ -72,7 +76,8 @@ export const load: PageServerLoad = async ({ fetch, url, parent }) => {
 			isValidCurrency,
 			highlights,
 			mergedCurrencies,
-			AVAILABLE_CURRENCIES
+			AVAILABLE_CURRENCIES,
+			showHighlights
 		};
 	} catch (err: any) {
 		console.error('Page load error:', err);
