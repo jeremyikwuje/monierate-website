@@ -83,13 +83,14 @@
 	let tableData: any = null;
 	let excludedPlatforms = ['market', 'binance'];
 	$: {
+		let count: number = 0;
 		if (filteredRates) {
 			let getFilteredRates = filteredRates
 				.filter((item: any) => !excludedPlatforms.includes(item.changer_code))
 				.map((rate: any, index: number) => {
 					if (providers[rate.changer_code]) {
 						return {
-							'#': index + 1,
+							'#': count += 1,
 							Provider: {
 								label: providers[rate.changer_code].name,
 								icon: [
@@ -220,8 +221,8 @@
 			Compare the prices of dollar to naira from {total} exchange providers.
 		</p> -->
 		<p>
-			The average rate for 💵 {getCurrencySymbol}1 is ₦{formatNumber(pair.price.current)}, compared
-			to {getCurrencySymbol}{formatNumber(pair.price_90d)} three months ago.
+			The average rate for {getCurrencySymbol}1 is ₦{formatNumber(pair.price.current)}, compared
+			to ₦{formatNumber(pair.price_30d)} a month ago.
 			{#if !readMoreRateDetails}
 				<button
 					class="text-gray-400 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-300 mt-2 cursor-pointer"
@@ -231,17 +232,23 @@
 		</p>
 		{#if readMoreRateDetails}
 			<p in:slide={{ duration: 250 }} out:slide={{ duration: 250 }}>
-				Rates provided are for indicative and guidance purposes only. You need ₦{formatNumber(
+				Rates provided are for indicative and guidance purposes only. You need at least ₦{formatNumber(
 					(pair.price.current || 0) * 100
-				)} to get {getCurrencySymbol}100 now. Buying rate: Used for changing {currencies['NGN'] ||
-					'NGN'} to {currencies[currency] || currency}. Selling rate: Used for changing {currencies[
+				)} to get {getCurrencySymbol}100 now, and if you have $100 you can get ₦{formatNumber(pair.price.current * 100)} or less.
+			</p>
+			<p>
+				<strong>Buy rate:</strong> Used for changing {currencies['NGN'] ||
+					'NGN'} to {currencies[currency] || currency}.
+			</p>
+			<p>
+				<strong>Sell rate:</strong> Used for changing {currencies[
 					currency
-				] || currency} to {currencies['NGN'] || 'NGN'}. Tap on any company for more details.
-				<button
+				] || currency} to {currencies['NGN'] || 'NGN'}. Tap on any provider for more details.
+			</p>
+							<button
 					class="text-gray-400 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-300 mt-2 cursor-pointer"
 					on:click={() => (readMoreRateDetails = false)}>Read Less</button
 				>
-			</p>
 		{/if}
 	</div>
 
@@ -289,7 +296,7 @@
 			{#if buyingResult}
 				<HighlightCard
 					highlightData={buyingResult}
-					title="🔥 Best Buying Rate"
+					title="🔥 Best Buy Rate"
 					link="/buy/usd-with-ngn-best-buying-rate"
 					currency={getCurrencySymbol}
 				/>
@@ -299,7 +306,7 @@
 			{#if sellingResult}
 				<HighlightCard
 					highlightData={sellingResult}
-					title="🔥 Best Selling Rate"
+					title="🔥 Best Sell Rate"
 					link="/sell/usd-get-ngn-best-selling-rate"
 					currency={getCurrencySymbol}
 				/>

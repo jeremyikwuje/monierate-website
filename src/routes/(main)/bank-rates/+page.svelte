@@ -63,13 +63,14 @@
 	let tableData: any = null;
 	let excludedPlatforms = ['market', 'binance'];
 	$: {
+		let count: number = 0;
 		if (filteredRates) {
 			let getFilteredRates = filteredRates
 				.filter((item: any) => !excludedPlatforms.includes(item.changer_code))
 				.map((rate: any, index: number) => {
 					if (providers[rate.changer_code]) {
 						return {
-							'#': index + 1,
+							'#': count += 1,
 							Provider: {
 								label: providers[rate.changer_code].name,
 								icon: [

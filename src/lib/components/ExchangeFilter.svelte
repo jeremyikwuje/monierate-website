@@ -87,8 +87,8 @@
 		</a>
 
 		<a
-			href="/money-transfer{parseCurrencyInUrl}"
-			class={`category-link ${selectedCategory === '/money-transfer' ? 'active' : 'normal'}`}
+			href="/money-transfer-rate{parseCurrencyInUrl}"
+			class={`category-link ${selectedCategory === '/money-transfer-rate' ? 'active' : 'normal'}`}
 		>
 			<i class="fa-solid fa-dollar-sign" />
 			Money Transfer

@@ -76,8 +76,7 @@
 	<div class="text-gray-600 font-normal dark:text-gray-300">
 		<p>
 			Explore a quick snapshot of the most competitive naira exchange rates from leading providers.
-			These rates are updated regularly to help you make informed conversion decisions across CBN,
-			black market, and crypto platforms like Cedar.money, Bybit, and Quidax.
+			These rates are updated regularly to help you make informed conversion decisions across several providers.
 		</p>
 	</div>
 
@@ -114,7 +113,7 @@
 		{#if buyingResult}
 			<HighlightCard
 				highlightData={buyingResult}
-				title="🔥 Best Buying Rate"
+				title="🔥 Best Buy Rate"
 				link="/buy/usd-with-ngn-best-buying-rate"
 				currency={getCurrencySymbol}
 			/>
@@ -124,7 +123,7 @@
 		{#if sellingResult}
 			<HighlightCard
 				highlightData={sellingResult}
-				title="🔥 Best Selling Rate"
+				title="🔥 Best Sell Rate"
 				link="/sell/usd-get-ngn-best-selling-rate"
 				currency={getCurrencySymbol}
 			/>
