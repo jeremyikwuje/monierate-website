@@ -7,6 +7,7 @@
 	import HighlightCard from '$lib/components/HighlightCard.svelte';
 	import { slide } from 'svelte/transition';
 	import Notice from '$lib/components/Notice.svelte';
+	import ExchangeRateText from '$lib/components/ExchangeRateText.svelte';
 
 	interface Changer {
 		code: string;
@@ -90,7 +91,7 @@
 				.map((rate: any, index: number) => {
 					if (providers[rate.changer_code]) {
 						return {
-							'#': count += 1,
+							'#': (count += 1),
 							Provider: {
 								label: providers[rate.changer_code].name,
 								icon: [
@@ -157,8 +158,6 @@
 		filteredRates = filtered;
 	};
 
-	let readMoreRateDetails: boolean = false;
-
 	let highlightsLoading: boolean = false;
 	const getHighlights = async (pair: string): Promise<any> => {
 		try {
@@ -213,44 +212,14 @@
 		>
 	{/if}
 
-	<h1 class="text-2xl md:text-4xl mb-2 dark:text-gray-100">
-		Today's dollar to naira rates on exchanges
-	</h1>
-	<div class="text-gray-600 font-normal dark:text-gray-300 space-y-2">
-		<!-- <p>
-			Compare the prices of dollar to naira from {total} exchange providers.
-		</p> -->
-		<p>
-			The average rate for {getCurrencySymbol}1 is ₦{formatNumber(pair.price.current)}, compared
-			to ₦{formatNumber(pair.price_30d)} a month ago.
-			{#if !readMoreRateDetails}
-				<button
-					class="text-gray-400 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-300 mt-2 cursor-pointer"
-					on:click={() => (readMoreRateDetails = true)}>Read More</button
-				>
-			{/if}
-		</p>
-		{#if readMoreRateDetails}
-			<p in:slide={{ duration: 250 }} out:slide={{ duration: 250 }}>
-				Rates provided are for indicative and guidance purposes only. You need at least ₦{formatNumber(
-					(pair.price.current || 0) * 100
-				)} to get {getCurrencySymbol}100 now, and if you have $100 you can get ₦{formatNumber(pair.price.current * 100)} or less.
-			</p>
-			<p>
-				<strong>Buy rate:</strong> Used for changing {currencies['NGN'] ||
-					'NGN'} to {currencies[currency] || currency}.
-			</p>
-			<p>
-				<strong>Sell rate:</strong> Used for changing {currencies[
-					currency
-				] || currency} to {currencies['NGN'] || 'NGN'}. Tap on any provider for more details.
-			</p>
-							<button
-					class="text-gray-400 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-300 mt-2 cursor-pointer"
-					on:click={() => (readMoreRateDetails = false)}>Read Less</button
-				>
-		{/if}
-	</div>
+	<ExchangeRateText
+		title={`Today ${currencies[currency] || currency} to Naira rates on exchanges`}
+		data={{
+			currencies: currencies,
+			currency: { name: currency, symbol: getCurrencySymbol },
+			rate: { now: pair.price.current, last: pair.price_30d }
+		}}
+	/>
 
 	<!-- Highlight Toggle -->
 	<div class="flex justify-end items-center mb-6">

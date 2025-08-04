@@ -4,8 +4,8 @@
 	import AdBanner from '$lib/components/AdBanner.svelte';
 	import ExchangeFilter from '$lib/components/ExchangeFilter.svelte';
 	import Table from '$lib/components/Table.svelte';
-	import { slide } from 'svelte/transition';
 	import Notice from '$lib/components/Notice.svelte';
+	import ExchangeRateText from '$lib/components/ExchangeRateText.svelte';
 
 	interface Changer {
 		code: string;
@@ -70,7 +70,7 @@
 				.map((rate: any, index: number) => {
 					if (providers[rate.changer_code]) {
 						return {
-							'#': count += 1,
+							'#': (count += 1),
 							Provider: {
 								label: providers[rate.changer_code].name,
 								icon: [
@@ -137,8 +137,6 @@
 		filteredRates = filtered;
 	};
 
-	let readMoreRateDetails: boolean = false;
-
 	const handleFilterByCurrency = async (currency_: string) => {
 		currency = currency_;
 	};
@@ -146,14 +144,15 @@
 
 <svelte:head>
 	<title>{currencies[currency] || currency} to Naira Today - Bank Rates | Monierate</title>
-	
+
 	<meta
 		name="description"
-		content="Check the latest {currencies[currency] || currency} to Naira exchange rates from top Nigerian banks. Compare rates, convert currencies, and track updates in real time with Monierate."
+		content="Check the latest {currencies[currency] ||
+			currency} to Naira exchange rates from top Nigerian banks. Compare rates, convert currencies, and track updates in real time with Monierate."
 	/>
 
 	<meta property="og:type" content="website" />
-	
+
 	<meta
 		property="og:title"
 		content="{currencies[currency] || currency} to Naira - Live Bank Rates | Monierate"
@@ -161,9 +160,10 @@
 
 	<meta
 		property="og:description"
-		content="Get real-time {currencies[currency] || currency} to Naira exchange rates from Nigerian banks. Monitor bank and black market rates, convert dollars, and track crypto rates from Binance, Bybit, and more."
+		content="Get real-time {currencies[currency] ||
+			currency} to Naira exchange rates from Nigerian banks. Monitor bank and black market rates, convert dollars, and track crypto rates from Binance, Bybit, and more."
 	/>
-	
+
 	<meta property="og:url" content="https://monierate.com" />
 	<meta property="og:image" content="https://monierate.com/monierate-og-image.png" />
 </svelte:head>
@@ -180,36 +180,14 @@
 		>
 	{/if}
 
-	<h1 class="text-2xl md:text-4xl mb-2 dark:text-gray-100">
-		Today's {currencies[currency] || currency} to Naira Bank Exchange Rates
-	</h1>
-	<div class="text-gray-600 font-normal dark:text-gray-300 space-y-2">
-		<p>
-			The average bank rate for 💵 {getCurrencySymbol}1 is ₦{formatNumber(pair.price.current)},
-			compared to {getCurrencySymbol}{formatNumber(pair.price_90d)} three months ago.
-			{#if !readMoreRateDetails}
-				<button
-					class="text-gray-400 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-300 mt-2 cursor-pointer"
-					on:click={() => (readMoreRateDetails = true)}>Read More</button
-				>
-			{/if}
-		</p>
-		{#if readMoreRateDetails}
-			<p in:slide={{ duration: 250 }} out:slide={{ duration: 250 }}>
-				Rates provided are for indicative and guidance purposes only. You need ₦{formatNumber(
-					(pair.price.current || 0) * 100
-				)} to get {getCurrencySymbol}100 at banks now. Buying rate: Used for changing {currencies[
-					'NGN'
-				] || 'NGN'} to {currencies[currency] || currency}. Selling rate: Used for changing {currencies[
-					currency
-				] || currency} to {currencies['NGN'] || 'NGN'}. Tap on any company for more details.
-				<button
-					class="text-gray-400 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-300 mt-2 cursor-pointer"
-					on:click={() => (readMoreRateDetails = false)}>Read Less</button
-				>
-			</p>
-		{/if}
-	</div>
+	<ExchangeRateText
+		title={`${currencies[currency] || currency} to Naira rates Across Banks`}
+		data={{
+			currencies: currencies,
+			currency: { name: currency, symbol: getCurrencySymbol },
+			rate: { now: pair.price.current, last: pair.price_30d }
+		}}
+	/>
 </div>
 
 <div class="container px-0 mb-4">
