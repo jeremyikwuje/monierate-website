@@ -6,34 +6,17 @@ import currencies from '$data/currencies.json';
 
 type CurrencyMap = Record<string, string>;
 
-const getHighlights = async (fetch: typeof globalThis.fetch, pair: string): Promise<any> => {
-	try {
-		const res = await fetch('/api/highlights?max=5&pair=' + pair);
-		if (!res.ok) throw new Error(`Failed to fetch highlights: ${res.status}`);
-		return await res.json();
-	} catch (err) {
-		console.error('getHighlights error:', err);
-		return [];
-	}
-};
-
-export const load: PageServerLoad = async ({ fetch, url, parent, cookies }) => {
+export const load: PageServerLoad = async ({ fetch, url, parent }) => {
 	try {
 		const { VALID_CURRENCIES } = await parent();
 		const page = Number(url.searchParams.get('page') || '1');
 		const rawCurrency = (url.searchParams.get('currency') ?? 'USD').toUpperCase();
 		const isValidCurrency = (VALID_CURRENCIES as readonly string[]).includes(rawCurrency);
 		const currency = isValidCurrency ? (rawCurrency as string) : 'USD';
-		const pair = `${currency}NGN`.toLowerCase();
-		let showHighlights: boolean = true;
-		if (cookies.get('showHighlights')) {
-			showHighlights = cookies.get('showHighlights') === 'true';
-		}
 
 		// Fetch changers and rate data in parallel
-		const [rawProviders, highlights] = await Promise.all([
+		const [rawProviders] = await Promise.all([
 			get_changers(),
-			getHighlights(fetch, pair)
 		]);
 
 		if (!rawProviders || rawProviders.length === 0) {
@@ -47,15 +30,17 @@ export const load: PageServerLoad = async ({ fetch, url, parent, cookies }) => {
 		// Transform providers into key-value pair for easy lookup
 		const providers: Record<string, (typeof rawProviders)[0]> = {};
 		for (const provider of rawProviders) {
-			providers[provider.code] = provider;
-			try {
-				Object.keys(provider.pairs).forEach((pair) => {
-					if (!availablePairs.includes(pair)) {
-						availablePairs.push(pair);
-					}
-				});
-			} catch (err) {
-				console.error(err);
+			if(provider.changer_tags && provider.changer_tags.includes("bank")) {
+				providers[provider.code] = provider;
+				try {
+					Object.keys(provider.pairs).forEach((pair) => {
+						if (!availablePairs.includes(pair)) {
+							availablePairs.push(pair);
+						}
+					});
+				} catch (err) {
+					console.error(err);
+				}
 			}
 		}
 		const AVAILABLE_CURRENCIES = VALID_CURRENCIES.filter((currency) =>
@@ -74,10 +59,8 @@ export const load: PageServerLoad = async ({ fetch, url, parent, cookies }) => {
 			currency,
 			currencySymbols,
 			isValidCurrency,
-			highlights,
 			mergedCurrencies,
-			AVAILABLE_CURRENCIES,
-			showHighlights
+			AVAILABLE_CURRENCIES
 		};
 	} catch (err: any) {
 		console.error('Page load error:', err);
