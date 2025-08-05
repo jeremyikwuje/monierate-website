@@ -5,6 +5,7 @@
 	import HighlightCard from '$lib/components/HighlightCard.svelte';
 	import { slide } from 'svelte/transition';
 	import Notice from '$lib/components/Notice.svelte';
+	import MainFaq from '$lib/components/MainFAQ.svelte';
 
 	export let data;
 	const currencySymbols = data.currencySymbols as any;
@@ -155,3 +156,5 @@
 		{/if}
 	</div>
 </div>
+
+<MainFaq />
