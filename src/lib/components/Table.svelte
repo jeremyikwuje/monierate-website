@@ -220,7 +220,7 @@
 </script>
 
 <!-- TABLE -->
-<div class="container p-0" bind:this={content}>
+<div class="container p-0 w-full m-0 md:md:max-w-[1200px] md:m-auto" bind:this={content}>
 	<div class="overflow-x-auto bg-inherit dark:bg-gray-900/60">
 		<table class="text-sm text-gray-800 min-w-full table-auto">
 			<thead
