@@ -23,7 +23,7 @@
 	}
 
 	.animate-progress-bar {
-		animation: progress-bar 2s linear forwards;
+		animation: progress-bar 3s linear forwards;
 		transform-origin: left;
 	}
 </style>
