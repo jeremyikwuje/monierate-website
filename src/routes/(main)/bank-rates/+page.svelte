@@ -197,7 +197,6 @@
 		selectedCurrency={currency}
 		onChangeCurrency={handleFilterByCurrency}
 		selectedCategory="/bank-rates"
-		filteredCurrencies={data.AVAILABLE_CURRENCIES}
 	/>
 </div>
 

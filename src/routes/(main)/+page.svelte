@@ -322,7 +322,6 @@
 		onSearch={handleSearch}
 		selectedCurrency={currency}
 		onChangeCurrency={handleFilterByCurrency}
-		filteredCurrencies={data.AVAILABLE_CURRENCIES}
 	/>
 </div>
 

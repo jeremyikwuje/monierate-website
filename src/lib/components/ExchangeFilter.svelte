@@ -6,14 +6,10 @@
 	export let onSearch: (a: any) => void = () => {};
 	export let selectedCurrency = 'USD';
 	export let onChangeCurrency: (currency: any) => void = () => {};
-	export let filteredCurrencies: any[] = [];
 	export let selectedCategory = '/';
 	export let disableSearch: boolean = false;
 
 	let currencies = ['USD', 'USDT', 'BTC', 'EUR', 'GBP', 'CAD', 'USDC'];
-	if (filteredCurrencies.length > 0) {
-		currencies = filteredCurrencies.sort((a, b) => currencies.indexOf(a) - currencies.indexOf(b));
-	}
 
 	$: parseCurrencyInUrl =
 		selectedCurrency && selectedCurrency !== 'USD' ? `?currency=${selectedCurrency}` : '';

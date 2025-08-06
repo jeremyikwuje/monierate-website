@@ -196,7 +196,6 @@
 		selectedCurrency={currency}
 		onChangeCurrency={handleFilterByCurrency}
 		selectedCategory="/money-transfer-rate"
-		filteredCurrencies={data.AVAILABLE_CURRENCIES}
 	/>
 </div>
 
