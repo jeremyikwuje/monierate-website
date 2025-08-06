@@ -1,6 +1,7 @@
 <script lang="ts">
 	/** @type {import('./$types').PageData} */
 	import { friendlyDate, formatNumber, setCookie } from '$lib/functions';
+	import { beforeNavigate } from '$app/navigation';
 	import AdBanner from '$lib/components/AdBanner.svelte';
 	import ExchangeFilter from '$lib/components/ExchangeFilter.svelte';
 	import Table from '$lib/components/Table.svelte';
@@ -72,9 +73,11 @@
 
 	// Highlighting
 	let showHighlights = data.isMobile ? false : data.showHighlights;
+	let highlightsAnimationSpeed: number = 0;
 
 	function toggleHighlights(event: Event) {
 		let toggle = event.target as HTMLInputElement;
+		highlightsAnimationSpeed = 250;
 		if (toggle.checked) {
 			showHighlights = true;
 			if (!data.isMobile) {
@@ -189,6 +192,8 @@
 		sendingResult = highlights.sendingResult;
 		fundingResult = highlights.fundingResult;
 	};
+
+	beforeNavigate(() => (highlightsAnimationSpeed = 0));
 </script>
 
 <svelte:head>
@@ -256,8 +261,8 @@
 	{#if showHighlights}
 		<div
 			class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-8"
-			in:slide={{ duration: 250 }}
-			out:slide={{ duration: 250 }}
+			in:slide={{ duration: highlightsAnimationSpeed }}
+			out:slide={{ duration: highlightsAnimationSpeed }}
 		>
 			<!--New-->
 			{#if newResult}
