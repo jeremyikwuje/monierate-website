@@ -1,5 +1,7 @@
 <script lang="ts">
 	import { setUrlParam } from '$lib/functions';
+	import { goto } from '$app/navigation';
+
 	export let search: string = '';
 	export let onSearch: (a: any) => void = () => {};
 	export let selectedCurrency = 'USD';
@@ -15,6 +17,20 @@
 
 	$: parseCurrencyInUrl =
 		selectedCurrency && selectedCurrency !== 'USD' ? `?currency=${selectedCurrency}` : '';
+
+	function handleClick(event: MouseEvent) {
+		event.preventDefault();
+
+		// Get the link (href) from the clicked anchor
+		const target = event.currentTarget as HTMLAnchorElement;
+		const href = target.href;
+
+		// Convert full URL to relative path (optional)
+		const url = new URL(href);
+		const relativePath = url.pathname + url.search;
+
+		goto(relativePath, { noScroll: true, keepFocus: true });
+	}
 </script>
 
 <!-- Top Section: Currency Tabs + Search on desktop -->
@@ -65,6 +81,7 @@
 		<a
 			href="/{parseCurrencyInUrl}"
 			class={`category-link ${selectedCategory === '/' ? 'active' : 'normal'}`}
+			on:click={handleClick}
 		>
 			<i class="fa-solid fa-grip" />
 			All
@@ -73,6 +90,7 @@
 		<a
 			href="/highlights{parseCurrencyInUrl}"
 			class={`category-link ${selectedCategory === '/highlights' ? 'active' : 'normal'}`}
+			on:click={handleClick}
 		>
 			<i class="fa-solid fa-star" />
 			Highlights
@@ -81,6 +99,7 @@
 		<a
 			href="/bank-rates{parseCurrencyInUrl}"
 			class={`category-link ${selectedCategory === '/bank-rates' ? 'active' : 'normal'}`}
+			on:click={handleClick}
 		>
 			<i class="fa-solid fa-landmark" />
 			Banks
@@ -89,6 +108,7 @@
 		<a
 			href="/money-transfer-rate{parseCurrencyInUrl}"
 			class={`category-link ${selectedCategory === '/money-transfer-rate' ? 'active' : 'normal'}`}
+			on:click={handleClick}
 		>
 			<i class="fa-solid fa-dollar-sign" />
 			Money Transfer
@@ -97,6 +117,7 @@
 		<!-- <a
 			href="/crypto"
 			class={`category-link ${selectedCategory === '/crypto' ? 'active' : 'normal'}`}
+			on:click={handleClick}
 		>
 			<i class="fa-brands fa-bitcoin" />
 			Crypto
