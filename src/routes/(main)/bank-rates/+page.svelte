@@ -211,7 +211,7 @@
 		/>
 	{:else}
 		<div class="container text-center text-gray-600 dark:text-gray-300">
-			<p>No exchange providers found</p>
+			<p>No bank providers found</p>
 		</div>
 	{/if}
 
