@@ -196,7 +196,6 @@
 		selectedCurrency={currency}
 		onChangeCurrency={handleFilterByCurrency}
 		selectedCategory="/money-transfer-rate"
-		filteredCurrencies={data.AVAILABLE_CURRENCIES}
 	/>
 </div>
 
@@ -211,7 +210,7 @@
 		/>
 	{:else}
 		<div class="container text-center text-gray-600 dark:text-gray-300">
-			<p>No exchange providers found</p>
+			<p>No money transfer providers found</p>
 		</div>
 	{/if}
 
