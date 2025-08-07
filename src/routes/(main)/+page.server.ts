@@ -58,9 +58,6 @@ export const load: PageServerLoad = async ({ fetch, url, parent, cookies }) => {
 				console.error(err);
 			}
 		}
-		const AVAILABLE_CURRENCIES = VALID_CURRENCIES.filter((currency) =>
-			availablePairs.includes(`${currency}NGN`.toLowerCase())
-		);
 
 		const mergedCurrencies: CurrencyMap = {
 			...currencies.coins,
@@ -76,7 +73,6 @@ export const load: PageServerLoad = async ({ fetch, url, parent, cookies }) => {
 			isValidCurrency,
 			highlights,
 			mergedCurrencies,
-			AVAILABLE_CURRENCIES,
 			showHighlights
 		};
 	} catch (err: any) {
