@@ -22,7 +22,7 @@ interface ChangerRate {
 }
 
 const EXCLUDED = new Set(['market', 'binance', 'paypal']);
-const NEWEST = ['oneremit', 'breet', 'busha', 'spenda', 'ridima'];
+const NEWEST = ['nsave', 'oneremit', 'breet', 'busha', 'spenda'];
 
 const findBuyPlatforms = (
 	changers: Record<string, Changer>,
