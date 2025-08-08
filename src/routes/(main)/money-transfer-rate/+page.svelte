@@ -7,6 +7,7 @@
 	import Notice from '$lib/components/Notice.svelte';
 	import ExchangeRateText from '$lib/components/ExchangeRateText.svelte';
 	import MainFaq from '$lib/components/MainFAQ.svelte';
+	import Highlights from '$lib/components/Highlights.svelte';
 
 	interface Changer {
 		code: string;
@@ -138,8 +139,25 @@
 		filteredRates = filtered;
 	};
 
+	let highlights = data.highlights;
+	let highlightsLoading: boolean = false;
+	const getHighlights = async (pair: string): Promise<any> => {
+		try {
+			highlightsLoading = true;
+			const res = await fetch('/api/highlights?max=5&pair=' + pair);
+			if (!res.ok) throw new Error(`Failed to fetch highlights: ${res.status}`);
+			return await res.json();
+		} catch (err) {
+			console.error('getHighlights error:', err);
+			return [];
+		} finally {
+			highlightsLoading = false;
+		}
+	};
+
 	const handleFilterByCurrency = async (currency_: string) => {
 		currency = currency_;
+		highlights = await getHighlights(`${currency.toLowerCase()}ngn`);
 	};
 </script>
 
@@ -187,6 +205,14 @@
 			currency: { name: currency, symbol: getCurrencySymbol },
 			rate: { now: pair.price.current, last: pair.price_30d }
 		}}
+	/>
+
+	<Highlights
+		currency={{ code: currency, symbol: getCurrencySymbol }}
+		{highlights}
+		isMobile={data.isMobile}
+		showHighlightsDefault={data.showHighlights}
+		inProgress={highlightsLoading}
 	/>
 </div>
 
