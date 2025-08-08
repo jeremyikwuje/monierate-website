@@ -9,6 +9,7 @@
 	import { timezone } from '$lib/functions';
 	import { messageStore } from '$lib/notification';
 	import AdBanner from '$lib/components/AdBanner.svelte';
+	import LoadingIndicator from '$lib/components/LoadingIndicator.svelte';
 
 	let message: string | null = null;
 	messageStore.subscribe((value: any) => {
@@ -136,6 +137,8 @@
 	</script>
 	<script type="text/javascript" src="//resources.infolinks.com/js/infolinks_main.js"></script>
 </svelte:head>
+
+<LoadingIndicator />
 
 <!-- <div id="top-banner" tabindex="-1" class="fixed top-0 mb-8 start-0 z-50 flex justify-between w-full p-4"> -->
 

@@ -5,6 +5,9 @@ import { BANNER_COOKIE_PREFIX } from '$lib/stores/banner-store';
 
 export const load: LayoutServerLoad = async ({ request, cookies, fetch }) => {
 
+    const userAgent = request.headers.get('user-agent') || '';
+	const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(userAgent);
+
     const authToken = cookies.get('auth_token');
     const user = {
         isLoggedIn: false,
@@ -54,6 +57,8 @@ export const load: LayoutServerLoad = async ({ request, cookies, fetch }) => {
         selected_partner_top,
         user,
         bannerIndexes,
+        isMobile,
+        VALID_CURRENCIES,
     }
 
 };
@@ -148,3 +153,5 @@ const selectTopPartnerBanner = () => {
     const random_index = Math.floor(Math.random() * sponsored_partners.length);
     return sponsored_partners[random_index];
 }
+
+const VALID_CURRENCIES = ['USD', 'EUR', 'GBP', 'CAD', 'BTC', 'USDT', 'USDC'] as const;

@@ -14,8 +14,7 @@ function isAssetResponse(response) {
            contentType.includes('video/') ||
            contentType.includes('audio/') ||
            contentType.includes('text/css') ||
-           contentType.includes('font/') ||
-           contentType.includes('application/javascript');
+           contentType.includes('font/')
 }
 
 // Immediately delete all old caches on version change

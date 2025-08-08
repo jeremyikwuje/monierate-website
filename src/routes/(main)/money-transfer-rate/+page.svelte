@@ -1,12 +1,9 @@
 <script lang="ts">
 	/** @type {import('./$types').PageData} */
-	import { friendlyDate, formatNumber, setCookie } from '$lib/functions';
-	import { beforeNavigate } from '$app/navigation';
+	import { friendlyDate, formatNumber } from '$lib/functions';
 	import AdBanner from '$lib/components/AdBanner.svelte';
 	import ExchangeFilter from '$lib/components/ExchangeFilter.svelte';
 	import Table from '$lib/components/Table.svelte';
-	import HighlightCard from '$lib/components/HighlightCard.svelte';
-	import { slide } from 'svelte/transition';
 	import Notice from '$lib/components/Notice.svelte';
 	import ExchangeRateText from '$lib/components/ExchangeRateText.svelte';
 	import MainFaq from '$lib/components/MainFAQ.svelte';
@@ -63,33 +60,6 @@
 		const providerName = providers[rate.changer_code]?.name || '';
 		return providerName.toLowerCase().includes(searchTerm.toLowerCase());
 	});
-
-	const highlights = data.highlights;
-	let newResult = highlights.newResult;
-	let buyingResult = highlights.buyingResult;
-	let sellingResult = highlights.sellingResult;
-	let sendingResult = highlights.sendingResult;
-	let fundingResult = highlights.fundingResult;
-
-	// Highlighting
-	let showHighlights = data.isMobile ? false : data.showHighlights;
-	let highlightsAnimationSpeed: number = 0;
-
-	function toggleHighlights(event: Event) {
-		let toggle = event.target as HTMLInputElement;
-		highlightsAnimationSpeed = 250;
-		if (toggle.checked) {
-			showHighlights = true;
-			if (!data.isMobile) {
-				setCookie("showHighlights", "true", 30);
-			}
-		} else {
-			showHighlights = false;
-			if (!data.isMobile) {
-				setCookie("showHighlights", "false", 30);
-			}
-		}
-	}
 
 	let tableData: any = null;
 	let excludedPlatforms = ['market', 'binance'];
@@ -168,47 +138,33 @@
 		filteredRates = filtered;
 	};
 
-	let highlightsLoading: boolean = false;
-	const getHighlights = async (pair: string): Promise<any> => {
-		try {
-			highlightsLoading = true;
-			const res = await fetch('/api/highlights?max=5&pair=' + pair);
-			if (!res.ok) throw new Error(`Failed to fetch highlights: ${res.status}`);
-			return await res.json();
-		} catch (err) {
-			console.error('getHighlights error:', err);
-			return [];
-		} finally {
-			highlightsLoading = false;
-		}
-	};
-
 	const handleFilterByCurrency = async (currency_: string) => {
 		currency = currency_;
-		let highlights = await getHighlights(`${currency.toLowerCase()}ngn`);
-		newResult = highlights.newResult;
-		buyingResult = highlights.buyingResult;
-		sellingResult = highlights.sellingResult;
-		sendingResult = highlights.sendingResult;
-		fundingResult = highlights.fundingResult;
 	};
-
-	beforeNavigate(() => (highlightsAnimationSpeed = 0));
 </script>
 
 <svelte:head>
-	<title>Dollar to naira today black market | Monierate</title>
+	<title
+		>Send {currencies[currency] || currency} to Nigeria – Fast Money Transfers | Monierate</title
+	>
+
 	<meta
 		name="description"
-		content="Monierate offers reliable naira exchange rates from 40+ exchanges. Track rates, convert dollars, and get crypto price alerts from Binance, Bybit, etc."
+		content="Send {currencies[currency] ||
+			currency} to Naira securely and instantly. Compare real-time transfer rates, track conversions, and get the best payout with Monierate's money transfer tools."
 	/>
+
 	<meta property="og:type" content="website" />
-	<meta property="og:title" content="Naira exchange rates & converter | Monierate" />
+	<meta
+		property="og:title"
+		content="Send {currencies[currency] || currency} to Naira – Money Transfer Rates | Monierate"
+	/>
 	<meta
 		property="og:description"
-		content="Compare the naira exchange rates from over 16 exchanges in Nigeria. Track naira rates today. Convert dollar to naira using CBN and black market rate. Get price alert from your favourite crypto exchange such as Binance, Bybit, Quidax, etc."
+		content="Transfer {currencies[currency] ||
+			currency} to Naira with transparent, real-time rates. Compare providers, monitor fees, and get alerts to maximize value on every transfer."
 	/>
-	<meta property="og:url" content="monierate.com" />
+	<meta property="og:url" content="https://monierate.com" />
 	<meta property="og:image" content="https://monierate.com/monierate-og-image.png" />
 </svelte:head>
 
@@ -225,101 +181,13 @@
 	{/if}
 
 	<ExchangeRateText
-		title={`Today ${currencies[currency] || currency} to Naira rates on exchanges`}
+		title={`${currencies[currency] || currency} to Naira rates for sending to Nigeria`}
 		data={{
 			currencies: currencies,
 			currency: { name: currency, symbol: getCurrencySymbol },
 			rate: { now: pair.price.current, last: pair.price_30d }
 		}}
 	/>
-
-	<!-- Highlight Toggle -->
-	<div class="flex justify-end items-center mb-6">
-		{#if highlightsLoading}
-			<span class="mr-2 -mb-1">
-				<span
-					class="inline-block w-5 h-5 border-2 border-gray-300 border-t-gray-900 rounded-full animate-spin"
-				/>
-			</span>
-		{/if}
-		<label class="inline-flex items-center cursor-pointer">
-			<span class="mr-2 text-sm text-gray-600 dark:text-gray-400">Highlight</span>
-			<input
-				type="checkbox"
-				value=""
-				class="sr-only peer"
-				on:change={toggleHighlights}
-				bind:checked={showHighlights}
-				id="highlight-toggle"
-			/>
-			<div
-				class="relative w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"
-			/>
-		</label>
-	</div>
-
-	{#if showHighlights}
-		<div
-			class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-8"
-			in:slide={{ duration: highlightsAnimationSpeed }}
-			out:slide={{ duration: highlightsAnimationSpeed }}
-		>
-			<!--New-->
-			{#if newResult}
-				<HighlightCard
-					highlightData={newResult}
-					highlightType="auto"
-					title="🔥 New Listing"
-					currency={getCurrencySymbol}
-				/>
-			{/if}
-
-			<!--BUYING-->
-			{#if buyingResult}
-				<HighlightCard
-					highlightData={buyingResult}
-					highlightType="buy"
-					title="🔥 Best Buy Rate"
-					link="/buy/usd-with-ngn-best-buying-rate"
-					currency={getCurrencySymbol}
-				/>
-			{/if}
-
-			<!--SELLING-->
-			{#if sellingResult}
-				<HighlightCard
-					highlightData={sellingResult}
-					highlightType="sell"
-					title="🔥 Best Sell Rate"
-					link="/sell/usd-get-ngn-best-selling-rate"
-					currency={getCurrencySymbol}
-				/>
-			{/if}
-
-			<!--SENDING-->
-			{#if sendingResult}
-				<HighlightCard
-					highlightData={sendingResult}
-					highlightType="sell"
-					title="🔥 Best Sending Rate"
-					link="/send/usd-to-ng-best-rate"
-					currency={getCurrencySymbol}
-				/>
-			{/if}
-
-			<!--FUNDING-->
-			{#if fundingResult}
-				<HighlightCard
-					highlightData={fundingResult}
-					highlightType="buy"
-					title="🔥 Best Card Rate"
-					link="/card/usd-ngn-best-funding-rate"
-					mobileOnly={true}
-					currency={getCurrencySymbol}
-				/>
-			{/if}
-		</div>
-	{/if}
 </div>
 
 <div class="container px-0 mb-4">
@@ -327,6 +195,7 @@
 		onSearch={handleSearch}
 		selectedCurrency={currency}
 		onChangeCurrency={handleFilterByCurrency}
+		selectedCategory="/money-transfer-rate"
 	/>
 </div>
 
@@ -341,9 +210,9 @@
 		/>
 	{:else}
 		<div class="container text-center text-gray-600 dark:text-gray-300">
-			<p>No exchange providers found</p>
+			<p>No money transfer providers found</p>
 		</div>
 	{/if}
 
-    <MainFaq />
+	<MainFaq />
 </main>
