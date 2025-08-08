@@ -64,7 +64,7 @@ And with individual accounts on the way, you can will soon be able to move micro
 
 Getting started is as easy as ABC:
 
-1. **Create an Account**: Sign up at oneremit.co or download the app. Enter your email and a strong password to get started.
+1. **Create an Account**: Sign up at [oneremit.co](https://app.oneremit.co/signup) or download the app. Enter your email and a strong password to get started.
 2. **Verify Your Details**: Complete a quick identity verification to ensure compliance and security.
 3. **Start Your Transfer**: Choose the recipient’s country, select a delivery method (bank transfer, cash pickup, or mobile money), and specify the amount.
 4. **Enter Recipient Details**: Provide the recipient’s information based on the chosen method.
