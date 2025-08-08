@@ -118,7 +118,7 @@
 		changers: Record<string, Changer>,
 		rates: PairChanger[],
 		sortDesc: boolean | null,
-		useBuying = false
+		useBuying: boolean | null = null,
 	): ChangerRate[] {
 		let platformRates: ChangerRate[] = Object.entries(changers)
 			.map(([changer_code, changer]) => {
