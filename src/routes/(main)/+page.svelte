@@ -57,7 +57,7 @@
 	let searchTerm = '';
 	$: filteredRates = sortedFilteredRates.filter((rate: any) => {
 		const providerName = providers[rate.changer_code]?.name || '';
-		return providerName.toLowerCase().includes(searchTerm.toLowerCase());
+		return providers[rate.changer_code] && providerName.toLowerCase().includes(searchTerm.toLowerCase());
 	});
 
 	let originalFilteredRates: any[] | null = null;
