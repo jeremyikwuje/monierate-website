@@ -24,12 +24,23 @@ const timeoutFetch = async (req: Request, ms = NETWORK_TIMEOUT) => {
 	}
 };
 
-// Install — pre-cache app shell & static assets
 self.addEventListener('install', (event: ExtendableEvent) => {
 	event.waitUntil(
 		(async () => {
 			const cache = await caches.open(CACHE);
-			await cache.addAll(ASSETS);
+			for (const path of ASSETS) {
+				const url = new URL(path, self.location.origin).toString();
+				try {
+					const res = await fetch(url);
+					if (res.ok) {
+						await cache.put(url, res);
+					} else {
+						console.warn(`SW: Skipped caching ${url} (${res.status})`);
+					}
+				} catch (err) {
+					console.warn(`SW: Failed to cache ${url}`, err);
+				}
+			}
 		})()
 	);
 });
