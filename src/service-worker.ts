@@ -6,10 +6,8 @@ import { build, files, version } from '$service-worker';
 declare const self: ServiceWorkerGlobalScope;
 
 // Cache config
-const CACHE_VERSION = version;
-const CACHE = `cache-${CACHE_VERSION}`;
+const CACHE = `cache-${version}`;
 const NETWORK_TIMEOUT = 10000;
-const MAX_CACHE_AGE = 24 * 60 * 60 * 1000; // 24h
 const ASSETS = [...build, ...files];
 
 // Helpers
@@ -24,16 +22,6 @@ const timeoutFetch = async (req: Request, ms = NETWORK_TIMEOUT) => {
 		clearTimeout(timeout);
 		throw err;
 	}
-};
-
-const isFresh = (cached?: Response) => {
-	if (!cached) return false;
-	const dateHeader = cached.headers.get('date');
-	if (dateHeader) {
-		const age = Date.now() - new Date(dateHeader).getTime();
-		return age < MAX_CACHE_AGE;
-	}
-	return false;
 };
 
 // Install — pre-cache app shell & static assets
@@ -58,7 +46,7 @@ self.addEventListener('activate', (event: ExtendableEvent) => {
 	);
 });
 
-// Fetch — assets: cache-first; others: network-first with timeout & offline fallback
+// Fetch — assets: cache-first; API/other: network-first with offline fallback
 self.addEventListener('fetch', (event: FetchEvent) => {
 	if (event.request.method !== 'GET') return;
 
@@ -72,19 +60,15 @@ self.addEventListener('fetch', (event: FetchEvent) => {
 				return (await cache.match(url.pathname)) ?? fetch(event.request);
 			}
 
-			// Try network first with timeout
+			// Network-first for other requests (e.g., API)
 			try {
 				const res = await timeoutFetch(event.request);
 				if (res.ok) cache.put(event.request, res.clone());
 				return res;
 			} catch {
-				// Fallback to fresh cached response
+				// Fallback to cached if offline
 				const cached = await cache.match(event.request);
-				if (cached && isFresh(cached)) return cached;
-
-				// Or stale cached if no fresh one
 				if (cached) return cached;
-
 				return new Response('Offline', { status: 503 });
 			}
 		})()
