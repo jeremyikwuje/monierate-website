@@ -17,6 +17,8 @@ Established in 2025 Q1, Oneremit is a B2B cross-border payment platform built to
 
 At the time of this writing, 08 August 2025, below are the naira exchange rates of Oneremit:
 
+|    Currency     |    Rate    |
+| ------- | ------ |
 | **USD** | ₦1,535 |
 | **EUR** | ₦1,805 |
 | **GBP** | ₦2,110 |
