@@ -17,6 +17,8 @@ Established in 2025 Q1, Oneremit is a B2B cross-border payment platform built to
 
 At the time of this writing, 08 August 2025, below are the naira exchange rates of Oneremit:
 
+| Currency | Rate |
+| --- | --- |
 | **USD** | ₦1,535 |
 | **EUR** | ₦1,805 |
 | **GBP** | ₦2,110 |
@@ -29,19 +31,21 @@ I shouldn’t tell you they make it easy to send naira abroad, when over 50+ bus
 
 Whether you’re paying suppliers in China, settling tuition fees in Finland, or wiring funds to partners in Italy, Oneremit delivers speed, transparency, and competitive rates.
 
-## **Company Profile**
+## Company Profile
 
-| **Website** | [www.oneremit.co](http://www.oneremit.co) |
-| **Established** | 2025 |
-| **CEO** | Hammed Afenifere |
-| **Focus** | Simplifying cross-border payments for businesses |
-| **Mission** | Empower African businesses to thrive in the global economy with seamless, secure, and cost-effective international transactions |
-| **Key Market** | Nigeria, Africa |
-| **Industry** | Financial Technology, B2B Payments |
-| **Headquarters** | Lagos, Nigeria |
-| **Regulations** | Operates within Nigerian regulatory guidelines; registered as a Money Services Business (MSB) with FINTRAC (Canada, Registration No. C100000025) and FinCEN (U.S., Registration No. 31000297609625); partners with licensed U.S. financial institutions for remittance services |
-| **User Base** | Over 50 verified businesses |
-| **Additional Information** | OneRemit bridges the gap between African businesses and global markets, offering fast, transparent, and compliant cross-border payments in over 100 currencies, making it easier to pay suppliers, vendors, and partners worldwide. |
+| Attribute                  | Details                                                                                                                                                                                                                                                                       |
+| -------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Website**                | [www.oneremit.co](http://www.oneremit.co)                                                                                                                                                                                                                                       |
+| **Established**            | 2025                                                                                                                                                                                                                                                                            |
+| **CEO**                    | Hammed Afenifere                                                                                                                                                                                                                                                                |
+| **Focus**                  | Simplifying cross-border payments for businesses                                                                                                                                                                                                                                |
+| **Mission**                | Empower African businesses to thrive in the global economy with seamless, secure, and cost-effective international transactions                                                                                                                                                 |
+| **Key Market**             | Nigeria, Africa                                                                                                                                                                                                                                                                 |
+| **Industry**               | Financial Technology, B2B Payments                                                                                                                                                                                                                                              |
+| **Headquarters**           | Lagos, Nigeria                                                                                                                                                                                                                                                                  |
+| **Regulations**            | Operates within Nigerian regulatory guidelines; registered as a Money Services Business (MSB) with FINTRAC (Canada, Registration No. C100000025) and FinCEN (U.S., Registration No. 31000297609625); partners with licensed U.S. financial institutions for remittance services |
+| **User Base**              | Over 50 verified businesses                                                                                                                                                                                                                                                     |
+| **Additional Information** | OneRemit bridges the gap between African businesses and global markets, offering fast, transparent, and compliant cross-border payments in over 100 currencies, making it easier to pay suppliers, vendors, and partners worldwide.                                             |
 
 ## How Can Oneremit Benefit Your Business?
 
