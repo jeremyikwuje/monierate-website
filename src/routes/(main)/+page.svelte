@@ -1,15 +1,12 @@
 <script lang="ts">
 	/** @type {import('./$types').PageData} */
-	import { friendlyDate, formatNumber, setCookie } from '$lib/functions';
-	import { beforeNavigate } from '$app/navigation';
 	import AdBanner from '$lib/components/AdBanner.svelte';
 	import ExchangeFilter from '$lib/components/ExchangeFilter.svelte';
-	import Table from '$lib/components/Table.svelte';
-	import HighlightCard from '$lib/components/HighlightCard.svelte';
-	import { slide } from 'svelte/transition';
 	import Notice from '$lib/components/Notice.svelte';
 	import ExchangeRateText from '$lib/components/ExchangeRateText.svelte';
 	import MainFaq from '$lib/components/MainFAQ.svelte';
+	import Highlights from '$lib/components/Highlights.svelte';
+	import ExchangeRates from '$lib/components/ExchangeRates.svelte';
 
 	interface Changer {
 		code: string;
@@ -22,7 +19,6 @@
 	const currencySymbols = data.currencySymbols as any;
 	const currencies = data.mergedCurrencies as any;
 	const pairs = data.pairs || {};
-	let page = data.page;
 	$: currency = data.currency;
 	$: getCurrencySymbol = currencySymbols[currency] || currency;
 
@@ -61,87 +57,8 @@
 	let searchTerm = '';
 	$: filteredRates = sortedFilteredRates.filter((rate: any) => {
 		const providerName = providers[rate.changer_code]?.name || '';
-		return providerName.toLowerCase().includes(searchTerm.toLowerCase());
+		return providers[rate.changer_code] && providerName.toLowerCase().includes(searchTerm.toLowerCase());
 	});
-
-	const highlights = data.highlights;
-	let newResult = highlights.newResult;
-	let buyingResult = highlights.buyingResult;
-	let sellingResult = highlights.sellingResult;
-	let sendingResult = highlights.sendingResult;
-	let fundingResult = highlights.fundingResult;
-
-	// Highlighting
-	let showHighlights = data.isMobile ? false : data.showHighlights;
-	let highlightsAnimationSpeed: number = 0;
-
-	function toggleHighlights(event: Event) {
-		let toggle = event.target as HTMLInputElement;
-		highlightsAnimationSpeed = 250;
-		if (toggle.checked) {
-			showHighlights = true;
-			if (!data.isMobile) {
-				setCookie("showHighlights", "true", 30);
-			}
-		} else {
-			showHighlights = false;
-			if (!data.isMobile) {
-				setCookie("showHighlights", "false", 30);
-			}
-		}
-	}
-
-	let tableData: any = null;
-	let excludedPlatforms = ['market', 'binance'];
-	$: {
-		let count: number = 0;
-		if (filteredRates) {
-			let getFilteredRates = filteredRates
-				.filter((item: any) => !excludedPlatforms.includes(item.changer_code))
-				.map((rate: any, index: number) => {
-					if (providers[rate.changer_code]) {
-						return {
-							'#': (count += 1),
-							Provider: {
-								label: providers[rate.changer_code].name,
-								icon: [
-									`/icons/svg/${rate.changer_code}.svg`,
-									`/icons/svg/${rate.changer_code}.png`
-								],
-								link: `/converter/${rate.changer_code}?Amount=1&From=usd&To=ngn`
-							},
-							Buy: {
-								label:
-									rate.price_buy > 0
-										? `₦${formatNumber(rate.price_buy, 'en-US', { maximumFractionDigits: 0 })} ${
-												rate.price_change_percent_24hr !== 0 ? rate.price_change_percent_24hr : ''
-										  }`
-										: '-',
-								sub: `per ${currencySymbols[currency] || currency + ' '}1`
-							},
-							Sell: {
-								label:
-									rate.price_sell > 0
-										? `₦${formatNumber(rate.price_sell, 'en-US', { maximumFractionDigits: 0 })} ${
-												rate.price_change_percent_24hr !== 0 ? rate.price_change_percent_24hr : ''
-										  }`
-										: '-',
-								sub: `per ${currencySymbols[currency] || currency + ' '}1`
-							},
-							'Last updated': friendlyDate(rate.updated_at)
-						};
-					}
-				})
-				.filter(
-					(item: any) => item !== undefined && !excludedPlatforms.includes(item.changer_code)
-				);
-
-			tableData = {
-				head: ['#', 'Provider', 'Buy', 'Sell', 'Last updated'],
-				body: getFilteredRates
-			};
-		}
-	}
 
 	let originalFilteredRates: any[] | null = null;
 
@@ -168,6 +85,7 @@
 		filteredRates = filtered;
 	};
 
+	let highlights = data.highlights;
 	let highlightsLoading: boolean = false;
 	const getHighlights = async (pair: string): Promise<any> => {
 		try {
@@ -185,15 +103,8 @@
 
 	const handleFilterByCurrency = async (currency_: string) => {
 		currency = currency_;
-		let highlights = await getHighlights(`${currency.toLowerCase()}ngn`);
-		newResult = highlights.newResult;
-		buyingResult = highlights.buyingResult;
-		sellingResult = highlights.sellingResult;
-		sendingResult = highlights.sendingResult;
-		fundingResult = highlights.fundingResult;
+		highlights = await getHighlights(`${currency.toLowerCase()}ngn`);
 	};
-
-	beforeNavigate(() => (highlightsAnimationSpeed = 0));
 </script>
 
 <svelte:head>
@@ -233,93 +144,13 @@
 		}}
 	/>
 
-	<!-- Highlight Toggle -->
-	<div class="flex justify-end items-center mb-6">
-		{#if highlightsLoading}
-			<span class="mr-2 -mb-1">
-				<span
-					class="inline-block w-5 h-5 border-2 border-gray-300 border-t-gray-900 rounded-full animate-spin"
-				/>
-			</span>
-		{/if}
-		<label class="inline-flex items-center cursor-pointer">
-			<span class="mr-2 text-sm text-gray-600 dark:text-gray-400">Highlight</span>
-			<input
-				type="checkbox"
-				value=""
-				class="sr-only peer"
-				on:change={toggleHighlights}
-				bind:checked={showHighlights}
-				id="highlight-toggle"
-			/>
-			<div
-				class="relative w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"
-			/>
-		</label>
-	</div>
-
-	{#if showHighlights}
-		<div
-			class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-8"
-			in:slide={{ duration: highlightsAnimationSpeed }}
-			out:slide={{ duration: highlightsAnimationSpeed }}
-		>
-			<!--New-->
-			{#if newResult}
-				<HighlightCard
-					highlightData={newResult}
-					highlightType="auto"
-					title="🔥 New Listing"
-					currency={getCurrencySymbol}
-				/>
-			{/if}
-
-			<!--BUYING-->
-			{#if buyingResult}
-				<HighlightCard
-					highlightData={buyingResult}
-					highlightType="buy"
-					title="🔥 Best Buy Rate"
-					link="/buy/usd-with-ngn-best-buying-rate"
-					currency={getCurrencySymbol}
-				/>
-			{/if}
-
-			<!--SELLING-->
-			{#if sellingResult}
-				<HighlightCard
-					highlightData={sellingResult}
-					highlightType="sell"
-					title="🔥 Best Sell Rate"
-					link="/sell/usd-get-ngn-best-selling-rate"
-					currency={getCurrencySymbol}
-				/>
-			{/if}
-
-			<!--SENDING-->
-			{#if sendingResult}
-				<HighlightCard
-					highlightData={sendingResult}
-					highlightType="sell"
-					title="🔥 Best Sending Rate"
-					link="/send/usd-to-ng-best-rate"
-					currency={getCurrencySymbol}
-				/>
-			{/if}
-
-			<!--FUNDING-->
-			{#if fundingResult}
-				<HighlightCard
-					highlightData={fundingResult}
-					highlightType="buy"
-					title="🔥 Best Card Rate"
-					link="/card/usd-ngn-best-funding-rate"
-					mobileOnly={true}
-					currency={getCurrencySymbol}
-				/>
-			{/if}
-		</div>
-	{/if}
+	<Highlights
+		currency={{ code: currency, symbol: getCurrencySymbol }}
+		{highlights}
+		isMobile={data.isMobile}
+		showHighlightsDefault={data.showHighlights}
+		inProgress={highlightsLoading}
+	/>
 </div>
 
 <div class="container px-0 mb-4">
@@ -331,13 +162,15 @@
 </div>
 
 <main>
-	{#if tableData && tableData.body && tableData.body.length > 0}
-		<Table
-			{tableData}
-			shrinkFirstColumn={true}
-			sortBy={['Provider', 'Buy', 'Sell']}
-			pagination={true}
-			bind:currentPage={page}
+	{#if filteredRates && filteredRates.length > 0}
+		<ExchangeRates
+			data={{
+				rates: filteredRates,
+				providers,
+				currency,
+				currencySymbols
+			}}
+			bind:currentPage={data.page}
 		/>
 	{:else}
 		<div class="container text-center text-gray-600 dark:text-gray-300">
@@ -345,5 +178,5 @@
 		</div>
 	{/if}
 
-    <MainFaq />
+	<MainFaq />
 </main>

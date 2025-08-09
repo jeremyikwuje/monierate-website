@@ -76,7 +76,7 @@
 		document.addEventListener('click', handleClickOutside);
 	});
 
-	function breadcrumbs(paths, current) {
+	function breadcrumbs(paths: any, current: any) {
 		let url = '';
 		for (let i = 0; i < paths.length; i++) {
 			if (i > current) continue;

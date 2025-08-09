@@ -1,12 +1,12 @@
 <script lang="ts">
 	/** @type {import('./$types').PageData} */
-	import { friendlyDate, formatNumber } from '$lib/functions';
 	import AdBanner from '$lib/components/AdBanner.svelte';
 	import ExchangeFilter from '$lib/components/ExchangeFilter.svelte';
-	import Table from '$lib/components/Table.svelte';
 	import Notice from '$lib/components/Notice.svelte';
 	import ExchangeRateText from '$lib/components/ExchangeRateText.svelte';
 	import MainFaq from '$lib/components/MainFAQ.svelte';
+	import Highlights from '$lib/components/Highlights.svelte';
+	import ExchangeRates from '$lib/components/ExchangeRates.svelte';
 
 	interface Changer {
 		code: string;
@@ -19,7 +19,6 @@
 	const currencySymbols = data.currencySymbols as any;
 	const currencies = data.mergedCurrencies as any;
 	const pairs = data.pairs || {};
-	let page = data.page;
 	$: currency = data.currency;
 	$: getCurrencySymbol = currencySymbols[currency] || currency;
 
@@ -58,60 +57,9 @@
 	let searchTerm = '';
 	$: filteredRates = sortedFilteredRates.filter((rate: any) => {
 		const providerName = providers[rate.changer_code]?.name || '';
-		return providerName.toLowerCase().includes(searchTerm.toLowerCase());
+		return providers[rate.changer_code] && providerName.toLowerCase().includes(searchTerm.toLowerCase());
 	});
 
-	let tableData: any = null;
-	let excludedPlatforms = ['market', 'binance'];
-	$: {
-		let count: number = 0;
-		if (filteredRates) {
-			let getFilteredRates = filteredRates
-				.filter((item: any) => !excludedPlatforms.includes(item.changer_code))
-				.map((rate: any, index: number) => {
-					if (providers[rate.changer_code]) {
-						return {
-							'#': (count += 1),
-							Provider: {
-								label: providers[rate.changer_code].name,
-								icon: [
-									`/icons/svg/${rate.changer_code}.svg`,
-									`/icons/svg/${rate.changer_code}.png`
-								],
-								link: `/converter/${rate.changer_code}?Amount=1&From=usd&To=ngn`
-							},
-							Buy: {
-								label:
-									rate.price_buy > 0
-										? `₦${formatNumber(rate.price_buy, 'en-US', { maximumFractionDigits: 0 })} ${
-												rate.price_change_percent_24hr !== 0 ? rate.price_change_percent_24hr : ''
-										  }`
-										: '-',
-								sub: `per ${currencySymbols[currency] || currency + ' '}1`
-							},
-							Sell: {
-								label:
-									rate.price_sell > 0
-										? `₦${formatNumber(rate.price_sell, 'en-US', { maximumFractionDigits: 0 })} ${
-												rate.price_change_percent_24hr !== 0 ? rate.price_change_percent_24hr : ''
-										  }`
-										: '-',
-								sub: `per ${currencySymbols[currency] || currency + ' '}1`
-							},
-							'Last updated': friendlyDate(rate.updated_at)
-						};
-					}
-				})
-				.filter(
-					(item: any) => item !== undefined && !excludedPlatforms.includes(item.changer_code)
-				);
-
-			tableData = {
-				head: ['#', 'Provider', 'Buy', 'Sell', 'Last updated'],
-				body: getFilteredRates
-			};
-		}
-	}
 
 	let originalFilteredRates: any[] | null = null;
 
@@ -138,8 +86,25 @@
 		filteredRates = filtered;
 	};
 
+	let highlights = data.highlights;
+	let highlightsLoading: boolean = false;
+	const getHighlights = async (pair: string): Promise<any> => {
+		try {
+			highlightsLoading = true;
+			const res = await fetch('/api/highlights?max=5&pair=' + pair);
+			if (!res.ok) throw new Error(`Failed to fetch highlights: ${res.status}`);
+			return await res.json();
+		} catch (err) {
+			console.error('getHighlights error:', err);
+			return [];
+		} finally {
+			highlightsLoading = false;
+		}
+	};
+
 	const handleFilterByCurrency = async (currency_: string) => {
 		currency = currency_;
+		highlights = await getHighlights(`${currency.toLowerCase()}ngn`);
 	};
 </script>
 
@@ -189,6 +154,14 @@
 			rate: { now: pair.price.current, last: pair.price_30d }
 		}}
 	/>
+
+	<Highlights
+		currency={{ code: currency, symbol: getCurrencySymbol }}
+		{highlights}
+		isMobile={data.isMobile}
+		showHighlightsDefault={data.showHighlights}
+		inProgress={highlightsLoading}
+	/>
 </div>
 
 <div class="container px-0 mb-4">
@@ -201,13 +174,15 @@
 </div>
 
 <main>
-	{#if tableData && tableData.body && tableData.body.length > 0}
-		<Table
-			{tableData}
-			shrinkFirstColumn={true}
-			sortBy={['Provider', 'Buy', 'Sell']}
-			pagination={true}
-			bind:currentPage={page}
+	{#if filteredRates && filteredRates.length > 0}
+		<ExchangeRates
+			data={{
+				rates: filteredRates,
+				providers,
+				currency,
+				currencySymbols
+			}}
+			bind:currentPage={data.page}
 		/>
 	{:else}
 		<div class="container text-center text-gray-600 dark:text-gray-300">
