@@ -68,9 +68,9 @@ const findNewPlatforms = (
 			)
 			.map((r) => ({ rate: r, changer: changers[r.changer_code] }))
 			.sort((a, b) => {
-				const priceA = a.rate.price_buy > 0 ? a.rate.price_buy : a.rate.price_sell;
-				const priceB = b.rate.price_buy > 0 ? b.rate.price_buy : b.rate.price_sell;
-				return priceB - priceA; // highest first
+				const indexA = NEWEST.indexOf(a.rate.changer_code);
+				const indexB = NEWEST.indexOf(b.rate.changer_code);
+				return indexA - indexB; // follow NEWEST order
 			});
 	} catch (err) {
 		console.error('Error in findNewPlatforms:', err);
