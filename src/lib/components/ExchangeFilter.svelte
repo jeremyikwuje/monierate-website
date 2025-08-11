@@ -29,34 +29,81 @@
 		goto(relativePath, { noScroll: true, keepFocus: true });
 	}
 
-	let container: HTMLDivElement;
-	let showLeft: boolean = false;
-	let showRight: boolean = false;
+	let currencyTabContainer: HTMLDivElement;
+	let showCurrencyTabLeftScrollButton: boolean = false;
+	let showCurrencyTabRightScrollButton: boolean = false;
 
-	function checkScroll() {
-		if (!container) return;
+	function checkCurrencyTabScroll() {
+		if (!currencyTabContainer) return;
 
 		const tolerance = 1; // buffer for rounding errors
-		showLeft = container.scrollLeft > tolerance;
-		showRight = container.scrollLeft + container.clientWidth < container.scrollWidth - tolerance;
+		showCurrencyTabLeftScrollButton = currencyTabContainer.scrollLeft > tolerance;
+		showCurrencyTabRightScrollButton =
+			currencyTabContainer.scrollLeft + currencyTabContainer.clientWidth <
+			currencyTabContainer.scrollWidth - tolerance;
 	}
 
-	function scrollLeftBy(amount = 150) {
-		container.scrollBy({ left: -amount, behavior: 'smooth' });
+	function currencyTabScrollByLeft(amount = 150) {
+		currencyTabContainer.scrollBy({ left: -amount, behavior: 'smooth' });
 	}
 
-	function scrollRightBy(amount = 150) {
-		container.scrollBy({ left: amount, behavior: 'smooth' });
+	function currencyTabScrollByRight(amount = 150) {
+		currencyTabContainer.scrollBy({ left: amount, behavior: 'smooth' });
+	}
+
+	let categoryTabContainer: HTMLDivElement;
+	let showCategoryTabLeftScrollButton: boolean = false;
+	let showCategoryTabRightScrollButton: boolean = false;
+
+	function checkCategoryTabScroll() {
+		if (!categoryTabContainer) return;
+
+		const tolerance = 1; // buffer for rounding errors
+		showCategoryTabLeftScrollButton = categoryTabContainer.scrollLeft > tolerance;
+		showCategoryTabRightScrollButton =
+			categoryTabContainer.scrollLeft + categoryTabContainer.clientWidth <
+			categoryTabContainer.scrollWidth - tolerance;
+	}
+
+	function categoryTabScrollByLeft(amount = 150) {
+		categoryTabContainer.scrollBy({ left: -amount, behavior: 'smooth' });
+	}
+
+	function categoryTabScrollByRight(amount = 150) {
+		categoryTabContainer.scrollBy({ left: amount, behavior: 'smooth' });
 	}
 
 	onMount(() => {
-		checkScroll();
-		container.addEventListener('scroll', checkScroll);
-		window.addEventListener('resize', checkScroll);
+		try {
+			checkCurrencyTabScroll();
+			currencyTabContainer.addEventListener('scroll', checkCurrencyTabScroll);
+			window.addEventListener('resize', checkCurrencyTabScroll);
+		} catch (error) {
+			console.error('Error setting up scroll listeners:', error);
+		}
+
+		try {
+			checkCategoryTabScroll();
+			categoryTabContainer.addEventListener('scroll', checkCategoryTabScroll);
+			window.addEventListener('resize', checkCategoryTabScroll);
+		} catch (error) {
+			console.error('Error setting up scroll listeners:', error);
+		}
 
 		return () => {
-			container.removeEventListener('scroll', checkScroll);
-			window.removeEventListener('resize', checkScroll);
+			try {
+				currencyTabContainer.removeEventListener('scroll', checkCurrencyTabScroll);
+				window.removeEventListener('resize', checkCurrencyTabScroll);
+			} catch (error) {
+				console.error('Error removing scroll listeners:', error);
+			}
+
+			try {
+				categoryTabContainer.removeEventListener('scroll', checkCategoryTabScroll);
+				window.removeEventListener('resize', checkCategoryTabScroll);
+			} catch (error) {
+				console.error('Error removing scroll listeners:', error);
+			}
 		};
 	});
 </script>
@@ -65,20 +112,20 @@
 <div class="flex flex-col md:flex-row md:justify-between md:items-center gap-4">
 	<!-- Currency Tabs (scrollable) -->
 	<div class="relative">
-		{#if showLeft}
+		{#if showCurrencyTabLeftScrollButton}
 			<span
 				class="absolute -left-1 top-1/2 -translate-y-1/2 h-full pl-2 pr-4 bg-gradient-to-r from-white to-white/10 dark:from-gray-800 dark:to-gray-800/10 z-2"
 			>
 				<button
 					class="relative -top-1 w-10 h-10 flex items-center justify-center border border-gray-300 dark:border-gray-700 rounded-full bg-white/80 dark:bg-gray-800/80"
-					on:click={() => scrollLeftBy()}
+					on:click={() => currencyTabScrollByLeft()}
 				>
 					<i class="fa-solid fa-chevron-left text-gray-700 dark:text-gray-200" />
 				</button>
 			</span>
 		{/if}
 
-		<div bind:this={container} class="overflow-x-auto no-scrollbar scroll-smooth">
+		<div bind:this={currencyTabContainer} class="overflow-x-auto no-scrollbar scroll-smooth">
 			<div class="flex flex-nowrap gap-2 bg-gray-100 dark:bg-gray-900 rounded-md p-1 min-w-max">
 				{#each currencies as currency}
 					<button
@@ -99,13 +146,13 @@
 			</div>
 		</div>
 
-		{#if showRight}
+		{#if showCurrencyTabRightScrollButton}
 			<span
 				class="absolute -right-1 top-1/2 -translate-y-1/2 h-full pl-4 pr-2 bg-gradient-to-l from-white to-white/10 dark:from-gray-800 dark:to-gray-800/10 z-2"
 			>
 				<button
 					class="relative -top-1 w-10 h-10 flex items-center justify-center border border-gray-300 dark:border-gray-700 rounded-full bg-white/80 dark:bg-gray-800/80"
-					on:click={() => scrollRightBy()}
+					on:click={() => currencyTabScrollByRight()}
 				>
 					<i class="fa-solid fa-chevron-right text-gray-700 dark:text-gray-200" />
 				</button>
@@ -132,45 +179,62 @@
 </div>
 
 <!-- Category Tabs -->
-<div class="overflow-x-auto no-scrollbar mt-4 border-b border-gray-200 dark:border-gray-700 pb-2">
-	<div class="flex flex-nowrap gap-4 min-w-max px-1">
-		<a
-			href="/{parseCurrencyInUrl}"
-			class={`category-link ${selectedCategory === '/' ? 'active' : 'normal'}`}
-			on:click={handleClick}
+<div class="relative">
+	{#if showCategoryTabLeftScrollButton}
+		<span
+			class="absolute -left-1 top-1/2 -translate-y-1/2 h-full pl-2 pr-4 bg-gradient-to-r from-white to-white/10 dark:from-gray-800 dark:to-gray-800/10 z-2"
 		>
-			<i class="fa-solid fa-grip" />
-			All
-		</a>
+			<button
+				class="relative -top-1 w-10 h-10 flex items-center justify-center border border-gray-300 dark:border-gray-700 rounded-full bg-white/80 dark:bg-gray-800/80"
+				on:click={() => categoryTabScrollByLeft()}
+			>
+				<i class="fa-solid fa-chevron-left text-gray-700 dark:text-gray-200" />
+			</button>
+		</span>
+	{/if}
 
-		<a
-			href="/highlights{parseCurrencyInUrl}"
-			class={`category-link ${selectedCategory === '/highlights' ? 'active' : 'normal'}`}
-			on:click={handleClick}
-		>
-			<i class="fa-solid fa-star" />
-			Highlights
-		</a>
+	<div
+		class="overflow-x-auto no-scrollbar mt-4 border-b border-gray-200 dark:border-gray-700 pb-2"
+		bind:this={categoryTabContainer}
+	>
+		<div class="flex flex-nowrap gap-4 min-w-max px-1">
+			<a
+				href="/{parseCurrencyInUrl}"
+				class={`category-link ${selectedCategory === '/' ? 'active' : 'normal'}`}
+				on:click={handleClick}
+			>
+				<i class="fa-solid fa-grip" />
+				All
+			</a>
 
-		<a
-			href="/bank-rates{parseCurrencyInUrl}"
-			class={`category-link ${selectedCategory === '/bank-rates' ? 'active' : 'normal'}`}
-			on:click={handleClick}
-		>
-			<i class="fa-solid fa-landmark" />
-			Banks
-		</a>
+			<a
+				href="/highlights{parseCurrencyInUrl}"
+				class={`category-link ${selectedCategory === '/highlights' ? 'active' : 'normal'}`}
+				on:click={handleClick}
+			>
+				<i class="fa-solid fa-star" />
+				Highlights
+			</a>
 
-		<a
-			href="/money-transfer-rate{parseCurrencyInUrl}"
-			class={`category-link ${selectedCategory === '/money-transfer-rate' ? 'active' : 'normal'}`}
-			on:click={handleClick}
-		>
-			<i class="fa-solid fa-dollar-sign" />
-			Money Transfer
-		</a>
+			<a
+				href="/bank-rates{parseCurrencyInUrl}"
+				class={`category-link ${selectedCategory === '/bank-rates' ? 'active' : 'normal'}`}
+				on:click={handleClick}
+			>
+				<i class="fa-solid fa-landmark" />
+				Banks
+			</a>
 
-		<!-- <a
+			<a
+				href="/money-transfer-rate{parseCurrencyInUrl}"
+				class={`category-link ${selectedCategory === '/money-transfer-rate' ? 'active' : 'normal'}`}
+				on:click={handleClick}
+			>
+				<i class="fa-solid fa-dollar-sign" />
+				Money Transfer
+			</a>
+
+			<!-- <a
 			href="/crypto"
 			class={`category-link ${selectedCategory === '/crypto' ? 'active' : 'normal'}`}
 			on:click={handleClick}
@@ -178,7 +242,21 @@
 			<i class="fa-brands fa-bitcoin" />
 			Crypto
 		</a> -->
+		</div>
 	</div>
+
+	{#if showCategoryTabRightScrollButton}
+		<span
+			class="absolute -right-1 top-1/2 -translate-y-1/2 h-full pl-4 pr-2 bg-gradient-to-l from-white to-white/10 dark:from-gray-800 dark:to-gray-800/10 z-2"
+		>
+			<button
+				class="relative -top-1 w-10 h-10 flex items-center justify-center border border-gray-300 dark:border-gray-700 rounded-full bg-white/80 dark:bg-gray-800/80"
+				on:click={() => categoryTabScrollByRight()}
+			>
+				<i class="fa-solid fa-chevron-right text-gray-700 dark:text-gray-200" />
+			</button>
+		</span>
+	{/if}
 </div>
 
 {#if !disableSearch}
