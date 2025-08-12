@@ -14,7 +14,6 @@ author: Monierate Editorial Team
 Imagine walking into a large space buzzing with 126 developers, the air thick with coffee, ambition, and the hum of laptops.
 
 - It’s not just a conference—it’s a reunion of strangers turned family, united by a shared mission to reshape Africa’s financial future.
-
 - From **July 22nd to 25th**, the Bitnob Dev Gathering in Uganda wasn’t your typical tech meetup.
 
 **It was a four-day whirlwind of ideas,** code, and audacious dreams that dared developers to outbuild borders, currencies, and even governments.
@@ -28,7 +27,6 @@ If you missed it, buckle up—we did a recap.
 Nonso Amadi took the stage **like a preacher of possibility**, 
 
 - Breaking down Bitcoin and USDT with zero fluff. 
-
 - Forget cryptic crypto jargon—these are tools for real problems: cross-border payments that don’t take hours, savings that don’t vanish with inflation, transfers that hit in minutes. 
 
 **“Bitcoin is the backbone; USDT is the shield,”** he said, 
@@ -40,11 +38,8 @@ By lunch, developers weren’t just scribbling notes—they were sketching solut
 ![A female attendee at the Bitnob Developer Event in Kampala 2025 Whispering to a male attendee sitting next to her](https://ik.imagekit.io/monierate/Blog/bitnob-developer-event-uganda-female-developer-whispering-to-her-neigbour.jpg)
 
 - A fintech engineer from Kampala whispered to another dev, “I’m thinking of building something with this _today_.” 
-
 - The vibe? Electric. 
-
-- The mission? Clear: **Use these networks to solve problems _now_**.
-
+- The mission? Clear: **Use these networks to solve problems&#32;_now_**.
 
 ## Day 2: Bitnob API—Your Fintech Rocket Fuel
 
@@ -53,7 +48,6 @@ By lunch, developers weren’t just scribbling notes—they were sketching solut
 If Day 1 lit the spark, Day 2 was a rocket launch.
 
 - Samuel Kayandra, the API guru, played pilot, guiding the crowd through Bitnob’s API like a tour of a spaceship’s cockpit.
-
 - From payments to remittances to merchant solutions, he demoed how to build scalable fintech products with just a few lines of code.
 
 Developers fired up Postman, their fingers itching to hack. **One attendee, a self-taught leet coder** from Jinja, grinned: “I didn’t know one could build _this things_ in a few days.”
@@ -63,8 +57,7 @@ Developers fired up Postman, their fingers itching to hack. **One attendee, a se
 The session wasn’t just a tutorial—it was a challenge.
 
 - “What’s stopping you?” Samuel asked.
-
-* Nothing.
+- Nothing.
 
 By the end, half the room was dreaming up modern alternatives to M-Pesa & PayPal for international payments.
 
@@ -75,9 +68,7 @@ By the end, half the room was dreaming up modern alternatives to M-Pesa & PayPal
 Day 3 was where talk became action. 
 
 - Seventeen teams, fueled by ambition and big ideas, dove into a hackathon to build solutions for Africa’s toughest challenges using Bitnob’s API.
-
 - Mentors roamed, nudging teams to think on scale, user experience, and impact.
-
 - All hands on keys. No one asked: Can you see my screen?
 
 ![Four females attendees at the Bitnob Developer Event in Uganda 2025 staring on  a computer screen](https://ik.imagekit.io/monierate/Blog/bitnob-uganda-event-2025-kampala-four-females-developers.jpg)
@@ -91,27 +82,22 @@ One team built a tool to make sending money to Uganda as easy as sending a Whats
 Picture the tension of a Champions League final, but with laptops instead of soccer balls. 
 
 - Day 4 was the grand finale.
-
 - Each team had five minutes to pitch their prototype to judges who cared more about impact.
-
 - Storytelling was key—many could build, but who could sell the vision?
 
 Three projects stole the show:
 
 - **Save Sente** (1st Place): A savings app that converts mobile money to USDT in a snap, protecting Ugandans from currency swings as easily as topping up airtime. The crowd roared.
-
 - **NovaSwap** (1st Runner-up): A WooCommerce plugin that enables any small business to accept Bitcoin and USDT payments, powered by Bitnob’s Lightning and stablecoin tech. Shop owners, take note.
-
 - **Mpola Pay** (2nd Runner-up): A “set it and forget it” payment scheduler for bills, subscriptions, and P2P transfers. Automation never looked so good.
 
 The applause wasn’t polite—it was thunderous. These weren’t just prototypes; they were glimpses of Africa’s fintech future, built in less than _24 hours_.
-
 
 ## The Takeaway: More Than Code
 
 ![Group photo of Attendees at the Bitnob Developer Event in Uganda 2025](https://ik.imagekit.io/monierate/Blog/bitnob-developer-event-uganda-attendee-full-photos.jpg)
 
-Over 100 developers left Uganda with more than swag bags—they carried tools to weave stablecoins into Africa’s financial fabric. 
+Over 100 developers left the 4-day hackerspace with more than swag bags—they carried tools to weave stablecoins into Africa’s financial fabric. 
 
 They’re now armed to build apps that solve real problems, fast. 
 
