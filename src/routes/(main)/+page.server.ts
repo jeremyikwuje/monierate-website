@@ -25,6 +25,7 @@ export const load: PageServerLoad = async ({ fetch, url, parent, cookies }) => {
 		const isValidCurrency = (VALID_CURRENCIES as readonly string[]).includes(rawCurrency);
 		const currency = isValidCurrency ? (rawCurrency as string) : 'USD';
 		const pair = `${currency}NGN`.toLowerCase();
+
 		let showHighlights: boolean = true;
 		if (cookies.get('showHighlights')) {
 			showHighlights = cookies.get('showHighlights') === 'true';
@@ -47,13 +48,18 @@ export const load: PageServerLoad = async ({ fetch, url, parent, cookies }) => {
 		// Transform providers into key-value pair for easy lookup
 		const providers: Record<string, (typeof rawProviders)[0]> = {};
 		for (const provider of rawProviders) {
+			if (provider.changer_tags && provider.changer_tags.includes('bank')) {
+				continue;
+			}
 			providers[provider.code] = provider;
 			try {
-				Object.keys(provider.pairs).forEach((pair) => {
-					if (!availablePairs.includes(pair)) {
-						availablePairs.push(pair);
-					}
-				});
+				if (provider.pairs) {
+					Object.keys(provider.pairs).forEach((pair) => {
+						if (!availablePairs.includes(pair)) {
+							availablePairs.push(pair);
+						}
+					});
+				}
 			} catch (err) {
 				console.error(err);
 			}
