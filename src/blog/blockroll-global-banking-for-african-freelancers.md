@@ -23,9 +23,7 @@ The [USDC to Naira](https://monierate.com/converter/blockroll/?Amount=1\&From=us
 
 Based on Public Information:
 
-|  |  |
-| --- | --- |
-| **Website** | www\\.blockroll.app |
+| **Website** | www.blockroll.app |
 | **Lauched** | March, 2024 |
 | **Founders & Core Team** | Sadiq Isiak, Stephen Adeyemo, Emmanuel Nwaka |
 | **Focus** | Payments, Payroll, and Digital Wallets for African freelancers, businesses, and remote teams. |
