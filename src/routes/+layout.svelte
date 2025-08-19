@@ -105,6 +105,10 @@
 
 	/*
 	 * this code is to remove the old service worker from users browser since we moved to sveltekit's built in service worker support.
+	 * This is a one-time operation and should be removed after the old service worker is unregistered.
+	 * This code should be removed in 60 days.
+	 * Start date: 19th May, 2025 (Tuesday).
+	 * End date: July 18, 2025 (Friday).
 	 */
 	if ('serviceWorker' in navigator) {
 		navigator.serviceWorker.getRegistrations().then((registrations) => {
