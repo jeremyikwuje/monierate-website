@@ -500,8 +500,8 @@
 					>
 				</li>
 				<li>
-					<a data-sveltekit-reload href="/converter/klasha?Amount=1&From=USD&To=NGN"
-						>Convert USD on Klasha</a
+					<a data-sveltekit-reload href="/converter/boundlesspay?Amount=1&From=USDT&To=NGN"
+						>Convert USDT on Boundlesspay</a
 					>
 				</li>
 				<li>
