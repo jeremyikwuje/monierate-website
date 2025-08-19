@@ -102,6 +102,23 @@
 	} catch (error) {
 		console.log(error);
 	}
+
+	/*
+	 * this code is to remove the old service worker from users browser since we moved to sveltekit's built in service worker support.
+	 */
+	if ('serviceWorker' in navigator) {
+		navigator.serviceWorker.getRegistrations().then((registrations) => {
+			for (const registration of registrations) {
+				if (registration.active?.scriptURL.includes('/sw.js')) {
+					registration.unregister().then((success) => {
+						if (success) {
+							console.log('✅ Unregistered old service worker: /sw.js');
+						}
+					});
+				}
+			}
+		});
+	}
 </script>
 
 <svelte:head>
