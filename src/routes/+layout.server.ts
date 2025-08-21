@@ -133,13 +133,13 @@ const sponsored_partners = [
         brand: 'Cedar Money',
         cta: 'Start Sending'
     },
-    {
-        image: 'https://bit.ly/3svJGhQ',
-        text: 'Sell your crypto for Naira',
-        link: 'https://tinyurl.com/koyn-top-sponsored-link',
-        brand: 'Koyn',
-        cta: 'Sell Crypto'
-    },
+    // {
+    //     image: 'https://bit.ly/3svJGhQ',
+    //     text: 'Sell your crypto for Naira',
+    //     link: 'https://tinyurl.com/koyn-top-sponsored-link',
+    //     brand: 'Koyn',
+    //     cta: 'Sell Crypto'
+    // },
     {
         image: 'https://bit.ly/3svJGhQ',
         text: 'Send Naira payments to your suppliers abroad',
