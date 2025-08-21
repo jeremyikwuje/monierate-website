@@ -128,7 +128,7 @@ const getPairs = async () => {
 const sponsored_partners = [
     {
         image: 'https://bit.ly/3svJGhQ',
-        text: 'Send & Receive Cross-border Payments Globally.',
+        text: 'Send Bulk Naira payments accross borders.',
         link: 'https://tinyurl.com/cedar-get-alert-link',
         brand: 'Cedar Money',
         cta: 'Start Sending'
@@ -142,7 +142,7 @@ const sponsored_partners = [
     },
     {
         image: 'https://bit.ly/3svJGhQ',
-        text: 'Send & Receive Cross-border Payments Globally.',
+        text: 'Send Naira payments to your suppliers abroad',
         link: 'https://tinyurl.com/cedar-get-alert-link',
         brand: 'Cedar Money',
         cta: 'Start Sending'
