@@ -15,7 +15,7 @@ Blockroll was recently listed on Monierate, which means as a professional, freel
 
 Blockroll is a multi-currency payment and remittance solution built to empower Africans in the global economy, allowing you to receive international payments, hold and swap between local and foreign currencies (including stablecoins like USDC and USDT), issue invoices, manage expenses, and even pay bills, all from a single app.
 
-With the latest version launched in June and July 2025 or just 2 months ago, Blockroll is already making headway in Africa, especially in Nigeria, with over 1,000 users, with plans to expand across the continent, including Kenya.
+With the latest version launched in July 2025, just 2 months ago, Blockroll is already making headway in Africa, especially in Nigeria, with over 1,000 users, with plans to expand across the continent, including Kenya.
 
 The [USDC to Naira](https://monierate.com/converter/blockroll/?Amount=1&From=usd&To=ngn) rate of Blockroll as of this writing is N1,561, which is relatively better than what you get out there without risking your USDC in the peer-to-peer market.
 
@@ -26,10 +26,12 @@ The [USDC to Naira](https://monierate.com/converter/blockroll/?Amount=1&From=usd
 | **Website**                    | www\.blockroll.app                                                                                                                              |
 | **Launched**                   | March, 2024                                                                                                                                     |
 | **Founders & Core Team**       | Sadiq Isiak, Stephen Adeyemo                                                                                                                   |
-| **Focus**                      | Payments, Remittance, and Digital Wallets for African freelancers, businesses, and remote teams.                                                |
+| **Focus**                      | Payments, Payroll, and Digital Wallets for African freelancers, businesses, and remote teams.                                                |
 | **Mission**                    | To provide the global workforce with seamless, secure, and innovative solutions that empower them to move work forward, starting with Africans. |
 | **Target Markets**             | Nigeria, broader Africa, and global clients are paying African workers.                                                                         |
 | **Industry**                   | Financial Services / Fintech / Web3 Payments/ Gig economy.                                                                                      |
+| **Recognition & Partnerships** | Toronet Incubation Program, Circle’s USDC Grant Program, Remove Remove Add Lisk x CV Labs Incubation.  
+
 | **Recognition & Partnerships** | Toronet Incubation Program, Circle’s USDC Grant Program, Remove Remove Add Lisk x CV Labs Incubation.  
 
 | **Recognition & Partnerships** | Toronet Incubation Program, Circle’s USDC Grant Program, Remove Remove Add Lisk x CV Labs Incubation.  
@@ -40,7 +42,7 @@ Blockroll offers a suite of tools for you to tap into the global finance, and he
 
 -   Multi-Currency Wallet: Hold NGN, USD, EUR, USDC, USDT in one secure wallet.
     
--   Instant Global Payments: Receive payments from anywhere in the world and convert instantly to your preferred currency, plus for free or zero fees for stablecoins transactions.
+-   Instant Global Payments: Receive payments from anywhere in the world and convert instantly to your preferred currency, plus for free or zero fees for stablecoin transactions.
     
 -   Virtual USD Card: Pay for online services and subscriptions in USD or USDC without high conversion fees.
     
