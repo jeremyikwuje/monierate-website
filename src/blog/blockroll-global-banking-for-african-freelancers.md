@@ -11,7 +11,6 @@ author: Monierate Editorial Team
 ---
 ![Blockroll: Banking for African Freelancers](https://ik.imagekit.io/monierate/Blog/product/block-roll-banking-for-africans.webp?updatedAt=1755471601210)
 
-
 Blockroll was recently listed on Monierate, which means as a professional, freelancer, creator and individual, you can now stay up to date with the Blockroll exchange rate on our platform.
 
 Blockroll is a multi-currency payment and remittance solution built to empower Africans in the global economy, allowing you to receive international payments, hold and swap between local and foreign currencies (including stablecoins like USDC and USDT), issue invoices, manage expenses, and even pay bills, all from a single app.
@@ -23,14 +22,16 @@ The [USDC to Naira](https://monierate.com/converter/blockroll/?Amount=1&From=usd
 ## Company Profile (Based on Public Information)
 
 | |                                |                                                                                                                                                 
-| ------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Website**                    | www\.blockroll.app                                                                                                                              |
-| **Launched**                   | March, 2024                                                                                                                                     |
-| **Founders & Core Team**       | Sadiq Isiaka, Stephen Adeyemo                                                                                                                   |
-| **Focus**                      | Payments, Remittance, and Digital Wallets for African freelancers, businesses, and remote teams.                                                |
-| **Mission**                    | To provide the global workforce with seamless, secure, and innovative solutions that empower them to move work forward, starting with Africans. |
-| **Target Markets**             | Nigeria, broader Africa, and global clients are paying African workers.                                                                         |
-| **Industry**                   | Financial Services / Fintech / Web3 Payments/ Gig economy.                                                                                      |
+
+
+| **Website** | www\\.blockroll.app |
+| **Launched** | March, 2024 |
+| **Founders & Core Team** | Sadiq Isiak, Stephen Adeyemo |
+| **Focus** | Payments, Remittance, and Digital Wallets for African freelancers, businesses, and remote teams. |
+| **Mission** | To provide the global workforce with seamless, secure, and innovative solutions that empower them to move work forward, starting with Africans. |
+| **Target Markets** | Nigeria, broader Africa, and global clients are paying African workers. |
+| **Industry** | Financial Services / Fintech / Web3 Payments/ Gig economy. |
+
 | **Recognition & Partnerships** | Toronet Incubation Program, Circle’s USDC Grant Program, Remove Remove Add Lisk x CV Labs Incubation.  
 
 ## How can Blockroll benefit you?
