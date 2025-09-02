@@ -1,14 +1,12 @@
 {
 	"footer": {
 		"name": "",
-		"url": "https://tinyurl.com/cedar-monierate-banner",
-		"image": "/media/banners/cedar-home.avif",
-		"formats": ["avif", "gif"],
-		"label": "Cedar",
+		"url": "https://tinyurl.com/2xr8ysdd",
+		"image": "/media/banners/oneremit-landscape.webp",
+		"formats": ["webp", "png"],
+		"label": "Oneremit",
 		"mobile_only": false,
 		"disabled": false,
-		"width": "600px",
-		"height": "150px",
 		"_v": 1
 	},
 	"blog": [
@@ -45,36 +43,32 @@
 	],
 	"home": {
 		"name": "",
-		"url": "https://tinyurl.com/ipay-btc-signup-link",
-		"image": "/media/banners/ipaybtc-home-2.gif",
-		"formats": ["gif", "avif"],
-		"label": "iPayBTC",
+		"url": "https://tinyurl.com/2xr8ysdd",
+		"image": "/media/banners/oneremit-landscape.webp",
+		"formats": ["webp", "png"],
+		"label": "Oneremit",
 		"mobile_only": false,
 		"disabled": false,
 		"_v": 2
 	},
 	"converter": {
 		"name": "",
-		"url": "https://tinyurl.com/cedar-get-alert-link",
-		"image": "/media/banners/cedar-converter.avif",
-		"formats": ["avif", "gif"],
-		"label": "Cedar",
+		"url": "https://tinyurl.com/2xr8ysdd",
+		"image": "/media/banners/oneremit-landscape.webp",
+		"formats": ["webp", "png"],
+		"label": "Oneremit",
 		"mobile_only": false,
 		"disabled": false,
-		"width": "600px",
-		"height": "150px",
 		"_v": 1
 	},
 	"blog_home": {
 		"name": "",
-		"url": "https://tinyurl.com/cedar-get-alert-link",
-		"image": "/media/banners/cedar-converter.avif",
-		"formats": ["avif", "gif"],
-		"label": "Cedar",
+		"url": "https://tinyurl.com/2xr8ysdd",
+		"image": "/media/banners/oneremit-landscape.webp",
+		"formats": ["webp", "png"],
+		"label": "Oneremit",
 		"mobile_only": false,
 		"disabled": false,
-		"width": "600px",
-		"height": "150px",
 		"_v": 1
 	},
 	"converter_mobile_only": {
