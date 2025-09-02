@@ -126,13 +126,13 @@ const getPairs = async () => {
 }
 
 const sponsored_partners = [
-    {
-        image: 'https://bit.ly/3svJGhQ',
-        text: 'Send Bulk Naira payments accross borders.',
-        link: 'https://tinyurl.com/cedar-get-alert-link',
-        brand: 'Cedar Money',
-        cta: 'Start Sending'
-    },
+    // {
+    //     image: 'https://bit.ly/3svJGhQ',
+    //     text: 'Send Bulk Naira payments accross borders.',
+    //     link: 'https://tinyurl.com/cedar-get-alert-link',
+    //     brand: 'Cedar Money',
+    //     cta: 'Start Sending'
+    // },
     // {
     //     image: 'https://bit.ly/3svJGhQ',
     //     text: 'Sell your crypto for Naira',
@@ -142,10 +142,10 @@ const sponsored_partners = [
     // },
     {
         image: 'https://bit.ly/3svJGhQ',
-        text: 'Send Naira payments to your suppliers abroad',
-        link: 'https://tinyurl.com/cedar-get-alert-link',
-        brand: 'Cedar Money',
-        cta: 'Start Sending'
+        text: 'Send money to over 80 countries worldwide.',
+        link: 'https://tinyurl.com/cambridge-currences-top-banner',
+        brand: 'Cambridge Currencies',
+        cta: 'Send Money'
     }
 ];
 
