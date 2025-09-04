@@ -6,6 +6,8 @@
 		"formats": ["webp", "png"],
 		"label": "Oneremit",
 		"mobile_only": false,
+		"mobileWidth": "100%",
+		"mobileHeight": "70px",
 		"disabled": false,
 		"_v": 1
 	},
@@ -47,6 +49,8 @@
 		"image": "/media/banners/oneremit-landscape.webp",
 		"formats": ["webp", "png"],
 		"label": "Oneremit",
+		"mobileWidth": "100%",
+		"mobileHeight": "70px",
 		"mobile_only": false,
 		"disabled": false,
 		"_v": 2
@@ -57,6 +61,8 @@
 		"image": "/media/banners/oneremit-landscape.webp",
 		"formats": ["webp", "png"],
 		"label": "Oneremit",
+		"mobileWidth": "100%",
+		"mobileHeight": "70px",
 		"mobile_only": false,
 		"disabled": false,
 		"_v": 1

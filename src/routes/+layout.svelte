@@ -442,7 +442,7 @@
 
 <div class="bg-white dark:bg-gray-800">
 	<div class="top-landscape mb-8">
-		<AdBanner name="footer" />
+		<AdBanner name="footer" isMobile={data.isMobile}/>
 	</div>
 </div>
 
