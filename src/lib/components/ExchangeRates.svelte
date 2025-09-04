@@ -111,41 +111,80 @@
 			>
 				<tr>
 					<th class="px-4 py-6 md:text-[15px] w-10 hidden md:table-cell text-left">#</th>
-					<th class="px-4 py-6 md:text-[15px] text-left"
-						>Provider
-						<button
-							class="ml-2"
-							on:click={() => {
-								sortTable('provider');
-							}}
-							aria-label="Sort table"
-						>
-							<i class="fa fa-sort" />
-						</button>
+					<th class="px-4 py-6 md:text-[15px] text-left">
+						<span class="flex items-center">
+							Provider
+							<button
+								class="ml-2"
+								on:click={() => {
+									sortTable('provider');
+								}}
+								aria-label="Sort table"
+							>
+								<svg
+									xmlns="http://www.w3.org/2000/svg"
+									viewBox="0 0 20 20"
+									fill="currentColor"
+									class="size-5"
+								>
+									<path
+										fill-rule="evenodd"
+										d="M10.53 3.47a.75.75 0 0 0-1.06 0L6.22 6.72a.75.75 0 0 0 1.06 1.06L10 5.06l2.72 2.72a.75.75 0 1 0 1.06-1.06l-3.25-3.25Zm-4.31 9.81 3.25 3.25a.75.75 0 0 0 1.06 0l3.25-3.25a.75.75 0 1 0-1.06-1.06L10 14.94l-2.72-2.72a.75.75 0 0 0-1.06 1.06Z"
+										clip-rule="evenodd"
+									/>
+								</svg>
+							</button>
+						</span>
 					</th>
-					<th class="px-4 py-6 md:text-[15px] text-right"
-						>Buy
-						<button
-							class="ml-2"
-							on:click={() => {
-								sortTable('price_buy');
-							}}
-							aria-label="Sort table"
-						>
-							<i class="fa fa-sort" />
-						</button>
+					<th class="px-4 py-6 md:text-[15px] text-right">
+						<span class="flex items-center">
+							Buy
+							<button
+								class="ml-2"
+								on:click={() => {
+									sortTable('price_buy');
+								}}
+								aria-label="Sort table"
+							>
+								<svg
+									xmlns="http://www.w3.org/2000/svg"
+									viewBox="0 0 20 20"
+									fill="currentColor"
+									class="size-5"
+								>
+									<path
+										fill-rule="evenodd"
+										d="M10.53 3.47a.75.75 0 0 0-1.06 0L6.22 6.72a.75.75 0 0 0 1.06 1.06L10 5.06l2.72 2.72a.75.75 0 1 0 1.06-1.06l-3.25-3.25Zm-4.31 9.81 3.25 3.25a.75.75 0 0 0 1.06 0l3.25-3.25a.75.75 0 1 0-1.06-1.06L10 14.94l-2.72-2.72a.75.75 0 0 0-1.06 1.06Z"
+										clip-rule="evenodd"
+									/>
+								</svg>
+							</button>
+						</span>
 					</th>
-					<th class="px-4 py-6 md:text-[15px] text-right"
-						>Sell
-						<button
-							class="ml-2"
-							on:click={() => {
-								sortTable('price_sell');
-							}}
-							aria-label="Sort table"
-						>
-							<i class="fa fa-sort" />
-						</button>
+					<th class="px-4 py-6 md:text-[15px] text-right">
+						<span class="flex items-center">
+							Sell
+							<button
+								class="ml-2"
+								on:click={() => {
+									sortTable('price_sell');
+								}}
+								aria-label="Sort table"
+							>
+								<svg
+									xmlns="http://www.w3.org/2000/svg"
+									viewBox="0 0 20 20"
+									fill="currentColor"
+									class="size-5"
+								>
+									<path
+										fill-rule="evenodd"
+										d="M10.53 3.47a.75.75 0 0 0-1.06 0L6.22 6.72a.75.75 0 0 0 1.06 1.06L10 5.06l2.72 2.72a.75.75 0 1 0 1.06-1.06l-3.25-3.25Zm-4.31 9.81 3.25 3.25a.75.75 0 0 0 1.06 0l3.25-3.25a.75.75 0 1 0-1.06-1.06L10 14.94l-2.72-2.72a.75.75 0 0 0-1.06 1.06Z"
+										clip-rule="evenodd"
+									/>
+								</svg>
+							</button>
+						</span>
 					</th>
 					<th class="px-4 py-6 md:text-[15px] text-right">Last Updated</th>
 				</tr>
@@ -240,7 +279,18 @@
 						disabled={currentPage === 1}
 						aria-label="Previous page"
 					>
-						<i class="fa fa-chevron-left" />
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							viewBox="0 0 20 20"
+							fill="currentColor"
+							class="size-5"
+						>
+							<path
+								fill-rule="evenodd"
+								d="M11.78 5.22a.75.75 0 0 1 0 1.06L8.06 10l3.72 3.72a.75.75 0 1 1-1.06 1.06l-4.25-4.25a.75.75 0 0 1 0-1.06l4.25-4.25a.75.75 0 0 1 1.06 0Z"
+								clip-rule="evenodd"
+							/>
+						</svg>
 					</button>
 
 					{#each getPageButtons() as page}
@@ -268,7 +318,18 @@
 						disabled={currentPage === totalPages}
 						aria-label="Next page"
 					>
-						<i class="fa fa-chevron-right" />
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							viewBox="0 0 20 20"
+							fill="currentColor"
+							class="size-5"
+						>
+							<path
+								fill-rule="evenodd"
+								d="M8.22 5.22a.75.75 0 0 1 1.06 0l4.25 4.25a.75.75 0 0 1 0 1.06l-4.25 4.25a.75.75 0 0 1-1.06-1.06L11.94 10 8.22 6.28a.75.75 0 0 1 0-1.06Z"
+								clip-rule="evenodd"
+							/>
+						</svg>
 					</button>
 				</div>
 			{/if}
