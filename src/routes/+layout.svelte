@@ -678,7 +678,7 @@
 					<div class="w-auto">
 						<a
 							class="flex items-center justify-center rounded-md border border-transparent bg-white px-4 py-2 text-sm font-medium text-gray-700 shadow-sm hover:bg-gray-50 dark:bg-gray-800 dark:text-gray-100 dark:hover:bg-gray-900"
-							href="https://tinyurl.com/cedar-sticky-header-link"
+							href="https://tinyurl.com/cambridge-currences-top-banner"
 							>Send Money
 						</a>
 					</div>
