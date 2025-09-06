@@ -136,7 +136,7 @@
 
 <!-- partner -->
 <div class="bg-white dark:bg-gray-800">
-	<AdBanner name="home" bannerIndexes={data.bannerIndexes} />
+	<AdBanner name="home" bannerIndexes={data.bannerIndexes} isMobile={data.isMobile}/>
 </div>
 
 <div class="container px-0">
