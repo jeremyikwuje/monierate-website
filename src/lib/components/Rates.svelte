@@ -13,9 +13,14 @@
 	export let rowsPerPage: number = 100;
 
 	$: rates =
-		data.rates.filter(
-			(rate) => providers[rate.changer_code] && !excludedPlatforms.includes(rate.changer_code)
-		) || [];
+		data.rates
+			.filter(
+				(rate) => providers[rate.changer_code] && !excludedPlatforms.includes(rate.changer_code)
+			)
+			.sort((a: any, b: any) => {
+				if (a.price_sell === 0 && b.price_sell !== 0) return 1;
+				return b.price_sell - a.price_sell;
+			}) || [];
 	$: providers = data.providers || {};
 	$: currency = data.currency || 'usd';
 	$: currencySymbols = data.currencySymbols || {};
@@ -34,18 +39,12 @@
 		if (!originalRows) originalRows = [...paginatedRows];
 
 		// Toggle sort direction
-		if (column === 'price_buy') {
-			if (sortDirection === 'desc') {
-				sortDirection = 'default';
-			}
-			sortDirection = sortDirection !== 'default' ? 'default' : 'asc';
-			sortColumn = 'price_buy';
-		} else if (column === 'price_sell') {
+		if (column === 'rate') {
 			if (sortDirection === 'asc') {
 				sortDirection = 'default';
 			}
 			sortDirection = sortDirection !== 'default' ? 'default' : 'desc';
-			sortColumn = 'price_sell';
+			sortColumn = 'rate';
 		} else if (column === 'provider') {
 			if (sortColumn !== 'provider') {
 				sortDirection = 'default';
@@ -62,15 +61,7 @@
 		}
 
 		paginatedRows = [...paginatedRows].sort((a, b) => {
-			if (column === 'price_buy') {
-				// push 0 below all positives
-				if (a.price_buy === 0 && b.price_buy !== 0) return 1;
-				if (a.price_buy !== 0 && b.price_buy === 0) return -1;
-
-				// both > 0 → sort ascending
-				return a.price_buy - b.price_buy;
-			}
-			if (column === 'price_sell') {
+			if (column === 'rate') {
 				// push 0 below all positives
 				if (a.price_sell === 0 && b.price_sell !== 0) return 1;
 				if (a.price_sell !== 0 && b.price_sell === 0) return -1;
@@ -160,37 +151,12 @@
 						</span>
 					</th>
 					<th class="px-4 py-6 md:text-[15px] text-right">
-						<span class="inline-flex items-center">
-							Buy
-							<button
-								class="ml-2"
-								on:click={() => {
-									sortTable('price_buy');
-								}}
-								aria-label="Sort table"
-							>
-								<svg
-									xmlns="http://www.w3.org/2000/svg"
-									viewBox="0 0 20 20"
-									fill="currentColor"
-									class="size-5"
-								>
-									<path
-										fill-rule="evenodd"
-										d="M10.53 3.47a.75.75 0 0 0-1.06 0L6.22 6.72a.75.75 0 0 0 1.06 1.06L10 5.06l2.72 2.72a.75.75 0 1 0 1.06-1.06l-3.25-3.25Zm-4.31 9.81 3.25 3.25a.75.75 0 0 0 1.06 0l3.25-3.25a.75.75 0 1 0-1.06-1.06L10 14.94l-2.72-2.72a.75.75 0 0 0-1.06 1.06Z"
-										clip-rule="evenodd"
-									/>
-								</svg>
-							</button>
-						</span>
-					</th>
-					<th class="px-4 py-6 md:text-[15px] text-right">
 						<span class="inline-flex flex items-center">
-							Sell
+							Rate
 							<button
 								class="ml-2"
 								on:click={() => {
-									sortTable('price_sell');
+									sortTable('rate');
 								}}
 								aria-label="Sort table"
 							>
@@ -238,23 +204,7 @@
 							</a>
 						</td>
 
-						<!-- Buy Rate -->
-						<td class="px-4 py-3 text-right dark:text-gray-200 font-bold md:text-[17px]">
-							{#if rate.price_buy > 0}
-								<div class="space-y-1">
-									<div class="font-semibold">
-										₦{formatNumber(rate.price_buy, 'en-US', { maximumFractionDigits: 0 })}
-									</div>
-									<div class="text-gray-400 text-xs">
-										per {currencySymbols[currency] || currency + ' '}1
-									</div>
-								</div>
-							{:else}
-								-
-							{/if}
-						</td>
-
-						<!-- Sell Rate -->
+						<!-- Rate -->
 						<td class="px-4 py-3 text-right dark:text-gray-200 font-bold md:text-[17px]">
 							{#if rate.price_sell > 0}
 								<div class="space-y-1">
