@@ -137,7 +137,7 @@
 						</span>
 					</th>
 					<th class="px-4 py-6 md:text-[15px] text-right">
-						<span class="flex items-center">
+						<span class="inline-flex items-center">
 							Buy
 							<button
 								class="ml-2"
@@ -162,7 +162,7 @@
 						</span>
 					</th>
 					<th class="px-4 py-6 md:text-[15px] text-right">
-						<span class="flex items-center">
+						<span class="inline-flex flex items-center">
 							Sell
 							<button
 								class="ml-2"
