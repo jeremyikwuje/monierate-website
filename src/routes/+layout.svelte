@@ -105,10 +105,6 @@
 </script>
 
 <svelte:head>
-	<link
-		rel="stylesheet"
-		href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-	/>
 	<script>
 		// Forward the necessary functions to the web worker layer
 		partytown = {
@@ -235,10 +231,16 @@
 							aria-haspopup="true"
 							on:click={() => (showDropdown = !showDropdown)}
 						>
-							<i class="fas fa-user-circle text-2xl pr-2 md:pr-0" />
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="size-5 text-2xl pr-2 md:pr-0">
+  <path fill-rule="evenodd" d="M18 10a8 8 0 1 1-16 0 8 8 0 0 1 16 0Zm-5.5-2.5a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0ZM10 12a5.99 5.99 0 0 0-4.793 2.39A6.483 6.483 0 0 0 10 16.5a6.483 6.483 0 0 0 4.793-2.11A5.99 5.99 0 0 0 10 12Z" clip-rule="evenodd" />
+</svg>
+
                             <span class="hidden md:inline-block px-2 text-sm font-bold inline-flex items-center">
                                 <span>Dashboard</span>
-                                <i class="fas fa-caret-down text-xs ml-1" />
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="size-5">
+  <path fill-rule="evenodd" d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
+</svg>
+
                             </span>
 						</button>
 						{#if showDropdown}
@@ -252,14 +254,17 @@
 									class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-700"
 									role="menuitem"
 								>
-									<i class="fas fa-user mr-2" /> Account
+									<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="size-5">
+  <path d="M10 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6ZM3.465 14.493a1.23 1.23 0 0 0 .41 1.412A9.957 9.957 0 0 0 10 18c2.31 0 4.438-.784 6.131-2.1.43-.333.604-.903.408-1.41a7.002 7.002 0 0 0-13.074.003Z" />
+</svg>
+ Account
 								</a>
 								<a
 									href="https://account.monierate.com/logout"
 									class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-700"
 									role="menuitem"
 								>
-									<i class="fas fa-sign-out-alt mr-2" /> Logout
+									 Logout
 								</a>
 							</div>
 						{/if}
@@ -437,7 +442,7 @@
 
 <div class="bg-white dark:bg-gray-800">
 	<div class="top-landscape mb-8">
-		<AdBanner name="footer" />
+		<AdBanner name="footer" isMobile={data.isMobile}/>
 	</div>
 </div>
 
@@ -673,7 +678,7 @@
 					<div class="w-auto">
 						<a
 							class="flex items-center justify-center rounded-md border border-transparent bg-white px-4 py-2 text-sm font-medium text-gray-700 shadow-sm hover:bg-gray-50 dark:bg-gray-800 dark:text-gray-100 dark:hover:bg-gray-900"
-							href="https://tinyurl.com/cedar-sticky-header-link"
+							href="https://tinyurl.com/cambridge-currences-top-banner"
 							>Send Money
 						</a>
 					</div>
