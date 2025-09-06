@@ -34,13 +34,26 @@
 		if (!originalRows) originalRows = [...paginatedRows];
 
 		// Toggle sort direction
-		if (sortColumn === column) {
+		if (column === 'price_buy') {
+			if (sortDirection === 'desc') {
+				sortDirection = 'default';
+			}
+			sortDirection = sortDirection !== 'default' ? 'default' : 'asc';
+			sortColumn = 'price_buy';
+		} else if (column === 'price_sell') {
+			if (sortDirection === 'asc') {
+				sortDirection = 'default';
+			}
+			sortDirection = sortDirection !== 'default' ? 'default' : 'desc';
+			sortColumn = 'price_sell';
+		} else if (column === 'provider') {
+			if (sortColumn !== 'provider') {
+				sortDirection = 'default';
+			}
 			if (sortDirection === 'asc') sortDirection = 'desc';
 			else if (sortDirection === 'desc') sortDirection = 'default';
 			else sortDirection = 'asc';
-		} else {
-			sortDirection = 'asc';
-			sortColumn = column;
+			sortColumn = 'provider';
 		}
 
 		if (sortDirection === 'default') {
@@ -50,10 +63,20 @@
 
 		paginatedRows = [...paginatedRows].sort((a, b) => {
 			if (column === 'price_buy') {
-				return sortDirection === 'asc' ? a.price_buy - b.price_buy : b.price_buy - a.price_buy;
+				// push 0 below all positives
+				if (a.price_buy === 0 && b.price_buy !== 0) return 1;
+				if (a.price_buy !== 0 && b.price_buy === 0) return -1;
+
+				// both > 0 → sort ascending
+				return a.price_buy - b.price_buy;
 			}
 			if (column === 'price_sell') {
-				return sortDirection === 'asc' ? a.price_sell - b.price_sell : b.price_sell - a.price_sell;
+				// push 0 below all positives
+				if (a.price_sell === 0 && b.price_sell !== 0) return 1;
+				if (a.price_sell !== 0 && b.price_sell === 0) return -1;
+
+				// both > 0 → sort ascending
+				return b.price_sell - a.price_sell;
 			}
 
 			if (column === 'provider') {
