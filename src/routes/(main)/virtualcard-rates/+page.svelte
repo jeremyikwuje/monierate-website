@@ -146,7 +146,7 @@
 	{/if}
 
 	<ExchangeRateText
-		title={`${currencies[currency] || currency} to Naira rates Across Banks`}
+		title={`${currencies[currency] || currency} to Naira rates Across providers`}
 		data={{
 			currencies: currencies,
 			currency: { name: currency, symbol: getCurrencySymbol },
@@ -185,7 +185,7 @@
 		/>
 	{:else}
 		<div class="container text-center text-gray-600 dark:text-gray-300">
-			<p>No bank providers found</p>
+			<p>No providers found</p>
 		</div>
 	{/if}
 
