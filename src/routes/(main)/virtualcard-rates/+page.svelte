@@ -146,7 +146,7 @@
 	{/if}
 
 	<ExchangeRateText
-		title={`${currencies[currency] || currency} to Naira rates Across providers`}
+		title={`${currencies[currency] || currency} to Naira rates for Virtual Cards Providers`}
 		data={{
 			currencies: currencies,
 			currency: { name: currency, symbol: getCurrencySymbol },
