@@ -115,20 +115,20 @@
 	<meta
 		name="description"
 		content="Cash out {currencies[currency] ||
-			currency} to Naira at the best Nigerian bank offramp rates. Compare providers, track real-time updates, and withdraw securely with Monierate."
+			currency} to Naira at the best offramp rates. Compare providers, track real-time updates, and withdraw securely with Monierate."
 	/>
 
 	<meta property="og:type" content="website" />
 
 	<meta
 		property="og:title"
-		content="Sell {currencies[currency] || currency} to Naira - Offramp Bank Rates | Monierate"
+		content="Sell {currencies[currency] || currency} to Naira - Offramp Rates | Monierate"
 	/>
 
 	<meta
 		property="og:description"
 		content="Get the best offramp rates to convert {currencies[currency] ||
-			currency} into Naira. Compare banks and providers, track live updates, and withdraw your funds with Monierate."
+			currency} into Naira. Compare providers, track live updates, and withdraw your funds with Monierate."
 	/>
 
 	<meta property="og:url" content="https://monierate.com" />
@@ -148,7 +148,7 @@
 	{/if}
 
 	<ExchangeRateText
-		title={`${currencies[currency] || currency} to Naira rates Across Banks`}
+		title={`${currencies[currency] || currency} to Naira rates Across Providers`}
 		data={{
 			currencies: currencies,
 			currency: { name: currency, symbol: getCurrencySymbol },
@@ -187,7 +187,7 @@
 		/>
 	{:else}
 		<div class="container text-center text-gray-600 dark:text-gray-300">
-			<p>No bank providers found</p>
+			<p>No providers found</p>
 		</div>
 	{/if}
 
