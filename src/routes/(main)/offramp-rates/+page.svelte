@@ -148,7 +148,7 @@
 	{/if}
 
 	<ExchangeRateText
-		title={`${currencies[currency] || currency} to Naira rates Across Providers`}
+		title={`${currencies[currency] || currency} to Naira off-ramp rates across providers`}
 		data={{
 			currencies: currencies,
 			currency: { name: currency, symbol: getCurrencySymbol },
