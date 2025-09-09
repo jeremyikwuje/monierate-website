@@ -126,7 +126,7 @@
 
 	<meta
 		property="og:description"
-		content="Discover reliable USD account providers with Monierate. Compare offers, track real-time updates, and enjoy safe and seamless global banking."
+		content="Discover reliable USD account providers with Monierate. Compare offers, track real-time updates, and enjoy safe and seamless global transactions."
 	/>
 
 	<meta property="og:url" content="https://monierate.com" />
@@ -146,7 +146,7 @@
 	{/if}
 
 	<ExchangeRateText
-		title={`${currencies[currency] || currency} to Naira rates Across Banks`}
+		title={`${currencies[currency] || currency} to Naira rates Across providers`}
 		data={{
 			currencies: currencies,
 			currency: { name: currency, symbol: getCurrencySymbol },
@@ -185,7 +185,7 @@
 		/>
 	{:else}
 		<div class="container text-center text-gray-600 dark:text-gray-300">
-			<p>No bank providers found</p>
+			<p>No providers found</p>
 		</div>
 	{/if}
 
