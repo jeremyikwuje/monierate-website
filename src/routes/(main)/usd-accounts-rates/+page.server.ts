@@ -48,7 +48,7 @@ export const load: PageServerLoad = async ({ fetch, url, parent, cookies }) => {
 		// Transform providers into key-value pair for easy lookup
 		const providers: Record<string, (typeof rawProviders)[0]> = {};
 		for (const provider of rawProviders) {
-			if (provider.changer_tags && provider.changer_tags.includes('usdaccount')) {
+			if (provider.changer_tags && provider.changer_tags.includes('account')) {
 				providers[provider.code] = provider;
 				try {
 					if (provider.pairs) {
