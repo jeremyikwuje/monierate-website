@@ -11,6 +11,7 @@
 	export let pagination: boolean = true;
 	export let currentPage: number = 1;
 	export let rowsPerPage: number = 100;
+	export let rateType: 'buy' | 'sell' = 'sell';
 
 	$: rates =
 		data.rates
@@ -19,7 +20,11 @@
 			)
 			.sort((a: any, b: any) => {
 				if (a.price_sell === 0 && b.price_sell !== 0) return 1;
-				return b.price_sell - a.price_sell;
+				if (rateType === 'buy') {
+					return b.price_buy - a.price_buy;
+				} else {
+					return b.price_sell - a.price_sell;
+				}
 			}) || [];
 	$: providers = data.providers || {};
 	$: currency = data.currency || 'usd';
@@ -63,11 +68,17 @@
 		paginatedRows = [...paginatedRows].sort((a, b) => {
 			if (column === 'rate') {
 				// push 0 below all positives
-				if (a.price_sell === 0 && b.price_sell !== 0) return 1;
-				if (a.price_sell !== 0 && b.price_sell === 0) return -1;
-
-				// both > 0 → sort ascending
-				return b.price_sell - a.price_sell;
+				if (rateType === 'sell') {
+					if (a.price_sell === 0 && b.price_sell !== 0) return 1;
+					if (a.price_sell !== 0 && b.price_sell === 0) return -1;
+					// both > 0 → sort ascending
+					return b.price_sell - a.price_sell;
+				} else {
+					if (a.price_buy === 0 && b.price_buy !== 0) return 1;
+					if (a.price_buy !== 0 && b.price_buy === 0) return -1;
+					// both > 0 → sort ascending
+					return b.price_buy - a.price_buy;
+				}
 			}
 
 			if (column === 'provider') {
@@ -206,7 +217,20 @@
 
 						<!-- Rate -->
 						<td class="px-4 py-3 text-right dark:text-gray-200 font-bold md:text-[17px]">
-							{#if rate.price_sell > 0}
+							{#if rateType === 'buy'}
+								{#if rate.price_buy > 0}
+									<div class="space-y-1">
+										<div class="font-semibold">
+											₦{formatNumber(rate.price_buy, 'en-US', { maximumFractionDigits: 0 })}
+										</div>
+										<div class="text-gray-400 text-xs">
+											per {currencySymbols[currency] || currency + ' '}1
+										</div>
+									</div>
+								{:else}
+									-
+								{/if}
+							{:else if rate.price_sell > 0}
 								<div class="space-y-1">
 									<div class="font-semibold">
 										₦{formatNumber(rate.price_sell, 'en-US', { maximumFractionDigits: 0 })}
