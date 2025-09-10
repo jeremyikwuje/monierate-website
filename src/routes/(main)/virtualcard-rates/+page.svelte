@@ -182,6 +182,7 @@
 				currencySymbols
 			}}
 			bind:currentPage={data.page}
+			rateType="buy"
 		/>
 	{:else}
 		<div class="container text-center text-gray-600 dark:text-gray-300">
