@@ -110,25 +110,23 @@
 </script>
 
 <svelte:head>
-	<title>Sell {currencies[currency] || currency} to Naira - Best Offramp Rates | Monierate</title>
+	<title>Virtual Cards Providers - Best Rates & Secure Payments | Monierate</title>
 
 	<meta
 		name="description"
-		content="Cash out {currencies[currency] ||
-			currency} to Naira at the best offramp rates. Compare providers, track real-time updates, and withdraw securely with Monierate."
+		content="Compare the best Virtual Cards providers in Nigeria and beyond. Track real-time rates, manage cards, and make secure online payments with Monierate."
 	/>
 
 	<meta property="og:type" content="website" />
 
 	<meta
 		property="og:title"
-		content="Sell {currencies[currency] || currency} to Naira - Offramp Rates | Monierate"
+		content="Virtual Cards Providers - Best Rates & Secure Online Payments | Monierate"
 	/>
 
 	<meta
 		property="og:description"
-		content="Get the best offramp rates to convert {currencies[currency] ||
-			currency} into Naira. Compare providers, track live updates, and withdraw your funds with Monierate."
+		content="Discover top Virtual Cards providers with Monierate. Compare offers, check live updates, and enjoy safe and easy online transactions."
 	/>
 
 	<meta property="og:url" content="https://monierate.com" />
@@ -148,7 +146,7 @@
 	{/if}
 
 	<ExchangeRateText
-		title={`${currencies[currency] || currency} to Naira off-ramp rates across providers`}
+		title={`${currencies[currency] || currency} to Naira rates for Virtual Cards Providers`}
 		data={{
 			currencies: currencies,
 			currency: { name: currency, symbol: getCurrencySymbol },
@@ -170,7 +168,7 @@
 		onSearch={handleSearch}
 		selectedCurrency={currency}
 		onChangeCurrency={handleFilterByCurrency}
-		selectedCategory="/offramp-rates"
+		selectedCategory="/virtualcard-rates"
 	/>
 </div>
 
