@@ -131,7 +131,7 @@
 			currency} to Naira with transparent, real-time rates. Compare providers, monitor fees, and get alerts to maximize value on every transfer."
 	/>
 	<meta property="og:url" content="https://monierate.com" />
-	<meta property="og:image" content="https://monierate.com/monierate-og-image.png" />
+	<meta property="og:image" content="https://monierate.com/media/og-images/money-transfer-rate.webp" />
 </svelte:head>
 
 <!-- partner -->

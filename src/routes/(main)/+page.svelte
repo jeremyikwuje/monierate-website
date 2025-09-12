@@ -117,7 +117,7 @@
 	<meta property="og:title" content="Naira exchange rates & converter | Monierate" />
 	<meta
 		property="og:description"
-		content="Compare the naira exchange rates from over 16 exchanges in Nigeria. Track naira rates today. Convert dollar to naira using CBN and black market rate. Get price alert from your favourite crypto exchange such as Binance, Bybit, Quidax, etc."
+		content="Compare the naira exchange rates from over 40 exchanges in Nigeria. Track naira rates today. Convert dollar to naira using CBN and black market rate. Get price alert from your favourite crypto exchange such as Binance, Bybit, Quidax, etc."
 	/>
 	<meta property="og:url" content="monierate.com" />
 	<meta property="og:image" content="https://monierate.com/monierate-og-image.png" />
