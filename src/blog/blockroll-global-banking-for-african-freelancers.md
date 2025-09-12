@@ -21,20 +21,16 @@ The [USDC to Naira](https://monierate.com/converter/blockroll/?Amount=1&From=usd
 
 ## Company Profile (Based on Public Information)
 
-| |                                |                                                                                                                                                 
-| ------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Website**                    | www\.blockroll.app                                                                                                                              |
-| **Launched**                   | March, 2024                                                                                                                                     |
+| **Attribute**                  | **Details**                                                                                                                                    |
+| ------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Website**                    | [www.blockroll.app](https://www.blockroll.app/)                                                                                                |
+| **Launched**                   | March 2024                                                                                                                                     |
 | **Founders & Core Team**       | Sadiq Isiak, Stephen Adeyemo                                                                                                                   |
-| **Focus**                      | Payments, Payroll, and Digital Wallets for African freelancers, businesses, and remote teams.                                                |
-| **Mission**                    | To provide the global workforce with seamless, secure, and innovative solutions that empower them to move work forward, starting with Africans. |
-| **Target Markets**             | Nigeria, broader Africa, and global clients are paying African workers.                                                                         |
-| **Industry**                   | Financial Services / Fintech / Web3 Payments/ Gig economy.                                                                                      |
-| **Recognition & Partnerships** | Toronet Incubation Program, Circle’s USDC Grant Program, Remove Remove Add Lisk x CV Labs Incubation.  
-
-| **Recognition & Partnerships** | Toronet Incubation Program, Circle’s USDC Grant Program, Remove Remove Add Lisk x CV Labs Incubation.  
-
-| **Recognition & Partnerships** | Toronet Incubation Program, Circle’s USDC Grant Program, Remove Remove Add Lisk x CV Labs Incubation.  
+| **Focus**                      | Payments, remittance, and digital wallets for African freelancers, businesses, and remote teams                                                |
+| **Mission**                    | To provide the global workforce with seamless, secure, and innovative solutions that empower them to move work forward, starting with Africans |
+| **Target Markets**             | Nigeria, broader Africa, and global clients paying African workers                                                                             |
+| **Industry**                   | Financial Services, Fintech, Web3 Payments, Gig Economy                                                                                        |
+| **Recognition & Partnerships** | Toronet Incubation Program, Circle’s USDC Grant Program, Lisk x CV Labs Incubation       
 
 ## How can Blockroll benefit you?
 
