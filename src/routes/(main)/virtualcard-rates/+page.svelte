@@ -130,7 +130,7 @@
 	/>
 
 	<meta property="og:url" content="https://monierate.com" />
-	<meta property="og:image" content="https://monierate.com/monierate-og-image.png" />
+	<meta property="og:image" content="https://monierate.com/media/og-images/virtual-card-rates.webp" />
 </svelte:head>
 
 <!-- partner -->
