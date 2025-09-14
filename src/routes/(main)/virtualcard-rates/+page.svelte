@@ -110,7 +110,7 @@
 </script>
 
 <svelte:head>
-	<title>Virtual Cards Providers - Best Rates & Secure Payments | Monierate</title>
+	<title>Compare virtual card rates in Nigeria | Monierate.</title>
 
 	<meta
 		name="description"
