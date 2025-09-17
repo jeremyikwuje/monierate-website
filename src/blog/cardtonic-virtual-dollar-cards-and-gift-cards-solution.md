@@ -11,6 +11,8 @@ author: Monierate Editorial Team
 ---
 If you love getting the best value for your money, 
 
+![Cardtonic: Virtual Dollar Card & Gift Cards Solution](https://ik.imagekit.io/monierate/Blog/product/cardtonic.webp?updatedAt=1758092761505)
+
 Cardtonic, Nigeria’s leading platform for virtual cards, has been officially listed on monierate.com. 
 
 This means you can now easily compare and secure the most competitive rates for virtual card payments, gift card trading, and more, all in one trusted app.
@@ -25,18 +27,18 @@ With over 500,000 active users and a current [USD to Naira](https://monierate.co
 
 ## Company Profile
 
-| **Attribute**           | **Details**                                                                                                                                                                                                                                                                                                                                                                                                                                         |
-|-------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **Website**             | [www.cardtonic.com](https://www.cardtonic.com)                                                                                                                                                                                                                                                                                                                                                                                                      |
-| **Established**         | 2019                                                                                                                                                                                                                                                                                                                                                                                                                                                |
-| **Chief Executive Officer** | Emmanuel Sohe (ES)                                                                                                                                                                                                                                                                                                                                                                                                                                  |
-| **Focus**               | Issuance of Virtual Cards, a digital trading platform for gift cards, bill payments, online gadget and electronics shopping                                                                                                                                                                                                                                                              |
-| **Mission**             | Enabling payments beyond borders through alternative payment methods like virtual USD cards and gift cards. Helping businesses and individuals avoid limits associated with direct naira payments when spending globally.                                                                                                                                                                                                                           |
-| **Key Markets**         | Nigeria, Ghana                                                                                                                                                                                                                                                                                                                                                                                                                                      |
-| **Industry**            | Financial Technology, Virtual USD Card, Gift Card Trading, E-commerce                                                                                                                                                                                                                                                                                                                                                                               |
-| **Headquarters**        | Lagos, Nigeria                                                                                                                                                                                                                                                                                                                                                                                                                                      |
-| **Regulations**         | Operates within regulatory guidelines in Nigeria and Ghana, with compliance to financial authorities                                                                                                                                                                                                                                                                                                                                                |
-| **User Base**           | About 1.5M registered users and 500,000+ active users                                                                                                                                                                                                                                                                                                                                                                                               |
+| **Attribute** | **Details** |
+| --- | --- |
+| **Website** | [www.cardtonic.com](https://www.cardtonic.com) |
+| **Established** | 2019 |
+| **Chief Executive Officer** | Emmanuel Sohe (ES) |
+| **Focus** | Issuance of Virtual Cards, a digital trading platform for gift cards, bill payments, online gadget and electronics shopping |
+| **Mission** | Enabling payments beyond borders through alternative payment methods like virtual USD cards and gift cards. Helping businesses and individuals avoid limits associated with direct naira payments when spending globally. |
+| **Key Markets** | Nigeria, Ghana |
+| **Industry** | Financial Technology, Virtual USD Card, Gift Card Trading, E-commerce |
+| **Headquarters** | Lagos, Nigeria |
+| **Regulations** | Operates within regulatory guidelines in Nigeria and Ghana, with compliance to financial authorities |
+| **User Base** | About 1.5M registered users and 500,000+ active users |
 | **Additional Information** | Cardtonic also specializes in the trading of gift cards (e.g., iTunes, Amazon, Google Play). The platform enables users to sell gift cards for cash and pay bills instantly, with a focus on competitive rates, speed, and security. In recent expansions, Cardtonic launched “Just Gadgets,” allowing users to buy authentic tech gadgets like smartphones, laptops, and appliances at discounted prices, with nationwide delivery and warranties. |
 
 ## How Can the Cardtonic App Benefit You?
