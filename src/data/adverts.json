@@ -45,7 +45,19 @@
 	],
 	"home": {
 		"name": "",
-		"url": "https://tinyurl.com/nsave-banner-link",
+		"url": "https://web.nsave.com/app-store-redirect",
+		"image": "/media/banners/nsave.webp",
+		"formats": ["webp", "png"],
+		"label": "Nsave",
+		"mobileWidth": "100%",
+		"mobileHeight": "70px",
+		"mobile_only": false,
+		"disabled": false,
+		"_v": 2
+	},
+	"compare": {
+		"name": "",
+		"url": "https://web.nsave.com/app-store-redirect",
 		"image": "/media/banners/nsave.webp",
 		"formats": ["webp", "png"],
 		"label": "Nsave",
