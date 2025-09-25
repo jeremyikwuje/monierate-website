@@ -141,10 +141,10 @@
 <div
 	id="top-banner"
 	tabindex="-1"
-	class="flex fixed top-0 mb-8 w-full z-50 gap-x-6 overflow-hidden bg-[#40E0D0] px-6 py-3 sm:px-3.5 sm:before:flex-1"
+	class="flex fixed top-0 mb-8 w-full z-50 gap-x-6 overflow-hidden bg-[#d60505] px-6 py-3 sm:px-3.5 sm:before:flex-1"
 >
 	<div class="flex flex-wrap items-center gap-x-4 gap-y-2">
-		<span class="text-sm leading-6 text-gray-900">
+		<span class="text-sm leading-6 text-gray-100">
 			<strong class="font-semibold hidden md:inline-block">{selected_partner_top.brand}</strong>
 			<svg
 				viewBox="0 0 2 2"
@@ -160,13 +160,13 @@
 			>
 			<a
 				href={selected_partner_top.link}
-				class="hidden md:inline-block rounded-full bg-gray-900 px-3.5 py-1 text-sm font-semibold text-white shadow-sm hover:bg-gray-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-900"
+				class="hidden md:inline-block rounded-full bg-gray-100 px-3.5 py-1 text-sm font-semibold text-red shadow-sm hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-100"
 			>
 				{selected_partner_top.cta} <span aria-hidden="true">&rarr;</span>
 			</a>
 			<a
 				href={selected_partner_top.link}
-				class="inline-block md:hidden break-word text-sm font-semibold text-sm text-gray-900 dark:text-gray-900 hover:underline text-wrap"
+				class="inline-block md:hidden break-word text-sm font-semibold text-sm text-gray-100 dark:text-gray-100 hover:underline text-wrap"
 			>
 				{selected_partner_top.brand}
 				<svg
