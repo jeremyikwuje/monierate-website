@@ -100,5 +100,17 @@
 		"width": "350px",
 		"height": "390px",
 		"_v": 1
+	},
+	"bank_codes": {
+		"name": "",
+		"url": "https://tinyurl.com/nsave-banner-link",
+		"image": "/media/banners/nsave.webp",
+		"formats": ["webp", "png"],
+		"label": "Nsave",
+		"mobileWidth": "100%",
+		"mobileHeight": "70px",
+		"mobile_only": false,
+		"disabled": false,
+		"_v": 2
 	}
 }

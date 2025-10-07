@@ -17,7 +17,7 @@
 
 <!-- partner -->
 <div class="bg-white dark:bg-gray-800">
-	<AdBanner name="compare" />
+	<AdBanner name="bank_codes" />
 </div>
 
 <slot />
