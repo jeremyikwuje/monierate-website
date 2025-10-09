@@ -47,7 +47,6 @@ export async function load() {
 		);
 
 		const banksData: BankData[] = mappedBanks.filter(bankData => Object.keys(bankData.ussd).length > 0);
-		console.log('Mapped Banks:', banksData);
 
 		return { banksData };
 	} catch (e) {
