@@ -13,11 +13,11 @@
 			([entry]) => {
 				if (entry.isIntersecting) {
 					// Footer is visible — stop sticking
-					leftSection.classList.remove('sticky', 'top-20');
+					leftSection.classList.remove('sticky', 'top-10');
 					leftSection.classList.add('absolute', 'bottom-0');
 				} else {
 					// Normal scroll — stay sticky
-					leftSection.classList.add('sticky', 'top-20');
+					leftSection.classList.add('sticky', 'top-10');
 					leftSection.classList.remove('absolute', 'bottom-0');
 				}
 			},
