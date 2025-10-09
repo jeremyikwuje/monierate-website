@@ -22,7 +22,7 @@
 
 <slot />
 
-<div>
+<!-- <div>
     <div class="container mt-8">
         <div>
             <h3 class="text-2xl font-bold mb-4">
@@ -142,4 +142,4 @@
 				as they operate over the mobile network. This immediacy and accessibility make USSD codes essential for managing mobile services efficiently.`
 		}
 	];
-</script>
+</script> -->
