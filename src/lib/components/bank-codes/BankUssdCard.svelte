@@ -5,6 +5,7 @@
 
 	export let bankData: any;
 	export let countryCode: string;
+	export let multiCountry: boolean = true;
 
 	let image: string = '/icons/default.png';
 
@@ -105,7 +106,7 @@
 		</button>
 		<a
 			class="text-gray-500 font-bold text-sm hover:text-gray-700 dark:hover:text-gray-300 transition border border-gray-200 rounded-full py-2 px-4 bg-gray-50 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-700"
-			href="/{countryCode}/ussd-codes/banks/{bankData.id}"
+			href={multiCountry ? `/${countryCode}/ussd-codes/banks/${bankData.id}`: `/bank-codes/ussd/${bankData.id}`}
 		>
 			More
 		</a>
