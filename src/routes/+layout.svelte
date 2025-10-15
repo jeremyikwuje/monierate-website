@@ -147,12 +147,6 @@
 		gtag('js', new Date());
 		gtag('config', 'G-59H6DBC82L');
 	</script>
-
-	<script type="text/javascript">
-		var infolinks_pid = 3436231;
-		var infolinks_wsid = 0;
-	</script>
-	<script type="text/javascript" src="//resources.infolinks.com/js/infolinks_main.js"></script>
 </svelte:head>
 
 <LoadingIndicator />
@@ -208,7 +202,7 @@
 			</a>
 		</span>
 	</div>
-	<div class="flex flex-1 justify-end" />
+	<div class="flex flex-1 justify-end"> </div>
 </div>
 
 <header class="mb-0 mt-16">
@@ -459,7 +453,7 @@
 
 <slot />
 
-<div class="w-full h-1 mt-16 dark:border-gray-900" />
+<div class="w-full h-1 mt-16 dark:border-gray-900"> </div>
 
 <div class="bg-white dark:bg-gray-800">
 	<div class="top-landscape mb-8">
