@@ -48,10 +48,19 @@
 >
 	<div class="flex items-center gap-2">
 		<span>{tip.label}</span>
-		<i
-			class="fas fa-chevron-down w-4 h-4 transition-transform"
+		<svg
+			xmlns="http://www.w3.org/2000/svg"
+			viewBox="0 0 20 20"
+			fill="currentColor"
+			class="size-5 w-4 h-4 transition-transform"
 			style="transform: rotate({$isOpen ? '180deg' : '0deg'})"
-		/>
+		>
+			<path
+				fill-rule="evenodd"
+				d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z"
+				clip-rule="evenodd"
+			/>
+		</svg>
 	</div>
 	<div
 		class="absolute left-0 mt-2 w-56 p-2 bg-white dark:bg-gray-800 text-sm text-gray-700 dark:text-gray-300 shadow-md rounded-lg border border-gray-200 dark:border-gray-700 transition-opacity duration-200 z-10"

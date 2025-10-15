@@ -131,12 +131,12 @@
 	/>
 
 	<meta property="og:url" content="https://monierate.com" />
-	<meta property="og:image" content="https://monierate.com/monierate-og-image.png" />
+	<meta property="og:image" content="https://monierate.com/media/og-images/bank-rates.webp" />
 </svelte:head>
 
 <!-- partner -->
 <div class="bg-white dark:bg-gray-800">
-	<AdBanner name="home" bannerIndexes={data.bannerIndexes} />
+	<AdBanner name="home" bannerIndexes={data.bannerIndexes} isMobile={data.isMobile}/>
 </div>
 
 <div class="container px-0">

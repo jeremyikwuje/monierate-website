@@ -234,7 +234,47 @@
 							class="bg-gray-200 text-gray-800 dark:bg-gray-700 dark:text-gray-200 px-3 py-1 rounded"
 							on:click={toggleSort}
 						>
-							<i class="fa fa-{isRecent ? 'sort-amount-down' : 'sort-amount-up'}" />
+							{#if isRecent}
+								<!-- Sort Descending -->
+								<svg
+									xmlns="http://www.w3.org/2000/svg"
+									width="24"
+									height="24"
+									viewBox="0 0 24 24"
+									fill="none"
+									stroke="currentColor"
+									stroke-width="2"
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									aria-hidden="true"
+								>
+									<path d="M11 5h10" />
+									<path d="M11 9h7" />
+									<path d="M11 13h4" />
+									<path d="M3 17l3 3 3-3" />
+									<path d="M6 4v16" />
+								</svg>
+							{:else}
+								<!-- Sort Ascending -->
+								<svg
+									xmlns="http://www.w3.org/2000/svg"
+									width="24"
+									height="24"
+									viewBox="0 0 24 24"
+									fill="none"
+									stroke="currentColor"
+									stroke-width="2"
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									aria-hidden="true"
+								>
+									<path d="M11 11h4" />
+									<path d="M11 15h7" />
+									<path d="M11 19h10" />
+									<path d="M3 7l3-3 3 3" />
+									<path d="M6 4v16" />
+								</svg>
+							{/if}
 							{isRecent ? 'Most Recent' : 'Oldest'}
 						</button>
 						<span class="hidden md:inline">
@@ -259,7 +299,18 @@
 								on:click={() => (showSearch = !showSearch)}
 								aria-label="Search"
 							>
-								<i class="fa fa-search cursor-pointer" />
+								<svg
+									xmlns="http://www.w3.org/2000/svg"
+									viewBox="0 0 20 20"
+									fill="currentColor"
+									class="size-5 cursor-pointer"
+								>
+									<path
+										fill-rule="evenodd"
+										d="M9 3.5a5.5 5.5 0 1 0 0 11 5.5 5.5 0 0 0 0-11ZM2 9a7 7 0 1 1 12.452 4.391l3.328 3.329a.75.75 0 1 1-1.06 1.06l-3.329-3.328A7 7 0 0 1 2 9Z"
+										clip-rule="evenodd"
+									/>
+								</svg>
 							</button>
 							<span
 								class="flex items-center gap-2 md:flex-none w-full md:w-auto bg-gray-50 dark:bg-gray-800 p-2 md:p-0 absolute md:static -top-1 left-0 transition-opacity duration-300 md:inline z-50"
@@ -283,7 +334,18 @@
 					<div class="flex items-center gap-5">
 						<span class="relative all-alert-options pr-5 md:pr-0">
 							<button on:click={() => (showAllAlertOptions = !showAllAlertOptions)}>
-								<i class="fa fa-gear" />
+								<svg
+									xmlns="http://www.w3.org/2000/svg"
+									viewBox="0 0 20 20"
+									fill="currentColor"
+									class="size-5"
+								>
+									<path
+										fill-rule="evenodd"
+										d="M7.84 1.804A1 1 0 0 1 8.82 1h2.36a1 1 0 0 1 .98.804l.331 1.652a6.993 6.993 0 0 1 1.929 1.115l1.598-.54a1 1 0 0 1 1.186.447l1.18 2.044a1 1 0 0 1-.205 1.251l-1.267 1.113a7.047 7.047 0 0 1 0 2.228l1.267 1.113a1 1 0 0 1 .206 1.25l-1.18 2.045a1 1 0 0 1-1.187.447l-1.598-.54a6.993 6.993 0 0 1-1.929 1.115l-.33 1.652a1 1 0 0 1-.98.804H8.82a1 1 0 0 1-.98-.804l-.331-1.652a6.993 6.993 0 0 1-1.929-1.115l-1.598.54a1 1 0 0 1-1.186-.447l-1.18-2.044a1 1 0 0 1 .205-1.251l1.267-1.114a7.05 7.05 0 0 1 0-2.227L1.821 7.773a1 1 0 0 1-.206-1.25l1.18-2.045a1 1 0 0 1 1.187-.447l1.598.54A6.992 6.992 0 0 1 7.51 3.456l.33-1.652ZM10 13a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"
+										clip-rule="evenodd"
+									/>
+								</svg>
 							</button>
 							<span
 								class="{showAllAlertOptions
@@ -404,9 +466,7 @@
 												{alert.frequency.type}
 											</td>
 											<td class="px-4 py-2 text-left">
-												{alert.last_triggered === null
-													? '-'
-													: friendlyDate(alert.last_triggered)}
+												{alert.last_triggered === null ? '-' : friendlyDate(alert.last_triggered)}
 											</td>
 											<td class="px-4 py-2 text-left">
 												{getNextTriggerTime(alert.frequency, user.userData.data.timezone || 'UTC')}
@@ -419,7 +479,18 @@
 															aria-label="Options"
 															on:click={() => showAlertOptions(alert._id)}
 														>
-															<i class="fa fa-gear text-lg" />
+															<svg
+																xmlns="http://www.w3.org/2000/svg"
+																viewBox="0 0 24 24"
+																fill="currentColor"
+																class="size-6"
+															>
+																<path
+																	fill-rule="evenodd"
+																	d="M11.078 2.25c-.917 0-1.699.663-1.85 1.567L9.05 4.889c-.02.12-.115.26-.297.348a7.493 7.493 0 0 0-.986.57c-.166.115-.334.126-.45.083L6.3 5.508a1.875 1.875 0 0 0-2.282.819l-.922 1.597a1.875 1.875 0 0 0 .432 2.385l.84.692c.095.078.17.229.154.43a7.598 7.598 0 0 0 0 1.139c.015.2-.059.352-.153.43l-.841.692a1.875 1.875 0 0 0-.432 2.385l.922 1.597a1.875 1.875 0 0 0 2.282.818l1.019-.382c.115-.043.283-.031.45.082.312.214.641.405.985.57.182.088.277.228.297.35l.178 1.071c.151.904.933 1.567 1.85 1.567h1.844c.916 0 1.699-.663 1.85-1.567l.178-1.072c.02-.12.114-.26.297-.349.344-.165.673-.356.985-.57.167-.114.335-.125.45-.082l1.02.382a1.875 1.875 0 0 0 2.28-.819l.923-1.597a1.875 1.875 0 0 0-.432-2.385l-.84-.692c-.095-.078-.17-.229-.154-.43a7.614 7.614 0 0 0 0-1.139c-.016-.2.059-.352.153-.43l.84-.692c.708-.582.891-1.59.433-2.385l-.922-1.597a1.875 1.875 0 0 0-2.282-.818l-1.02.382c-.114.043-.282.031-.449-.083a7.49 7.49 0 0 0-.985-.57c-.183-.087-.277-.227-.297-.348l-.179-1.072a1.875 1.875 0 0 0-1.85-1.567h-1.843ZM12 15.75a3.75 3.75 0 1 0 0-7.5 3.75 3.75 0 0 0 0 7.5Z"
+																	clip-rule="evenodd"
+																/>
+															</svg>
 														</button>
 													</div>
 													<div
@@ -453,7 +524,19 @@
 																aria-label="Edit"
 																on:click={() => editAlert(alert._id, alert.type)}
 															>
-																<i class="fa fa-edit text-lg" />
+																<svg
+																	xmlns="http://www.w3.org/2000/svg"
+																	viewBox="0 0 20 20"
+																	fill="currentColor"
+																	class="size-5"
+																>
+																	<path
+																		d="m5.433 13.917 1.262-3.155A4 4 0 0 1 7.58 9.42l6.92-6.918a2.121 2.121 0 0 1 3 3l-6.92 6.918c-.383.383-.84.685-1.343.886l-3.154 1.262a.5.5 0 0 1-.65-.65Z"
+																	/>
+																	<path
+																		d="M3.5 5.75c0-.69.56-1.25 1.25-1.25H10A.75.75 0 0 0 10 3H4.75A2.75 2.75 0 0 0 2 5.75v9.5A2.75 2.75 0 0 0 4.75 18h9.5A2.75 2.75 0 0 0 17 15.25V10a.75.75 0 0 0-1.5 0v5.25c0 .69-.56 1.25-1.25 1.25h-9.5c-.69 0-1.25-.56-1.25-1.25v-9.5Z"
+																	/>
+																</svg>
 															</button>
 															<button
 																class="md:hidden"
@@ -467,7 +550,18 @@
 																aria-label="Delete"
 																on:click={() => (showConfirmAlertDeletion[alert._id] = true)}
 															>
-																<i class="fa fa-trash text-lg" />
+																<svg
+																	xmlns="http://www.w3.org/2000/svg"
+																	viewBox="0 0 20 20"
+																	fill="currentColor"
+																	class="size-5"
+																>
+																	<path
+																		fill-rule="evenodd"
+																		d="M8.75 1A2.75 2.75 0 0 0 6 3.75v.443c-.795.077-1.584.176-2.365.298a.75.75 0 1 0 .23 1.482l.149-.022.841 10.518A2.75 2.75 0 0 0 7.596 19h4.807a2.75 2.75 0 0 0 2.742-2.53l.841-10.52.149.023a.75.75 0 0 0 .23-1.482A41.03 41.03 0 0 0 14 4.193V3.75A2.75 2.75 0 0 0 11.25 1h-2.5ZM10 4c.84 0 1.673.025 2.5.075V3.75c0-.69-.56-1.25-1.25-1.25h-2.5c-.69 0-1.25.56-1.25 1.25v.325C8.327 4.025 9.16 4 10 4ZM8.58 7.72a.75.75 0 0 0-1.5.06l.3 7.5a.75.75 0 1 0 1.5-.06l-.3-7.5Zm4.34.06a.75.75 0 1 0-1.5-.06l-.3 7.5a.75.75 0 1 0 1.5.06l.3-7.5Z"
+																		clip-rule="evenodd"
+																	/>
+																</svg>
 															</button>
 															<button
 																class="md:hidden"

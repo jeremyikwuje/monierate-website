@@ -34,13 +34,26 @@
 		if (!originalRows) originalRows = [...paginatedRows];
 
 		// Toggle sort direction
-		if (sortColumn === column) {
+		if (column === 'price_buy') {
+			if (sortDirection === 'desc') {
+				sortDirection = 'default';
+			}
+			sortDirection = sortDirection !== 'default' ? 'default' : 'asc';
+			sortColumn = 'price_buy';
+		} else if (column === 'price_sell') {
+			if (sortDirection === 'asc') {
+				sortDirection = 'default';
+			}
+			sortDirection = sortDirection !== 'default' ? 'default' : 'desc';
+			sortColumn = 'price_sell';
+		} else if (column === 'provider') {
+			if (sortColumn !== 'provider') {
+				sortDirection = 'default';
+			}
 			if (sortDirection === 'asc') sortDirection = 'desc';
 			else if (sortDirection === 'desc') sortDirection = 'default';
 			else sortDirection = 'asc';
-		} else {
-			sortDirection = 'asc';
-			sortColumn = column;
+			sortColumn = 'provider';
 		}
 
 		if (sortDirection === 'default') {
@@ -50,10 +63,20 @@
 
 		paginatedRows = [...paginatedRows].sort((a, b) => {
 			if (column === 'price_buy') {
-				return sortDirection === 'asc' ? a.price_buy - b.price_buy : b.price_buy - a.price_buy;
+				// push 0 below all positives
+				if (a.price_buy === 0 && b.price_buy !== 0) return 1;
+				if (a.price_buy !== 0 && b.price_buy === 0) return -1;
+
+				// both > 0 → sort ascending
+				return a.price_buy - b.price_buy;
 			}
 			if (column === 'price_sell') {
-				return sortDirection === 'asc' ? a.price_sell - b.price_sell : b.price_sell - a.price_sell;
+				// push 0 below all positives
+				if (a.price_sell === 0 && b.price_sell !== 0) return 1;
+				if (a.price_sell !== 0 && b.price_sell === 0) return -1;
+
+				// both > 0 → sort ascending
+				return b.price_sell - a.price_sell;
 			}
 
 			if (column === 'provider') {
@@ -111,41 +134,80 @@
 			>
 				<tr>
 					<th class="px-4 py-6 md:text-[15px] w-10 hidden md:table-cell text-left">#</th>
-					<th class="px-4 py-6 md:text-[15px] text-left"
-						>Provider
-						<button
-							class="ml-2"
-							on:click={() => {
-								sortTable('provider');
-							}}
-							aria-label="Sort table"
-						>
-							<i class="fa fa-sort" />
-						</button>
+					<th class="px-4 py-6 md:text-[15px] text-left">
+						<span class="flex items-center">
+							Provider
+							<button
+								class="ml-2"
+								on:click={() => {
+									sortTable('provider');
+								}}
+								aria-label="Sort table"
+							>
+								<svg
+									xmlns="http://www.w3.org/2000/svg"
+									viewBox="0 0 20 20"
+									fill="currentColor"
+									class="size-5"
+								>
+									<path
+										fill-rule="evenodd"
+										d="M10.53 3.47a.75.75 0 0 0-1.06 0L6.22 6.72a.75.75 0 0 0 1.06 1.06L10 5.06l2.72 2.72a.75.75 0 1 0 1.06-1.06l-3.25-3.25Zm-4.31 9.81 3.25 3.25a.75.75 0 0 0 1.06 0l3.25-3.25a.75.75 0 1 0-1.06-1.06L10 14.94l-2.72-2.72a.75.75 0 0 0-1.06 1.06Z"
+										clip-rule="evenodd"
+									/>
+								</svg>
+							</button>
+						</span>
 					</th>
-					<th class="px-4 py-6 md:text-[15px] text-right"
-						>Buy
-						<button
-							class="ml-2"
-							on:click={() => {
-								sortTable('price_buy');
-							}}
-							aria-label="Sort table"
-						>
-							<i class="fa fa-sort" />
-						</button>
+					<th class="px-4 py-6 md:text-[15px] text-right">
+						<span class="inline-flex items-center">
+							Buy
+							<button
+								class="ml-2"
+								on:click={() => {
+									sortTable('price_buy');
+								}}
+								aria-label="Sort table"
+							>
+								<svg
+									xmlns="http://www.w3.org/2000/svg"
+									viewBox="0 0 20 20"
+									fill="currentColor"
+									class="size-5"
+								>
+									<path
+										fill-rule="evenodd"
+										d="M10.53 3.47a.75.75 0 0 0-1.06 0L6.22 6.72a.75.75 0 0 0 1.06 1.06L10 5.06l2.72 2.72a.75.75 0 1 0 1.06-1.06l-3.25-3.25Zm-4.31 9.81 3.25 3.25a.75.75 0 0 0 1.06 0l3.25-3.25a.75.75 0 1 0-1.06-1.06L10 14.94l-2.72-2.72a.75.75 0 0 0-1.06 1.06Z"
+										clip-rule="evenodd"
+									/>
+								</svg>
+							</button>
+						</span>
 					</th>
-					<th class="px-4 py-6 md:text-[15px] text-right"
-						>Sell
-						<button
-							class="ml-2"
-							on:click={() => {
-								sortTable('price_sell');
-							}}
-							aria-label="Sort table"
-						>
-							<i class="fa fa-sort" />
-						</button>
+					<th class="px-4 py-6 md:text-[15px] text-right">
+						<span class="inline-flex flex items-center">
+							Sell
+							<button
+								class="ml-2"
+								on:click={() => {
+									sortTable('price_sell');
+								}}
+								aria-label="Sort table"
+							>
+								<svg
+									xmlns="http://www.w3.org/2000/svg"
+									viewBox="0 0 20 20"
+									fill="currentColor"
+									class="size-5"
+								>
+									<path
+										fill-rule="evenodd"
+										d="M10.53 3.47a.75.75 0 0 0-1.06 0L6.22 6.72a.75.75 0 0 0 1.06 1.06L10 5.06l2.72 2.72a.75.75 0 1 0 1.06-1.06l-3.25-3.25Zm-4.31 9.81 3.25 3.25a.75.75 0 0 0 1.06 0l3.25-3.25a.75.75 0 1 0-1.06-1.06L10 14.94l-2.72-2.72a.75.75 0 0 0-1.06 1.06Z"
+										clip-rule="evenodd"
+									/>
+								</svg>
+							</button>
+						</span>
 					</th>
 					<th class="px-4 py-6 md:text-[15px] text-right">Last Updated</th>
 				</tr>
@@ -240,7 +302,18 @@
 						disabled={currentPage === 1}
 						aria-label="Previous page"
 					>
-						<i class="fa fa-chevron-left" />
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							viewBox="0 0 20 20"
+							fill="currentColor"
+							class="size-5"
+						>
+							<path
+								fill-rule="evenodd"
+								d="M11.78 5.22a.75.75 0 0 1 0 1.06L8.06 10l3.72 3.72a.75.75 0 1 1-1.06 1.06l-4.25-4.25a.75.75 0 0 1 0-1.06l4.25-4.25a.75.75 0 0 1 1.06 0Z"
+								clip-rule="evenodd"
+							/>
+						</svg>
 					</button>
 
 					{#each getPageButtons() as page}
@@ -268,7 +341,18 @@
 						disabled={currentPage === totalPages}
 						aria-label="Next page"
 					>
-						<i class="fa fa-chevron-right" />
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							viewBox="0 0 20 20"
+							fill="currentColor"
+							class="size-5"
+						>
+							<path
+								fill-rule="evenodd"
+								d="M8.22 5.22a.75.75 0 0 1 1.06 0l4.25 4.25a.75.75 0 0 1 0 1.06l-4.25 4.25a.75.75 0 0 1-1.06-1.06L11.94 10 8.22 6.28a.75.75 0 0 1 0-1.06Z"
+								clip-rule="evenodd"
+							/>
+						</svg>
 					</button>
 				</div>
 			{/if}

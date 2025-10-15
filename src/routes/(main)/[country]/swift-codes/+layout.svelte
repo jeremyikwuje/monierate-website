@@ -40,7 +40,7 @@
 
 <!-- partner -->
 <div class="bg-white dark:bg-gray-800">
-	<AdBanner name="footer" bannerIndexes={data.bannerIndexes} />
+	<AdBanner name="bank_codes" />
 </div>
 
 <slot />

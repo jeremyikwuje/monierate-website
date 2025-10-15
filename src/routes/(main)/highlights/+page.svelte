@@ -58,12 +58,12 @@
 		content="Stay updated with daily highlights of naira exchange rates across Nigeria’s top exchanges. Compare black market and CBN rates, monitor trends, and get alerts from Binance, Bybit, Quidax, and more."
 	/>
 	<meta property="og:url" content="https://monierate.com/highlights" />
-	<meta property="og:image" content="https://monierate.com/monierate-og-image.png" />
+	<meta property="og:image" content="https://monierate.com/media/og-images/highlights.webp" />
 </svelte:head>
 
 <!-- partner -->
 <div class="bg-white dark:bg-gray-800">
-	<AdBanner name="home" bannerIndexes={data.bannerIndexes} />
+	<AdBanner name="home" bannerIndexes={data.bannerIndexes} isMobile={data.isMobile}/>
 </div>
 
 <div class="container px-0">

@@ -126,10 +126,6 @@
 </script>
 
 <svelte:head>
-	<link
-		rel="stylesheet"
-		href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-	/>
 	<script>
 		// Forward the necessary functions to the web worker layer
 		partytown = {
@@ -166,28 +162,10 @@
 <div
 	id="top-banner"
 	tabindex="-1"
-	class="flex fixed top-0 mb-8 w-full z-50 gap-x-6 overflow-hidden bg-gray-50 px-6 py-3 sm:px-3.5 sm:before:flex-1"
+	class="flex fixed top-0 mb-8 w-full z-50 gap-x-6 overflow-hidden bg-[#d60505] px-6 py-5 sm:px-3.5 sm:before:flex-1"
 >
-	<div
-		class="absolute left-[max(-7rem,calc(50%-52rem))] top-1/2 -z-10 -translate-y-1/2 transform-gpu blur-2xl"
-		aria-hidden="true"
-	>
-		<div
-			class="aspect-[577/310] w-[36.0625rem] bg-gradient-to-r from-[#ff80b5] to-[#9089fc] opacity-30"
-			style="clip-path: polygon(74.8% 41.9%, 97.2% 73.2%, 100% 34.9%, 92.5% 0.4%, 87.5% 0%, 75% 28.6%, 58.5% 54.6%, 50.1% 56.8%, 46.9% 44%, 48.3% 17.4%, 24.7% 53.9%, 0% 27.9%, 11.9% 74.2%, 24.9% 54.1%, 68.6% 100%, 74.8% 41.9%)"
-		/>
-	</div>
-	<div
-		class="absolute left-[max(45rem,calc(50%+8rem))] top-1/2 -z-10 -translate-y-1/2 transform-gpu blur-2xl"
-		aria-hidden="true"
-	>
-		<div
-			class="aspect-[577/310] w-[36.0625rem] bg-gradient-to-r from-[#ff80b5] to-[#9089fc] opacity-30"
-			style="clip-path: polygon(74.8% 41.9%, 97.2% 73.2%, 100% 34.9%, 92.5% 0.4%, 87.5% 0%, 75% 28.6%, 58.5% 54.6%, 50.1% 56.8%, 46.9% 44%, 48.3% 17.4%, 24.7% 53.9%, 0% 27.9%, 11.9% 74.2%, 24.9% 54.1%, 68.6% 100%, 74.8% 41.9%)"
-		/>
-	</div>
 	<div class="flex flex-wrap items-center gap-x-4 gap-y-2">
-		<span class="text-sm leading-6 text-gray-900">
+		<span class="text-sm leading-6 text-gray-100">
 			<strong class="font-semibold hidden md:inline-block">{selected_partner_top.brand}</strong>
 			<svg
 				viewBox="0 0 2 2"
@@ -203,13 +181,13 @@
 			>
 			<a
 				href={selected_partner_top.link}
-				class="hidden md:inline-block rounded-full bg-gray-900 px-3.5 py-1 text-sm font-semibold text-white shadow-sm hover:bg-gray-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-900"
+				class="hidden md:inline-block rounded-full bg-gray-100 px-3.5 py-1 text-sm font-semibold text-red shadow-sm hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-100"
 			>
 				{selected_partner_top.cta} <span aria-hidden="true">&rarr;</span>
 			</a>
 			<a
 				href={selected_partner_top.link}
-				class="inline-block md:hidden break-word text-sm font-semibold text-sm text-gray-900 dark:text-gray-900 hover:underline text-wrap"
+				class="inline-block md:hidden break-word text-sm font-semibold text-sm text-gray-100 dark:text-gray-100 hover:underline text-wrap"
 			>
 				{selected_partner_top.brand}
 				<svg
@@ -274,10 +252,16 @@
 							aria-haspopup="true"
 							on:click={() => (showDropdown = !showDropdown)}
 						>
-							<i class="fas fa-user-circle text-2xl pr-2 md:pr-0" />
+							<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="size-5 text-2xl pr-2 md:pr-0">
+  <path fill-rule="evenodd" d="M18 10a8 8 0 1 1-16 0 8 8 0 0 1 16 0Zm-5.5-2.5a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0ZM10 12a5.99 5.99 0 0 0-4.793 2.39A6.483 6.483 0 0 0 10 16.5a6.483 6.483 0 0 0 4.793-2.11A5.99 5.99 0 0 0 10 12Z" clip-rule="evenodd" />
+</svg>
+
                             <span class="hidden md:inline-block px-2 text-sm font-bold inline-flex items-center">
                                 <span>Dashboard</span>
-                                <i class="fas fa-caret-down text-xs ml-1" />
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="size-5">
+  <path fill-rule="evenodd" d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
+</svg>
+
                             </span>
 						</button>
 						{#if showDropdown}
@@ -291,14 +275,17 @@
 									class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-700"
 									role="menuitem"
 								>
-									<i class="fas fa-user mr-2" /> Account
+									<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="size-5">
+  <path d="M10 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6ZM3.465 14.493a1.23 1.23 0 0 0 .41 1.412A9.957 9.957 0 0 0 10 18c2.31 0 4.438-.784 6.131-2.1.43-.333.604-.903.408-1.41a7.002 7.002 0 0 0-13.074.003Z" />
+</svg>
+ Account
 								</a>
 								<a
 									href="https://account.monierate.com/logout"
 									class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-700"
 									role="menuitem"
 								>
-									<i class="fas fa-sign-out-alt mr-2" /> Logout
+									 Logout
 								</a>
 							</div>
 						{/if}
@@ -476,7 +463,7 @@
 
 <div class="bg-white dark:bg-gray-800">
 	<div class="top-landscape mb-8">
-		<AdBanner name="footer" />
+		<AdBanner name="footer" isMobile={data.isMobile}/>
 	</div>
 </div>
 
@@ -712,7 +699,7 @@
 					<div class="w-auto">
 						<a
 							class="flex items-center justify-center rounded-md border border-transparent bg-white px-4 py-2 text-sm font-medium text-gray-700 shadow-sm hover:bg-gray-50 dark:bg-gray-800 dark:text-gray-100 dark:hover:bg-gray-900"
-							href="https://tinyurl.com/cedar-sticky-header-link"
+							href="https://tinyurl.com/cambridge-currences-top-banner"
 							>Send Money
 						</a>
 					</div>

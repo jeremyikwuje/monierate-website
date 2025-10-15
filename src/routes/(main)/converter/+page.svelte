@@ -268,7 +268,7 @@
 </svelte:head>
 
 <div class="bg-white dark:bg-gray-800">
-	<AdBanner name="converter" />
+	<AdBanner name="converter" isMobile={data.isMobile} />
 </div>
 
 <div class="mb-24">

@@ -11,6 +11,7 @@
 	export let showLabel: boolean = false;
 	// Get server-provided banner index from data (if available)
 	export let bannerIndexes: any = {};
+	export let isMobile: boolean = false;
 
 	let banners: any[] = [];
 	let current = 0;
@@ -85,9 +86,13 @@
 									(banners[current].formats ?? [getExtension(banners[current].image)]).at(-1)
 								)}?v={banners[current]._v}"
 								alt={banners[current].label ?? 'Advertisement'}
-								style="width: {width ?? banners[current].width ?? '800px'}; height: {height ??
-									banners[current].height ??
-									'99px'};"
+								style="width: {width ??
+									(isMobile
+										? banners[current].mobileWidth ?? '700px'
+										: banners[current].width ?? '800px')}; height: {height ??
+									(isMobile
+										? banners[current].mobileHeight ?? '70px'
+										: banners[current].height ?? '99px')};"
 								class="w-full"
 							/>
 						</picture>
@@ -106,9 +111,13 @@
 								(banners[current].formats ?? [getExtension(banners[current].image)]).at(-1)
 							)}?v={banners[current]._v}"
 							alt={banners[current].label ?? 'Advertisement'}
-							style="width: {width ?? banners[current].width ?? '800px'}; height: {height ??
-								banners[current].height ??
-								'99px'};"
+							style="width: {width ??
+								(isMobile
+									? banners[current].mobileWidth ?? '700px'
+									: banners[current].width ?? '800px')}; height: {height ??
+								(isMobile
+									? banners[current].mobileHeight ?? '70px'
+									: banners[current].height ?? '99px')};"
 							class="mx-auto max-w-full"
 						/>
 					</picture>
