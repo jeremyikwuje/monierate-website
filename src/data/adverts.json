@@ -13,12 +13,6 @@
 	},
 	"blog": [
 		{
-			"url": "https://tinyurl.com/cedar-monierate-banner",
-			"image": "/media/banners/cedar-blog-1.gif",
-			"label": "Cedar",
-			"width": "420px"
-		},
-		{
 			"url": "https://tinyurl.com/ipay-btc-signup-link",
 			"image": "/media/banners/ipaybtc-2.gif",
 			"label": "iPayBTC",
@@ -29,18 +23,6 @@
 			"image": "/media/banners/oneremit.png",
 			"label": "OneRemit",
 			"width": "400px"
-		},
-		{
-			"url": "https://tinyurl.com/cedar-monierate-banner",
-			"image": "/media/banners/cedar-blog-2.gif",
-			"label": "Cedar",
-			"width": "420px"
-		},
-		{
-			"url": "https://tinyurl.com/cedar-monierate-banner",
-			"image": "/media/banners/cedar-blog-3.gif",
-			"label": "Cedar",
-			"width": "420px"
 		}
 	],
 	"home": {
