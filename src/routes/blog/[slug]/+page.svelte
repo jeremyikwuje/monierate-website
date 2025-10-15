@@ -8,13 +8,6 @@
 	const metadata = data.metadata;
 	const adverts = data.adverts;
 
-	const infolinksAd = () => {
-		const input = document.createElement('input');
-		input.type = 'hidden';
-		input.name = 'IL_IN_ARTICLE';
-		return input;
-	};
-
 	function shuffleArray(arr: any[]) {
 		for (let i = arr.length - 1; i > 0; i--) {
 			const j = Math.floor(Math.random() * (i + 1));
@@ -34,10 +27,7 @@
 		const numberOfAdverts = advertArray.length;
 
 		headings?.forEach((heading, index) => {
-			if(index === 0) {
-				const infolinksElement = infolinksAd();
-				heading.parentNode?.insertBefore(infolinksElement, heading);
-			} else if (numberOfAdverts > 0 && index < numberOfAdverts + 1) {
+			if (numberOfAdverts > 0 && index < numberOfAdverts + 1) {
 				const advert = advertArray[index] as {
 					label: string;
 					image: string;
@@ -75,9 +65,6 @@
 				link.appendChild(container);
 
 				heading.parentNode?.insertBefore(link, heading);
-			} else {
-				const infolinksElement = infolinksAd();
-				heading.parentNode?.insertBefore(infolinksElement, heading);
 			}
 		});
 	});
