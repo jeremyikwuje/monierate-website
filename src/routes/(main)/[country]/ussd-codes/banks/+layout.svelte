@@ -104,9 +104,9 @@
 					</ul>
 				</div>
 
-				<FAQ {faqItems} />
+				<FAQ {faqItems} useContainer={false}/>
 
-				<div class="container mt-5">
+				<div class="mt-5">
 					<h3 class="text-2xl font-bold mb-4">Disclaimer</h3>
 					<p class="text-sm mb-4">
 						The tools provided on this website are for informational purposes only. While we strive
