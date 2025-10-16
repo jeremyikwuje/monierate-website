@@ -103,18 +103,18 @@
 						<li class="text-sm mb-4">Set up a PIN for secure transactions.</li>
 					</ul>
 				</div>
+
+				<FAQ {faqItems} />
+
+				<div class="container mt-5">
+					<h3 class="text-2xl font-bold mb-4">Disclaimer</h3>
+					<p class="text-sm mb-4">
+						The tools provided on this website are for informational purposes only. While we strive
+						for accuracy, we cannot guarantee the correctness of the data. Always verify SWIFT codes
+						with your bank, especially for important or time-sensitive transactions.
+					</p>
+				</div>
 			</div>
 		</div>
 	</div>
-</div>
-
-<FAQ {faqItems} />
-
-<div class="container mt-5">
-	<h3 class="text-2xl font-bold mb-4">Disclaimer</h3>
-	<p class="text-sm mb-4">
-		The tools provided on this website are for informational purposes only. While we strive for
-		accuracy, we cannot guarantee the correctness of the data. Always verify SWIFT codes with your
-		bank, especially for important or time-sensitive transactions.
-	</p>
 </div>
