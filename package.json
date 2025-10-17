@@ -2,6 +2,9 @@
 	"name": "monierate-website",
 	"version": "0.0.1",
 	"private": true,
+	"engines": {
+		"node": ">=20"
+	},
 	"scripts": {
 		"dev": "vite dev",
 		"build": "vite build",
@@ -44,6 +47,7 @@
 		"currency.js": "^2.0.4",
 		"date-and-time": "^3.0.2",
 		"mathjs": "^11.8.0",
+		"picomatch": "4.0.3",
 		"superjson": "^1.13.1",
 		"svelte-copy": "^2.0.0",
 		"svelte-gestures": "^1.4.1",
