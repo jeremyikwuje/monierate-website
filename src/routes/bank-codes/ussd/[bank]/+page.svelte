@@ -42,6 +42,10 @@
 		content="List of all {bank.name} USSD Codes codes for your mobile banking."
 	/>
 	<meta property="og:url" content="https://monierate.com/bank-codes/ussd" />
+	<meta
+		property="og:image"
+		content="https://monierate.com/uploads/monierate-ussd-code-og-image.png"
+	/>
 </svelte:head>
 
 <div class="mb-8 space-y-8">
