@@ -1,10 +1,10 @@
 {
 	"footer": {
 		"name": "",
-		"url": "https://tinyurl.com/2xr8ysdd",
-		"image": "/media/banners/oneremit-landscape.webp",
-		"formats": ["webp", "png"],
-		"label": "Oneremit",
+		"url": "https://tinyurl.com/2vy69z82",
+		"image": "/media/banners/spenda-landscape.avif",
+		"formats": ["avif", "gif"],
+		"label": "Spenda",
 		"mobile_only": false,
 		"mobileWidth": "100%",
 		"mobileHeight": "70px",
@@ -19,9 +19,15 @@
 			"width": "400px"
 		},
 		{
-			"url": "https://tinyurl.com/2xr8ysdd",
-			"image": "/media/banners/oneremit.png",
-			"label": "OneRemit",
+			"url": "https://tinyurl.com/2vy69z82",
+			"image": "/media/banners/spenda-small.avif",
+			"label": "Spenda",
+			"width": "400px"
+		},
+		{
+			"url": "https://tinyurl.com/2vy69z82",
+			"image": "/media/banners/spenda.avif",
+			"label": "Spenda",
 			"width": "400px"
 		}
 	],
@@ -51,10 +57,10 @@
 	},
 	"converter": {
 		"name": "",
-		"url": "https://tinyurl.com/2xr8ysdd",
-		"image": "/media/banners/oneremit-landscape.webp",
-		"formats": ["webp", "png"],
-		"label": "Oneremit",
+		"url": "https://tinyurl.com/2vy69z82",
+		"image": "/media/banners/spenda-landscape.avif",
+		"formats": ["avif", "gif"],
+		"label": "Spenda",
 		"mobileWidth": "100%",
 		"mobileHeight": "70px",
 		"mobile_only": false,
@@ -63,10 +69,12 @@
 	},
 	"blog_home": {
 		"name": "",
-		"url": "https://tinyurl.com/2xr8ysdd",
-		"image": "/media/banners/oneremit-landscape.webp",
-		"formats": ["webp", "png"],
-		"label": "Oneremit",
+		"url": "https://tinyurl.com/2vy69z82",
+		"image": "/media/banners/spenda-landscape.avif",
+		"formats": ["avif", "gif"],
+		"label": "Spenda",
+		"mobileWidth": "100%",
+		"mobileHeight": "70px",
 		"mobile_only": false,
 		"disabled": false,
 		"_v": 1
