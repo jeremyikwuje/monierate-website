@@ -102,6 +102,27 @@
 	} catch (error) {
 		console.log(error);
 	}
+
+	/*
+	 * this code is to remove the old service worker from users browser since we moved to sveltekit's built in service worker support.
+	 * This is a one-time operation and should be removed after the old service worker is unregistered.
+	 * This code should be removed in 60 days.
+	 * Start date: 19th May, 2025 (Tuesday).
+	 * End date: July 18, 2025 (Friday).
+	 */
+	if ('serviceWorker' in navigator) {
+		navigator.serviceWorker.getRegistrations().then((registrations) => {
+			for (const registration of registrations) {
+				if (registration.active?.scriptURL.includes('/sw.js')) {
+					registration.unregister().then((success) => {
+						if (success) {
+							console.log('✅ Unregistered old service worker: /sw.js');
+						}
+					});
+				}
+			}
+		});
+	}
 </script>
 
 <svelte:head>
@@ -481,8 +502,8 @@
 					>
 				</li>
 				<li>
-					<a data-sveltekit-reload href="/converter/klasha?Amount=1&From=USD&To=NGN"
-						>Convert USD on Klasha</a
+					<a data-sveltekit-reload href="/converter/boundlesspay?Amount=1&From=USDT&To=NGN"
+						>Convert USDT on Boundlesspay</a
 					>
 				</li>
 				<li>
