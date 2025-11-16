@@ -102,6 +102,27 @@
 	} catch (error) {
 		console.log(error);
 	}
+
+	/*
+	 * this code is to remove the old service worker from users browser since we moved to sveltekit's built in service worker support.
+	 * This is a one-time operation and should be removed after the old service worker is unregistered.
+	 * This code should be removed in 60 days.
+	 * Start date: 19th May, 2025 (Tuesday).
+	 * End date: July 18, 2025 (Friday).
+	 */
+	if ('serviceWorker' in navigator) {
+		navigator.serviceWorker.getRegistrations().then((registrations) => {
+			for (const registration of registrations) {
+				if (registration.active?.scriptURL.includes('/sw.js')) {
+					registration.unregister().then((success) => {
+						if (success) {
+							console.log('✅ Unregistered old service worker: /sw.js');
+						}
+					});
+				}
+			}
+		});
+	}
 </script>
 
 <svelte:head>
@@ -126,12 +147,6 @@
 		gtag('js', new Date());
 		gtag('config', 'G-59H6DBC82L');
 	</script>
-
-	<script type="text/javascript">
-		var infolinks_pid = 3436231;
-		var infolinks_wsid = 0;
-	</script>
-	<script type="text/javascript" src="//resources.infolinks.com/js/infolinks_main.js"></script>
 </svelte:head>
 
 <LoadingIndicator />
@@ -141,7 +156,7 @@
 <div
 	id="top-banner"
 	tabindex="-1"
-	class="flex fixed top-0 mb-8 w-full z-50 gap-x-6 overflow-hidden bg-[#d60505] px-6 py-3 sm:px-3.5 sm:before:flex-1"
+	class="flex fixed top-0 mb-8 w-full z-50 gap-x-6 overflow-hidden bg-[#d60505] px-6 py-5 sm:px-3.5 sm:before:flex-1"
 >
 	<div class="flex flex-wrap items-center gap-x-4 gap-y-2">
 		<span class="text-sm leading-6 text-gray-100">
@@ -187,7 +202,7 @@
 			</a>
 		</span>
 	</div>
-	<div class="flex flex-1 justify-end" />
+	<div class="flex flex-1 justify-end"> </div>
 </div>
 
 <header class="mb-0 mt-16">
@@ -438,7 +453,7 @@
 
 <slot />
 
-<div class="w-full h-1 mt-16 dark:border-gray-900" />
+<div class="w-full h-1 mt-16 dark:border-gray-900"> </div>
 
 <div class="bg-white dark:bg-gray-800">
 	<div class="top-landscape mb-8">
@@ -487,8 +502,8 @@
 					>
 				</li>
 				<li>
-					<a data-sveltekit-reload href="/converter/klasha?Amount=1&From=USD&To=NGN"
-						>Convert USD on Klasha</a
+					<a data-sveltekit-reload href="/converter/boundlesspay?Amount=1&From=USDT&To=NGN"
+						>Convert USDT on Boundlesspay</a
 					>
 				</li>
 				<li>
