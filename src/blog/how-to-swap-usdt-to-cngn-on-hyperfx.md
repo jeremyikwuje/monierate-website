@@ -10,7 +10,7 @@ published: true
 author: Tim Bolarinwa
 ---
 
-
+![HyperFX - Stablecoin FX at Hyper Speed](https://ik.imagekit.io/monierate/Blog/product/hyperfx.webp?updatedAt=1789494189039)
 
 Converting cNGN to USDT is straightforward when you know the amount you want to swap and the rate you'll get. Hyper FX gives you a quote based on your exact amount, without the need to search an order book or find a P2P counterparty.
 
