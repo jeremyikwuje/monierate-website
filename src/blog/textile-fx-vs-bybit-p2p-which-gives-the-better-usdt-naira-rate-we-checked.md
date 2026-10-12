@@ -2,8 +2,8 @@
 layout: blog
 title: 'Textile FX vs Bybit P2P: Which Gives the Better USDT/Naira Rate? We Checked'
 description: 'Textile FX or Bybit P2P? We compared live USDT/Naira rates both ways: Textile FX paid more when selling, Bybit edged it when buying. See the numbers and fees.'
-createdAt: 2026-10-12T19:22:00
-updatedAt: 2026-10-12T19:22:00
+createdAt: 2026-10-13T09:22:00
+updatedAt: 2026-10-13T19:22:00
 tag: guide
 image: ''
 published: true
