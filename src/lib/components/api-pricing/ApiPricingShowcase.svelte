@@ -98,7 +98,7 @@
 {#each sections as s, i}
 	<section class="py-14" style={i % 2 === 0 ? 'background: var(--table-header-bg);' : ''}>
 		<div class="container">
-			<div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-16 items-center max-w-6xl mx-auto">
+			<div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-16 items-center">
 				<div class={i % 2 === 0 ? 'md:order-1' : 'md:order-2'}>
 					<ShowcaseVisual variant={s.visual} />
 				</div>

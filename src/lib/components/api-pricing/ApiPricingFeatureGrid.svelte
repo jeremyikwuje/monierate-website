@@ -76,7 +76,7 @@
 		</p>
 	</div>
 
-	<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-10 max-w-6xl mx-auto">
+	<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-10">
 		{#each features as f}
 			<div class="text-center px-2">
 				<div class="w-14 h-14 mx-auto mb-4 rounded-2xl flex items-center justify-center" style="background: var(--accent-light);">

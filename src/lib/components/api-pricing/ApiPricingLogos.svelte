@@ -33,7 +33,7 @@
 			Live rates aggregated from the providers Nigerians actually use, and 90+ more.
 		</p>
 
-		<div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 gap-x-4 gap-y-6 max-w-5xl mx-auto">
+		<div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 gap-x-4 gap-y-6">
 			{#each providers as p}
 				<div class="flex items-center justify-center gap-2 min-w-0" title={p.name}>
 					<img src="/icons/svg/{p.icon}" alt={p.name} width="24" height="24" loading="lazy" class="w-6 h-6 rounded object-contain shrink-0" />

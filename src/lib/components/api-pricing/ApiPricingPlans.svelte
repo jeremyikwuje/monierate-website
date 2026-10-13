@@ -115,7 +115,7 @@
 		</div>
 
 		<!-- Controls -->
-		<div class="card rounded-2xl p-5 mb-6 max-w-6xl mx-auto flex flex-col md:flex-row md:items-center gap-5">
+		<div class="card rounded-2xl p-5 mb-6 flex flex-col md:flex-row md:items-center gap-5">
 			<div class="flex-1 min-w-0">
 				<label for="req-slider" class="font-head block text-sm font-semibold mb-3" style="color: var(--text-primary);">
 					I want <span style="color: var(--accent);">{formatNumber(volume)}</span> requests / month
@@ -157,7 +157,7 @@
 				Pricing is unavailable right now. <a href="/pricing" style="color: var(--accent);" class="hover:underline">See all plans</a>.
 			</p>
 		{:else}
-			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 max-w-6xl mx-auto">
+			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
 				{#each apiPlans as plan (plan.code)}
 					{@const best = plan.code === bestCode}
 					{@const cost = monthlyCost(plan)}

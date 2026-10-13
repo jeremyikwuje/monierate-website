@@ -24,7 +24,7 @@
 		class="w-full z-20 top-0 left-0"
 		style="background: var(--page-bg); border-bottom: 1px solid var(--card-border);"
 	>
-		<div class="w-[95%] md:max-w-[1500px] flex flex-wrap items-center justify-between mx-auto p-4">
+		<div class="w-[95%] md:max-w-[1200px] flex flex-wrap items-center justify-between mx-auto p-4">
 			<a href="/" class="flex items-center gap-2">
 				<!-- Mobile: favicon (light mode) -->
 				<img
