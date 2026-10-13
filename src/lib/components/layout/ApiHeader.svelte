@@ -1,6 +1,5 @@
 <script lang="ts">
 	import { navigating } from '$app/stores';
-	import { login_uri } from '$lib/functions';
 	import { ACCOUNT_URL } from '$lib/config';
 
 	let { auth = null }: { auth?: { isLoggedIn: boolean; user: any } | null } = $props();
@@ -8,8 +7,6 @@
 	const DOCS_URL = 'https://docs.monierate.com';
 
 	const links = [
-		{ label: 'Overview', href: '/api' },
-		{ label: 'Pricing', href: '#pricing' },
 		{ label: 'Docs', href: DOCS_URL, external: true },
 		{ label: 'FAQ', href: '#faq' }
 	];
@@ -22,7 +19,7 @@
 	});
 </script>
 
-<header class="mb-0 mt-16">
+<header class="mb-0">
 	<nav
 		class="w-full z-20 top-0 left-0"
 		style="background: var(--page-bg); border-bottom: 1px solid var(--card-border);"
@@ -61,7 +58,6 @@
 					class="hidden md:dark:block h-auto w-[142px]"
 					alt="Monierate Logo"
 				/>
-				<span class="api-badge">API</span>
 			</a>
 
 			<div class="flex items-center md:order-2">
@@ -76,14 +72,6 @@
 					</a>
 				{:else}
 					<a
-						href={login_uri()}
-						target="_blank"
-						rel="noopener noreferrer"
-						class="px-4 py-2.5 rounded-xl font-head font-semibold text-sm hidden md:inline-block md:mr-3"
-						style="background: transparent; border: 1px solid var(--card-border); color: var(--text-primary);"
-					>
-						Login
-					</a><a
 						href="{ACCOUNT_URL}/auth/signup"
 						target="_blank"
 						rel="noopener noreferrer"
@@ -137,11 +125,6 @@
 							</a>
 						</li>
 					{/each}
-					{#if !auth?.isLoggedIn}
-						<li class="md:hidden">
-							<a href={login_uri()} target="_blank" rel="noopener noreferrer">Login</a>
-						</li>
-					{/if}
 				</ul>
 			</div>
 		</div>
@@ -149,16 +132,6 @@
 </header>
 
 <style>
-	.api-badge {
-		font-family: var(--font-head);
-		font-size: 0.7rem;
-		font-weight: 700;
-		letter-spacing: 0.05em;
-		padding: 0.15rem 0.5rem;
-		border-radius: 0.5rem;
-		color: var(--accent);
-		border: 1px solid var(--accent);
-	}
 	.nav-link {
 		@apply flex flex-col p-4 md:p-0 mt-4 md:flex-row md:space-x-8 md:mt-0;
 	}

@@ -55,10 +55,10 @@
 </script>
 
 <LoadingIndicator />
-<TopBanner />
 {#if isMarketingPage}
 	<ApiHeader auth={data.auth} />
 {:else}
+	<TopBanner />
 	<Header bind:defaultCurrency={defaultCurrency} auth={data.auth} />
 	<MarketTicker top_pairs={top_pairs} />
 {/if}
