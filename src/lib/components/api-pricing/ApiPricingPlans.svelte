@@ -15,8 +15,8 @@
 			tagline: 'Only pay when you call the API.',
 			cta: 'Get Started Free',
 			features: [
-				'$10 free credit on signup',
-				'$0.01 per API request',
+				'100 free requests on signup',
+				'$0.01 per request after that',
 				'No monthly request cap',
 				'Market Insight, view only',
 				'Analytics Dashboard, view only',
@@ -83,7 +83,7 @@
 	});
 
 	function displayPrice(plan: any): string {
-		if (plan.billing_model === 'usage') return '$0';
+		if (plan.billing_model === 'usage') return `$${PAYG_PER_REQUEST}`;
 		const v = billing === 'yearly' && plan.prices_by_cycle?.yearly?.usd ? plan.prices_by_cycle.yearly.usd / 12 : plan.price_usd;
 		return `$${Math.round(v)}`;
 	}
@@ -110,7 +110,7 @@
 			<p class="text-sm max-w-2xl mx-auto leading-relaxed" style="color: var(--text-secondary);">
 				All accounts get live rates from 90+ providers and the full dashboard.
 				<a href="{ACCOUNT_URL}/auth/signup" target="_blank" rel="noopener noreferrer" class="font-semibold hover:underline" style="color: var(--accent);">Get a free API key</a>
-				with $10 of credit and pay per request, or switch to a flat plan when your volume grows.
+				with your first 100 requests free, then pay $0.01 per request, or switch to a flat plan when your volume grows.
 			</p>
 		</div>
 
@@ -178,7 +178,7 @@
 							<div class="mb-1">
 								<span class="price font-bold" style="color: var(--text-primary);">{displayPrice(plan)}</span>
 								<span class="text-[12px] ml-1" style="color: var(--text-muted);">
-									{plan.billing_model === 'usage' ? 'no monthly fee' : billing === 'yearly' ? '/ month, billed yearly' : '/ month'}
+									{plan.billing_model === 'usage' ? '/ request, no monthly fee' : billing === 'yearly' ? '/ month, billed yearly' : '/ month'}
 								</span>
 							</div>
 							<div class="text-[11px] mb-4 min-h-[1rem]" style="color: var(--text-muted);">

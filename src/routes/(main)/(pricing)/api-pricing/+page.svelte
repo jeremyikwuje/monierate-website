@@ -10,39 +10,34 @@
 	let { data } = $props();
 
 	const plans = $derived((data.subscriptionPlans as any[]) || []);
-
-	// Cheapest flat plan, for the "from only $X/month" hero line
-	const fromPrice = $derived.by(() => {
-		const flat = plans.filter((p) => p.billing_model === 'flat' && p.price_usd > 0);
-		if (!flat.length) return null;
-		const p = flat.reduce((a, b) => (a.price_usd < b.price_usd ? a : b));
-		return p.prices_by_cycle?.yearly?.usd ? Math.round(p.prices_by_cycle.yearly.usd / 12) : p.price_usd;
-	});
 </script>
 
 <svelte:head>
 	<title>Exchange Rate API Pricing | Live Naira Rates from 90+ Providers | Monierate</title>
 	<meta
 		name="description"
-		content="Fast, reliable exchange rate API for Naira. Live stablecoin, official and parallel market rates from 90+ providers. Start free with $10 credit, then pick a flat monthly plan."
+		content="Fast, reliable exchange rate API for Naira. Live stablecoin, official and parallel market rates from 90+ providers. Your first 100 requests are free, then $0.01 per request, or pick a flat monthly plan."
 	/>
 	<meta property="og:type" content="website" />
 	<meta property="og:title" content="Exchange Rate API Pricing | Monierate" />
 	<meta
 		property="og:description"
-		content="Live Naira exchange rates from 90+ providers in one JSON API. Start free, pay per request or choose a flat plan."
+		content="Live Naira exchange rates from 90+ providers in one JSON API. First 100 requests free, then $0.01 per request, or choose a flat plan."
 	/>
 	<meta property="og:url" content="https://monierate.com/api-pricing" />
 	<meta property="og:image" content="https://monierate.com/monierate-og-image.png" />
 	<link rel="canonical" href="https://monierate.com/api-pricing" />
 </svelte:head>
 
-<ApiPricingHero {fromPrice} />
+<ApiPricingHero />
 <ApiPricingLogos />
 <ApiPricingFeatureGrid />
 <ApiPricingShowcase />
 <ApiPricingPlans {plans} />
 <div id="faq" class="scroll-mt-6">
-	<ApiFaq fullWidth />
+	<ApiFaq
+		fullWidth
+		freeTierAnswer="Yes. Every new account gets 100 free API requests, once, on signup. No card needed. After those 100, each request costs $0.01, or you can move to a flat monthly plan. The dashboard is free forever."
+	/>
 </div>
-<ApiCta />
+<ApiCta subtitle="Create a free account and get your API key in minutes. Your first 100 requests are free, no card required." />

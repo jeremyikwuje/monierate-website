@@ -1,5 +1,10 @@
 <script lang="ts">
-	const items = [
+	// api-pricing lays every section out at the full container width
+	export let fullWidth = false;
+	// api-pricing overrides the free tier answer with its own pricing
+	export let freeTierAnswer: string | null = null;
+
+	$: items = [
 		{
 			q: 'What currencies and markets are supported?',
 			a: 'Official, mid-market, and black market NGN rates from 90+ providers — Binance P2P, Bybit, Luno, Quidax, Chipper Cash, and more. Stablecoins (USDT, USDC) and fiat (USD, EUR, GBP) included.'
@@ -14,7 +19,9 @@
 		},
 		{
 			q: 'Is there a free tier?',
-			a: 'Yes. Every new account starts with a $10 wallet credit — no card needed. The dashboard is free forever. You only pay when you make API calls, export data, or execute offramp trades.'
+			a:
+				freeTierAnswer ??
+				'Yes. Every new account starts with a $10 wallet credit — no card needed. The dashboard is free forever. You only pay when you make API calls, export data, or execute offramp trades.'
 		},
 		{
 			q: 'How does billing work?',
@@ -25,9 +32,6 @@
 			a: 'Yes. Wallet top-ups and plan subscriptions can be settled in either NGN or USD.'
 		}
 	];
-
-	// api-pricing lays every section out at the full container width
-	export let fullWidth = false;
 
 	let open: number | null = null;
 

@@ -1,12 +1,10 @@
 <script lang="ts">
 	import { ACCOUNT_URL } from '$lib/config';
 
-	let { fromPrice = null }: { fromPrice?: number | null } = $props();
-
 	const highlights = [
 		{
 			title: 'Simple, Great Value Pricing',
-			body: 'Start free with $10 credit. Flat monthly plans when you need volume.',
+			body: 'Your first 100 requests are free, then $0.01 per request. Flat monthly plans when you need volume.',
 			icon: 'M12 1v22M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6'
 		},
 		{
@@ -31,7 +29,7 @@
 				Exchange Rate API<br />
 				<span style="color: var(--accent);">FAST</span>
 				<span class="hero-sub not-italic font-bold" style="color: var(--text-primary);">
-					(from only {fromPrice ? `$${fromPrice}/month` : 'free'})
+					(from only $0.01/request)
 				</span>
 			</h1>
 
