@@ -8,6 +8,7 @@
 	import LoadingIndicator from '$lib/components/LoadingIndicator.svelte';
 	import TopBanner from '$lib/components/banners/TopBanner.svelte';
 	import Header from '$lib/components/layout/Header.svelte';
+	import ApiHeader from '$lib/components/layout/ApiHeader.svelte';
 	import Footer from '$lib/components/layout/Footer.svelte';
 	import MarketTicker from '$lib/components/layout/MarketTicker.svelte';
 	import Breadcrumb from '$lib/components/layout/Breadcrumb.svelte';
@@ -22,7 +23,7 @@
 	$: top_pairs = data.top_pairs;
 	$: defaultCurrency = data.defaultCurrency;
 
-	// Marketing pages that don't use rates: hide the ticker and currency selector
+	// API marketing pages: swap the default header and ticker for the API header
 	const marketingPages = ['/api-pricing'];
 	$: isMarketingPage = marketingPages.includes($page.url.pathname);
 
@@ -55,8 +56,10 @@
 
 <LoadingIndicator />
 <TopBanner />
-<Header bind:defaultCurrency={defaultCurrency} auth={data.auth} showCurrencySelector={!isMarketingPage} />
-{#if !isMarketingPage}
+{#if isMarketingPage}
+	<ApiHeader auth={data.auth} />
+{:else}
+	<Header bind:defaultCurrency={defaultCurrency} auth={data.auth} />
 	<MarketTicker top_pairs={top_pairs} />
 {/if}
 <Breadcrumb />

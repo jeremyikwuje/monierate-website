@@ -42,5 +42,7 @@
 <ApiPricingFeatureGrid />
 <ApiPricingShowcase />
 <ApiPricingPlans {plans} />
-<ApiFaq />
+<div id="faq" class="scroll-mt-6">
+	<ApiFaq />
+</div>
 <ApiCta />
