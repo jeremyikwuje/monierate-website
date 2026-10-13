@@ -23,15 +23,15 @@
 		}
 	]);
 
-	// Request and response taken from docs.monierate.com/api-reference/rates/latest
-	const path = '/core/rates/latest.json?base=USD&market=parallel&fallback=mid';
-	const url = `https://api.monierate.com${path}`;
+	// Single-quote example from docs.monierate.com/api-reference/rates/latest (response trimmed)
+	const url = 'https://api.monierate.com/core/rates/latest.json?base=USD&quote=NGN';
 
 	const tabs = [
 		{
 			id: 'curl',
 			label: 'cURL',
-			code: `<span class="p">$</span> curl <span class="s">"${url}"</span> \\
+			code: `<span class="p">$</span> curl \\
+  <span class="s">"${url}"</span> \\
   -H <span class="s">"api_key: YOUR_API_KEY"</span>`
 		},
 		{
@@ -124,34 +124,16 @@ data = res.<span class="fn">json</span>()[<span class="s">"data"</span>]`
 				<span class="status"><span class="dot"></span>200 OK</span>
 			</div>
 
-			<div class="request">
-				<span class="method">GET</span>
-				<span class="path">{path}</span>
-			</div>
-
 			<pre class="code"><code>{@html activeTab.code}</code></pre>
 
 			<div class="divider"><span>Response</span></div>
 
 			<pre class="code"><code>{'{'}
   <span class="k">"status"</span>: <span class="s">"success"</span>,
-  <span class="k">"message"</span>: <span class="s">"retrieved"</span>,
   <span class="k">"data"</span>: {'{'}
-    <span class="k">"timestamp"</span>: <span class="n">1717689600000</span>,
     <span class="k">"base"</span>: <span class="s">"USD"</span>,
-    <span class="k">"market"</span>: <span class="s">"parallel"</span>,
-    <span class="k">"rates"</span>: {'{'}
-      <span class="k">"EUR"</span>: <span class="n">0.87</span>,
-      <span class="k">"GHS"</span>: <span class="n">11.76</span>,
-      <span class="k">"KES"</span>: <span class="n">126.85</span>,
-      <span class="k">"NGN"</span>: <span class="n">1374.06</span>
-    {'}'},
-    <span class="k">"sources"</span>: {'{'}
-      <span class="k">"EUR"</span>: <span class="s">"mid"</span>,
-      <span class="k">"GHS"</span>: <span class="s">"parallel"</span>,
-      <span class="k">"KES"</span>: <span class="s">"parallel"</span>,
-      <span class="k">"NGN"</span>: <span class="s">"parallel"</span>
-    {'}'}
+    <span class="k">"market"</span>: <span class="s">"mid"</span>,
+    <span class="k">"rates"</span>: <span class="n">1480.25</span>
   {'}'}
 {'}'}</code></pre>
 		</div>
@@ -228,29 +210,6 @@ data = res.<span class="fn">json</span>()[<span class="s">"data"</span>]`
 		border-radius: 50%;
 		background: #4ade80;
 	}
-	.request {
-		display: flex;
-		align-items: center;
-		gap: 10px;
-		margin: 16px 18px 0;
-		padding: 9px 12px;
-		border-radius: 8px;
-		background: #121a33;
-		border: 1px solid #1e2640;
-		font-family: var(--font-mono);
-		font-size: 12.5px;
-	}
-	.method {
-		color: #4ade80;
-		font-weight: 700;
-	}
-	.path {
-		color: #e2e8f0;
-		min-width: 0;
-		overflow: hidden;
-		text-overflow: ellipsis;
-		white-space: nowrap;
-	}
 	.code {
 		margin: 0;
 		padding: 16px 18px;
@@ -258,9 +217,12 @@ data = res.<span class="fn">json</span>()[<span class="s">"data"</span>]`
 		font-size: 12.5px;
 		line-height: 1.7;
 		color: #cbd5e1;
-		overflow-x: auto;
-		white-space: pre;
+		/* wrap long URLs instead of scrolling sideways */
+		white-space: pre-wrap;
+		overflow-wrap: anywhere;
 	}
+	/* the site sets a body font on every span; keep the code monospaced */
+	.code :global(span) { font-family: inherit; }
 	.divider {
 		display: flex;
 		align-items: center;
