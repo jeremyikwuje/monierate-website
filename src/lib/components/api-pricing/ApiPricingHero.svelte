@@ -1,10 +1,13 @@
 <script lang="ts">
 	import { ACCOUNT_URL } from '$lib/config';
+	import { perRequestLabel, type PricingCurrency } from './currency';
 
-	const highlights = [
+	let { currency }: { currency: PricingCurrency } = $props();
+
+	const highlights = $derived([
 		{
 			title: 'Simple, Great Value Pricing',
-			body: 'Your first 100 requests are free, then $0.01 per request. Flat monthly plans when you need volume.',
+			body: `Your first 100 requests are free, then ${perRequestLabel(currency)} per request. Flat monthly plans when you need volume.`,
 			icon: 'M12 1v22M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6'
 		},
 		{
@@ -17,7 +20,7 @@
 			body: 'USDT, USDC, USD, GBP and EUR against the Naira, plus years of history.',
 			icon: 'M18 20V10M12 20V4M6 20v-6'
 		}
-	];
+	]);
 
 	const request = `GET /v1/rates/current?pair=USDT/NGN`;
 </script>
@@ -29,7 +32,7 @@
 				Exchange Rate API<br />
 				<span style="color: var(--accent);">FAST</span>
 				<span class="hero-sub not-italic font-bold" style="color: var(--text-primary);">
-					(from only $0.01/request)
+					(from only {perRequestLabel(currency)}/request)
 				</span>
 			</h1>
 

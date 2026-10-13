@@ -1,22 +1,22 @@
 <script lang="ts">
 	import { formatNumber } from '$lib/functions';
 	import { ACCOUNT_URL, BOOKING_URL } from '$lib/config';
+	import { formatMoney, perRequestLabel, type PricingCurrency } from './currency';
 
-	let { plans = [] }: { plans?: any[] } = $props();
+	let { plans = [], currency }: { plans?: any[]; currency: PricingCurrency } = $props();
 
-	const PAYG_PER_REQUEST = 0.01;
 	const steps = [1_000, 5_000, 10_000, 25_000, 50_000, 100_000, 250_000, 500_000, 1_000_000];
 
 	let stepIndex = $state(2);
 	let billing = $state<'monthly' | 'yearly'>('monthly');
 
-	const copy: Record<string, { tagline: string; cta: string; features: string[] }> = {
+	const copy: Record<string, { tagline: string; cta: string; features: string[] }> = $derived({
 		free: {
 			tagline: 'Only pay when you call the API.',
 			cta: 'Get Started Free',
 			features: [
 				'100 free requests on signup',
-				'$0.01 per request after that',
+				`${perRequestLabel(currency)} per request after that`,
 				'No monthly request cap',
 				'Market Insight, view only',
 				'Analytics Dashboard, view only',
@@ -47,7 +47,7 @@
 				'Priority support'
 			]
 		}
-	};
+	});
 
 	const apiPlans = $derived(
 		(plans || []).filter((p) => ['free', 'pro', 'max'].includes(p.code)).sort((a, b) => a.price_usd - b.price_usd)
@@ -55,12 +55,17 @@
 
 	const volume = $derived(steps[stepIndex]);
 
+	// Flat plan price in the visitor's currency
+	function monthlyPrice(plan: any, cycle: 'monthly' | 'yearly'): number {
+		const yearly = plan.prices_by_cycle?.yearly?.[currency.code];
+		if (cycle === 'yearly' && yearly) return yearly / 12;
+		return plan[`price_${currency.code}`] ?? 0;
+	}
+
 	function monthlyCost(plan: any): number {
-		if (plan.billing_model === 'usage') return volume * PAYG_PER_REQUEST;
+		if (plan.billing_model === 'usage') return volume * currency.perRequest;
 		if (volume > plan.requests_limit_per_month) return Infinity;
-		return billing === 'yearly' && plan.prices_by_cycle?.yearly?.usd
-			? plan.prices_by_cycle.yearly.usd / 12
-			: plan.price_usd;
+		return monthlyPrice(plan, billing);
 	}
 
 	const bestCode = $derived.by(() => {
@@ -77,15 +82,15 @@
 	});
 
 	const savePct = $derived.by(() => {
-		const paid = apiPlans.find((p) => p.billing_model === 'flat' && p.prices_by_cycle?.yearly?.usd);
+		const paid = apiPlans.find((p) => p.billing_model === 'flat' && p.prices_by_cycle?.yearly?.[currency.code]);
 		if (!paid) return 0;
-		return Math.round(((paid.price_usd - paid.prices_by_cycle.yearly.usd / 12) / paid.price_usd) * 100);
+		const monthly = monthlyPrice(paid, 'monthly');
+		return Math.round(((monthly - monthlyPrice(paid, 'yearly')) / monthly) * 100);
 	});
 
 	function displayPrice(plan: any): string {
-		if (plan.billing_model === 'usage') return `$${PAYG_PER_REQUEST}`;
-		const v = billing === 'yearly' && plan.prices_by_cycle?.yearly?.usd ? plan.prices_by_cycle.yearly.usd / 12 : plan.price_usd;
-		return `$${Math.round(v)}`;
+		if (plan.billing_model === 'usage') return perRequestLabel(currency);
+		return formatMoney(Math.round(monthlyPrice(plan, billing)), currency);
 	}
 
 	function limitLines(plan: any): string[] {
@@ -97,7 +102,7 @@
 	}
 
 	function fmtMoney(n: number): string {
-		return `$${n.toLocaleString(undefined, { maximumFractionDigits: n < 100 ? 2 : 0 })}`;
+		return formatMoney(n, currency);
 	}
 </script>
 
@@ -110,7 +115,7 @@
 			<p class="text-sm max-w-2xl mx-auto leading-relaxed" style="color: var(--text-secondary);">
 				All accounts get live rates from 90+ providers and the full dashboard.
 				<a href="{ACCOUNT_URL}/auth/signup" target="_blank" rel="noopener noreferrer" class="font-semibold hover:underline" style="color: var(--accent);">Get a free API key</a>
-				with your first 100 requests free, then pay $0.01 per request, or switch to a flat plan when your volume grows.
+				with your first 100 requests free, then pay {perRequestLabel(currency)} per request, or switch to a flat plan when your volume grows.
 			</p>
 		</div>
 

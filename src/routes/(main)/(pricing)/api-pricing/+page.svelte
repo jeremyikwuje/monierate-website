@@ -6,10 +6,20 @@
 	import ApiPricingPlans from '$lib/components/api-pricing/ApiPricingPlans.svelte';
 	import ApiFaq from '$lib/components/api/ApiFaq.svelte';
 	import ApiCta from '$lib/components/api/ApiCta.svelte';
+	import { pricingCurrency, perRequestLabel } from '$lib/components/api-pricing/currency';
 
 	let { data } = $props();
 
 	const plans = $derived((data.subscriptionPlans as any[]) || []);
+
+	// Naira for visitors in Nigeria, USD for everyone else
+	const currency = $derived(pricingCurrency(data.ucountry));
+	const perRequest = $derived(perRequestLabel(currency));
+
+	const faqAnswers = $derived({
+		'What are the rate limits?': `Free (PAYG): unlimited requests billed at ${perRequest} each. Pro: 10,000 req/month, 10 req/min, included in the flat fee. Max: 100,000 req/month, 50 req/min.`,
+		'Is there a free tier?': `Yes. Every new account gets 100 free API requests, once, on signup. No card needed. After those 100, each request costs ${perRequest}, or you can move to a flat monthly plan. The dashboard is free forever.`
+	});
 </script>
 
 <svelte:head>
@@ -29,15 +39,12 @@
 	<link rel="canonical" href="https://monierate.com/api-pricing" />
 </svelte:head>
 
-<ApiPricingHero />
+<ApiPricingHero {currency} />
 <ApiPricingLogos />
 <ApiPricingFeatureGrid />
 <ApiPricingShowcase />
-<ApiPricingPlans {plans} />
+<ApiPricingPlans {plans} {currency} />
 <div id="faq" class="scroll-mt-6">
-	<ApiFaq
-		fullWidth
-		freeTierAnswer="Yes. Every new account gets 100 free API requests, once, on signup. No card needed. After those 100, each request costs $0.01, or you can move to a flat monthly plan. The dashboard is free forever."
-	/>
+	<ApiFaq fullWidth answers={faqAnswers} />
 </div>
 <ApiCta subtitle="Create a free account and get your API key in minutes. Your first 100 requests are free, no card required." />
