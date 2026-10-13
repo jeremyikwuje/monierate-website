@@ -24,7 +24,7 @@
 	const request = `GET /v1/rates/current?pair=USDT/NGN`;
 </script>
 
-<section class="container pt-10 pb-16">
+<section class="container pt-16 md:pt-24 pb-16">
 	<div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
 		<div>
 			<h1 class="hero-title font-head font-extrabold italic leading-[1.05] mb-4" style="color: var(--text-primary);">
