@@ -5,12 +5,12 @@ description: 'Textile FX or Bybit P2P? We compared live USDT/Naira rates both wa
 createdAt: 2026-10-13T09:22:00
 updatedAt: 2026-10-13T19:22:00
 tag: guide
-image: ''
+image: https://ik.imagekit.io/monierate/Blog/product/Textile%20FX%20vs%20Bybit%20@3x.webp
 published: true
 author: Tim Bolarinwa
 ---
 
-![Textile FX vs Bybit P2P feature graphic](IMAGE_URL)
+![Textile FX vs Bybit P2P feature graphic](https://ik.imagekit.io/monierate/Blog/product/Textile%20FX%20vs%20Bybit%20@3x.webp)
 
 If you're holding USDT and need Naira, the rate you get can depend on where you cash out.
 
