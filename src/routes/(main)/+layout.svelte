@@ -17,6 +17,7 @@
 	import { ACCOUNT_URL } from '$lib/config';
 	import Notification from '$lib/components/layout/Notification.svelte';
 	import { getUserCountryClient } from '$lib/utils/userCountry';
+	import { applyApiTheme } from '$lib/utils/apiTheme';
 
 	export let data;
 
@@ -27,9 +28,9 @@
 	const marketingPages = ['/api-pricing'];
 	$: isMarketingPage = marketingPages.includes($page.url.pathname);
 
-	// Marketing pages are light mode only. hooks.server.ts tags <html> on the first
-	// render; this keeps the tag right across client-side navigation.
-	$: if (browser) document.documentElement.classList.toggle('light-only', isMarketingPage);
+	// Marketing pages ignore the OS theme and use the header toggle (light by default).
+	// hooks.server.ts tags <html> on the first render; this keeps it right on navigation.
+	$: if (browser) applyApiTheme(isMarketingPage);
 
 	// toggle navbar collapse menu on mobile
 	onMount(() => {

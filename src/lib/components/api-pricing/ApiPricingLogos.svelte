@@ -1,45 +1,50 @@
 <script lang="ts">
-	const providers = [
+	// Provider logos for now. When the client list arrives, swap these for client
+	// logos and change the label to "You are in good company:".
+	const label = 'Rates from 100+ providers, including:';
+
+	const logos = [
 		{ name: 'Binance P2P', icon: 'binance_p2p.svg' },
 		{ name: 'Bybit', icon: 'bybit.svg' },
-		{ name: 'Quidax', icon: 'quidax.svg' },
 		{ name: 'Luno', icon: 'luno.svg' },
-		{ name: 'Busha', icon: 'busha.svg' },
-		{ name: 'KuCoin', icon: 'kucoin.svg' },
 		{ name: 'Yellow Card', icon: 'yellowcard.svg' },
 		{ name: 'Chipper Cash', icon: 'chippercash.svg' },
-		{ name: 'Grey', icon: 'grey.svg' },
-		{ name: 'Cleva', icon: 'cleva.svg' },
-		{ name: 'Remitano', icon: 'remitano.svg' },
-		{ name: 'NoOnes', icon: 'noones.svg' },
-		{ name: 'Gate', icon: 'gate.svg' },
-		{ name: 'HTX', icon: 'htx_huobi.svg' },
-		{ name: 'CoinEx', icon: 'coinex.svg' },
-		{ name: 'Nala', icon: 'nala.svg' },
-		{ name: 'Remitly', icon: 'remitly.svg' },
-		{ name: 'WorldRemit', icon: 'worldremit.svg' },
-		{ name: 'Sendwave', icon: 'sendwave.svg' },
-		{ name: 'Western Union', icon: 'westernunion.svg' },
-		{ name: 'MoneyGram', icon: 'moneygram.svg' },
-		{ name: 'Payoneer', icon: 'payoneer.svg' },
-		{ name: 'Bitnob', icon: 'bitnob.svg' },
-		{ name: 'Breet', icon: 'breet.svg' }
+		{ name: 'Western Union', icon: 'westernunion.svg' }
 	];
 </script>
 
-<section class="py-12" style="border-top: 1px solid var(--card-border); border-bottom: 1px solid var(--card-border);">
-	<div class="container">
-		<p class="text-center text-[15px] mb-8" style="color: var(--text-secondary);">
-			Up to date rates from 100+ providers across 170+ currencies, including:
-		</p>
+<section class="band">
+	<div class="container flex flex-col md:flex-row items-center justify-center gap-x-10 gap-y-5 py-7">
+		<p class="label shrink-0">{label}</p>
 
-		<div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 gap-x-4 gap-y-6">
-			{#each providers as p}
-				<div class="flex items-center justify-center gap-2 min-w-0" title={p.name}>
-					<img src="/icons/svg/{p.icon}" alt={p.name} width="24" height="24" loading="lazy" class="w-6 h-6 rounded object-contain shrink-0" />
-					<span class="font-head text-[12px] font-semibold truncate" style="color: var(--text-primary);">{p.name}</span>
-				</div>
+		<ul class="flex flex-wrap items-center justify-center gap-x-9 gap-y-4">
+			{#each logos as l}
+				<li class="flex items-center gap-2.5" title={l.name}>
+					<img src="/icons/svg/{l.icon}" alt="" width="28" height="28" loading="lazy" class="w-7 h-7 rounded-md object-contain shrink-0" />
+					<span class="name">{l.name}</span>
+				</li>
 			{/each}
-		</div>
+		</ul>
 	</div>
 </section>
+
+<style>
+	.band {
+		background: var(--badge-neutral-bg);
+		border-top: 1px solid var(--card-border);
+		border-bottom: 1px solid var(--card-border);
+	}
+	.label {
+		font-family: var(--font-mono);
+		font-size: 14px;
+		color: var(--text-primary);
+	}
+	.name {
+		font-family: var(--font-head);
+		font-size: 19px;
+		font-weight: 700;
+		letter-spacing: -0.01em;
+		color: var(--text-secondary);
+		white-space: nowrap;
+	}
+</style>
