@@ -3,6 +3,8 @@ const colors = require('tailwindcss/colors')
 
 module.exports = {
   content: ['./src/**/*.{html,js,svelte,ts}'],
+  // Follow the OS theme, except on pages rendered with html.light-only (api-pricing)
+  darkMode: ['variant', '@media (prefers-color-scheme: dark) { &:not(.light-only *) }'],
   theme: {
     extend: {
       fontFamily: {

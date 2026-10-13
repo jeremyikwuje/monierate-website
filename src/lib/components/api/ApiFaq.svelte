@@ -3,6 +3,8 @@
 	export let fullWidth = false;
 	// api-pricing swaps in its own pricing answers, keyed by question
 	export let answers: Record<string, string> = {};
+	// api-pricing adds questions the shared list does not cover
+	export let extra: { q: string; a: string }[] = [];
 
 	const defaults = [
 		{
@@ -31,7 +33,7 @@
 		}
 	];
 
-	$: items = defaults.map((item) => ({ ...item, a: answers[item.q] ?? item.a }));
+	$: items = [...defaults.map((item) => ({ ...item, a: answers[item.q] ?? item.a })), ...extra];
 
 	let open: number | null = null;
 

@@ -29,8 +29,8 @@
 
 <section class="py-12" style="border-top: 1px solid var(--card-border); border-bottom: 1px solid var(--card-border);">
 	<div class="container">
-		<p class="text-center text-sm mb-8" style="color: var(--text-secondary);">
-			Live rates aggregated from the providers Nigerians actually use, and 100+ more across 170+ currencies.
+		<p class="text-center text-[15px] mb-8" style="color: var(--text-secondary);">
+			Up to date rates from 100+ providers across 170+ currencies, including:
 		</p>
 
 		<div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 gap-x-4 gap-y-6">

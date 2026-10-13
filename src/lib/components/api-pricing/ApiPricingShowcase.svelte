@@ -6,7 +6,7 @@
 	type Section = {
 		title: string;
 		intro: string;
-		visual: 'speed' | 'developer' | 'stablecoin' | 'reliable' | 'markets';
+		visual: 'speed' | 'developer' | 'mcp' | 'stablecoin' | 'reliable' | 'markets';
 		points: Point[];
 		cta?: boolean;
 	};
@@ -20,7 +20,7 @@
 			points: [
 				{
 					title: 'Secure by Default',
-					body: 'Every request is served over HTTPS and authenticated with a private Bearer token you can rotate at any time.'
+					body: 'Every request is served over HTTPS and authenticated with a private API key, sent in the api_key header, that you can rotate at any time.'
 				},
 				{
 					title: 'Real People Behind the API',
@@ -45,14 +45,34 @@
 			]
 		},
 		{
+			title: 'Built for AI agents, with MCP.',
+			intro:
+				'Monierate runs a remote MCP server, so Claude, ChatGPT, Cursor and other AI assistants can read our rates for you. Connect once, then ask in plain language.',
+			visual: 'mcp',
+			points: [
+				{
+					title: 'Connect in One Step',
+					body: 'Add https://mcp.monierate.xyz/mcp as a connector and sign in. Clients that cannot sign in can use your API key instead.'
+				},
+				{
+					title: 'Same Rates, Same Billing',
+					body: 'Agents get the same up to date provider rates as the API, labelled by market, billed to your plan or wallet like any other call.'
+				},
+				{
+					title: 'Read Only by Design',
+					body: 'The connector can only read rates. It cannot see your account details or API keys, and it cannot move money.'
+				}
+			]
+		},
+		{
 			title: 'Stablecoin rates included.',
 			intro:
-				'Get real-time USDT and USDC to Naira pricing from P2P desks, spot exchanges and OTC apps. We combine buy and sell quotes so you always see the true market.',
+				'Get up to date USDT and USDC to Naira pricing from P2P desks, spot exchanges and OTC apps. We combine buy and sell quotes so you always see the true market.',
 			visual: 'stablecoin',
 			points: [
 				{
-					title: 'Real-time Stablecoin API',
-					body: 'Buy and sell prices for every venue we track, refreshed continuously and returned in a single response.'
+					title: 'Up to Date Stablecoin Rates',
+					body: 'Buy and sell prices for every venue we track, kept up to date and returned in a single response.'
 				},
 				{
 					title: 'Exchange Rates for Any Pair We Cover',
@@ -73,18 +93,22 @@
 			points: []
 		},
 		{
-			title: 'Official, Parallel and Mid-market Rates.',
+			title: 'Trusted parallel and midpoint rates.',
 			intro:
-				'See the CBN official rate next to the parallel market and the mid-market average, all from the same API. Perfect for treasury, compliance and pricing teams.',
+				'Compare the parallel market with the mid-market rate and the CBN official rate. Perfect for treasury, compliance and pricing teams.',
 			visual: 'markets',
 			points: [
 				{
 					title: 'Every Market Side by Side',
-					body: 'Request official, parallel or mid-market rates with one parameter and compare them in your own tools.'
+					body: 'Request parallel or mid-market rates with one parameter, or fill gaps in one market from the other.'
 				},
 				{
 					title: 'Spread and Volatility Built In',
-					body: 'Dedicated endpoints for the spread between markets and daily volatility so you do not have to compute it yourself.'
+					body: 'Dedicated endpoints for per-provider spread analysis and volatility, so you do not have to compute them yourself.'
+				},
+				{
+					title: 'OHLC Down to 10 Minutes',
+					body: 'Open, high, low and close candles in intervals as short as 10 minutes for charts and backtests.'
 				},
 				{
 					title: 'History for Every Market',
@@ -104,15 +128,15 @@
 				</div>
 
 				<div class={i % 2 === 0 ? 'md:order-2' : 'md:order-1'}>
-					<h2 class="section-title font-head font-extrabold italic mb-4" style="color: var(--text-primary);">{s.title}</h2>
+					<h2 class="section-title font-head font-extrabold mb-4" style="color: var(--text-primary);">{s.title}</h2>
 
 					{#if s.cta}
-						<a href="{ACCOUNT_URL}/auth/signup" target="_blank" rel="noopener noreferrer" class="button inline-block font-semibold px-5 py-2.5 text-sm mb-5">
+						<a href="{ACCOUNT_URL}/auth/signup" target="_blank" rel="noopener noreferrer" class="button inline-block font-semibold px-6 py-3 text-base mb-6">
 							Get Free API Key
 						</a>
 					{/if}
 
-					<p class="text-sm leading-relaxed mb-6" style="color: var(--text-secondary);">{s.intro}</p>
+					<p class="text-[17px] leading-relaxed mb-7" style="color: var(--text-secondary);">{s.intro}</p>
 
 					<ul class="flex flex-col gap-5">
 						{#each s.points as p}
@@ -123,8 +147,8 @@
 									</svg>
 								</span>
 								<span>
-									<span class="font-head block text-sm font-bold mb-1" style="color: var(--text-primary);">{p.title}</span>
-									<span class="block text-[13px] leading-relaxed" style="color: var(--text-secondary);">{p.body}</span>
+									<span class="font-head block text-base font-bold mb-1" style="color: var(--text-primary);">{p.title}</span>
+									<span class="block text-[15px] leading-relaxed" style="color: var(--text-secondary);">{p.body}</span>
 								</span>
 							</li>
 						{/each}

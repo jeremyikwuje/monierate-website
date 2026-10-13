@@ -15,11 +15,19 @@ const securityHeaders = {
 
 const removeHeaders = ['Public-Key-Pins', 'X-Powered-By', 'X-AspNet-Version'];
 
+// Keep in sync with marketingPages in src/routes/(main)/+layout.svelte
+const LIGHT_ONLY_PATHS = ['/api-pricing'];
+
 export const handle: Handle = async ({ event, resolve }) => {
 	// Cloudflare country (ISO-2)
 	event.locals.ucountry = event.request.headers.get('cf-ipcountry') ?? '';
 
-	const response = await resolve(event);
+	// api-pricing is light mode only; tag <html> so the dark theme skips it
+	const lightOnly = LIGHT_ONLY_PATHS.includes(event.url.pathname);
+	const response = await resolve(event, {
+		transformPageChunk: ({ html }) =>
+			lightOnly ? html.replace('<html lang="en">', '<html lang="en" class="light-only">') : html
+	});
 
 	Object.entries(securityHeaders).forEach(([header, value]) => response.headers.set(header, value));
 

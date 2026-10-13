@@ -1,5 +1,5 @@
 <script lang="ts">
-	let { variant }: { variant: 'speed' | 'developer' | 'stablecoin' | 'reliable' | 'markets' } = $props();
+	let { variant }: { variant: 'speed' | 'developer' | 'mcp' | 'stablecoin' | 'reliable' | 'markets' } = $props();
 
 	const stableRows = [
 		{ name: 'Binance P2P', icon: 'binance_p2p.svg', buy: '1,613.00', sell: '1,608.50' },
@@ -29,18 +29,26 @@
 		<div class="panel dark">
 			<div class="mono code">
 				<div><span class="kw">const</span> res = <span class="kw">await</span> <span class="fn">fetch</span>(url, {'{'}</div>
-				<div>&nbsp;&nbsp;headers: {'{'} Authorization: <span class="str">`Bearer $&#123;KEY&#125;`</span> {'}'}</div>
+				<div>&nbsp;&nbsp;headers: {'{'} api_key: <span class="str">KEY</span> {'}'}</div>
 				<div>{'}'});</div>
-				<div><span class="kw">const</span> {'{'} results {'}'} = <span class="kw">await</span> res.<span class="fn">json</span>();</div>
-				<div class="cm">// results.binance_p2p = 1613.00</div>
+				<div><span class="kw">const</span> {'{'} data {'}'} = <span class="kw">await</span> res.<span class="fn">json</span>();</div>
+				<div class="cm">// data.rates.NGN = 1374.06</div>
 			</div>
 			<div class="badge-ok">200 OK in 4ms</div>
+		</div>
+	{:else if variant === 'mcp'}
+		<div class="panel">
+			<div class="label">Connect with MCP</div>
+			<div class="mono cmd">claude mcp add --transport http monierate https://mcp.monierate.xyz/mcp</div>
+			<div class="bubble ask">Which exchange is paying the most for USDT in naira right now?</div>
+			<div class="tool mono">get_provider_rates("usdtngn")</div>
+			<div class="bubble reply">Binance P2P is paying the most, at ₦1,608.50 per USDT, ahead of Bybit and Quidax.</div>
 		</div>
 	{:else if variant === 'stablecoin'}
 		<div class="panel">
 			<div class="flex items-center justify-between mb-3">
 				<div class="label !mb-0">USDT to NGN</div>
-				<div class="live"><span class="pulse"></span>Live</div>
+				<div class="live"><span class="pulse"></span>Up to date</div>
 			</div>
 			<div class="row head"><span>Provider</span><span>Buy</span><span>Sell</span></div>
 			{#each stableRows as r}
@@ -63,7 +71,7 @@
 					<span class="chip">{c}</span>
 				{/each}
 			</div>
-			<div class="row"><span>Refresh cadence</span><span class="mono ok">Continuous</span></div>
+			<div class="row"><span>Provider rates</span><span class="mono ok">Up to date</span></div>
 		</div>
 	{:else}
 		<div class="panel">
@@ -195,6 +203,44 @@
 		color: #d1d5db;
 		white-space: nowrap;
 		overflow-x: auto;
+	}
+	.cmd {
+		font-size: 11px;
+		line-height: 1.6;
+		color: #cbd5e1;
+		background: #0b1020;
+		border-radius: 8px;
+		padding: 10px 12px;
+		margin-bottom: 14px;
+		word-break: break-all;
+	}
+	.bubble {
+		font-size: 13px;
+		line-height: 1.5;
+		padding: 9px 12px;
+		border-radius: 12px;
+		max-width: 88%;
+	}
+	.bubble.ask {
+		margin-left: auto;
+		background: var(--accent);
+		color: #fff;
+		border-bottom-right-radius: 4px;
+	}
+	.bubble.reply {
+		background: var(--badge-neutral-bg);
+		color: var(--text-primary);
+		border-bottom-left-radius: 4px;
+	}
+	.tool {
+		display: inline-block;
+		margin: 10px 0;
+		font-size: 11px;
+		font-weight: 600;
+		color: var(--accent);
+		background: var(--accent-light);
+		padding: 3px 10px;
+		border-radius: 999px;
 	}
 	.kw { color: #ff7b72; }
 	.fn { color: #d2a8ff; }

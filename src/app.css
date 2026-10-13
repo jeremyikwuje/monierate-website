@@ -46,8 +46,19 @@
     --scrollbar-thumb: #d1d5db;
 }
 
+/* api-pricing is light-only (html.light-only, set in hooks.server.ts and the
+   (main) layout), with stronger text and a white page for legibility. */
+:root.light-only {
+    color-scheme: light;
+    --page-bg: #ffffff;
+    --card-bg: #ffffff;
+    --table-header-bg: #f8fafc;
+    --text-secondary: #374151;
+    --text-muted: #6b7280;
+}
+
 @media (prefers-color-scheme: dark) {
-    :root {
+    :root:not(.light-only) {
         --accent-light: #172554;
         --page-bg: #080808;
         --card-bg: #080808;

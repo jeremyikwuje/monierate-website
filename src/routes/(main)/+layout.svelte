@@ -27,6 +27,10 @@
 	const marketingPages = ['/api-pricing'];
 	$: isMarketingPage = marketingPages.includes($page.url.pathname);
 
+	// Marketing pages are light mode only. hooks.server.ts tags <html> on the first
+	// render; this keeps the tag right across client-side navigation.
+	$: if (browser) document.documentElement.classList.toggle('light-only', isMarketingPage);
+
 	// toggle navbar collapse menu on mobile
 	onMount(() => {
 		try {
@@ -56,7 +60,7 @@
 
 <LoadingIndicator />
 {#if isMarketingPage}
-	<ApiHeader auth={data.auth} />
+	<ApiHeader />
 {:else}
 	<TopBanner />
 	<Header bind:defaultCurrency={defaultCurrency} auth={data.auth} />

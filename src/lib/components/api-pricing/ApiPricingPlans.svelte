@@ -2,6 +2,7 @@
 	import { formatNumber } from '$lib/functions';
 	import { ACCOUNT_URL, BOOKING_URL } from '$lib/config';
 	import { formatMoney, perRequestLabel, type PricingCurrency } from './currency';
+	import TrustBadges from './TrustBadges.svelte';
 
 	let { plans = [], currency }: { plans?: any[]; currency: PricingCurrency } = $props();
 
@@ -17,22 +18,20 @@
 			features: [
 				'100 free requests on signup',
 				`${perRequestLabel(currency)} per request after that`,
-				'No monthly request cap',
+				'Unlimited calls, no monthly cap',
 				'Market Insight, view only',
 				'Analytics Dashboard, view only',
-				'Data exports from $1 per year of history',
-				'Offramp at $0.08 per trade'
+				'Data exports from $1 per year of history'
 			]
 		},
 		pro: {
-			tagline: 'Unlimited access. Predictable cost.',
+			tagline: 'Fixed monthly pricing. Predictable cost.',
 			cta: 'Start Pro',
 			features: [
 				'No per-request fees',
 				'Full Market Insight access',
 				'Full Analytics Dashboard access',
 				'Unlimited data exports',
-				'Offramp at $0.05 per trade',
 				'Email support'
 			]
 		},
@@ -43,7 +42,6 @@
 				'Everything in Pro',
 				'Higher monthly request volume',
 				'Higher per-minute throughput',
-				'Offramp at $0.01 per trade',
 				'Priority support'
 			]
 		}
@@ -94,7 +92,7 @@
 	}
 
 	function limitLines(plan: any): string[] {
-		if (plan.billing_model === 'usage') return ['Unlimited requests, billed per call'];
+		if (plan.billing_model === 'usage') return ['Unlimited calls, billed per request'];
 		return [
 			`${formatNumber(plan.requests_limit_per_month)} requests / month`,
 			`${plan.requests_limit_per_minute} requests / minute`
@@ -109,20 +107,21 @@
 <section id="pricing" class="py-16" style="background: var(--table-header-bg); border-top: 1px solid var(--card-border);">
 	<div class="container">
 		<div class="text-center mb-10">
-			<h2 class="section-title font-head font-extrabold italic mb-3" style="color: var(--text-primary);">
+			<h2 class="section-title font-head font-extrabold mb-4" style="color: var(--text-primary);">
 				Best Value Exchange Rate API
 			</h2>
-			<p class="text-sm max-w-2xl mx-auto leading-relaxed" style="color: var(--text-secondary);">
-				All accounts get live rates from 100+ providers across 170+ currencies, plus the full dashboard.
+			<p class="text-[17px] max-w-2xl mx-auto leading-relaxed" style="color: var(--text-secondary);">
+				All accounts get up to date provider rates from 100+ providers across 170+ currencies, plus the full dashboard.
 				<a href="{ACCOUNT_URL}/auth/signup" target="_blank" rel="noopener noreferrer" class="font-semibold hover:underline" style="color: var(--accent);">Get a free API key</a>
-				with your first 100 requests free, then pay {perRequestLabel(currency)} per request, or switch to a flat plan when your volume grows.
+				with your first 100 requests free, then pay {perRequestLabel(currency)} per request, or upgrade to Pro or Max when you need fixed pricing or a spending cap.
 			</p>
+			<TrustBadges center />
 		</div>
 
 		<!-- Controls -->
 		<div class="card rounded-2xl p-5 mb-6 flex flex-col md:flex-row md:items-center gap-5">
 			<div class="flex-1 min-w-0">
-				<label for="req-slider" class="font-head block text-sm font-semibold mb-3" style="color: var(--text-primary);">
+				<label for="req-slider" class="font-head block text-base font-semibold mb-3" style="color: var(--text-primary);">
 					I want <span style="color: var(--accent);">{formatNumber(volume)}</span> requests / month
 				</label>
 				<input
@@ -178,7 +177,7 @@
 
 						<div class="p-5 flex flex-col flex-1">
 							<div class="font-head text-lg font-bold" style="color: var(--text-primary);">{plan.name}</div>
-							<div class="text-[12px] font-medium mb-4" style="color: var(--accent);">{c.tagline}</div>
+							<div class="text-[13px] font-medium mb-4" style="color: var(--accent);">{c.tagline}</div>
 
 							<div class="mb-1">
 								<span class="price font-bold" style="color: var(--text-primary);">{displayPrice(plan)}</span>
@@ -186,7 +185,7 @@
 									{plan.billing_model === 'usage' ? '/ request, no monthly fee' : billing === 'yearly' ? '/ month, billed yearly' : '/ month'}
 								</span>
 							</div>
-							<div class="text-[11px] mb-4 min-h-[1rem]" style="color: var(--text-muted);">
+							<div class="text-[12px] mb-4 min-h-[1rem]" style="color: var(--text-muted);">
 								{#if tooSmall}
 									Not enough requests for {formatNumber(volume)} / month
 								{:else}
@@ -196,7 +195,7 @@
 
 							<div class="flex flex-col gap-0.5 mb-4 p-3 rounded-lg" style="background: var(--badge-neutral-bg);">
 								{#each limitLines(plan) as line}
-									<div class="text-[12px] font-semibold" style="color: var(--text-primary);">{line}</div>
+									<div class="text-[13px] font-semibold" style="color: var(--text-primary);">{line}</div>
 								{/each}
 							</div>
 
@@ -204,7 +203,7 @@
 								href="{ACCOUNT_URL}/auth/signup"
 								target="_blank"
 								rel="noopener noreferrer"
-								class="font-head block w-full text-center py-2.5 rounded-lg text-[13px] font-semibold transition-all mb-5"
+								class="font-head block w-full text-center py-2.5 rounded-lg text-sm font-semibold transition-all mb-5"
 								style={best
 									? 'background: var(--accent); color: #fff;'
 									: 'border: 1px solid var(--accent); color: var(--accent);'}
@@ -214,7 +213,7 @@
 
 							<ul class="flex flex-col gap-2.5">
 								{#each c.features as f}
-									<li class="flex gap-2 text-[12px] leading-snug" style="color: var(--text-secondary);">
+									<li class="flex gap-2 text-sm leading-snug" style="color: var(--text-secondary);">
 										<svg width="14" height="14" viewBox="0 0 14 14" fill="none" class="shrink-0 mt-px">
 											<circle cx="7" cy="7" r="7" fill="var(--positive)" fill-opacity="0.15" />
 											<path d="M4 7l2 2 4-4" stroke="var(--positive)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
@@ -237,20 +236,20 @@
 					</div>
 					<div class="p-5 flex flex-col flex-1">
 						<div class="font-head text-lg font-bold" style="color: var(--text-primary);">Enterprise</div>
-						<div class="text-[12px] font-medium mb-4" style="color: var(--accent);">Custom volume and data feeds.</div>
+						<div class="text-[13px] font-medium mb-4" style="color: var(--accent);">Custom volume and data feeds.</div>
 						<div class="mb-1">
 							<span class="price font-bold" style="color: var(--text-primary);">Custom</span>
 						</div>
-						<div class="text-[11px] mb-4 min-h-[1rem]" style="color: var(--text-muted);">Priced to your volume</div>
+						<div class="text-[12px] mb-4 min-h-[1rem]" style="color: var(--text-muted);">Priced to your volume</div>
 						<div class="flex flex-col gap-0.5 mb-4 p-3 rounded-lg" style="background: var(--badge-neutral-bg);">
-							<div class="text-[12px] font-semibold" style="color: var(--text-primary);">Custom request limits</div>
-							<div class="text-[12px] font-semibold" style="color: var(--text-primary);">Dedicated throughput</div>
+							<div class="text-[13px] font-semibold" style="color: var(--text-primary);">Custom request limits</div>
+							<div class="text-[13px] font-semibold" style="color: var(--text-primary);">Dedicated throughput</div>
 						</div>
 						<a
 							href={BOOKING_URL}
 							target="_blank"
 							rel="noopener noreferrer"
-							class="font-head block w-full text-center py-2.5 rounded-lg text-[13px] font-semibold transition-all mb-5"
+							class="font-head block w-full text-center py-2.5 rounded-lg text-sm font-semibold transition-all mb-5"
 							style={bestCode === null
 								? 'background: var(--accent); color: #fff;'
 								: 'border: 1px solid var(--accent); color: var(--accent);'}
@@ -259,7 +258,7 @@
 						</a>
 						<ul class="flex flex-col gap-2.5">
 							{#each ['Everything in Max', 'WebSocket and custom feeds', 'Custom providers and pairs', 'Invoiced billing in NGN or USD', 'Dedicated account manager'] as f}
-								<li class="flex gap-2 text-[12px] leading-snug" style="color: var(--text-secondary);">
+								<li class="flex gap-2 text-sm leading-snug" style="color: var(--text-secondary);">
 									<svg width="14" height="14" viewBox="0 0 14 14" fill="none" class="shrink-0 mt-px">
 										<circle cx="7" cy="7" r="7" fill="var(--positive)" fill-opacity="0.15" />
 										<path d="M4 7l2 2 4-4" stroke="var(--positive)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />

@@ -1,35 +1,41 @@
 <script lang="ts">
 	import { ACCOUNT_URL } from '$lib/config';
+	import TrustBadges from './TrustBadges.svelte';
 
 	const features = [
 		{
-			title: 'Rates That Never Sleep',
-			body: 'Provider rates are refreshed around the clock, every day of the year, on every plan.',
+			title: 'Up to Date Provider Rates',
+			body: 'Provider rates are kept up to date around the clock, every day of the year, on every plan.',
 			icon: 'M12 6v6l4 2M22 12a10 10 0 1 1-20 0 10 10 0 0 1 20 0z'
 		},
 		{
 			title: '100+ Providers, One API',
-			body: 'P2P desks, exchanges, fintech apps and remittance services through a single JSON endpoint.',
+			body: 'P2P desks, exchanges, fintech apps and remittance services through a single JSON API.',
 			icon: 'M3 3h7v7H3zM14 3h7v7h-7zM14 14h7v7h-7zM3 14h7v7H3z'
 		},
 		{
-			title: 'Official and Parallel Markets',
-			body: 'Get the CBN official rate next to parallel and mid-market rates without stitching sources together.',
+			title: 'Trusted Parallel and Midpoint Rates',
+			body: 'Parallel and mid-market rates side by side, each labelled with the market it came from.',
 			icon: 'M18 20V10M12 20V4M6 20v-6'
 		},
 		{
-			title: '170+ Currencies and Stablecoins',
+			title: '170+ Fiat and Crypto Currencies',
 			body: 'Rates for 170+ currencies, plus USDT and USDC buy and sell prices from every major P2P and spot venue we track.',
 			icon: 'M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zM9 8h6M12 8v8'
 		},
 		{
 			title: 'Years of History',
-			body: 'Pull historical rates by day for backtesting, reconciliation, compliance and reporting.',
+			body: 'Daily mid-market history back to 2013, plus parallel history for key Naira pairs, for backtesting and reporting.',
 			icon: 'M3 12a9 9 0 1 0 3-6.7L3 8M3 3v5h5M12 7v5l3 2'
 		},
 		{
+			title: 'OHLC Down to 10 Minutes',
+			body: 'Open, high, low and close candles in intervals as short as 10 minutes, ready for charts and backtests.',
+			icon: 'M6 3v18M6 7h-2v8h2M12 5v14M12 9h-2v4h2M18 3v18M18 6h-2v10h2'
+		},
+		{
 			title: 'Spread and Volatility Data',
-			body: 'Ready-made spread index and volatility endpoints so you can see how far apart the markets are.',
+			body: 'Ready-made per-provider spread analysis and volatility endpoints so you can see how far apart the markets are.',
 			icon: 'M22 12h-4l-3 9L9 3l-3 9H2'
 		},
 		{
@@ -38,14 +44,14 @@
 			icon: 'M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8zM14 2v6h6M8 13h8M8 17h8'
 		},
 		{
-			title: 'Offramp Execution',
-			body: 'Go beyond quotes. Execute stablecoin to Naira offramp trades through the same API.',
-			icon: 'M7 16V4m0 0L3 8m4-4 4 4M17 8v12m0 0 4-4m-4 4-4-4'
+			title: 'Simple REST and JSON',
+			body: 'Send your key in the api_key header and get predictable JSON back. Most teams ship their first call in minutes.',
+			icon: 'M16 18l6-6-6-6M8 6l-6 6 6 6'
 		},
 		{
-			title: 'Simple REST and JSON',
-			body: 'Bearer token auth, predictable responses and clear docs. Most teams ship their first call in minutes.',
-			icon: 'M16 18l6-6-6-6M8 6l-6 6 6 6'
+			title: 'MCP Server for AI Agents',
+			body: 'Connect Claude, ChatGPT, Cursor and other MCP clients, then ask for rates in plain language.',
+			icon: 'M12 2a4 4 0 0 1 4 4v1h1a3 3 0 0 1 3 3v7a3 3 0 0 1-3 3H7a3 3 0 0 1-3-3v-7a3 3 0 0 1 3-3h1V6a4 4 0 0 1 4-4zM9 13h.01M15 13h.01'
 		},
 		{
 			title: 'Dashboard Included Free',
@@ -56,23 +62,18 @@
 			title: 'Pay in Naira or Dollars',
 			body: 'Top up your wallet or subscribe in NGN or USD, whichever suits your business.',
 			icon: 'M2 7h20v12H2zM2 11h20M6 15h4'
-		},
-		{
-			title: 'Built for AI Agents',
-			body: 'Clean, typed JSON that LLMs and agents can call as a tool with no custom parsing.',
-			icon: 'M12 2a4 4 0 0 1 4 4v1h1a3 3 0 0 1 3 3v7a3 3 0 0 1-3 3H7a3 3 0 0 1-3-3v-7a3 3 0 0 1 3-3h1V6a4 4 0 0 1 4-4zM9 13h.01M15 13h.01'
 		}
 	];
 </script>
 
 <section class="container py-16">
 	<div class="text-center mb-12">
-		<h2 class="section-title font-head font-extrabold italic mb-3" style="color: var(--text-primary);">
-			The Naira rate API built for builders
+		<h2 class="section-title font-head font-extrabold mb-4" style="color: var(--text-primary);">
+			The exchange rate API built for developers
 		</h2>
-		<p class="text-sm max-w-2xl mx-auto leading-relaxed" style="color: var(--text-secondary);">
-			Monierate tracks the rates people actually get, not just the official one. We provide a fast, reliable API for your
-			application, whether you are pricing checkout, settling payouts or reporting to finance.
+		<p class="text-[17px] max-w-2xl mx-auto leading-relaxed" style="color: var(--text-secondary);">
+			Monierate tracks the rates people actually get, not just the official one. Fiat and crypto, 170+ currencies and 100+
+			providers in one API, whether you are pricing checkout, settling payouts or reporting to finance.
 		</p>
 	</div>
 
@@ -84,17 +85,17 @@
 						<path d={f.icon} />
 					</svg>
 				</div>
-				<h3 class="font-head text-sm font-bold mb-2" style="color: var(--text-primary);">{f.title}</h3>
-				<p class="text-[13px] leading-relaxed" style="color: var(--text-secondary);">{f.body}</p>
+				<h3 class="font-head text-base font-bold mb-2" style="color: var(--text-primary);">{f.title}</h3>
+				<p class="text-[15px] leading-relaxed" style="color: var(--text-secondary);">{f.body}</p>
 			</div>
 		{/each}
 	</div>
 
 	<div class="text-center mt-12">
-		<a href="{ACCOUNT_URL}/auth/signup" target="_blank" rel="noopener noreferrer" class="button inline-block font-semibold px-6 py-3 text-sm">
+		<a href="{ACCOUNT_URL}/auth/signup" target="_blank" rel="noopener noreferrer" class="button inline-block font-semibold px-6 py-3 text-base">
 			Get Free API Key
 		</a>
-		<p class="text-[11px] mt-2" style="color: var(--text-muted);">No credit card required. Cancel anytime.</p>
+		<TrustBadges center />
 	</div>
 </section>
 
