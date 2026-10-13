@@ -113,7 +113,7 @@
 				Best Value Exchange Rate API
 			</h2>
 			<p class="text-sm max-w-2xl mx-auto leading-relaxed" style="color: var(--text-secondary);">
-				All accounts get live rates from 90+ providers and the full dashboard.
+				All accounts get live rates from 100+ providers across 170+ currencies, plus the full dashboard.
 				<a href="{ACCOUNT_URL}/auth/signup" target="_blank" rel="noopener noreferrer" class="font-semibold hover:underline" style="color: var(--accent);">Get a free API key</a>
 				with your first 100 requests free, then pay {perRequestLabel(currency)} per request, or switch to a flat plan when your volume grows.
 			</p>

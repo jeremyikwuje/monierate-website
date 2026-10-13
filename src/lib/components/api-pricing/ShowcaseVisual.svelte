@@ -57,7 +57,7 @@
 	{:else if variant === 'reliable'}
 		<div class="panel">
 			<div class="label">Providers reporting</div>
-			<div class="big">90<span class="unit">+</span></div>
+			<div class="big">100<span class="unit">+</span></div>
 			<div class="chips">
 				{#each ['P2P', 'Spot', 'Fintech', 'Remittance', 'Bureau', 'Official'] as c}
 					<span class="chip">{c}</span>

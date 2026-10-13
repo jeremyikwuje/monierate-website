@@ -8,7 +8,7 @@
 			icon: 'M12 6v6l4 2M22 12a10 10 0 1 1-20 0 10 10 0 0 1 20 0z'
 		},
 		{
-			title: '90+ Providers, One API',
+			title: '100+ Providers, One API',
 			body: 'P2P desks, exchanges, fintech apps and remittance services through a single JSON endpoint.',
 			icon: 'M3 3h7v7H3zM14 3h7v7h-7zM14 14h7v7h-7zM3 14h7v7H3z'
 		},
@@ -18,8 +18,8 @@
 			icon: 'M18 20V10M12 20V4M6 20v-6'
 		},
 		{
-			title: 'Stablecoin Rates',
-			body: 'USDT and USDC to Naira buy and sell prices from every major P2P and spot venue we track.',
+			title: '170+ Currencies and Stablecoins',
+			body: 'Rates for 170+ currencies, plus USDT and USDC buy and sell prices from every major P2P and spot venue we track.',
 			icon: 'M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zM9 8h6M12 8v8'
 		},
 		{

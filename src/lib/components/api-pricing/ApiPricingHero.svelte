@@ -12,12 +12,12 @@
 		},
 		{
 			title: 'Accurate and Up to Date',
-			body: 'Live NGN rates from 90+ providers including P2P desks, exchanges and remittance apps.',
+			body: 'Live rates from 100+ providers across 170+ currencies, including P2P desks, exchanges and remittance apps.',
 			icon: 'M22 11.08V12a10 10 0 1 1-5.93-9.14M22 4 12 14.01l-3-3'
 		},
 		{
 			title: 'Stablecoin, Official and Parallel Rates',
-			body: 'USDT, USDC, USD, GBP and EUR against the Naira, plus years of history.',
+			body: 'USDT, USDC and 170+ currencies including USD, GBP and EUR, with official and parallel Naira rates and years of history.',
 			icon: 'M18 20V10M12 20V4M6 20v-6'
 		}
 	]);

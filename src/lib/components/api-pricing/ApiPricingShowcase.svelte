@@ -56,7 +56,7 @@
 				},
 				{
 					title: 'Exchange Rates for Any Pair We Cover',
-					body: 'Convert between stablecoins, Naira and major fiat currencies including USD, GBP, EUR and CAD.'
+					body: 'Convert between stablecoins, Naira and 170+ currencies including USD, GBP, EUR and CAD.'
 				},
 				{
 					title: 'Missing a Provider?',
@@ -67,7 +67,7 @@
 		{
 			title: 'Reliable Exchange Rate API.',
 			intro:
-				'Finding a good exchange rate API for Nigerian markets is hard. Official feeds lag the real market, and single venue feeds miss the bigger picture. We aggregate 90+ sources into one dependable feed.',
+				'Finding a good exchange rate API for Nigerian markets is hard. Official feeds lag the real market, and single venue feeds miss the bigger picture. We aggregate 100+ sources across 170+ currencies into one dependable feed.',
 			visual: 'reliable',
 			cta: true,
 			points: []
