@@ -1,12 +1,39 @@
 <script lang="ts">
-	let { variant }: { variant: 'speed' | 'developer' | 'mcp' | 'stablecoin' | 'reliable' | 'markets' } = $props();
+	let {
+		variant,
+		ng = false
+	}: { variant: 'speed' | 'developer' | 'mcp' | 'stablecoin' | 'reliable' | 'markets'; ng?: boolean } = $props();
 
-	const stableRows = [
-		{ name: 'Binance', icon: 'binance.svg', buy: '1.0009', sell: '1.0004' },
-		{ name: 'Bybit', icon: 'bybit.svg', buy: '1.0008', sell: '1.0002' },
-		{ name: 'KuCoin', icon: 'kucoin.svg', buy: '1.0007', sell: '1.0001' },
-		{ name: 'Luno', icon: 'luno.svg', buy: '1.0006', sell: '0.9999' }
-	];
+	// Rate samples are USDT in USD, or USDT in NGN for visitors in Nigeria
+	const sample = $derived(
+		ng
+			? {
+					quote: 'NGN',
+					pair: 'usdtngn',
+					currencyWord: 'naira',
+					best: 'Binance P2P is paying the most, at ₦1,608.50 per USDT, ahead of Bybit and Quidax.',
+					rate: '1608.50',
+					rows: [
+						{ name: 'Binance P2P', icon: 'binance_p2p.svg', buy: '1,613.00', sell: '1,608.50' },
+						{ name: 'Bybit', icon: 'bybit.svg', buy: '1,611.40', sell: '1,606.90' },
+						{ name: 'Quidax', icon: 'quidax.svg', buy: '1,609.00', sell: '1,604.00' },
+						{ name: 'Busha', icon: 'busha.svg', buy: '1,608.20', sell: '1,603.10' }
+					]
+				}
+			: {
+					quote: 'USD',
+					pair: 'usdtusd',
+					currencyWord: 'dollars',
+					best: '{sample.best}',
+					rate: '1.0004',
+					rows: [
+						{ name: 'Binance', icon: 'binance.svg', buy: '1.0009', sell: '1.0004' },
+						{ name: 'Bybit', icon: 'bybit.svg', buy: '1.0008', sell: '1.0002' },
+						{ name: 'KuCoin', icon: 'kucoin.svg', buy: '1.0007', sell: '1.0001' },
+						{ name: 'Luno', icon: 'luno.svg', buy: '1.0006', sell: '0.9999' }
+					]
+				}
+	);
 
 	const bars = [42, 55, 48, 63, 58, 70, 66, 74, 69, 80, 77, 85];
 </script>
@@ -32,7 +59,7 @@
 				<div>&nbsp;&nbsp;headers: {'{'} api_key: <span class="str">KEY</span> {'}'}</div>
 				<div>{'}'});</div>
 				<div><span class="kw">const</span> {'{'} data {'}'} = <span class="kw">await</span> res.<span class="fn">json</span>();</div>
-				<div class="cm">// data.rates.USD = 1.0004</div>
+				<div class="cm">// data.rates.{sample.quote} = {sample.rate}</div>
 			</div>
 			<div class="badge-ok">200 OK in 100ms</div>
 		</div>
@@ -40,18 +67,18 @@
 		<div class="panel">
 			<div class="label">Connect with MCP</div>
 			<div class="mono cmd">claude mcp add --transport http monierate https://mcp.monierate.xyz/mcp</div>
-			<div class="bubble ask">Which exchange is paying the most for USDT in dollars right now?</div>
-			<div class="tool mono">get_provider_rates("usdtusd")</div>
+			<div class="bubble ask">Which exchange is paying the most for USDT in {sample.currencyWord} right now?</div>
+			<div class="tool mono">get_provider_rates("{sample.pair}")</div>
 			<div class="bubble reply">Binance is paying the most, at $1.0004 per USDT, ahead of Bybit and KuCoin.</div>
 		</div>
 	{:else if variant === 'stablecoin'}
 		<div class="panel">
 			<div class="flex items-center justify-between mb-3">
-				<div class="label !mb-0">USDT to USD</div>
+				<div class="label !mb-0">USDT to {sample.quote}</div>
 				<div class="live"><span class="pulse"></span>Up to date</div>
 			</div>
 			<div class="row head"><span>Provider</span><span>Buy</span><span>Sell</span></div>
-			{#each stableRows as r}
+			{#each sample.rows as r}
 				<div class="row three">
 					<span class="flex items-center gap-2 min-w-0">
 						<img src="/icons/svg/{r.icon}" alt="" width="18" height="18" class="w-[18px] h-[18px] rounded shrink-0" />
@@ -76,7 +103,7 @@
 	{:else}
 		<div class="panel">
 			<div class="flex items-center justify-between mb-3">
-				<div class="label !mb-0">USDT to USD</div>
+				<div class="label !mb-0">USDT to {sample.quote}</div>
 				<div class="flex gap-3 text-[10px]" style="color: var(--text-muted);">
 					<span class="flex items-center gap-1"><span class="sw" style="background: var(--accent);"></span>Parallel</span>
 					<span class="flex items-center gap-1"><span class="sw" style="background: var(--positive);"></span>Official</span>

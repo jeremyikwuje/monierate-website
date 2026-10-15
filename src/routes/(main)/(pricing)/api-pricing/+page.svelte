@@ -6,14 +6,14 @@
 	import ApiPricingPlans from '$lib/components/api-pricing/ApiPricingPlans.svelte';
 	import ApiFaq from '$lib/components/api/ApiFaq.svelte';
 	import ApiCta from '$lib/components/api/ApiCta.svelte';
-	import { USD, perRequestLabel } from '$lib/components/api-pricing/currency';
+	import { pricingCurrency, perRequestLabel } from '$lib/components/api-pricing/currency';
 
 	let { data } = $props();
 
 	const plans = $derived((data.subscriptionPlans as any[]) || []);
 
-	// Priced in USD for every visitor
-	const currency = USD;
+	// USD for everyone, Naira for visitors in Nigeria
+	const currency = $derived(pricingCurrency(data.ucountry));
 	const perRequest = $derived(perRequestLabel(currency));
 
 	const faqAnswers = $derived({
@@ -52,8 +52,8 @@
 
 <ApiPricingHero {currency} />
 <ApiPricingLogos />
-<ApiPricingFeatureGrid />
-<ApiPricingShowcase />
+<ApiPricingFeatureGrid {currency} />
+<ApiPricingShowcase {currency} />
 <ApiPricingPlans {plans} {currency} />
 <div id="faq" class="scroll-mt-6">
 	<ApiFaq fullWidth answers={faqAnswers} extra={faqExtra} />

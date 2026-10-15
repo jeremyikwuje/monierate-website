@@ -1,9 +1,11 @@
 <script lang="ts">
 	import { ACCOUNT_URL } from '$lib/config';
-	import { perRequestLabel, type PricingCurrency } from './currency';
+	import { isNaira, perRequestLabel, type PricingCurrency } from './currency';
 	import TrustBadges from './TrustBadges.svelte';
 
 	let { currency }: { currency: PricingCurrency } = $props();
+
+	const ng = $derived(isNaira(currency));
 
 	const highlights = $derived([
 		{
@@ -24,9 +26,10 @@
 	]);
 
 	// Single-quote example from docs.monierate.com/api-reference/rates/latest (response trimmed)
-	const url = 'https://api.monierate.com/core/rates/latest.json?base=USDT&quote=USD';
+	const sample = $derived(ng ? { quote: 'NGN', rate: '1608.50' } : { quote: 'USD', rate: '1.0004' });
+	const url = $derived(`https://api.monierate.com/core/rates/latest.json?base=USDT&quote=${sample.quote}`);
 
-	const tabs = [
+	const tabs = $derived([
 		{
 			id: 'curl',
 			label: 'cURL',
@@ -54,7 +57,7 @@ res = requests.<span class="fn">get</span>(
 )
 data = res.<span class="fn">json</span>()[<span class="s">"data"</span>]`
 		}
-	];
+	]);
 
 	let active = $state('curl');
 	const activeTab = $derived(tabs.find((t) => t.id === active) ?? tabs[0]);
@@ -74,7 +77,7 @@ data = res.<span class="fn">json</span>()[<span class="s">"data"</span>]`
 			<p class="text-[17px] leading-relaxed mb-8 max-w-xl" style="color: var(--text-secondary);">
 				Secure JSON API with up to date provider rates for
 				<strong style="color: var(--text-primary);">170+ fiat and crypto currencies</strong>, including trusted parallel
-				and midpoint rates. One API, 100+ providers.
+				and midpoint{ng ? ' Naira' : ''} rates. One API, 100+ providers.
 			</p>
 
 			<ul class="flex flex-col gap-5 mb-9">
@@ -133,7 +136,7 @@ data = res.<span class="fn">json</span>()[<span class="s">"data"</span>]`
   <span class="k">"data"</span>: {'{'}
     <span class="k">"base"</span>: <span class="s">"USDT"</span>,
     <span class="k">"market"</span>: <span class="s">"mid"</span>,
-    <span class="k">"rates"</span>: <span class="n">1.0004</span>
+    <span class="k">"rates"</span>: <span class="n">{sample.rate}</span>
   {'}'}
 {'}'}</code></pre>
 		</div>
