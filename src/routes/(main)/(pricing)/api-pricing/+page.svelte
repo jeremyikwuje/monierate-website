@@ -6,7 +6,7 @@
 	import ApiPricingPlans from '$lib/components/api-pricing/ApiPricingPlans.svelte';
 	import ApiFaq from '$lib/components/api/ApiFaq.svelte';
 	import ApiCta from '$lib/components/api/ApiCta.svelte';
-	import { pricingCurrency, perRequestLabel } from '$lib/components/api-pricing/currency';
+	import { pricingCurrency, perRequestLabel, isNaira } from '$lib/components/api-pricing/currency';
 
 	let { data } = $props();
 
@@ -15,6 +15,7 @@
 	// USD for everyone, Naira for visitors in Nigeria
 	const currency = $derived(pricingCurrency(data.ucountry));
 	const perRequest = $derived(perRequestLabel(currency));
+	const ng = $derived(isNaira(currency));
 
 	const faqAnswers = $derived({
 		'What currencies and markets are supported?':
@@ -22,8 +23,18 @@
 		'How do I authenticate?':
 			'Send your API key in the api_key request header. Your key is available as soon as you create a free account, with no credit card required.',
 		'What are the rate limits?': `Free (PAYG): unlimited calls billed at ${perRequest} each. Pro: 10,000 req/month, 10 req/min, included in the flat fee. Max: 100,000 req/month, 50 req/min.`,
+		// International visitors only see USD billing; Nigerian visitors keep the shared NGN or USD answer
+		...(ng
+			? {}
+			: {
+					'How does billing work?':
+						'Free users are charged per action from their wallet. Pro and Max are flat monthly subscriptions with no per-request fees. All billing is in USD.'
+				}),
 		'Is there a free tier?': `Yes. Every new account gets 100 free API requests, once, on signup. No card needed. After those 100, each request costs ${perRequest}, or you can upgrade to Pro or Max for fixed monthly pricing. The dashboard is free forever.`
 	});
+
+	// The NGN payment question is only for visitors in Nigeria
+	const faqHide = $derived(ng ? [] : ['Can I pay in NGN?']);
 
 	const faqExtra = [
 		{
@@ -56,6 +67,6 @@
 <ApiPricingShowcase {currency} />
 <ApiPricingPlans {plans} {currency} />
 <div id="faq" class="scroll-mt-6">
-	<ApiFaq fullWidth answers={faqAnswers} extra={faqExtra} />
+	<ApiFaq fullWidth answers={faqAnswers} extra={faqExtra} hide={faqHide} />
 </div>
 <ApiCta subtitle="Create a free account and get your API key in minutes. Your first 100 requests are free, no card required." />

@@ -5,6 +5,8 @@
 	export let answers: Record<string, string> = {};
 	// api-pricing adds questions the shared list does not cover
 	export let extra: { q: string; a: string }[] = [];
+	// api-pricing drops shared questions that do not apply, keyed by question
+	export let hide: string[] = [];
 
 	const defaults = [
 		{
@@ -33,7 +35,10 @@
 		}
 	];
 
-	$: items = [...defaults.map((item) => ({ ...item, a: answers[item.q] ?? item.a })), ...extra];
+	$: items = [
+		...defaults.filter((item) => !hide.includes(item.q)).map((item) => ({ ...item, a: answers[item.q] ?? item.a })),
+		...extra
+	];
 
 	let open: number | null = null;
 
