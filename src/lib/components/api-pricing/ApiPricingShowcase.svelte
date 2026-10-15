@@ -67,7 +67,7 @@
 		{
 			title: 'Stablecoin rates included.',
 			intro:
-				'Get up to date USDT and USDC to Naira pricing from P2P desks, spot exchanges and OTC apps. We combine buy and sell quotes so you always see the true market.',
+				'Get up to date USDT and USDC pricing from P2P desks, spot exchanges and OTC apps. We combine buy and sell quotes so you always see the true market.',
 			visual: 'stablecoin',
 			points: [
 				{
@@ -76,7 +76,7 @@
 				},
 				{
 					title: 'Exchange Rates for Any Pair We Cover',
-					body: 'Convert between stablecoins, Naira and 170+ currencies including USD, GBP, EUR and CAD.'
+					body: 'Convert between stablecoins, USD and 170+ currencies including EUR, GBP, CAD and JPY.'
 				},
 				{
 					title: 'Missing a Provider?',
@@ -87,7 +87,7 @@
 		{
 			title: 'Reliable Exchange Rate API.',
 			intro:
-				'Finding a good exchange rate API for Nigerian markets is hard. Official feeds lag the real market, and single venue feeds miss the bigger picture. We aggregate 100+ sources across 170+ currencies into one dependable feed.',
+				'Finding a good exchange rate API for emerging markets is hard. Official feeds lag the real market, and single venue feeds miss the bigger picture. We aggregate 100+ sources across 170+ currencies into one dependable feed.',
 			visual: 'reliable',
 			cta: true,
 			points: []
@@ -95,7 +95,7 @@
 		{
 			title: 'Trusted parallel and midpoint rates.',
 			intro:
-				'Compare the parallel market with the mid-market rate and the CBN official rate. Perfect for treasury, compliance and pricing teams.',
+				'Compare the parallel market with the mid-market rate and the official central bank rate. Perfect for treasury, compliance and pricing teams.',
 			visual: 'markets',
 			points: [
 				{

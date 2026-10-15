@@ -257,7 +257,7 @@
 							Talk to Sales
 						</a>
 						<ul class="flex flex-col gap-2.5">
-							{#each ['Everything in Max', 'WebSocket and custom feeds', 'Custom providers and pairs', 'Invoiced billing in NGN or USD', 'Dedicated account manager'] as f}
+							{#each ['Everything in Max', 'WebSocket and custom feeds', 'Custom providers and pairs', 'Invoiced billing in USD', 'Dedicated account manager'] as f}
 								<li class="flex gap-2 text-sm leading-snug" style="color: var(--text-secondary);">
 									<svg width="14" height="14" viewBox="0 0 14 14" fill="none" class="shrink-0 mt-px">
 										<circle cx="7" cy="7" r="7" fill="var(--positive)" fill-opacity="0.15" />

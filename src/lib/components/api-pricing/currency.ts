@@ -1,23 +1,16 @@
-// api-pricing shows Naira to visitors in Nigeria and USD to everyone else.
-// The pricing API returns both (`price_ngn` / `price_usd`, `prices_by_cycle.*.ngn` / `.usd`).
+// api-pricing is priced in USD for every visitor.
+// The pricing API returns `price_usd` and `prices_by_cycle.*.usd`.
 
 export type PricingCurrency = {
-	code: 'ngn' | 'usd';
+	code: 'usd';
 	symbol: string;
 	perRequest: number;
 };
 
-const CURRENCIES: Record<PricingCurrency['code'], PricingCurrency> = {
-	ngn: { code: 'ngn', symbol: '₦', perRequest: 10 },
-	usd: { code: 'usd', symbol: '$', perRequest: 0.01 }
-};
-
-export function pricingCurrency(country: string | null | undefined): PricingCurrency {
-	return (country ?? '').toUpperCase() === 'NG' ? CURRENCIES.ngn : CURRENCIES.usd;
-}
+export const USD: PricingCurrency = { code: 'usd', symbol: '$', perRequest: 0.01 };
 
 export function formatMoney(n: number, currency: PricingCurrency): string {
-	const digits = currency.code === 'usd' && n < 100 ? 2 : 0;
+	const digits = n < 100 ? 2 : 0;
 	return `${currency.symbol}${n.toLocaleString('en-US', { maximumFractionDigits: digits })}`;
 }
 

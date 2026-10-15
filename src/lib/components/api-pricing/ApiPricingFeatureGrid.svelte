@@ -25,7 +25,7 @@
 		},
 		{
 			title: 'Years of History',
-			body: 'Daily mid-market history back to 2013, plus parallel history for key Naira pairs, for backtesting and reporting.',
+			body: 'Daily mid-market history back to 2013, plus parallel market history, for backtesting and reporting.',
 			icon: 'M3 12a9 9 0 1 0 3-6.7L3 8M3 3v5h5M12 7v5l3 2'
 		},
 		{
@@ -59,8 +59,8 @@
 			icon: 'M3 3h7v9H3zM14 3h7v5h-7zM14 12h7v9h-7zM3 16h7v5H3z'
 		},
 		{
-			title: 'Pay in Naira or Dollars',
-			body: 'Top up your wallet or subscribe in NGN or USD, whichever suits your business.',
+			title: 'Simple USD Billing',
+			body: 'Top up your wallet or subscribe in US Dollars, with clear pricing and no conversion surprises.',
 			icon: 'M2 7h20v12H2zM2 11h20M6 15h4'
 		}
 	];

@@ -24,7 +24,7 @@
 	]);
 
 	// Single-quote example from docs.monierate.com/api-reference/rates/latest (response trimmed)
-	const url = 'https://api.monierate.com/core/rates/latest.json?base=USD&quote=NGN';
+	const url = 'https://api.monierate.com/core/rates/latest.json?base=USDT&quote=USD';
 
 	const tabs = [
 		{
@@ -74,7 +74,7 @@ data = res.<span class="fn">json</span>()[<span class="s">"data"</span>]`
 			<p class="text-[17px] leading-relaxed mb-8 max-w-xl" style="color: var(--text-secondary);">
 				Secure JSON API with up to date provider rates for
 				<strong style="color: var(--text-primary);">170+ fiat and crypto currencies</strong>, including trusted parallel
-				and midpoint Naira rates. One API, 100+ providers.
+				and midpoint rates. One API, 100+ providers.
 			</p>
 
 			<ul class="flex flex-col gap-5 mb-9">
@@ -131,9 +131,9 @@ data = res.<span class="fn">json</span>()[<span class="s">"data"</span>]`
 			<pre class="code"><code>{'{'}
   <span class="k">"status"</span>: <span class="s">"success"</span>,
   <span class="k">"data"</span>: {'{'}
-    <span class="k">"base"</span>: <span class="s">"USD"</span>,
+    <span class="k">"base"</span>: <span class="s">"USDT"</span>,
     <span class="k">"market"</span>: <span class="s">"mid"</span>,
-    <span class="k">"rates"</span>: <span class="n">1480.25</span>
+    <span class="k">"rates"</span>: <span class="n">1.0004</span>
   {'}'}
 {'}'}</code></pre>
 		</div>
