@@ -17,10 +17,10 @@
 	{#if variant === 'speed'}
 		<div class="panel">
 			<div class="label">Median response time</div>
-			<div class="big">4<span class="unit">ms</span></div>
+			<div class="big">100<span class="unit">ms</span></div>
 			<div class="track"><div class="fill" style="width: 12%"></div></div>
 			<div class="row-list">
-				{#each [['Latest rates', '4ms'], ['Pairs list', '6ms'], ['Daily history', '11ms']] as r}
+				{#each [['Latest rates', '85ms'], ['Pairs list', '100ms'], ['Daily history', '140ms']] as r}
 					<div class="row"><span>{r[0]}</span><span class="mono ok">{r[1]}</span></div>
 				{/each}
 			</div>
@@ -34,7 +34,7 @@
 				<div><span class="kw">const</span> {'{'} data {'}'} = <span class="kw">await</span> res.<span class="fn">json</span>();</div>
 				<div class="cm">// data.rates.USD = 1.0004</div>
 			</div>
-			<div class="badge-ok">200 OK in 4ms</div>
+			<div class="badge-ok">200 OK in 100ms</div>
 		</div>
 	{:else if variant === 'mcp'}
 		<div class="panel">
