@@ -66,10 +66,8 @@
 			icon: 'M3 3h7v9H3zM14 3h7v5h-7zM14 12h7v9h-7zM3 16h7v5H3z'
 		},
 		{
-			title: ng ? 'Pay in Naira or Dollars' : 'Simple USD Billing',
-			body: ng
-				? 'Top up your wallet or subscribe in NGN or USD, whichever suits your business.'
-				: 'Top up your wallet or subscribe in US Dollars, with clear pricing and no conversion surprises.',
+			title: 'Simple USD Billing',
+			body: 'Top up your wallet or subscribe in US Dollars, with clear pricing and no conversion surprises.',
 			icon: 'M2 7h20v12H2zM2 11h20M6 15h4'
 		}
 	]);
