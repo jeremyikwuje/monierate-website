@@ -170,8 +170,8 @@ If you run a business and want to receive dollars from abroad. Graph is the best
 
 | App Name | Account Creation Fee | Deposit Fee (ACH & Wire - SWIFT) | Conversion Rate & Fee (USD to NGN) | Withdrawal to Naira Bank Account |
 | --- | --- | --- | --- | --- |
-| Karsa | Free | 1% (ACH & SWIFT) | Rate: ₦1,367 / Extra Fee: None | 0.8% |
-| Cleva | Free | ACH: $1 for deposits &lt; $300; $3 for deposits &gt; $300. Wire (SWIFT): $10 flat. | Rate: ₦1,372 / Extra Fee: None | Free |
+| Pouchers | Free | ACH & FedNow: 0.7% (min $2; max $10). Wire: $15 flat | Rate: ₦1,378 / Extra Fee: None | ₦100 flat |
+| Cleva | Free | ACH: $1 for deposits < $300; $3 for deposits > $300. Wire (SWIFT): $10 flat. | Rate: ₦1,372 / Extra Fee: None | Free |
 | Grey | Free | ACH: 0.8% (min $2, max $10). Wire (SWIFT): $20 flat. | Rate: ₦1,321 / Extra Fee: 0.5% capped at $2.7 | Free |
 | Accrue | $3 | ACH: 1% (min $1.50). SWIFT: Not supported. | Rate: ₦1,326 / Extra Fee: None | 1% capped at $1 |
 | nSave | Free | Free | Rate: ₦1,380 / Extra Fee: None | Free |
@@ -182,13 +182,13 @@ If you run a business and want to receive dollars from abroad. Graph is the best
 
 The best app for you really depends on what matters most to you when receiving payments from abroad. Since most of these apps offer similar features and aim to achieve the same goal, there are subtle differences that define your experience. Choosing the right one just comes down to what works best for your lifestyle.
 
-**If you want to receive dollars and earn interest at the same time,** [**Karsa**](https://monierate.com/exchanges/karsa) **is a great choice**. The platform allows your dollars to grow right inside your wallet, and you can easily transfer your funds to a Nigerian bank account whenever you need to.
+**If you get paid in both dollars and stablecoins, or spend a lot online with a virtual card, Pouchers** **keeps it all in one wallet.** Conversion to naira is free and funding your card costs nothing.
 
-**If you are a freelancer or remote worker on platforms like Upwork and Fiveer, I recommend using** [**nsave**](https://monierate.com/exchanges/nsave)**, Cleva or Raenest.** You get that speed feature that puts money in your pocket in under an hour, or you can stick with nsave to get a solid rate.
+**If you are a freelancer or remote worker on platforms like Upwork and Fiverr, I recommend** **[nsave](https://monierate.com/exchanges/nsave)**, **Cleva, or Raenest.** You get that speed feature that puts money in your pocket in under an hour, or you can stick with nsave to get a solid rate.
 
-[**Grey**](https://monierate.com/exchanges/grey) and nsave too is a solid choice if you want that "global citizen" feel, especially if you deal with British or European clients and need multiple IBANs in one place.
+[Grey](https://monierate.com/exchanges/grey) and nsave too are solid choices if you want that “global citizen” feel, especially if you deal with British or European clients and need multiple IBANs in one place.
 
-On the other hand, **Karsa and nsave is better suited if your focus is on absolute security and you want the peace of mind that comes with safe banking for your larger dollar holdings**. If you’re running a business or agency, Graph gives you the professional tools to manage your team and payments at scale.
+On the other hand, **Pouchers and nsave is better suited if your focus is on absolute security and you want the peace of mind that comes with safe banking for your larger dollar holdings** . If you’re running a business or agency, Graph gives you the professional tools to manage your team and payments at scale.
 
 All seven platforms listed here are tested and trusted by Nigerians in 2026. The right choice comes down to how you receive money, how fast you need it delivered, and how much control you want over your dollars.
 
