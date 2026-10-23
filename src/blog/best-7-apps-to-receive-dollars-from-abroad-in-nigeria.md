@@ -14,7 +14,7 @@ author: Tim Bolarinwa
 
 Are you trying to receive dollars from abroad without dealing with the stress of traditional banks?
 
-Slow processing time, endless documentation, and domiciliary account requirements.
+Slow processing times, endless documentation, and domiciliary account requirements.
 
 In 2026, you don’t need to rely on that system anymore.
 
@@ -22,9 +22,9 @@ In this article, I break down the 7 best apps you can use to receive dollars fro
 
 ## My 7 Best Apps to Receive Dollars in Nigeria (2026)
 
-These ratings are based on fees, app stores ratings, and feedback from users online.
+These ratings are based on fees, app store ratings, and feedback from users online.
 
-1. **Karsa -** Recieve and earn up to 4.5% in dollars
+1. **Pouchers -** Best for getting paid in dollars and stablecoins
 2. **nsave -** Most affordable with more features
 3. **Cleva -** Popular among freelancers and remote workers
 4. **Raenest -** Designed for individuals and businesses
@@ -34,23 +34,24 @@ These ratings are based on fees, app stores ratings, and feedback from users onl
 
 **Disclaimer:** _The information provided in this article is for informational purposes only and does not constitute professional financial or legal advice. These rankings are based on the author’s personal testing, real-time customer reviews, and available market data for 2026; however, please be aware that fintech platforms and Nigerian exchange regulations are subject to frequent updates that can alter fees, features, or account stability at any time. Monierate strongly recommends performing your own due diligence and verifying current terms directly with the service providers before transacting, as we are not liable for any financial losses or service interruptions._
 
-## 1. Karsa — Recieve and earn up to 4.5% in dollars
+**Update (October 2026):** Karsa no longer supports dollar receiving for Nigerian residents. It has been removed from this list and replaced with Pouchers.
 
-**App Rating: 4.1**
+## 1. Pouchers — Best for getting paid in dollars and stablecoins
 
-[Karsa](https://monierate.com/exchanges/karsa) is a 2026 standout who focuses on shielding you from inflation. It offers a fresh approach to USD accounts with a focus on simplicity, smooth transfers, and while still offering high-yield returns on your funds.
+**App Rating: 4.7**
+
+[Pouchers](https://pouchers.io/usd-bank-account) is built for Nigerian freelancers and remote workers who get paid in more than one way. Whether a client pays you in fiat or stablecoins, the money lands in the same wallet. Convert it to naira at no extra cost, or keep it in dollars and spend it on a virtual card that costs nothing to fund.
 
 **Pros**
 
-- 4–5% yield on dollar balances tied to US Treasury rates.
-- Free virtual USD card for international shopping.
-- Receive stablecoins directly into your wallet.
-- Very modern, fast-loading mobile app.
+* Personal USD, GBP, and EUR bank accounts.
+* Receive USDT and USDC on eight networks, including Tron, Solana, Base, and Polygon.
+* Virtual dollar cards on Visa or Mastercard, with no funding fee.
+* KYC done in minutes, with no tiered limits.
 
 **Cons**
 
-- Shorter track record in the market compared to nsave or Cleva.
-- Some features are still being rolled out in specific regions.
+* Available to Nigerian residents only
 
 ##  2. nsave — Most affordable with more features
 
